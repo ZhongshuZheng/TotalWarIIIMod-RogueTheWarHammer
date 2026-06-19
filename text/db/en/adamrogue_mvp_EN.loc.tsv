@@ -1,5 +1,7 @@
+﻿key	text	tooltip
+#Loc;1;text/db/adamrogue_mvp_EN.loc	
 dilemmas_localised_title_adamrogue_mvp_reward_dilemma	AdamRogue MVP: Choose Reward	false
-dilemmas_localised_description_adamrogue_mvp_reward_dilemma	The test rogue caravan force is ready. Choose one fixed reward unit to verify dilemma flow, unit granting, and state progression.	false
+dilemmas_localised_description_adamrogue_mvp_reward_dilemma	The test rogue caravan force is ready. Choose one fixed reward unit to verify the formal entry, dilemma flow, unit granting, and state progression.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_reward_dilemmaFIRST	Celestial Dragon Guard	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_reward_dilemmaFIRST	Add 1 unit of Celestial Dragon Guard to the test force.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_reward_dilemmaSECOND	Celestial Dragon Crossbows	false
@@ -7,10 +9,12 @@ cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_reward_d
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_reward_dilemmaTHIRD	Jade Lancers	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_reward_dilemmaTHIRD	Add 1 unit of Jade Lancers to the test force.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_reward_dilemmaFOURTH	Choose Later	false
-cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_reward_dilemmaFOURTH	Do not claim a reward this turn. The dilemma will be offered again next turn.	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_reward_dilemmaFOURTH	Do not claim a reward now. Close the dilemma and reopen the same reward event through the formal entry.	false
 dilemmas_localised_title_adamrogue_mvp_battle_dilemma	AdamRogue MVP: Start Battle	false
-dilemmas_localised_description_adamrogue_mvp_battle_dilemma	The reward has been applied. Generate the fixed Cathay test enemy army and launch a forced battle to verify spawning, war declaration, attack flow, and battle result logging.	false
+dilemmas_localised_description_adamrogue_mvp_battle_dilemma	The reward has been applied. Generate the fixed Cathay test enemy army and use the formal entry again to open the battle dilemma, then launch a forced battle to verify spawning, war declaration, attack flow, and battle result logging.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_battle_dilemmaFIRST	Start Battle Now	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_battle_dilemmaFIRST	Spawn the fixed enemy test army with an embedded Alchemist and immediately force a battle.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_battle_dilemmaSECOND	Battle Later	false
-cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_battle_dilemmaSECOND	Do not spawn the enemy army this turn. The dilemma will be offered again next turn.	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_battle_dilemmaSECOND	Do not spawn the enemy army now. Close the dilemma and reopen the same battle event through the formal entry.	false
+campaign_localised_strings_button_adamrogue_phase_a_title	AdamRogue Entry	false
+campaign_localised_strings_button_adamrogue_phase_a_tooltip	Open the current pending event, restore a paused event, or generate the next event in the run.	false
