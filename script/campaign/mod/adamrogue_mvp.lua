@@ -20,6 +20,7 @@ local PLAYER_STARTING_UNITS = table.concat({
 local ENEMY_GENERAL_SUBTYPE = "wh3_main_cth_lord_magistrate_yin"
 local ENEMY_EMBEDDED_AGENT_TYPE = "engineer"
 local ENEMY_EMBEDDED_AGENT_SUBTYPE = "wh3_main_cth_alchemist"
+local CARAVAN_BATTLE_ENEMY_FACTION = "wh3_main_cth_cathay_qb1"
 local ENEMY_UNITS = table.concat({
     "wh3_main_cth_inf_jade_warriors_0",
     "wh3_main_cth_inf_jade_warriors_0",
@@ -259,6 +260,40 @@ local function get_spawn_region_and_position_for_faction(faction)
     return region:name(), x, y
 end
 
+local function find_enemy_spawn_near_player(enemy_faction_key, player_general)
+    local x, y = cm:find_valid_spawn_location_for_character_from_character(
+        enemy_faction_key,
+        cm:char_lookup_str(player_general),
+        true,
+        6
+    )
+
+    if x >= 0 and y >= 0 then
+        return x, y, "from_character"
+    end
+
+    x, y = cm:find_valid_spawn_location_for_character_from_position(
+        enemy_faction_key,
+        player_general:logical_position_x(),
+        player_general:logical_position_y(),
+        true
+    )
+
+    if x >= 0 and y >= 0 then
+        return x, y, "from_position"
+    end
+
+    local player_faction = player_general:faction()
+    if player_faction and not player_faction:is_null_interface() then
+        local _, fallback_x, fallback_y = get_spawn_region_and_position_for_faction(player_faction)
+        if fallback_x and fallback_y then
+            return fallback_x, fallback_y, "player_faction_region"
+        end
+    end
+
+    return -1, -1, "not_found"
+end
+
 local function pick_enemy_faction_key(player_faction_key)
     for _, faction_key in ipairs(ENEMY_FACTION_CANDIDATES) do
         if faction_key ~= player_faction_key then
@@ -270,6 +305,40 @@ local function pick_enemy_faction_key(player_faction_key)
     end
 
     return nil
+end
+
+local function find_spawnable_enemy_faction_near_player(player_faction_key, player_general, preferred_enemy_faction_key)
+    local candidate_keys = {}
+
+    if preferred_enemy_faction_key and preferred_enemy_faction_key ~= "" and preferred_enemy_faction_key ~= player_faction_key then
+        candidate_keys[#candidate_keys + 1] = preferred_enemy_faction_key
+    end
+
+    for _, faction_key in ipairs(ENEMY_FACTION_CANDIDATES) do
+        if faction_key ~= player_faction_key and faction_key ~= preferred_enemy_faction_key then
+            candidate_keys[#candidate_keys + 1] = faction_key
+        end
+    end
+
+    for _, faction_key in ipairs(candidate_keys) do
+        local faction = cm:get_faction(faction_key)
+        if faction and not faction:is_null_interface() and not faction:is_dead() and not faction:is_human() then
+            local x, y = cm:find_valid_spawn_location_for_character_from_character(
+                faction_key,
+                cm:char_lookup_str(player_general),
+                true,
+                6
+            )
+
+            if x >= 0 and y >= 0 then
+                return faction_key, x, y
+            end
+
+            log("Enemy faction [" .. faction_key .. "] could not find a valid spawn point near the player.")
+        end
+    end
+
+    return nil, -1, -1
 end
 
 local function cleanup_enemy_force()
@@ -500,24 +569,18 @@ local function prepare_battle_event()
         return false
     end
 
-    local enemy_faction_key = pick_enemy_faction_key(faction:name())
-    if not enemy_faction_key then
-        log("Could not find a living non-player Cathay faction for the battle event.")
-        return false
-    end
-
     local seed = new_event_seed()
     local payload = {
         battle_template_key = "adamrogue_phase_a_battle_template_fixed_cathay",
-        enemy_faction_key = enemy_faction_key,
+        enemy_faction_key = CARAVAN_BATTLE_ENEMY_FACTION,
         attack_choice = 0,
         pause_choice = 1
     }
 
-    set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
+    set_saved_value(SAVE_KEYS.enemy_faction_key, CARAVAN_BATTLE_ENEMY_FACTION)
     set_current_event_context(EVENT_TYPE.BATTLE, DILEMMA_BATTLE_KEY, seed, payload)
     set_current_state(STATE.BATTLE_PENDING)
-    log("Prepared battle event for faction [" .. faction:name() .. "] against enemy faction [" .. enemy_faction_key .. "]")
+    log("Prepared battle event for faction [" .. faction:name() .. "] against enemy faction [" .. CARAVAN_BATTLE_ENEMY_FACTION .. "]")
     return true
 end
 
@@ -629,68 +692,29 @@ local function player_force_participated_in_pending_battle()
     return nil
 end
 
-local function create_test_battle(player_faction_name)
-    local player_force = get_saved_player_force()
-    local enemy_force = get_saved_enemy_force()
-    local player_faction = cm:get_faction(player_faction_name)
-    local player_general = get_saved_player_general()
-
-    if not player_force or not enemy_force or not player_faction or player_faction:is_null_interface() or not player_general then
-        log("Unable to create the test battle because one or more required interfaces were missing.")
-        return
-    end
-
-    local player_force_cqi = player_force:command_queue_index()
-    local enemy_force_cqi = enemy_force:command_queue_index()
-    local enemy_general = get_saved_enemy_general()
-
-    if not enemy_general then
-        log("Unable to create the test battle because the enemy general interface was missing.")
-        return
-    end
-
-    local player_x, player_y = cm:find_valid_spawn_location_for_character_from_position(
-        player_faction_name,
-        enemy_general:logical_position_x(),
-        enemy_general:logical_position_y(),
-        false
-    )
-
-    if player_x < 0 or player_y < 0 then
-        log("Unable to find a valid teleport position for the player test force near the enemy army.")
-        return
-    end
-
-    log("Teleporting player test force near the enemy battle point. Player target position=(" .. tostring(player_x) .. ", " .. tostring(player_y) .. ")")
-
-    cm:teleport_to(cm:char_lookup_str(player_general), player_x, player_y)
-
-    local uim = cm:get_campaign_ui_manager()
-    uim:override("retreat"):lock()
-
-    force_attack_once(enemy_force_cqi, player_force_cqi, "caravan_style_enemy_attack")
+local function build_caravan_battle_bridge(force_interface, general_interface)
+    return {
+        caravan_force = function()
+            return force_interface
+        end,
+        caravan_master = function()
+            return {
+                character = function()
+                    return general_interface
+                end
+            }
+        end
+    }
 end
 
 local function spawn_enemy_force_and_start_battle()
     local player_force = get_saved_player_force()
     local player_general = get_saved_player_general()
     local player_faction_name = get_saved_value(SAVE_KEYS.player_faction_key, "")
-    local payload = get_current_event_payload()
 
     if not player_force or not player_general or player_faction_name == "" then
         log("Cannot start the test battle because the player force state is incomplete.")
         return
-    end
-
-    local enemy_faction_key = payload.enemy_faction_key or get_saved_value(SAVE_KEYS.enemy_faction_key, "")
-    if enemy_faction_key == "" then
-        log("Cannot start the test battle because the saved enemy faction key is missing.")
-        return
-    end
-
-    if get_saved_enemy_force() or get_saved_character(SAVE_KEYS.enemy_agent_cqi) then
-        log("A previous enemy test army was still tracked. Cleaning it up before spawning a fresh one.")
-        cleanup_enemy_force()
     end
 
     local player_region = player_general:region()
@@ -699,79 +723,33 @@ local function spawn_enemy_force_and_start_battle()
         return
     end
 
-    local x, y = cm:find_valid_spawn_location_for_character_from_character(
-        enemy_faction_key,
-        cm:char_lookup_str(player_general),
-        true,
-        6
-    )
-
-    if x < 0 or y < 0 then
-        log("Could not find a valid spawn location for the enemy test army.")
+    if not caravans or not caravans.spawn_caravan_battle_force then
+        log("Caravan battle core is not available, so the bridge battle could not be launched.")
         return
     end
 
-    log(string.format("Spawning enemy test force for [%s] at (%s, %s) near the player force.", enemy_faction_key, tostring(x), tostring(y)))
+    set_saved_value(SAVE_KEYS.enemy_faction_key, CARAVAN_BATTLE_ENEMY_FACTION)
+    set_saved_value(SAVE_KEYS.enemy_force_cqi, 0)
+    set_saved_value(SAVE_KEYS.enemy_leader_cqi, 0)
+    set_saved_value(SAVE_KEYS.enemy_agent_cqi, 0)
 
-    cm:create_force_with_general(
-        enemy_faction_key,
+    log(
+        "Launching caravan-core bridge battle for faction ["
+            .. player_faction_name
+            .. "] in region ["
+            .. player_region:name()
+            .. "] against enemy faction ["
+            .. CARAVAN_BATTLE_ENEMY_FACTION
+            .. "]"
+    )
+
+    caravans:spawn_caravan_battle_force(
+        build_caravan_battle_bridge(player_force, player_general),
         ENEMY_UNITS,
         player_region:name(),
-        x,
-        y,
-        "general",
-        ENEMY_GENERAL_SUBTYPE,
-        "",
-        "",
-        "",
-        "",
         false,
-        function(character_cqi)
-            local enemy_general = cm:get_character_by_cqi(character_cqi)
-            if not enemy_general or enemy_general:is_null_interface() or not enemy_general:has_military_force() then
-                log("Enemy test force creation callback fired, but the created general was invalid.")
-                return
-            end
-
-            local enemy_force = enemy_general:military_force()
-            set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
-            set_saved_value(SAVE_KEYS.enemy_leader_cqi, enemy_general:command_queue_index())
-            set_saved_value(SAVE_KEYS.enemy_force_cqi, enemy_force:command_queue_index())
-
-            log("Enemy test force created. General CQI=" .. tostring(enemy_general:command_queue_index()) .. ", Force CQI=" .. tostring(enemy_force:command_queue_index()) .. ", Units=" .. tostring(count_units_in_force(enemy_force)))
-
-            cm:disable_event_feed_events(true, "", "", "diplomacy_faction_destroyed")
-            cm:disable_event_feed_events(true, "", "", "character_dies_battle")
-            cm:disable_event_feed_events(true, "", "", "diplomacy_war_declared")
-
-            log("Declaring war from enemy test faction [" .. enemy_faction_key .. "] to player faction [" .. player_faction_name .. "].")
-            cm:force_declare_war(enemy_faction_key, player_faction_name, false, false)
-            cm:callback(function()
-                cm:disable_event_feed_events(false, "", "", "diplomacy_war_declared")
-            end, 0.2)
-
-            cm:disable_movement_for_character(cm:char_lookup_str(enemy_general))
-            cm:set_force_has_retreated_this_turn(enemy_force)
-            log("Enemy test force movement disabled and marked as retreated this turn for forced-battle setup.")
-
-            local agent_cqi = cm:create_agent(enemy_faction_key, ENEMY_EMBEDDED_AGENT_TYPE, ENEMY_EMBEDDED_AGENT_SUBTYPE, x, y)
-            if agent_cqi then
-                local alchemist = cm:get_character_by_cqi(agent_cqi)
-                if alchemist and not alchemist:is_null_interface() then
-                    cm:embed_agent_in_force(alchemist, enemy_force)
-                    set_saved_value(SAVE_KEYS.enemy_agent_cqi, agent_cqi)
-                    log("Embedded Cathay Alchemist into the enemy test army. Agent CQI=" .. tostring(agent_cqi))
-                else
-                    log("Enemy alchemist creation returned CQI [" .. tostring(agent_cqi) .. "] but the interface was invalid.")
-                end
-            else
-                log("Enemy alchemist creation returned no CQI.")
-            end
-
-            cm:callback(function()
-                create_test_battle(player_faction_name)
-            end, 0.5)
-        end
+        true,
+        CARAVAN_BATTLE_ENEMY_FACTION
     )
 end
 
@@ -781,24 +759,40 @@ local function handle_reward_dilemma_choice(context)
     end
 
     local choice = context:choice()
-    local payload = get_current_event_payload()
-    log("Reward dilemma choice received: " .. tostring(choice) .. " payload=[" .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, "")) .. "]")
+    log(
+        "Reward dilemma choice received: "
+            .. tostring(choice)
+            .. ", current_state=["
+            .. tostring(get_current_state())
+            .. "], payload=["
+            .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, ""))
+            .. "]"
+    )
 
-    if choice == tonumber(payload.pause_choice or "3") then
-        pause_current_event()
-        return
-    end
+    cm:callback(function()
+        log("Processing deferred reward dilemma choice: " .. tostring(choice))
 
-    if choice >= 0 and choice <= 2 then
-        grant_reward_unit(choice)
-        if not prepare_battle_event() then
+        if choice == 3 then
+            pause_current_event()
             return
         end
 
-        log("Reward resolved. Battle event is now pending and will be opened by the formal entry.")
-    else
-        log("Reward dilemma choice did not match any known action.")
-    end
+        if choice >= 0 and choice <= 2 then
+            grant_reward_unit(choice)
+            if not prepare_battle_event() then
+                return
+            end
+
+            log("Reward resolved. Battle event is now pending and will be opened immediately.")
+            cm:callback(function()
+                if get_current_state() == STATE.BATTLE_PENDING then
+                    open_current_event("reward_resolved_auto_open")
+                end
+            end, 0.1)
+        else
+            log("Reward dilemma choice did not match any known action.")
+        end
+    end, 0.1)
 end
 
 local function handle_battle_dilemma_choice(context)
@@ -807,19 +801,30 @@ local function handle_battle_dilemma_choice(context)
     end
 
     local choice = context:choice()
-    local payload = get_current_event_payload()
-    log("Battle dilemma choice received: " .. tostring(choice) .. " payload=[" .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, "")) .. "]")
+    log(
+        "Battle dilemma choice received: "
+            .. tostring(choice)
+            .. ", current_state=["
+            .. tostring(get_current_state())
+            .. "], payload=["
+            .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, ""))
+            .. "]"
+    )
 
-    if choice == tonumber(payload.pause_choice or "1") then
-        pause_current_event()
-        return
-    end
+    cm:callback(function()
+        log("Processing deferred battle dilemma choice: " .. tostring(choice))
 
-    if choice == tonumber(payload.attack_choice or "0") then
-        spawn_enemy_force_and_start_battle()
-    else
-        log("Battle dilemma choice did not match any known action.")
-    end
+        if choice == 1 then
+            pause_current_event()
+            return
+        end
+
+        if choice == 0 then
+            spawn_enemy_force_and_start_battle()
+        else
+            log("Battle dilemma choice did not match any known action.")
+        end
+    end, 0.1)
 end
 
 local function register_listeners()
