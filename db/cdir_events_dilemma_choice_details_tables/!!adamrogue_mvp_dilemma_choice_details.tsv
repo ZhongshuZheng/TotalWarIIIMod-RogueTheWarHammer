@@ -1,0 +1,8 @@
+choice_key	dilemma_key	audio_event_hover	audio_choice_vo
+#cdir_events_dilemma_choice_details_tables;4;db/cdir_events_dilemma_choice_details_tables/!!adamrogue_mvp_dilemma_choice_details.tsv			
+FIRST	adamrogue_mvp_reward_dilemma		
+SECOND	adamrogue_mvp_reward_dilemma		
+THIRD	adamrogue_mvp_reward_dilemma		
+FOURTH	adamrogue_mvp_reward_dilemma		
+FIRST	adamrogue_mvp_battle_dilemma		
+SECOND	adamrogue_mvp_battle_dilemma		
