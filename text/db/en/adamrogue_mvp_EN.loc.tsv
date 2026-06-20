@@ -10,6 +10,8 @@ cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_reward_d
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_reward_dilemmaTHIRD	Add 1 unit generated from the current destination faction reward pool to this run's rogue force.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_reward_dilemmaFOURTH	Choose Later	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_reward_dilemmaFOURTH	Do not claim a reward now. Close the dilemma and reopen the same reward event through the formal entry.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_reward_dilemmaFIFTH	Skip Unit Reward	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_reward_dilemmaFIFTH	Do not claim any unit reward this time and continue directly to the next battle event.	false
 dilemmas_localised_title_adamrogue_mvp_battle_dilemma	AdamRogue MVP: Start Battle	false
 dilemmas_localised_description_adamrogue_mvp_battle_dilemma	The reward has been applied. Generate the fixed Cathay test enemy army and use the formal entry again to open the battle dilemma, then launch a forced battle to verify spawning, war declaration, attack flow, and battle result logging.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_battle_dilemmaFIRST	Start Battle Now	false
@@ -37,53 +39,101 @@ cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_destinat
 # AUTO-GENERATED NODE LOC START
 adamrogue_destination_node_name_cathay	Cathay	false
 adamrogue_destination_node_choice_cathay	Candidate Faction: Cathay	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_cathay	[[col:yellow]]Candidate Faction: Cathay[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_cathay	[[col:yellow]]Current Faction: Cathay[[/col]]	false
 adamrogue_destination_node_name_kislev	Kislev	false
 adamrogue_destination_node_choice_kislev	Candidate Faction: Kislev	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_kislev	[[col:yellow]]Candidate Faction: Kislev[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_kislev	[[col:yellow]]Current Faction: Kislev[[/col]]	false
 adamrogue_destination_node_name_ogres	Ogre Kingdoms	false
 adamrogue_destination_node_choice_ogres	Candidate Faction: Ogre Kingdoms	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_ogres	[[col:yellow]]Candidate Faction: Ogre Kingdoms[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_ogres	[[col:yellow]]Current Faction: Ogre Kingdoms[[/col]]	false
 adamrogue_destination_node_name_khorne	Khorne	false
 adamrogue_destination_node_choice_khorne	Candidate Faction: Khorne	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_khorne	[[col:yellow]]Candidate Faction: Khorne[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_khorne	[[col:yellow]]Current Faction: Khorne[[/col]]	false
 adamrogue_destination_node_name_nurgle	Nurgle	false
 adamrogue_destination_node_choice_nurgle	Candidate Faction: Nurgle	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_nurgle	[[col:yellow]]Candidate Faction: Nurgle[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_nurgle	[[col:yellow]]Current Faction: Nurgle[[/col]]	false
 adamrogue_destination_node_name_tzeentch	Tzeentch	false
 adamrogue_destination_node_choice_tzeentch	Candidate Faction: Tzeentch	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_tzeentch	[[col:yellow]]Candidate Faction: Tzeentch[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_tzeentch	[[col:yellow]]Current Faction: Tzeentch[[/col]]	false
 adamrogue_destination_node_name_slaanesh	Slaanesh	false
 adamrogue_destination_node_choice_slaanesh	Candidate Faction: Slaanesh	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_slaanesh	[[col:yellow]]Candidate Faction: Slaanesh[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_slaanesh	[[col:yellow]]Current Faction: Slaanesh[[/col]]	false
 adamrogue_destination_node_name_chaos_dwarfs	Chaos Dwarfs	false
 adamrogue_destination_node_choice_chaos_dwarfs	Candidate Faction: Chaos Dwarfs	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_chaos_dwarfs	[[col:yellow]]Candidate Faction: Chaos Dwarfs[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_chaos_dwarfs	[[col:yellow]]Current Faction: Chaos Dwarfs[[/col]]	false
 adamrogue_destination_node_name_empire	Empire	false
 adamrogue_destination_node_choice_empire	Candidate Faction: Empire	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_empire	[[col:yellow]]Candidate Faction: Empire[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_empire	[[col:yellow]]Current Faction: Empire[[/col]]	false
 adamrogue_destination_node_name_dwarfs	Dwarfs	false
 adamrogue_destination_node_choice_dwarfs	Candidate Faction: Dwarfs	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_dwarfs	[[col:yellow]]Candidate Faction: Dwarfs[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_dwarfs	[[col:yellow]]Current Faction: Dwarfs[[/col]]	false
 adamrogue_destination_node_name_greenskins	Greenskins	false
 adamrogue_destination_node_choice_greenskins	Candidate Faction: Greenskins	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_greenskins	[[col:yellow]]Candidate Faction: Greenskins[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_greenskins	[[col:yellow]]Current Faction: Greenskins[[/col]]	false
 adamrogue_destination_node_name_vampire_counts	Vampire Counts	false
 adamrogue_destination_node_choice_vampire_counts	Candidate Faction: Vampire Counts	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_vampire_counts	[[col:yellow]]Candidate Faction: Vampire Counts[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_vampire_counts	[[col:yellow]]Current Faction: Vampire Counts[[/col]]	false
 adamrogue_destination_node_name_bretonnia	Bretonnia	false
 adamrogue_destination_node_choice_bretonnia	Candidate Faction: Bretonnia	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_bretonnia	[[col:yellow]]Candidate Faction: Bretonnia[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_bretonnia	[[col:yellow]]Current Faction: Bretonnia[[/col]]	false
 adamrogue_destination_node_name_warriors_of_chaos	Warriors of Chaos	false
 adamrogue_destination_node_choice_warriors_of_chaos	Candidate Faction: Warriors of Chaos	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_warriors_of_chaos	[[col:yellow]]Candidate Faction: Warriors of Chaos[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_warriors_of_chaos	[[col:yellow]]Current Faction: Warriors of Chaos[[/col]]	false
 adamrogue_destination_node_name_beastmen	Beastmen	false
 adamrogue_destination_node_choice_beastmen	Candidate Faction: Beastmen	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_beastmen	[[col:yellow]]Candidate Faction: Beastmen[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_beastmen	[[col:yellow]]Current Faction: Beastmen[[/col]]	false
 adamrogue_destination_node_name_wood_elves	Wood Elves	false
 adamrogue_destination_node_choice_wood_elves	Candidate Faction: Wood Elves	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_wood_elves	[[col:yellow]]Candidate Faction: Wood Elves[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_wood_elves	[[col:yellow]]Current Faction: Wood Elves[[/col]]	false
 adamrogue_destination_node_name_norsca	Norsca	false
 adamrogue_destination_node_choice_norsca	Candidate Faction: Norsca	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_norsca	[[col:yellow]]Candidate Faction: Norsca[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_norsca	[[col:yellow]]Current Faction: Norsca[[/col]]	false
 adamrogue_destination_node_name_high_elves	High Elves	false
 adamrogue_destination_node_choice_high_elves	Candidate Faction: High Elves	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_high_elves	[[col:yellow]]Candidate Faction: High Elves[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_high_elves	[[col:yellow]]Current Faction: High Elves[[/col]]	false
 adamrogue_destination_node_name_dark_elves	Dark Elves	false
 adamrogue_destination_node_choice_dark_elves	Candidate Faction: Dark Elves	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_dark_elves	[[col:yellow]]Candidate Faction: Dark Elves[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_dark_elves	[[col:yellow]]Current Faction: Dark Elves[[/col]]	false
 adamrogue_destination_node_name_lizardmen	Lizardmen	false
 adamrogue_destination_node_choice_lizardmen	Candidate Faction: Lizardmen	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_lizardmen	[[col:yellow]]Candidate Faction: Lizardmen[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_lizardmen	[[col:yellow]]Current Faction: Lizardmen[[/col]]	false
 adamrogue_destination_node_name_skaven	Skaven	false
 adamrogue_destination_node_choice_skaven	Candidate Faction: Skaven	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_skaven	[[col:yellow]]Candidate Faction: Skaven[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_skaven	[[col:yellow]]Current Faction: Skaven[[/col]]	false
 adamrogue_destination_node_name_tomb_kings	Tomb Kings	false
 adamrogue_destination_node_choice_tomb_kings	Candidate Faction: Tomb Kings	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_tomb_kings	[[col:yellow]]Candidate Faction: Tomb Kings[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_tomb_kings	[[col:yellow]]Current Faction: Tomb Kings[[/col]]	false
 adamrogue_destination_node_name_vampire_coast	Vampire Coast	false
 adamrogue_destination_node_choice_vampire_coast	Candidate Faction: Vampire Coast	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_vampire_coast	[[col:yellow]]Candidate Faction: Vampire Coast[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_vampire_coast	[[col:yellow]]Current Faction: Vampire Coast[[/col]]	false
 adamrogue_destination_node_name_daemons_of_chaos	Daemons of Chaos	false
 adamrogue_destination_node_choice_daemons_of_chaos	Candidate Faction: Daemons of Chaos	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_daemons_of_chaos	[[col:yellow]]Candidate Faction: Daemons of Chaos[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_daemons_of_chaos	[[col:yellow]]Current Faction: Daemons of Chaos[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_delay	[[col:yellow]]Keep the current destination candidates and choose again later through the entry button.[[/col]]	false
 # AUTO-GENERATED NODE LOC END
-adamrogue_destination_choice_delay	This run keeps the same destination candidates for later. Reopen the entry button to continue this destination choice.	false
 campaign_localised_strings_button_adamrogue_phase_a_title	AdamRogue Entry	false
 campaign_localised_strings_button_adamrogue_phase_a_tooltip	Open the current pending event, restore a paused event, or generate the next event in the run.	false

@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import csv
 import json
@@ -76,6 +76,14 @@ def natural_sort_key(value: str) -> list[object]:
 def lua_string(value: str) -> str:
     escaped = value.replace("\\", "\\\\").replace('"', '\\"')
     return f'"{escaped}"'
+
+
+def build_destination_payload_component_key(node_key: str) -> str:
+    return f"adamrogue_destination_payload_choice_{node_key}"
+
+
+def build_destination_current_payload_component_key(node_key: str) -> str:
+    return f"adamrogue_destination_payload_current_{node_key}"
 
 
 def build_index(rows: list[dict[str, str]], key_name: str) -> dict[str, dict[str, str]]:
@@ -212,6 +220,23 @@ def render_nodes_module(blueprint: list[dict[str, object]]) -> str:
         )
     lines.extend(["}", "", "return data", ""])
     return "\n".join(lines)
+
+
+def render_campaign_payload_ui_details_table(blueprint: list[dict[str, object]]) -> str:
+    lines = [
+        "component\ticon\tstate\tsort_order",
+        "#campaign_payload_ui_details_tables;2;db/campaign_payload_ui_details_tables/!!adamrogue_mvp_campaign_payload_ui_details.tsv\t\t\t",
+    ]
+
+    for entry in blueprint:
+        node_key = str(entry["node_key"])
+        lines.append(f"{build_destination_payload_component_key(node_key)}\tUI/skins/default/icon_alert_message.png\tdefault\t0")
+        lines.append(
+            f"{build_destination_current_payload_component_key(node_key)}\tUI/skins/default/icon_alert_message.png\tdefault\t0"
+        )
+
+    lines.append("adamrogue_destination_payload_delay\tUI/skins/default/icon_alert_message.png\tdefault\t0")
+    return "\n".join(lines) + "\n"
 
 
 def render_battle_module(
@@ -560,6 +585,7 @@ def main() -> None:
         embedded_agents,
     )
     ancillary_module = render_ancillary_module(blueprint, faction_equipment_pools)
+    campaign_payload_ui_details_table = render_campaign_payload_ui_details_table(blueprint)
 
     (REPO_ROOT / "script" / "campaign" / "mod" / "adamrogue" / "adamrogue_data_nodes.lua").write_text(
         nodes_module,
@@ -573,6 +599,11 @@ def main() -> None:
         ancillary_module,
         encoding="utf-8",
     )
+    (REPO_ROOT / "db" / "campaign_payload_ui_details_tables").mkdir(parents=True, exist_ok=True)
+    (REPO_ROOT / "db" / "campaign_payload_ui_details_tables" / "!!adamrogue_mvp_campaign_payload_ui_details.tsv").write_text(
+        campaign_payload_ui_details_table,
+        encoding="utf-8",
+    )
 
     cn_loc_lines = []
     en_loc_lines = []
@@ -582,8 +613,27 @@ def main() -> None:
         en_name = str(entry["display_name_en"])
         cn_loc_lines.append(f"adamrogue_destination_node_name_{node_key}\t{cn_name}\tfalse")
         cn_loc_lines.append(f"adamrogue_destination_node_choice_{node_key}\t候选派系：{cn_name}\tfalse")
+        cn_loc_lines.append(
+            f"campaign_payload_ui_details_description_{build_destination_payload_component_key(node_key)}\t[[col:yellow]]候选派系：{cn_name}[[/col]]\tfalse"
+        )
+        cn_loc_lines.append(
+            f"campaign_payload_ui_details_description_{build_destination_current_payload_component_key(node_key)}\t[[col:yellow]]当前派系：{cn_name}[[/col]]\tfalse"
+        )
         en_loc_lines.append(f"adamrogue_destination_node_name_{node_key}\t{en_name}\tfalse")
         en_loc_lines.append(f"adamrogue_destination_node_choice_{node_key}\tCandidate Faction: {en_name}\tfalse")
+        en_loc_lines.append(
+            f"campaign_payload_ui_details_description_{build_destination_payload_component_key(node_key)}\t[[col:yellow]]Candidate Faction: {en_name}[[/col]]\tfalse"
+        )
+        en_loc_lines.append(
+            f"campaign_payload_ui_details_description_{build_destination_current_payload_component_key(node_key)}\t[[col:yellow]]Current Faction: {en_name}[[/col]]\tfalse"
+        )
+
+    cn_loc_lines.append(
+        "campaign_payload_ui_details_description_adamrogue_destination_payload_delay\t[[col:yellow]]保留当前候选，下次点击入口时继续选择。[[/col]]\tfalse"
+    )
+    en_loc_lines.append(
+        "campaign_payload_ui_details_description_adamrogue_destination_payload_delay\t[[col:yellow]]Keep the current destination candidates and choose again later through the entry button.[[/col]]\tfalse"
+    )
 
     replace_block(REPO_ROOT / "text" / "db" / "adamrogue_mvp_CN.loc.tsv", cn_loc_lines)
     replace_block(REPO_ROOT / "text" / "db" / "en" / "adamrogue_mvp_EN.loc.tsv", en_loc_lines)

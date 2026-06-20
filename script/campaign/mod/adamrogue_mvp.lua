@@ -103,6 +103,14 @@ local SAVE_KEYS = {
 
 local BATTLE_UNIT_POOLS_BY_CONTENT_FACTION = adamrogue_data_battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION
 
+local function build_destination_payload_component_key(node_key)
+    return "adamrogue_destination_payload_choice_" .. tostring(node_key)
+end
+
+local function build_destination_current_payload_component_key(node_key)
+    return "adamrogue_destination_payload_current_" .. tostring(node_key)
+end
+
 local function log(message)
     if not config_log then
         return
@@ -1613,6 +1621,10 @@ local function launch_reward_dilemma(faction)
     payload_builder:text_display("dummy_do_nothing")
     dilemma_builder:add_choice_payload("FOURTH", payload_builder)
     payload_builder:clear()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FIFTH", payload_builder)
+    payload_builder:clear()
     dilemma_builder:add_target("default", player_force)
 
     cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
@@ -1670,19 +1682,19 @@ local function launch_destination_dilemma(faction)
     local dilemma_builder = cm:create_dilemma_builder(DILEMMA_DESTINATION_KEY)
     local payload_builder = cm:create_payload()
 
-    payload_builder:text_display(candidate_node_a.choice_text_key)
+    payload_builder:text_display(build_destination_payload_component_key(candidate_node_a.node_key))
     dilemma_builder:add_choice_payload("FIRST", payload_builder)
     payload_builder:clear()
 
-    payload_builder:text_display(candidate_node_b.choice_text_key)
+    payload_builder:text_display(build_destination_payload_component_key(candidate_node_b.node_key))
     dilemma_builder:add_choice_payload("SECOND", payload_builder)
     payload_builder:clear()
 
-    payload_builder:text_display(current_node.choice_text_key)
+    payload_builder:text_display(build_destination_current_payload_component_key(current_node.node_key))
     dilemma_builder:add_choice_payload("THIRD", payload_builder)
     payload_builder:clear()
 
-    payload_builder:text_display("adamrogue_destination_choice_delay")
+    payload_builder:text_display("adamrogue_destination_payload_delay")
     dilemma_builder:add_choice_payload("FOURTH", payload_builder)
     payload_builder:clear()
 
@@ -1795,6 +1807,32 @@ local function record_reward_unit_choice(choice)
             .. tostring(unit_count)
             .. "]."
     )
+    return true
+end
+
+local function finalize_reward_resolution(skip_unit_reward)
+    local prepare_ok, prepare_result = pcall(prepare_battle_event)
+    if not prepare_ok then
+        log("prepare_battle_event raised a Lua error after reward resolution. error=[" .. tostring(prepare_result) .. "].")
+        return false
+    end
+
+    if not prepare_result then
+        return false
+    end
+
+    if skip_unit_reward then
+        log("Reward resolution skipped unit granting. Battle event is now pending and will be opened immediately.")
+    else
+        log("Reward resolved. Battle event is now pending and will be opened immediately.")
+    end
+
+    cm:callback(function()
+        if get_current_state() == STATE.BATTLE_PENDING then
+            open_current_event("reward_resolved_auto_open")
+        end
+    end, 0.1)
+
     return true
 end
 
@@ -2463,26 +2501,17 @@ local function handle_reward_dilemma_choice(context)
             return
         end
 
+        if choice == 4 then
+            log("Reward dilemma fifth choice selected. Skipping unit reward and continuing directly to the battle event.")
+            finalize_reward_resolution(true)
+            return
+        end
+
         if choice >= 0 and choice <= 2 then
             if not record_reward_unit_choice(choice) then
                 return
             end
-            local prepare_ok, prepare_result = pcall(prepare_battle_event)
-            if not prepare_ok then
-                log("prepare_battle_event raised a Lua error after reward resolution. error=[" .. tostring(prepare_result) .. "].")
-                return
-            end
-
-            if not prepare_result then
-                return
-            end
-
-            log("Reward resolved. Battle event is now pending and will be opened immediately.")
-            cm:callback(function()
-                if get_current_state() == STATE.BATTLE_PENDING then
-                    open_current_event("reward_resolved_auto_open")
-                end
-            end, 0.1)
+            finalize_reward_resolution(false)
         else
             log("Reward dilemma choice did not match any known action.")
         end
