@@ -2,3 +2,4 @@ id	dilemma_key	option_key	value	target
 #cdir_events_dilemma_option_junctions_tables;1;db/cdir_events_dilemma_option_junctions_tables/!!adamrogue_mvp_dilemma_option_junctions.tsv				
 610190001	adamrogue_mvp_reward_dilemma	VAR_CHANCE	100	default
 610190002	adamrogue_mvp_battle_dilemma	VAR_CHANCE	100	default
+610190003	adamrogue_mvp_equipment_reward_dilemma	VAR_CHANCE	100	default

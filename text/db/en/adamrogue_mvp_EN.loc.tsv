@@ -16,5 +16,13 @@ cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_battle_d
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_battle_dilemmaFIRST	Spawn the fixed enemy test army with an embedded Alchemist and immediately force a battle.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_battle_dilemmaSECOND	Battle Later	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_battle_dilemmaSECOND	Do not spawn the enemy army now. Close the dilemma and reopen the same battle event through the formal entry.	false
+dilemmas_localised_title_adamrogue_mvp_equipment_reward_dilemma	AdamRogue MVP: Claim Equipment	false
+dilemmas_localised_description_adamrogue_mvp_equipment_reward_dilemma	After a battle victory, this run's equipment reward waits for manual claim. Choose 1 item to add to the faction inventory from 3 fixed slots: weapon, armour, and accessory/magic item.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_equipment_reward_dilemmaFIRST	Claim Weapon Candidate	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_equipment_reward_dilemmaFIRST	Claim the item generated for this run's weapon reward slot, then continue directly into the next unit reward event.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_equipment_reward_dilemmaSECOND	Claim Armour Candidate	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_equipment_reward_dilemmaSECOND	Claim the item generated for this run's armour reward slot, then continue directly into the next unit reward event.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_equipment_reward_dilemmaTHIRD	Claim Accessory Candidate	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_equipment_reward_dilemmaTHIRD	Claim the item generated for this run's accessory reward slot, then continue directly into the next unit reward event.	false
 campaign_localised_strings_button_adamrogue_phase_a_title	AdamRogue Entry	false
 campaign_localised_strings_button_adamrogue_phase_a_tooltip	Open the current pending event, restore a paused event, or generate the next event in the run.	false

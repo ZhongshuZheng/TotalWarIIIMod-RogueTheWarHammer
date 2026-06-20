@@ -6,7 +6,9 @@ local get_current_event_payload
 package.path = "script/campaign/mod/adamrogue/?.lua;" .. package.path
 
 local adamrogue_data_cth = require("adamrogue_data_cth")
+local adamrogue_data_ancillaries = require("adamrogue_data_ancillaries")
 local adamrogue_battle_generator_module = require("adamrogue_battle_generator")
+local adamrogue_ancillary_generator_module = require("adamrogue_ancillary_generator")
 local adamrogue_force_snapshot_module = require("adamrogue_force_snapshot")
 
 local BUTTON_CONTEXT_PREFIX = "adamrogue_phase_a_entry"
@@ -21,6 +23,7 @@ local CATHAY_SUBCULTURE = "wh3_main_sc_cth_cathay"
 
 local DILEMMA_REWARD_KEY = "adamrogue_mvp_reward_dilemma"
 local DILEMMA_BATTLE_KEY = "adamrogue_mvp_battle_dilemma"
+local DILEMMA_EQUIPMENT_REWARD_KEY = "adamrogue_mvp_equipment_reward_dilemma"
 
 local PLAYER_GENERAL_SUBTYPE = adamrogue_data_cth.PLAYER_GENERAL_SUBTYPE
 local PLAYER_STARTING_UNITS = adamrogue_data_cth.PLAYER_STARTING_UNITS
@@ -30,10 +33,14 @@ local ENEMY_EMBEDDED_AGENT_SUBTYPE = adamrogue_data_cth.ENEMY_EMBEDDED_AGENT_SUB
 local DEFAULT_ENEMY_FACTION_KEY = adamrogue_data_cth.DEFAULT_ENEMY_FACTION_KEY
 local ENEMY_FACTION_CANDIDATES = adamrogue_data_cth.ENEMY_FACTION_CANDIDATES
 local REWARD_UNITS_BY_CHOICE = adamrogue_data_cth.REWARD_UNITS_BY_CHOICE
+local EQUIPMENT_RARITY = adamrogue_data_ancillaries.EQUIPMENT_RARITY
+local EQUIPMENT_REWARD_SLOT_ORDER = adamrogue_data_ancillaries.EQUIPMENT_REWARD_SLOT_ORDER
+local EQUIPMENT_REWARD_POOL = adamrogue_data_ancillaries.EQUIPMENT_REWARD_POOL
 
 local EVENT_TYPE = {
     UNIT_REWARD = "unit_reward",
-    BATTLE = "battle"
+    BATTLE = "battle",
+    EQUIPMENT_REWARD = "equipment_reward"
 }
 
 local BATTLE_TIER = adamrogue_data_cth.BATTLE_TIER
@@ -60,6 +67,7 @@ local SAVE_KEYS = {
     current_event_seed = "adamrogue_current_event_seed",
     current_event_payload = "adamrogue_current_event_payload",
     last_reward_unit = "adamrogue_last_reward_unit",
+    last_reward_ancillary = "adamrogue_last_reward_ancillary",
     last_battle_result = "adamrogue_last_battle_result",
     completed_battle_count = "adamrogue_completed_battle_count",
     victory_count = "adamrogue_victory_count",
@@ -572,6 +580,17 @@ local build_budget_enemy_force_definition = adamrogue_battle_generator.build_bud
 local create_battle_payload_from_definition = adamrogue_battle_generator.create_battle_payload_from_definition
 local log_unit_list_details = adamrogue_battle_generator.log_unit_list_details
 
+local adamrogue_ancillary_generator = adamrogue_ancillary_generator_module.new({
+    log = log,
+    cm = cm,
+    pool = EQUIPMENT_REWARD_POOL,
+    battle_tier = BATTLE_TIER,
+    equipment_rarity = EQUIPMENT_RARITY,
+    slot_order = EQUIPMENT_REWARD_SLOT_ORDER
+})
+
+local generate_equipment_reward_payload = adamrogue_ancillary_generator.generate_equipment_reward_payload
+
 local adamrogue_force_snapshot = adamrogue_force_snapshot_module.new({
     cm = cm,
     log = log,
@@ -963,6 +982,38 @@ local function prepare_battle_event()
     return true
 end
 
+local function prepare_equipment_reward_event()
+    local faction = get_local_player_faction()
+    if not is_supported_player_faction(faction) then
+        log("Cannot prepare equipment reward event because the local faction is unsupported.")
+        return false
+    end
+
+    local completed_battle_count = get_completed_battle_count()
+    local battle_tier = get_battle_tier_for_progress(completed_battle_count)
+    local payload = generate_equipment_reward_payload(completed_battle_count, battle_tier)
+    if not payload or type(payload) ~= "table" or tonumber(payload.candidate_count) == 0 then
+        log("prepare_equipment_reward_event aborted because no equipment reward candidates were generated.")
+        return false
+    end
+
+    local seed = new_event_seed()
+    set_current_event_context(EVENT_TYPE.EQUIPMENT_REWARD, DILEMMA_EQUIPMENT_REWARD_KEY, seed, payload)
+    set_current_state(STATE.EQUIPMENT_REWARD_PENDING)
+    log(
+        "Prepared equipment reward event for faction ["
+            .. faction:name()
+            .. "]. selected_rarity_band=["
+            .. tostring(payload.selected_rarity_band)
+            .. "], candidate_count=["
+            .. tostring(payload.candidate_count)
+            .. "], fallback_strategy_used=["
+            .. tostring(payload.fallback_strategy_used)
+            .. "]."
+    )
+    return true
+end
+
 local function pause_current_event()
     set_paused_state(get_current_state())
 end
@@ -1013,6 +1064,9 @@ local function open_current_event(reason)
     elseif state == STATE.BATTLE_PENDING then
         cm:trigger_dilemma(faction:name(), DILEMMA_BATTLE_KEY)
         log("Triggered battle dilemma for faction [" .. faction:name() .. "]")
+    elseif state == STATE.EQUIPMENT_REWARD_PENDING then
+        cm:trigger_dilemma(faction:name(), DILEMMA_EQUIPMENT_REWARD_KEY)
+        log("Triggered equipment reward dilemma for faction [" .. faction:name() .. "]")
     elseif state == STATE.GAME_OVER then
         log("Run is in GAME_OVER. Phase A leaves this as a placeholder and does not open a summary window yet.")
     else
@@ -1046,6 +1100,69 @@ local function grant_reward_unit(choice)
     else
         log("Reward unit grant attempted for [" .. reward_unit_key .. "], but the unit count did not increase. The force may be full.")
     end
+end
+
+local function grant_reward_ancillary(choice)
+    local faction = get_local_player_faction()
+    if not is_supported_player_faction(faction) then
+        log("Cannot grant reward ancillary because the local faction is unsupported.")
+        return false
+    end
+
+    local payload = get_current_event_payload()
+    if not payload or type(payload) ~= "table" then
+        log("Cannot grant reward ancillary because the current equipment reward payload could not be decoded.")
+        return false
+    end
+
+    local ancillary_key = payload["ancillary_" .. tostring(choice)]
+    local item_category = payload["category_" .. tostring(choice)] or "unknown"
+    local item_rarity = payload["rarity_" .. tostring(choice)] or "unknown"
+    local reward_slot = payload["slot_" .. tostring(choice)] or "unknown"
+
+    if not ancillary_key or ancillary_key == "" then
+        log("grant_reward_ancillary aborted because choice [" .. tostring(choice) .. "] has no ancillary key in the payload.")
+        return false
+    end
+
+    local had_before = faction:ancillary_exists(ancillary_key)
+    local add_ok, add_error = pcall(function()
+        cm:add_ancillary_to_faction(faction, ancillary_key, false)
+    end)
+
+    if not add_ok then
+        log(
+            "grant_reward_ancillary failed while adding ancillary_key=["
+                .. tostring(ancillary_key)
+                .. "], error=["
+                .. tostring(add_error)
+                .. "]."
+        )
+        return false
+    end
+
+    local refreshed_faction = get_local_player_faction()
+    local has_after = refreshed_faction and refreshed_faction:ancillary_exists(ancillary_key) or false
+
+    set_saved_value(SAVE_KEYS.last_reward_ancillary, ancillary_key)
+    log(
+        "Granted equipment reward ancillary ["
+            .. tostring(ancillary_key)
+            .. "] from choice=["
+            .. tostring(choice)
+            .. "], slot=["
+            .. tostring(reward_slot)
+            .. "], category=["
+            .. tostring(item_category)
+            .. "], rarity=["
+            .. tostring(item_rarity)
+            .. "], had_before=["
+            .. tostring(had_before)
+            .. "], has_after=["
+            .. tostring(has_after)
+            .. "]."
+    )
+    return true
 end
 
 local function player_force_participated_in_pending_battle()
@@ -1537,6 +1654,16 @@ local function handle_post_battle_state_transition(player_won)
 
     restore_player_force_after_battle()
 
+    if player_won then
+        set_saved_value(SAVE_KEYS.paused_from_state, "")
+        if prepare_equipment_reward_event() then
+            log("Battle flow advanced to EQUIPMENT_REWARD_PENDING. The player must manually trigger the entry button to claim this reward.")
+            return
+        end
+
+        log("Battle victory could not prepare the equipment reward event and will fall back to INIT.")
+    end
+
     if not player_won and consecutive_defeat_count >= MAX_CONSECUTIVE_DEFEATS then
         set_current_state(STATE.GAME_OVER)
         clear_current_event_context()
@@ -1625,6 +1752,46 @@ local function handle_battle_dilemma_choice(context)
     end, 0.1)
 end
 
+local function handle_equipment_reward_dilemma_choice(context)
+    if context:dilemma() ~= DILEMMA_EQUIPMENT_REWARD_KEY then
+        return
+    end
+
+    local choice = context:choice()
+    log(
+        "Equipment reward dilemma choice received: "
+            .. tostring(choice)
+            .. ", current_state=["
+            .. tostring(get_current_state())
+            .. "], payload=["
+            .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, ""))
+            .. "]"
+    )
+
+    cm:callback(function()
+        log("Processing deferred equipment reward dilemma choice: " .. tostring(choice))
+
+        if choice >= 0 and choice <= 2 then
+            if not grant_reward_ancillary(choice) then
+                return
+            end
+
+            if not prepare_unit_reward_event() then
+                return
+            end
+
+            log("Equipment reward resolved. The next unit reward event is now pending and will be opened immediately.")
+            cm:callback(function()
+                if get_current_state() == STATE.UNIT_REWARD_PENDING then
+                    open_current_event("equipment_reward_resolved_auto_open")
+                end
+            end, 0.1)
+        else
+            log("Equipment reward dilemma choice did not match any known action.")
+        end
+    end, 0.1)
+end
+
 local function register_listeners()
     core:remove_listener("adamrogue_phase_a_entry_button")
     core:add_listener(
@@ -1652,13 +1819,17 @@ local function register_listeners()
         "DilemmaChoiceMadeEvent",
         function(context)
             local dilemma_key = context:dilemma()
-            return dilemma_key == DILEMMA_REWARD_KEY or dilemma_key == DILEMMA_BATTLE_KEY
+            return dilemma_key == DILEMMA_REWARD_KEY
+                or dilemma_key == DILEMMA_BATTLE_KEY
+                or dilemma_key == DILEMMA_EQUIPMENT_REWARD_KEY
         end,
         function(context)
             if context:dilemma() == DILEMMA_REWARD_KEY then
                 handle_reward_dilemma_choice(context)
-            else
+            elseif context:dilemma() == DILEMMA_BATTLE_KEY then
                 handle_battle_dilemma_choice(context)
+            else
+                handle_equipment_reward_dilemma_choice(context)
             end
         end,
         true

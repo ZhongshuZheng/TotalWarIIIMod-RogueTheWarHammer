@@ -2,3 +2,4 @@ key	generate	localised_description	localised_title	ui_image	prioritized	event_ca
 #dilemmas_tables;3;db/dilemmas_tables/!!adamrogue_mvp_dilemmas.tsv										
 adamrogue_mvp_reward_dilemma	false	dummy	dummy	army_morale_up	false	Event				false
 adamrogue_mvp_battle_dilemma	false	dummy	dummy	enemy_spotted	false	Event				false
+adamrogue_mvp_equipment_reward_dilemma	false	dummy	dummy	army_morale_up	false	Event				false
