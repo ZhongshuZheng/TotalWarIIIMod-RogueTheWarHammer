@@ -41,7 +41,6 @@ local DEFAULT_CONTENT_FACTION_KEY = adamrogue_data_battle_pools.DEFAULT_CONTENT_
 local ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION
 local ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION
 local ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION
-local REWARD_UNITS_BY_CHOICE = adamrogue_data_cth.REWARD_UNITS_BY_CHOICE
 local EQUIPMENT_RARITY = adamrogue_data_ancillaries.EQUIPMENT_RARITY
 local EQUIPMENT_REWARD_SLOT_ORDER = adamrogue_data_ancillaries.EQUIPMENT_REWARD_SLOT_ORDER
 local COMMON_EQUIPMENT_POOL = adamrogue_data_ancillaries.COMMON_EQUIPMENT_POOL
@@ -745,6 +744,69 @@ local build_budget_enemy_force_definition = adamrogue_battle_generator.build_bud
 local create_battle_payload_from_definition = adamrogue_battle_generator.create_battle_payload_from_definition
 local log_unit_list_details = adamrogue_battle_generator.log_unit_list_details
 
+local function get_reward_unit_pool_for_faction(content_faction_key, battle_tier)
+    local source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[content_faction_key]
+    local resolved_faction_key = content_faction_key
+
+    if not source_pool or #source_pool == 0 then
+        source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {}
+        resolved_faction_key = DEFAULT_CONTENT_FACTION_KEY
+        log(
+            "get_reward_unit_pool_for_faction is falling back to the default content faction pool. requested_content_faction_key=["
+                .. tostring(content_faction_key)
+                .. "], resolved_content_faction_key=["
+                .. tostring(resolved_faction_key)
+                .. "], pool_size=["
+                .. tostring(#source_pool)
+                .. "]."
+        )
+    end
+
+    local candidate_pool = {}
+    for _, unit_entry in ipairs(source_pool) do
+        if battle_tier >= unit_entry.min_battle_tier and battle_tier <= unit_entry.max_battle_tier then
+            for _ = 1, math.max(1, unit_entry.weight or 1) do
+                candidate_pool[#candidate_pool + 1] = unit_entry
+            end
+        end
+    end
+
+    log(
+        "get_reward_unit_pool_for_faction completed. requested_content_faction_key=["
+            .. tostring(content_faction_key)
+            .. "], resolved_content_faction_key=["
+            .. tostring(resolved_faction_key)
+            .. "], battle_tier=["
+            .. tostring(battle_tier)
+            .. "], weighted_pool_size=["
+            .. tostring(#candidate_pool)
+            .. "]."
+    )
+    return candidate_pool, resolved_faction_key
+end
+
+local function pick_reward_unit_from_pool(weighted_pool, excluded_units)
+    if not weighted_pool or #weighted_pool == 0 then
+        return nil
+    end
+
+    local blocked = excluded_units or {}
+    for _ = 1, 30 do
+        local unit_entry = weighted_pool[cm:random_number(#weighted_pool, 1)]
+        if unit_entry and unit_entry.unit_key and not blocked[unit_entry.unit_key] then
+            return unit_entry.unit_key, unit_entry
+        end
+    end
+
+    for _, unit_entry in ipairs(weighted_pool) do
+        if unit_entry and unit_entry.unit_key and not blocked[unit_entry.unit_key] then
+            return unit_entry.unit_key, unit_entry
+        end
+    end
+
+    return nil
+end
+
 local adamrogue_ancillary_generator = adamrogue_ancillary_generator_module.new({
     log = log,
     cm = cm,
@@ -1113,17 +1175,94 @@ local function prepare_unit_reward_event()
         return false
     end
 
+    local current_node = get_current_node_data()
+    if not current_node then
+        log("prepare_unit_reward_event aborted because the current node could not be resolved.")
+        return false
+    end
+
+    local completed_battle_count = get_completed_battle_count()
+    local battle_tier = get_battle_tier_for_progress(completed_battle_count)
+    local player_pool, resolved_player_pool_faction_key = get_reward_unit_pool_for_faction(faction:name(), battle_tier)
+    local node_pool, resolved_node_pool_faction_key = get_reward_unit_pool_for_faction(current_node.faction_key, battle_tier)
+    if #player_pool == 0 or #node_pool == 0 then
+        log(
+            "prepare_unit_reward_event aborted because one or more weighted reward pools are empty. player_pool_size=["
+                .. tostring(#player_pool)
+                .. "], node_pool_size=["
+                .. tostring(#node_pool)
+                .. "]."
+        )
+        return false
+    end
+
+    local chosen_units = {}
+    local chosen_lookup = {}
+    local unit_0 = pick_reward_unit_from_pool(player_pool, chosen_lookup)
+    if not unit_0 then
+        log("prepare_unit_reward_event aborted because player reward choice 0 could not be generated.")
+        return false
+    end
+    chosen_lookup[unit_0] = true
+    chosen_units[0] = unit_0
+
+    local unit_1 = pick_reward_unit_from_pool(player_pool, chosen_lookup)
+    if not unit_1 then
+        chosen_lookup[unit_0] = nil
+        unit_1 = pick_reward_unit_from_pool(player_pool, {})
+    end
+    if not unit_1 then
+        log("prepare_unit_reward_event aborted because player reward choice 1 could not be generated.")
+        return false
+    end
+    chosen_lookup[unit_1] = true
+    chosen_units[1] = unit_1
+
+    local unit_2 = pick_reward_unit_from_pool(node_pool, chosen_lookup)
+    if not unit_2 then
+        unit_2 = pick_reward_unit_from_pool(node_pool, {})
+    end
+    if not unit_2 then
+        log("prepare_unit_reward_event aborted because node reward choice 2 could not be generated.")
+        return false
+    end
+    chosen_units[2] = unit_2
+
     local seed = new_event_seed()
     local payload = {
-        unit_0 = REWARD_UNITS_BY_CHOICE[0],
-        unit_1 = REWARD_UNITS_BY_CHOICE[1],
-        unit_2 = REWARD_UNITS_BY_CHOICE[2],
+        unit_0 = chosen_units[0],
+        unit_1 = chosen_units[1],
+        unit_2 = chosen_units[2],
+        reward_player_faction_key = faction:name(),
+        reward_current_node_faction_key = current_node.faction_key,
+        reward_player_pool_faction_key = resolved_player_pool_faction_key,
+        reward_node_pool_faction_key = resolved_node_pool_faction_key,
+        reward_battle_tier = battle_tier,
+        reward_completed_battle_count = completed_battle_count,
         pause_choice = 3
     }
 
     set_current_event_context(EVENT_TYPE.UNIT_REWARD, DILEMMA_REWARD_KEY, seed, payload)
     set_current_state(STATE.UNIT_REWARD_PENDING)
-    log("Prepared unit reward event for faction [" .. faction:name() .. "]")
+    log(
+        "Prepared unit reward event for faction ["
+            .. faction:name()
+            .. "]. current_node_faction_key=["
+            .. tostring(current_node.faction_key)
+            .. "], battle_tier=["
+            .. tostring(battle_tier)
+            .. "], reward_units=["
+            .. tostring(chosen_units[0])
+            .. ","
+            .. tostring(chosen_units[1])
+            .. ","
+            .. tostring(chosen_units[2])
+            .. "], reward_player_pool_faction_key=["
+            .. tostring(resolved_player_pool_faction_key)
+            .. "], reward_node_pool_faction_key=["
+            .. tostring(resolved_node_pool_faction_key)
+            .. "]."
+    )
     return true
 end
 
@@ -1622,7 +1761,8 @@ local function open_current_event(reason)
 end
 
 local function grant_reward_unit(choice)
-    local reward_unit_key = REWARD_UNITS_BY_CHOICE[choice]
+    local payload = get_current_event_payload()
+    local reward_unit_key = payload and payload["unit_" .. tostring(choice)] or nil
     if not reward_unit_key then
         log("Reward dilemma choice is not a reward unit: " .. tostring(choice))
         return
