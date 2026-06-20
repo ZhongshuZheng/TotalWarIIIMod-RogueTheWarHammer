@@ -1585,6 +1585,12 @@ local function launch_reward_dilemma(faction)
         return false
     end
 
+    local player_force = get_saved_player_force()
+    if not player_force then
+        log("launch_reward_dilemma aborted because the saved player force is unavailable.")
+        return false
+    end
+
     local dilemma_builder = cm:create_dilemma_builder(DILEMMA_REWARD_KEY)
     local payload_builder = cm:create_payload()
 
@@ -1592,7 +1598,10 @@ local function launch_reward_dilemma(faction)
         local reward_unit_key = payload["unit_" .. tostring(choice_index)]
         local choice_key = ({ "FIRST", "SECOND", "THIRD" })[choice_index + 1]
         if reward_unit_key and reward_unit_key ~= "" then
-            payload_builder:text_display("dummy_do_nothing")
+            -- Mirror the original caravan reward flow: the dilemma payload itself adds the
+            -- chosen unit to the active force, which lets the campaign UI render it as a
+            -- real unit reward instead of a generic text-only choice.
+            payload_builder:add_unit(player_force, reward_unit_key, 1, 0, true)
             dilemma_builder:add_choice_payload(choice_key, payload_builder)
             payload_builder:clear()
         else
@@ -1604,6 +1613,7 @@ local function launch_reward_dilemma(faction)
     payload_builder:text_display("dummy_do_nothing")
     dilemma_builder:add_choice_payload("FOURTH", payload_builder)
     payload_builder:clear()
+    dilemma_builder:add_target("default", player_force)
 
     cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
     log("Launched custom reward dilemma for faction [" .. faction:name() .. "].")
@@ -1760,33 +1770,32 @@ local function open_current_event(reason)
     end
 end
 
-local function grant_reward_unit(choice)
+local function record_reward_unit_choice(choice)
     local payload = get_current_event_payload()
     local reward_unit_key = payload and payload["unit_" .. tostring(choice)] or nil
     if not reward_unit_key then
         log("Reward dilemma choice is not a reward unit: " .. tostring(choice))
-        return
+        return false
     end
 
-    local general = get_saved_player_general()
     local force = get_saved_player_force()
-    if not general or not force then
-        log("Cannot grant reward unit because the player test force is missing.")
-        return
+    if not force then
+        log("Cannot record reward unit choice because the player test force is missing.")
+        return false
     end
 
-    local before_count = count_units_in_force(force)
-    cm:grant_unit_to_character(cm:char_lookup_str(general), reward_unit_key)
-
-    local refreshed_force = get_saved_player_force()
-    local after_count = count_units_in_force(refreshed_force)
-
-    if after_count > before_count then
-        set_saved_value(SAVE_KEYS.last_reward_unit, reward_unit_key)
-        log("Granted reward unit [" .. reward_unit_key .. "] to player force. Unit count " .. tostring(before_count) .. " -> " .. tostring(after_count))
-    else
-        log("Reward unit grant attempted for [" .. reward_unit_key .. "], but the unit count did not increase. The force may be full.")
-    end
+    local unit_count = count_units_in_force(force)
+    set_saved_value(SAVE_KEYS.last_reward_unit, reward_unit_key)
+    log(
+        "Recorded reward unit choice ["
+            .. reward_unit_key
+            .. "] for reward choice ["
+            .. tostring(choice)
+            .. "]. The dilemma payload is responsible for adding it to the player force. current_unit_count=["
+            .. tostring(unit_count)
+            .. "]."
+    )
+    return true
 end
 
 local function record_reward_ancillary_choice(choice)
@@ -2455,7 +2464,9 @@ local function handle_reward_dilemma_choice(context)
         end
 
         if choice >= 0 and choice <= 2 then
-            grant_reward_unit(choice)
+            if not record_reward_unit_choice(choice) then
+                return
+            end
             local prepare_ok, prepare_result = pcall(prepare_battle_event)
             if not prepare_ok then
                 log("prepare_battle_event raised a Lua error after reward resolution. error=[" .. tostring(prepare_result) .. "].")
