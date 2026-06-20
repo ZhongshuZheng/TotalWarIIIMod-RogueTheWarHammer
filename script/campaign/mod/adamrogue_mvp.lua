@@ -1,49 +1,42 @@
 local MODULE_KEY = "adamrogue_phase_a"
 local config_log = true
 local LOG_FILE_NAME = "adamrogue_phase_a_log.txt"
+local get_current_event_payload
+
+package.path = "script/campaign/mod/adamrogue/?.lua;" .. package.path
+
+local adamrogue_data_cth = require("adamrogue_data_cth")
+local adamrogue_battle_generator_module = require("adamrogue_battle_generator")
+local adamrogue_force_snapshot_module = require("adamrogue_force_snapshot")
 
 local BUTTON_CONTEXT_PREFIX = "adamrogue_phase_a_entry"
 local AUTO_RESUME_ON_TURN_START = false
+local MAX_CONSECUTIVE_DEFEATS = 3
+local MAX_BATTLE_SPAWN_POLL_ATTEMPTS = 10
+-- Keep this aligned with the Cathay enemy faction pool so each candidate can be tried once.
+local MAX_BATTLE_SPAWN_RETRIES = 5
+local UNIT_VALUE_SOURCE = "main_units_tables.multiplayer_cost"
 
 local CATHAY_SUBCULTURE = "wh3_main_sc_cth_cathay"
 
 local DILEMMA_REWARD_KEY = "adamrogue_mvp_reward_dilemma"
 local DILEMMA_BATTLE_KEY = "adamrogue_mvp_battle_dilemma"
 
-local PLAYER_GENERAL_SUBTYPE = "wh3_main_cth_lord_magistrate_yang"
-local PLAYER_STARTING_UNITS = table.concat({
-    "wh3_main_cth_inf_jade_warriors_0",
-    "wh3_main_cth_inf_jade_warriors_0",
-    "wh3_main_cth_inf_jade_warrior_crossbowmen_0"
-}, ",")
+local PLAYER_GENERAL_SUBTYPE = adamrogue_data_cth.PLAYER_GENERAL_SUBTYPE
+local PLAYER_STARTING_UNITS = adamrogue_data_cth.PLAYER_STARTING_UNITS
 
-local ENEMY_GENERAL_SUBTYPE = "wh3_main_cth_lord_magistrate_yin"
-local ENEMY_EMBEDDED_AGENT_TYPE = "engineer"
-local ENEMY_EMBEDDED_AGENT_SUBTYPE = "wh3_main_cth_alchemist"
-local CARAVAN_BATTLE_ENEMY_FACTION = "wh3_main_cth_cathay_qb1"
-local ENEMY_UNITS = table.concat({
-    "wh3_main_cth_inf_jade_warriors_0",
-    "wh3_main_cth_inf_jade_warriors_0",
-    "wh3_main_cth_inf_jade_warriors_0"
-}, ",")
-
-local ENEMY_FACTION_CANDIDATES = {
-    "wh3_main_cth_rebel_lords_of_nan_yang",
-    "wh3_main_cth_imperial_wardens",
-    "wh3_main_cth_burning_wind_nomads",
-    "wh3_main_cth_eastern_river_lords"
-}
-
-local REWARD_UNITS_BY_CHOICE = {
-    [0] = "wh3_main_cth_inf_dragon_guard_0",
-    [1] = "wh3_main_cth_inf_dragon_guard_crossbowmen_0",
-    [2] = "wh3_main_cth_cav_jade_lancers_0"
-}
+local ENEMY_GENERAL_SUBTYPE = adamrogue_data_cth.ENEMY_GENERAL_SUBTYPE
+local ENEMY_EMBEDDED_AGENT_SUBTYPE = adamrogue_data_cth.ENEMY_EMBEDDED_AGENT_SUBTYPE
+local DEFAULT_ENEMY_FACTION_KEY = adamrogue_data_cth.DEFAULT_ENEMY_FACTION_KEY
+local ENEMY_FACTION_CANDIDATES = adamrogue_data_cth.ENEMY_FACTION_CANDIDATES
+local REWARD_UNITS_BY_CHOICE = adamrogue_data_cth.REWARD_UNITS_BY_CHOICE
 
 local EVENT_TYPE = {
     UNIT_REWARD = "unit_reward",
     BATTLE = "battle"
 }
+
+local BATTLE_TIER = adamrogue_data_cth.BATTLE_TIER
 
 local STATE = {
     INIT = "INIT",
@@ -72,11 +65,17 @@ local SAVE_KEYS = {
     victory_count = "adamrogue_victory_count",
     defeat_count = "adamrogue_defeat_count",
     consecutive_defeat_count = "adamrogue_consecutive_defeat_count",
+    last_battle_force_source = "adamrogue_last_battle_force_source",
+    last_battle_budget = "adamrogue_last_battle_budget",
+    pre_battle_unit_snapshot = "adamrogue_pre_battle_unit_snapshot",
+    pre_battle_general_rank = "adamrogue_pre_battle_general_rank",
     enemy_faction_key = "adamrogue_enemy_faction_key",
     enemy_force_cqi = "adamrogue_enemy_force_cqi",
     enemy_leader_cqi = "adamrogue_enemy_leader_cqi",
     enemy_agent_cqi = "adamrogue_enemy_agent_cqi"
 }
+
+local CATHAY_BATTLE_UNIT_POOL = adamrogue_data_cth.CATHAY_BATTLE_UNIT_POOL
 
 local function log(message)
     if not config_log then
@@ -169,6 +168,7 @@ local function get_saved_character(saved_key)
 
     local character = cm:get_character_by_cqi(cqi)
     if not character or character:is_null_interface() then
+        log("get_saved_character returning nil because cm:get_character_by_cqi failed for value [" .. tostring(cqi) .. "].")
         return nil
     end
 
@@ -294,20 +294,106 @@ local function find_enemy_spawn_near_player(enemy_faction_key, player_general)
     return -1, -1, "not_found"
 end
 
-local function pick_enemy_faction_key(player_faction_key)
-    for _, faction_key in ipairs(ENEMY_FACTION_CANDIDATES) do
-        if faction_key ~= player_faction_key then
-            local faction = cm:get_faction(faction_key)
-            if faction and not faction:is_null_interface() and not faction:is_dead() and not faction:is_human() then
-                return faction_key
+local function find_alternative_enemy_spawn_position(enemy_faction_key, player_general, disallowed_x, disallowed_y)
+    local first_valid_x = -1
+    local first_valid_y = -1
+    local first_valid_source = "not_found"
+
+    local function evaluate_candidate(x, y, source)
+        log(
+            "find_alternative_enemy_spawn_position evaluated candidate. source=["
+                .. tostring(source)
+                .. "], x=["
+                .. tostring(x)
+                .. "], y=["
+                .. tostring(y)
+                .. "], disallowed_x=["
+                .. tostring(disallowed_x)
+                .. "], disallowed_y=["
+                .. tostring(disallowed_y)
+                .. "]."
+        )
+
+        if x and y and x >= 0 and y >= 0 then
+            if first_valid_x < 0 or first_valid_y < 0 then
+                first_valid_x = x
+                first_valid_y = y
+                first_valid_source = source
             end
+
+            if x ~= disallowed_x or y ~= disallowed_y then
+                return x, y, source
+            end
+        end
+
+        return nil
+    end
+
+    local x, y = cm:find_valid_spawn_location_for_character_from_character(
+        enemy_faction_key,
+        cm:char_lookup_str(player_general),
+        true,
+        12
+    )
+    local resolved_x, resolved_y, resolved_source = evaluate_candidate(x, y, "from_character_r12")
+    if resolved_x then
+        return resolved_x, resolved_y, resolved_source
+    end
+
+    x, y = cm:find_valid_spawn_location_for_character_from_character(
+        enemy_faction_key,
+        cm:char_lookup_str(player_general),
+        true,
+        20
+    )
+    resolved_x, resolved_y, resolved_source = evaluate_candidate(x, y, "from_character_r20")
+    if resolved_x then
+        return resolved_x, resolved_y, resolved_source
+    end
+
+    x, y = cm:find_valid_spawn_location_for_character_from_position(
+        enemy_faction_key,
+        player_general:logical_position_x(),
+        player_general:logical_position_y(),
+        false
+    )
+    resolved_x, resolved_y, resolved_source = evaluate_candidate(x, y, "from_position_false")
+    if resolved_x then
+        return resolved_x, resolved_y, resolved_source
+    end
+
+    local player_region = player_general:region()
+    if player_region and not player_region:is_null_interface() then
+        x, y = cm:find_valid_spawn_location_for_character_from_settlement(
+            enemy_faction_key,
+            player_region:name(),
+            false,
+            true,
+            20
+        )
+        resolved_x, resolved_y, resolved_source = evaluate_candidate(x, y, "from_settlement_r20")
+        if resolved_x then
+            return resolved_x, resolved_y, resolved_source
         end
     end
 
-    return nil
+    if first_valid_x >= 0 and first_valid_y >= 0 then
+        log(
+            "find_alternative_enemy_spawn_position is falling back to the first valid candidate even though it matches the disallowed position. source=["
+                .. tostring(first_valid_source)
+                .. "], x=["
+                .. tostring(first_valid_x)
+                .. "], y=["
+                .. tostring(first_valid_y)
+                .. "]."
+        )
+        return first_valid_x, first_valid_y, first_valid_source
+    end
+
+    return -1, -1, "not_found"
 end
 
-local function find_spawnable_enemy_faction_near_player(player_faction_key, player_general, preferred_enemy_faction_key)
+local function get_enemy_faction_candidate_sequence(player_faction_key, preferred_enemy_faction_key)
     local candidate_keys = {}
 
     if preferred_enemy_faction_key and preferred_enemy_faction_key ~= "" and preferred_enemy_faction_key ~= player_faction_key then
@@ -320,21 +406,61 @@ local function find_spawnable_enemy_faction_near_player(player_faction_key, play
         end
     end
 
-    for _, faction_key in ipairs(candidate_keys) do
+    return candidate_keys
+end
+
+local function find_enemy_faction_fallback_candidate(player_faction_key, current_enemy_faction_key, player_general, fallback_index)
+    local candidate_keys = get_enemy_faction_candidate_sequence(player_faction_key, current_enemy_faction_key)
+    local target_index = fallback_index or 2
+
+    for index = target_index, #candidate_keys do
+        local faction_key = candidate_keys[index]
         local faction = cm:get_faction(faction_key)
         if faction and not faction:is_null_interface() and not faction:is_dead() and not faction:is_human() then
-            local x, y = cm:find_valid_spawn_location_for_character_from_character(
-                faction_key,
-                cm:char_lookup_str(player_general),
-                true,
-                6
+            local x, y, source = find_alternative_enemy_spawn_position(faction_key, player_general, -1, -1)
+            log(
+                "find_enemy_faction_fallback_candidate evaluated faction candidate. faction_key=["
+                    .. tostring(faction_key)
+                    .. "], candidate_index=["
+                    .. tostring(index)
+                    .. "], x=["
+                    .. tostring(x)
+                    .. "], y=["
+                    .. tostring(y)
+                    .. "], source=["
+                    .. tostring(source)
+                    .. "]."
             )
 
             if x >= 0 and y >= 0 then
+                return faction_key, x, y, source, index
+            end
+        end
+    end
+
+    return nil, -1, -1, "not_found", nil
+end
+
+local function pick_initial_enemy_faction_key(player_faction_key, player_general)
+    local candidate_keys = get_enemy_faction_candidate_sequence(player_faction_key, DEFAULT_ENEMY_FACTION_KEY)
+
+    for _, faction_key in ipairs(candidate_keys) do
+        local faction = cm:get_faction(faction_key)
+        if faction and not faction:is_null_interface() and not faction:is_dead() and not faction:is_human() then
+            local x, y, source = find_alternative_enemy_spawn_position(faction_key, player_general, -1, -1)
+
+            if x >= 0 and y >= 0 then
+                log(
+                    "pick_initial_enemy_faction_key selected faction candidate. faction_key=["
+                        .. tostring(faction_key)
+                        .. "], source=["
+                        .. tostring(source)
+                        .. "]."
+                )
                 return faction_key, x, y
             end
 
-            log("Enemy faction [" .. faction_key .. "] could not find a valid spawn point near the player.")
+            log("pick_initial_enemy_faction_key rejected faction candidate because no valid spawn point was found. faction_key=[" .. faction_key .. "].")
         end
     end
 
@@ -342,6 +468,21 @@ local function find_spawnable_enemy_faction_near_player(player_faction_key, play
 end
 
 local function cleanup_enemy_force()
+    local enemy_faction_name = get_saved_value(SAVE_KEYS.enemy_faction_key, DEFAULT_ENEMY_FACTION_KEY)
+    local enemy_faction = nil
+
+    if enemy_faction_name ~= "" then
+        enemy_faction = cm:get_faction(enemy_faction_name)
+    end
+
+    if caravans and caravans.cleanup_post_battle then
+        log("cleanup_enemy_force invoking caravans:cleanup_post_battle().")
+        caravans:cleanup_post_battle()
+    elseif enemy_faction and not enemy_faction:is_null_interface() and not enemy_faction:is_dead() then
+        log("cleanup_enemy_force invoking kill_all_armies_for_faction for enemy faction [" .. tostring(enemy_faction_name) .. "].")
+        cm:kill_all_armies_for_faction(enemy_faction)
+    end
+
     local enemy_general = get_saved_enemy_general()
     if enemy_general then
         log("Cleaning up enemy test army [" .. enemy_general:faction():name() .. "]")
@@ -353,7 +494,48 @@ local function cleanup_enemy_force()
         cm:kill_character(cm:char_lookup_str(enemy_agent))
     end
 
+    if caravans then
+        caravans.enemy_force_cqi = 0
+    end
+
     set_saved_value(SAVE_KEYS.enemy_faction_key, "")
+    set_saved_value(SAVE_KEYS.enemy_force_cqi, 0)
+    set_saved_value(SAVE_KEYS.enemy_leader_cqi, 0)
+    set_saved_value(SAVE_KEYS.enemy_agent_cqi, 0)
+end
+
+local function cleanup_enemy_force_before_spawn(reason)
+    local enemy_faction_name = get_saved_value(SAVE_KEYS.enemy_faction_key, DEFAULT_ENEMY_FACTION_KEY)
+    local enemy_faction = nil
+    if enemy_faction_name ~= "" then
+        enemy_faction = cm:get_faction(enemy_faction_name)
+    end
+
+    log(
+        "cleanup_enemy_force_before_spawn started. reason=["
+            .. tostring(reason)
+            .. "], enemy_faction_name=["
+            .. tostring(enemy_faction_name)
+            .. "]."
+    )
+
+    if caravans and caravans.cleanup_post_battle then
+        log("cleanup_enemy_force_before_spawn invoking caravans:cleanup_post_battle().")
+        caravans:cleanup_post_battle()
+    elseif enemy_faction and not enemy_faction:is_null_interface() and not enemy_faction:is_dead() then
+        log(
+            "cleanup_enemy_force_before_spawn invoking kill_all_armies_for_faction for enemy faction ["
+                .. tostring(enemy_faction_name)
+                .. "]."
+        )
+        cm:kill_all_armies_for_faction(enemy_faction)
+    else
+        log("cleanup_enemy_force_before_spawn found no valid enemy faction to clean.")
+    end
+
+    if caravans then
+        caravans.enemy_force_cqi = 0
+    end
     set_saved_value(SAVE_KEYS.enemy_force_cqi, 0)
     set_saved_value(SAVE_KEYS.enemy_leader_cqi, 0)
     set_saved_value(SAVE_KEYS.enemy_agent_cqi, 0)
@@ -373,6 +555,40 @@ local function split_string(input, delimiter)
     return result
 end
 
+local adamrogue_battle_generator = adamrogue_battle_generator_module.new({
+    log = log,
+    cm = cm,
+    split_string = split_string,
+    unit_pool = CATHAY_BATTLE_UNIT_POOL,
+    battle_tier = BATTLE_TIER,
+    enemy_general_subtype = ENEMY_GENERAL_SUBTYPE,
+    enemy_embedded_agent_subtype = ENEMY_EMBEDDED_AGENT_SUBTYPE,
+    default_enemy_faction_key = DEFAULT_ENEMY_FACTION_KEY
+})
+
+local get_battle_tier_for_progress = adamrogue_battle_generator.get_battle_tier_for_progress
+local get_target_battle_budget = adamrogue_battle_generator.get_target_battle_budget
+local build_budget_enemy_force_definition = adamrogue_battle_generator.build_budget_enemy_force_definition
+local create_battle_payload_from_definition = adamrogue_battle_generator.create_battle_payload_from_definition
+local log_unit_list_details = adamrogue_battle_generator.log_unit_list_details
+
+local adamrogue_force_snapshot = adamrogue_force_snapshot_module.new({
+    cm = cm,
+    log = log,
+    save_keys = SAVE_KEYS,
+    player_general_subtype = PLAYER_GENERAL_SUBTYPE,
+    get_saved_value = get_saved_value,
+    set_saved_value = set_saved_value,
+    split_string = split_string,
+    count_units_in_force = count_units_in_force,
+    get_spawn_region_and_position_for_faction = get_spawn_region_and_position_for_faction,
+    get_saved_player_force = get_saved_player_force,
+    get_saved_player_general = get_saved_player_general
+})
+
+local capture_pre_battle_force_snapshot = adamrogue_force_snapshot.capture_pre_battle_force_snapshot
+local restore_player_force_after_battle = adamrogue_force_snapshot.restore_player_force_after_battle
+
 local function encode_payload(payload)
     local entries = {}
 
@@ -386,20 +602,134 @@ end
 
 local function decode_payload(serialized)
     local payload = {}
+    log("decode_payload called. serialized=[" .. tostring(serialized) .. "]")
 
     if type(serialized) ~= "string" or serialized == "" then
         return payload
     end
 
     for _, entry in ipairs(split_string(serialized, "|")) do
-        local equals_position = string.find(entry, "=", 1, true)
-        if equals_position then
-            local key = string.sub(entry, 1, equals_position - 1)
-            local value = string.sub(entry, equals_position + 1)
+        local key, value = string.match(entry, "^([^=]+)=(.*)$")
+        if key ~= nil then
             payload[key] = value
+        else
+            log("decode_payload skipped malformed entry=[" .. tostring(entry) .. "]")
         end
     end
 
+    log("decode_payload completed.")
+    return payload
+end
+
+local function get_saved_payload_field(field_name, default_value)
+    log("get_saved_payload_field requested. field=[" .. tostring(field_name) .. "]")
+    local serialized_before_decode = get_saved_value(SAVE_KEYS.current_event_payload, "")
+    log(
+        "get_saved_payload_field raw serialized payload before decode. field=["
+            .. tostring(field_name)
+            .. "], serialized=["
+            .. tostring(serialized_before_decode)
+            .. "]"
+    )
+
+    local decode_ok, payload_or_error = pcall(get_current_event_payload)
+    if not decode_ok then
+        log(
+            "get_saved_payload_field failed while decoding payload. field=["
+                .. tostring(field_name)
+                .. "], error=["
+                .. tostring(payload_or_error)
+                .. "]"
+        )
+        payload_or_error = {}
+    else
+        log("get_saved_payload_field decode step completed successfully. field=[" .. tostring(field_name) .. "]")
+    end
+
+    local payload = payload_or_error
+    local value = payload[field_name]
+    if value ~= nil and value ~= "" then
+        log("get_saved_payload_field resolved from decoded payload. field=[" .. tostring(field_name) .. "], value=[" .. tostring(value) .. "]")
+        return value
+    end
+
+    local serialized = serialized_before_decode
+    if type(serialized) ~= "string" or serialized == "" then
+        log("get_saved_payload_field fell back to default because serialized payload is empty. field=[" .. tostring(field_name) .. "]")
+        return default_value
+    end
+
+    local pattern = field_name .. "=([^|]+)"
+    local matched_value = string.match(serialized, pattern)
+    if matched_value ~= nil and matched_value ~= "" then
+        log("get_saved_payload_field resolved from serialized payload. field=[" .. tostring(field_name) .. "], value=[" .. tostring(matched_value) .. "]")
+        return matched_value
+    end
+
+    log("get_saved_payload_field returned default. field=[" .. tostring(field_name) .. "], default=[" .. tostring(default_value) .. "]")
+    return default_value
+end
+
+local function get_completed_battle_count()
+    local value = get_saved_value(SAVE_KEYS.completed_battle_count, 0)
+    log("get_completed_battle_count resolved value=[" .. tostring(value) .. "]")
+    return value
+end
+
+local function get_consecutive_defeat_count()
+    local value = get_saved_value(SAVE_KEYS.consecutive_defeat_count, 0)
+    log("get_consecutive_defeat_count resolved value=[" .. tostring(value) .. "]")
+    return value
+end
+
+local function overwrite_current_battle_payload(payload, reason)
+    local encoded_payload = encode_payload(payload)
+    set_saved_value(SAVE_KEYS.current_event_payload, encoded_payload)
+    log(
+        "overwrite_current_battle_payload applied. reason=["
+            .. tostring(reason)
+            .. "], encoded_payload=["
+            .. tostring(encoded_payload)
+            .. "]."
+    )
+end
+
+local function regenerate_battle_payload_for_spawn_retry(spawn_attempt, failure_reason)
+    local existing_payload = get_current_event_payload()
+    local target_value_budget = tonumber(get_saved_payload_field("target_value_budget", 0)) or 0
+    local battle_tier = tonumber(get_saved_payload_field("battle_budget_tier", BATTLE_TIER.EARLY)) or BATTLE_TIER.EARLY
+    local previous_unit_list = get_saved_payload_field("enemy_unit_list", "")
+
+    log(
+        "regenerate_battle_payload_for_spawn_retry started. spawn_attempt=["
+            .. tostring(spawn_attempt)
+            .. "], failure_reason=["
+            .. tostring(failure_reason)
+            .. "], target_value_budget=["
+            .. tostring(target_value_budget)
+            .. "], battle_tier=["
+            .. tostring(battle_tier)
+            .. "], previous_unit_list=["
+            .. tostring(previous_unit_list)
+            .. "]."
+    )
+    log_unit_list_details("retry_previous_unit_list_attempt_" .. tostring(spawn_attempt), previous_unit_list)
+
+    if target_value_budget <= 0 then
+        log("regenerate_battle_payload_for_spawn_retry aborted because target_value_budget is invalid.")
+        return nil
+    end
+
+    if not existing_payload or not existing_payload.enemy_unit_list or existing_payload.enemy_unit_list == "" then
+        log("regenerate_battle_payload_for_spawn_retry aborted because the existing payload is missing enemy_unit_list.")
+        return nil
+    end
+
+    existing_payload.spawn_retry_index = spawn_attempt - 1
+    existing_payload.retry_reason = failure_reason or "retry_requested"
+    local payload = existing_payload
+    overwrite_current_battle_payload(payload, "spawn_retry_" .. tostring(spawn_attempt))
+    log_unit_list_details("retry_preserved_unit_list_attempt_" .. tostring(spawn_attempt), payload.enemy_unit_list)
     return payload
 end
 
@@ -415,8 +745,10 @@ local function get_current_event_seed()
     return get_saved_value(SAVE_KEYS.current_event_seed, 0)
 end
 
-local function get_current_event_payload()
-    return decode_payload(get_saved_value(SAVE_KEYS.current_event_payload, ""))
+get_current_event_payload = function()
+    local serialized = get_saved_value(SAVE_KEYS.current_event_payload, "")
+    log("get_current_event_payload called. serialized=[" .. tostring(serialized) .. "]")
+    return decode_payload(serialized)
 end
 
 local function set_current_event_context(event_type, event_key, event_seed, payload)
@@ -563,24 +895,71 @@ local function prepare_unit_reward_event()
 end
 
 local function prepare_battle_event()
+    log("prepare_battle_event started.")
     local faction = get_local_player_faction()
     if not is_supported_player_faction(faction) then
         log("Cannot prepare battle event because the local faction is unsupported.")
         return false
     end
 
-    local seed = new_event_seed()
-    local payload = {
-        battle_template_key = "adamrogue_phase_a_battle_template_fixed_cathay",
-        enemy_faction_key = CARAVAN_BATTLE_ENEMY_FACTION,
-        attack_choice = 0,
-        pause_choice = 1
-    }
+    local completed_battle_count = get_completed_battle_count()
+    local battle_tier = get_battle_tier_for_progress(completed_battle_count)
+    local target_value_budget = get_target_battle_budget(completed_battle_count)
+    log(
+        "prepare_battle_event progress resolved. completed_battle_count=["
+            .. tostring(completed_battle_count)
+            .. "], battle_tier=["
+            .. tostring(battle_tier)
+            .. "], target_value_budget=["
+            .. tostring(target_value_budget)
+            .. "]."
+    )
+    local battle_definition = build_budget_enemy_force_definition(target_value_budget, battle_tier, true)
+    if not battle_definition then
+        log("Failed to generate a budget-based Cathay enemy force for the battle event.")
+        return false
+    end
 
-    set_saved_value(SAVE_KEYS.enemy_faction_key, CARAVAN_BATTLE_ENEMY_FACTION)
+    local player_general = get_saved_player_general()
+    if not player_general then
+        log("prepare_battle_event aborted because the saved player general could not be resolved.")
+        return false
+    end
+
+    local enemy_faction_key = pick_initial_enemy_faction_key(faction:name(), player_general)
+    if not enemy_faction_key or enemy_faction_key == "" then
+        log("prepare_battle_event aborted because no Cathay enemy faction candidate could find a valid spawn position.")
+        return false
+    end
+
+    local seed = new_event_seed()
+    local payload = create_battle_payload_from_definition(battle_definition, target_value_budget, battle_tier, 0, enemy_faction_key)
+
+    set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
     set_current_event_context(EVENT_TYPE.BATTLE, DILEMMA_BATTLE_KEY, seed, payload)
     set_current_state(STATE.BATTLE_PENDING)
-    log("Prepared battle event for faction [" .. faction:name() .. "] against enemy faction [" .. CARAVAN_BATTLE_ENEMY_FACTION .. "]")
+    log(
+        "Building enemy force with budget ["
+            .. tostring(target_value_budget)
+            .. "], value_source=["
+            .. UNIT_VALUE_SOURCE
+            .. "], tier=["
+            .. tostring(battle_tier)
+            .. "]."
+    )
+    log(
+        "Generated enemy force total_value=["
+            .. tostring(battle_definition.generated_total_value)
+            .. "], delta=["
+            .. tostring(battle_definition.budget_delta)
+            .. "], units=["
+            .. tostring(payload.enemy_unit_list)
+            .. "], enemy_faction_key=["
+            .. tostring(enemy_faction_key)
+            .. "]."
+    )
+    log_unit_list_details("prepare_battle_event_generated_payload", payload.enemy_unit_list)
+    log("Prepared battle event for faction [" .. faction:name() .. "] against enemy faction [" .. enemy_faction_key .. "]")
     return true
 end
 
@@ -707,7 +1086,297 @@ local function build_caravan_battle_bridge(force_interface, general_interface)
     }
 end
 
-local function spawn_enemy_force_and_start_battle()
+local function get_enemy_faction_fallback_stage_index(stage_label)
+    if type(stage_label) ~= "string" then
+        return nil
+    end
+
+    return tonumber(string.match(stage_label, "^faction_fallback_(%d+)$"))
+end
+
+local function update_payload_enemy_faction_key(enemy_faction_key, reason)
+    local payload = get_current_event_payload()
+    if not payload or type(payload) ~= "table" then
+        log("update_payload_enemy_faction_key aborted because the current payload could not be decoded.")
+        return
+    end
+
+    payload.enemy_faction_key = enemy_faction_key
+    overwrite_current_battle_payload(payload, reason or "enemy_faction_key_updated")
+end
+
+local spawn_enemy_force_and_start_battle
+local spawn_enemy_force_with_direct_create_force_fallback
+
+local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_name, is_ambush, spawn_x, spawn_y, attempt, spawn_attempt)
+    local current_attempt = attempt or 1
+    local current_spawn_attempt = spawn_attempt or 1
+    local current_spawn_attempt_number = tonumber(current_spawn_attempt)
+    local current_fallback_stage_index = get_enemy_faction_fallback_stage_index(current_spawn_attempt)
+    local enemy_force_cqi = caravans and caravans.enemy_force_cqi or 0
+    log(
+        "launch_spawned_enemy_force_battle polling. attempt=["
+            .. tostring(current_attempt)
+            .. "], spawn_attempt=["
+            .. tostring(current_spawn_attempt)
+            .. "], enemy_force_cqi=["
+            .. tostring(enemy_force_cqi)
+            .. "], x=["
+            .. tostring(spawn_x)
+            .. "], y=["
+            .. tostring(spawn_y)
+            .. "]."
+    )
+
+    if enemy_force_cqi and enemy_force_cqi > 0 then
+        set_saved_value(SAVE_KEYS.enemy_force_cqi, enemy_force_cqi)
+        log(
+            "Enemy battle force is ready. enemy_force_cqi=["
+                .. tostring(enemy_force_cqi)
+                .. "], region=["
+                .. tostring(player_region_name)
+                .. "], attempt=["
+                .. tostring(current_attempt)
+                .. "], spawn_attempt=["
+                .. tostring(current_spawn_attempt)
+                .. "]. Launching caravan battle."
+        )
+        caravans:create_caravan_battle(caravan_bridge, enemy_force_cqi, spawn_x, spawn_y, is_ambush)
+        return
+    end
+
+    if current_attempt >= MAX_BATTLE_SPAWN_POLL_ATTEMPTS then
+        log(
+            "Enemy battle force was not ready in time. enemy_force_cqi=["
+                .. tostring(enemy_force_cqi)
+                .. "], region=["
+                .. tostring(player_region_name)
+                .. "], attempts=["
+                .. tostring(current_attempt)
+                .. "], spawn_attempt=["
+                .. tostring(current_spawn_attempt)
+                .. "], current_payload=["
+                .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, ""))
+                .. "]."
+        )
+
+        if current_spawn_attempt_number and current_spawn_attempt_number < MAX_BATTLE_SPAWN_RETRIES then
+            log(
+                "Primary caravan spawn timed out. Switching to faction fallback stage=["
+                    .. tostring(current_spawn_attempt_number + 1)
+                    .. "], max_spawn_retries=["
+                    .. tostring(MAX_BATTLE_SPAWN_RETRIES)
+                    .. "]."
+            )
+            spawn_enemy_force_with_direct_create_force_fallback(
+                caravan_bridge,
+                player_region_name,
+                is_ambush,
+                "faction_fallback_" .. tostring(current_spawn_attempt_number + 1),
+                "enemy_force_not_ready_after_polling"
+            )
+        elseif current_fallback_stage_index and current_fallback_stage_index < MAX_BATTLE_SPAWN_RETRIES then
+            log(
+                "Faction fallback stage timed out. Advancing to the next candidate stage=["
+                    .. tostring(current_fallback_stage_index + 1)
+                    .. "], max_spawn_retries=["
+                    .. tostring(MAX_BATTLE_SPAWN_RETRIES)
+                    .. "]."
+            )
+            spawn_enemy_force_with_direct_create_force_fallback(
+                caravan_bridge,
+                player_region_name,
+                is_ambush,
+                "faction_fallback_" .. tostring(current_fallback_stage_index + 1),
+                "fallback_enemy_force_not_ready_after_polling"
+            )
+        else
+            log(
+                "Enemy battle spawn retries exhausted after polling timeout. max_spawn_retries=["
+                    .. tostring(MAX_BATTLE_SPAWN_RETRIES)
+                    .. "]."
+            )
+            log(
+                "Direct create_force fallback also timed out. spawn_attempt_label=["
+                    .. tostring(current_spawn_attempt)
+                    .. "]."
+            )
+        end
+        return
+    end
+
+    cm:callback(function()
+        launch_spawned_enemy_force_battle(caravan_bridge, player_region_name, is_ambush, spawn_x, spawn_y, current_attempt + 1, current_spawn_attempt)
+    end, 0.2)
+end
+
+spawn_enemy_force_with_direct_create_force_fallback = function(
+    caravan_bridge,
+    player_region_name,
+    is_ambush,
+    fallback_stage_label,
+    fallback_reason
+)
+    local player_general = get_saved_player_general()
+    local player_faction_name = get_saved_value(SAVE_KEYS.player_faction_key, "")
+    local active_payload = get_current_event_payload()
+    if not active_payload or type(active_payload) ~= "table" then
+        log("spawn_enemy_force_with_direct_create_force_fallback aborted because the current payload could not be decoded.")
+        return
+    end
+
+    local enemy_unit_list = active_payload.enemy_unit_list or ""
+    local enemy_faction_key = active_payload.enemy_faction_key or DEFAULT_ENEMY_FACTION_KEY
+    local fallback_stage_index = get_enemy_faction_fallback_stage_index(fallback_stage_label) or 2
+
+    log(
+        "spawn_enemy_force_with_direct_create_force_fallback started. fallback_stage_label=["
+            .. tostring(fallback_stage_label)
+            .. "], fallback_reason=["
+            .. tostring(fallback_reason)
+            .. "], fallback_stage_index=["
+            .. tostring(fallback_stage_index)
+            .. "], enemy_faction_key=["
+            .. tostring(enemy_faction_key)
+            .. "], enemy_unit_list=["
+            .. tostring(enemy_unit_list)
+            .. "]."
+    )
+
+    if not player_general or player_faction_name == "" then
+        log("spawn_enemy_force_with_direct_create_force_fallback aborted because the player general or faction is unavailable.")
+        return
+    end
+
+    if enemy_unit_list == "" then
+        log("spawn_enemy_force_with_direct_create_force_fallback aborted because the current payload has no enemy unit list.")
+        return
+    end
+
+    local fallback_x = -1
+    local fallback_y = -1
+    local fallback_source = "not_found"
+    local selected_enemy_faction_key, selected_index
+
+    selected_enemy_faction_key, fallback_x, fallback_y, fallback_source, selected_index = find_enemy_faction_fallback_candidate(
+        player_faction_name,
+        enemy_faction_key,
+        player_general,
+        fallback_stage_index
+    )
+
+    if selected_enemy_faction_key then
+        enemy_faction_key = selected_enemy_faction_key
+    else
+        log(
+            "spawn_enemy_force_with_direct_create_force_fallback could not find an alternate faction candidate. It will retry the current payload faction with a broader spawn query."
+        )
+        fallback_x, fallback_y, fallback_source = find_alternative_enemy_spawn_position(enemy_faction_key, player_general, -1, -1)
+    end
+
+    log(
+        "spawn_enemy_force_with_direct_create_force_fallback resolved candidate position. x=["
+            .. tostring(fallback_x)
+            .. "], y=["
+            .. tostring(fallback_y)
+            .. "], source=["
+            .. tostring(fallback_source)
+            .. "], selected_enemy_faction_key=["
+            .. tostring(enemy_faction_key)
+            .. "], selected_index=["
+            .. tostring(selected_index)
+            .. "]."
+    )
+
+    if fallback_x < 0 or fallback_y < 0 then
+        log("spawn_enemy_force_with_direct_create_force_fallback aborted because no valid fallback position could be found.")
+        return
+    end
+
+    -- Keep the payload in sync with the fallback result so resume/retrigger keeps using the same faction.
+    update_payload_enemy_faction_key(enemy_faction_key, "fallback_enemy_faction_selected")
+    set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
+    cleanup_enemy_force_before_spawn("direct_create_force_fallback")
+    if caravans then
+        caravans.enemy_force_cqi = 0
+    end
+
+    cm:create_force(
+        enemy_faction_key,
+        enemy_unit_list,
+        player_region_name,
+        fallback_x,
+        fallback_y,
+        true,
+        function(char_cqi, force_cqi)
+            log(
+                "spawn_enemy_force_with_direct_create_force_fallback callback fired. char_cqi=["
+                    .. tostring(char_cqi)
+                    .. "], force_cqi=["
+                    .. tostring(force_cqi)
+                    .. "]."
+            )
+
+            if caravans then
+                caravans.enemy_force_cqi = force_cqi
+            end
+            set_saved_value(SAVE_KEYS.enemy_force_cqi, force_cqi or 0)
+            set_saved_value(SAVE_KEYS.enemy_leader_cqi, char_cqi or 0)
+
+            cm:disable_event_feed_events(true, "", "", "diplomacy_faction_destroyed")
+            cm:disable_event_feed_events(true, "", "", "character_dies_battle")
+            cm:disable_event_feed_events(true, "", "", "diplomacy_war_declared")
+            -- Direct create_force does not inherit the caravan helper's combat setup, so we force the war state here.
+            cm:force_declare_war(enemy_faction_key, player_faction_name, false, false)
+            cm:callback(function()
+                cm:disable_event_feed_events(false, "", "", "diplomacy_war_declared")
+            end, 0.2)
+
+            if char_cqi and char_cqi > 0 then
+                cm:disable_movement_for_character(cm:char_lookup_str(char_cqi))
+            end
+
+            if force_cqi and force_cqi > 0 then
+                local enemy_force = cm:get_military_force_by_cqi(force_cqi)
+                if enemy_force then
+                    cm:set_force_has_retreated_this_turn(enemy_force)
+                end
+            end
+        end
+    )
+
+    log(
+        "spawn_enemy_force_with_direct_create_force_fallback issued create_force. player_region_name=["
+            .. tostring(player_region_name)
+            .. "], fallback_x=["
+            .. tostring(fallback_x)
+            .. "], fallback_y=["
+            .. tostring(fallback_y)
+            .. "], fallback_source=["
+            .. tostring(fallback_source)
+            .. "]."
+    )
+
+    launch_spawned_enemy_force_battle(
+        caravan_bridge,
+        player_region_name,
+        is_ambush,
+        fallback_x,
+        fallback_y,
+        1,
+        fallback_stage_label
+    )
+end
+
+spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
+    local current_spawn_attempt = spawn_attempt or 1
+    log(
+        "spawn_enemy_force_and_start_battle entered. spawn_attempt=["
+            .. tostring(current_spawn_attempt)
+            .. "], retry_reason=["
+            .. tostring(retry_reason)
+            .. "]."
+    )
     local player_force = get_saved_player_force()
     local player_general = get_saved_player_general()
     local player_faction_name = get_saved_value(SAVE_KEYS.player_faction_key, "")
@@ -728,10 +1397,48 @@ local function spawn_enemy_force_and_start_battle()
         return
     end
 
-    set_saved_value(SAVE_KEYS.enemy_faction_key, CARAVAN_BATTLE_ENEMY_FACTION)
+    local active_payload
+    if current_spawn_attempt > 1 then
+        active_payload = regenerate_battle_payload_for_spawn_retry(current_spawn_attempt, retry_reason or "retry_requested")
+        if not active_payload then
+            log("spawn_enemy_force_and_start_battle aborted because retry payload regeneration failed.")
+            return
+        end
+    else
+        active_payload = get_current_event_payload()
+    end
+
+    if not active_payload or type(active_payload) ~= "table" then
+        log("spawn_enemy_force_and_start_battle aborted because the current payload could not be decoded.")
+        return
+    end
+
+    local enemy_unit_list = active_payload.enemy_unit_list or ""
+    local battle_force_source = active_payload.battle_force_source or "unknown"
+    local target_value_budget = active_payload.target_value_budget or ""
+    local enemy_faction_key = active_payload.enemy_faction_key or DEFAULT_ENEMY_FACTION_KEY
+    if not enemy_unit_list or enemy_unit_list == "" then
+        log("Battle payload does not contain a generated enemy unit list. raw_payload=[" .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, "")) .. "]")
+        return
+    end
+
+    set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
     set_saved_value(SAVE_KEYS.enemy_force_cqi, 0)
     set_saved_value(SAVE_KEYS.enemy_leader_cqi, 0)
     set_saved_value(SAVE_KEYS.enemy_agent_cqi, 0)
+    set_saved_value(SAVE_KEYS.last_battle_force_source, battle_force_source)
+    set_saved_value(SAVE_KEYS.last_battle_budget, tonumber(target_value_budget) or 0)
+    cleanup_enemy_force_before_spawn("spawn_attempt_" .. tostring(current_spawn_attempt))
+    if caravans then
+        caravans.enemy_force_cqi = 0
+    end
+    if current_spawn_attempt == 1 then
+        capture_pre_battle_force_snapshot()
+    end
+
+    local caravan_bridge = build_caravan_battle_bridge(player_force, player_general)
+    -- The generated unit list is now the canonical battle definition; retries only swap faction/spawn path.
+    log_unit_list_details("spawn_attempt_" .. tostring(current_spawn_attempt) .. "_payload", enemy_unit_list)
 
     log(
         "Launching caravan-core bridge battle for faction ["
@@ -739,18 +1446,109 @@ local function spawn_enemy_force_and_start_battle()
             .. "] in region ["
             .. player_region:name()
             .. "] against enemy faction ["
-            .. CARAVAN_BATTLE_ENEMY_FACTION
+            .. enemy_faction_key
+            .. "], spawn_attempt=["
+            .. tostring(current_spawn_attempt)
+            .. "], source=["
+            .. tostring(battle_force_source)
+            .. "], budget=["
+            .. tostring(target_value_budget)
+            .. "], enemy_unit_list=["
+            .. tostring(enemy_unit_list)
             .. "]"
     )
 
-    caravans:spawn_caravan_battle_force(
-        build_caravan_battle_bridge(player_force, player_general),
-        ENEMY_UNITS,
+    local spawned_enemy_force_cqi, spawn_x, spawn_y = caravans:spawn_caravan_battle_force(
+        caravan_bridge,
+        enemy_unit_list,
         player_region:name(),
         false,
-        true,
-        CARAVAN_BATTLE_ENEMY_FACTION
+        false,
+        enemy_faction_key
     )
+
+    if spawned_enemy_force_cqi and spawned_enemy_force_cqi > 0 then
+        set_saved_value(SAVE_KEYS.enemy_force_cqi, spawned_enemy_force_cqi)
+    end
+
+    log(
+        "Enemy battle force spawn requested. returned_enemy_force_cqi=["
+            .. tostring(spawned_enemy_force_cqi)
+            .. "], cached_enemy_force_cqi=["
+            .. tostring(caravans.enemy_force_cqi)
+            .. "], spawn_attempt=["
+            .. tostring(current_spawn_attempt)
+            .. "], x=["
+            .. tostring(spawn_x)
+            .. "], y=["
+            .. tostring(spawn_y)
+            .. "]."
+    )
+
+    if (not spawned_enemy_force_cqi or spawned_enemy_force_cqi <= 0) and (not caravans.enemy_force_cqi or caravans.enemy_force_cqi <= 0) then
+        log(
+            "Enemy battle force spawn returned no valid CQI immediately, but polling will continue because the caravan callback can populate the CQI asynchronously. spawn_attempt=["
+                .. tostring(current_spawn_attempt)
+                .. "], raw_payload=["
+                .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, ""))
+                .. "]."
+        )
+    end
+
+    launch_spawned_enemy_force_battle(caravan_bridge, player_region:name(), false, spawn_x, spawn_y, 1, current_spawn_attempt)
+end
+
+local function handle_post_battle_state_transition(player_won)
+    log("handle_post_battle_state_transition started. player_won=[" .. tostring(player_won) .. "]")
+    local completed_battle_count = get_completed_battle_count()
+    local victory_count = get_saved_value(SAVE_KEYS.victory_count, 0)
+    local defeat_count = get_saved_value(SAVE_KEYS.defeat_count, 0)
+    local consecutive_defeat_count = get_consecutive_defeat_count()
+    local result = player_won and "victory" or "defeat"
+
+    set_saved_value(SAVE_KEYS.last_battle_result, result)
+    set_saved_value(SAVE_KEYS.completed_battle_count, completed_battle_count + 1)
+
+    if player_won then
+        victory_count = victory_count + 1
+        consecutive_defeat_count = 0
+        set_saved_value(SAVE_KEYS.victory_count, victory_count)
+        set_saved_value(SAVE_KEYS.consecutive_defeat_count, consecutive_defeat_count)
+    else
+        defeat_count = defeat_count + 1
+        consecutive_defeat_count = consecutive_defeat_count + 1
+        set_saved_value(SAVE_KEYS.defeat_count, defeat_count)
+        set_saved_value(SAVE_KEYS.consecutive_defeat_count, consecutive_defeat_count)
+    end
+
+    log(
+        "Battle resolved as ["
+            .. result
+            .. "]. completed="
+            .. tostring(completed_battle_count + 1)
+            .. ", victory="
+            .. tostring(victory_count)
+            .. ", defeat="
+            .. tostring(defeat_count)
+            .. ", consecutive_defeat="
+            .. tostring(consecutive_defeat_count)
+            .. "."
+    )
+
+    restore_player_force_after_battle()
+
+    if not player_won and consecutive_defeat_count >= MAX_CONSECUTIVE_DEFEATS then
+        set_current_state(STATE.GAME_OVER)
+        clear_current_event_context()
+        set_saved_value(SAVE_KEYS.paused_from_state, "")
+        log("Entering GAME_OVER because consecutive defeats reached [" .. tostring(consecutive_defeat_count) .. "].")
+        return
+    end
+
+    set_current_state(STATE.INIT)
+    clear_current_event_context()
+    set_saved_value(SAVE_KEYS.paused_from_state, "")
+    log("Battle flow returned to INIT. Stage C entry remains a placeholder in phase B.")
 end
 
 local function handle_reward_dilemma_choice(context)
@@ -910,22 +1708,8 @@ local function register_listeners()
                     .. tostring(attacker_victory)
             )
 
-            set_saved_value(SAVE_KEYS.last_battle_result, result)
-            set_saved_value(SAVE_KEYS.completed_battle_count, get_saved_value(SAVE_KEYS.completed_battle_count, 0) + 1)
-
-            if player_won then
-                set_saved_value(SAVE_KEYS.victory_count, get_saved_value(SAVE_KEYS.victory_count, 0) + 1)
-                set_saved_value(SAVE_KEYS.consecutive_defeat_count, 0)
-            else
-                set_saved_value(SAVE_KEYS.defeat_count, get_saved_value(SAVE_KEYS.defeat_count, 0) + 1)
-                set_saved_value(SAVE_KEYS.consecutive_defeat_count, get_saved_value(SAVE_KEYS.consecutive_defeat_count, 0) + 1)
-            end
-
             log("Player test force completed a tracked battle as [" .. side .. "] with result [" .. result .. "].")
-
-            set_current_state(STATE.INIT)
-            clear_current_event_context()
-            set_saved_value(SAVE_KEYS.paused_from_state, "")
+            handle_post_battle_state_transition(player_won)
 
             cm:callback(function()
                 cleanup_enemy_force()
