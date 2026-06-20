@@ -1,0 +1,340 @@
+[
+  {
+    "node_key": "cathay",
+    "faction_key": "wh3_main_cth_the_northern_provinces",
+    "culture_key": "wh3_main_cth_cathay",
+    "battle_permissions_keys": [
+      "wh3_main_cth_the_northern_provinces",
+      "wh3_main_cth_cathay_mp"
+    ],
+    "display_name_cn": "震旦",
+    "display_name_en": "Cathay",
+    "enemy_qb_prefix": "wh3_main_cth_cathay_qb",
+    "fallback_enemy_factions": [
+      "wh3_main_cth_rebel_lords_of_nan_yang",
+      "wh3_main_cth_dissenter_lords_of_jinshen"
+    ],
+    "enemy_general_subtype": "wh3_main_cth_cha_lord_magistrate_0",
+    "embedded_agent_subtype": "wh3_main_cth_alchemist"
+  },
+  {
+    "node_key": "kislev",
+    "faction_key": "wh3_main_ksl_the_ice_court",
+    "culture_key": "wh3_main_ksl_kislev",
+    "battle_permissions_keys": [
+      "wh3_main_ksl_kislev"
+    ],
+    "display_name_cn": "基斯里夫",
+    "display_name_en": "Kislev",
+    "enemy_qb_prefix": "wh3_main_ksl_kislev_qb",
+    "fallback_enemy_factions": [
+      "wh3_main_ksl_rogue_army"
+    ],
+    "enemy_general_subtype": "wh3_main_ksl_cha_boyar_0"
+  },
+  {
+    "node_key": "ogres",
+    "faction_key": "wh3_main_ogr_disciples_of_the_maw",
+    "culture_key": "wh3_main_ogr_ogre_kingdoms",
+    "battle_permissions_keys": [
+      "wh3_main_ogr_ogre_kingdoms"
+    ],
+    "display_name_cn": "食人魔王国",
+    "display_name_en": "Ogre Kingdoms",
+    "enemy_qb_prefix": "wh3_main_ogr_ogre_kingdoms_qb",
+    "fallback_enemy_factions": [
+      "wh3_main_ogr_rock_skulls"
+    ],
+    "enemy_general_subtype": "wh3_main_ogr_cha_tyrant_0"
+  },
+  {
+    "node_key": "khorne",
+    "faction_key": "wh3_main_kho_exiles_of_khorne",
+    "culture_key": "wh3_main_kho_khorne",
+    "battle_permissions_keys": [
+      "wh3_main_kho_khorne"
+    ],
+    "display_name_cn": "恐虐",
+    "display_name_en": "Khorne",
+    "enemy_qb_prefix": "wh3_main_kho_khorne_qb",
+    "fallback_enemy_factions": [
+      "wh3_main_kho_brazen_throne"
+    ],
+    "enemy_general_subtype": "wh3_main_kho_cha_herald_of_khorne_0"
+  },
+  {
+    "node_key": "nurgle",
+    "faction_key": "wh3_main_nur_poxmakers_of_nurgle",
+    "culture_key": "wh3_main_nur_nurgle",
+    "battle_permissions_keys": [
+      "wh3_main_nur_nurgle"
+    ],
+    "display_name_cn": "纳垢",
+    "display_name_en": "Nurgle",
+    "enemy_qb_prefix": "wh3_main_nur_nurgle_qb",
+    "fallback_enemy_factions": [
+      "wh3_main_nur_bubonic_swarm"
+    ],
+    "enemy_general_subtype": "wh3_main_nur_cha_herald_of_nurgle_nurgle_0"
+  },
+  {
+    "node_key": "tzeentch",
+    "faction_key": "wh3_main_tze_oracles_of_tzeentch",
+    "culture_key": "wh3_main_tze_tzeentch",
+    "battle_permissions_keys": [
+      "wh3_main_tze_tzeentch"
+    ],
+    "display_name_cn": "奸奇",
+    "display_name_en": "Tzeentch",
+    "enemy_qb_prefix": "wh3_main_tze_tzeentch_qb",
+    "fallback_enemy_factions": [
+      "wh3_main_tze_all_seeing_eye"
+    ],
+    "enemy_general_subtype": "wh3_main_tze_cha_herald_of_tzeentch_metal_0"
+  },
+  {
+    "node_key": "slaanesh",
+    "faction_key": "wh3_main_sla_seducers_of_slaanesh",
+    "culture_key": "wh3_main_sla_slaanesh",
+    "battle_permissions_keys": [
+      "wh3_main_sla_slaanesh"
+    ],
+    "display_name_cn": "色孽",
+    "display_name_en": "Slaanesh",
+    "enemy_qb_prefix": "wh3_main_sla_slaanesh_qb",
+    "fallback_enemy_factions": [
+      "wh3_main_sla_exquisite_pain"
+    ],
+    "enemy_general_subtype": "wh3_main_sla_cha_herald_of_slaanesh_slaanesh_0"
+  },
+  {
+    "node_key": "chaos_dwarfs",
+    "faction_key": "wh3_dlc23_chd_astragoth",
+    "culture_key": "wh3_dlc23_chd_chaos_dwarfs",
+    "battle_permissions_keys": [
+      "wh3_dlc23_chd_legion_of_azgorh"
+    ],
+    "display_name_cn": "混沌矮人",
+    "display_name_en": "Chaos Dwarfs",
+    "enemy_qb_prefix": "wh3_dlc23_chd_chaos_dwarfs_qb",
+    "fallback_enemy_factions": [
+      "wh3_dlc23_chd_zharr_naggrund"
+    ],
+    "enemy_general_subtype": "wh3_dlc23_chd_cha_overseer"
+  },
+  {
+    "node_key": "empire",
+    "faction_key": "wh_main_emp_empire",
+    "culture_key": "wh_main_emp_empire",
+    "battle_permissions_keys": [
+      "wh_main_emp_empire"
+    ],
+    "display_name_cn": "帝国",
+    "display_name_en": "Empire",
+    "enemy_qb_prefix": "wh_main_emp_empire_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh_main_emp_cha_general_0"
+  },
+  {
+    "node_key": "dwarfs",
+    "faction_key": "wh_main_dwf_dwarfs",
+    "culture_key": "wh_main_dwf_dwarfs",
+    "battle_permissions_keys": [
+      "wh_main_dwf_dwarfs"
+    ],
+    "display_name_cn": "矮人",
+    "display_name_en": "Dwarfs",
+    "enemy_qb_prefix": "wh_main_dwf_dwarfs_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh_main_dwf_cha_lord_0"
+  },
+  {
+    "node_key": "greenskins",
+    "faction_key": "wh_main_grn_greenskins",
+    "culture_key": "wh_main_grn_greenskins",
+    "battle_permissions_keys": [
+      "wh_main_grn_greenskins"
+    ],
+    "display_name_cn": "绿皮",
+    "display_name_en": "Greenskins",
+    "enemy_qb_prefix": "wh_main_grn_greenskins_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh_main_grn_cha_orc_warboss_0"
+  },
+  {
+    "node_key": "vampire_counts",
+    "faction_key": "wh_main_vmp_schwartzhafen",
+    "culture_key": "wh_main_vmp_vampire_counts",
+    "battle_permissions_keys": [
+      "wh_main_vmp_vampire_counts"
+    ],
+    "display_name_cn": "吸血鬼伯爵",
+    "display_name_en": "Vampire Counts",
+    "enemy_qb_prefix": "wh_main_vmp_vampire_counts_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh_main_vmp_cha_vampire_lord_0"
+  },
+  {
+    "node_key": "bretonnia",
+    "faction_key": "wh_main_brt_bretonnia",
+    "culture_key": "wh_main_brt_bretonnia",
+    "battle_permissions_keys": [
+      "wh_main_brt_bretonnia"
+    ],
+    "display_name_cn": "巴托尼亚",
+    "display_name_en": "Bretonnia",
+    "enemy_qb_prefix": "wh_main_brt_bretonnia_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh_main_brt_cha_lord_0"
+  },
+  {
+    "node_key": "warriors_of_chaos",
+    "faction_key": "wh_main_chs_chaos",
+    "culture_key": "wh_main_chs_chaos",
+    "battle_permissions_keys": [
+      "wh_main_chs_chaos"
+    ],
+    "display_name_cn": "混沌勇士",
+    "display_name_en": "Warriors of Chaos",
+    "enemy_qb_prefix": "wh_main_chs_chaos_qb",
+    "fallback_enemy_factions": [
+      "wh3_main_chs_khazag"
+    ],
+    "enemy_general_subtype": "wh_main_chs_cha_chaos_lord_0"
+  },
+  {
+    "node_key": "beastmen",
+    "faction_key": "wh_dlc03_bst_beastmen",
+    "culture_key": "wh_dlc03_bst_beastmen",
+    "battle_permissions_keys": [
+      "wh_dlc03_bst_beastmen"
+    ],
+    "display_name_cn": "野兽人",
+    "display_name_en": "Beastmen",
+    "enemy_qb_prefix": "wh_dlc03_bst_beastmen_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh_dlc03_bst_cha_beastlord_0"
+  },
+  {
+    "node_key": "wood_elves",
+    "faction_key": "wh_dlc05_wef_argwylon",
+    "culture_key": "wh_dlc05_wef_wood_elves",
+    "battle_permissions_keys": [
+      "wh_dlc05_wef_wood_elves"
+    ],
+    "display_name_cn": "木精灵",
+    "display_name_en": "Wood Elves",
+    "enemy_qb_prefix": "wh_dlc05_wef_wood_elves_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh_dlc05_wef_cha_glade_lord_0"
+  },
+  {
+    "node_key": "norsca",
+    "faction_key": "wh_dlc08_nor_norsca",
+    "culture_key": "wh_dlc08_nor_norsca",
+    "battle_permissions_keys": [
+      "wh_dlc08_nor_norsca"
+    ],
+    "display_name_cn": "诺斯卡",
+    "display_name_en": "Norsca",
+    "enemy_qb_prefix": "wh_main_nor_norsca_qb",
+    "fallback_enemy_factions": [
+      "wh_dlc08_nor_norsca",
+      "wh_main_nor_varg"
+    ],
+    "enemy_general_subtype": "wh_main_nor_cha_marauder_chieftan_0"
+  },
+  {
+    "node_key": "high_elves",
+    "faction_key": "wh2_main_hef_eataine",
+    "culture_key": "wh2_main_hef_high_elves",
+    "battle_permissions_keys": [
+      "wh2_main_hef_high_elves"
+    ],
+    "display_name_cn": "高等精灵",
+    "display_name_en": "High Elves",
+    "enemy_qb_prefix": "wh2_main_hef_high_elves_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh2_main_hef_cha_prince_0"
+  },
+  {
+    "node_key": "dark_elves",
+    "faction_key": "wh2_main_def_naggarond",
+    "culture_key": "wh2_main_def_dark_elves",
+    "battle_permissions_keys": [
+      "wh2_main_def_dark_elves"
+    ],
+    "display_name_cn": "黑暗精灵",
+    "display_name_en": "Dark Elves",
+    "enemy_qb_prefix": "wh2_main_def_dark_elves_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh2_main_def_cha_dreadlord_0"
+  },
+  {
+    "node_key": "lizardmen",
+    "faction_key": "wh2_main_lzd_hexoatl",
+    "culture_key": "wh2_main_lzd_lizardmen",
+    "battle_permissions_keys": [
+      "wh2_main_lzd_lizardmen"
+    ],
+    "display_name_cn": "蜥蜴人",
+    "display_name_en": "Lizardmen",
+    "enemy_qb_prefix": "wh2_main_lzd_lizardmen_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh2_main_lzd_cha_saurus_old_blood_0"
+  },
+  {
+    "node_key": "skaven",
+    "faction_key": "wh2_main_skv_clan_mors",
+    "culture_key": "wh2_main_skv_skaven",
+    "battle_permissions_keys": [
+      "wh2_main_skv_skaven"
+    ],
+    "display_name_cn": "鼠人",
+    "display_name_en": "Skaven",
+    "enemy_qb_prefix": "wh2_main_skv_skaven_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh2_main_skv_cha_warlord_0"
+  },
+  {
+    "node_key": "tomb_kings",
+    "faction_key": "wh2_dlc09_tmb_khemri",
+    "culture_key": "wh2_dlc09_tmb_tomb_kings",
+    "battle_permissions_keys": [
+      "wh2_dlc09_tmb_tomb_kings"
+    ],
+    "display_name_cn": "古墓王",
+    "display_name_en": "Tomb Kings",
+    "enemy_qb_prefix": "wh2_dlc09_tmb_tombking_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh2_dlc09_tmb_cha_tomb_king_0"
+  },
+  {
+    "node_key": "vampire_coast",
+    "faction_key": "wh2_dlc11_cst_noctilus",
+    "culture_key": "wh2_dlc11_cst_vampire_coast",
+    "battle_permissions_keys": [
+      "wh2_dlc11_cst_vampire_coast"
+    ],
+    "display_name_cn": "吸血鬼海岸",
+    "display_name_en": "Vampire Coast",
+    "enemy_qb_prefix": "wh2_dlc11_cst_vampire_coast_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh2_dlc11_cst_cha_vampire_fleet_admiral_0"
+  },
+  {
+    "node_key": "daemons_of_chaos",
+    "faction_key": "wh3_main_dae_daemon_prince",
+    "culture_key": "wh3_main_dae_daemons",
+    "battle_permissions_keys": [
+      "wh3_main_dae_daemon_prince"
+    ],
+    "display_name_cn": "混沌恶魔",
+    "display_name_en": "Daemons of Chaos",
+    "enemy_qb_prefix": "wh3_main_dae_daemons_qb",
+    "fallback_enemy_factions": [
+      "wh3_main_dae_daemon_prince"
+    ],
+    "enemy_general_subtype": "wh3_dlc20_chs_cha_daemon_prince"
+  }
+]

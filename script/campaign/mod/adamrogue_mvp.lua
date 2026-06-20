@@ -6,6 +6,8 @@ local get_current_event_payload
 package.path = "script/campaign/mod/adamrogue/?.lua;" .. package.path
 
 local adamrogue_data_cth = require("adamrogue_data_cth")
+local adamrogue_data_nodes = require("adamrogue_data_nodes")
+local adamrogue_data_battle_pools = require("adamrogue_data_battle_pools")
 local adamrogue_data_ancillaries = require("adamrogue_data_ancillaries")
 local adamrogue_battle_generator_module = require("adamrogue_battle_generator")
 local adamrogue_ancillary_generator_module = require("adamrogue_ancillary_generator")
@@ -15,7 +17,7 @@ local BUTTON_CONTEXT_PREFIX = "adamrogue_phase_a_entry"
 local AUTO_RESUME_ON_TURN_START = false
 local MAX_CONSECUTIVE_DEFEATS = 3
 local MAX_BATTLE_SPAWN_POLL_ATTEMPTS = 10
--- Keep this aligned with the Cathay enemy faction pool so each candidate can be tried once.
+-- This is only a retry ceiling. The actual candidate list comes from the current content faction.
 local MAX_BATTLE_SPAWN_RETRIES = 5
 local UNIT_VALUE_SOURCE = "main_units_tables.multiplayer_cost"
 
@@ -24,23 +26,32 @@ local CATHAY_SUBCULTURE = "wh3_main_sc_cth_cathay"
 local DILEMMA_REWARD_KEY = "adamrogue_mvp_reward_dilemma"
 local DILEMMA_BATTLE_KEY = "adamrogue_mvp_battle_dilemma"
 local DILEMMA_EQUIPMENT_REWARD_KEY = "adamrogue_mvp_equipment_reward_dilemma"
+local DILEMMA_DESTINATION_KEY = "adamrogue_mvp_destination_dilemma"
 
 local PLAYER_GENERAL_SUBTYPE = adamrogue_data_cth.PLAYER_GENERAL_SUBTYPE
 local PLAYER_STARTING_UNITS = adamrogue_data_cth.PLAYER_STARTING_UNITS
 
-local ENEMY_GENERAL_SUBTYPE = adamrogue_data_cth.ENEMY_GENERAL_SUBTYPE
-local ENEMY_EMBEDDED_AGENT_SUBTYPE = adamrogue_data_cth.ENEMY_EMBEDDED_AGENT_SUBTYPE
-local DEFAULT_ENEMY_FACTION_KEY = adamrogue_data_cth.DEFAULT_ENEMY_FACTION_KEY
-local ENEMY_FACTION_CANDIDATES = adamrogue_data_cth.ENEMY_FACTION_CANDIDATES
+local STARTING_NODE_KEY = adamrogue_data_nodes.STARTING_NODE_KEY
+local NODE_POOL = adamrogue_data_nodes.NODE_POOL
+
+local ENEMY_GENERAL_SUBTYPE = adamrogue_data_battle_pools.ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION.wh3_main_cth_the_northern_provinces
+local ENEMY_EMBEDDED_AGENT_SUBTYPE = adamrogue_data_battle_pools.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION.wh3_main_cth_the_northern_provinces
+local DEFAULT_ENEMY_FACTION_KEY = adamrogue_data_battle_pools.DEFAULT_ENEMY_FACTION_KEY
+local DEFAULT_CONTENT_FACTION_KEY = adamrogue_data_battle_pools.DEFAULT_CONTENT_FACTION_KEY
+local ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION
+local ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION
+local ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION
 local REWARD_UNITS_BY_CHOICE = adamrogue_data_cth.REWARD_UNITS_BY_CHOICE
 local EQUIPMENT_RARITY = adamrogue_data_ancillaries.EQUIPMENT_RARITY
 local EQUIPMENT_REWARD_SLOT_ORDER = adamrogue_data_ancillaries.EQUIPMENT_REWARD_SLOT_ORDER
-local EQUIPMENT_REWARD_POOL = adamrogue_data_ancillaries.EQUIPMENT_REWARD_POOL
+local COMMON_EQUIPMENT_POOL = adamrogue_data_ancillaries.COMMON_EQUIPMENT_POOL
+local FACTION_EQUIPMENT_POOLS = adamrogue_data_ancillaries.FACTION_EQUIPMENT_POOLS
 
 local EVENT_TYPE = {
     UNIT_REWARD = "unit_reward",
     BATTLE = "battle",
-    EQUIPMENT_REWARD = "equipment_reward"
+    EQUIPMENT_REWARD = "equipment_reward",
+    DESTINATION = "destination"
 }
 
 local BATTLE_TIER = adamrogue_data_cth.BATTLE_TIER
@@ -80,10 +91,18 @@ local SAVE_KEYS = {
     enemy_faction_key = "adamrogue_enemy_faction_key",
     enemy_force_cqi = "adamrogue_enemy_force_cqi",
     enemy_leader_cqi = "adamrogue_enemy_leader_cqi",
-    enemy_agent_cqi = "adamrogue_enemy_agent_cqi"
+    enemy_agent_cqi = "adamrogue_enemy_agent_cqi",
+    current_node_key = "adamrogue_current_node_key",
+    current_node_faction_key = "adamrogue_current_node_faction_key",
+    destination_candidate_node_keys = "adamrogue_destination_candidate_node_keys",
+    destination_candidate_faction_keys = "adamrogue_destination_candidate_faction_keys",
+    destination_leave_current_enabled = "adamrogue_destination_leave_current_enabled",
+    destination_selection_generated = "adamrogue_destination_selection_generated",
+    destination_generation_seed = "adamrogue_destination_generation_seed",
+    destination_generation_attempts = "adamrogue_destination_generation_attempts"
 }
 
-local CATHAY_BATTLE_UNIT_POOL = adamrogue_data_cth.CATHAY_BATTLE_UNIT_POOL
+local BATTLE_UNIT_POOLS_BY_CONTENT_FACTION = adamrogue_data_battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION
 
 local function log(message)
     if not config_log then
@@ -401,14 +420,35 @@ local function find_alternative_enemy_spawn_position(enemy_faction_key, player_g
     return -1, -1, "not_found"
 end
 
-local function get_enemy_faction_candidate_sequence(player_faction_key, preferred_enemy_faction_key)
+local function get_enemy_faction_candidates_for_content_faction(content_faction_key)
+    local combined_candidates = {}
+    local seen = {}
+    local function append_candidates(candidate_list)
+        for _, faction_key in ipairs(candidate_list or {}) do
+            if not seen[faction_key] then
+                seen[faction_key] = true
+                combined_candidates[#combined_candidates + 1] = faction_key
+            end
+        end
+    end
+
+    append_candidates(ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION[content_faction_key] or {})
+    append_candidates(ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {})
+    return combined_candidates
+end
+
+local function get_enemy_faction_candidate_sequence(player_faction_key, preferred_enemy_faction_key, candidate_list_string, content_faction_key)
     local candidate_keys = {}
+    local configured_candidates = split_string(candidate_list_string or "", ",")
+    if #configured_candidates == 0 then
+        configured_candidates = get_enemy_faction_candidates_for_content_faction(content_faction_key)
+    end
 
     if preferred_enemy_faction_key and preferred_enemy_faction_key ~= "" and preferred_enemy_faction_key ~= player_faction_key then
         candidate_keys[#candidate_keys + 1] = preferred_enemy_faction_key
     end
 
-    for _, faction_key in ipairs(ENEMY_FACTION_CANDIDATES) do
+    for _, faction_key in ipairs(configured_candidates) do
         if faction_key ~= player_faction_key and faction_key ~= preferred_enemy_faction_key then
             candidate_keys[#candidate_keys + 1] = faction_key
         end
@@ -417,8 +457,20 @@ local function get_enemy_faction_candidate_sequence(player_faction_key, preferre
     return candidate_keys
 end
 
-local function find_enemy_faction_fallback_candidate(player_faction_key, current_enemy_faction_key, player_general, fallback_index)
-    local candidate_keys = get_enemy_faction_candidate_sequence(player_faction_key, current_enemy_faction_key)
+local function find_enemy_faction_fallback_candidate(
+    player_faction_key,
+    current_enemy_faction_key,
+    player_general,
+    fallback_index,
+    candidate_list_string,
+    content_faction_key
+)
+    local candidate_keys = get_enemy_faction_candidate_sequence(
+        player_faction_key,
+        current_enemy_faction_key,
+        candidate_list_string,
+        content_faction_key
+    )
     local target_index = fallback_index or 2
 
     for index = target_index, #candidate_keys do
@@ -449,8 +501,13 @@ local function find_enemy_faction_fallback_candidate(player_faction_key, current
     return nil, -1, -1, "not_found", nil
 end
 
-local function pick_initial_enemy_faction_key(player_faction_key, player_general)
-    local candidate_keys = get_enemy_faction_candidate_sequence(player_faction_key, DEFAULT_ENEMY_FACTION_KEY)
+local function pick_initial_enemy_faction_key(player_faction_key, player_general, preferred_enemy_faction_key, candidate_list_string, content_faction_key)
+    local candidate_keys = get_enemy_faction_candidate_sequence(
+        player_faction_key,
+        preferred_enemy_faction_key or DEFAULT_ENEMY_FACTION_KEY,
+        candidate_list_string,
+        content_faction_key
+    )
 
     for _, faction_key in ipairs(candidate_keys) do
         local faction = cm:get_faction(faction_key)
@@ -563,14 +620,122 @@ local function split_string(input, delimiter)
     return result
 end
 
+local function find_node_data_by_key(node_key)
+    for _, node_data in ipairs(NODE_POOL) do
+        if node_data.node_key == node_key then
+            return node_data
+        end
+    end
+
+    return nil
+end
+
+local function find_node_data_by_faction_key(faction_key)
+    for _, node_data in ipairs(NODE_POOL) do
+        if node_data.faction_key == faction_key then
+            return node_data
+        end
+    end
+
+    return nil
+end
+
+local function clear_destination_selection_state(reason)
+    set_saved_value(SAVE_KEYS.destination_candidate_node_keys, "")
+    set_saved_value(SAVE_KEYS.destination_candidate_faction_keys, "")
+    set_saved_value(SAVE_KEYS.destination_leave_current_enabled, "false")
+    set_saved_value(SAVE_KEYS.destination_selection_generated, "false")
+    set_saved_value(SAVE_KEYS.destination_generation_seed, 0)
+    set_saved_value(SAVE_KEYS.destination_generation_attempts, 0)
+    log("Destination selection state cleared. reason=[" .. tostring(reason) .. "].")
+end
+
+local function set_current_node(node_data, reason)
+    if not node_data then
+        log("set_current_node aborted because node_data is nil. reason=[" .. tostring(reason) .. "].")
+        return false
+    end
+
+    set_saved_value(SAVE_KEYS.current_node_key, node_data.node_key)
+    set_saved_value(SAVE_KEYS.current_node_faction_key, node_data.faction_key)
+    log(
+        "Current node updated. reason=["
+            .. tostring(reason)
+            .. "], node_key=["
+            .. tostring(node_data.node_key)
+            .. "], faction_key=["
+            .. tostring(node_data.faction_key)
+            .. "], culture_key=["
+            .. tostring(node_data.culture_key)
+            .. "]."
+    )
+    return true
+end
+
+local function ensure_current_node_initialized(reason)
+    local current_node_key = get_saved_value(SAVE_KEYS.current_node_key, "")
+    local current_node_faction_key = get_saved_value(SAVE_KEYS.current_node_faction_key, "")
+
+    if current_node_key ~= "" then
+        local existing_node = find_node_data_by_key(current_node_key)
+        if existing_node then
+            if current_node_faction_key ~= existing_node.faction_key then
+                set_saved_value(SAVE_KEYS.current_node_faction_key, existing_node.faction_key)
+                log(
+                    "ensure_current_node_initialized repaired node faction key. reason=["
+                        .. tostring(reason)
+                        .. "], node_key=["
+                        .. tostring(current_node_key)
+                        .. "], stored_faction_key=["
+                        .. tostring(current_node_faction_key)
+                        .. "], repaired_faction_key=["
+                        .. tostring(existing_node.faction_key)
+                        .. "]."
+                )
+            end
+            return existing_node
+        end
+
+        log(
+            "ensure_current_node_initialized found an unknown node key and will reset it. reason=["
+                .. tostring(reason)
+                .. "], current_node_key=["
+                .. tostring(current_node_key)
+                .. "]."
+        )
+    end
+
+    local starting_node = find_node_data_by_key(STARTING_NODE_KEY) or find_node_data_by_faction_key(DEFAULT_CONTENT_FACTION_KEY)
+    if not starting_node then
+        log("ensure_current_node_initialized failed because no starting node could be resolved.")
+        return nil
+    end
+
+    set_current_node(starting_node, reason or "initialize_default_node")
+    return starting_node
+end
+
+local function get_current_node_data()
+    local node_data = ensure_current_node_initialized("get_current_node_data")
+    if not node_data then
+        return nil
+    end
+
+    return node_data
+end
+
 local adamrogue_battle_generator = adamrogue_battle_generator_module.new({
     log = log,
     cm = cm,
     split_string = split_string,
-    unit_pool = CATHAY_BATTLE_UNIT_POOL,
+    default_unit_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {},
+    unit_pools_by_faction = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION,
     battle_tier = BATTLE_TIER,
     enemy_general_subtype = ENEMY_GENERAL_SUBTYPE,
+    enemy_general_subtypes_by_faction = ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION,
     enemy_embedded_agent_subtype = ENEMY_EMBEDDED_AGENT_SUBTYPE,
+    enemy_embedded_agent_subtypes_by_faction = ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION,
+    default_content_faction_key = DEFAULT_CONTENT_FACTION_KEY,
     default_enemy_faction_key = DEFAULT_ENEMY_FACTION_KEY
 })
 
@@ -583,7 +748,8 @@ local log_unit_list_details = adamrogue_battle_generator.log_unit_list_details
 local adamrogue_ancillary_generator = adamrogue_ancillary_generator_module.new({
     log = log,
     cm = cm,
-    pool = EQUIPMENT_REWARD_POOL,
+    common_pool = COMMON_EQUIPMENT_POOL,
+    faction_pools = FACTION_EQUIPMENT_POOLS,
     battle_tier = BATTLE_TIER,
     equipment_rarity = EQUIPMENT_RARITY,
     slot_order = EQUIPMENT_REWARD_SLOT_ORDER
@@ -718,6 +884,7 @@ local function regenerate_battle_payload_for_spawn_retry(spawn_attempt, failure_
     local target_value_budget = tonumber(get_saved_payload_field("target_value_budget", 0)) or 0
     local battle_tier = tonumber(get_saved_payload_field("battle_budget_tier", BATTLE_TIER.EARLY)) or BATTLE_TIER.EARLY
     local previous_unit_list = get_saved_payload_field("enemy_unit_list", "")
+    local player_faction_key = get_saved_value(SAVE_KEYS.player_faction_key, "")
 
     log(
         "regenerate_battle_payload_for_spawn_retry started. spawn_attempt=["
@@ -744,7 +911,52 @@ local function regenerate_battle_payload_for_spawn_retry(spawn_attempt, failure_
         return nil
     end
 
-    existing_payload.spawn_retry_index = spawn_attempt - 1
+    -- Retry the caravan spawn with the next configured faction before falling back to create_force.
+    if spawn_attempt > 1 then
+        local configured_candidates = split_string(existing_payload.enemy_faction_candidates or "", ",")
+        if #configured_candidates == 0 then
+            configured_candidates = get_enemy_faction_candidates_for_content_faction(
+                existing_payload.battle_content_faction_key or DEFAULT_CONTENT_FACTION_KEY
+            )
+        end
+
+        local target_candidate_index = spawn_attempt
+        local resolved_retry_faction_key = nil
+
+        for index = target_candidate_index, #configured_candidates do
+            local faction_key = configured_candidates[index]
+            local faction = cm:get_faction(faction_key)
+            if faction_key ~= player_faction_key and faction and not faction:is_null_interface() and not faction:is_dead() and not faction:is_human() then
+                resolved_retry_faction_key = faction_key
+                target_candidate_index = index
+                break
+            end
+        end
+
+        if not resolved_retry_faction_key then
+            log(
+                "regenerate_battle_payload_for_spawn_retry could not resolve a valid retry faction candidate. requested_spawn_attempt=["
+                    .. tostring(spawn_attempt)
+                    .. "], enemy_faction_candidates=["
+                    .. table.concat(configured_candidates, ",")
+                    .. "]."
+            )
+            return nil
+        end
+
+        existing_payload.enemy_faction_key = resolved_retry_faction_key
+        existing_payload.spawn_retry_index = target_candidate_index - 1
+        log(
+            "regenerate_battle_payload_for_spawn_retry selected next faction candidate for caravan spawn retry. candidate_index=["
+                .. tostring(target_candidate_index)
+                .. "], enemy_faction_key=["
+                .. tostring(resolved_retry_faction_key)
+                .. "]."
+        )
+    else
+        existing_payload.spawn_retry_index = spawn_attempt - 1
+    end
+
     existing_payload.retry_reason = failure_reason or "retry_requested"
     local payload = existing_payload
     overwrite_current_battle_payload(payload, "spawn_retry_" .. tostring(spawn_attempt))
@@ -882,6 +1094,8 @@ local function ensure_run_started()
             set_saved_value(SAVE_KEYS.consecutive_defeat_count, get_saved_value(SAVE_KEYS.consecutive_defeat_count, 0))
 
             clear_current_event_context()
+            clear_destination_selection_state("player_force_created")
+            ensure_current_node_initialized("player_force_created")
             set_saved_value(SAVE_KEYS.paused_from_state, "")
             set_current_state(STATE.INIT)
 
@@ -921,6 +1135,12 @@ local function prepare_battle_event()
         return false
     end
 
+    local current_node = get_current_node_data()
+    if not current_node then
+        log("prepare_battle_event aborted because the current node could not be resolved.")
+        return false
+    end
+
     local completed_battle_count = get_completed_battle_count()
     local battle_tier = get_battle_tier_for_progress(completed_battle_count)
     local target_value_budget = get_target_battle_budget(completed_battle_count)
@@ -931,11 +1151,15 @@ local function prepare_battle_event()
             .. tostring(battle_tier)
             .. "], target_value_budget=["
             .. tostring(target_value_budget)
+            .. "], current_node_key=["
+            .. tostring(current_node.node_key)
+            .. "], current_node_faction_key=["
+            .. tostring(current_node.faction_key)
             .. "]."
     )
-    local battle_definition = build_budget_enemy_force_definition(target_value_budget, battle_tier, true)
+    local battle_definition = build_budget_enemy_force_definition(target_value_budget, battle_tier, true, current_node.faction_key)
     if not battle_definition then
-        log("Failed to generate a budget-based Cathay enemy force for the battle event.")
+        log("Failed to generate a budget-based enemy force for the battle event using the current node context.")
         return false
     end
 
@@ -945,14 +1169,32 @@ local function prepare_battle_event()
         return false
     end
 
-    local enemy_faction_key = pick_initial_enemy_faction_key(faction:name(), player_general)
+    local enemy_faction_candidates = get_enemy_faction_candidates_for_content_faction(current_node.faction_key)
+    local enemy_faction_key = enemy_faction_candidates[1] or DEFAULT_ENEMY_FACTION_KEY
     if not enemy_faction_key or enemy_faction_key == "" then
-        log("prepare_battle_event aborted because no Cathay enemy faction candidate could find a valid spawn position.")
-        return false
+        enemy_faction_key = DEFAULT_ENEMY_FACTION_KEY
+        log(
+            "prepare_battle_event could not resolve a faction-specific enemy candidate list and is falling back to the default enemy faction key=["
+                .. tostring(enemy_faction_key)
+                .. "]."
+        )
     end
+
+    log(
+        "prepare_battle_event deferred enemy faction spawn validation to battle launch time. current_node_faction_key=["
+            .. tostring(current_node.faction_key)
+            .. "], seeded_enemy_faction_key=["
+            .. tostring(enemy_faction_key)
+            .. "], enemy_faction_candidates=["
+            .. table.concat(enemy_faction_candidates, ",")
+            .. "]."
+    )
 
     local seed = new_event_seed()
     local payload = create_battle_payload_from_definition(battle_definition, target_value_budget, battle_tier, 0, enemy_faction_key)
+    payload.enemy_faction_candidates = table.concat(enemy_faction_candidates, ",")
+    payload.current_node_key = current_node.node_key
+    payload.current_node_faction_key = current_node.faction_key
 
     set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
     set_current_event_context(EVENT_TYPE.BATTLE, DILEMMA_BATTLE_KEY, seed, payload)
@@ -964,6 +1206,10 @@ local function prepare_battle_event()
             .. UNIT_VALUE_SOURCE
             .. "], tier=["
             .. tostring(battle_tier)
+            .. "], battle_content_faction_key=["
+            .. tostring(payload.battle_content_faction_key)
+            .. "], battle_content_pool_fallback=["
+            .. tostring(payload.battle_content_pool_fallback)
             .. "]."
     )
     log(
@@ -975,6 +1221,10 @@ local function prepare_battle_event()
             .. tostring(payload.enemy_unit_list)
             .. "], enemy_faction_key=["
             .. tostring(enemy_faction_key)
+            .. "], current_node_key=["
+            .. tostring(current_node.node_key)
+            .. "], current_node_faction_key=["
+            .. tostring(current_node.faction_key)
             .. "]."
     )
     log_unit_list_details("prepare_battle_event_generated_payload", payload.enemy_unit_list)
@@ -989,26 +1239,314 @@ local function prepare_equipment_reward_event()
         return false
     end
 
+    local current_node = get_current_node_data()
+    if not current_node then
+        log("prepare_equipment_reward_event aborted because the current node could not be resolved.")
+        return false
+    end
+
     local completed_battle_count = get_completed_battle_count()
     local battle_tier = get_battle_tier_for_progress(completed_battle_count)
-    local payload = generate_equipment_reward_payload(completed_battle_count, battle_tier)
+    local payload = generate_equipment_reward_payload(
+        completed_battle_count,
+        battle_tier,
+        faction:name(),
+        current_node.faction_key
+    )
     if not payload or type(payload) ~= "table" or tonumber(payload.candidate_count) == 0 then
         log("prepare_equipment_reward_event aborted because no equipment reward candidates were generated.")
         return false
     end
 
+    payload.current_node_key = current_node.node_key
+    payload.current_node_faction_key = current_node.faction_key
     local seed = new_event_seed()
     set_current_event_context(EVENT_TYPE.EQUIPMENT_REWARD, DILEMMA_EQUIPMENT_REWARD_KEY, seed, payload)
     set_current_state(STATE.EQUIPMENT_REWARD_PENDING)
     log(
         "Prepared equipment reward event for faction ["
             .. faction:name()
+            .. "], current_node_key=["
+            .. tostring(current_node.node_key)
+            .. "], current_node_faction_key=["
+            .. tostring(current_node.faction_key)
             .. "]. selected_rarity_band=["
             .. tostring(payload.selected_rarity_band)
             .. "], candidate_count=["
             .. tostring(payload.candidate_count)
             .. "], fallback_strategy_used=["
             .. tostring(payload.fallback_strategy_used)
+            .. "]."
+    )
+    return true
+end
+
+local function prepare_destination_event()
+    local faction = get_local_player_faction()
+    if not is_supported_player_faction(faction) then
+        log("Cannot prepare destination event because the local faction is unsupported.")
+        return false
+    end
+
+    local current_node = get_current_node_data()
+    if not current_node then
+        log("prepare_destination_event aborted because the current node could not be resolved.")
+        return false
+    end
+
+    local enabled_candidates = {}
+    for _, node_data in ipairs(NODE_POOL) do
+        if node_data.enabled and node_data.node_key ~= current_node.node_key then
+            enabled_candidates[#enabled_candidates + 1] = node_data
+        end
+    end
+
+    if #enabled_candidates < 2 then
+        log(
+            "prepare_destination_event aborted because fewer than two alternate destination nodes are available. current_node_key=["
+                .. tostring(current_node.node_key)
+                .. "], enabled_candidate_count=["
+                .. tostring(#enabled_candidates)
+                .. "]."
+        )
+        return false
+    end
+
+    local seed = new_event_seed()
+    local generation_attempts = 1
+    local first_index = cm:random_number(#enabled_candidates, 1)
+    local second_index = cm:random_number(#enabled_candidates, 1)
+    while second_index == first_index and generation_attempts < 20 do
+        generation_attempts = generation_attempts + 1
+        second_index = cm:random_number(#enabled_candidates, 1)
+    end
+
+    if second_index == first_index then
+        second_index = first_index == #enabled_candidates and 1 or (first_index + 1)
+    end
+
+    local candidate_a = enabled_candidates[first_index]
+    local candidate_b = enabled_candidates[second_index]
+    local payload = {
+        current_node_key = current_node.node_key,
+        current_node_faction_key = current_node.faction_key,
+        destination_candidate_node_0 = candidate_a.node_key,
+        destination_candidate_faction_0 = candidate_a.faction_key,
+        destination_candidate_node_1 = candidate_b.node_key,
+        destination_candidate_faction_1 = candidate_b.faction_key,
+        destination_generation_seed = seed,
+        destination_generation_attempts = generation_attempts,
+        leave_current_enabled = "true",
+        stay_choice = 2,
+        pause_choice = 3
+    }
+
+    -- Persist the drawn candidates themselves so pause/resume and save/load never reroll this choice set.
+    set_saved_value(
+        SAVE_KEYS.destination_candidate_node_keys,
+        table.concat({ candidate_a.node_key, candidate_b.node_key }, ",")
+    )
+    set_saved_value(
+        SAVE_KEYS.destination_candidate_faction_keys,
+        table.concat({ candidate_a.faction_key, candidate_b.faction_key }, ",")
+    )
+    set_saved_value(SAVE_KEYS.destination_leave_current_enabled, "true")
+    set_saved_value(SAVE_KEYS.destination_selection_generated, "true")
+    set_saved_value(SAVE_KEYS.destination_generation_seed, seed)
+    set_saved_value(SAVE_KEYS.destination_generation_attempts, generation_attempts)
+
+    set_current_event_context(EVENT_TYPE.DESTINATION, DILEMMA_DESTINATION_KEY, seed, payload)
+    set_current_state(STATE.DESTINATION_PENDING)
+    log(
+        "Prepared destination event. current_node_key=["
+            .. tostring(current_node.node_key)
+            .. "], current_node_faction_key=["
+            .. tostring(current_node.faction_key)
+            .. "], candidate_a=["
+            .. tostring(candidate_a.node_key)
+            .. "/"
+            .. tostring(candidate_a.faction_key)
+            .. "], candidate_b=["
+            .. tostring(candidate_b.node_key)
+            .. "/"
+            .. tostring(candidate_b.faction_key)
+            .. "], generation_seed=["
+            .. tostring(seed)
+            .. "], generation_attempts=["
+            .. tostring(generation_attempts)
+            .. "]."
+    )
+    return true
+end
+
+local function launch_equipment_reward_dilemma(faction)
+    local payload = get_current_event_payload()
+    if not payload or type(payload) ~= "table" then
+        log("launch_equipment_reward_dilemma aborted because the current equipment reward payload could not be decoded.")
+        return false
+    end
+
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_EQUIPMENT_REWARD_KEY)
+    local payload_builder = cm:create_payload()
+    local choice_keys = { "FIRST", "SECOND", "THIRD" }
+    local valid_choice_count = 0
+
+    -- Rebuild the dilemma from the saved payload so the same item choices survive save/load.
+    for choice_index = 0, 2 do
+        local ancillary_key = payload["ancillary_" .. tostring(choice_index)]
+        local item_category = payload["category_" .. tostring(choice_index)] or "unknown"
+        local item_rarity = payload["rarity_" .. tostring(choice_index)] or "unknown"
+        local reward_slot = payload["slot_" .. tostring(choice_index)] or "unknown"
+        local choice_key = choice_keys[choice_index + 1]
+
+        if ancillary_key and ancillary_key ~= "" then
+            payload_builder:faction_ancillary_gain(faction, ancillary_key)
+            dilemma_builder:add_choice_payload(choice_key, payload_builder)
+            payload_builder:clear()
+            valid_choice_count = valid_choice_count + 1
+
+            log(
+                "launch_equipment_reward_dilemma added runtime payload for choice_key=["
+                    .. tostring(choice_key)
+                    .. "], ancillary_key=["
+                    .. tostring(ancillary_key)
+                    .. "], slot=["
+                    .. tostring(reward_slot)
+                    .. "], category=["
+                    .. tostring(item_category)
+                    .. "], rarity=["
+                    .. tostring(item_rarity)
+                    .. "]."
+            )
+        else
+            log("launch_equipment_reward_dilemma skipped missing ancillary payload for choice_index=[" .. tostring(choice_index) .. "].")
+        end
+    end
+
+    if valid_choice_count == 0 then
+        log("launch_equipment_reward_dilemma aborted because no valid runtime choice payloads were generated.")
+        return false
+    end
+
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log(
+        "Launched custom equipment reward dilemma for faction ["
+            .. faction:name()
+            .. "] with valid_choice_count=["
+            .. tostring(valid_choice_count)
+            .. "]."
+    )
+    return true
+end
+
+local function launch_reward_dilemma(faction)
+    local payload = get_current_event_payload()
+    if not payload or type(payload) ~= "table" then
+        log("launch_reward_dilemma aborted because the current reward payload could not be decoded.")
+        return false
+    end
+
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_REWARD_KEY)
+    local payload_builder = cm:create_payload()
+
+    for choice_index = 0, 2 do
+        local reward_unit_key = payload["unit_" .. tostring(choice_index)]
+        local choice_key = ({ "FIRST", "SECOND", "THIRD" })[choice_index + 1]
+        if reward_unit_key and reward_unit_key ~= "" then
+            payload_builder:text_display("dummy_do_nothing")
+            dilemma_builder:add_choice_payload(choice_key, payload_builder)
+            payload_builder:clear()
+        else
+            log("launch_reward_dilemma aborted because a saved reward unit choice is missing. choice_index=[" .. tostring(choice_index) .. "].")
+            return false
+        end
+    end
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FOURTH", payload_builder)
+    payload_builder:clear()
+
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log("Launched custom reward dilemma for faction [" .. faction:name() .. "].")
+    return true
+end
+
+local function launch_battle_dilemma(faction)
+    local payload = get_current_event_payload()
+    if not payload or type(payload) ~= "table" then
+        log("launch_battle_dilemma aborted because the current battle payload could not be decoded.")
+        return false
+    end
+
+    if not payload.enemy_unit_list or payload.enemy_unit_list == "" then
+        log("launch_battle_dilemma aborted because the current battle payload has no enemy_unit_list.")
+        return false
+    end
+
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_BATTLE_KEY)
+    local payload_builder = cm:create_payload()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FIRST", payload_builder)
+    payload_builder:clear()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("SECOND", payload_builder)
+    payload_builder:clear()
+
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log("Launched custom battle dilemma for faction [" .. faction:name() .. "].")
+    return true
+end
+
+local function launch_destination_dilemma(faction)
+    local payload = get_current_event_payload()
+    if not payload or type(payload) ~= "table" then
+        log("launch_destination_dilemma aborted because the current destination payload could not be decoded.")
+        return false
+    end
+
+    local candidate_node_a = find_node_data_by_key(payload.destination_candidate_node_0)
+    local candidate_node_b = find_node_data_by_key(payload.destination_candidate_node_1)
+    local current_node = find_node_data_by_key(payload.current_node_key) or get_current_node_data()
+    if not candidate_node_a or not candidate_node_b or not current_node then
+        log(
+            "launch_destination_dilemma aborted because one or more saved destination nodes are invalid. payload=["
+                .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, ""))
+                .. "]."
+        )
+        return false
+    end
+
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_DESTINATION_KEY)
+    local payload_builder = cm:create_payload()
+
+    payload_builder:text_display(candidate_node_a.choice_text_key)
+    dilemma_builder:add_choice_payload("FIRST", payload_builder)
+    payload_builder:clear()
+
+    payload_builder:text_display(candidate_node_b.choice_text_key)
+    dilemma_builder:add_choice_payload("SECOND", payload_builder)
+    payload_builder:clear()
+
+    payload_builder:text_display(current_node.choice_text_key)
+    dilemma_builder:add_choice_payload("THIRD", payload_builder)
+    payload_builder:clear()
+
+    payload_builder:text_display("adamrogue_destination_choice_delay")
+    dilemma_builder:add_choice_payload("FOURTH", payload_builder)
+    payload_builder:clear()
+
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log(
+        "Launched custom destination dilemma for faction ["
+            .. faction:name()
+            .. "] with current_node_key=["
+            .. tostring(current_node.node_key)
+            .. "], candidate_a=["
+            .. tostring(candidate_node_a.node_key)
+            .. "], candidate_b=["
+            .. tostring(candidate_node_b.node_key)
             .. "]."
     )
     return true
@@ -1024,6 +1562,8 @@ local function open_current_event(reason)
         log("Formal entry was triggered but the local faction is not supported.")
         return
     end
+
+    ensure_current_node_initialized("open_current_event")
 
     local state = get_current_state()
     log("Entry triggered by player. reason=[" .. tostring(reason) .. "], current_state=[" .. tostring(state) .. "]")
@@ -1059,14 +1599,21 @@ local function open_current_event(reason)
     )
 
     if state == STATE.UNIT_REWARD_PENDING then
-        cm:trigger_dilemma(faction:name(), DILEMMA_REWARD_KEY)
-        log("Triggered reward dilemma for faction [" .. faction:name() .. "]")
+        if not launch_reward_dilemma(faction) then
+            return
+        end
     elseif state == STATE.BATTLE_PENDING then
-        cm:trigger_dilemma(faction:name(), DILEMMA_BATTLE_KEY)
-        log("Triggered battle dilemma for faction [" .. faction:name() .. "]")
+        if not launch_battle_dilemma(faction) then
+            return
+        end
     elseif state == STATE.EQUIPMENT_REWARD_PENDING then
-        cm:trigger_dilemma(faction:name(), DILEMMA_EQUIPMENT_REWARD_KEY)
-        log("Triggered equipment reward dilemma for faction [" .. faction:name() .. "]")
+        if not launch_equipment_reward_dilemma(faction) then
+            return
+        end
+    elseif state == STATE.DESTINATION_PENDING then
+        if not launch_destination_dilemma(faction) then
+            return
+        end
     elseif state == STATE.GAME_OVER then
         log("Run is in GAME_OVER. Phase A leaves this as a placeholder and does not open a summary window yet.")
     else
@@ -1102,16 +1649,16 @@ local function grant_reward_unit(choice)
     end
 end
 
-local function grant_reward_ancillary(choice)
+local function record_reward_ancillary_choice(choice)
     local faction = get_local_player_faction()
     if not is_supported_player_faction(faction) then
-        log("Cannot grant reward ancillary because the local faction is unsupported.")
+        log("Cannot record reward ancillary choice because the local faction is unsupported.")
         return false
     end
 
     local payload = get_current_event_payload()
     if not payload or type(payload) ~= "table" then
-        log("Cannot grant reward ancillary because the current equipment reward payload could not be decoded.")
+        log("Cannot record reward ancillary choice because the current equipment reward payload could not be decoded.")
         return false
     end
 
@@ -1119,34 +1666,22 @@ local function grant_reward_ancillary(choice)
     local item_category = payload["category_" .. tostring(choice)] or "unknown"
     local item_rarity = payload["rarity_" .. tostring(choice)] or "unknown"
     local reward_slot = payload["slot_" .. tostring(choice)] or "unknown"
+    local source_scope = payload["source_scope_" .. tostring(choice)] or "unknown"
+    local source_faction_key = payload["source_faction_" .. tostring(choice)] or "unknown"
 
     if not ancillary_key or ancillary_key == "" then
-        log("grant_reward_ancillary aborted because choice [" .. tostring(choice) .. "] has no ancillary key in the payload.")
+        log("record_reward_ancillary_choice aborted because choice [" .. tostring(choice) .. "] has no ancillary key in the payload.")
         return false
     end
 
+    -- The custom dilemma payload grants the item. We only audit the selected key here.
     local had_before = faction:ancillary_exists(ancillary_key)
-    local add_ok, add_error = pcall(function()
-        cm:add_ancillary_to_faction(faction, ancillary_key, false)
-    end)
-
-    if not add_ok then
-        log(
-            "grant_reward_ancillary failed while adding ancillary_key=["
-                .. tostring(ancillary_key)
-                .. "], error=["
-                .. tostring(add_error)
-                .. "]."
-        )
-        return false
-    end
-
     local refreshed_faction = get_local_player_faction()
     local has_after = refreshed_faction and refreshed_faction:ancillary_exists(ancillary_key) or false
 
     set_saved_value(SAVE_KEYS.last_reward_ancillary, ancillary_key)
     log(
-        "Granted equipment reward ancillary ["
+        "Recorded equipment reward ancillary choice ["
             .. tostring(ancillary_key)
             .. "] from choice=["
             .. tostring(choice)
@@ -1156,6 +1691,10 @@ local function grant_reward_ancillary(choice)
             .. tostring(item_category)
             .. "], rarity=["
             .. tostring(item_rarity)
+            .. "], source_scope=["
+            .. tostring(source_scope)
+            .. "], source_faction_key=["
+            .. tostring(source_faction_key)
             .. "], had_before=["
             .. tostring(had_before)
             .. "], has_after=["
@@ -1230,6 +1769,7 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
     local current_spawn_attempt = spawn_attempt or 1
     local current_spawn_attempt_number = tonumber(current_spawn_attempt)
     local current_fallback_stage_index = get_enemy_faction_fallback_stage_index(current_spawn_attempt)
+    local is_same_faction_direct_fallback = current_spawn_attempt == "direct_same_faction"
     local enemy_force_cqi = caravans and caravans.enemy_force_cqi or 0
     log(
         "launch_spawned_enemy_force_battle polling. attempt=["
@@ -1279,9 +1819,16 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
 
         if current_spawn_attempt_number and current_spawn_attempt_number < MAX_BATTLE_SPAWN_RETRIES then
             log(
-                "Primary caravan spawn timed out. Switching to faction fallback stage=["
+                "Primary caravan spawn timed out. Switching to the next enemy faction candidate and retrying spawn_caravan_battle_force. next_spawn_attempt=["
                     .. tostring(current_spawn_attempt_number + 1)
                     .. "], max_spawn_retries=["
+                    .. tostring(MAX_BATTLE_SPAWN_RETRIES)
+                    .. "]."
+            )
+            spawn_enemy_force_and_start_battle(current_spawn_attempt_number + 1, "enemy_force_not_ready_after_polling")
+        elseif is_same_faction_direct_fallback then
+            log(
+                "Direct create_force fallback using the original faction also timed out. Escalating to alternate faction fallback stage=[2], max_spawn_retries=["
                     .. tostring(MAX_BATTLE_SPAWN_RETRIES)
                     .. "]."
             )
@@ -1289,8 +1836,8 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
                 caravan_bridge,
                 player_region_name,
                 is_ambush,
-                "faction_fallback_" .. tostring(current_spawn_attempt_number + 1),
-                "enemy_force_not_ready_after_polling"
+                "faction_fallback_2",
+                "direct_same_faction_not_ready_after_polling"
             )
         elseif current_fallback_stage_index and current_fallback_stage_index < MAX_BATTLE_SPAWN_RETRIES then
             log(
@@ -1332,7 +1879,9 @@ spawn_enemy_force_with_direct_create_force_fallback = function(
     player_region_name,
     is_ambush,
     fallback_stage_label,
-    fallback_reason
+    fallback_reason,
+    preferred_x,
+    preferred_y
 )
     local player_general = get_saved_player_general()
     local player_faction_name = get_saved_value(SAVE_KEYS.player_faction_key, "")
@@ -1344,7 +1893,10 @@ spawn_enemy_force_with_direct_create_force_fallback = function(
 
     local enemy_unit_list = active_payload.enemy_unit_list or ""
     local enemy_faction_key = active_payload.enemy_faction_key or DEFAULT_ENEMY_FACTION_KEY
+    local enemy_faction_candidates = active_payload.enemy_faction_candidates or ""
+    local battle_content_faction_key = active_payload.battle_content_faction_key or DEFAULT_CONTENT_FACTION_KEY
     local fallback_stage_index = get_enemy_faction_fallback_stage_index(fallback_stage_label) or 2
+    local use_same_faction_coordinates = fallback_stage_label == "direct_same_faction"
 
     log(
         "spawn_enemy_force_with_direct_create_force_fallback started. fallback_stage_label=["
@@ -1355,6 +1907,16 @@ spawn_enemy_force_with_direct_create_force_fallback = function(
             .. tostring(fallback_stage_index)
             .. "], enemy_faction_key=["
             .. tostring(enemy_faction_key)
+            .. "], preferred_x=["
+            .. tostring(preferred_x)
+            .. "], preferred_y=["
+            .. tostring(preferred_y)
+            .. "], use_same_faction_coordinates=["
+            .. tostring(use_same_faction_coordinates)
+            .. "], enemy_faction_candidates=["
+            .. tostring(enemy_faction_candidates)
+            .. "], battle_content_faction_key=["
+            .. tostring(battle_content_faction_key)
             .. "], enemy_unit_list=["
             .. tostring(enemy_unit_list)
             .. "]."
@@ -1375,20 +1937,53 @@ spawn_enemy_force_with_direct_create_force_fallback = function(
     local fallback_source = "not_found"
     local selected_enemy_faction_key, selected_index
 
-    selected_enemy_faction_key, fallback_x, fallback_y, fallback_source, selected_index = find_enemy_faction_fallback_candidate(
-        player_faction_name,
-        enemy_faction_key,
-        player_general,
-        fallback_stage_index
-    )
-
-    if selected_enemy_faction_key then
-        enemy_faction_key = selected_enemy_faction_key
-    else
+    if use_same_faction_coordinates and preferred_x and preferred_y and preferred_x >= 0 and preferred_y >= 0 then
+        fallback_x = preferred_x
+        fallback_y = preferred_y
+        fallback_source = "previous_spawn_coordinates"
+        selected_index = 1
         log(
-            "spawn_enemy_force_with_direct_create_force_fallback could not find an alternate faction candidate. It will retry the current payload faction with a broader spawn query."
+            "spawn_enemy_force_with_direct_create_force_fallback will first reuse the caravan spawn coordinates with the current enemy faction. enemy_faction_key=["
+                .. tostring(enemy_faction_key)
+                .. "], fallback_x=["
+                .. tostring(fallback_x)
+                .. "], fallback_y=["
+                .. tostring(fallback_y)
+                .. "]."
         )
-        fallback_x, fallback_y, fallback_source = find_alternative_enemy_spawn_position(enemy_faction_key, player_general, -1, -1)
+    else
+        local fallback_ok, selected_faction_or_error, resolved_x, resolved_y, resolved_source, resolved_index = pcall(
+            find_enemy_faction_fallback_candidate,
+            player_faction_name,
+            enemy_faction_key,
+            player_general,
+            fallback_stage_index,
+            enemy_faction_candidates,
+            battle_content_faction_key
+        )
+
+        if not fallback_ok then
+            log(
+                "spawn_enemy_force_with_direct_create_force_fallback encountered a Lua error while evaluating alternate faction candidates. error=["
+                    .. tostring(selected_faction_or_error)
+                    .. "]. It will retry the current payload faction with a broader spawn query."
+            )
+        else
+            selected_enemy_faction_key = selected_faction_or_error
+            fallback_x = resolved_x
+            fallback_y = resolved_y
+            fallback_source = resolved_source
+            selected_index = resolved_index
+        end
+
+        if selected_enemy_faction_key then
+            enemy_faction_key = selected_enemy_faction_key
+        else
+            log(
+                "spawn_enemy_force_with_direct_create_force_fallback could not find an alternate faction candidate. It will retry the current payload faction with a broader spawn query."
+            )
+            fallback_x, fallback_y, fallback_source = find_alternative_enemy_spawn_position(enemy_faction_key, player_general, -1, -1)
+        end
     end
 
     log(
@@ -1657,7 +2252,12 @@ local function handle_post_battle_state_transition(player_won)
     if player_won then
         set_saved_value(SAVE_KEYS.paused_from_state, "")
         if prepare_equipment_reward_event() then
-            log("Battle flow advanced to EQUIPMENT_REWARD_PENDING. The player must manually trigger the entry button to claim this reward.")
+            log("Battle victory advanced to EQUIPMENT_REWARD_PENDING. The equipment reward event will be opened immediately so the run can continue toward destination selection.")
+            cm:callback(function()
+                if get_current_state() == STATE.EQUIPMENT_REWARD_PENDING then
+                    open_current_event("battle_victory_equipment_reward_auto_open")
+                end
+            end, 0.1)
             return
         end
 
@@ -1667,15 +2267,27 @@ local function handle_post_battle_state_transition(player_won)
     if not player_won and consecutive_defeat_count >= MAX_CONSECUTIVE_DEFEATS then
         set_current_state(STATE.GAME_OVER)
         clear_current_event_context()
+        clear_destination_selection_state("game_over")
         set_saved_value(SAVE_KEYS.paused_from_state, "")
         log("Entering GAME_OVER because consecutive defeats reached [" .. tostring(consecutive_defeat_count) .. "].")
         return
     end
 
+    set_saved_value(SAVE_KEYS.paused_from_state, "")
+    if prepare_destination_event() then
+        log("Battle defeat advanced to DESTINATION_PENDING. The next node choice will be opened immediately.")
+        cm:callback(function()
+            if get_current_state() == STATE.DESTINATION_PENDING then
+                open_current_event("battle_defeat_destination_auto_open")
+            end
+        end, 0.1)
+        return
+    end
+
     set_current_state(STATE.INIT)
     clear_current_event_context()
-    set_saved_value(SAVE_KEYS.paused_from_state, "")
-    log("Battle flow returned to INIT. Stage C entry remains a placeholder in phase B.")
+    clear_destination_selection_state("battle_flow_reset_to_init")
+    log("Battle defeat could not prepare a destination event and fell back to INIT. The current node remains unchanged for the next loop.")
 end
 
 local function handle_reward_dilemma_choice(context)
@@ -1704,7 +2316,13 @@ local function handle_reward_dilemma_choice(context)
 
         if choice >= 0 and choice <= 2 then
             grant_reward_unit(choice)
-            if not prepare_battle_event() then
+            local prepare_ok, prepare_result = pcall(prepare_battle_event)
+            if not prepare_ok then
+                log("prepare_battle_event raised a Lua error after reward resolution. error=[" .. tostring(prepare_result) .. "].")
+                return
+            end
+
+            if not prepare_result then
                 return
             end
 
@@ -1772,23 +2390,93 @@ local function handle_equipment_reward_dilemma_choice(context)
         log("Processing deferred equipment reward dilemma choice: " .. tostring(choice))
 
         if choice >= 0 and choice <= 2 then
-            if not grant_reward_ancillary(choice) then
+            if not record_reward_ancillary_choice(choice) then
                 return
             end
 
-            if not prepare_unit_reward_event() then
+            if not prepare_destination_event() then
                 return
             end
 
-            log("Equipment reward resolved. The next unit reward event is now pending and will be opened immediately.")
+            log("Equipment reward resolved. The destination event is now pending and will be opened immediately.")
             cm:callback(function()
-                if get_current_state() == STATE.UNIT_REWARD_PENDING then
+                if get_current_state() == STATE.DESTINATION_PENDING then
                     open_current_event("equipment_reward_resolved_auto_open")
                 end
             end, 0.1)
         else
             log("Equipment reward dilemma choice did not match any known action.")
         end
+    end, 0.1)
+end
+
+local function handle_destination_dilemma_choice(context)
+    if context:dilemma() ~= DILEMMA_DESTINATION_KEY then
+        return
+    end
+
+    local choice = context:choice()
+    log(
+        "Destination dilemma choice received: "
+            .. tostring(choice)
+            .. ", current_state=["
+            .. tostring(get_current_state())
+            .. "], payload=["
+            .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, ""))
+            .. "]"
+    )
+
+    cm:callback(function()
+        log("Processing deferred destination dilemma choice: " .. tostring(choice))
+
+        if choice == 3 then
+            pause_current_event()
+            return
+        end
+
+        local payload = get_current_event_payload()
+        if not payload or type(payload) ~= "table" then
+            log("handle_destination_dilemma_choice aborted because the current destination payload could not be decoded.")
+            return
+        end
+
+        local selected_node
+        if choice == 0 then
+            selected_node = find_node_data_by_key(payload.destination_candidate_node_0)
+        elseif choice == 1 then
+            selected_node = find_node_data_by_key(payload.destination_candidate_node_1)
+        elseif choice == 2 then
+            selected_node = find_node_data_by_key(payload.current_node_key)
+        else
+            log("Destination dilemma choice did not match any known action.")
+            return
+        end
+
+        if not selected_node then
+            log("handle_destination_dilemma_choice aborted because the selected node could not be resolved from the payload.")
+            return
+        end
+
+        set_current_node(selected_node, "destination_choice_" .. tostring(choice))
+
+        if not prepare_unit_reward_event() then
+            return
+        end
+
+        clear_destination_selection_state("destination_choice_resolved")
+
+        log(
+            "Destination resolved. selected_node_key=["
+                .. tostring(selected_node.node_key)
+                .. "], selected_node_faction_key=["
+                .. tostring(selected_node.faction_key)
+                .. "]. The next unit reward event is now pending and will be opened immediately."
+        )
+        cm:callback(function()
+            if get_current_state() == STATE.UNIT_REWARD_PENDING then
+                open_current_event("destination_resolved_auto_open")
+            end
+        end, 0.1)
     end, 0.1)
 end
 
@@ -1822,14 +2510,17 @@ local function register_listeners()
             return dilemma_key == DILEMMA_REWARD_KEY
                 or dilemma_key == DILEMMA_BATTLE_KEY
                 or dilemma_key == DILEMMA_EQUIPMENT_REWARD_KEY
+                or dilemma_key == DILEMMA_DESTINATION_KEY
         end,
         function(context)
             if context:dilemma() == DILEMMA_REWARD_KEY then
                 handle_reward_dilemma_choice(context)
             elseif context:dilemma() == DILEMMA_BATTLE_KEY then
                 handle_battle_dilemma_choice(context)
-            else
+            elseif context:dilemma() == DILEMMA_EQUIPMENT_REWARD_KEY then
                 handle_equipment_reward_dilemma_choice(context)
+            else
+                handle_destination_dilemma_choice(context)
             end
         end,
         true
