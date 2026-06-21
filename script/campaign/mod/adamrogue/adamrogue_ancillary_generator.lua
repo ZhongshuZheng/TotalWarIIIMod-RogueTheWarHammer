@@ -16,8 +16,8 @@ function ancillary_generator.new(context)
         rarity_keys.COMMON,
         rarity_keys.UNCOMMON,
         rarity_keys.RARE,
-        rarity_keys.UNIQUE,
-        rarity_keys.LEGENDARY
+        rarity_keys.CRAFTED,
+        rarity_keys.UNIQUE
     }
 
     function self.get_reward_pool_sources(player_faction_key, current_node_faction_key)
@@ -85,7 +85,7 @@ function ancillary_generator.new(context)
     function self.get_allowed_rarity_bands_for_reward(current_cycle, elite_battle)
         if elite_battle then
             -- Stage E rule: elite battle equipment rewards ignore cycle gating and always roll from the top rarity bands.
-            return { rarity_keys.UNIQUE, rarity_keys.LEGENDARY }
+            return { rarity_keys.CRAFTED, rarity_keys.UNIQUE }
         end
 
         return self.get_allowed_rarity_bands_for_cycle(current_cycle)
@@ -198,9 +198,6 @@ function ancillary_generator.new(context)
         local current_cycle = math.max(1, math.floor(tonumber(reward_context.current_cycle) or 1))
         local elite_battle = reward_context.elite_battle == true or reward_context.elite_battle == "true"
         local force_highest_rarity = reward_context.force_highest_rarity == true
-        if not force_highest_rarity and elite_battle and elite_reward_highest_tier then
-            force_highest_rarity = true
-        end
 
         local cycle_allowed_bands = self.get_allowed_rarity_bands_for_cycle(current_cycle)
         local reward_allowed_bands = self.get_allowed_rarity_bands_for_reward(current_cycle, elite_battle)

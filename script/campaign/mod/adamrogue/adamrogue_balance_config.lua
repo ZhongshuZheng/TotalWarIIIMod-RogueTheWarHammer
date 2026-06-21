@@ -51,19 +51,19 @@ data.CONFIG = {
         { min_cycle = 1, max_cycle = 5, tiers = { "common" } },
         { min_cycle = 6, max_cycle = 10, tiers = { "common", "uncommon" } },
         { min_cycle = 11, max_cycle = 15, tiers = { "common", "uncommon", "rare" } },
-        { min_cycle = 16, max_cycle = 20, tiers = { "uncommon", "rare", "unique", "legendary" } },
-        { min_cycle = 21, max_cycle = 25, tiers = { "rare", "unique", "legendary" } },
-        { min_cycle = 26, max_cycle = nil, tiers = { "unique", "legendary" } }
+        { min_cycle = 16, max_cycle = 20, tiers = { "uncommon", "rare", "unique", "crafted" } },
+        { min_cycle = 21, max_cycle = 25, tiers = { "rare", "unique", "crafted" } },
+        { min_cycle = 26, max_cycle = nil, tiers = { "rare", "unique", "crafted" } }
     },
     elite_battles = {
         battle_cycles = { 5, 10, 15, 20, 25, 30 },
         reward_highest_tier = true
     },
     enemy_unit_count = {
-        minimum_units_base = 2,
+        minimum_units_base = 5,
         minimum_units_per_cycle = 1,
         hard_cap = 20,
-        minimum_units_from_cycle_11 = 12,
+        minimum_units_from_cycle_11 = 15,
         full_stack_from_cycle_19 = true
     }
 }

@@ -96,9 +96,9 @@ growth(cycle):
 - `1-5`：Common
 - `6-10`：Common + Uncommon
 - `11-15`：Common + Uncommon + Rare
-- `16-20`：Uncommon + Rare + Unique / Legendary
-- `21-25`：Rare + Unique / Legendary + Crafted
-- `26以后`: Rare + Unique / Legendary + Crafted 
+- `16-20`：Uncommon + Rare + Unique + Crafted
+- `21-25`：Rare + Unique + Crafted
+- `26以后`: Rare + Unique + Crafted 
 
 精英战额外规则：
 
@@ -106,7 +106,7 @@ growth(cycle):
 
 额外调整：
 
-- 暂时将Unique / Legendary物品中，传奇领主/英雄的专属装备全部移除
+- 暂时将传奇领主/英雄的专属装备全部移除
 
 
 ### 5. 精英战机制
@@ -225,8 +225,7 @@ adamrogue_balance_config = {
 }
 ```
 
-- 目前玩家初始派系与单位池，需要扩展到全部，写脚本来取数，不要一个一个填
-- 仍然有专属装备，并且物品池需要调整，仅使用本派系装备
+
 
 ## 实现顺序
 

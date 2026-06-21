@@ -11,6 +11,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 BLUEPRINT_PATH = REPO_ROOT / "tools" / "adamrogue" / "faction_blueprint.json"
 START_MARKER = "# AUTO-GENERATED NODE LOC START"
 END_MARKER = "# AUTO-GENERATED NODE LOC END"
+ANCILLARIES_OVERRIDE_OUTPUT_NAME = "!!adamrogue_all_faction_set_all.tsv"
 
 COMMON_EQUIPMENT_POOL = [
     ("wh_main_anc_weapon_sword_of_might", "weapon", "common", 6, 1, 3, "WEAPON"),
@@ -161,16 +162,68 @@ def derive_ancillary_reward_slot(category: str) -> str:
     return "ACCESSORY"
 
 
-def derive_ancillary_rarity(uniqueness_score: int) -> tuple[str, int, int, int]:
-    if uniqueness_score <= 90:
+def canonicalize_ancillary_rarity(group_key: str, ui_state: str) -> str | None:
+    lowered_group_key = (group_key or "").lower()
+    lowered_ui_state = (ui_state or "").lower()
+
+    if "scrap" in lowered_group_key:
+        return None
+    if "unique" in lowered_group_key:
+        return "unique"
+    if "crafted" in lowered_group_key or "rune" in lowered_group_key:
+        return "crafted"
+    if lowered_ui_state in {"common", "uncommon", "rare"}:
+        return lowered_ui_state
+    if lowered_ui_state == "legendary":
+        return "unique"
+    if lowered_ui_state == "crafted":
+        return "crafted"
+    return None
+
+
+def build_ancillary_rarity_lookup(group_rows: list[dict[str, str]]) -> dict[int, tuple[str, int, int, int]]:
+    rarity_lookup: dict[int, tuple[str, int, int, int]] = {}
+
+    for row in group_rows:
+        uniqueness_min = to_int(row.get("uniqueness_min", "0"))
+        uniqueness_max = to_int(row.get("uniqueness_max", "0"))
+        if uniqueness_min < 0 or uniqueness_max < 0:
+            continue
+
+        rarity_key = canonicalize_ancillary_rarity(row.get("group_key", ""), row.get("ui_state", ""))
+        if not rarity_key:
+            continue
+
+        if rarity_key == "common":
+            rarity_payload = ("common", 6, 1, 3)
+        elif rarity_key == "uncommon":
+            rarity_payload = ("uncommon", 4, 2, 3)
+        elif rarity_key == "rare":
+            rarity_payload = ("rare", 3, 3, 3)
+        elif rarity_key == "crafted":
+            rarity_payload = ("crafted", 2, 3, 3)
+        else:
+            rarity_payload = ("unique", 1, 3, 3)
+
+        for score in range(min(uniqueness_min, uniqueness_max), max(uniqueness_min, uniqueness_max) + 1):
+            rarity_lookup[score] = rarity_payload
+
+    return rarity_lookup
+
+
+def derive_ancillary_rarity(uniqueness_score: int, rarity_lookup: dict[int, tuple[str, int, int, int]]) -> tuple[str, int, int, int]:
+    if uniqueness_score in rarity_lookup:
+        return rarity_lookup[uniqueness_score]
+
+    if uniqueness_score <= 50:
         return "common", 6, 1, 3
-    if uniqueness_score <= 140:
+    if uniqueness_score <= 100:
         return "uncommon", 4, 2, 3
-    if uniqueness_score <= 180:
+    if uniqueness_score <= 150:
         return "rare", 3, 3, 3
     if uniqueness_score <= 199:
-        return "unique", 2, 3, 3
-    return "legendary", 1, 3, 3
+        return "crafted", 2, 3, 3
+    return "unique", 1, 3, 3
 
 
 def is_high_tier_character_specific_set(set_key: str, set_items: list[dict[str, str]]) -> bool:
@@ -178,7 +231,7 @@ def is_high_tier_character_specific_set(set_key: str, set_items: list[dict[str, 
     if not lowered_key:
         return False
 
-    # Stage E only asks us to remove legendary lord/hero exclusive equipment.
+    # Stage E only asks us to remove top-tier lord/hero exclusive equipment.
     # Keep broader condition-gated and faction-locked high-tier sets available.
     if "character" in lowered_key or "lord" in lowered_key or "hero" in lowered_key:
         return True
@@ -332,7 +385,7 @@ def render_ancillary_module(
         '    UNCOMMON = "uncommon",',
         '    RARE = "rare",',
         '    UNIQUE = "unique",',
-        '    LEGENDARY = "legendary"',
+        '    CRAFTED = "crafted"',
         "}",
         "",
         "data.EQUIPMENT_REWARD_SLOT = {",
@@ -415,6 +468,32 @@ def render_ancillary_module(
     return "\n".join(lines)
 
 
+def build_ancillaries_faction_set_all_override(
+    header: list[str],
+    rows: list[dict[str, str]],
+) -> str:
+    output_header = "\t".join(header)
+    output_meta = f"#ancillaries_tables;0;db/ancillaries_tables/{ANCILLARIES_OVERRIDE_OUTPUT_NAME}"
+    category_key = "category"
+    faction_set_key = "faction_set"
+    output_rows = [output_header, output_meta]
+
+    for row in rows:
+        category = row.get(category_key, "")
+        if category not in ALLOWED_ANCILLARY_CATEGORIES:
+            continue
+
+        updated_row = []
+        for column_key in header:
+            if column_key == faction_set_key:
+                updated_row.append("all")
+            else:
+                updated_row.append(row.get(column_key, ""))
+        output_rows.append("\t".join(updated_row))
+
+    return "\n".join(output_rows) + "\n"
+
+
 def main() -> None:
     blueprint = load_blueprint()
 
@@ -424,6 +503,8 @@ def main() -> None:
     main_units_rows = read_tsv("main_units_tables")
     ancillary_rows = read_tsv("ancillaries_tables")
     faction_set_rows = read_tsv("faction_set_items_tables")
+    ancillary_group_rows = read_tsv("ancillary_uniqueness_groupings_tables")
+    ancillary_included_agent_subtype_rows = read_tsv("ancillaries_included_agent_subtypes_tables")
 
     factions_by_key = build_index(factions_rows, "key")
     main_units_by_key = build_index(main_units_rows, "unit")
@@ -438,6 +519,13 @@ def main() -> None:
         if row.get("remove", "").lower() == "true":
             continue
         faction_sets[row["set"]].append(row)
+
+    ancillary_rarity_lookup = build_ancillary_rarity_lookup(ancillary_group_rows)
+    ancillary_keys_with_included_agent_subtypes = {
+        row.get("ancillary", "")
+        for row in ancillary_included_agent_subtype_rows
+        if row.get("ancillary", "")
+    }
 
     validation_errors: list[str] = []
     warnings: list[str] = []
@@ -550,6 +638,8 @@ def main() -> None:
                 continue
             if ancillary.get("legendary_item", "").lower() == "true":
                 continue
+            if item_key in ancillary_keys_with_included_agent_subtypes:
+                continue
             if faction_set_key in {"", "all"}:
                 continue
 
@@ -572,8 +662,8 @@ def main() -> None:
                 continue
 
             uniqueness_score = to_int(ancillary.get("uniqueness_score", "0"))
-            item_rarity, weight, min_tier, max_tier = derive_ancillary_rarity(uniqueness_score)
-            if item_rarity in {"unique", "legendary"} and is_high_tier_character_specific_set(faction_set_key, set_items):
+            item_rarity, weight, min_tier, max_tier = derive_ancillary_rarity(uniqueness_score, ancillary_rarity_lookup)
+            if item_rarity in {"unique", "crafted"} and is_high_tier_character_specific_set(faction_set_key, set_items):
                 continue
             equipment_pool.append(
                 {
@@ -610,6 +700,10 @@ def main() -> None:
         embedded_agents,
     )
     ancillary_module = render_ancillary_module(blueprint, faction_equipment_pools)
+    ancillaries_faction_set_all_override = build_ancillaries_faction_set_all_override(
+        list(ancillary_rows[0].keys()) if ancillary_rows else [],
+        ancillary_rows,
+    )
     campaign_payload_ui_details_table = render_campaign_payload_ui_details_table(blueprint)
 
     (REPO_ROOT / "script" / "campaign" / "mod" / "adamrogue" / "adamrogue_data_nodes.lua").write_text(
@@ -623,6 +717,11 @@ def main() -> None:
     (REPO_ROOT / "script" / "campaign" / "mod" / "adamrogue" / "adamrogue_data_ancillaries.lua").write_text(
         ancillary_module,
         encoding="utf-8",
+    )
+    (REPO_ROOT / "db" / "ancillaries_tables").mkdir(parents=True, exist_ok=True)
+    (REPO_ROOT / "db" / "ancillaries_tables" / ANCILLARIES_OVERRIDE_OUTPUT_NAME).write_text(
+        ancillaries_faction_set_all_override,
+        encoding="utf-8-sig",
     )
     (REPO_ROOT / "db" / "campaign_payload_ui_details_tables").mkdir(parents=True, exist_ok=True)
     (REPO_ROOT / "db" / "campaign_payload_ui_details_tables" / "!!adamrogue_mvp_campaign_payload_ui_details.tsv").write_text(
