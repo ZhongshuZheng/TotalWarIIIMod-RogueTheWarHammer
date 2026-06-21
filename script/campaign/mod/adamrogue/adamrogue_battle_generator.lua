@@ -10,6 +10,7 @@ function battle_generator.new(context)
     local battle_tier_keys = context.battle_tier
     local enemy_general_subtype = context.enemy_general_subtype
     local enemy_general_subtypes_by_faction = context.enemy_general_subtypes_by_faction or {}
+    local enemy_general_unit_values_by_faction = context.enemy_general_unit_values_by_faction or {}
     local enemy_embedded_agent_subtype = context.enemy_embedded_agent_subtype
     local enemy_embedded_agent_subtypes_by_faction = context.enemy_embedded_agent_subtypes_by_faction or {}
     local default_enemy_faction_key = context.default_enemy_faction_key
@@ -132,6 +133,18 @@ function battle_generator.new(context)
         return resolved_subtype
     end
 
+    function self.get_enemy_general_unit_value_for_faction(content_faction_key)
+        local resolved_value = tonumber(enemy_general_unit_values_by_faction[content_faction_key]) or 0
+        log(
+            "get_enemy_general_unit_value_for_faction resolved value=["
+                .. tostring(resolved_value)
+                .. "] for content_faction_key=["
+                .. tostring(content_faction_key)
+                .. "]."
+        )
+        return math.max(0, math.floor(resolved_value))
+    end
+
     function self.pick_enemy_agent_subtype_for_tier(battle_tier, allow_embedded_agent, content_faction_key)
         local resolved_subtype = enemy_embedded_agent_subtypes_by_faction[content_faction_key]
             or enemy_embedded_agent_subtype
@@ -218,13 +231,25 @@ function battle_generator.new(context)
             return nil
         end
 
+        local enemy_general_unit_value = self.get_enemy_general_unit_value_for_faction(resolved_content_faction_key)
+        local unit_only_target_value_budget = math.max(0, (tonumber(target_value_budget) or 0) - enemy_general_unit_value)
+        log(
+            "build_budget_enemy_force_definition resolved enemy general budget deduction. total_budget=["
+                .. tostring(target_value_budget)
+                .. "], enemy_general_unit_value=["
+                .. tostring(enemy_general_unit_value)
+                .. "], unit_only_target_value_budget=["
+                .. tostring(unit_only_target_value_budget)
+                .. "]."
+        )
+
         local chosen_units = {}
         local chosen_unit_counts = {}
         local total_value = 0
         local max_units = unit_count_targets.hard_cap
         local attempts = 0
-        local preferred_budget_floor = math.floor(target_value_budget * 0.9)
-        local fallback_budget_floor = math.floor(target_value_budget * 0.85)
+        local preferred_budget_floor = math.floor(unit_only_target_value_budget * 0.9)
+        local fallback_budget_floor = math.floor(unit_only_target_value_budget * 0.85)
         local unique_pool = {}
         local seen_unit_keys = {}
 
@@ -242,6 +267,10 @@ function battle_generator.new(context)
             end
             return a_value < b_value
         end)
+        local unit_entry_by_key = {}
+        for _, unit_entry in ipairs(unique_pool) do
+            unit_entry_by_key[unit_entry.unit_key] = unit_entry
+        end
 
         while attempts < 400 and #chosen_units < max_units do
             attempts = attempts + 1
@@ -251,14 +280,14 @@ function battle_generator.new(context)
             local projected_total = total_value + unit_entry.unit_value
             local should_take = false
 
-            if projected_total <= target_value_budget then
+            if projected_total <= unit_only_target_value_budget then
                 if #chosen_units < unit_count_targets.min_units then
                     should_take = true
                 elseif total_value < preferred_budget_floor then
                     should_take = true
                 elseif #chosen_units < unit_count_targets.target_units then
                     should_take = true
-                elseif (target_value_budget - total_value) >= math.min(350, unit_entry.unit_value) then
+                elseif (unit_only_target_value_budget - total_value) >= math.min(350, unit_entry.unit_value) then
                     should_take = true
                 end
             end
@@ -290,7 +319,7 @@ function battle_generator.new(context)
         while #chosen_units < max_units and fill_attempts < max_units do
             fill_attempts = fill_attempts + 1
             local should_continue_fill = #chosen_units < unit_count_targets.min_units
-                or (#chosen_units < unit_count_targets.target_units and total_value < target_value_budget)
+                or (#chosen_units < unit_count_targets.target_units and total_value < unit_only_target_value_budget)
                 or total_value < fallback_budget_floor
 
             if not should_continue_fill then
@@ -300,7 +329,7 @@ function battle_generator.new(context)
             local selected_filler = nil
             for _, unit_entry in ipairs(unique_pool) do
                 local projected_total = total_value + unit_entry.unit_value
-                if projected_total <= target_value_budget then
+                if projected_total <= unit_only_target_value_budget then
                     selected_filler = unit_entry
                     break
                 end
@@ -321,8 +350,115 @@ function battle_generator.new(context)
                     .. tostring(total_value)
                     .. "], chosen_count=["
                     .. tostring(#chosen_units)
-                    .. "]."
+                .. "]."
             )
+        end
+
+        if total_value < preferred_budget_floor and #chosen_units > 0 then
+            local upgrade_pass = 0
+            while total_value < preferred_budget_floor do
+                upgrade_pass = upgrade_pass + 1
+                local upgraded_this_pass = false
+                local upgrade_indexes = {}
+
+                for index, unit_key in ipairs(chosen_units) do
+                    local unit_entry = unit_entry_by_key[unit_key]
+                    if unit_entry then
+                        upgrade_indexes[#upgrade_indexes + 1] = {
+                            index = index,
+                            unit_key = unit_key,
+                            unit_value = tonumber(unit_entry.unit_value) or 0,
+                            weight = tonumber(unit_entry.weight) or 0
+                        }
+                    end
+                end
+
+                table.sort(upgrade_indexes, function(a, b)
+                    if a.weight == b.weight then
+                        if a.unit_value == b.unit_value then
+                            return a.index < b.index
+                        end
+                        return a.unit_value < b.unit_value
+                    end
+                    return a.weight > b.weight
+                end)
+
+                for _, upgrade_target in ipairs(upgrade_indexes) do
+                    if total_value >= preferred_budget_floor then
+                        break
+                    end
+
+                    local current_entry = unit_entry_by_key[upgrade_target.unit_key]
+                    if current_entry then
+                        local current_value = tonumber(current_entry.unit_value) or 0
+                        local current_weight = tonumber(current_entry.weight) or 0
+                        local remaining_headroom = unit_only_target_value_budget - total_value
+                        local upgrade_candidates = {}
+
+                        if remaining_headroom > 0 then
+                            for _, candidate_entry in ipairs(unique_pool) do
+                                local candidate_value = tonumber(candidate_entry.unit_value) or 0
+                                local candidate_weight = tonumber(candidate_entry.weight) or 0
+                                local upgrade_delta = candidate_value - current_value
+
+                                if upgrade_delta > 0
+                                    and upgrade_delta <= remaining_headroom
+                                    and (candidate_weight < current_weight or candidate_value > current_value) then
+                                    upgrade_candidates[#upgrade_candidates + 1] = candidate_entry
+                                end
+                            end
+                        end
+
+                        if #upgrade_candidates > 0 then
+                            local selected_upgrade = upgrade_candidates[cm:random_number(#upgrade_candidates, 1)]
+                            local selected_upgrade_value = tonumber(selected_upgrade.unit_value) or 0
+                            total_value = total_value - current_value + selected_upgrade_value
+                            chosen_units[upgrade_target.index] = selected_upgrade.unit_key
+                            chosen_unit_counts[upgrade_target.unit_key] = math.max(
+                                0,
+                                (chosen_unit_counts[upgrade_target.unit_key] or 1) - 1
+                            )
+                            chosen_unit_counts[selected_upgrade.unit_key] = (chosen_unit_counts[selected_upgrade.unit_key] or 0) + 1
+                            upgraded_this_pass = true
+                            log(
+                                "build_budget_enemy_force_definition upgraded a low-tier unit to improve budget utilization. pass=["
+                                    .. tostring(upgrade_pass)
+                                    .. "], replaced_unit_key=["
+                                    .. tostring(upgrade_target.unit_key)
+                                    .. "], replaced_unit_value=["
+                                    .. tostring(current_value)
+                                    .. "], replaced_unit_weight=["
+                                    .. tostring(current_weight)
+                                    .. "], upgraded_unit_key=["
+                                    .. tostring(selected_upgrade.unit_key)
+                                    .. "], upgraded_unit_value=["
+                                    .. tostring(selected_upgrade_value)
+                                    .. "], upgraded_unit_weight=["
+                                    .. tostring(selected_upgrade.weight)
+                                    .. "], total_value=["
+                                    .. tostring(total_value)
+                                    .. "], preferred_budget_floor=["
+                                    .. tostring(preferred_budget_floor)
+                                    .. "]."
+                            )
+                            break
+                        end
+                    end
+                end
+
+                if not upgraded_this_pass then
+                    log(
+                        "build_budget_enemy_force_definition could not find any further legal unit upgrades and will stop upgrade iteration. pass=["
+                            .. tostring(upgrade_pass)
+                            .. "], total_value=["
+                            .. tostring(total_value)
+                            .. "], preferred_budget_floor=["
+                            .. tostring(preferred_budget_floor)
+                            .. "]."
+                    )
+                    break
+                end
+            end
         end
 
         if #chosen_units == 0 then
@@ -333,6 +469,10 @@ function battle_generator.new(context)
         log(
             "build_budget_enemy_force_definition completed. total_value=["
                 .. tostring(total_value)
+                .. "], enemy_general_unit_value=["
+                .. tostring(enemy_general_unit_value)
+                .. "], combined_total_value=["
+                .. tostring(total_value + enemy_general_unit_value)
                 .. "], unit_count=["
                 .. tostring(#chosen_units)
                 .. "], min_units=["
@@ -353,8 +493,9 @@ function battle_generator.new(context)
                 allow_embedded_agent,
                 resolved_content_faction_key
             ),
+            enemy_general_unit_value = enemy_general_unit_value,
             generated_total_value = total_value,
-            budget_delta = total_value - target_value_budget,
+            budget_delta = (total_value + enemy_general_unit_value) - target_value_budget,
             content_faction_key = resolved_content_faction_key,
             used_pool_fallback = used_pool_fallback and "true" or "false",
             generated_unit_count = #chosen_units,
@@ -373,6 +514,7 @@ function battle_generator.new(context)
             battle_budget_tier = battle_tier,
             enemy_faction_key = enemy_faction_key or default_enemy_faction_key,
             enemy_general_subtype = battle_definition.lord_subtype,
+            enemy_general_unit_value = battle_definition.enemy_general_unit_value or 0,
             enemy_unit_list = table.concat(battle_definition.unit_list, ","),
             enemy_agent_subtype = battle_definition.embedded_agent_subtype,
             generated_total_value = battle_definition.generated_total_value,
@@ -394,6 +536,8 @@ function battle_generator.new(context)
                 .. tostring(payload.spawn_retry_index)
                 .. "], enemy_unit_list=["
                 .. tostring(payload.enemy_unit_list)
+                .. "], enemy_general_unit_value=["
+                .. tostring(payload.enemy_general_unit_value)
                 .. "]."
         )
         return payload

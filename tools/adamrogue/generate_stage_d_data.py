@@ -258,6 +258,7 @@ def render_battle_module(
     battle_unit_pools: dict[str, list[dict[str, object]]],
     enemy_candidates: dict[str, list[str]],
     enemy_generals: dict[str, str],
+    enemy_general_values: dict[str, int],
     embedded_agents: dict[str, str],
 ) -> str:
     lines = [
@@ -281,6 +282,11 @@ def render_battle_module(
     for entry in blueprint:
         faction_key = str(entry["faction_key"])
         lines.append(f"    {format_lua_key(faction_key)} = {lua_string(enemy_generals[faction_key])},")
+    lines.extend(["}", "", "data.ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION = {"])
+
+    for entry in blueprint:
+        faction_key = str(entry["faction_key"])
+        lines.append(f"    {format_lua_key(faction_key)} = {int(enemy_general_values[faction_key])},")
     lines.extend(["}", "", "data.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION = {"])
 
     for entry in blueprint:
@@ -438,6 +444,7 @@ def main() -> None:
     battle_unit_pools: dict[str, list[dict[str, object]]] = {}
     enemy_candidates: dict[str, list[str]] = {}
     enemy_generals: dict[str, str] = {}
+    enemy_general_values: dict[str, int] = {}
     embedded_agents: dict[str, str] = {}
     faction_equipment_pools: dict[str, list[dict[str, object]]] = {}
 
@@ -519,6 +526,8 @@ def main() -> None:
             enemy_generals[faction_key] = configured_general_subtype
         else:
             enemy_generals[faction_key] = general_candidates[0][1]
+        general_value_by_unit_key = {unit_key: unit_value for unit_value, unit_key in general_candidates}
+        enemy_general_values[faction_key] = int(general_value_by_unit_key[enemy_generals[faction_key]])
         embedded_agents[faction_key] = str(entry.get("embedded_agent_subtype") or "")
 
         faction_candidates = build_enemy_faction_candidates(entry, available_factions)
@@ -597,6 +606,7 @@ def main() -> None:
         battle_unit_pools,
         enemy_candidates,
         enemy_generals,
+        enemy_general_values,
         embedded_agents,
     )
     ancillary_module = render_ancillary_module(blueprint, faction_equipment_pools)

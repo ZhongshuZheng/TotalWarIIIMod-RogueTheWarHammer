@@ -43,6 +43,7 @@ local DEFAULT_ENEMY_FACTION_KEY = adamrogue_data_battle_pools.DEFAULT_ENEMY_FACT
 local DEFAULT_CONTENT_FACTION_KEY = adamrogue_data_battle_pools.DEFAULT_CONTENT_FACTION_KEY
 local ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION
 local ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION
+local ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION or {}
 local ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION
 local EQUIPMENT_RARITY = adamrogue_data_ancillaries.EQUIPMENT_RARITY
 local EQUIPMENT_REWARD_SLOT_ORDER = adamrogue_data_ancillaries.EQUIPMENT_REWARD_SLOT_ORDER
@@ -371,8 +372,11 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
 
     local weighted_pool = {}
     for _, unit_entry in ipairs(source_pool) do
-        for _ = 1, math.max(1, unit_entry.weight or 1) do
-            weighted_pool[#weighted_pool + 1] = unit_entry
+        local unit_weight = tonumber(unit_entry.weight) or 0
+        if unit_weight >= 7 then
+            for _ = 1, math.max(1, unit_weight) do
+                weighted_pool[#weighted_pool + 1] = unit_entry
+            end
         end
     end
 
@@ -407,10 +411,78 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
         return a_value < b_value
     end)
 
+    local function pick_budget_fit_unit(preferred_entry, remaining_budget)
+        if remaining_budget <= 0 then
+            return nil, "remaining_budget_empty"
+        end
+
+        local preferred_weight = tonumber(preferred_entry and preferred_entry.weight) or 0
+        local preferred_value = tonumber(preferred_entry and preferred_entry.unit_value) or 0
+        local high_weight_fallback_pool = {}
+        local fitting_weighted_pool = {}
+
+        for _, unit_entry in ipairs(weighted_pool) do
+            local unit_value = tonumber(unit_entry.unit_value) or 0
+            local unit_weight = tonumber(unit_entry.weight) or 0
+            if unit_value <= remaining_budget then
+                fitting_weighted_pool[#fitting_weighted_pool + 1] = unit_entry
+                if unit_value < preferred_value and unit_weight >= preferred_weight then
+                    high_weight_fallback_pool[#high_weight_fallback_pool + 1] = unit_entry
+                end
+            end
+        end
+
+        if #high_weight_fallback_pool > 0 then
+            return high_weight_fallback_pool[cm:random_number(#high_weight_fallback_pool, 1)], "higher_weight_fallback"
+        end
+
+        if #fitting_weighted_pool > 0 then
+            return fitting_weighted_pool[cm:random_number(#fitting_weighted_pool, 1)], "any_fitting_fallback"
+        end
+
+        return nil, "no_fitting_unit"
+    end
+
     while attempts < 300 and #chosen_units < 19 do
         attempts = attempts + 1
-        local unit_entry = weighted_pool[cm:random_number(#weighted_pool, 1)]
+        local attempted_unit_entry = weighted_pool[cm:random_number(#weighted_pool, 1)]
+        local remaining_budget = target_value_budget - total_value
+        local unit_entry = attempted_unit_entry
+        local selection_mode = "direct_random"
         local projected_total = total_value + unit_entry.unit_value
+
+        if projected_total > target_value_budget then
+            unit_entry, selection_mode = pick_budget_fit_unit(attempted_unit_entry, remaining_budget)
+            if unit_entry then
+                projected_total = total_value + unit_entry.unit_value
+                log(
+                    "build_starting_player_unit_list replaced an over-budget random pick with a cheaper fallback. attempted_unit_key=["
+                        .. tostring(attempted_unit_entry.unit_key)
+                        .. "], attempted_unit_value=["
+                        .. tostring(attempted_unit_entry.unit_value)
+                        .. "], replacement_unit_key=["
+                        .. tostring(unit_entry.unit_key)
+                        .. "], replacement_unit_value=["
+                        .. tostring(unit_entry.unit_value)
+                        .. "], selection_mode=["
+                        .. tostring(selection_mode)
+                        .. "], remaining_budget=["
+                        .. tostring(remaining_budget)
+                        .. "]."
+                )
+            else
+                log(
+                    "build_starting_player_unit_list could not find any lower-cost unit to fit the remaining budget and will stop random filling. attempted_unit_key=["
+                        .. tostring(attempted_unit_entry.unit_key)
+                        .. "], attempted_unit_value=["
+                        .. tostring(attempted_unit_entry.unit_value)
+                        .. "], remaining_budget=["
+                        .. tostring(remaining_budget)
+                        .. "]."
+                )
+                break
+            end
+        end
 
         if projected_total <= target_value_budget then
             chosen_units[#chosen_units + 1] = unit_entry.unit_key
@@ -1058,6 +1130,7 @@ local adamrogue_battle_generator = adamrogue_battle_generator_module.new({
     battle_tier = BATTLE_TIER,
     enemy_general_subtype = ENEMY_GENERAL_SUBTYPE,
     enemy_general_subtypes_by_faction = ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION,
+    enemy_general_unit_values_by_faction = ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION,
     enemy_embedded_agent_subtype = ENEMY_EMBEDDED_AGENT_SUBTYPE,
     enemy_embedded_agent_subtypes_by_faction = ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION,
     default_content_faction_key = DEFAULT_CONTENT_FACTION_KEY,

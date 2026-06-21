@@ -97,8 +97,8 @@ growth(cycle):
 - `6-10`：Common + Uncommon
 - `11-15`：Common + Uncommon + Rare
 - `16-20`：Uncommon + Rare + Unique / Legendary
-- `21-25`：Rare + Unique / Legendary
-- `26以后`：Unique / Legendary 
+- `21-25`：Rare + Unique / Legendary + Crafted
+- `26以后`: Rare + Unique / Legendary + Crafted 
 
 精英战额外规则：
 
@@ -225,9 +225,8 @@ adamrogue_balance_config = {
 }
 ```
 
-- 似乎敌人军队生成没有考虑领主价值分
-- 5级装备需要校验
-- 领主固定；目前玩家初始派系与单位池，需要扩展到全部
+- 目前玩家初始派系与单位池，需要扩展到全部，写脚本来取数，不要一个一个填
+- 仍然有专属装备，并且物品池需要调整，仅使用本派系装备
 
 ## 实现顺序
 

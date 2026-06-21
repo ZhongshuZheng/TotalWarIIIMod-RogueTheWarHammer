@@ -159,6 +159,33 @@ data.ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION = {
     wh3_main_dae_daemon_prince = "wh3_dlc20_chs_cha_daemon_prince",
 }
 
+data.ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION = {
+    wh3_main_cth_the_northern_provinces = 400,
+    wh3_main_ksl_the_ice_court = 700,
+    wh3_main_ogr_disciples_of_the_maw = 1150,
+    wh3_main_kho_exiles_of_khorne = 900,
+    wh3_main_nur_poxmakers_of_nurgle = 1100,
+    wh3_main_tze_oracles_of_tzeentch = 800,
+    wh3_main_sla_seducers_of_slaanesh = 1000,
+    wh3_dlc23_chd_astragoth = 700,
+    wh_main_emp_empire = 600,
+    wh_main_dwf_dwarfs = 700,
+    wh_main_grn_greenskins = 850,
+    wh_main_vmp_schwartzhafen = 900,
+    wh_main_brt_bretonnia = 600,
+    wh_main_chs_chaos = 900,
+    wh_dlc03_bst_beastmen = 650,
+    wh_dlc05_wef_argwylon = 850,
+    wh_dlc08_nor_norsca = 700,
+    wh2_main_hef_eataine = 850,
+    wh2_main_def_naggarond = 850,
+    wh2_main_lzd_hexoatl = 750,
+    wh2_main_skv_clan_mors = 525,
+    wh2_dlc09_tmb_khemri = 900,
+    wh2_dlc11_cst_noctilus = 950,
+    wh3_main_dae_daemon_prince = 1800,
+}
+
 data.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION = {
     wh3_main_cth_the_northern_provinces = "wh3_main_cth_alchemist",
     wh3_main_ksl_the_ice_court = "",
