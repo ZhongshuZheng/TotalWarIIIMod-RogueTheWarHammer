@@ -13,6 +13,7 @@ function battle_generator.new(context)
     local enemy_embedded_agent_subtype = context.enemy_embedded_agent_subtype
     local enemy_embedded_agent_subtypes_by_faction = context.enemy_embedded_agent_subtypes_by_faction or {}
     local default_enemy_faction_key = context.default_enemy_faction_key
+    local enemy_unit_count_config = context.enemy_unit_count_config or {}
 
     function self.get_unit_pool_for_faction(content_faction_key)
         local faction_key = content_faction_key or ""
@@ -29,7 +30,7 @@ function battle_generator.new(context)
         end
 
         log(
-            "get_unit_pool_for_faction is falling back to the default pool. requested_content_faction_key=["
+            "[ERROR] get_unit_pool_for_faction is falling back to the default pool. requested_content_faction_key=["
                 .. tostring(faction_key)
                 .. "], default_pool_size=["
                 .. tostring(#default_unit_pool)
@@ -159,7 +160,36 @@ function battle_generator.new(context)
         return ""
     end
 
-    function self.build_budget_enemy_force_definition(target_value_budget, battle_tier, allow_embedded_agent, content_faction_key)
+    function self.get_enemy_unit_count_targets(current_cycle)
+        local normalized_cycle = math.max(1, math.floor(tonumber(current_cycle) or 1))
+        local minimum_units_base = tonumber(enemy_unit_count_config.minimum_units_base) or 2
+        local minimum_units_per_cycle = tonumber(enemy_unit_count_config.minimum_units_per_cycle) or 1
+        local hard_cap = math.max(1, math.floor(tonumber(enemy_unit_count_config.hard_cap) or 20))
+        local minimum_units_from_cycle_11 = tonumber(enemy_unit_count_config.minimum_units_from_cycle_11) or 12
+        local full_stack_from_cycle_19 = enemy_unit_count_config.full_stack_from_cycle_19 == true
+
+        local min_units = minimum_units_base + (minimum_units_per_cycle * normalized_cycle)
+        if normalized_cycle >= 11 then
+            min_units = math.max(min_units, minimum_units_from_cycle_11)
+        end
+
+        min_units = math.min(hard_cap, math.max(1, math.floor(min_units)))
+        local target_units = min_units
+        if full_stack_from_cycle_19 and normalized_cycle >= 19 then
+            target_units = hard_cap
+        end
+
+        return {
+            current_cycle = normalized_cycle,
+            min_units = min_units,
+            target_units = math.min(hard_cap, math.max(min_units, target_units)),
+            hard_cap = hard_cap
+        }
+    end
+
+    function self.build_budget_enemy_force_definition(target_value_budget, battle_tier, allow_embedded_agent, content_faction_key, generation_context)
+        local build_context = generation_context or {}
+        local unit_count_targets = self.get_enemy_unit_count_targets(build_context.current_cycle)
         log(
             "build_budget_enemy_force_definition called. budget=["
                 .. tostring(target_value_budget)
@@ -169,6 +199,14 @@ function battle_generator.new(context)
                 .. tostring(allow_embedded_agent)
                 .. "], content_faction_key=["
                 .. tostring(content_faction_key)
+                .. "], current_cycle=["
+                .. tostring(unit_count_targets.current_cycle)
+                .. "], min_units=["
+                .. tostring(unit_count_targets.min_units)
+                .. "], target_units=["
+                .. tostring(unit_count_targets.target_units)
+                .. "], hard_cap=["
+                .. tostring(unit_count_targets.hard_cap)
                 .. "]"
         )
         local weighted_pool, resolved_content_faction_key, used_pool_fallback = self.build_weighted_unit_pool_for_tier(
@@ -183,43 +221,108 @@ function battle_generator.new(context)
         local chosen_units = {}
         local chosen_unit_counts = {}
         local total_value = 0
-        local max_units = 10 + battle_tier * 2
+        local max_units = unit_count_targets.hard_cap
         local attempts = 0
-        local soft_cap = math.floor(target_value_budget * 1.2)
+        local preferred_budget_floor = math.floor(target_value_budget * 0.9)
+        local fallback_budget_floor = math.floor(target_value_budget * 0.85)
+        local unique_pool = {}
+        local seen_unit_keys = {}
 
-        while attempts < 200 and #chosen_units < max_units do
+        for _, unit_entry in ipairs(weighted_pool) do
+            if unit_entry and unit_entry.unit_key and not seen_unit_keys[unit_entry.unit_key] then
+                unique_pool[#unique_pool + 1] = unit_entry
+                seen_unit_keys[unit_entry.unit_key] = true
+            end
+        end
+        table.sort(unique_pool, function(a, b)
+            local a_value = tonumber(a.unit_value) or 0
+            local b_value = tonumber(b.unit_value) or 0
+            if a_value == b_value then
+                return tostring(a.unit_key) < tostring(b.unit_key)
+            end
+            return a_value < b_value
+        end)
+
+        while attempts < 400 and #chosen_units < max_units do
             attempts = attempts + 1
 
             local unit_entry = weighted_pool[cm:random_number(#weighted_pool, 1)]
             local current_count = chosen_unit_counts[unit_entry.unit_key] or 0
-            local role_cap = unit_entry.role_tag == "artillery" and 2 or (unit_entry.role_tag == "monster" and 1 or 4)
+            local projected_total = total_value + unit_entry.unit_value
+            local should_take = false
 
-            if current_count < role_cap then
-                local projected_total = total_value + unit_entry.unit_value
-                local should_take = projected_total <= target_value_budget
-                    or (#chosen_units < 4 and projected_total <= soft_cap)
-                    or (target_value_budget - total_value > 500 and projected_total <= soft_cap)
-
-                if should_take then
-                    chosen_units[#chosen_units + 1] = unit_entry.unit_key
-                    chosen_unit_counts[unit_entry.unit_key] = current_count + 1
-                    total_value = projected_total
-                    log(
-                        "build_budget_enemy_force_definition accepted unit_key=["
-                            .. tostring(unit_entry.unit_key)
-                            .. "], total_value=["
-                            .. tostring(total_value)
-                            .. "], chosen_count=["
-                            .. tostring(#chosen_units)
-                            .. "]."
-                    )
+            if projected_total <= target_value_budget then
+                if #chosen_units < unit_count_targets.min_units then
+                    should_take = true
+                elseif total_value < preferred_budget_floor then
+                    should_take = true
+                elseif #chosen_units < unit_count_targets.target_units then
+                    should_take = true
+                elseif (target_value_budget - total_value) >= math.min(350, unit_entry.unit_value) then
+                    should_take = true
                 end
             end
 
-            if total_value >= math.floor(target_value_budget * 0.9) and #chosen_units >= 4 then
+            if should_take then
+                chosen_units[#chosen_units + 1] = unit_entry.unit_key
+                chosen_unit_counts[unit_entry.unit_key] = current_count + 1
+                total_value = projected_total
+                log(
+                    "build_budget_enemy_force_definition accepted unit_key=["
+                        .. tostring(unit_entry.unit_key)
+                        .. "], total_value=["
+                        .. tostring(total_value)
+                        .. "], chosen_count=["
+                        .. tostring(#chosen_units)
+                        .. "]."
+                )
+            end
+
+            if total_value >= preferred_budget_floor and #chosen_units >= unit_count_targets.target_units then
                 log("build_budget_enemy_force_definition reached stop threshold and will exit the selection loop.")
                 break
             end
+        end
+
+        -- If the weighted random pass undershoots the target stack shape, pad with the cheapest
+        -- legal units that still fit in budget before giving up on the quantity curve.
+        local fill_attempts = 0
+        while #chosen_units < max_units and fill_attempts < max_units do
+            fill_attempts = fill_attempts + 1
+            local should_continue_fill = #chosen_units < unit_count_targets.min_units
+                or (#chosen_units < unit_count_targets.target_units and total_value < target_value_budget)
+                or total_value < fallback_budget_floor
+
+            if not should_continue_fill then
+                break
+            end
+
+            local selected_filler = nil
+            for _, unit_entry in ipairs(unique_pool) do
+                local projected_total = total_value + unit_entry.unit_value
+                if projected_total <= target_value_budget then
+                    selected_filler = unit_entry
+                    break
+                end
+            end
+
+            if not selected_filler then
+                log("build_budget_enemy_force_definition could not find a legal low-cost filler unit within the remaining budget.")
+                break
+            end
+
+            chosen_units[#chosen_units + 1] = selected_filler.unit_key
+            chosen_unit_counts[selected_filler.unit_key] = (chosen_unit_counts[selected_filler.unit_key] or 0) + 1
+            total_value = total_value + selected_filler.unit_value
+            log(
+                "build_budget_enemy_force_definition applied low-cost filler. unit_key=["
+                    .. tostring(selected_filler.unit_key)
+                    .. "], total_value=["
+                    .. tostring(total_value)
+                    .. "], chosen_count=["
+                    .. tostring(#chosen_units)
+                    .. "]."
+            )
         end
 
         if #chosen_units == 0 then
@@ -232,6 +335,10 @@ function battle_generator.new(context)
                 .. tostring(total_value)
                 .. "], unit_count=["
                 .. tostring(#chosen_units)
+                .. "], min_units=["
+                .. tostring(unit_count_targets.min_units)
+                .. "], target_units=["
+                .. tostring(unit_count_targets.target_units)
                 .. "], attempts=["
                 .. tostring(attempts)
                 .. "]."
@@ -249,7 +356,10 @@ function battle_generator.new(context)
             generated_total_value = total_value,
             budget_delta = total_value - target_value_budget,
             content_faction_key = resolved_content_faction_key,
-            used_pool_fallback = used_pool_fallback and "true" or "false"
+            used_pool_fallback = used_pool_fallback and "true" or "false",
+            generated_unit_count = #chosen_units,
+            min_unit_target = unit_count_targets.min_units,
+            desired_unit_target = unit_count_targets.target_units
         }
     end
 
@@ -267,6 +377,9 @@ function battle_generator.new(context)
             enemy_agent_subtype = battle_definition.embedded_agent_subtype,
             generated_total_value = battle_definition.generated_total_value,
             budget_delta = battle_definition.budget_delta,
+            generated_unit_count = battle_definition.generated_unit_count or 0,
+            min_unit_target = battle_definition.min_unit_target or 0,
+            desired_unit_target = battle_definition.desired_unit_target or 0,
             spawn_retry_index = spawn_retry_index or 0,
             attack_choice = 0,
             pause_choice = 1

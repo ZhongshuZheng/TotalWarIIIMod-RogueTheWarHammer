@@ -9,6 +9,7 @@ local adamrogue_data_cth = require("adamrogue_data_cth")
 local adamrogue_data_nodes = require("adamrogue_data_nodes")
 local adamrogue_data_battle_pools = require("adamrogue_data_battle_pools")
 local adamrogue_data_ancillaries = require("adamrogue_data_ancillaries")
+local adamrogue_balance_config = require("adamrogue_balance_config")
 local adamrogue_battle_generator_module = require("adamrogue_battle_generator")
 local adamrogue_ancillary_generator_module = require("adamrogue_ancillary_generator")
 local adamrogue_force_snapshot_module = require("adamrogue_force_snapshot")
@@ -29,6 +30,8 @@ local DILEMMA_EQUIPMENT_REWARD_KEY = "adamrogue_mvp_equipment_reward_dilemma"
 local DILEMMA_DESTINATION_KEY = "adamrogue_mvp_destination_dilemma"
 
 local PLAYER_GENERAL_SUBTYPE = adamrogue_data_cth.PLAYER_GENERAL_SUBTYPE
+local PLAYER_GENERAL_SUBTYPES = adamrogue_data_cth.PLAYER_GENERAL_SUBTYPES or { PLAYER_GENERAL_SUBTYPE }
+local PLAYER_GENERAL_OPTIONS = adamrogue_data_cth.PLAYER_GENERAL_OPTIONS or {}
 local PLAYER_STARTING_UNITS = adamrogue_data_cth.PLAYER_STARTING_UNITS
 
 local STARTING_NODE_KEY = adamrogue_data_nodes.STARTING_NODE_KEY
@@ -45,6 +48,9 @@ local EQUIPMENT_RARITY = adamrogue_data_ancillaries.EQUIPMENT_RARITY
 local EQUIPMENT_REWARD_SLOT_ORDER = adamrogue_data_ancillaries.EQUIPMENT_REWARD_SLOT_ORDER
 local COMMON_EQUIPMENT_POOL = adamrogue_data_ancillaries.COMMON_EQUIPMENT_POOL
 local FACTION_EQUIPMENT_POOLS = adamrogue_data_ancillaries.FACTION_EQUIPMENT_POOLS
+local BALANCE_CONFIG = adamrogue_balance_config.CONFIG
+local DEFAULT_CURRENT_CYCLE = adamrogue_balance_config.DEFAULT_CURRENT_CYCLE
+local DEFAULT_DIFFICULTY_LEVEL = adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL
 
 local EVENT_TYPE = {
     UNIT_REWARD = "unit_reward",
@@ -87,6 +93,9 @@ local SAVE_KEYS = {
     last_battle_budget = "adamrogue_last_battle_budget",
     pre_battle_unit_snapshot = "adamrogue_pre_battle_unit_snapshot",
     pre_battle_general_rank = "adamrogue_pre_battle_general_rank",
+    player_general_subtype = "adamrogue_player_general_subtype",
+    current_cycle = "adamrogue_current_cycle",
+    difficulty_level = "adamrogue_difficulty_level",
     enemy_faction_key = "adamrogue_enemy_faction_key",
     enemy_force_cqi = "adamrogue_enemy_force_cqi",
     enemy_leader_cqi = "adamrogue_enemy_leader_cqi",
@@ -144,6 +153,315 @@ end
 
 local function get_current_state()
     return get_saved_value(SAVE_KEYS.current_state, STATE.INIT)
+end
+
+local function get_current_cycle()
+    local cycle = tonumber(get_saved_value(SAVE_KEYS.current_cycle, DEFAULT_CURRENT_CYCLE)) or DEFAULT_CURRENT_CYCLE
+    cycle = math.floor(cycle)
+    if cycle < DEFAULT_CURRENT_CYCLE then
+        cycle = DEFAULT_CURRENT_CYCLE
+    end
+
+    return cycle
+end
+
+local function set_current_cycle(cycle)
+    local normalized_cycle = tonumber(cycle) or DEFAULT_CURRENT_CYCLE
+    normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(normalized_cycle))
+    set_saved_value(SAVE_KEYS.current_cycle, normalized_cycle)
+    log("Cycle -> " .. tostring(normalized_cycle))
+end
+
+local function get_difficulty_level()
+    local saved_level = tostring(get_saved_value(SAVE_KEYS.difficulty_level, DEFAULT_DIFFICULTY_LEVEL) or DEFAULT_DIFFICULTY_LEVEL)
+    return adamrogue_balance_config.normalize_difficulty_level(saved_level)
+end
+
+local function set_difficulty_level(level)
+    local normalized_level = adamrogue_balance_config.normalize_difficulty_level(level)
+    set_saved_value(SAVE_KEYS.difficulty_level, normalized_level)
+    log("Difficulty -> " .. tostring(normalized_level))
+end
+
+local function ensure_balance_state_initialized(reason)
+    local current_cycle = tonumber(get_saved_value(SAVE_KEYS.current_cycle, 0)) or 0
+    if current_cycle < DEFAULT_CURRENT_CYCLE then
+        set_saved_value(SAVE_KEYS.current_cycle, DEFAULT_CURRENT_CYCLE)
+        log(
+            "ensure_balance_state_initialized seeded current_cycle. reason=["
+                .. tostring(reason)
+                .. "], cycle=["
+                .. tostring(DEFAULT_CURRENT_CYCLE)
+                .. "]."
+        )
+    end
+
+    local saved_difficulty_level = tostring(get_saved_value(SAVE_KEYS.difficulty_level, "") or "")
+    if not adamrogue_balance_config.is_supported_difficulty_level(saved_difficulty_level) then
+        set_saved_value(SAVE_KEYS.difficulty_level, DEFAULT_DIFFICULTY_LEVEL)
+        log(
+            "ensure_balance_state_initialized seeded difficulty_level. reason=["
+                .. tostring(reason)
+                .. "], difficulty_level=["
+                .. tostring(DEFAULT_DIFFICULTY_LEVEL)
+                .. "]."
+        )
+    end
+end
+
+local function get_difficulty_config()
+    return adamrogue_balance_config.DIFFICULTY_LEVELS[get_difficulty_level()]
+        or adamrogue_balance_config.DIFFICULTY_LEVELS[DEFAULT_DIFFICULTY_LEVEL]
+end
+
+local function get_enemy_growth_for_cycle(cycle)
+    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+    for _, entry in ipairs(BALANCE_CONFIG.enemy_growth or {}) do
+        local min_cycle = tonumber(entry.min_cycle) or DEFAULT_CURRENT_CYCLE
+        local max_cycle = entry.max_cycle and tonumber(entry.max_cycle) or nil
+        if normalized_cycle >= min_cycle and (not max_cycle or normalized_cycle <= max_cycle) then
+            return tonumber(entry.growth) or 0
+        end
+    end
+
+    return 0
+end
+
+local function is_elite_battle_cycle(cycle)
+    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+    local elite_config = BALANCE_CONFIG.elite_battles or {}
+    for _, elite_cycle in ipairs(elite_config.battle_cycles or {}) do
+        if normalized_cycle == tonumber(elite_cycle) then
+            return true
+        end
+    end
+
+    return false
+end
+
+local function get_enemy_value_budget_for_cycle(cycle)
+    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+    local base_value = tonumber(BALANCE_CONFIG.initial_enemy_value) or 0
+    local value_before_difficulty = base_value
+
+    for growth_cycle = DEFAULT_CURRENT_CYCLE, normalized_cycle do
+        value_before_difficulty = value_before_difficulty + get_enemy_growth_for_cycle(growth_cycle)
+    end
+
+    local difficulty_config = get_difficulty_config()
+    local difficulty_multiplier = tonumber(difficulty_config.enemy_value_multiplier) or 1
+    local elite_multiplier = 1
+    local elite_battle = is_elite_battle_cycle(normalized_cycle)
+    if elite_battle then
+        elite_multiplier = tonumber(difficulty_config.elite_enemy_value_multiplier) or 1
+    end
+
+    local value_after_difficulty = math.floor((value_before_difficulty * difficulty_multiplier) + 0.5)
+    local final_value = math.floor((value_after_difficulty * elite_multiplier) + 0.5)
+
+    return {
+        cycle = normalized_cycle,
+        base_value = base_value,
+        value_before_difficulty = value_before_difficulty,
+        difficulty_multiplier = difficulty_multiplier,
+        value_after_difficulty = value_after_difficulty,
+        elite_battle = elite_battle,
+        elite_multiplier = elite_multiplier,
+        final_value = final_value
+    }
+end
+
+local function get_player_reward_value_band_for_cycle(cycle)
+    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+    local resolved_entry = nil
+
+    for _, entry in ipairs(BALANCE_CONFIG.player_reward_value or {}) do
+        local min_cycle = tonumber(entry.min_cycle) or DEFAULT_CURRENT_CYCLE
+        local max_cycle = entry.max_cycle and tonumber(entry.max_cycle) or nil
+        if normalized_cycle >= min_cycle and (not max_cycle or normalized_cycle <= max_cycle) then
+            resolved_entry = entry
+            break
+        end
+    end
+
+    resolved_entry = resolved_entry or {
+        min_value = 300,
+        max_value = 700
+    }
+
+    local difficulty_config = get_difficulty_config()
+    local player_reward_value_multiplier = tonumber(difficulty_config.player_reward_value_multiplier) or 1
+    local base_min_value = tonumber(resolved_entry.min_value) or 300
+    local base_max_value = tonumber(resolved_entry.max_value) or base_min_value
+    local min_value = math.floor((base_min_value * player_reward_value_multiplier) + 0.5)
+    local max_value = math.floor((base_max_value * player_reward_value_multiplier) + 0.5)
+    if max_value < min_value then
+        max_value = min_value
+    end
+
+    return {
+        cycle = normalized_cycle,
+        base_min_value = base_min_value,
+        base_max_value = base_max_value,
+        player_reward_value_multiplier = player_reward_value_multiplier,
+        min_value = min_value,
+        max_value = max_value
+    }
+end
+
+local function get_equipment_rarity_context_for_cycle(cycle)
+    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+    for _, entry in ipairs(BALANCE_CONFIG.equipment_rarity_by_cycle or {}) do
+        local min_cycle = tonumber(entry.min_cycle) or DEFAULT_CURRENT_CYCLE
+        local max_cycle = entry.max_cycle and tonumber(entry.max_cycle) or nil
+        if normalized_cycle >= min_cycle and (not max_cycle or normalized_cycle <= max_cycle) then
+            return {
+                cycle = normalized_cycle,
+                tiers = entry.tiers or { EQUIPMENT_RARITY.COMMON }
+            }
+        end
+    end
+
+    return {
+        cycle = normalized_cycle,
+        tiers = { EQUIPMENT_RARITY.COMMON }
+    }
+end
+
+local function pick_random_player_general_option()
+    if PLAYER_GENERAL_OPTIONS and #PLAYER_GENERAL_OPTIONS > 0 then
+        local selected_option = PLAYER_GENERAL_OPTIONS[cm:random_number(#PLAYER_GENERAL_OPTIONS, 1)]
+        if selected_option and selected_option.subtype and selected_option.subtype ~= "" then
+            return selected_option
+        end
+    end
+
+    if PLAYER_GENERAL_SUBTYPES and #PLAYER_GENERAL_SUBTYPES > 0 then
+        return {
+            subtype = PLAYER_GENERAL_SUBTYPES[cm:random_number(#PLAYER_GENERAL_SUBTYPES, 1)] or PLAYER_GENERAL_SUBTYPE,
+            unit_value = 0
+        }
+    end
+
+    return {
+        subtype = PLAYER_GENERAL_SUBTYPE,
+        unit_value = 0
+    }
+end
+
+local function build_starting_player_unit_list(player_faction_key, selected_general_option)
+    local total_value_budget = tonumber(BALANCE_CONFIG.initial_player_value) or 4500
+    local selected_general_value = tonumber(selected_general_option and selected_general_option.unit_value) or 0
+    local target_value_budget = math.max(0, total_value_budget - selected_general_value)
+    local source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[player_faction_key]
+    local resolved_faction_key = player_faction_key
+    if not source_pool or #source_pool == 0 then
+        source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {}
+        resolved_faction_key = DEFAULT_CONTENT_FACTION_KEY
+        log(
+            "[ERROR] build_starting_player_unit_list is falling back to the default content faction pool. requested_content_faction_key=["
+                .. tostring(player_faction_key)
+                .. "], resolved_content_faction_key=["
+                .. tostring(resolved_faction_key)
+                .. "], pool_size=["
+                .. tostring(#source_pool)
+                .. "]."
+        )
+    end
+
+    local weighted_pool = {}
+    for _, unit_entry in ipairs(source_pool) do
+        for _ = 1, math.max(1, unit_entry.weight or 1) do
+            weighted_pool[#weighted_pool + 1] = unit_entry
+        end
+    end
+
+    if not weighted_pool or #weighted_pool == 0 then
+        log(
+            "[ERROR] build_starting_player_unit_list is falling back to static PLAYER_STARTING_UNITS because the weighted pool is empty. player_faction_key=["
+                .. tostring(player_faction_key)
+                .. "]."
+        )
+        return PLAYER_STARTING_UNITS, PLAYER_STARTING_UNITS, 0, resolved_faction_key or player_faction_key
+    end
+
+    local chosen_units = {}
+    local total_value = 0
+    local attempts = 0
+    local unique_pool = {}
+    local seen_unit_keys = {}
+
+    for _, unit_entry in ipairs(weighted_pool) do
+        if unit_entry and unit_entry.unit_key and not seen_unit_keys[unit_entry.unit_key] then
+            unique_pool[#unique_pool + 1] = unit_entry
+            seen_unit_keys[unit_entry.unit_key] = true
+        end
+    end
+
+    table.sort(unique_pool, function(a, b)
+        local a_value = tonumber(a.unit_value) or 0
+        local b_value = tonumber(b.unit_value) or 0
+        if a_value == b_value then
+            return tostring(a.unit_key) < tostring(b.unit_key)
+        end
+        return a_value < b_value
+    end)
+
+    while attempts < 300 and #chosen_units < 19 do
+        attempts = attempts + 1
+        local unit_entry = weighted_pool[cm:random_number(#weighted_pool, 1)]
+        local projected_total = total_value + unit_entry.unit_value
+
+        if projected_total <= target_value_budget then
+            chosen_units[#chosen_units + 1] = unit_entry.unit_key
+            total_value = projected_total
+        end
+
+        if total_value >= target_value_budget then
+            break
+        end
+    end
+
+    for _, unit_entry in ipairs(unique_pool) do
+        if total_value >= target_value_budget then
+            break
+        end
+
+        local projected_total = total_value + unit_entry.unit_value
+        if projected_total <= target_value_budget then
+            chosen_units[#chosen_units + 1] = unit_entry.unit_key
+            total_value = projected_total
+        end
+    end
+
+    if #chosen_units == 0 then
+        log("[ERROR] build_starting_player_unit_list could not generate any units and will fall back to PLAYER_STARTING_UNITS.")
+        return PLAYER_STARTING_UNITS, PLAYER_STARTING_UNITS, 0, resolved_faction_key or player_faction_key
+    end
+
+    local unit_list = table.concat(chosen_units, ",")
+    log(
+        "build_starting_player_unit_list completed. player_faction_key=["
+            .. tostring(player_faction_key)
+            .. "], resolved_faction_key=["
+            .. tostring(resolved_faction_key)
+            .. "], selected_general_subtype=["
+            .. tostring(selected_general_option and selected_general_option.subtype or "")
+            .. "], selected_general_value=["
+            .. tostring(selected_general_value)
+            .. "], total_value_budget=["
+            .. tostring(total_value_budget)
+            .. "], total_value=["
+            .. tostring(total_value)
+            .. "], target_value_budget=["
+            .. tostring(target_value_budget)
+            .. "], unit_count=["
+            .. tostring(#chosen_units)
+            .. "], unit_list=["
+            .. tostring(unit_list)
+            .. "]."
+    )
+    return unit_list, unit_list, total_value, resolved_faction_key or player_faction_key
 end
 
 local function set_current_state(state)
@@ -743,7 +1061,8 @@ local adamrogue_battle_generator = adamrogue_battle_generator_module.new({
     enemy_embedded_agent_subtype = ENEMY_EMBEDDED_AGENT_SUBTYPE,
     enemy_embedded_agent_subtypes_by_faction = ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION,
     default_content_faction_key = DEFAULT_CONTENT_FACTION_KEY,
-    default_enemy_faction_key = DEFAULT_ENEMY_FACTION_KEY
+    default_enemy_faction_key = DEFAULT_ENEMY_FACTION_KEY,
+    enemy_unit_count_config = BALANCE_CONFIG.enemy_unit_count
 })
 
 local get_battle_tier_for_progress = adamrogue_battle_generator.get_battle_tier_for_progress
@@ -752,7 +1071,7 @@ local build_budget_enemy_force_definition = adamrogue_battle_generator.build_bud
 local create_battle_payload_from_definition = adamrogue_battle_generator.create_battle_payload_from_definition
 local log_unit_list_details = adamrogue_battle_generator.log_unit_list_details
 
-local function get_reward_unit_pool_for_faction(content_faction_key, battle_tier)
+local function get_reward_unit_pool_for_faction(content_faction_key, battle_tier, use_battle_tier_filter)
     local source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[content_faction_key]
     local resolved_faction_key = content_faction_key
 
@@ -760,7 +1079,7 @@ local function get_reward_unit_pool_for_faction(content_faction_key, battle_tier
         source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {}
         resolved_faction_key = DEFAULT_CONTENT_FACTION_KEY
         log(
-            "get_reward_unit_pool_for_faction is falling back to the default content faction pool. requested_content_faction_key=["
+            "[ERROR] get_reward_unit_pool_for_faction is falling back to the default content faction pool. requested_content_faction_key=["
                 .. tostring(content_faction_key)
                 .. "], resolved_content_faction_key=["
                 .. tostring(resolved_faction_key)
@@ -771,8 +1090,9 @@ local function get_reward_unit_pool_for_faction(content_faction_key, battle_tier
     end
 
     local candidate_pool = {}
+    local apply_tier_filter = use_battle_tier_filter == true
     for _, unit_entry in ipairs(source_pool) do
-        if battle_tier >= unit_entry.min_battle_tier and battle_tier <= unit_entry.max_battle_tier then
+        if (not apply_tier_filter) or (battle_tier >= unit_entry.min_battle_tier and battle_tier <= unit_entry.max_battle_tier) then
             for _ = 1, math.max(1, unit_entry.weight or 1) do
                 candidate_pool[#candidate_pool + 1] = unit_entry
             end
@@ -786,6 +1106,8 @@ local function get_reward_unit_pool_for_faction(content_faction_key, battle_tier
             .. tostring(resolved_faction_key)
             .. "], battle_tier=["
             .. tostring(battle_tier)
+            .. "], use_battle_tier_filter=["
+            .. tostring(apply_tier_filter)
             .. "], weighted_pool_size=["
             .. tostring(#candidate_pool)
             .. "]."
@@ -815,6 +1137,104 @@ local function pick_reward_unit_from_pool(weighted_pool, excluded_units)
     return nil
 end
 
+local function build_reward_value_filtered_pool(weighted_pool, min_value, max_value, excluded_units)
+    local blocked = excluded_units or {}
+    local in_range_pool = {}
+    local closest_lower_value = nil
+    local closest_higher_value = nil
+
+    for _, unit_entry in ipairs(weighted_pool or {}) do
+        if unit_entry and unit_entry.unit_key and not blocked[unit_entry.unit_key] then
+            local unit_value = tonumber(unit_entry.unit_value) or 0
+            if unit_value >= min_value and unit_value <= max_value then
+                in_range_pool[#in_range_pool + 1] = unit_entry
+            elseif unit_value < min_value then
+                if closest_lower_value == nil or unit_value > closest_lower_value then
+                    closest_lower_value = unit_value
+                end
+            elseif unit_value > max_value then
+                if closest_higher_value == nil or unit_value < closest_higher_value then
+                    closest_higher_value = unit_value
+                end
+            end
+        end
+    end
+
+    if #in_range_pool > 0 then
+        return in_range_pool, "in_range", nil
+    end
+
+    -- Reward bands should degrade toward the nearest lower-value unit first so late-cycle dry spots
+    -- do not abruptly jump to a stronger reward than the configured curve intended.
+    if closest_lower_value ~= nil then
+        local lower_pool = {}
+        for _, unit_entry in ipairs(weighted_pool or {}) do
+            if unit_entry and unit_entry.unit_key and not blocked[unit_entry.unit_key] then
+                if (tonumber(unit_entry.unit_value) or 0) == closest_lower_value then
+                    lower_pool[#lower_pool + 1] = unit_entry
+                end
+            end
+        end
+
+        if #lower_pool > 0 then
+            return lower_pool, "closest_lower", closest_lower_value
+        end
+    end
+
+    if closest_higher_value ~= nil then
+        local higher_pool = {}
+        for _, unit_entry in ipairs(weighted_pool or {}) do
+            if unit_entry and unit_entry.unit_key and not blocked[unit_entry.unit_key] then
+                if (tonumber(unit_entry.unit_value) or 0) == closest_higher_value then
+                    higher_pool[#higher_pool + 1] = unit_entry
+                end
+            end
+        end
+
+        if #higher_pool > 0 then
+            return higher_pool, "closest_higher", closest_higher_value
+        end
+    end
+
+    return {}, "empty", nil
+end
+
+local function pick_reward_unit_for_value_band(weighted_pool, min_value, max_value, excluded_units, selection_label)
+    local filtered_pool, resolution, resolved_value = build_reward_value_filtered_pool(weighted_pool, min_value, max_value, excluded_units)
+    log(
+        "pick_reward_unit_for_value_band prepared candidate pool. selection_label=["
+            .. tostring(selection_label)
+            .. "], min_value=["
+            .. tostring(min_value)
+            .. "], max_value=["
+            .. tostring(max_value)
+            .. "], resolution=["
+            .. tostring(resolution)
+            .. "], resolved_value=["
+            .. tostring(resolved_value)
+            .. "], filtered_pool_size=["
+            .. tostring(#filtered_pool)
+            .. "]."
+    )
+
+    local unit_key, unit_entry = pick_reward_unit_from_pool(filtered_pool, excluded_units)
+    if unit_entry then
+        log(
+            "pick_reward_unit_for_value_band selected unit. selection_label=["
+                .. tostring(selection_label)
+                .. "], unit_key=["
+                .. tostring(unit_key)
+                .. "], unit_value=["
+                .. tostring(unit_entry.unit_value)
+                .. "], resolution=["
+                .. tostring(resolution)
+                .. "]."
+        )
+    end
+
+    return unit_key, unit_entry, resolution, resolved_value
+end
+
 local adamrogue_ancillary_generator = adamrogue_ancillary_generator_module.new({
     log = log,
     cm = cm,
@@ -822,7 +1242,10 @@ local adamrogue_ancillary_generator = adamrogue_ancillary_generator_module.new({
     faction_pools = FACTION_EQUIPMENT_POOLS,
     battle_tier = BATTLE_TIER,
     equipment_rarity = EQUIPMENT_RARITY,
-    slot_order = EQUIPMENT_REWARD_SLOT_ORDER
+    slot_order = EQUIPMENT_REWARD_SLOT_ORDER,
+    equipment_rarity_by_cycle = BALANCE_CONFIG.equipment_rarity_by_cycle,
+    elite_battle_cycles = BALANCE_CONFIG.elite_battles and BALANCE_CONFIG.elite_battles.battle_cycles or {},
+    elite_reward_highest_tier = BALANCE_CONFIG.elite_battles and BALANCE_CONFIG.elite_battles.reward_highest_tier == true
 })
 
 local generate_equipment_reward_payload = adamrogue_ancillary_generator.generate_equipment_reward_payload
@@ -1132,15 +1555,36 @@ local function ensure_run_started()
     end
 
     log(string.format("Spawning player test force for [%s] at (%s, %s) in region [%s]", faction:name(), tostring(x), tostring(y), region_key))
+    local selected_player_general_option = pick_random_player_general_option()
+    local player_general_subtype = selected_player_general_option.subtype or PLAYER_GENERAL_SUBTYPE
+    local starting_unit_list, logged_starting_unit_list, starting_unit_value, resolved_starting_pool_faction_key =
+        build_starting_player_unit_list(faction:name(), selected_player_general_option)
+    log(
+        "Spawning randomized player test force. faction=["
+            .. faction:name()
+            .. "], general_subtype=["
+            .. tostring(player_general_subtype)
+            .. "], general_value=["
+            .. tostring(selected_player_general_option.unit_value or 0)
+            .. "], resolved_starting_pool_faction_key=["
+            .. tostring(resolved_starting_pool_faction_key)
+            .. "], starting_unit_value=["
+            .. tostring(starting_unit_value)
+            .. "], target_value_budget=["
+            .. tostring(math.max(0, (tonumber(BALANCE_CONFIG.initial_player_value) or 4500) - (tonumber(selected_player_general_option.unit_value) or 0)))
+            .. "], starting_unit_list=["
+            .. tostring(logged_starting_unit_list)
+            .. "]."
+    )
 
     cm:create_force_with_general(
         faction:name(),
-        PLAYER_STARTING_UNITS,
+        starting_unit_list,
         region_key,
         x,
         y,
         "general",
-        PLAYER_GENERAL_SUBTYPE,
+        player_general_subtype,
         "",
         "",
         "",
@@ -1156,6 +1600,7 @@ local function ensure_run_started()
             local force = character:military_force()
             set_saved_value(SAVE_KEYS.run_started, true)
             set_saved_value(SAVE_KEYS.player_faction_key, faction:name())
+            set_saved_value(SAVE_KEYS.player_general_subtype, character:character_subtype_key())
             set_saved_value(SAVE_KEYS.player_leader_cqi, character:command_queue_index())
             set_saved_value(SAVE_KEYS.player_force_cqi, force:command_queue_index())
             set_saved_value(SAVE_KEYS.completed_battle_count, get_saved_value(SAVE_KEYS.completed_battle_count, 0))
@@ -1166,10 +1611,27 @@ local function ensure_run_started()
             clear_current_event_context()
             clear_destination_selection_state("player_force_created")
             ensure_current_node_initialized("player_force_created")
+            ensure_balance_state_initialized("player_force_created")
             set_saved_value(SAVE_KEYS.paused_from_state, "")
             set_current_state(STATE.INIT)
 
-            log("Player test force created. General CQI=" .. tostring(character:command_queue_index()) .. ", Force CQI=" .. tostring(force:command_queue_index()) .. ", Units=" .. tostring(count_units_in_force(force)))
+            log(
+                "Player test force created. General CQI="
+                    .. tostring(character:command_queue_index())
+                    .. ", Force CQI="
+                    .. tostring(force:command_queue_index())
+                    .. ", Units="
+                    .. tostring(count_units_in_force(force))
+                    .. ", general_subtype=["
+                    .. tostring(character:character_subtype_key())
+                    .. "], starting_unit_value=["
+                    .. tostring(starting_unit_value)
+                    .. ", current_cycle=["
+                    .. tostring(get_current_cycle())
+                    .. "], difficulty_level=["
+                    .. tostring(get_difficulty_level())
+                    .. "]."
+            )
         end
     )
 
@@ -1191,8 +1653,10 @@ local function prepare_unit_reward_event()
 
     local completed_battle_count = get_completed_battle_count()
     local battle_tier = get_battle_tier_for_progress(completed_battle_count)
-    local player_pool, resolved_player_pool_faction_key = get_reward_unit_pool_for_faction(faction:name(), battle_tier)
-    local node_pool, resolved_node_pool_faction_key = get_reward_unit_pool_for_faction(current_node.faction_key, battle_tier)
+    local current_cycle = get_current_cycle()
+    local reward_value_band = get_player_reward_value_band_for_cycle(current_cycle)
+    local player_pool, resolved_player_pool_faction_key = get_reward_unit_pool_for_faction(faction:name(), battle_tier, false)
+    local node_pool, resolved_node_pool_faction_key = get_reward_unit_pool_for_faction(current_node.faction_key, battle_tier, false)
     if #player_pool == 0 or #node_pool == 0 then
         log(
             "prepare_unit_reward_event aborted because one or more weighted reward pools are empty. player_pool_size=["
@@ -1206,18 +1670,36 @@ local function prepare_unit_reward_event()
 
     local chosen_units = {}
     local chosen_lookup = {}
-    local unit_0 = pick_reward_unit_from_pool(player_pool, chosen_lookup)
+    local selected_entries = {}
+    local unit_0, unit_0_entry = pick_reward_unit_for_value_band(
+        player_pool,
+        reward_value_band.min_value,
+        reward_value_band.max_value,
+        chosen_lookup,
+        "player_choice_0"
+    )
+    if not unit_0 then
+        log("prepare_unit_reward_event is falling back to unconstrained player reward choice 0 selection.")
+        unit_0, unit_0_entry = pick_reward_unit_from_pool(player_pool, chosen_lookup)
+    end
     if not unit_0 then
         log("prepare_unit_reward_event aborted because player reward choice 0 could not be generated.")
         return false
     end
     chosen_lookup[unit_0] = true
     chosen_units[0] = unit_0
+    selected_entries[0] = unit_0_entry
 
-    local unit_1 = pick_reward_unit_from_pool(player_pool, chosen_lookup)
+    local unit_1, unit_1_entry = pick_reward_unit_for_value_band(
+        player_pool,
+        reward_value_band.min_value,
+        reward_value_band.max_value,
+        chosen_lookup,
+        "player_choice_1"
+    )
     if not unit_1 then
-        chosen_lookup[unit_0] = nil
-        unit_1 = pick_reward_unit_from_pool(player_pool, {})
+        log("prepare_unit_reward_event is falling back to unconstrained player reward choice 1 selection.")
+        unit_1, unit_1_entry = pick_reward_unit_from_pool(player_pool, chosen_lookup)
     end
     if not unit_1 then
         log("prepare_unit_reward_event aborted because player reward choice 1 could not be generated.")
@@ -1225,28 +1707,47 @@ local function prepare_unit_reward_event()
     end
     chosen_lookup[unit_1] = true
     chosen_units[1] = unit_1
+    selected_entries[1] = unit_1_entry
 
-    local unit_2 = pick_reward_unit_from_pool(node_pool, chosen_lookup)
+    local unit_2, unit_2_entry = pick_reward_unit_for_value_band(
+        node_pool,
+        reward_value_band.min_value,
+        reward_value_band.max_value,
+        chosen_lookup,
+        "node_choice_2"
+    )
     if not unit_2 then
-        unit_2 = pick_reward_unit_from_pool(node_pool, {})
+        log("prepare_unit_reward_event is falling back to unconstrained node reward choice 2 selection.")
+        unit_2, unit_2_entry = pick_reward_unit_from_pool(node_pool, chosen_lookup)
     end
     if not unit_2 then
         log("prepare_unit_reward_event aborted because node reward choice 2 could not be generated.")
         return false
     end
     chosen_units[2] = unit_2
+    chosen_lookup[unit_2] = true
+    selected_entries[2] = unit_2_entry
 
     local seed = new_event_seed()
     local payload = {
         unit_0 = chosen_units[0],
         unit_1 = chosen_units[1],
         unit_2 = chosen_units[2],
+        unit_0_value = selected_entries[0] and selected_entries[0].unit_value or 0,
+        unit_1_value = selected_entries[1] and selected_entries[1].unit_value or 0,
+        unit_2_value = selected_entries[2] and selected_entries[2].unit_value or 0,
         reward_player_faction_key = faction:name(),
         reward_current_node_faction_key = current_node.faction_key,
         reward_player_pool_faction_key = resolved_player_pool_faction_key,
         reward_node_pool_faction_key = resolved_node_pool_faction_key,
         reward_battle_tier = battle_tier,
         reward_completed_battle_count = completed_battle_count,
+        reward_current_cycle = current_cycle,
+        reward_target_min_value = reward_value_band.min_value,
+        reward_target_max_value = reward_value_band.max_value,
+        reward_base_min_value = reward_value_band.base_min_value,
+        reward_base_max_value = reward_value_band.base_max_value,
+        reward_player_value_multiplier = reward_value_band.player_reward_value_multiplier,
         pause_choice = 3
     }
 
@@ -1259,6 +1760,18 @@ local function prepare_unit_reward_event()
             .. tostring(current_node.faction_key)
             .. "], battle_tier=["
             .. tostring(battle_tier)
+            .. "], current_cycle=["
+            .. tostring(current_cycle)
+            .. "], reward_value_range=["
+            .. tostring(reward_value_band.min_value)
+            .. ","
+            .. tostring(reward_value_band.max_value)
+            .. "], reward_values=["
+            .. tostring(payload.unit_0_value)
+            .. ","
+            .. tostring(payload.unit_1_value)
+            .. ","
+            .. tostring(payload.unit_2_value)
             .. "], reward_units=["
             .. tostring(chosen_units[0])
             .. ","
@@ -1288,23 +1801,43 @@ local function prepare_battle_event()
         return false
     end
 
+    local current_cycle = get_current_cycle()
     local completed_battle_count = get_completed_battle_count()
     local battle_tier = get_battle_tier_for_progress(completed_battle_count)
-    local target_value_budget = get_target_battle_budget(completed_battle_count)
+    local budget_context = get_enemy_value_budget_for_cycle(current_cycle)
+    local target_value_budget = budget_context.final_value
     log(
-        "prepare_battle_event progress resolved. completed_battle_count=["
+        "prepare_battle_event progress resolved. current_cycle=["
+            .. tostring(current_cycle)
+            .. "], completed_battle_count=["
             .. tostring(completed_battle_count)
             .. "], battle_tier=["
             .. tostring(battle_tier)
             .. "], target_value_budget=["
             .. tostring(target_value_budget)
+            .. "], budget_before_difficulty=["
+            .. tostring(budget_context.value_before_difficulty)
+            .. "], difficulty_multiplier=["
+            .. tostring(budget_context.difficulty_multiplier)
+            .. "], elite_battle=["
+            .. tostring(budget_context.elite_battle)
+            .. "], elite_multiplier=["
+            .. tostring(budget_context.elite_multiplier)
             .. "], current_node_key=["
             .. tostring(current_node.node_key)
             .. "], current_node_faction_key=["
             .. tostring(current_node.faction_key)
             .. "]."
     )
-    local battle_definition = build_budget_enemy_force_definition(target_value_budget, battle_tier, true, current_node.faction_key)
+    local battle_definition = build_budget_enemy_force_definition(
+        target_value_budget,
+        battle_tier,
+        true,
+        current_node.faction_key,
+        {
+            current_cycle = current_cycle
+        }
+    )
     if not battle_definition then
         log("Failed to generate a budget-based enemy force for the battle event using the current node context.")
         return false
@@ -1342,6 +1875,12 @@ local function prepare_battle_event()
     payload.enemy_faction_candidates = table.concat(enemy_faction_candidates, ",")
     payload.current_node_key = current_node.node_key
     payload.current_node_faction_key = current_node.faction_key
+    payload.current_cycle = current_cycle
+    payload.enemy_value_before_difficulty = budget_context.value_before_difficulty
+    payload.enemy_value_after_difficulty = budget_context.value_after_difficulty
+    payload.enemy_value_difficulty_multiplier = budget_context.difficulty_multiplier
+    payload.elite_battle = budget_context.elite_battle and "true" or "false"
+    payload.elite_enemy_value_multiplier = budget_context.elite_multiplier
 
     set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
     set_current_event_context(EVENT_TYPE.BATTLE, DILEMMA_BATTLE_KEY, seed, payload)
@@ -1353,6 +1892,12 @@ local function prepare_battle_event()
             .. UNIT_VALUE_SOURCE
             .. "], tier=["
             .. tostring(battle_tier)
+            .. "], generated_unit_count=["
+            .. tostring(payload.generated_unit_count)
+            .. "], min_unit_target=["
+            .. tostring(payload.min_unit_target)
+            .. "], desired_unit_target=["
+            .. tostring(payload.desired_unit_target)
             .. "], battle_content_faction_key=["
             .. tostring(payload.battle_content_faction_key)
             .. "], battle_content_pool_fallback=["
@@ -1375,7 +1920,19 @@ local function prepare_battle_event()
             .. "]."
     )
     log_unit_list_details("prepare_battle_event_generated_payload", payload.enemy_unit_list)
-    log("Prepared battle event for faction [" .. faction:name() .. "] against enemy faction [" .. enemy_faction_key .. "]")
+    log(
+        "Prepared battle event for faction ["
+            .. faction:name()
+            .. "] against enemy faction ["
+            .. enemy_faction_key
+            .. "]. current_cycle=["
+            .. tostring(current_cycle)
+            .. "], elite_battle=["
+            .. tostring(budget_context.elite_battle)
+            .. "], target_value_budget=["
+            .. tostring(target_value_budget)
+            .. "]."
+    )
     return true
 end
 
@@ -1394,11 +1951,19 @@ local function prepare_equipment_reward_event()
 
     local completed_battle_count = get_completed_battle_count()
     local battle_tier = get_battle_tier_for_progress(completed_battle_count)
+    local current_cycle = get_current_cycle()
+    local elite_battle = is_elite_battle_cycle(current_cycle)
+    local rarity_context = get_equipment_rarity_context_for_cycle(current_cycle)
     local payload = generate_equipment_reward_payload(
         completed_battle_count,
         battle_tier,
         faction:name(),
-        current_node.faction_key
+        current_node.faction_key,
+        {
+            current_cycle = current_cycle,
+            elite_battle = elite_battle,
+            force_highest_rarity = elite_battle and BALANCE_CONFIG.elite_battles and BALANCE_CONFIG.elite_battles.reward_highest_tier == true
+        }
     )
     if not payload or type(payload) ~= "table" or tonumber(payload.candidate_count) == 0 then
         log("prepare_equipment_reward_event aborted because no equipment reward candidates were generated.")
@@ -1417,6 +1982,12 @@ local function prepare_equipment_reward_event()
             .. tostring(current_node.node_key)
             .. "], current_node_faction_key=["
             .. tostring(current_node.faction_key)
+            .. "], current_cycle=["
+            .. tostring(current_cycle)
+            .. "], cycle_allowed_rarity_bands=["
+            .. table.concat(rarity_context.tiers, ",")
+            .. "], elite_battle=["
+            .. tostring(elite_battle)
             .. "]. selected_rarity_band=["
             .. tostring(payload.selected_rarity_band)
             .. "], candidate_count=["
@@ -1440,6 +2011,8 @@ local function prepare_destination_event()
         log("prepare_destination_event aborted because the current node could not be resolved.")
         return false
     end
+
+    local current_cycle = get_current_cycle()
 
     local enabled_candidates = {}
     for _, node_data in ipairs(NODE_POOL) do
@@ -1509,6 +2082,8 @@ local function prepare_destination_event()
             .. tostring(current_node.node_key)
             .. "], current_node_faction_key=["
             .. tostring(current_node.faction_key)
+            .. "], current_cycle=["
+            .. tostring(current_cycle)
             .. "], candidate_a=["
             .. tostring(candidate_a.node_key)
             .. "/"
@@ -2637,9 +3212,12 @@ local function handle_destination_dilemma_choice(context)
             return
         end
 
+        local previous_cycle = get_current_cycle()
         set_current_node(selected_node, "destination_choice_" .. tostring(choice))
+        set_current_cycle(previous_cycle + 1)
 
         if not prepare_unit_reward_event() then
+            set_current_cycle(previous_cycle)
             return
         end
 
@@ -2650,6 +3228,10 @@ local function handle_destination_dilemma_choice(context)
                 .. tostring(selected_node.node_key)
                 .. "], selected_node_faction_key=["
                 .. tostring(selected_node.faction_key)
+                .. "], previous_cycle=["
+                .. tostring(previous_cycle)
+                .. "], current_cycle=["
+                .. tostring(get_current_cycle())
                 .. "]. The next unit reward event is now pending and will be opened immediately."
         )
         cm:callback(function()
@@ -2768,6 +3350,7 @@ local function reset_saved_flow_state_if_needed()
     if not run_started then
         set_saved_value(SAVE_KEYS.current_state, STATE.INIT)
         set_saved_value(SAVE_KEYS.paused_from_state, "")
+        ensure_balance_state_initialized("reset_saved_flow_state_if_needed_no_run")
         clear_current_event_context()
         return
     end
@@ -2779,11 +3362,25 @@ local function reset_saved_flow_state_if_needed()
         set_saved_value(SAVE_KEYS.paused_from_state, "")
         clear_current_event_context()
     end
+
+    ensure_balance_state_initialized("reset_saved_flow_state_if_needed_existing_run")
 end
 
 cm:add_first_tick_callback(function()
     log("First tick initialization started.")
     reset_saved_flow_state_if_needed()
+    ensure_balance_state_initialized("first_tick_initialization")
+    log(
+        "Balance config initialized. current_cycle=["
+            .. tostring(get_current_cycle())
+            .. "], difficulty_level=["
+            .. tostring(get_difficulty_level())
+            .. "], initial_player_value=["
+            .. tostring(BALANCE_CONFIG.initial_player_value)
+            .. "], initial_enemy_value=["
+            .. tostring(BALANCE_CONFIG.initial_enemy_value)
+            .. "]."
+    )
     register_listeners()
     create_formal_entry_button()
     ensure_run_started()

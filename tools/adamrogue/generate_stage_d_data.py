@@ -166,9 +166,23 @@ def derive_ancillary_rarity(uniqueness_score: int) -> tuple[str, int, int, int]:
         return "common", 6, 1, 3
     if uniqueness_score <= 140:
         return "uncommon", 4, 2, 3
-    if uniqueness_score <= 190:
+    if uniqueness_score <= 180:
         return "rare", 3, 3, 3
-    return "rare", 2, 3, 3
+    if uniqueness_score <= 199:
+        return "unique", 2, 3, 3
+    return "legendary", 1, 3, 3
+
+
+def is_high_tier_character_specific_set(set_key: str, set_items: list[dict[str, str]]) -> bool:
+    lowered_key = (set_key or "").lower()
+    if not lowered_key:
+        return False
+
+    # Stage E only asks us to remove legendary lord/hero exclusive equipment.
+    # Keep broader condition-gated and faction-locked high-tier sets available.
+    if "character" in lowered_key or "lord" in lowered_key or "hero" in lowered_key:
+        return True
+    return False
 
 
 def build_enemy_faction_candidates(
@@ -310,7 +324,9 @@ def render_ancillary_module(
         "data.EQUIPMENT_RARITY = {",
         '    COMMON = "common",',
         '    UNCOMMON = "uncommon",',
-        '    RARE = "rare"',
+        '    RARE = "rare",',
+        '    UNIQUE = "unique",',
+        '    LEGENDARY = "legendary"',
         "}",
         "",
         "data.EQUIPMENT_REWARD_SLOT = {",
@@ -459,9 +475,6 @@ def main() -> None:
             if unit_value <= 0:
                 continue
 
-            if main_unit.get("is_renown", "").lower() == "true":
-                continue
-
             caste = (main_unit.get("caste") or "").lower()
             if permission.get("general_unit", "").lower() == "true":
                 if caste == "lord":
@@ -551,6 +564,8 @@ def main() -> None:
 
             uniqueness_score = to_int(ancillary.get("uniqueness_score", "0"))
             item_rarity, weight, min_tier, max_tier = derive_ancillary_rarity(uniqueness_score)
+            if item_rarity in {"unique", "legendary"} and is_high_tier_character_specific_set(faction_set_key, set_items):
+                continue
             equipment_pool.append(
                 {
                     "item_key": item_key,

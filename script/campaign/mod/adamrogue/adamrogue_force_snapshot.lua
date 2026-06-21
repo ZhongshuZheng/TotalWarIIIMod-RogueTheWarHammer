@@ -5,7 +5,7 @@ function force_snapshot.new(context)
     local cm = context.cm
     local log = context.log
     local save_keys = context.save_keys
-    local player_general_subtype = context.player_general_subtype
+    local default_player_general_subtype = context.player_general_subtype
     local get_saved_value = context.get_saved_value
     local set_saved_value = context.set_saved_value
     local split_string = context.split_string
@@ -13,6 +13,15 @@ function force_snapshot.new(context)
     local get_spawn_region_and_position_for_faction = context.get_spawn_region_and_position_for_faction
     local get_saved_player_force = context.get_saved_player_force
     local get_saved_player_general = context.get_saved_player_general
+
+    local function get_respawn_player_general_subtype()
+        local saved_subtype = tostring(get_saved_value(save_keys.player_general_subtype, "") or "")
+        if saved_subtype ~= "" then
+            return saved_subtype
+        end
+
+        return default_player_general_subtype
+    end
 
     function self.snapshot_force_units(force)
         local units = {}
@@ -118,7 +127,7 @@ function force_snapshot.new(context)
             x,
             y,
             "general",
-            player_general_subtype,
+            get_respawn_player_general_subtype(),
             "",
             "",
             "",
@@ -133,6 +142,7 @@ function force_snapshot.new(context)
 
                 local force = character:military_force()
                 local current_rank = character:rank()
+                set_saved_value(save_keys.player_general_subtype, character:character_subtype_key())
                 set_saved_value(save_keys.player_leader_cqi, character:command_queue_index())
                 set_saved_value(save_keys.player_force_cqi, force:command_queue_index())
                 log(

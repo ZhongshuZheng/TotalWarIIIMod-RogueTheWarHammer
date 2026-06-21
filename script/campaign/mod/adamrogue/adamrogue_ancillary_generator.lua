@@ -9,6 +9,16 @@ function ancillary_generator.new(context)
     local battle_tier_keys = context.battle_tier
     local rarity_keys = context.equipment_rarity
     local slot_order = context.slot_order
+    local equipment_rarity_by_cycle = context.equipment_rarity_by_cycle or {}
+    local elite_battle_cycles = context.elite_battle_cycles or {}
+    local elite_reward_highest_tier = context.elite_reward_highest_tier == true
+    local rarity_order = {
+        rarity_keys.COMMON,
+        rarity_keys.UNCOMMON,
+        rarity_keys.RARE,
+        rarity_keys.UNIQUE,
+        rarity_keys.LEGENDARY
+    }
 
     function self.get_reward_pool_sources(player_faction_key, current_node_faction_key)
         local pool_sources = {
@@ -38,46 +48,78 @@ function ancillary_generator.new(context)
         return pool_sources
     end
 
-    function self.pick_rarity_band_for_tier(battle_tier)
-        local roll = cm:random_number(100, 1)
-        local rarity = rarity_keys.COMMON
-
-        if battle_tier >= battle_tier_keys.LATE then
-            if roll <= 50 then
-                rarity = rarity_keys.RARE
-            elseif roll <= 85 then
-                rarity = rarity_keys.UNCOMMON
-            else
-                rarity = rarity_keys.COMMON
-            end
-        elseif battle_tier >= battle_tier_keys.MID then
-            if roll <= 65 then
-                rarity = rarity_keys.UNCOMMON
-            else
-                rarity = rarity_keys.COMMON
+    local function contains_value(list, target)
+        for _, value in ipairs(list or {}) do
+            if value == target then
+                return true
             end
         end
 
-        log(
-            "pick_equipment_rarity_band_for_tier resolved rarity=["
-                .. tostring(rarity)
-                .. "] from battle_tier=["
-                .. tostring(battle_tier)
-                .. "], roll=["
-                .. tostring(roll)
-                .. "]."
-        )
-        return rarity
+        return false
     end
 
-    function self.get_allowed_rarity_bands_for_tier(battle_tier)
-        if battle_tier >= battle_tier_keys.LATE then
-            return { rarity_keys.COMMON, rarity_keys.UNCOMMON, rarity_keys.RARE }
-        elseif battle_tier >= battle_tier_keys.MID then
-            return { rarity_keys.COMMON, rarity_keys.UNCOMMON }
+    function self.is_elite_battle_cycle(current_cycle)
+        local normalized_cycle = math.max(1, math.floor(tonumber(current_cycle) or 1))
+        for _, elite_cycle in ipairs(elite_battle_cycles) do
+            if normalized_cycle == tonumber(elite_cycle) then
+                return true
+            end
+        end
+
+        return false
+    end
+
+    function self.get_allowed_rarity_bands_for_cycle(current_cycle)
+        local normalized_cycle = math.max(1, math.floor(tonumber(current_cycle) or 1))
+        for _, entry in ipairs(equipment_rarity_by_cycle) do
+            local min_cycle = tonumber(entry.min_cycle) or 1
+            local max_cycle = entry.max_cycle and tonumber(entry.max_cycle) or nil
+            if normalized_cycle >= min_cycle and (not max_cycle or normalized_cycle <= max_cycle) then
+                return entry.tiers or { rarity_keys.COMMON }
+            end
         end
 
         return { rarity_keys.COMMON }
+    end
+
+    function self.pick_rarity_band_for_cycle(current_cycle, allowed_bands, force_highest_rarity)
+        local resolved_allowed_bands = allowed_bands or self.get_allowed_rarity_bands_for_cycle(current_cycle)
+        local highest_rarity = rarity_keys.COMMON
+
+        for index = #rarity_order, 1, -1 do
+            if contains_value(resolved_allowed_bands, rarity_order[index]) then
+                highest_rarity = rarity_order[index]
+                break
+            end
+        end
+
+        if force_highest_rarity then
+            log(
+                "pick_rarity_band_for_cycle forced the highest allowed rarity. current_cycle=["
+                    .. tostring(current_cycle)
+                    .. "], allowed_bands=["
+                    .. table.concat(resolved_allowed_bands, ",")
+                    .. "], selected_rarity=["
+                    .. tostring(highest_rarity)
+                    .. "]."
+            )
+            return highest_rarity
+        end
+
+        local rarity = resolved_allowed_bands[cm:random_number(#resolved_allowed_bands, 1)] or highest_rarity
+
+        log(
+            "pick_rarity_band_for_cycle resolved rarity=["
+                .. tostring(rarity)
+                .. "] from current_cycle=["
+                .. tostring(current_cycle)
+                .. "], allowed_bands=["
+                .. table.concat(resolved_allowed_bands, ",")
+                .. "], selection_mode=[uniform_allowed_bands], force_highest_rarity=["
+                .. tostring(force_highest_rarity)
+                .. "]."
+        )
+        return rarity
     end
 
     local function rarity_band_allowed(item_rarity, allowed_bands)
@@ -104,8 +146,6 @@ function ancillary_generator.new(context)
             for _, entry in ipairs(source.entries) do
                 if entry.enabled
                     and entry.reward_slot == slot_key
-                    and battle_tier >= entry.min_battle_tier
-                    and battle_tier <= entry.max_battle_tier
                     and rarity_band_allowed(entry.item_rarity, allowed_bands) then
                     for _ = 1, entry.weight do
                         local weighted_entry = {}
@@ -129,7 +169,7 @@ function ancillary_generator.new(context)
                 .. tostring(slot_key)
                 .. "], battle_tier=["
                 .. tostring(battle_tier)
-                .. "], allowed_bands=["
+                .. "], tier_filter_applied=[false], allowed_bands=["
                 .. tostring(allowed_bands and table.concat(allowed_bands, ",") or "all")
                 .. "], weighted_pool_size=["
                 .. tostring(#weighted_pool)
@@ -144,9 +184,17 @@ function ancillary_generator.new(context)
         return weighted_pool
     end
 
-    function self.generate_equipment_reward_payload(completed_battle_count, battle_tier, player_faction_key, current_node_faction_key)
-        local selected_rarity_band = self.pick_rarity_band_for_tier(battle_tier)
-        local tier_allowed_bands = self.get_allowed_rarity_bands_for_tier(battle_tier)
+    function self.generate_equipment_reward_payload(completed_battle_count, battle_tier, player_faction_key, current_node_faction_key, generation_context)
+        local reward_context = generation_context or {}
+        local current_cycle = math.max(1, math.floor(tonumber(reward_context.current_cycle) or 1))
+        local elite_battle = reward_context.elite_battle == true or reward_context.elite_battle == "true"
+        local force_highest_rarity = reward_context.force_highest_rarity == true
+        if not force_highest_rarity and elite_battle and elite_reward_highest_tier then
+            force_highest_rarity = true
+        end
+
+        local cycle_allowed_bands = self.get_allowed_rarity_bands_for_cycle(current_cycle)
+        local selected_rarity_band = self.pick_rarity_band_for_cycle(current_cycle, cycle_allowed_bands, force_highest_rarity)
         local generation_seed = cm:random_number(99999, 1)
         local generation_attempts = 0
         local fallback_steps = {}
@@ -157,8 +205,11 @@ function ancillary_generator.new(context)
             fallback_strategy_used = "none",
             equipment_reward_completed_battle_count = completed_battle_count,
             equipment_reward_battle_tier = battle_tier,
+            equipment_reward_current_cycle = current_cycle,
             equipment_reward_player_faction_key = player_faction_key or "",
             equipment_reward_node_faction_key = current_node_faction_key or "",
+            cycle_allowed_rarity_bands = table.concat(cycle_allowed_bands, ","),
+            equipment_reward_elite_battle = elite_battle and "true" or "false",
             candidate_count = 0
         }
 
@@ -167,8 +218,16 @@ function ancillary_generator.new(context)
                 .. tostring(completed_battle_count)
                 .. "], battle_tier=["
                 .. tostring(battle_tier)
+                .. "], current_cycle=["
+                .. tostring(current_cycle)
                 .. "], selected_rarity_band=["
                 .. tostring(selected_rarity_band)
+                .. "], cycle_allowed_rarity_bands=["
+                .. table.concat(cycle_allowed_bands, ",")
+                .. "], elite_battle=["
+                .. tostring(elite_battle)
+                .. "], force_highest_rarity=["
+                .. tostring(force_highest_rarity)
                 .. "], generation_seed=["
                 .. tostring(generation_seed)
                 .. "], player_faction_key=["
@@ -191,11 +250,11 @@ function ancillary_generator.new(context)
             )
 
             if #weighted_pool == 0 then
-                fallback_steps[#fallback_steps + 1] = tostring(slot_key) .. ":expand_to_tier_allowed_rarities"
+                fallback_steps[#fallback_steps + 1] = tostring(slot_key) .. ":expand_to_cycle_allowed_rarities"
                 weighted_pool = self.build_weighted_pool_for_slot(
                     slot_key,
                     battle_tier,
-                    tier_allowed_bands,
+                    cycle_allowed_bands,
                     player_faction_key,
                     current_node_faction_key
                 )
