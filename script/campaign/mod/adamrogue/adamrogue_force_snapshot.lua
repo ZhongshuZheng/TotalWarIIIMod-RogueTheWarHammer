@@ -5,7 +5,7 @@ function force_snapshot.new(context)
     local cm = context.cm
     local log = context.log
     local save_keys = context.save_keys
-    local default_player_general_subtype = context.player_general_subtype
+    local get_default_player_general_subtype_for_faction = context.get_default_player_general_subtype_for_faction
     local get_saved_value = context.get_saved_value
     local set_saved_value = context.set_saved_value
     local split_string = context.split_string
@@ -20,7 +20,12 @@ function force_snapshot.new(context)
             return saved_subtype
         end
 
-        return default_player_general_subtype
+        local saved_player_faction_key = tostring(get_saved_value(save_keys.player_faction_key, "") or "")
+        if saved_player_faction_key ~= "" and get_default_player_general_subtype_for_faction then
+            return get_default_player_general_subtype_for_faction(saved_player_faction_key)
+        end
+
+        return ""
     end
 
     function self.snapshot_force_units(force)

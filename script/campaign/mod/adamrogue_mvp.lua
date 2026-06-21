@@ -6,6 +6,7 @@ local get_current_event_payload
 package.path = "script/campaign/mod/adamrogue/?.lua;" .. package.path
 
 local adamrogue_data_cth = require("adamrogue_data_cth")
+local adamrogue_data_players = require("adamrogue_data_players")
 local adamrogue_data_nodes = require("adamrogue_data_nodes")
 local adamrogue_data_battle_pools = require("adamrogue_data_battle_pools")
 local adamrogue_data_ancillaries = require("adamrogue_data_ancillaries")
@@ -22,17 +23,17 @@ local MAX_BATTLE_SPAWN_POLL_ATTEMPTS = 10
 local MAX_BATTLE_SPAWN_RETRIES = 5
 local UNIT_VALUE_SOURCE = "main_units_tables.multiplayer_cost"
 
-local CATHAY_SUBCULTURE = "wh3_main_sc_cth_cathay"
-
 local DILEMMA_REWARD_KEY = "adamrogue_mvp_reward_dilemma"
 local DILEMMA_BATTLE_KEY = "adamrogue_mvp_battle_dilemma"
 local DILEMMA_EQUIPMENT_REWARD_KEY = "adamrogue_mvp_equipment_reward_dilemma"
 local DILEMMA_DESTINATION_KEY = "adamrogue_mvp_destination_dilemma"
 
-local PLAYER_GENERAL_SUBTYPE = adamrogue_data_cth.PLAYER_GENERAL_SUBTYPE
-local PLAYER_GENERAL_SUBTYPES = adamrogue_data_cth.PLAYER_GENERAL_SUBTYPES or { PLAYER_GENERAL_SUBTYPE }
-local PLAYER_GENERAL_OPTIONS = adamrogue_data_cth.PLAYER_GENERAL_OPTIONS or {}
-local PLAYER_STARTING_UNITS = adamrogue_data_cth.PLAYER_STARTING_UNITS
+local DEFAULT_SUPPORTED_PLAYER_FACTION_KEY = adamrogue_data_players.DEFAULT_SUPPORTED_PLAYER_FACTION_KEY
+local DEFAULT_PLAYER_CONTENT_FACTION_KEY = adamrogue_data_players.DEFAULT_CONTENT_FACTION_KEY
+local SUPPORTED_PLAYER_FACTIONS = adamrogue_data_players.SUPPORTED_PLAYER_FACTIONS or {}
+local PLAYER_CONTENT_FACTION_BY_FACTION = adamrogue_data_players.PLAYER_CONTENT_FACTION_BY_FACTION or {}
+local PLAYER_GENERAL_OPTIONS_BY_FACTION = adamrogue_data_players.PLAYER_GENERAL_OPTIONS_BY_FACTION or {}
+local DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION = adamrogue_data_players.DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION or {}
 
 local STARTING_NODE_KEY = adamrogue_data_nodes.STARTING_NODE_KEY
 local NODE_POOL = adamrogue_data_nodes.NODE_POOL
@@ -329,23 +330,105 @@ local function get_equipment_rarity_context_for_cycle(cycle)
     }
 end
 
-local function pick_random_player_general_option()
-    if PLAYER_GENERAL_OPTIONS and #PLAYER_GENERAL_OPTIONS > 0 then
-        local selected_option = PLAYER_GENERAL_OPTIONS[cm:random_number(#PLAYER_GENERAL_OPTIONS, 1)]
+local function resolve_player_content_faction_key(player_faction_key)
+    if type(player_faction_key) ~= "string" or player_faction_key == "" then
+        return DEFAULT_PLAYER_CONTENT_FACTION_KEY or DEFAULT_CONTENT_FACTION_KEY, "default_empty_player_faction"
+    end
+
+    local mapped_content_faction_key = PLAYER_CONTENT_FACTION_BY_FACTION[player_faction_key]
+    if mapped_content_faction_key and mapped_content_faction_key ~= "" then
+        return mapped_content_faction_key, "player_mapping"
+    end
+
+    if BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[player_faction_key] then
+        return player_faction_key, "direct_content_pool"
+    end
+
+    return DEFAULT_PLAYER_CONTENT_FACTION_KEY or DEFAULT_CONTENT_FACTION_KEY, "default_fallback"
+end
+
+local function get_player_general_options_for_faction(player_faction_key)
+    local options = PLAYER_GENERAL_OPTIONS_BY_FACTION[player_faction_key]
+    if options and #options > 0 then
+        return options, player_faction_key, "exact_player_faction"
+    end
+
+    local resolved_content_faction_key = resolve_player_content_faction_key(player_faction_key)
+    for supported_faction_key, content_faction_key in pairs(PLAYER_CONTENT_FACTION_BY_FACTION) do
+        if content_faction_key == resolved_content_faction_key then
+            local shared_options = PLAYER_GENERAL_OPTIONS_BY_FACTION[supported_faction_key]
+            if shared_options and #shared_options > 0 then
+                return shared_options, supported_faction_key, "shared_content_faction"
+            end
+        end
+    end
+
+    local default_options = PLAYER_GENERAL_OPTIONS_BY_FACTION[DEFAULT_SUPPORTED_PLAYER_FACTION_KEY] or {}
+    return default_options, DEFAULT_SUPPORTED_PLAYER_FACTION_KEY, "default_supported_player_faction"
+end
+
+local function get_default_player_general_subtype_for_faction(player_faction_key)
+    local default_subtype = DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION[player_faction_key]
+    if default_subtype and default_subtype ~= "" then
+        return default_subtype
+    end
+
+    local options = PLAYER_GENERAL_OPTIONS_BY_FACTION[player_faction_key]
+    if options and options[1] and options[1].subtype and options[1].subtype ~= "" then
+        return options[1].subtype
+    end
+
+    if DEFAULT_SUPPORTED_PLAYER_FACTION_KEY and DEFAULT_SUPPORTED_PLAYER_FACTION_KEY ~= "" then
+        local fallback_subtype = DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION[DEFAULT_SUPPORTED_PLAYER_FACTION_KEY]
+        if fallback_subtype and fallback_subtype ~= "" then
+            return fallback_subtype
+        end
+    end
+
+    return ""
+end
+
+local function pick_random_player_general_option(player_faction_key)
+    local player_general_options, resolved_general_pool_faction_key, resolution = get_player_general_options_for_faction(player_faction_key)
+    if player_general_options and #player_general_options > 0 then
+        local selected_option = player_general_options[cm:random_number(#player_general_options, 1)]
         if selected_option and selected_option.subtype and selected_option.subtype ~= "" then
+            log(
+                "pick_random_player_general_option selected a faction-specific general option. player_faction_key=["
+                    .. tostring(player_faction_key)
+                    .. "], resolved_general_pool_faction_key=["
+                    .. tostring(resolved_general_pool_faction_key)
+                    .. "], resolution=["
+                    .. tostring(resolution)
+                    .. "], selected_subtype=["
+                    .. tostring(selected_option.subtype)
+                    .. "], unit_value=["
+                    .. tostring(selected_option.unit_value or 0)
+                    .. "]."
+            )
             return selected_option
         end
     end
 
-    if PLAYER_GENERAL_SUBTYPES and #PLAYER_GENERAL_SUBTYPES > 0 then
+    local fallback_subtype = get_default_player_general_subtype_for_faction(player_faction_key)
+    if fallback_subtype ~= "" then
+        log(
+            "[ERROR] pick_random_player_general_option is falling back to the default subtype because no explicit option list was available. player_faction_key=["
+                .. tostring(player_faction_key)
+                .. "], fallback_subtype=["
+                .. tostring(fallback_subtype)
+                .. "]."
+        )
         return {
-            subtype = PLAYER_GENERAL_SUBTYPES[cm:random_number(#PLAYER_GENERAL_SUBTYPES, 1)] or PLAYER_GENERAL_SUBTYPE,
+            subtype = fallback_subtype,
+            unit_key = "",
             unit_value = 0
         }
     end
 
     return {
-        subtype = PLAYER_GENERAL_SUBTYPE,
+        subtype = "",
+        unit_key = "",
         unit_value = 0
     }
 end
@@ -354,8 +437,29 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
     local total_value_budget = tonumber(BALANCE_CONFIG.initial_player_value) or 4500
     local selected_general_value = tonumber(selected_general_option and selected_general_option.unit_value) or 0
     local target_value_budget = math.max(0, total_value_budget - selected_general_value)
-    local source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[player_faction_key]
-    local resolved_faction_key = player_faction_key
+    local resolved_faction_key, content_resolution = resolve_player_content_faction_key(player_faction_key)
+    local source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[resolved_faction_key]
+
+    local function build_dynamic_starting_fallback_unit_list()
+        local fallback_source_pool = source_pool or {}
+        local fallback_units = {}
+        for _, unit_entry in ipairs(fallback_source_pool) do
+            if unit_entry and unit_entry.unit_key then
+                fallback_units[#fallback_units + 1] = unit_entry.unit_key
+                if #fallback_units >= 3 then
+                    break
+                end
+            end
+        end
+
+        if #fallback_units == 0 then
+            return "", "", 0
+        end
+
+        local fallback_unit_list = table.concat(fallback_units, ",")
+        return fallback_unit_list, fallback_unit_list, 0
+    end
+
     if not source_pool or #source_pool == 0 then
         source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {}
         resolved_faction_key = DEFAULT_CONTENT_FACTION_KEY
@@ -364,6 +468,8 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
                 .. tostring(player_faction_key)
                 .. "], resolved_content_faction_key=["
                 .. tostring(resolved_faction_key)
+                .. "], content_resolution=["
+                .. tostring(content_resolution)
                 .. "], pool_size=["
                 .. tostring(#source_pool)
                 .. "]."
@@ -382,11 +488,14 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
 
     if not weighted_pool or #weighted_pool == 0 then
         log(
-            "[ERROR] build_starting_player_unit_list is falling back to static PLAYER_STARTING_UNITS because the weighted pool is empty. player_faction_key=["
+            "[ERROR] build_starting_player_unit_list could not find any weight>=7 units in the resolved pool and will use the first available units from that pool. player_faction_key=["
                 .. tostring(player_faction_key)
+                .. "], resolved_faction_key=["
+                .. tostring(resolved_faction_key)
                 .. "]."
         )
-        return PLAYER_STARTING_UNITS, PLAYER_STARTING_UNITS, 0, resolved_faction_key or player_faction_key
+        local fallback_unit_list, logged_fallback_unit_list, fallback_total_value = build_dynamic_starting_fallback_unit_list()
+        return fallback_unit_list, logged_fallback_unit_list, fallback_total_value, resolved_faction_key or player_faction_key
     end
 
     local chosen_units = {}
@@ -507,8 +616,9 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
     end
 
     if #chosen_units == 0 then
-        log("[ERROR] build_starting_player_unit_list could not generate any units and will fall back to PLAYER_STARTING_UNITS.")
-        return PLAYER_STARTING_UNITS, PLAYER_STARTING_UNITS, 0, resolved_faction_key or player_faction_key
+        log("[ERROR] build_starting_player_unit_list could not generate any weighted units and will fall back to the first available resolved-pool units.")
+        local fallback_unit_list, logged_fallback_unit_list, fallback_total_value = build_dynamic_starting_fallback_unit_list()
+        return fallback_unit_list, logged_fallback_unit_list, fallback_total_value, resolved_faction_key or player_faction_key
     end
 
     local unit_list = table.concat(chosen_units, ",")
@@ -517,6 +627,8 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
             .. tostring(player_faction_key)
             .. "], resolved_faction_key=["
             .. tostring(resolved_faction_key)
+            .. "], content_resolution=["
+            .. tostring(content_resolution)
             .. "], selected_general_subtype=["
             .. tostring(selected_general_option and selected_general_option.subtype or "")
             .. "], selected_general_value=["
@@ -581,7 +693,16 @@ local function get_local_player_faction()
 end
 
 local function is_supported_player_faction(faction)
-    return faction and not faction:is_null_interface() and not faction:is_dead() and faction:subculture() == CATHAY_SUBCULTURE
+    if not faction or faction:is_null_interface() or faction:is_dead() then
+        return false
+    end
+
+    local faction_name = faction:name()
+    if SUPPORTED_PLAYER_FACTIONS[faction_name] then
+        return true
+    end
+
+    return PLAYER_CONTENT_FACTION_BY_FACTION[faction_name] ~= nil
 end
 
 local function get_saved_character(saved_key)
@@ -1102,7 +1223,26 @@ local function ensure_current_node_initialized(reason)
         )
     end
 
-    local starting_node = find_node_data_by_key(STARTING_NODE_KEY) or find_node_data_by_faction_key(DEFAULT_CONTENT_FACTION_KEY)
+    local preferred_player_faction_key = tostring(get_saved_value(SAVE_KEYS.player_faction_key, "") or "")
+    if preferred_player_faction_key == "" then
+        local local_player_faction = get_local_player_faction()
+        if local_player_faction and not local_player_faction:is_null_interface() and not local_player_faction:is_dead() then
+            preferred_player_faction_key = local_player_faction:name()
+        end
+    end
+
+    local resolved_content_faction_key = nil
+    if preferred_player_faction_key ~= "" then
+        resolved_content_faction_key = resolve_player_content_faction_key(preferred_player_faction_key)
+    end
+
+    local starting_node = nil
+    if resolved_content_faction_key and resolved_content_faction_key ~= "" then
+        starting_node = find_node_data_by_faction_key(resolved_content_faction_key)
+    end
+    if not starting_node then
+        starting_node = find_node_data_by_key(STARTING_NODE_KEY) or find_node_data_by_faction_key(DEFAULT_CONTENT_FACTION_KEY)
+    end
     if not starting_node then
         log("ensure_current_node_initialized failed because no starting node could be resolved.")
         return nil
@@ -1327,7 +1467,7 @@ local adamrogue_force_snapshot = adamrogue_force_snapshot_module.new({
     cm = cm,
     log = log,
     save_keys = SAVE_KEYS,
-    player_general_subtype = PLAYER_GENERAL_SUBTYPE,
+    get_default_player_general_subtype_for_faction = get_default_player_general_subtype_for_faction,
     get_saved_value = get_saved_value,
     set_saved_value = set_saved_value,
     split_string = split_string,
@@ -1613,7 +1753,7 @@ end
 local function ensure_run_started()
     local faction = get_local_player_faction()
     if not is_supported_player_faction(faction) then
-        log("Local player faction is not supported yet. Waiting for a Cathay human faction.")
+        log("Local player faction is not supported yet. Waiting for a supported human faction.")
         return false
     end
 
@@ -1628,13 +1768,18 @@ local function ensure_run_started()
     end
 
     log(string.format("Spawning player test force for [%s] at (%s, %s) in region [%s]", faction:name(), tostring(x), tostring(y), region_key))
-    local selected_player_general_option = pick_random_player_general_option()
-    local player_general_subtype = selected_player_general_option.subtype or PLAYER_GENERAL_SUBTYPE
+    local resolved_player_content_faction_key = resolve_player_content_faction_key(faction:name())
+    local selected_player_general_option = pick_random_player_general_option(faction:name())
+    local player_general_subtype = selected_player_general_option.subtype or get_default_player_general_subtype_for_faction(faction:name())
     local starting_unit_list, logged_starting_unit_list, starting_unit_value, resolved_starting_pool_faction_key =
         build_starting_player_unit_list(faction:name(), selected_player_general_option)
     log(
         "Spawning randomized player test force. faction=["
             .. faction:name()
+            .. "], resolved_player_content_faction_key=["
+            .. tostring(resolved_player_content_faction_key)
+            .. "], selected_general_unit_key=["
+            .. tostring(selected_player_general_option.unit_key or "")
             .. "], general_subtype=["
             .. tostring(player_general_subtype)
             .. "], general_value=["
@@ -1683,7 +1828,12 @@ local function ensure_run_started()
 
             clear_current_event_context()
             clear_destination_selection_state("player_force_created")
-            ensure_current_node_initialized("player_force_created")
+            local starting_node = find_node_data_by_faction_key(resolved_player_content_faction_key)
+            if not starting_node then
+                starting_node = ensure_current_node_initialized("player_force_created")
+            else
+                set_current_node(starting_node, "player_force_created_from_player_faction")
+            end
             ensure_balance_state_initialized("player_force_created")
             set_saved_value(SAVE_KEYS.paused_from_state, "")
             set_current_state(STATE.INIT)
@@ -1728,7 +1878,9 @@ local function prepare_unit_reward_event()
     local battle_tier = get_battle_tier_for_progress(completed_battle_count)
     local current_cycle = get_current_cycle()
     local reward_value_band = get_player_reward_value_band_for_cycle(current_cycle)
-    local player_pool, resolved_player_pool_faction_key = get_reward_unit_pool_for_faction(faction:name(), battle_tier, false)
+    local resolved_player_content_faction_key, player_content_resolution = resolve_player_content_faction_key(faction:name())
+    local player_pool, resolved_player_pool_faction_key =
+        get_reward_unit_pool_for_faction(resolved_player_content_faction_key, battle_tier, false)
     local node_pool, resolved_node_pool_faction_key = get_reward_unit_pool_for_faction(current_node.faction_key, battle_tier, false)
     if #player_pool == 0 or #node_pool == 0 then
         log(
@@ -1809,7 +1961,7 @@ local function prepare_unit_reward_event()
         unit_0_value = selected_entries[0] and selected_entries[0].unit_value or 0,
         unit_1_value = selected_entries[1] and selected_entries[1].unit_value or 0,
         unit_2_value = selected_entries[2] and selected_entries[2].unit_value or 0,
-        reward_player_faction_key = faction:name(),
+        reward_player_faction_key = resolved_player_content_faction_key,
         reward_current_node_faction_key = current_node.faction_key,
         reward_player_pool_faction_key = resolved_player_pool_faction_key,
         reward_node_pool_faction_key = resolved_node_pool_faction_key,
@@ -1853,6 +2005,8 @@ local function prepare_unit_reward_event()
             .. tostring(chosen_units[2])
             .. "], reward_player_pool_faction_key=["
             .. tostring(resolved_player_pool_faction_key)
+            .. "], reward_player_content_resolution=["
+            .. tostring(player_content_resolution)
             .. "], reward_node_pool_faction_key=["
             .. tostring(resolved_node_pool_faction_key)
             .. "]."
@@ -2027,10 +2181,11 @@ local function prepare_equipment_reward_event()
     local current_cycle = get_current_cycle()
     local elite_battle = is_elite_battle_cycle(current_cycle)
     local rarity_context = get_equipment_rarity_context_for_cycle(current_cycle)
+    local resolved_player_content_faction_key, player_content_resolution = resolve_player_content_faction_key(faction:name())
     local payload = generate_equipment_reward_payload(
         completed_battle_count,
         battle_tier,
-        faction:name(),
+        resolved_player_content_faction_key,
         current_node.faction_key,
         {
             current_cycle = current_cycle,
@@ -2057,6 +2212,10 @@ local function prepare_equipment_reward_event()
             .. tostring(current_node.faction_key)
             .. "], current_cycle=["
             .. tostring(current_cycle)
+            .. "], resolved_player_content_faction_key=["
+            .. tostring(resolved_player_content_faction_key)
+            .. "], player_content_resolution=["
+            .. tostring(player_content_resolution)
             .. "], cycle_allowed_rarity_bands=["
             .. table.concat(rarity_context.tiers, ",")
             .. "], elite_battle=["
@@ -2596,6 +2755,165 @@ local function update_payload_enemy_faction_key(enemy_faction_key, reason)
     overwrite_current_battle_payload(payload, reason or "enemy_faction_key_updated")
 end
 
+local function get_enemy_general_target_rank_for_cycle(cycle)
+    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+    return normalized_cycle
+end
+
+local function log_character_skill_point_state(character, context_label)
+    if not character or character:is_null_interface() then
+        return
+    end
+
+    local ok, skill_points_or_error = pcall(function()
+        return character:skill_points()
+    end)
+    if ok then
+        log(
+            "Character skill point state observed. context=["
+                .. tostring(context_label)
+                .. "], character_cqi=["
+                .. tostring(character:command_queue_index())
+                .. "], subtype=["
+                .. tostring(character:character_subtype_key())
+                .. "], skill_points=["
+                .. tostring(skill_points_or_error)
+                .. "]."
+        )
+    else
+        log(
+            "Character skill point state could not be queried through character:skill_points(). context=["
+                .. tostring(context_label)
+                .. "], character_cqi=["
+                .. tostring(character:command_queue_index())
+                .. "], error=["
+                .. tostring(skill_points_or_error)
+                .. "]."
+        )
+    end
+end
+
+local function apply_enemy_general_rank_for_current_cycle(character, reason)
+    if not character or character:is_null_interface() then
+        log("apply_enemy_general_rank_for_current_cycle skipped because the character interface is invalid.")
+        return
+    end
+
+    local current_cycle = get_current_cycle()
+    local target_rank = get_enemy_general_target_rank_for_cycle(current_cycle)
+    local current_rank = character:rank()
+    log(
+        "apply_enemy_general_rank_for_current_cycle started. reason=["
+            .. tostring(reason)
+            .. "], character_cqi=["
+            .. tostring(character:command_queue_index())
+            .. "], subtype=["
+            .. tostring(character:character_subtype_key())
+            .. "], current_cycle=["
+            .. tostring(current_cycle)
+            .. "], current_rank=["
+            .. tostring(current_rank)
+            .. "], target_rank=["
+            .. tostring(target_rank)
+            .. "]."
+    )
+
+    if target_rank > current_rank then
+        -- Keep spawned enemy lords roughly synced with run progress so late-cycle battles
+        -- do not field rank-1 enemy commanders with empty progression.
+        cm:add_agent_experience(cm:char_lookup_str(character), target_rank, true)
+    end
+
+    log(
+        "apply_enemy_general_rank_for_current_cycle completed. reason=["
+            .. tostring(reason)
+            .. "], character_cqi=["
+            .. tostring(character:command_queue_index())
+            .. "], final_rank=["
+            .. tostring(character:rank())
+            .. "]."
+    )
+    log_character_skill_point_state(character, reason or "enemy_rank_scaled")
+end
+
+local function apply_player_character_minimum_rank_for_cycle(reason)
+    local player_force = get_saved_player_force()
+    if not player_force or player_force:is_null_interface() then
+        log("apply_player_character_minimum_rank_for_cycle aborted because the saved player force is unavailable.")
+        return
+    end
+
+    local target_rank = get_current_cycle()
+    local adjusted_count = 0
+    local inspected_count = 0
+    local seen_character_cqis = {}
+
+    local function inspect_character(character, context_label)
+        if not character or character:is_null_interface() then
+            return
+        end
+
+        local character_cqi = character:command_queue_index()
+        if seen_character_cqis[character_cqi] then
+            return
+        end
+        seen_character_cqis[character_cqi] = true
+        inspected_count = inspected_count + 1
+
+        local current_rank = character:rank()
+        if current_rank < target_rank then
+            cm:add_agent_experience(cm:char_lookup_str(character), target_rank, true)
+            adjusted_count = adjusted_count + 1
+            log(
+                "apply_player_character_minimum_rank_for_cycle raised character rank. reason=["
+                    .. tostring(reason)
+                    .. "], context=["
+                    .. tostring(context_label)
+                    .. "], character_cqi=["
+                    .. tostring(character_cqi)
+                    .. "], subtype=["
+                    .. tostring(character:character_subtype_key())
+                    .. "], previous_rank=["
+                    .. tostring(current_rank)
+                    .. "], target_rank=["
+                    .. tostring(target_rank)
+                    .. "], final_rank=["
+                    .. tostring(character:rank())
+                    .. "]."
+            )
+        end
+    end
+
+    inspect_character(player_force:general_character(), "general_character")
+
+    local character_list_ok, character_list = pcall(function()
+        return player_force:character_list()
+    end)
+    if character_list_ok and character_list and not character_list:is_null_interface() then
+        for index = 0, character_list:num_items() - 1 do
+            inspect_character(character_list:item_at(index), "character_list_" .. tostring(index))
+        end
+    else
+        log(
+            "apply_player_character_minimum_rank_for_cycle could not enumerate force:character_list(); only the general was inspected. reason=["
+                .. tostring(reason)
+                .. "]."
+        )
+    end
+
+    log(
+        "apply_player_character_minimum_rank_for_cycle completed. reason=["
+            .. tostring(reason)
+            .. "], target_rank=["
+            .. tostring(target_rank)
+            .. "], inspected_count=["
+            .. tostring(inspected_count)
+            .. "], adjusted_count=["
+            .. tostring(adjusted_count)
+            .. "]."
+    )
+end
+
 local spawn_enemy_force_and_start_battle
 local spawn_enemy_force_with_direct_create_force_fallback
 
@@ -2622,6 +2940,18 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
 
     if enemy_force_cqi and enemy_force_cqi > 0 then
         set_saved_value(SAVE_KEYS.enemy_force_cqi, enemy_force_cqi)
+        local enemy_force = cm:get_military_force_by_cqi(enemy_force_cqi)
+        if enemy_force and not enemy_force:is_null_interface() then
+            local enemy_general = enemy_force:general_character()
+            if enemy_general and not enemy_general:is_null_interface() then
+                set_saved_value(SAVE_KEYS.enemy_leader_cqi, enemy_general:command_queue_index())
+                apply_enemy_general_rank_for_current_cycle(enemy_general, "caravan_spawn_ready")
+            else
+                log("launch_spawned_enemy_force_battle could not resolve the spawned enemy general before battle launch.")
+            end
+        else
+            log("launch_spawned_enemy_force_battle could not resolve the spawned enemy force interface before battle launch.")
+        end
         log(
             "Enemy battle force is ready. enemy_force_cqi=["
                 .. tostring(enemy_force_cqi)
@@ -2880,6 +3210,10 @@ spawn_enemy_force_with_direct_create_force_fallback = function(
             end, 0.2)
 
             if char_cqi and char_cqi > 0 then
+                local enemy_general = cm:get_character_by_cqi(char_cqi)
+                if enemy_general and not enemy_general:is_null_interface() then
+                    apply_enemy_general_rank_for_current_cycle(enemy_general, "direct_create_force_callback")
+                end
                 cm:disable_movement_for_character(cm:char_lookup_str(char_cqi))
             end
 
@@ -3288,6 +3622,7 @@ local function handle_destination_dilemma_choice(context)
         local previous_cycle = get_current_cycle()
         set_current_node(selected_node, "destination_choice_" .. tostring(choice))
         set_current_cycle(previous_cycle + 1)
+        apply_player_character_minimum_rank_for_cycle("destination_choice_" .. tostring(choice))
 
         if not prepare_unit_reward_event() then
             set_current_cycle(previous_cycle)
