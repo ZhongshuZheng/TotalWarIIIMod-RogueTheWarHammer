@@ -25,7 +25,17 @@ Write-Host "[stage-d] Running generator..."
 $generatedLuaFiles = @(
     (Join-Path $repoRoot "script\campaign\mod\adamrogue\adamrogue_data_nodes.lua"),
     (Join-Path $repoRoot "script\campaign\mod\adamrogue\adamrogue_data_battle_pools.lua"),
-    (Join-Path $repoRoot "script\campaign\mod\adamrogue\adamrogue_data_ancillaries.lua")
+    (Join-Path $repoRoot "script\campaign\mod\adamrogue\adamrogue_data_ancillaries.lua"),
+    (Join-Path $repoRoot "script\campaign\mod\adamrogue\adamrogue_data_players.lua"),
+    (Join-Path $repoRoot "script\campaign\mod\adamrogue\adamrogue_data_enemy_skills.lua")
+)
+
+$generatedLuaFiles += Get-ChildItem -LiteralPath (Join-Path $repoRoot "script\campaign\mod\adamrogue") -Filter "adamrogue_data_enemy_skills_*.lua" |
+    Select-Object -ExpandProperty FullName
+
+$generatedLuaFiles += @(
+    (Join-Path $repoRoot "script\campaign\mod\adamrogue\adamrogue_enemy_skill_allocator.lua"),
+    (Join-Path $repoRoot "script\campaign\mod\adamrogue_mvp.lua")
 )
 
 if (Test-Path -LiteralPath $luacExe) {

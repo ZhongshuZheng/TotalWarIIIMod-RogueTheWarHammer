@@ -25,6 +25,14 @@ COMMON_EQUIPMENT_POOL = [
 ]
 
 ALLOWED_ANCILLARY_CATEGORIES = {"weapon", "armour", "talisman", "enchanted_item", "arcane_item"}
+ALLOWED_SKILL_CATEGORIES = {"character", "battle"}
+EXCLUDED_SKILL_NODE_KEYS = {
+    "wh3_main_agent_action_scaling",
+}
+EXCLUDED_SKILL_KEY_PATTERNS = (
+    "immortality",
+    "mentor",
+)
 PLAYER_CONTENT_NODE_BY_GENERATOR_CONFIG = {
     "WH_Cathay": "cathay",
     "WH_Kislev": "kislev",
@@ -344,6 +352,7 @@ def render_battle_module(
     battle_unit_pools: dict[str, list[dict[str, object]]],
     enemy_candidates: dict[str, list[str]],
     enemy_generals: dict[str, str],
+    enemy_general_options: dict[str, list[dict[str, object]]],
     enemy_general_values: dict[str, int],
     embedded_agents: dict[str, str],
 ) -> str:
@@ -368,6 +377,25 @@ def render_battle_module(
     for entry in blueprint:
         faction_key = str(entry["faction_key"])
         lines.append(f"    {format_lua_key(faction_key)} = {lua_string(enemy_generals[faction_key])},")
+    lines.extend(["}", "", "data.ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION = {"])
+
+    for entry in blueprint:
+        faction_key = str(entry["faction_key"])
+        lines.append(f"    {format_lua_key(faction_key)} = {{")
+        for option in enemy_general_options[faction_key]:
+            lines.append(
+                "        { agent_subtype = "
+                + lua_string(str(option["agent_subtype"]))
+                + ", unit_key = "
+                + lua_string(str(option["unit_key"]))
+                + ", unit_value = "
+                + str(int(option["unit_value"]))
+                + ", allowed_factions = { "
+                + ", ".join(lua_string(str(candidate_key)) for candidate_key in option.get("allowed_factions", []))
+                + " }"
+                + " },"
+            )
+        lines.append("    },")
     lines.extend(["}", "", "data.ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION = {"])
 
     for entry in blueprint:
@@ -575,6 +603,297 @@ def render_players_module(
     return "\n".join(lines)
 
 
+def normalize_skill_category_key(category_key: str) -> str | None:
+    lowered_key = (category_key or "").lower()
+    if lowered_key.startswith("character"):
+        return "character"
+    if lowered_key.startswith("battle"):
+        return "battle"
+    if lowered_key.startswith("campaign"):
+        return "campaign"
+    return None
+
+
+def resolve_skill_category_for_indent(
+    indent: int,
+    agent_subtype_key: str,
+    category_rows: list[dict[str, str]],
+) -> str | None:
+    exact_matches: list[dict[str, str]] = []
+    fallback_matches: list[dict[str, str]] = []
+
+    for row in category_rows:
+        min_indent = to_int(row.get("min_indent", "0"))
+        max_indent = to_int(row.get("max_indent", "0"))
+        if indent < min_indent or indent > max_indent:
+            continue
+
+        override_subtype = row.get("agent_subtype_override", "")
+        if override_subtype and override_subtype == agent_subtype_key:
+            exact_matches.append(row)
+        elif not override_subtype:
+            fallback_matches.append(row)
+
+    for row in exact_matches + fallback_matches:
+        resolved_category = normalize_skill_category_key(row.get("key", ""))
+        if resolved_category:
+            return resolved_category
+
+    return None
+
+
+def is_excluded_skill_entry(node_key: str, skill_key: str) -> bool:
+    lowered_node_key = (node_key or "").lower()
+    lowered_skill_key = (skill_key or "").lower()
+
+    if node_key in EXCLUDED_SKILL_NODE_KEYS:
+        return True
+
+    for pattern in EXCLUDED_SKILL_KEY_PATTERNS:
+        if pattern in lowered_node_key or pattern in lowered_skill_key:
+            return True
+
+    return False
+
+
+def derive_skill_unlock_ranks_by_level(
+    skill_key: str,
+    skill_rows_by_key: dict[str, dict[str, str]],
+    skill_level_detail_rows_by_skill: dict[str, list[dict[str, str]]],
+) -> list[int]:
+    detail_rows = sorted(
+        skill_level_detail_rows_by_skill.get(skill_key, []),
+        key=lambda row: to_int(row.get("level", "0"), 0),
+    )
+    default_unlock_rank = to_int(skill_rows_by_key.get(skill_key, {}).get("unlocked_at_rank", "0"), 0)
+
+    if not detail_rows:
+        return [default_unlock_rank]
+
+    unlock_ranks_by_level: dict[int, int] = {}
+    max_level = 1
+    for row in detail_rows:
+        level = max(1, to_int(row.get("level", "1"), 1))
+        unlock_rank = to_int(row.get("unlocked_at_rank", "0"), default_unlock_rank)
+        unlock_ranks_by_level[level] = unlock_rank
+        if level > max_level:
+            max_level = level
+
+    resolved_unlock_ranks: list[int] = []
+    for level in range(1, max_level + 1):
+        resolved_unlock_ranks.append(unlock_ranks_by_level.get(level, default_unlock_rank))
+
+    return resolved_unlock_ranks
+
+
+def build_character_skill_plans_by_subtype(
+    subtype_keys_by_content_faction: dict[str, set[str]],
+    category_rows: list[dict[str, str]],
+    skill_node_set_rows: list[dict[str, str]],
+    skill_node_set_item_rows: list[dict[str, str]],
+    skill_node_rows: list[dict[str, str]],
+    skill_rows: list[dict[str, str]],
+    skill_level_detail_rows: list[dict[str, str]],
+    skill_lock_rows: list[dict[str, str]],
+) -> tuple[dict[str, dict[str, list[dict[str, object]]]], list[str]]:
+    skill_node_set_rows_by_subtype: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in skill_node_set_rows:
+        subtype_key = row.get("agent_subtype_key", "")
+        if subtype_key:
+            skill_node_set_rows_by_subtype[subtype_key].append(row)
+
+    skill_node_set_items_by_set: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in skill_node_set_item_rows:
+        if row.get("mod_disabled", "").lower() == "true":
+            continue
+        set_key = row.get("set", "")
+        if set_key:
+            skill_node_set_items_by_set[set_key].append(row)
+
+    skill_nodes_by_key = build_index(skill_node_rows, "key")
+    skill_rows_by_key = build_index(skill_rows, "key")
+
+    skill_level_detail_rows_by_skill: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in skill_level_detail_rows:
+        skill_key = row.get("skill_key", "")
+        if skill_key:
+            skill_level_detail_rows_by_skill[skill_key].append(row)
+
+    locked_node_keys_by_skill: dict[str, set[str]] = defaultdict(set)
+    for row in skill_lock_rows:
+        skill_key = row.get("character_skill", "")
+        locked_node_key = row.get("character_skill_node", "")
+        if skill_key and locked_node_key:
+            locked_node_keys_by_skill[skill_key].add(locked_node_key)
+
+    character_skill_plans_by_content_faction: dict[str, dict[str, list[dict[str, object]]]] = {}
+    warnings: list[str] = []
+
+    for content_faction_key, subtype_keys in subtype_keys_by_content_faction.items():
+        subtype_plans: dict[str, list[dict[str, object]]] = {}
+
+        for subtype_key in sorted(subtype_keys):
+            set_rows = skill_node_set_rows_by_subtype.get(subtype_key, [])
+            if not set_rows:
+                warnings.append(
+                    "No character skill node set found for subtype "
+                    + subtype_key
+                    + " under content faction "
+                    + content_faction_key
+                )
+                continue
+
+            skill_plan_entries: list[dict[str, object]] = []
+            seen_node_keys: set[str] = set()
+            seen_skill_keys: set[str] = set()
+
+            for set_row in set_rows:
+                set_key = set_row.get("key", "")
+                if not set_key:
+                    continue
+
+                for item_row in skill_node_set_items_by_set.get(set_key, []):
+                    node_key = item_row.get("item", "")
+                    if not node_key or node_key in seen_node_keys:
+                        continue
+
+                    node_row = skill_nodes_by_key.get(node_key)
+                    if node_row is None:
+                        continue
+
+                    skill_key = node_row.get("character_skill_key", "")
+                    if not skill_key or skill_key in seen_skill_keys:
+                        continue
+
+                    resolved_category = resolve_skill_category_for_indent(
+                        to_int(node_row.get("indent", "0"), 0),
+                        subtype_key,
+                        category_rows,
+                    )
+                    if resolved_category not in ALLOWED_SKILL_CATEGORIES:
+                        continue
+
+                    if is_excluded_skill_entry(node_key, skill_key):
+                        continue
+
+                    unlock_ranks_by_level = derive_skill_unlock_ranks_by_level(
+                        skill_key,
+                        skill_rows_by_key,
+                        skill_level_detail_rows_by_skill,
+                    )
+                    locked_node_keys = sorted(locked_node_keys_by_skill.get(skill_key, set()), key=natural_sort_key)
+                    skill_row = skill_rows_by_key.get(skill_key, {})
+                    image_path = skill_row.get("image_path", "")
+                    is_mount_skill = "_mount_" in skill_key or image_path.startswith("mount_")
+
+                    skill_plan_entries.append(
+                        {
+                            "node_key": node_key,
+                            "skill_key": skill_key,
+                            "category_key": resolved_category,
+                            "indent": to_int(node_row.get("indent", "0"), 0),
+                            "tier": to_int(node_row.get("tier", "0"), 0),
+                            "unlock_ranks_by_level": unlock_ranks_by_level,
+                            "max_level": len(unlock_ranks_by_level),
+                            "is_mount_skill": is_mount_skill,
+                            "locked_node_keys": locked_node_keys,
+                        }
+                    )
+                    seen_node_keys.add(node_key)
+                    seen_skill_keys.add(skill_key)
+
+            if not skill_plan_entries:
+                warnings.append(
+                    "No filtered character/battle skill entries generated for subtype "
+                    + subtype_key
+                    + " under content faction "
+                    + content_faction_key
+                )
+                continue
+
+            skill_plan_entries.sort(
+                key=lambda entry: (
+                    0 if entry["category_key"] == "character" else 1,
+                    int(entry["indent"]),
+                    int(entry["tier"]),
+                    int(entry["unlock_ranks_by_level"][0] if entry["unlock_ranks_by_level"] else 0),
+                    str(entry["node_key"]),
+                )
+            )
+            subtype_plans[subtype_key] = skill_plan_entries
+
+        character_skill_plans_by_content_faction[content_faction_key] = subtype_plans
+
+    return character_skill_plans_by_content_faction, warnings
+
+
+def render_enemy_skill_submodule(
+    content_faction_key: str,
+    skill_plans_by_subtype: dict[str, list[dict[str, object]]],
+) -> str:
+    lines = [
+        "local data = {}",
+        "",
+        "-- AUTO-GENERATED by tools/adamrogue/generate_stage_d_data.py.",
+        f"data.CONTENT_FACTION_KEY = {lua_string(content_faction_key)}",
+        "",
+        "data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {",
+    ]
+
+    for subtype_key in sorted(skill_plans_by_subtype, key=natural_sort_key):
+        lines.append(f"    {format_lua_key(subtype_key)} = {{")
+        for entry in skill_plans_by_subtype[subtype_key]:
+            unlock_ranks_rendered = ", ".join(str(int(rank)) for rank in entry["unlock_ranks_by_level"])
+            lines.extend(
+                [
+                    "        {",
+                    f"            node_key = {lua_string(str(entry['node_key']))},",
+                    f"            skill_key = {lua_string(str(entry['skill_key']))},",
+                    f"            category_key = {lua_string(str(entry['category_key']))},",
+                    f"            indent = {int(entry['indent'])},",
+                    f"            tier = {int(entry['tier'])},",
+                    f"            max_level = {int(entry['max_level'])},",
+                    f"            is_mount_skill = {'true' if entry['is_mount_skill'] else 'false'},",
+                    f"            unlock_ranks_by_level = {{ {unlock_ranks_rendered} }},",
+                    "            locked_node_keys = {",
+                ]
+            )
+            for locked_node_key in entry["locked_node_keys"]:
+                lines.append(f"                {lua_string(str(locked_node_key))},")
+            lines.extend(
+                [
+                    "            }",
+                    "        },",
+                ]
+            )
+        lines.append("    },")
+
+    lines.extend(["}", "", "return data", ""])
+    return "\n".join(lines)
+
+
+def render_enemy_skill_loader(module_names: list[str]) -> str:
+    lines = [
+        "local data = {}",
+        "",
+        "-- AUTO-GENERATED by tools/adamrogue/generate_stage_d_data.py.",
+        "data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {}",
+        "data.CONTENT_FACTION_KEY_BY_SUBTYPE = {}",
+        "",
+    ]
+
+    for index, module_name in enumerate(module_names, start=1):
+        lines.append(f"local source_{index} = require({lua_string(module_name)})")
+        lines.append(f"for subtype_key, skill_plan in pairs(source_{index}.CHARACTER_SKILL_PLANS_BY_SUBTYPE or {{}}) do")
+        lines.append("    data.CHARACTER_SKILL_PLANS_BY_SUBTYPE[subtype_key] = skill_plan")
+        lines.append(f"    data.CONTENT_FACTION_KEY_BY_SUBTYPE[subtype_key] = source_{index}.CONTENT_FACTION_KEY")
+        lines.append("end")
+        lines.append("")
+
+    lines.extend(["return data", ""])
+    return "\n".join(lines)
+
+
 def build_blueprint_subculture_lookup(
     blueprint: list[dict[str, object]],
     factions_by_key: dict[str, dict[str, str]],
@@ -656,6 +975,13 @@ def main() -> None:
     faction_set_rows = read_tsv("faction_set_items_tables")
     ancillary_group_rows = read_tsv("ancillary_uniqueness_groupings_tables")
     ancillary_included_agent_subtype_rows = read_tsv("ancillaries_included_agent_subtypes_tables")
+    character_skill_category_rows = read_tsv("character_skill_categories_tables")
+    character_skill_node_set_rows = read_tsv("character_skill_node_sets_tables")
+    character_skill_node_set_item_rows = read_tsv("character_skill_node_set_items_tables")
+    character_skill_node_rows = read_tsv("character_skill_nodes_tables")
+    character_skill_rows = read_tsv("character_skills_tables")
+    character_skill_level_detail_rows = read_tsv("character_skill_level_details_tables")
+    character_skill_lock_rows = read_tsv("character_skill_nodes_skill_locks_tables")
 
     factions_by_key = build_index(factions_rows, "key")
     main_units_by_key = build_index(main_units_rows, "unit")
@@ -690,6 +1016,18 @@ def main() -> None:
         if faction_key and subtype_key:
             permitted_generals_by_faction[faction_key].append(subtype_key)
 
+    agent_subtypes_by_associated_unit: dict[str, list[str]] = defaultdict(list)
+    for row in agent_subtype_rows:
+        subtype_key = row.get("key", "")
+        associated_unit_key = row.get("associated_unit_override", "")
+        if not subtype_key or not associated_unit_key:
+            continue
+        if row.get("recruitable", "").lower() != "true":
+            continue
+        if row.get("can_gain_xp", "").lower() != "true":
+            continue
+        agent_subtypes_by_associated_unit[associated_unit_key].append(subtype_key)
+
     faction_sets: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in faction_set_rows:
         if row.get("remove", "").lower() == "true":
@@ -708,6 +1046,7 @@ def main() -> None:
     battle_unit_pools: dict[str, list[dict[str, object]]] = {}
     enemy_candidates: dict[str, list[str]] = {}
     enemy_generals: dict[str, str] = {}
+    enemy_general_options: dict[str, list[dict[str, object]]] = {}
     enemy_general_values: dict[str, int] = {}
     embedded_agents: dict[str, str] = {}
     faction_equipment_pools: dict[str, list[dict[str, object]]] = {}
@@ -777,6 +1116,12 @@ def main() -> None:
             continue
         battle_unit_pools[faction_key] = sorted(unit_pool, key=lambda item: (int(item["unit_value"]), str(item["unit_key"])))
 
+        faction_candidates = build_enemy_faction_candidates(entry, available_factions)
+        if not faction_candidates:
+            validation_errors.append(f"No enemy faction candidates found for {faction_key}")
+            continue
+        enemy_candidates[faction_key] = faction_candidates
+
         if not general_candidates:
             validation_errors.append(f"No enemy general candidate found for {faction_key}")
             continue
@@ -796,13 +1141,46 @@ def main() -> None:
             enemy_generals[faction_key] = general_candidates[0][1]
         general_value_by_unit_key = {unit_key: unit_value for unit_value, unit_key in general_candidates}
         enemy_general_values[faction_key] = int(general_value_by_unit_key[enemy_generals[faction_key]])
-        embedded_agents[faction_key] = str(entry.get("embedded_agent_subtype") or "")
 
-        faction_candidates = build_enemy_faction_candidates(entry, available_factions)
-        if not faction_candidates:
-            validation_errors.append(f"No enemy faction candidates found for {faction_key}")
+        permitted_general_subtypes = set(permitted_generals_by_faction.get(faction_key, []))
+        seen_general_option_keys: set[tuple[str, str]] = set()
+        resolved_general_options: list[dict[str, object]] = []
+        for unit_value, unit_key in general_candidates:
+            subtype_candidates = sorted(agent_subtypes_by_associated_unit.get(unit_key, []), key=natural_sort_key)
+            for subtype_key in subtype_candidates:
+                if permitted_general_subtypes and subtype_key not in permitted_general_subtypes:
+                    continue
+
+                allowed_factions = [
+                    candidate_faction_key
+                    for candidate_faction_key in faction_candidates
+                    if subtype_key in permitted_generals_by_faction.get(candidate_faction_key, [])
+                ]
+                if not allowed_factions:
+                    continue
+
+                dedupe_key = (subtype_key, unit_key)
+                if dedupe_key in seen_general_option_keys:
+                    continue
+                seen_general_option_keys.add(dedupe_key)
+                resolved_general_options.append(
+                    {
+                        "agent_subtype": subtype_key,
+                        "unit_key": unit_key,
+                        "unit_value": int(unit_value),
+                        "allowed_factions": allowed_factions,
+                    }
+                )
+
+        if not resolved_general_options:
+            validation_errors.append(f"No enemy general agent subtype option found for {faction_key}")
             continue
-        enemy_candidates[faction_key] = faction_candidates
+
+        resolved_general_options.sort(
+            key=lambda item: (int(item["unit_value"]), str(item["unit_key"]), natural_sort_key(str(item["agent_subtype"])))
+        )
+        enemy_general_options[faction_key] = resolved_general_options
+        embedded_agents[faction_key] = str(entry.get("embedded_agent_subtype") or "")
 
         subculture_key = faction_row.get("subculture", "")
         equipment_pool: list[dict[str, object]] = []
@@ -946,6 +1324,30 @@ def main() -> None:
             + f" ({resolution}), generals={len(general_options)}"
         )
 
+    subtype_keys_by_content_faction: dict[str, set[str]] = defaultdict(set)
+    for content_faction_key, subtype_key in enemy_generals.items():
+        if subtype_key:
+            if subtype_key in agent_subtypes_by_key:
+                subtype_keys_by_content_faction[content_faction_key].add(subtype_key)
+            else:
+                for expanded_subtype_key in agent_subtypes_by_associated_unit.get(subtype_key, []):
+                    subtype_keys_by_content_faction[content_faction_key].add(expanded_subtype_key)
+    for content_faction_key, subtype_key in embedded_agents.items():
+        if subtype_key:
+            if subtype_key in agent_subtypes_by_key:
+                subtype_keys_by_content_faction[content_faction_key].add(subtype_key)
+            else:
+                for expanded_subtype_key in agent_subtypes_by_associated_unit.get(subtype_key, []):
+                    subtype_keys_by_content_faction[content_faction_key].add(expanded_subtype_key)
+    for player_faction_key, general_options in player_general_options_by_faction.items():
+        content_faction_key = player_content_faction_by_faction.get(player_faction_key, "")
+        if not content_faction_key:
+            continue
+        for general_option in general_options:
+            subtype_key = str(general_option.get("subtype") or "")
+            if subtype_key:
+                subtype_keys_by_content_faction[content_faction_key].add(subtype_key)
+
     if validation_errors:
         for error in validation_errors:
             print(f"[ERROR] {error}")
@@ -957,6 +1359,7 @@ def main() -> None:
         battle_unit_pools,
         enemy_candidates,
         enemy_generals,
+        enemy_general_options,
         enemy_general_values,
         embedded_agents,
     )
@@ -966,6 +1369,16 @@ def main() -> None:
         player_content_faction_by_faction,
         player_general_options_by_faction,
         str(blueprint[0]["faction_key"]),
+    )
+    character_skill_plans_by_content_faction, character_skill_warnings = build_character_skill_plans_by_subtype(
+        subtype_keys_by_content_faction,
+        character_skill_category_rows,
+        character_skill_node_set_rows,
+        character_skill_node_set_item_rows,
+        character_skill_node_rows,
+        character_skill_rows,
+        character_skill_level_detail_rows,
+        character_skill_lock_rows,
     )
     ancillaries_faction_set_all_override = build_ancillaries_faction_set_all_override(
         list(ancillary_rows[0].keys()) if ancillary_rows else [],
@@ -987,6 +1400,24 @@ def main() -> None:
     )
     (REPO_ROOT / "script" / "campaign" / "mod" / "adamrogue" / "adamrogue_data_players.lua").write_text(
         players_module,
+        encoding="utf-8",
+    )
+    skill_module_names: list[str] = []
+    for entry in blueprint:
+        node_key = str(entry["node_key"])
+        content_faction_key = str(entry["faction_key"])
+        module_name = f"adamrogue_data_enemy_skills_{node_key}"
+        skill_module_names.append(module_name)
+        skill_submodule = render_enemy_skill_submodule(
+            content_faction_key,
+            character_skill_plans_by_content_faction.get(content_faction_key, {}),
+        )
+        (REPO_ROOT / "script" / "campaign" / "mod" / "adamrogue" / f"{module_name}.lua").write_text(
+            skill_submodule,
+            encoding="utf-8",
+        )
+    (REPO_ROOT / "script" / "campaign" / "mod" / "adamrogue" / "adamrogue_data_enemy_skills.lua").write_text(
+        render_enemy_skill_loader(skill_module_names),
         encoding="utf-8",
     )
     (REPO_ROOT / "db" / "ancillaries_tables").mkdir(parents=True, exist_ok=True)
@@ -1046,8 +1477,17 @@ def main() -> None:
         )
     for warning in warnings:
         print(f"[WARN] {warning}")
+    for warning in character_skill_warnings:
+        print(f"[WARN] {warning}")
     for summary in player_mapping_summaries:
         print(f"[OK] {summary}")
+    for content_faction_key, subtype_keys in sorted(subtype_keys_by_content_faction.items(), key=lambda item: item[0]):
+        print(
+            "[OK] "
+            + content_faction_key
+            + f" skill_subtypes={len(subtype_keys)}"
+            + f" generated_skill_plans={len(character_skill_plans_by_content_faction.get(content_faction_key, {}))}"
+        )
 
 
 if __name__ == "__main__":

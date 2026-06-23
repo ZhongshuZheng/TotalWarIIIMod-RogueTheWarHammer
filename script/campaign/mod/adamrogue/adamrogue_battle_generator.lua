@@ -10,6 +10,7 @@ function battle_generator.new(context)
     local battle_tier_keys = context.battle_tier
     local enemy_general_subtype = context.enemy_general_subtype
     local enemy_general_subtypes_by_faction = context.enemy_general_subtypes_by_faction or {}
+    local enemy_general_options_by_faction = context.enemy_general_options_by_faction or {}
     local enemy_general_unit_values_by_faction = context.enemy_general_unit_values_by_faction or {}
     local enemy_embedded_agent_subtype = context.enemy_embedded_agent_subtype
     local enemy_embedded_agent_subtypes_by_faction = context.enemy_embedded_agent_subtypes_by_faction or {}
@@ -111,38 +112,57 @@ function battle_generator.new(context)
         return pool, resolved_content_faction_key, used_fallback
     end
 
-    function self.pick_enemy_general_subtype_for_tier(battle_tier, content_faction_key)
+    function self.get_enemy_general_options_for_faction(content_faction_key)
+        local options = enemy_general_options_by_faction[content_faction_key]
+        if options and #options > 0 then
+            return options, content_faction_key
+        end
+
+        local fallback_options = enemy_general_options_by_faction[context.default_content_faction_key]
+        if fallback_options and #fallback_options > 0 then
+            log(
+                "[ERROR] get_enemy_general_options_for_faction is falling back to the default content faction options. requested_content_faction_key=["
+                    .. tostring(content_faction_key)
+                    .. "], resolved_content_faction_key=["
+                    .. tostring(context.default_content_faction_key)
+                    .. "], option_count=["
+                    .. tostring(#fallback_options)
+                    .. "]."
+            )
+            return fallback_options, context.default_content_faction_key
+        end
+
         local resolved_subtype = enemy_general_subtypes_by_faction[content_faction_key] or enemy_general_subtype
+        return {
+            {
+                agent_subtype = resolved_subtype,
+                unit_key = resolved_subtype,
+                unit_value = tonumber(enemy_general_unit_values_by_faction[content_faction_key]) or 0,
+            }
+        }, content_faction_key
+    end
+
+    function self.pick_enemy_general_option_for_tier(battle_tier, content_faction_key)
+        local general_options, resolved_content_faction_key = self.get_enemy_general_options_for_faction(content_faction_key)
+        local resolved_option = general_options[cm:random_number(#general_options, 1)]
         log(
-            "pick_enemy_general_subtype_for_tier called. battle_tier=["
+            "pick_enemy_general_option_for_tier called. battle_tier=["
                 .. tostring(battle_tier)
                 .. "], content_faction_key=["
                 .. tostring(content_faction_key)
-                .. "], resolved_subtype=["
-                .. tostring(resolved_subtype)
+                .. "], resolved_content_faction_key=["
+                .. tostring(resolved_content_faction_key)
+                .. "], option_count=["
+                .. tostring(#general_options)
+                .. "], selected_agent_subtype=["
+                .. tostring(resolved_option and resolved_option.agent_subtype or "")
+                .. "], selected_unit_key=["
+                .. tostring(resolved_option and resolved_option.unit_key or "")
+                .. "], selected_unit_value=["
+                .. tostring(resolved_option and resolved_option.unit_value or 0)
                 .. "]."
         )
-        if battle_tier >= battle_tier_keys.LATE then
-            if content_faction_key == "wh3_main_cth_the_northern_provinces" then
-                log("pick_enemy_general_subtype_for_tier resolved Cathay late-tier subtype=[wh3_main_cth_dragon_blooded_shugengan_yin]")
-                return "wh3_main_cth_dragon_blooded_shugengan_yin"
-            end
-        end
-
-        log("pick_enemy_general_subtype_for_tier resolved subtype=[" .. tostring(resolved_subtype) .. "]")
-        return resolved_subtype
-    end
-
-    function self.get_enemy_general_unit_value_for_faction(content_faction_key)
-        local resolved_value = tonumber(enemy_general_unit_values_by_faction[content_faction_key]) or 0
-        log(
-            "get_enemy_general_unit_value_for_faction resolved value=["
-                .. tostring(resolved_value)
-                .. "] for content_faction_key=["
-                .. tostring(content_faction_key)
-                .. "]."
-        )
-        return math.max(0, math.floor(resolved_value))
+        return resolved_option, resolved_content_faction_key
     end
 
     function self.pick_enemy_agent_subtype_for_tier(battle_tier, allow_embedded_agent, content_faction_key)
@@ -231,11 +251,22 @@ function battle_generator.new(context)
             return nil
         end
 
-        local enemy_general_unit_value = self.get_enemy_general_unit_value_for_faction(resolved_content_faction_key)
+        local selected_general_option, resolved_general_content_faction_key = self.pick_enemy_general_option_for_tier(
+            battle_tier,
+            resolved_content_faction_key
+        )
+        local enemy_general_unit_value = math.max(
+            0,
+            math.floor(tonumber(selected_general_option and selected_general_option.unit_value) or 0)
+        )
         local unit_only_target_value_budget = math.max(0, (tonumber(target_value_budget) or 0) - enemy_general_unit_value)
         log(
             "build_budget_enemy_force_definition resolved enemy general budget deduction. total_budget=["
                 .. tostring(target_value_budget)
+                .. "], selected_general_agent_subtype=["
+                .. tostring(selected_general_option and selected_general_option.agent_subtype or "")
+                .. "], selected_general_unit_key=["
+                .. tostring(selected_general_option and selected_general_option.unit_key or "")
                 .. "], enemy_general_unit_value=["
                 .. tostring(enemy_general_unit_value)
                 .. "], unit_only_target_value_budget=["
@@ -486,7 +517,8 @@ function battle_generator.new(context)
         return {
             template_type = "generated_by_budget",
             battle_force_source = "budget_generator_v1",
-            lord_subtype = self.pick_enemy_general_subtype_for_tier(battle_tier, resolved_content_faction_key),
+            lord_subtype = selected_general_option and selected_general_option.agent_subtype or enemy_general_subtype,
+            lord_unit_key = selected_general_option and selected_general_option.unit_key or "",
             unit_list = chosen_units,
             embedded_agent_subtype = self.pick_enemy_agent_subtype_for_tier(
                 battle_tier,
@@ -496,7 +528,7 @@ function battle_generator.new(context)
             enemy_general_unit_value = enemy_general_unit_value,
             generated_total_value = total_value,
             budget_delta = (total_value + enemy_general_unit_value) - target_value_budget,
-            content_faction_key = resolved_content_faction_key,
+            content_faction_key = resolved_general_content_faction_key or resolved_content_faction_key,
             used_pool_fallback = used_pool_fallback and "true" or "false",
             generated_unit_count = #chosen_units,
             min_unit_target = unit_count_targets.min_units,
@@ -514,6 +546,7 @@ function battle_generator.new(context)
             battle_budget_tier = battle_tier,
             enemy_faction_key = enemy_faction_key or default_enemy_faction_key,
             enemy_general_subtype = battle_definition.lord_subtype,
+            enemy_general_unit_key = battle_definition.lord_unit_key or "",
             enemy_general_unit_value = battle_definition.enemy_general_unit_value or 0,
             enemy_unit_list = table.concat(battle_definition.unit_list, ","),
             enemy_agent_subtype = battle_definition.embedded_agent_subtype,
