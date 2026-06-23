@@ -1,5 +1,13 @@
 ﻿key	text	tooltip
 #Loc;1;text/db/adamrogue_mvp_EN.loc	
+dilemmas_localised_title_adamrogue_mvp_army_preview_dilemma	AdamRogue: Preview Starting Army	false
+dilemmas_localised_description_adamrogue_mvp_army_preview_dilemma	A starting army has been randomly generated for you. Both the lord and units are drawn from the Rogue pool. You may reroll, come back later, or confirm and begin the event loop.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_army_preview_dilemmaFIRST	Reroll	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_army_preview_dilemmaFIRST	Discard the current army and generate a new random starting force (lord and units are re-randomised).	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_army_preview_dilemmaSECOND	Choose Later	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_army_preview_dilemmaSECOND	Close the preview. The current army remains on the map and this event can be reopened at any time via the Mod button.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_army_preview_dilemmaTHIRD	Take This Army	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_army_preview_dilemmaTHIRD	Confirm the current army and officially begin this Rogue run, proceeding to the first unit reward event.	false
 dilemmas_localised_title_adamrogue_mvp_reward_dilemma	AdamRogue MVP: Choose Reward	false
 dilemmas_localised_description_adamrogue_mvp_reward_dilemma	The test rogue caravan force is ready. Choose one fixed reward unit to verify the formal entry, dilemma flow, unit granting, and state progression.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_reward_dilemmaFIRST	Claim Player Pool I	false

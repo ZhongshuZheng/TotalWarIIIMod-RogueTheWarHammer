@@ -2,6 +2,7 @@ local MODULE_KEY = "adamrogue_phase_a"
 local config_log = true
 local LOG_FILE_NAME = "adamrogue_phase_a_log.txt"
 local get_current_event_payload
+local launch_army_preview_dilemma
 
 package.path = "script/campaign/mod/adamrogue/?.lua;" .. package.path
 
@@ -29,6 +30,7 @@ local DILEMMA_REWARD_KEY = "adamrogue_mvp_reward_dilemma"
 local DILEMMA_BATTLE_KEY = "adamrogue_mvp_battle_dilemma"
 local DILEMMA_EQUIPMENT_REWARD_KEY = "adamrogue_mvp_equipment_reward_dilemma"
 local DILEMMA_DESTINATION_KEY = "adamrogue_mvp_destination_dilemma"
+local DILEMMA_ARMY_PREVIEW_KEY = "adamrogue_mvp_army_preview_dilemma"
 
 local DEFAULT_SUPPORTED_PLAYER_FACTION_KEY = adamrogue_data_players.DEFAULT_SUPPORTED_PLAYER_FACTION_KEY
 local DEFAULT_PLAYER_CONTENT_FACTION_KEY = adamrogue_data_players.DEFAULT_CONTENT_FACTION_KEY
@@ -68,6 +70,7 @@ local BATTLE_TIER = adamrogue_data_cth.BATTLE_TIER
 
 local STATE = {
     INIT = "INIT",
+    ARMY_PREVIEW_PENDING = "ARMY_PREVIEW_PENDING",
     UNIT_REWARD_PENDING = "UNIT_REWARD_PENDING",
     BATTLE_PENDING = "BATTLE_PENDING",
     EQUIPMENT_REWARD_PENDING = "EQUIPMENT_REWARD_PENDING",
@@ -313,8 +316,11 @@ local function get_player_reward_value_band_for_cycle(cycle)
     local player_reward_value_multiplier = tonumber(difficulty_config.player_reward_value_multiplier) or 1
     local base_min_value = tonumber(resolved_entry.min_value) or 300
     local base_max_value = tonumber(resolved_entry.max_value) or base_min_value
+    local base_double_line = tonumber(resolved_entry.double_line) or 0
     local min_value = math.floor((base_min_value * player_reward_value_multiplier) + 0.5)
     local max_value = math.floor((base_max_value * player_reward_value_multiplier) + 0.5)
+    -- double_line 不随难度系数同步缩放，使难度不影响双倍奖励的触发范围
+    local double_line = base_double_line
     if max_value < min_value then
         max_value = min_value
     end
@@ -323,9 +329,11 @@ local function get_player_reward_value_band_for_cycle(cycle)
         cycle = normalized_cycle,
         base_min_value = base_min_value,
         base_max_value = base_max_value,
+        base_double_line = base_double_line,
         player_reward_value_multiplier = player_reward_value_multiplier,
         min_value = min_value,
-        max_value = max_value
+        max_value = max_value,
+        double_line = double_line
     }
 end
 
@@ -2272,6 +2280,91 @@ local function ensure_run_started()
     return true
 end
 
+-- 生成预览部队（不设 run_started，生成完成后自动弹出预览困境）。
+-- 用于首次或重新随机时；若玩家点"稍后"则部队留在地图，下次点击按钮直接弹出困境而不重复生成。
+local function spawn_new_preview_army(faction)
+    local region_key, x, y = get_spawn_region_and_position_for_faction(faction)
+    if not region_key then
+        log("spawn_new_preview_army: failed to find a valid spawn position for faction [" .. faction:name() .. "].")
+        return false
+    end
+
+    local resolved_player_content_faction_key = resolve_player_content_faction_key(faction:name())
+    local selected_player_general_option = pick_random_player_general_option(faction:name())
+    local player_general_subtype = selected_player_general_option.subtype
+        or get_default_player_general_subtype_for_faction(faction:name())
+    local starting_unit_list, logged_starting_unit_list, starting_unit_value, resolved_starting_pool_faction_key =
+        build_starting_player_unit_list(faction:name(), selected_player_general_option)
+    log(
+        "spawn_new_preview_army: spawning. faction=["
+            .. faction:name()
+            .. "], subtype=["
+            .. tostring(player_general_subtype)
+            .. "], unit_value=["
+            .. tostring(selected_player_general_option.unit_value or 0)
+            .. "], starting_unit_value=["
+            .. tostring(starting_unit_value)
+            .. "], unit_list=["
+            .. tostring(logged_starting_unit_list)
+            .. "]."
+    )
+
+    local faction_name_capture = faction:name()
+    cm:create_force_with_general(
+        faction_name_capture,
+        starting_unit_list,
+        region_key,
+        x,
+        y,
+        "general",
+        player_general_subtype,
+        "",
+        "",
+        "",
+        "",
+        false,
+        function(character_cqi)
+            local character = cm:get_character_by_cqi(character_cqi)
+            if not character or character:is_null_interface() or not character:has_military_force() then
+                log("spawn_new_preview_army callback: created general was invalid.")
+                return
+            end
+
+            local force = character:military_force()
+            set_saved_value(SAVE_KEYS.player_faction_key, faction_name_capture)
+            set_saved_value(SAVE_KEYS.player_general_subtype, character:character_subtype_key())
+            set_saved_value(SAVE_KEYS.player_leader_cqi, character:command_queue_index())
+            set_saved_value(SAVE_KEYS.player_force_cqi, force:command_queue_index())
+
+            clear_current_event_context()
+            clear_destination_selection_state("preview_army_created")
+            local starting_node = find_node_data_by_faction_key(resolved_player_content_faction_key)
+            if not starting_node then
+                starting_node = ensure_current_node_initialized("preview_army_created")
+            else
+                set_current_node(starting_node, "preview_army_created_from_player_faction")
+            end
+            ensure_balance_state_initialized("preview_army_created")
+            set_saved_value(SAVE_KEYS.paused_from_state, "")
+            set_current_state(STATE.ARMY_PREVIEW_PENDING)
+
+            log(
+                "spawn_new_preview_army callback: preview army created. cqi=["
+                    .. tostring(character_cqi)
+                    .. "], subtype=["
+                    .. tostring(character:character_subtype_key())
+                    .. "]. Launching army preview dilemma."
+            )
+
+            local preview_faction = cm:get_faction(faction_name_capture)
+            if preview_faction and not preview_faction:is_null_interface() then
+                launch_army_preview_dilemma(preview_faction)
+            end
+        end
+    )
+    return true
+end
+
 -- 战役层无法像战斗脚本那样禁止援军入场；附近同战争派系军队仍可能加入 pending battle。
 -- 首次点击 Mod 入口按钮时，先与所有交战派系强制议和，避免原版外交战争中的援军卷入 Mod 战斗。
 local function force_peace_with_all_player_enemies(player_faction, reason_label)
@@ -2338,6 +2431,17 @@ local function ensure_initial_peace_on_first_entry(player_faction, reason)
             .. "]."
     )
     return true
+end
+
+-- 若单位价值处于 (min_value, double_line) 开区间内，奖励两个；否则奖励一个。
+-- double_line = 0 视为本轮不启用双倍奖励。
+local function compute_reward_unit_count(unit_value, value_band)
+    local dl = tonumber(value_band.double_line) or 0
+    local mv = tonumber(value_band.min_value) or 0
+    if dl > 0 and unit_value >= mv and unit_value < dl then
+        return 2
+    end
+    return 1
 end
 
 local function prepare_unit_reward_event()
@@ -2432,14 +2536,24 @@ local function prepare_unit_reward_event()
     chosen_lookup[unit_2] = true
     selected_entries[2] = unit_2_entry
 
+    local unit_0_value = selected_entries[0] and selected_entries[0].unit_value or 0
+    local unit_1_value = selected_entries[1] and selected_entries[1].unit_value or 0
+    local unit_2_value = selected_entries[2] and selected_entries[2].unit_value or 0
+    local unit_0_count = compute_reward_unit_count(unit_0_value, reward_value_band)
+    local unit_1_count = compute_reward_unit_count(unit_1_value, reward_value_band)
+    local unit_2_count = compute_reward_unit_count(unit_2_value, reward_value_band)
+
     local seed = new_event_seed()
     local payload = {
         unit_0 = chosen_units[0],
         unit_1 = chosen_units[1],
         unit_2 = chosen_units[2],
-        unit_0_value = selected_entries[0] and selected_entries[0].unit_value or 0,
-        unit_1_value = selected_entries[1] and selected_entries[1].unit_value or 0,
-        unit_2_value = selected_entries[2] and selected_entries[2].unit_value or 0,
+        unit_0_value = unit_0_value,
+        unit_1_value = unit_1_value,
+        unit_2_value = unit_2_value,
+        unit_0_count = unit_0_count,
+        unit_1_count = unit_1_count,
+        unit_2_count = unit_2_count,
         reward_player_faction_key = resolved_player_content_faction_key,
         reward_current_node_faction_key = current_node.faction_key,
         reward_player_pool_faction_key = resolved_player_pool_faction_key,
@@ -2451,6 +2565,7 @@ local function prepare_unit_reward_event()
         reward_target_max_value = reward_value_band.max_value,
         reward_base_min_value = reward_value_band.base_min_value,
         reward_base_max_value = reward_value_band.base_max_value,
+        reward_double_line = reward_value_band.double_line,
         reward_player_value_multiplier = reward_value_band.player_reward_value_multiplier,
         pause_choice = 3
     }
@@ -2470,12 +2585,20 @@ local function prepare_unit_reward_event()
             .. tostring(reward_value_band.min_value)
             .. ","
             .. tostring(reward_value_band.max_value)
+            .. "], reward_double_line=["
+            .. tostring(reward_value_band.double_line)
             .. "], reward_values=["
             .. tostring(payload.unit_0_value)
             .. ","
             .. tostring(payload.unit_1_value)
             .. ","
             .. tostring(payload.unit_2_value)
+            .. "], reward_counts=["
+            .. tostring(payload.unit_0_count)
+            .. ","
+            .. tostring(payload.unit_1_count)
+            .. ","
+            .. tostring(payload.unit_2_count)
             .. "], reward_units=["
             .. tostring(chosen_units[0])
             .. ","
@@ -2894,12 +3017,14 @@ local function launch_reward_dilemma(faction)
 
     for choice_index = 0, 2 do
         local reward_unit_key = payload["unit_" .. tostring(choice_index)]
+        local reward_unit_count = tonumber(payload["unit_" .. tostring(choice_index) .. "_count"]) or 1
         local choice_key = ({ "FIRST", "SECOND", "THIRD" })[choice_index + 1]
         if reward_unit_key and reward_unit_key ~= "" then
             -- Mirror the original caravan reward flow: the dilemma payload itself adds the
-            -- chosen unit to the active force, which lets the campaign UI render it as a
+            -- chosen unit(s) to the active force, which lets the campaign UI render it as a
             -- real unit reward instead of a generic text-only choice.
-            payload_builder:add_unit(player_force, reward_unit_key, 1, 0, true)
+            -- reward_unit_count is 2 when the unit value falls in the double-reward band.
+            payload_builder:add_unit(player_force, reward_unit_key, reward_unit_count, 0, true)
             dilemma_builder:add_choice_payload(choice_key, payload_builder)
             payload_builder:clear()
         else
@@ -3003,6 +3128,34 @@ local function launch_destination_dilemma(faction)
     return true
 end
 
+launch_army_preview_dilemma = function(faction)
+    local player_force = get_saved_player_force()
+    if not player_force then
+        log("launch_army_preview_dilemma aborted: player preview force is unavailable.")
+        return false
+    end
+
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_ARMY_PREVIEW_KEY)
+    local payload_builder = cm:create_payload()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FIRST", payload_builder)
+    payload_builder:clear()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("SECOND", payload_builder)
+    payload_builder:clear()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("THIRD", payload_builder)
+    payload_builder:clear()
+
+    dilemma_builder:add_target("default", player_force)
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log("launch_army_preview_dilemma: launched for faction [" .. faction:name() .. "].")
+    return true
+end
+
 local function pause_current_event()
     set_paused_state(get_current_state())
 end
@@ -3026,10 +3179,26 @@ local function open_current_event(reason)
         set_current_state(paused_from_state)
         state = paused_from_state
     elseif state == STATE.INIT then
-        if not prepare_unit_reward_event() then
-            return
+        local run_started = get_saved_value(SAVE_KEYS.run_started, false)
+        if not run_started then
+            -- Run 未确认：检查是否已有预览部队
+            local preview_general = get_saved_player_general()
+            if preview_general then
+                -- 预览部队已存在（玩家选了"稍后"），直接弹出预览困境
+                set_current_state(STATE.ARMY_PREVIEW_PENDING)
+                state = STATE.ARMY_PREVIEW_PENDING
+            else
+                -- 首次或重新随机后：异步生成部队，callback 内自动弹出预览困境
+                spawn_new_preview_army(faction)
+                return
+            end
+        else
+            -- Run 已确认：进入常规奖励流程
+            if not prepare_unit_reward_event() then
+                return
+            end
+            state = STATE.UNIT_REWARD_PENDING
         end
-        state = STATE.UNIT_REWARD_PENDING
     end
 
     local event_type = get_current_event_type()
@@ -3050,7 +3219,9 @@ local function open_current_event(reason)
             .. "]"
     )
 
-    if state == STATE.UNIT_REWARD_PENDING then
+    if state == STATE.ARMY_PREVIEW_PENDING then
+        launch_army_preview_dilemma(faction)
+    elseif state == STATE.UNIT_REWARD_PENDING then
         if not launch_reward_dilemma(faction) then
             return
         end
@@ -4583,6 +4754,66 @@ local function handle_destination_dilemma_choice(context)
     end, 0.1)
 end
 
+local function handle_army_preview_dilemma_choice(context)
+    if context:dilemma() ~= DILEMMA_ARMY_PREVIEW_KEY then
+        return
+    end
+
+    local choice = context:choice()
+    log(
+        "handle_army_preview_dilemma_choice: choice=["
+            .. tostring(choice)
+            .. "], current_state=["
+            .. tostring(get_current_state())
+            .. "]."
+    )
+
+    cm:callback(function()
+        if choice == 0 then
+            -- FIRST: 重新随机 - 删除旧部队，重新生成
+            local preview_general = get_saved_player_general()
+            if preview_general then
+                log("handle_army_preview_dilemma_choice: killing old preview army for reroll.")
+                cm:kill_character(cm:char_lookup_str(preview_general), true)
+            end
+            set_saved_value(SAVE_KEYS.player_leader_cqi, 0)
+            set_saved_value(SAVE_KEYS.player_force_cqi, 0)
+            set_current_state(STATE.INIT)
+            cm:callback(function()
+                local faction = get_local_player_faction()
+                if faction and not faction:is_null_interface() then
+                    open_current_event("army_preview_reroll")
+                end
+            end, 0.5)
+
+        elseif choice == 1 then
+            -- SECOND: 稍后再选 - 部队保留，状态回 INIT，等待下次按钮点击
+            set_current_state(STATE.INIT)
+            log("handle_army_preview_dilemma_choice: player chose Later. Preview army remains on map. State reset to INIT.")
+
+        elseif choice == 2 then
+            -- THIRD: 就要这个 - 确认部队，正式开始 run
+            local faction = get_local_player_faction()
+            if not faction or faction:is_null_interface() then
+                log("handle_army_preview_dilemma_choice: cannot confirm - faction unavailable.")
+                return
+            end
+            set_saved_value(SAVE_KEYS.run_started, true)
+            set_saved_value(SAVE_KEYS.completed_battle_count, get_saved_value(SAVE_KEYS.completed_battle_count, 0))
+            set_saved_value(SAVE_KEYS.victory_count, get_saved_value(SAVE_KEYS.victory_count, 0))
+            set_saved_value(SAVE_KEYS.defeat_count, get_saved_value(SAVE_KEYS.defeat_count, 0))
+            set_saved_value(SAVE_KEYS.consecutive_defeat_count, get_saved_value(SAVE_KEYS.consecutive_defeat_count, 0))
+            set_current_state(STATE.INIT)
+            log("handle_army_preview_dilemma_choice: run confirmed. run_started=true. Proceeding to reward event.")
+            cm:callback(function()
+                open_current_event("army_preview_confirmed")
+            end, 0.1)
+        else
+            log("handle_army_preview_dilemma_choice: unrecognised choice [" .. tostring(choice) .. "].")
+        end
+    end, 0.1)
+end
+
 local function register_listeners()
     core:remove_listener("adamrogue_phase_a_entry_button")
     core:add_listener(
@@ -4614,9 +4845,12 @@ local function register_listeners()
                 or dilemma_key == DILEMMA_BATTLE_KEY
                 or dilemma_key == DILEMMA_EQUIPMENT_REWARD_KEY
                 or dilemma_key == DILEMMA_DESTINATION_KEY
+                or dilemma_key == DILEMMA_ARMY_PREVIEW_KEY
         end,
         function(context)
-            if context:dilemma() == DILEMMA_REWARD_KEY then
+            if context:dilemma() == DILEMMA_ARMY_PREVIEW_KEY then
+                handle_army_preview_dilemma_choice(context)
+            elseif context:dilemma() == DILEMMA_REWARD_KEY then
                 handle_reward_dilemma_choice(context)
             elseif context:dilemma() == DILEMMA_BATTLE_KEY then
                 handle_battle_dilemma_choice(context)
@@ -4724,6 +4958,5 @@ cm:add_first_tick_callback(function()
     )
     register_listeners()
     create_formal_entry_button()
-    ensure_run_started()
     log("First tick initialization finished.")
 end)

@@ -4,3 +4,4 @@ id	dilemma_key	option_key	value	target
 610190002	adamrogue_mvp_battle_dilemma	VAR_CHANCE	100	default
 610190003	adamrogue_mvp_equipment_reward_dilemma	VAR_CHANCE	100	default
 610190004	adamrogue_mvp_destination_dilemma	VAR_CHANCE	100	default
+610190005	adamrogue_mvp_army_preview_dilemma	VAR_CHANCE	100	default

@@ -30,8 +30,8 @@ data.CONFIG = {
     initial_player_value = 4500,
     initial_enemy_value = 4000,
     enemy_growth = {
-        { min_cycle = 1, max_cycle = 5, growth = 500 },
-        { min_cycle = 6, max_cycle = 10, growth = 600 },
+        { min_cycle = 1, max_cycle = 5, growth = 450 },
+        { min_cycle = 6, max_cycle = 10, growth = 850 },
         { min_cycle = 11, max_cycle = 15, growth = 950 },
         { min_cycle = 16, max_cycle = 20, growth = 950 },
         { min_cycle = 21, max_cycle = 25, growth = 1000 },
@@ -39,13 +39,13 @@ data.CONFIG = {
         { min_cycle = 31, max_cycle = nil, growth = 1500 }
     },
     player_reward_value = {
-        { min_cycle = 1, max_cycle = 5, min_value = 300, max_value = 700 },
-        { min_cycle = 6, max_cycle = 10, min_value = 300, max_value = 900 },
-        { min_cycle = 11, max_cycle = 15, min_value = 700, max_value = 1200 },
-        { min_cycle = 16, max_cycle = 20, min_value = 900, max_value = 1500 },
-        { min_cycle = 21, max_cycle = 25, min_value = 1200, max_value = 2000 },
-        { min_cycle = 26, max_cycle = 30, min_value = 1500, max_value = 2500 },
-        { min_cycle = 31, max_cycle = nil, min_value = 1500, max_value = 5000 }
+        { min_cycle = 1, max_cycle = 5, min_value = 300, max_value = 700, double_line = 0 },
+        { min_cycle = 6, max_cycle = 10, min_value = 300, max_value = 1000, double_line = 501 },
+        { min_cycle = 11, max_cycle = 15, min_value = 700, max_value = 1200, double_line = 901 },
+        { min_cycle = 16, max_cycle = 20, min_value = 1000, max_value = 1500, double_line = 1251 },
+        { min_cycle = 21, max_cycle = 25, min_value = 1200, max_value = 2000, double_line = 1500 },
+        { min_cycle = 26, max_cycle = 30, min_value = 1500, max_value = 2500, double_line = 1500 },
+        { min_cycle = 31, max_cycle = nil, min_value = 1500, max_value = 5000, double_line = 1500 }
     },
     equipment_rarity_by_cycle = {
         { min_cycle = 1, max_cycle = 5, tiers = { "common" } },
