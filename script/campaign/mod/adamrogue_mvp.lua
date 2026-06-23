@@ -22,7 +22,7 @@ local MAX_CONSECUTIVE_DEFEATS = 3
 local MAX_BATTLE_SPAWN_POLL_ATTEMPTS = 10
 -- This is only a retry ceiling. The actual candidate list comes from the current content faction.
 local MAX_BATTLE_SPAWN_RETRIES = 5
-local WAR_ATTACK_DELAY = 0.2
+local WAR_ATTACK_DELAY = 0.25
 local UNIT_VALUE_SOURCE = "main_units_tables.multiplayer_cost"
 
 local DILEMMA_REWARD_KEY = "adamrogue_mvp_reward_dilemma"
@@ -3122,36 +3122,44 @@ local function apply_enemy_general_rank_for_current_cycle(character, reason)
         cm:add_agent_experience(cm:char_lookup_str(character), target_rank, true)
     end
 
-    local refreshed_character = cm:get_character_by_cqi(character_cqi)
-    if refreshed_character and not refreshed_character:is_null_interface() then
-        character = refreshed_character
-    end
+    -- 等一帧让引擎结算 rank 和技能点，再开始加点（对齐测试 Mod 的 SKILL_SETUP_DELAY 做法）
+    cm:callback(function()
+        local refreshed_character = cm:get_character_by_cqi(character_cqi)
+        if not refreshed_character or refreshed_character:is_null_interface() then
+            log(
+                "apply_enemy_general_rank_for_current_cycle skill allocation skipped: character no longer valid after rank delay. reason=["
+                    .. tostring(reason)
+                    .. "], character_cqi=["
+                    .. tostring(character_cqi)
+                    .. "]."
+            )
+            return
+        end
 
-    -- Enemy skill plans are generated from the original DB skill trees. We apply them
-    -- after rank scaling so skill-point spending tracks the current cycle naturally.
-    local skill_allocation_result = adamrogue_enemy_skill_allocator_module.apply_skills_for_character(
-        character,
-        target_rank,
-        log,
-        reason or "enemy_rank_scaled"
-    )
+        local skill_allocation_result = adamrogue_enemy_skill_allocator_module.apply_skills_for_character(
+            refreshed_character,
+            target_rank,
+            log,
+            reason or "enemy_rank_scaled"
+        )
 
-    log(
-        "apply_enemy_general_rank_for_current_cycle completed. reason=["
-            .. tostring(reason)
-            .. "], character_cqi=["
-            .. tostring(character_cqi)
-            .. "], final_rank=["
-            .. tostring(character:rank())
-            .. "], skill_allocation_reason=["
-            .. tostring(skill_allocation_result.reason or "")
-            .. "], applied_skill_levels=["
-            .. tostring(skill_allocation_result.applied_levels or 0)
-            .. "], applied_mount_skill_levels=["
-            .. tostring(skill_allocation_result.mount_skills_applied or 0)
-            .. "]."
-    )
-    log_character_skill_point_state(character, reason or "enemy_rank_scaled")
+        log(
+            "apply_enemy_general_rank_for_current_cycle completed. reason=["
+                .. tostring(reason)
+                .. "], character_cqi=["
+                .. tostring(character_cqi)
+                .. "], final_rank=["
+                .. tostring(refreshed_character:rank())
+                .. "], skill_allocation_reason=["
+                .. tostring(skill_allocation_result.reason or "")
+                .. "], applied_skill_levels=["
+                .. tostring(skill_allocation_result.applied_levels or 0)
+                .. "], applied_mount_skill_levels=["
+                .. tostring(skill_allocation_result.mount_skills_applied or 0)
+                .. "]."
+        )
+        log_character_skill_point_state(refreshed_character, reason or "enemy_rank_scaled")
+    end, 0.1)
 end
 
 local function apply_player_character_minimum_rank_for_cycle(reason)
