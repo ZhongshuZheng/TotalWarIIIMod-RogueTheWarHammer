@@ -4,6 +4,912 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh2_main_hef_eataine"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh2_dlc10_hef_alarielle = {
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_mount_1",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_mount_barded_ithilmar_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_mount_3",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_mount_great_eagle",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_generic_0",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_unique_ward_of_isha",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_generic_1",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_unique_ishas_blessing",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_generic_2",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_unique_touch_of_the_everqueen",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_generic_3",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_unique_chaos_bane",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_unique_0",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_tradition_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh2_dlc10_skill_node_hef_alarielle_unique_2",
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_unique_1_1",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_tradition_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_unique_1_2",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_tradition_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_unique_1_3",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_tradition_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_unique_2",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_fire_and_blood_1",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh2_dlc10_skill_node_hef_alarielle_unique_0",
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_unique_3_1",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_fire_and_blood_2",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_unique_3_2",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_fire_and_blood_3",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_unique_3_3",
+            skill_key = "wh2_dlc10_skill_hef_alarielle_fire_and_blood_4",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_0",
+            skill_key = "wh2_main_skill_magic_life_wizard_earth_blood_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_1_1",
+            skill_key = "wh2_main_skill_all_magic_light_02_phas_protection_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_1_2",
+            skill_key = "wh_dlc05_skill_magic_life_life_bloom",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_1_3",
+            skill_key = "wh2_main_skill_magic_life_wizard_shield_of_thorns_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_1_4",
+            skill_key = "wh2_main_skill_all_magic_high_03_lore_attribute",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_3_1",
+            skill_key = "wh2_main_skill_all_magic_high_05_tempest_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_light_03_exorcism",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_3_3",
+            skill_key = "wh2_main_skill_all_magic_high_09_arcane_unforging_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_3_2",
+            skill_key = "wh2_dlc10_skill_hef_magic_alarielle_banishment",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_magic_dummy",
+            skill_key = "wh2_dlc10_skill_hef_magic_alarielle_dummy_earth_blood_phas_protection",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_1_1",
+            skill_key = "wh2_main_skill_hef_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_1_2",
+            skill_key = "wh2_main_skill_hef_army_buff_missile",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_1_3",
+            skill_key = "wh2_main_skill_hef_army_buff_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_1_4",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_1_5",
+            skill_key = "wh2_main_skill_hef_army_buff_flyers",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_1_6",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_inf",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_3_1",
+            skill_key = "wh2_main_skill_hef_army_buff_avalanche_of_granite",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_3_2",
+            skill_key = "wh2_main_skill_hef_army_buff_favourable_winds",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_3_3",
+            skill_key = "wh2_main_skill_hef_army_buff_silver_torrent",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_3_4",
+            skill_key = "wh2_main_skill_hef_army_buff_heart_of_the_flame",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alarielle_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc10_hef_alith_anar = {
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_generic_0",
+            skill_key = "wh2_main_skill_hef_generic_speed_of_asuryan",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_generic_1",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_generic_2",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_generic_3",
+            skill_key = "wh2_dlc10_skill_hef_alith_anar_unique_infiltrator",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_generic_4",
+            skill_key = "wh2_dlc10_skill_hef_alith_anar_unique_no_rest_for_wicked",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_hef_alith_anar_hidden",
+            skill_key = "wh2_dlc10_skill_hef_alith_anar_hidden",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_unique_0",
+            skill_key = "wh2_dlc10_skill_hef_alith_anar_unique_revenant",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_unique_1_1",
+            skill_key = "wh2_dlc10_skill_hef_alith_anar_unique_ruthless",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_unique_1_2",
+            skill_key = "wh2_dlc10_skill_hef_alith_anar_unique_sworn_to_vengeange",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_unique_1_3",
+            skill_key = "wh2_dlc10_skill_hef_alith_anar_unique_spectre",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_unique_1_4",
+            skill_key = "wh2_dlc10_skill_hef_alith_anar_unique_renegade",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_unique_2",
+            skill_key = "wh2_dlc10_skill_hef_alith_anar_unique_the_shadow_king",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_0",
+            skill_key = "wh2_main_skill_hef_seeking_arrows",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_1_1",
+            skill_key = "wh2_main_skill_hef_combat_valour_of_ages",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadeye",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_2",
+            skill_key = "wh_main_skill_all_spy_self_slippery",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_3_3",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_piercing_shots",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_combat_4",
+            skill_key = "wh2_main_skill_hef_def_volley_of_arrows",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_1_1",
+            skill_key = "wh2_main_skill_hef_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_1_2",
+            skill_key = "wh2_main_skill_hef_army_buff_missile",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_1_3",
+            skill_key = "wh2_main_skill_hef_army_buff_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_1_4",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_1_5",
+            skill_key = "wh2_main_skill_hef_army_buff_flyers",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_1_6",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_inf",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_2",
+            skill_key = "wh2_main_skill_hef_def_fire_at_will",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_3_1",
+            skill_key = "wh2_main_skill_hef_army_buff_avalanche_of_granite",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_3_2",
+            skill_key = "wh2_main_skill_hef_army_buff_favourable_winds",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_3_3",
+            skill_key = "wh2_main_skill_hef_army_buff_silver_torrent",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_3_4",
+            skill_key = "wh2_main_skill_hef_army_buff_heart_of_the_flame",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_hef_alith_anar_army_4",
+            skill_key = "wh2_main_skill_hef_def_darken_the_skies",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_dlc15_hef_archmage_beasts = {
         {
             node_key = "wh2_dlc15_skill_node_hef_archmage_beasts_mount_1",
@@ -11254,6 +12160,1128 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh2_dlc15_hef_eltharion = {
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_mount_barded_warhorse",
+            skill_key = "wh2_dlc15_skill_hef_eltharion_mount_barded_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_mount_stormwing",
+            skill_key = "wh2_dlc15_skill_hef_eltharion_mount_stormwing",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_generic_1",
+            skill_key = "wh2_main_skill_hef_generic_speed_of_asuryan",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_generic_2",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_generic_3",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_storm_of_blades",
+            skill_key = "wh2_dlc15_skill_hef_eltharion_storm_of_blades",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_break_upon_the_walls",
+            skill_key = "wh2_dlc15_skill_hef_eltharion_break_upon_the_walls",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_wallwarden",
+            skill_key = "wh2_dlc15_skill_hef_eltharion_wallwarden",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_a_world_asunder",
+            skill_key = "wh2_dlc15_skill_hef_eltharion_a_world_asunder",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_unyielding_march",
+            skill_key = "wh2_dlc15_skill_hef_eltharion_unyielding_march",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_grim_discipline",
+            skill_key = "wh2_dlc15_skill_hef_eltharion_grim_discipline",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_dedication",
+            skill_key = "wh2_dlc15_skill_hef_eltharion_dedicated_to_ladrielle",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_0",
+            skill_key = "wh2_main_skill_hef_combat_graceful_strikes",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_1_1",
+            skill_key = "wh2_main_skill_hef_combat_valour_of_ages",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_combat_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_0",
+            skill_key = "wh2_main_skill_all_magic_high_02_apotheosis_slann",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_1_2",
+            skill_key = "wh2_main_skill_all_magic_high_03_lore_attribute",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_1_1",
+            skill_key = "wh2_main_skill_all_magic_high_04_hand_of_glory_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_1_3",
+            skill_key = "wh2_main_skill_all_magic_high_01_soul_quench_slann",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_1_4",
+            skill_key = "wh2_main_skill_all_magic_high_05_tempest_slann",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_3_1",
+            skill_key = "wh2_main_skill_all_magic_high_09_arcane_unforging_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_3_2",
+            skill_key = "wh2_main_skill_all_magic_high_10_fiery_convocation_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_high_magic_dummy",
+            skill_key = "wh2_main_skill_all_magic_high_dummy_apotheosis_soulquench",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_1_1",
+            skill_key = "wh2_main_skill_hef_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_1_2",
+            skill_key = "wh2_main_skill_hef_army_buff_missile",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_1_3",
+            skill_key = "wh2_main_skill_hef_army_buff_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_1_4",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_1_5",
+            skill_key = "wh2_main_skill_hef_army_buff_flyers",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_1_6",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_inf",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_2",
+            skill_key = "wh2_dlc15_skill_unique_hef_eltharion_wardens_stand",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_3_1",
+            skill_key = "wh2_main_skill_hef_army_buff_avalanche_of_granite",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_3_2",
+            skill_key = "wh2_main_skill_hef_army_buff_favourable_winds",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_3_3",
+            skill_key = "wh2_main_skill_hef_army_buff_silver_torrent",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_3_4",
+            skill_key = "wh2_main_skill_hef_army_buff_heart_of_the_flame",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_eltharion_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc15_hef_imrik = {
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_mount_dragon_prince_steed",
+            skill_key = "wh2_dlc15_skill_hef_imrik_mount_dragon_prince_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_mount_minaithnir",
+            skill_key = "wh2_dlc15_skill_hef_imrik_mount_minaithnir",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_generic_1",
+            skill_key = "wh2_main_skill_hef_generic_speed_of_asuryan",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_generic_2",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_generic_3",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_caledor_incumbent",
+            skill_key = "wh2_dlc15_skill_hef_imrik_caledor_incumbent",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_vauls_armaments",
+            skill_key = "wh2_dlc15_skill_hef_imrik_vauls_armaments",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_dragonheart",
+            skill_key = "wh2_dlc15_skill_hef_imrik_dragonheart",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_astride_the_Battlefield",
+            skill_key = "wh2_dlc15_skill_hef_imrik_astride_the_Battlefield",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_ancient_pride",
+            skill_key = "wh2_dlc15_skill_hef_imrik_ancient_pride",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_ashen_fields",
+            skill_key = "wh2_dlc15_skill_hef_imrik_ashen_fields",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_dedication",
+            skill_key = "wh2_main_skill_hef_dedication_vaul",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_4",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_7",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_4",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_7",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_4",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_7",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_blazing_lance",
+            skill_key = "wh2_dlc15_skill_hef_imrik_blazing_lance",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_dragonpact",
+            skill_key = "wh2_dlc15_skill_hef_imrik_dragonpact",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_0",
+            skill_key = "wh2_main_skill_hef_combat_graceful_strikes",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_1_1",
+            skill_key = "wh2_main_skill_hef_combat_valour_of_ages",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_2",
+            skill_key = "wh2_dlc15_skill_unique_hef_imrik_lord_of_dragons",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_combat_4",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_0",
+            skill_key = "wh2_dlc15_skill_unique_hef_imrik_dragonhorn",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_1_1",
+            skill_key = "wh2_main_skill_hef_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_1_2",
+            skill_key = "wh2_main_skill_hef_army_buff_missile",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_1_3",
+            skill_key = "wh2_main_skill_hef_army_buff_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_1_4",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_1_5",
+            skill_key = "wh2_main_skill_hef_army_buff_flyers",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_1_6",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_inf",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_3_1",
+            skill_key = "wh2_main_skill_hef_army_buff_avalanche_of_granite",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_3_2",
+            skill_key = "wh2_main_skill_hef_army_buff_favourable_winds",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_3_3",
+            skill_key = "wh2_main_skill_hef_army_buff_silver_torrent",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_3_4",
+            skill_key = "wh2_main_skill_hef_army_buff_heart_of_the_flame",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_imrik_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_main_hef_prince = {
         {
             node_key = "wh2_main_skill_node_hef_prince_mount_1",
@@ -12506,6 +14534,512 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh2_main_hef_prince_alastar = {
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_generic_1",
+            skill_key = "wh2_main_skill_hef_generic_speed_of_asuryan",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_generic_2",
+            skill_key = "wh2_main_skill_hef_alastar_unique_1",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_generic_3",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_hef_alastar_mount_1",
+            skill_key = "wh2_dlc15_skill_hef_alastar_white_lion_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_mount_2",
+            skill_key = "wh2_main_skill_hef_prince_alastar_mount_great_eagle",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_mount_3",
+            skill_key = "wh2_main_skill_hef_prince_alastar_mount_sun_dragon",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_mount_4",
+            skill_key = "wh2_main_skill_hef_prince_alastar_mount_star_dragon",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_hef_alastar_clearcutting_maneuvers",
+            skill_key = "wh2_dlc15_skill_hef_alastar_clearcutting_maneuvers",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_dedication_4",
+            skill_key = "wh2_main_skill_hef_dedication_kurnous",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_3",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_7",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_3",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_7",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_3",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_7",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_hef_alastar_ancestral_axes",
+            skill_key = "wh2_dlc15_skill_hef_alastar_ancestral_axes",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_hef_alastar_lions_pride",
+            skill_key = "wh2_dlc15_skill_hef_alastar_lions_pride",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_0",
+            skill_key = "wh2_main_skill_hef_alastar_unique_combat",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_1_1",
+            skill_key = "wh2_main_skill_hef_combat_valour_of_ages",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_1_4",
+            skill_key = "wh2_main_skill_hef_alastar_unique_0",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_combat_4",
+            skill_key = "wh2_main_skill_hef_alastar_unique_heroic_killing_blow",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_1_1",
+            skill_key = "wh2_main_skill_hef_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_1_2",
+            skill_key = "wh2_main_skill_hef_army_buff_missile",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_1_3",
+            skill_key = "wh2_main_skill_hef_army_buff_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_1_4",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_1_5",
+            skill_key = "wh2_main_skill_hef_army_buff_flyers",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_1_6",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_inf",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_3_1",
+            skill_key = "wh2_main_skill_hef_army_buff_avalanche_of_granite",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_3_2",
+            skill_key = "wh2_main_skill_hef_army_buff_favourable_winds",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_3_3",
+            skill_key = "wh2_main_skill_hef_army_buff_silver_torrent",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_3_4",
+            skill_key = "wh2_main_skill_hef_army_buff_heart_of_the_flame",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_alastar_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_main_hef_princess = {
         {
             node_key = "wh2_main_skill_node_hef_princess_mount_1",
@@ -13746,6 +16280,2332 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         {
             node_key = "wh2_main_skill_node_hef_princess_army_4",
             skill_key = "wh2_main_skill_hef_def_darken_the_skies",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_main_hef_teclis = {
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_mount_1",
+            skill_key = "wh2_main_skill_hef_teclis_mount_barded_ithilmar_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_mount_2",
+            skill_key = "wh2_dlc15_skill_hef_teclis_mount_arcane_phoenix",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_generic_1",
+            skill_key = "wh2_main_skill_hef_teclis_charoi",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_generic_3",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_generic_2",
+            skill_key = "wh2_dlc15_skill_hef_archmage_greater_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_generic_4",
+            skill_key = "wh2_main_skill_hef_teclis_sublime_focus",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_generic_8",
+            skill_key = "wh2_dlc15_skill_hef_archmage_potential_energy",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_generic_5",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_generic_6",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_generic_7",
+            skill_key = "wh2_main_skill_hef_teclis_glamour_of_hoeth",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_innate_hef_teclis_agent_1",
+            skill_key = "wh2_main_skill_innate_hef_teclis_agent_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_magic_0",
+            skill_key = "wh2_main_skill_magic_dark_flock_of_doom_teclis",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_magic_1_1",
+            skill_key = "wh3_dlc27_skill_magic_fire_cascading_fire_cloak_teclis",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_magic_1_2",
+            skill_key = "wh2_main_skill_all_magic_light_05_net_of_amyntok_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_magic_1_3",
+            skill_key = "wh2_main_skill_all_magic_death_04_soulblight_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_magic_1_4",
+            skill_key = "wh2_main_skill_all_magic_heavens_10_chain_lightning_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_magic_1_5",
+            skill_key = "wh2_main_skill_magic_life_wizard_regrowth_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_magic_2",
+            skill_key = "wh2_main_skill_hef_teclis_flames_of_the_phoenix",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_magic_dummy",
+            skill_key = "wh2_main_skill_magic_dark_flock_of_doom_teclis_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_teclis_magic_dummy_2",
+            skill_key = "wh3_dlc27_skill_magic_fire_cascading_fire_cloak_teclis_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_0",
+            skill_key = "wh2_main_skill_all_magic_high_03_lore_attribute_teclis",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_1_1",
+            skill_key = "wh_main_skill_all_magic_fire_04_kindleflame",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_1_2",
+            skill_key = "wh_main_skill_all_magic_metal_03_metalshifting",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_1_3",
+            skill_key = "wh_main_skill_all_magic_heavens_03_rolling_skies",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_1_4",
+            skill_key = "wh_dlc05_skill_magic_life_life_bloom",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_1_5",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_1_6",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_1_7",
+            skill_key = "wh_dlc03_skill_magic_beasts_wild_heart",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_1_8",
+            skill_key = "wh_main_skill_all_magic_light_03_exorcism",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_lore_2",
+            skill_key = "wh2_dlc14_skill_hef_teclis_manifold_sorcery",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_1_1",
+            skill_key = "wh2_main_skill_hef_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_1_2",
+            skill_key = "wh2_main_skill_hef_army_buff_missile",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_1_3",
+            skill_key = "wh2_main_skill_hef_army_buff_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_1_4",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_1_5",
+            skill_key = "wh2_main_skill_hef_army_buff_flyers",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_1_6",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_inf",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_3_1",
+            skill_key = "wh2_main_skill_hef_army_buff_avalanche_of_granite",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_3_2",
+            skill_key = "wh2_main_skill_hef_army_buff_favourable_winds",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_3_3",
+            skill_key = "wh2_main_skill_hef_army_buff_silver_torrent",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_3_4",
+            skill_key = "wh2_main_skill_hef_army_buff_heart_of_the_flame",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_teclis_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_main_hef_tyrion = {
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_mount_1",
+            skill_key = "wh2_main_skill_hef_tyrion_mount_malhandhir",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_generic_1",
+            skill_key = "wh2_main_skill_hef_generic_speed_of_asuryan",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_generic_2",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_generic_3",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_unique_0",
+            skill_key = "wh2_main_skill_hef_tyrion_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh2_main_skill_node_hef_tyrion_unique_2",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_unique_1_1",
+            skill_key = "wh2_main_skill_hef_tyrion_unique_1_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_unique_1_2",
+            skill_key = "wh2_main_skill_hef_tyrion_unique_1_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_unique_1_3",
+            skill_key = "wh2_main_skill_hef_tyrion_unique_1_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_unique_2",
+            skill_key = "wh2_main_skill_hef_tyrion_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh2_main_skill_node_hef_tyrion_unique_0",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_unique_3_1",
+            skill_key = "wh2_main_skill_hef_tyrion_unique_3_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_unique_3_2",
+            skill_key = "wh2_main_skill_hef_tyrion_unique_3_2",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_unique_3_3",
+            skill_key = "wh2_main_skill_hef_tyrion_unique_3_3",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_dedication_1",
+            skill_key = "wh2_main_skill_hef_dedication_asuryan",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_3",
+                "wh2_main_skill_node_hef_prince_dedication_4",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_7",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_3",
+                "wh2_main_skill_node_hef_princess_dedication_4",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_7",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_3",
+                "wh2_main_skill_node_hef_tyrion_dedication_4",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_7",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_dedication_2",
+            skill_key = "wh2_main_skill_hef_dedication_hoeth",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_3",
+                "wh2_main_skill_node_hef_prince_dedication_4",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_7",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_3",
+                "wh2_main_skill_node_hef_princess_dedication_4",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_7",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_3",
+                "wh2_main_skill_node_hef_tyrion_dedication_4",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_7",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_dedication_3",
+            skill_key = "wh2_main_skill_hef_dedication_vaul",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_4",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_7",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_4",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_7",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_4",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_7",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_dedication_4",
+            skill_key = "wh2_main_skill_hef_dedication_kurnous",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_3",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_7",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_3",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_7",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_3",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_7",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_dedication_5",
+            skill_key = "wh2_main_skill_hef_dedication_isha",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_3",
+                "wh2_main_skill_node_hef_prince_dedication_4",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_7",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_3",
+                "wh2_main_skill_node_hef_princess_dedication_4",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_7",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_3",
+                "wh2_main_skill_node_hef_tyrion_dedication_4",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_7",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_1_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_1_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_2_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_2_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_3_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_3_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_4_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_4_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_5_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_5_unique_6",
+                "wh3_dlc27_skill_node_hef_sea_helm_unique_4",
+                "wh3_dlc27_skill_node_hef_sea_helm_unique_6",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_dedication_6",
+            skill_key = "wh2_main_skill_hef_dedication_addaioth",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_3",
+                "wh2_main_skill_node_hef_prince_dedication_4",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_7",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_3",
+                "wh2_main_skill_node_hef_princess_dedication_4",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_7",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_3",
+                "wh2_main_skill_node_hef_tyrion_dedication_4",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_7",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_1_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_1_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_2_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_2_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_3_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_3_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_4_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_4_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_5_unique_4",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_5_unique_5",
+                "wh3_dlc27_skill_node_hef_sea_helm_unique_4",
+                "wh3_dlc27_skill_node_hef_sea_helm_unique_5",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_dedication_7",
+            skill_key = "wh2_main_skill_hef_dedication_mathlann",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_3",
+                "wh2_main_skill_node_hef_prince_dedication_4",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_3",
+                "wh2_main_skill_node_hef_princess_dedication_4",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_3",
+                "wh2_main_skill_node_hef_tyrion_dedication_4",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_1_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_1_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_2_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_2_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_3_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_3_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_4_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_4_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_5_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_5_unique_6",
+                "wh3_dlc27_skill_node_hef_sea_helm_unique_5",
+                "wh3_dlc27_skill_node_hef_sea_helm_unique_6",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_dedication_8",
+            skill_key = "wh2_main_skill_hef_dedication_hukon",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_7",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_7",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_3",
+                "wh2_main_skill_node_hef_prince_dedication_4",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_7",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_3",
+                "wh2_main_skill_node_hef_princess_dedication_4",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_7",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_3",
+                "wh2_main_skill_node_hef_tyrion_dedication_4",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_7",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_0",
+            skill_key = "wh2_main_skill_hef_combat_graceful_strikes",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_1_1",
+            skill_key = "wh2_main_skill_hef_combat_valour_of_ages",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_2",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_combat_4",
+            skill_key = "wh2_main_skill_hef_tyrion_feint_and_riposte",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_1_1",
+            skill_key = "wh2_main_skill_hef_tyrion_army_buff_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_1_2",
+            skill_key = "wh2_main_skill_hef_army_buff_missile",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_1_3",
+            skill_key = "wh2_main_skill_hef_army_buff_flyers",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_1_4",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_inf",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_1_5",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_3_1",
+            skill_key = "wh2_main_skill_hef_army_buff_avalanche_of_granite",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_3_2",
+            skill_key = "wh2_main_skill_hef_army_buff_favourable_winds",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_3_3",
+            skill_key = "wh2_main_skill_hef_army_buff_silver_torrent",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_3_4",
+            skill_key = "wh2_main_skill_hef_army_buff_heart_of_the_flame",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_hef_tyrion_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc27_hef_aislinn = {
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_mount_1",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_mount_skycutter_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_mount_2",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_mount_star_dragon",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_generic_1",
+            skill_key = "wh2_main_skill_hef_generic_speed_of_asuryan",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_generic_2",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_generic_3",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_unique_1",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_unique_1_1",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_unique_1_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_unique_1_2",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_unique_1_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_unique_1_3",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_unique_1_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_unique_2",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_unique_3_1",
+            skill_key = "wh2_main_skill_hef_dedication_mathlann",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_beasts_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_death_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_fire_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_heavens_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_high_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_life_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_light_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_metal_dedication_8",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_1",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_2",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_3",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_4",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_5",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_6",
+                "wh2_dlc15_skill_node_hef_archmage_shadows_dedication_8",
+                "wh2_main_skill_node_hef_prince_dedication_1",
+                "wh2_main_skill_node_hef_prince_dedication_2",
+                "wh2_main_skill_node_hef_prince_dedication_3",
+                "wh2_main_skill_node_hef_prince_dedication_4",
+                "wh2_main_skill_node_hef_prince_dedication_5",
+                "wh2_main_skill_node_hef_prince_dedication_6",
+                "wh2_main_skill_node_hef_prince_dedication_8",
+                "wh2_main_skill_node_hef_princess_dedication_1",
+                "wh2_main_skill_node_hef_princess_dedication_2",
+                "wh2_main_skill_node_hef_princess_dedication_3",
+                "wh2_main_skill_node_hef_princess_dedication_4",
+                "wh2_main_skill_node_hef_princess_dedication_5",
+                "wh2_main_skill_node_hef_princess_dedication_6",
+                "wh2_main_skill_node_hef_princess_dedication_8",
+                "wh2_main_skill_node_hef_tyrion_dedication_1",
+                "wh2_main_skill_node_hef_tyrion_dedication_2",
+                "wh2_main_skill_node_hef_tyrion_dedication_3",
+                "wh2_main_skill_node_hef_tyrion_dedication_4",
+                "wh2_main_skill_node_hef_tyrion_dedication_5",
+                "wh2_main_skill_node_hef_tyrion_dedication_6",
+                "wh2_main_skill_node_hef_tyrion_dedication_8",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_1_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_1_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_2_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_2_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_3_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_3_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_4_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_4_unique_6",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_5_unique_5",
+                "wh3_dlc27_skill_node_hef_dragonship_admiral_5_unique_6",
+                "wh3_dlc27_skill_node_hef_sea_helm_unique_5",
+                "wh3_dlc27_skill_node_hef_sea_helm_unique_6",
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_unique_3_2",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_herald_of_mathlann",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_personal_1",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_unique_vicious_fighter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_personal_4",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_unique_spirit_of_the_sea_god",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_personal_2",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_naval_discipline",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_personal_3",
+            skill_key = "wh3_dlc27_skill_hef_aislinn_unique_approval_of_finubar",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_0",
+            skill_key = "wh2_main_skill_hef_combat_graceful_strikes",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_1_1",
+            skill_key = "wh2_main_skill_hef_combat_valour_of_ages",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_combat_4",
+            skill_key = "wh3_dlc27_skill_hef_sea_helm_quicksilver_strike",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_1_1",
+            skill_key = "wh2_main_skill_hef_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_1_2",
+            skill_key = "wh2_main_skill_hef_army_buff_missile",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_1_3",
+            skill_key = "wh2_main_skill_hef_army_buff_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_1_4",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_1_5",
+            skill_key = "wh2_main_skill_hef_army_buff_flyers",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_1_6",
+            skill_key = "wh2_main_skill_hef_army_buff_elite_inf",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_3_1",
+            skill_key = "wh2_main_skill_hef_army_buff_avalanche_of_granite",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_3_2",
+            skill_key = "wh2_main_skill_hef_army_buff_favourable_winds",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_3_3",
+            skill_key = "wh2_main_skill_hef_army_buff_silver_torrent",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_3_4",
+            skill_key = "wh2_main_skill_hef_army_buff_heart_of_the_flame",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_hef_aislinn_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
             category_key = "battle",
             indent = 4,
             tier = 12,

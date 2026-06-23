@@ -920,6 +920,1868 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh2_dlc12_lzd_tehenhauin = {
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_mount_01",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_mount_horned_one",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_mount_02",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_mount_ripperdactyl",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_mount_03",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_mount_ancient_stegadon_engine_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_generic_1",
+            skill_key = "wh2_main_skill_lzd_lizardmen_agility",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_generic_2",
+            skill_key = "wh2_main_skill_lzd_protection_of_the_old_ones",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_innate_lzd_tehenhauin",
+            skill_key = "wh2_dlc12_skill_innate_lzd_tehenhauin",
+            category_key = "character",
+            indent = 0,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_0",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_lzd_tehenhauin_4",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_1",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_2",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_3",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_4",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_lzd_tehenhauin_0",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_5",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_6",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_6",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_lzd_tehenhauin_7",
+            skill_key = "wh2_dlc12_skill_lzd_tehenhauin_7",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_00",
+            skill_key = "wh2_main_skill_lzd_predatory_fighter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_01",
+            skill_key = "wh2_main_skill_lzd_enforcer_of_order",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_05",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_06",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_09",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_personal_10",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_0",
+            skill_key = "wh_dlc03_skill_magic_beasts_wyssans_wildform",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_1_1",
+            skill_key = "wh_dlc03_skill_magic_beasts_wild_heart",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_1_2",
+            skill_key = "wh2_main_skill_magic_beasts_flock_of_doom_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_1_3",
+            skill_key = "wh2_main_skill_magic_beasts_panns_impenetrable_pelt_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_1_4",
+            skill_key = "wh2_main_skill_magic_beasts_the_amber_spear_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_3_1",
+            skill_key = "wh2_main_skill_magic_beasts_the_curse_of_anraheir_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_3_2",
+            skill_key = "wh2_main_skill_magic_beasts_transformation_of_kadon_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_magic_dummy",
+            skill_key = "wh2_main_skill_magic_beasts_dummy_wyssans_wildform_flock_of_doom",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_00",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_01",
+            skill_key = "wh2_main_skill_lzd_army_buff_saurus",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_02",
+            skill_key = "wh2_main_skill_lzd_army_buff_skinks",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_03",
+            skill_key = "wh2_main_skill_lzd_army_buff_riders",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_04",
+            skill_key = "wh2_main_skill_lzd_army_buff_guardians",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_05",
+            skill_key = "wh2_main_skill_lzd_army_buff_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_06",
+            skill_key = "wh2_main_skill_lzd_army_buff_dinos",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_07",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_08",
+            skill_key = "wh2_main_skill_lzd_army_buff_jungle_dominion",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_09",
+            skill_key = "wh2_main_skill_lzd_army_buff_spawn_kin",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_10",
+            skill_key = "wh2_main_skill_lzd_army_buff_soul_bound",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_11",
+            skill_key = "wh2_main_skill_lzd_army_buff_epicentre",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tehenhauin_army_12",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc12_lzd_tiktaqto = {
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_generic_1",
+            skill_key = "wh2_main_skill_lzd_lizardmen_agility",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_generic_2",
+            skill_key = "wh2_main_skill_lzd_protection_of_the_old_ones",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_unique_0",
+            skill_key = "wh2_dlc12_skill_lzd_tiktaqto_unique_drop_sphere_of_tepok",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_unique_1",
+            skill_key = "wh2_dlc12_skill_lzd_tiktaqto_unique_precision_strike",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_unique_2",
+            skill_key = "wh2_dlc12_skill_lzd_tiktaqto_unique_fearless_leader",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_unique_3",
+            skill_key = "wh2_dlc12_skill_lzd_tiktaqto_unique_aerial_superiority",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_unique_4",
+            skill_key = "wh2_dlc12_skill_lzd_tiktaqto_unique_aeries_finest",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_unique_5",
+            skill_key = "wh2_dlc12_skill_lzd_tiktaqto_unique_skink_commander",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_unique_6",
+            skill_key = "wh2_dlc12_skill_lzd_tiktaqto_unique_drop_sphere_of_tepok_upgraded",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+            skill_key = "wh2_main_skill_lzd_blessing_chotec",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+            skill_key = "wh2_main_skill_lzd_blessing_quetzl",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+            skill_key = "wh2_main_skill_lzd_blessing_tepok",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+            skill_key = "wh2_main_skill_lzd_blessing_huanchi",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+            skill_key = "wh2_main_skill_lzd_blessing_tlazcotl",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+            skill_key = "wh2_main_skill_lzd_blessing_itzl",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_0",
+            skill_key = "wh2_main_skill_lzd_predatory_fighter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_1_1",
+            skill_key = "wh2_main_skill_lzd_enforcer_of_order",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_2",
+            skill_key = "wh2_dlc12_skill_lzd_tiktaqto_unique_master_of_skies",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_combat_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_1_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_saurus",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_1_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_skinks",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_1_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_riders",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_1_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_guardians",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_1_5",
+            skill_key = "wh2_main_skill_lzd_army_buff_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_1_6",
+            skill_key = "wh2_main_skill_lzd_army_buff_dinos",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_3_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_jungle_dominion",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_3_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_spawn_kin",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_3_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_soul_bound",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_3_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_epicentre",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc12_skill_node_lzd_tiktaqto_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc13_lzd_gor_rok = {
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_misc_0",
+            skill_key = "wh2_main_skill_lzd_generic_obey",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_misc_1",
+            skill_key = "wh2_main_skill_lzd_lizardmen_agility",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_misc_2",
+            skill_key = "wh2_main_skill_lzd_protection_of_the_old_ones",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_misc_3",
+            skill_key = "wh2_main_skill_lzd_generic_honoured_elder_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_gor_rok_unique_0",
+            skill_key = "wh2_dlc13_skill_lzd_gor_rok_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_gor_rok_unique_1",
+            skill_key = "wh2_dlc13_skill_lzd_gor_rok_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_gor_rok_unique_2",
+            skill_key = "wh2_dlc13_skill_lzd_gor_rok_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_gor_rok_unique_3",
+            skill_key = "wh2_dlc13_skill_lzd_gor_rok_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_gor_rok_unique_4",
+            skill_key = "wh2_dlc13_skill_lzd_gor_rok_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_gor_rok_unique_5",
+            skill_key = "wh2_dlc13_skill_lzd_gor_rok_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_gor_rok_blessing_0",
+            skill_key = "wh2_main_skill_lzd_blessing_chotec",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_gor_rok_blessing_1",
+            skill_key = "wh2_main_skill_lzd_blessing_quetzl",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_gor_rok_blessing_2",
+            skill_key = "wh2_main_skill_lzd_blessing_tepok",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_gor_rok_blessing_3",
+            skill_key = "wh2_main_skill_lzd_blessing_huanchi",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_gor_rok_blessing_4",
+            skill_key = "wh2_main_skill_lzd_blessing_tlazcotl",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_gor_rok_blessing_5",
+            skill_key = "wh2_main_skill_lzd_blessing_itzl",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_0",
+            skill_key = "wh2_main_skill_lzd_predatory_fighter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_1_1",
+            skill_key = "wh2_main_skill_lzd_enforcer_of_order",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_combat_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_1_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_saurus",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_1_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_skinks",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_1_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_riders",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_1_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_guardians",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_1_5",
+            skill_key = "wh2_main_skill_lzd_army_buff_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_1_6",
+            skill_key = "wh2_main_skill_lzd_army_buff_dinos",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_3_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_jungle_dominion",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_3_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_spawn_kin",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_3_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_soul_bound",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_3_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_epicentre",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_gor_rok_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_dlc13_lzd_kroxigor_ancient = {
         {
             node_key = "wh2_dlc13_skill_node_ancient_kroxigor_misc_0",
@@ -1707,6 +3569,416 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc13_skill_node_ancient_kroxigor_horde_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc13_lzd_nakai = {
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_misc_0",
+            skill_key = "wh2_main_skill_lzd_generic_obey",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_misc_1",
+            skill_key = "wh2_dlc13_skill_lzd_ancient_kroxigor_misc_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_misc_3",
+            skill_key = "wh2_main_skill_lzd_lizardmen_agility",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_misc_2",
+            skill_key = "wh2_main_skill_lzd_protection_of_the_old_ones",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_nakai_unique_0",
+            skill_key = "wh2_dlc13_skill_lzd_nakai_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_nakai_unique_1",
+            skill_key = "wh2_dlc13_skill_lzd_nakai_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_nakai_unique_2",
+            skill_key = "wh2_dlc13_skill_lzd_nakai_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_nakai_unique_3",
+            skill_key = "wh2_dlc13_skill_lzd_nakai_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_nakai_unique_4",
+            skill_key = "wh2_dlc13_skill_lzd_nakai_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_lzd_nakai_unique_5",
+            skill_key = "wh2_dlc13_skill_lzd_nakai_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_0",
+            skill_key = "wh2_main_skill_lzd_predatory_fighter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_1_1",
+            skill_key = "wh2_main_skill_lzd_enforcer_of_order",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_2",
+            skill_key = "wh2_dlc13_skill_lzd_ancient_kroxigor_personal_5",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_impassioned",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_combat_4",
+            skill_key = "wh2_dlc13_skill_lzd_ancient_kroxigor_personal_10",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_1_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_saurus",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_1_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_skinks",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_1_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_riders",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_1_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_guardians",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_1_5",
+            skill_key = "wh2_main_skill_lzd_army_buff_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_1_6",
+            skill_key = "wh2_main_skill_lzd_army_buff_dinos",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_3_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_jungle_dominion",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_3_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_spawn_kin",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_3_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_soul_bound",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_3_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_epicentre",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc13_skill_node_nakai_army_4",
             skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
             category_key = "battle",
             indent = 4,
@@ -9503,6 +11775,1590 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_main_skill_node_lzd_slann_mage_priest_army_4",
+            skill_key = "wh2_main_skill_lzd_slann_forcefield",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc17_lzd_oxyotl = {
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_misc_1",
+            skill_key = "wh2_dlc17_skill_lzd_oxyotl_poisons_1",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_misc_2",
+            skill_key = "wh2_dlc17_skill_lzd_oxyotl_poisons_2",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_misc_3",
+            skill_key = "wh2_main_skill_lzd_lizardmen_agility",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_misc_4",
+            skill_key = "wh2_main_skill_lzd_protection_of_the_old_ones",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_unique_0",
+            skill_key = "wh2_dlc17_skill_lzd_oxyotl_unique_ancient_knowledge",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_unique_1_1",
+            skill_key = "wh2_dlc17_skill_lzd_oxyotl_unique_hunter_of_nightmares",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_unique_1_2",
+            skill_key = "wh2_dlc17_skill_lzd_oxyotl_unique_master_of_camouflage",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_unique_1_3",
+            skill_key = "wh2_dlc17_skill_lzd_oxyotl_unique_explorer_of_lost_worlds",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_unique_1_4",
+            skill_key = "wh2_dlc17_skill_lzd_oxyotl_unique_behind_enemy_lines",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_unique_2",
+            skill_key = "wh2_dlc17_skill_lzd_oxyotl_unique_eternal_warrior",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_0",
+            skill_key = "wh2_main_skill_lzd_predatory_fighter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadeye",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_1_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_piercing_shots",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_2",
+            skill_key = "wh_main_skill_all_spy_self_slippery",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_3_3",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_bottomless_quiver",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_lzd_oxyotl_combat_4",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_swiftness_of_itzl",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_1_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_saurus",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_1_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_skinks",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_1_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_riders",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_1_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_guardians",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_1_5",
+            skill_key = "wh2_main_skill_lzd_army_buff_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_1_6",
+            skill_key = "wh2_main_skill_lzd_army_buff_dinos",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_3_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_jungle_dominion",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_3_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_spawn_kin",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_3_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_soul_bound",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_3_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_epicentre",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_lzd_oxyotl_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_main_lzd_kroq_gar = {
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_mount_1",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_mount_cold_one",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_mount_3",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_mount_horned_one",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_mount_2",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_mount_grymloq",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_generic_1",
+            skill_key = "wh2_main_skill_lzd_generic_obey",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_generic_5",
+            skill_key = "wh2_main_skill_lzd_lizardmen_agility",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_generic_2",
+            skill_key = "wh2_main_skill_lzd_protection_of_the_old_ones",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_generic_3",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_spawning_of_xhotl",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_generic_4",
+            skill_key = "wh2_main_skill_lzd_generic_honoured_elder_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_unique_1",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_annihilate",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_unique_2",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_destroy",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_unique_3",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_exterminate",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_unique_4",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_extinguish",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_unique_5",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_kill",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_unique_6",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_neutralize",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_unique_8",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_obliterate",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_unique_7",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_purge",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+            skill_key = "wh2_main_skill_lzd_blessing_chotec",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+            skill_key = "wh2_main_skill_lzd_blessing_quetzl",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+            skill_key = "wh2_main_skill_lzd_blessing_tepok",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+            skill_key = "wh2_main_skill_lzd_blessing_huanchi",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+            skill_key = "wh2_main_skill_lzd_blessing_tlazcotl",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_8",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_5",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_6",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_6",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_dedication_6",
+            skill_key = "wh2_main_skill_lzd_blessing_itzl",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_3",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_4",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_5",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_6",
+                "wh2_dlc12_skill_node_lzd_tiktaqto_generic_7",
+                "wh2_dlc13_skill_gor_rok_blessing_0",
+                "wh2_dlc13_skill_gor_rok_blessing_1",
+                "wh2_dlc13_skill_gor_rok_blessing_2",
+                "wh2_dlc13_skill_gor_rok_blessing_3",
+                "wh2_dlc13_skill_gor_rok_blessing_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_1",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_2",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_3",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_4",
+                "wh2_main_skill_node_lzd_kroq_gar_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_dedication_5",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_1",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_2",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_3",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_4",
+                "wh2_main_skill_node_lzd_saurus_old_blood_horde_dedication_5",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_0",
+            skill_key = "wh2_main_skill_lzd_predatory_fighter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_1_1",
+            skill_key = "wh2_main_skill_lzd_enforcer_of_order",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_2",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_3_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_combat_4",
+            skill_key = "wh2_main_skill_lzd_kroq_gar_swiftness_of_itzl",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_1_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_saurus",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_1_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_skinks",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_1_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_riders",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_1_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_guardians",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_1_5",
+            skill_key = "wh2_main_skill_lzd_army_buff_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_1_6",
+            skill_key = "wh2_main_skill_lzd_army_buff_dinos",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_3_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_jungle_dominion",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_3_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_spawn_kin",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_3_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_soul_bound",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_3_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_epicentre",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_kroq_gar_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_main_lzd_lord_mazdamundi = {
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_generic_3",
+            skill_key = "wh2_main_skill_lzd_mazdamundi_zlaaq",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_generic_1",
+            skill_key = "wh2_main_skill_lzd_telekinesis",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_generic_2",
+            skill_key = "wh2_main_skill_lzd_protection_of_the_old_ones",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_lzd_lord_mazdamundi_guardians",
+            skill_key = "wh3_main_skill_lzd_lord_mazdamundi_guardians",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_discipline_1_0",
+            skill_key = "wh2_main_skill_lzd_disciplines_reservoir",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_discipline_1_1",
+            skill_key = "wh2_main_skill_lzd_disciplines_becalming_cogitation",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_discipline_1_2",
+            skill_key = "wh2_main_skill_lzd_disciplines_arcane_convergence",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_discipline_1_3",
+            skill_key = "wh2_main_skill_lzd_disciplines_focus_of_mysteries",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_discipline_1_4",
+            skill_key = "wh2_main_skill_lzd_mazdamundi_ruination_of_cities",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_discipline_2_0",
+            skill_key = "wh2_main_skill_lzd_disciplines_unfathomable_presence",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_lzd_lord_mazdamundi_discipline_2_1",
+            skill_key = "wh3_main_skill_lzd_disciplines_soul_of_stone",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_discipline_2_2",
+            skill_key = "wh2_main_skill_lzd_disciplines_harrowing_scruteny",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_discipline_2_3",
+            skill_key = "wh2_main_skill_lzd_disciplines_transcendent_healing",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_discipline_2_4",
+            skill_key = "wh2_main_skill_lzd_disciplines_higher_state_of_consciousness",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_0",
+            skill_key = "wh2_main_skill_all_magic_high_01_soul_quench_slann",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_heavens_03_rolling_skies",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_1_1",
+            skill_key = "wh2_main_skill_all_magic_high_02_apotheosis_slann",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_1_2",
+            skill_key = "wh2_main_skill_all_magic_light_05_net_of_amyntok_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_1_3",
+            skill_key = "wh2_main_skill_all_magic_heavens_04_curse_of_the_midnight_wind_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_3_1",
+            skill_key = "wh2_main_skill_all_magic_high_09_arcane_unforging_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_3_2",
+            skill_key = "wh2_main_skill_all_magic_heavens_09_comet_of_casandora_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_3_3",
+            skill_key = "wh2_main_skill_all_magic_high_03_lore_attribute",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_light_03_exorcism",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_4",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_magic_dummy",
+            skill_key = "wh2_main_skill_all_magic_high_dummy_apotheosis_soulquench",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_1_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_saurus",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_1_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_skinks",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_1_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_riders",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_1_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_guardians",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_1_5",
+            skill_key = "wh2_main_skill_lzd_army_buff_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_1_6",
+            skill_key = "wh2_main_skill_lzd_army_buff_dinos",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_3_1",
+            skill_key = "wh2_main_skill_lzd_army_buff_jungle_dominion",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_3_2",
+            skill_key = "wh2_main_skill_lzd_army_buff_spawn_kin",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_3_3",
+            skill_key = "wh2_main_skill_lzd_army_buff_soul_bound",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_3_4",
+            skill_key = "wh2_main_skill_lzd_army_buff_epicentre",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_lzd_lord_mazdamundi_army_4",
             skill_key = "wh2_main_skill_lzd_slann_forcefield",
             category_key = "battle",
             indent = 4,

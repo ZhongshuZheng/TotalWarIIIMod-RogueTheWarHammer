@@ -4,6 +4,494 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh_main_dwf_dwarfs"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh2_dlc17_dwf_thorek = {
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_misc_2",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_mount_anvil_of_doom",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_misc_3",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_anvil_guard",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_misc_4",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_runemaster",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_misc_5",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_greater_locus",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_misc_6",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_misc_7",
+            skill_key = "wh_main_skill_dwf_lord_battle_obstinacy",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_unique_01",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_fiery_temper",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_unique_02",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_exacting_standards",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_unique_03",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_ornery_overseer",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_unique_04",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_runic_talismans",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_unique_05",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_proven_tools",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_unique_06",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_runic_production_lines",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_set_dwf_thorek_unique_ancestral_01",
+            skill_key = "wh3_dlc25_skill_dwf_runelord_self_unique_grimnir",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_runelord_unique_ancestral_02",
+                "wh3_dlc25_skill_node_dwf_runelord_unique_ancestral_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_set_dwf_thorek_unique_ancestral_02",
+            skill_key = "wh3_dlc25_skill_dwf_runelord_self_unique_grungni",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_runelord_unique_ancestral_01",
+                "wh3_dlc25_skill_node_dwf_runelord_unique_ancestral_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_set_dwf_thorek_unique_ancestral_03",
+            skill_key = "wh3_dlc25_skill_dwf_runelord_self_unique_valaya",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_runelord_unique_ancestral_01",
+                "wh3_dlc25_skill_node_dwf_runelord_unique_ancestral_02",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_01",
+            skill_key = "wh2_dlc17_skill_dwf_runelord_self_rune_of_speed",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_03",
+            skill_key = "wh_dlc06_skill_dwf_runesmith_self_master_rune_of_oath_&_steel",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_02",
+            skill_key = "wh_dlc06_skill_dwf_runesmith_self_master_rune_of_wrath_&_ruin",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_04",
+            skill_key = "wh_main_skill_dwf_runesmith_self_damping",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_05",
+            skill_key = "wh2_dlc17_skill_dwf_runelord_self_rune_of_slowness",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_06",
+            skill_key = "wh_main_skill_dwf_runesmith_self_forgefire",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_07",
+            skill_key = "wh2_dlc17_skill_dwf_runelord_self_rune_of_breaking",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_08",
+            skill_key = "wh_dlc06_skill_dwf_runelord_self_master_rune_of_negation",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_09",
+            skill_key = "wh_dlc06_skill_dwf_runelord_self_rune_of_hearth_&_home",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_10",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_self_wardbreaker",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_11",
+            skill_key = "wh_dlc06_skill_dwf_runesmith_self_strike_the_runes_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thorek_magic_hidden",
+            skill_key = "wh2_dlc17_skill_dwf_runelord_starting_runes_hidden",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_1_1",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_axe_lord",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_1_2",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tactician",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_1_3",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tradition_and_innovation",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_1_4",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_fire_and_fury",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_1_5",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_grimnirs_heirs",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_1_6",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_thunderer",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_3_1",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_blessed_by_grungni",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_3_2",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_dawi_firepower",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_3_3",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_honoured_by_grimnir",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_3_4",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_morgrims_favoured",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_dwf_thorek_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc25_dwf_daemon_slayer = {
         {
             node_key = "wh3_dlc25_skill_node_dwf_daemon_slayer_deathblow_01",
@@ -925,6 +1413,972 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_main_skill_node_dwf_lord_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc25_dwf_malakai_makaisson = {
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_deathblow_01",
+            skill_key = "wh_dlc08_skill_ability_dummy_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_deathblow_02",
+            skill_key = "wh3_dlc25_skill_dwf_garagrim_determined_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_deathblow_03",
+            skill_key = "wh3_dlc25_skill_dwf_slayer_extremely_daring_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_character_04",
+            skill_key = "wh_main_skill_all_lord_battle_brass-lunged",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_character_01",
+            skill_key = "wh2_dlc10_skill_dwf_generic_oath_of_forging",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_character_02",
+            skill_key = "wh_main_skill_dwf_lord_battle_lord_of_the_deeps",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_character_03",
+            skill_key = "wh_main_skill_dwf_lord_battle_obstinacy",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_character_05",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_unique_1",
+            skill_key = "wh3_dlc25_skill_dwf_malakai_makaisson_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_unique_2",
+            skill_key = "wh3_dlc25_skill_dwf_malakai_makaisson_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_unique_3",
+            skill_key = "wh3_dlc25_skill_dwf_malakai_makaisson_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_unique_4",
+            skill_key = "wh3_dlc25_skill_dwf_malakai_makaisson_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_unique_5",
+            skill_key = "wh3_dlc25_skill_dwf_malakai_makaisson_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_unique_6",
+            skill_key = "wh3_dlc25_skill_dwf_malakai_makaisson_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_01",
+            skill_key = "wh2_dlc11_skill_all_lord_self_survivalist",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_02",
+            skill_key = "wh3_dlc23_skill_chd_lord_self_always_ready",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_03",
+            skill_key = "wh3_dlc23_skill_chd_lord_self_bandolier",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_05",
+            skill_key = "wh_main_skill_dwf_lord_self_ancestral_grudge",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_06",
+            skill_key = "wh3_dlc25_skill_dwf_malakai_makaisson_ability_1",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_08",
+            skill_key = "wh3_dlc23_skill_chd_lord_self_piercing_shots",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_09",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_gunsight",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_10",
+            skill_key = "wh_main_skill_dwf_lord_self_relentless",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_combat_11",
+            skill_key = "wh3_dlc25_skill_dwf_malakai_makaisson_ability_2",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_choice_01",
+            skill_key = "wh3_dlc25_dwf_daemon_slayer_units_1",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_choice_02",
+            skill_key = "wh3_dlc25_dwf_daemon_slayer_units_2_1",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_choice_03",
+            skill_key = "wh3_dlc25_dwf_daemon_slayer_units_2_2",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_02",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_axe_lord",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_03",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tactician",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_04",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tradition_and_innovation",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_05",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_fire_and_fury",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_06",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_grimnirs_heirs",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_07",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_thunderer",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_09",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_blessed_by_grungni",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_10",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_dawi_firepower",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_11",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_honoured_by_grimnir",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_12",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_morgrims_favoured",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_malakai_makaisson_army_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc06_dwf_belegar = {
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_unique_05",
+            skill_key = "wh_dlc06_skill_dwf_lord_unique_belegar_greenskin_slayer",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_unique_11",
+            skill_key = "wh_main_skill_all_lord_battle_brass-lunged",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_unique_10",
+            skill_key = "wh_main_skill_dwf_lord_battle_lord_of_the_deeps",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_unique_12",
+            skill_key = "wh_main_skill_dwf_lord_battle_obstinacy",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_unique_06",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_unique_08",
+            skill_key = "wh_dlc06_skill_dwf_lord_unique_belegar_rally_other_holds",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_unique_07",
+            skill_key = "wh_dlc06_skill_dwf_lord_unique_belegar_gather_the_old_clans",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_unique_09",
+            skill_key = "wh_dlc06_skill_dwf_lord_unique_belegar_reclaimer",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_dwf_belegar_unique_tunnel_warfare",
+            skill_key = "wh2_dlc17_dwf_belegar_unique_tunnel_warfare",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_dwf_belegar_unique_ancestral_guidance",
+            skill_key = "wh2_dlc17_dwf_belegar_unique_ancestral_guidance",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_dwf_belegar_unique_age_of_reconquest",
+            skill_key = "wh2_dlc17_dwf_belegar_unique_age_of_reconquest",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_belegar_choice_01",
+            skill_key = "wh3_dlc25_skill_dwf_lord_unique_units_infantry_01",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_02",
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_03",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_02",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_belegar_choice_02",
+            skill_key = "wh3_dlc25_skill_dwf_lord_unique_units_infantry_02",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_01",
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_03",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_01",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_belegar_choice_03",
+            skill_key = "wh3_dlc25_skill_dwf_lord_unique_units_infantry_03",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_01",
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_02",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_01",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_02",
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_01",
+            skill_key = "wh_main_skill_all_lord_self_full_plate_armour_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_02",
+            skill_key = "wh_main_skill_dwf_lord_self_resolute",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_05",
+            skill_key = "wh_main_skill_dwf_lord_self_ancestral_grudge",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_10",
+            skill_key = "wh_main_skill_dwf_lord_self_relentless",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_02",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_axe_lord",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_03",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tactician",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_04",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tradition_and_innovation",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_05",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_fire_and_fury",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_06",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_grimnirs_heirs",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_07",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_thunderer",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_09",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_blessed_by_grungni",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_10",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_dawi_firepower",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_11",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_honoured_by_grimnir",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_12",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_morgrims_favoured",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_belegar_battle_13",
             skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
             category_key = "battle",
             indent = 4,
@@ -1897,6 +3351,1550 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_main_skill_node_dwf_lord_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_main_dwf_thorgrim_grudgebearer = {
+        {
+            node_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_5",
+            skill_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_5",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_4",
+            skill_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_4",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_7",
+            skill_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_7",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_8",
+            skill_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_8",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_6",
+            skill_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_6",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_unique_09",
+            skill_key = "wh_main_skill_all_lord_battle_brass-lunged",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_unique_06",
+            skill_key = "wh_main_skill_dwf_lord_unique_lord_obdurate",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_unique_08",
+            skill_key = "wh_main_skill_dwf_lord_battle_lord_of_the_deeps",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_unique_10",
+            skill_key = "wh_main_skill_dwf_lord_battle_obstinacy",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_unique_07",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_0",
+            skill_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_1",
+            skill_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_2",
+            skill_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_3",
+            skill_key = "wh_dlc08_skill_dwf_lord_thorgrim_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_unique_05",
+            skill_key = "wh_main_skill_dwf_lord_unique_thorgrim_high_king",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_dwf_lord_thorgrim_unique_5",
+            skill_key = "wh3_dlc25_skill_dwf_unique_thorgrim_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thorgrim_choice_01",
+            skill_key = "wh3_dlc25_skill_dwf_lord_unique_units_infantry_01",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_02",
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_03",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_02",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thorgrim_choice_02",
+            skill_key = "wh3_dlc25_skill_dwf_lord_unique_units_infantry_02",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_01",
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_03",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_01",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thorgrim_choice_03",
+            skill_key = "wh3_dlc25_skill_dwf_lord_unique_units_infantry_03",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_01",
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_02",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_01",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_02",
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_01",
+            skill_key = "wh_main_skill_all_lord_self_full_plate_armour_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_02",
+            skill_key = "wh_main_skill_dwf_lord_self_resolute",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_05",
+            skill_key = "wh_main_skill_dwf_lord_self_ancestral_grudge",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_10",
+            skill_key = "wh_main_skill_dwf_lord_self_relentless",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_02",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_axe_lord",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_03",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tactician",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_04",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tradition_and_innovation",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_05",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_fire_and_fury",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_06",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_grimnirs_heirs",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_07",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_thunderer",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_09",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_blessed_by_grungni",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_10",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_dawi_firepower",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_11",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_honoured_by_grimnir",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_12",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_morgrims_favoured",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_thorgrim_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_main_dwf_ungrim_ironfist = {
+        {
+            node_key = "wh_dlc08_skill_ability_dummy_deathblow",
+            skill_key = "wh_dlc08_skill_ability_dummy_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_unique_ungrim_0",
+            skill_key = "wh_dlc08_skill_unique_ungrim_0",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_unique_ungrim_1",
+            skill_key = "wh_dlc08_skill_unique_ungrim_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_unique_ungrim_2",
+            skill_key = "wh_dlc08_skill_unique_ungrim_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_unique_ungrim_3",
+            skill_key = "wh_dlc08_skill_unique_ungrim_3",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_unique_ungrim_4",
+            skill_key = "wh_dlc08_skill_unique_ungrim_4",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_12",
+            skill_key = "wh_main_skill_all_lord_battle_brass-lunged",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_10",
+            skill_key = "wh2_dlc10_skill_dwf_generic_oath_of_forging",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_11",
+            skill_key = "wh_main_skill_dwf_lord_battle_lord_of_the_deeps",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_13",
+            skill_key = "wh_main_skill_dwf_lord_battle_obstinacy",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_09",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_05",
+            skill_key = "wh_main_skill_dwf_lord_unique_ungrim_slayer",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_03",
+            skill_key = "wh3_dlc25_dwf_daemon_slayer_personal_2_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_06",
+            skill_key = "wh_main_skill_dwf_lord_unique_ungrim_dragon_slayer",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_07",
+            skill_key = "wh_main_skill_dwf_lord_unique_ungrim_daemon_slayer",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_unique_04",
+            skill_key = "wh_dlc08_skill_unique_ungrim_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_unique_ungrim_5",
+            skill_key = "wh_main_skill_dwf_lord_unique_ungrim_slayer_king",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_ungrim_choice_01",
+            skill_key = "wh3_dlc25_dwf_daemon_slayer_units_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_ungrim_choice_02",
+            skill_key = "wh3_dlc25_dwf_daemon_slayer_units_2_1",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_ungrim_choice_03",
+            skill_key = "wh3_dlc25_dwf_daemon_slayer_units_2_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_01",
+            skill_key = "wh_main_skill_all_lord_self_full_plate_armour_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_02",
+            skill_key = "wh_main_skill_dwf_lord_self_resolute",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_05",
+            skill_key = "wh_main_skill_dwf_lord_self_ancestral_grudge",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_10",
+            skill_key = "wh_main_skill_dwf_lord_self_relentless",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_self_11",
+            skill_key = "wh2_main_skill_hef_alastar_unique_heroic_killing_blow",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_02",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_axe_lord",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_03",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tactician",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_04",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tradition_and_innovation",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_05",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_fire_and_fury",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_06",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_grimnirs_heirs",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_07",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_thunderer",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_09",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_blessed_by_grungni",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_10",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_dawi_firepower",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_11",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_honoured_by_grimnir",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_12",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_morgrims_favoured",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_ungrim_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_pro01_dwf_grombrindal = {
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_unique_05",
+            skill_key = "wh_pro01_skill_dwf_lord_unique_grombrindal_dilemma",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_unique_09",
+            skill_key = "wh_main_skill_all_lord_battle_brass-lunged",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_unique_07",
+            skill_key = "wh2_dlc10_skill_dwf_generic_oath_of_forging",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_unique_08",
+            skill_key = "wh_main_skill_dwf_lord_battle_lord_of_the_deeps",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_unique_10",
+            skill_key = "wh_main_skill_dwf_lord_battle_obstinacy",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_unique_06",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_unique_12",
+            skill_key = "wh2_dlc17_dwf_grombrindal_unique_mountainstrider",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_unique_11",
+            skill_key = "wh_pro01_skill_dwf_lord_unique_grombrindal_bonus_when_defending",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_dwf_grombrindal_unique_mythical_stature",
+            skill_key = "wh2_dlc17_dwf_grombrindal_unique_mythical_stature",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_dwf_grombrindal_unique_rouse_the_engineers",
+            skill_key = "wh2_dlc17_dwf_grombrindal_unique_rouse_the_engineers",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_dwf_grombrindal_unique_grimnirs_resolve",
+            skill_key = "wh2_dlc17_dwf_grombrindal_unique_age_of_vengeance",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_dwf_grombrindal_unique_age_of_vengeance",
+            skill_key = "wh2_dlc17_dwf_grombrindal_unique_grimnirs_resolve",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_grombrindal_choice_01",
+            skill_key = "wh3_dlc25_skill_dwf_lord_unique_units_infantry_01",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_02",
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_03",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_02",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_grombrindal_choice_02",
+            skill_key = "wh3_dlc25_skill_dwf_lord_unique_units_infantry_02",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_01",
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_03",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_01",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_grombrindal_choice_03",
+            skill_key = "wh3_dlc25_skill_dwf_lord_unique_units_infantry_03",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_01",
+                "wh3_dlc25_skill_node_dwf_mikael_leadstrong_unique_melee_units_02",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_01",
+                "wh_dlc25_skill_node_dwf_lord_unique_melee_units_02",
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_01",
+            skill_key = "wh_main_skill_all_lord_self_full_plate_armour_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_02",
+            skill_key = "wh_main_skill_dwf_lord_self_resolute",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_05",
+            skill_key = "wh_main_skill_dwf_lord_self_ancestral_grudge",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_10",
+            skill_key = "wh_main_skill_dwf_lord_self_relentless",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_self_11",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_02",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_axe_lord",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_03",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tactician",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_04",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_tradition_and_innovation",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_05",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_fire_and_fury",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_06",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_grimnirs_heirs",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_07",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_thunderer",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_09",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_blessed_by_grungni",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_10",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_dawi_firepower",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_11",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_honoured_by_grimnir",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_12",
+            skill_key = "wh2_dlc11_skill_dwf_army_buff_morgrims_favoured",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_pro01_skill_node_dwf_grombrindal_battle_13",
             skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
             category_key = "battle",
             indent = 4,

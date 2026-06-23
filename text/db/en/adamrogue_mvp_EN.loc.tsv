@@ -19,13 +19,15 @@ cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_battle_d
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_battle_dilemmaSECOND	Battle Later	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_battle_dilemmaSECOND	Do not spawn the enemy army now. Close the dilemma and reopen the same battle event through the formal entry.	false
 dilemmas_localised_title_adamrogue_mvp_equipment_reward_dilemma	AdamRogue MVP: Claim Equipment	false
-dilemmas_localised_description_adamrogue_mvp_equipment_reward_dilemma	After a battle victory, this run's equipment reward waits for manual claim. Choose 1 item to add to the faction inventory from 3 fixed slots: weapon, armour, and accessory/magic item.	false
+dilemmas_localised_description_adamrogue_mvp_equipment_reward_dilemma	After a battle victory, this run's equipment reward waits for manual claim. Choose 1 item to add to the faction inventory from 4 candidates: weapon, armour, accessory/magic item, plus 1 wildcard pick from any category.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_equipment_reward_dilemmaFIRST	Claim Weapon Candidate	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_equipment_reward_dilemmaFIRST	Claim the item generated for this run's weapon reward slot, then continue directly into the destination choice event.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_equipment_reward_dilemmaSECOND	Claim Armour Candidate	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_equipment_reward_dilemmaSECOND	Claim the item generated for this run's armour reward slot, then continue directly into the destination choice event.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_equipment_reward_dilemmaTHIRD	Claim Accessory Candidate	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_equipment_reward_dilemmaTHIRD	Claim the item generated for this run's accessory reward slot, then continue directly into the destination choice event.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_equipment_reward_dilemmaFOURTH	Claim Wildcard Candidate	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_equipment_reward_dilemmaFOURTH	Claim the wildcard equipment candidate rolled from any category (weapon, armour, enchanted item, or talisman), then continue directly into the destination choice event.	false
 dilemmas_localised_title_adamrogue_mvp_destination_dilemma	AdamRogue MVP: Choose Destination	false
 dilemmas_localised_description_adamrogue_mvp_destination_dilemma	The equipment reward has been resolved. Choose the next faction-node for this run; later enemy armies and equipment rewards will use the new node faction context.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_destination_dilemmaFIRST	Go To Candidate A	false

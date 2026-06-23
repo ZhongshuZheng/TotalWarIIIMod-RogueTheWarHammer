@@ -498,6 +498,846 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc20_kho_valkia = {
+        {
+            node_key = "wh3_dlc20_skill_node_valkia_authority",
+            skill_key = "wh3_dlc20_skill_authority_kho_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_unique_7",
+            skill_key = "wh_main_skill_chs_lord_battle_hearts_of_iron",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_unique_8",
+            skill_key = "wh_main_skill_chs_lord_battle_voice_of_the_dark_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_unique_9",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_unique_01",
+            skill_key = "wh3_dlc20_skill_chs_valkia_unique_bringer_of_glory",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_unique_2",
+            skill_key = "wh3_dlc20_skill_chs_valkia_unique_queen_of_the_schwarzwulf",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_unique_3",
+            skill_key = "wh3_dlc20_skill_chs_valkia_unique_rise_again",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_unique_4",
+            skill_key = "wh3_dlc20_skill_chs_valkia_unique_scorn_the_coward",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_unique_5",
+            skill_key = "wh3_dlc20_skill_chs_valkia_unique_blood_raven",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_unique_6",
+            skill_key = "wh3_dlc20_skill_chs_valkia_unique_sword_maiden_of_khorne",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_1",
+            skill_key = "wh_main_skill_chs_lord_self_eye_of_the_gods",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_5",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_6",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_7",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_8",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_9",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_10",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_self_11",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_1",
+            skill_key = "wh_main_skill_chs_lord_battle_dominating_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_2",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_chaos_vanguard",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_3",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_savage_bloodlust",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_4",
+            skill_key = "wh3_dlc20_skill_chs_army_buff_warpfire",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_5",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_hammer_to_the_anvil",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_6",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_monstrous_strength",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_7",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_doomfire",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_8",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_9",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_legion_of_doom",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_10",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_speed_and_malice",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_11",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_freakish_mutations",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_12",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_guided_by_tzeentch",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_kho_valkia_battle_13",
+            skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_13",
+                "wh2_dlc11_skill_node_nor_throgg_battle_13",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_13",
+                "wh3_dlc27_skill_node_nor_sayl_battle_13",
+                "wh3_main_ie_nor_azrik_battle_13",
+                "wh3_main_ie_nor_burplesmirk_battle_13",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
+            }
+        },
+    },
+    wh3_dlc26_kho_arbaal_the_undefeated = {
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_mount_flesh_hound",
+            skill_key = "wh3_dlc26_skill_mount_kho_arbaal_flesh_hound",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_lord_scaling_movement",
+            skill_key = "wh3_dlc26_skill_kho_lord_scaling_movement",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_character_hates_slaanesh",
+            skill_key = "wh3_main_skill_kho_generic_hates_slaanesh",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_character_thick_skin",
+            skill_key = "wh3_main_skill_kho_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_character_brass_collar",
+            skill_key = "wh3_main_skill_kho_all_unique_magic_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_unique_1",
+            skill_key = "wh3_dlc26_skill_kho_arbaal_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_unique_2",
+            skill_key = "wh3_dlc26_skill_kho_arbaal_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_unique_3",
+            skill_key = "wh3_dlc26_skill_kho_arbaal_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_unique_4",
+            skill_key = "wh3_dlc26_skill_kho_arbaal_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_unique_5",
+            skill_key = "wh3_dlc26_skill_kho_arbaal_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_unique_6",
+            skill_key = "wh3_dlc26_skill_kho_arbaal_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_1",
+            skill_key = "wh_main_skill_chs_lord_self_eye_of_the_gods",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_2",
+            skill_key = "wh3_main_skill_kho_lord_self_1_1",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_3",
+            skill_key = "wh3_main_skill_kho_lord_self_1_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_4",
+            skill_key = "wh3_dlc26_skill_kho_lord_self_1_3_arbaal",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_5",
+            skill_key = "wh3_main_skill_kho_lord_self_1_4",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_6",
+            skill_key = "wh3_main_skill_kho_exalted_bloodthirster_self_bloodthirst",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_7",
+            skill_key = "wh3_main_skill_kho_lord_self_3_1",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_8",
+            skill_key = "wh3_main_skill_kho_lord_self_3_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_9",
+            skill_key = "wh3_main_skill_kho_lord_self_3_3",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_10",
+            skill_key = "wh3_main_skill_kho_lord_self_3_4",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_self_11",
+            skill_key = "wh3_main_skill_kho_exalted_bloodthirster_self_deathbringer",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_1",
+            skill_key = "wh_main_skill_chs_lord_battle_dominating_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_2",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_3",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_4",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_5",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_6",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_7",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_8",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_9",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_10",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_11",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_arbaal_battle_12",
+            skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_13",
+                "wh2_dlc11_skill_node_nor_throgg_battle_13",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_13",
+                "wh3_dlc27_skill_node_nor_sayl_battle_13",
+                "wh3_main_ie_nor_azrik_battle_13",
+                "wh3_main_ie_nor_burplesmirk_battle_13",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
+            }
+        },
+    },
     wh3_dlc26_kho_bloodspeaker = {
         {
             node_key = "wh3_dlc26_skill_node_kho_bloodspeaker_mount_chaos_steed",
@@ -1099,6 +1939,452 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc26_kho_skulltaker = {
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_mount_blood_throne",
+            skill_key = "wh3_dlc26_skill_mount_kho_skulltaker_blood_throne",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_mount_juggernaut_kuhltyran",
+            skill_key = "wh3_dlc26_skill_mount_kho_skulltaker_juggernaut_kuhltyran",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_lord_scaling_movement",
+            skill_key = "wh3_dlc26_skill_kho_lord_scaling_movement",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_character_hates_slaanesh",
+            skill_key = "wh3_main_skill_kho_generic_hates_slaanesh",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_khornes_favor",
+            skill_key = "wh3_dlc26_skill_kho_skulltaker_unique_0",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_character_thick_skin",
+            skill_key = "wh3_main_skill_kho_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_character_brass_collar",
+            skill_key = "wh3_main_skill_kho_all_unique_magic_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_unique_01",
+            skill_key = "wh3_dlc26_skill_kho_skulltaker_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_unique_02",
+            skill_key = "wh3_dlc26_skill_kho_skulltaker_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_unique_03",
+            skill_key = "wh3_dlc26_skill_kho_skulltaker_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_unique_04",
+            skill_key = "wh3_dlc26_skill_kho_skulltaker_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_unique_05",
+            skill_key = "wh3_dlc26_skill_kho_skulltaker_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_unique_06",
+            skill_key = "wh3_dlc26_skill_kho_skulltaker_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_01",
+            skill_key = "wh_main_skill_chs_lord_self_eye_of_the_gods",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_02",
+            skill_key = "wh3_main_skill_kho_lord_self_1_1",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_03",
+            skill_key = "wh3_main_skill_kho_lord_self_1_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_04",
+            skill_key = "wh3_main_skill_kho_lord_self_1_3",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_05",
+            skill_key = "wh3_main_skill_kho_lord_self_1_4",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_07",
+            skill_key = "wh3_main_skill_kho_lord_self_3_1",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_08",
+            skill_key = "wh3_main_skill_kho_lord_self_3_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_09",
+            skill_key = "wh3_main_skill_kho_lord_self_3_3",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_10",
+            skill_key = "wh3_main_skill_kho_lord_self_3_4",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_01",
+            skill_key = "wh_main_skill_chs_lord_battle_dominating_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_02",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_03",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_04",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_05",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_06",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_07",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_08",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_09",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_10",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_11",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_skulltaker_battle_12",
+            skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_13",
+                "wh2_dlc11_skill_node_nor_throgg_battle_13",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_13",
+                "wh3_dlc27_skill_node_nor_sayl_battle_13",
+                "wh3_main_ie_nor_azrik_battle_13",
+                "wh3_main_ie_nor_burplesmirk_battle_13",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
             }
         },
     },
@@ -2019,6 +3305,404 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh3_main_skill_node_kho_herald_of_khorne_army_4",
+            skill_key = "wh3_main_skill_kho_lord_army_revel_in_slaughter",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_kho_skarbrand = {
+        {
+            node_key = "wh3_dlc26_skill_node_kho_lord_scaling_movement",
+            skill_key = "wh3_dlc26_skill_kho_lord_scaling_movement",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_character_hates_slaanesh",
+            skill_key = "wh3_main_skill_kho_generic_hates_slaanesh",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_character_thick_skin",
+            skill_key = "wh3_main_skill_kho_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_kho_character_brass_collar",
+            skill_key = "wh3_main_skill_kho_all_unique_magic_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_unique_0",
+            skill_key = "wh3_main_skill_kho_skarbrand_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_unique_1_1",
+            skill_key = "wh3_main_skill_kho_skarbrand_unique_1_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_unique_1_2",
+            skill_key = "wh3_main_skill_kho_skarbrand_unique_1_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_unique_1_3",
+            skill_key = "wh3_main_skill_kho_skarbrand_unique_1_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_unique_1_4",
+            skill_key = "wh3_main_skill_kho_skarbrand_unique_1_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_unique_2",
+            skill_key = "wh3_main_skill_kho_skarbrand_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_0",
+            skill_key = "wh3_main_skill_kho_all_self_brutal_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_1_1",
+            skill_key = "wh3_main_skill_kho_lord_self_1_1",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_1_2",
+            skill_key = "wh3_main_skill_kho_lord_self_1_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_1_3",
+            skill_key = "wh3_main_skill_kho_lord_self_1_3",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_1_4",
+            skill_key = "wh3_main_skill_kho_lord_self_1_4",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_2",
+            skill_key = "wh3_main_skill_kho_skarbrand_self_bellow_of_endless_fury",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_3_1",
+            skill_key = "wh3_main_skill_kho_lord_self_3_1",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_3_2",
+            skill_key = "wh3_main_skill_kho_lord_self_3_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_3_3",
+            skill_key = "wh3_main_skill_kho_lord_self_3_3",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_3_4",
+            skill_key = "wh3_main_skill_kho_lord_self_3_4",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_self_4",
+            skill_key = "wh3_main_skill_kho_skarbrand_self_fuelled_by_rage",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_1_1",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_1_2",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_1_3",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_1_5",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_1_6",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_1_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_2",
+            skill_key = "wh3_main_skill_kho_lord_army_kill_for_khorne",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_3_1",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_3_2",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_3_3",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_3_4",
+            skill_key = "wh3_main_skill_kho_lord_army_buff_3_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_kho_skarbrand_army_4",
             skill_key = "wh3_main_skill_kho_lord_army_revel_in_slaughter",
             category_key = "battle",
             indent = 4,

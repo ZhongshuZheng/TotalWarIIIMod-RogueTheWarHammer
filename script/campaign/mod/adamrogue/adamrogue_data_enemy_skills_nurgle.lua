@@ -944,6 +944,428 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc20_nur_festus = {
+        {
+            node_key = "wh3_dlc20_skill_node_festus_magic_dummy",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_dummy_miasma_of_pestilence_stream_of_corruption",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_festus_authority",
+            skill_key = "wh3_dlc20_skill_authority_nur_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_unique_8",
+            skill_key = "wh_main_skill_chs_lord_battle_voice_of_the_dark_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_unique_9",
+            skill_key = "wh_main_skill_chs_lord_battle_hearts_of_iron",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_unique_7",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_unique_1",
+            skill_key = "wh3_dlc20_skill_chs_festus_unique_sample_collection",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_unique_2",
+            skill_key = "wh3_dlc20_skill_chs_festus_unique_doctors_orders",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_unique_3",
+            skill_key = "wh3_dlc20_skill_chs_festus_unique_bedside_manner",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_unique_4",
+            skill_key = "wh3_dlc20_skill_chs_festus_unique_apple_a_day",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_unique_5",
+            skill_key = "wh3_dlc20_skill_chs_festus_unique_clinical_hygiene",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_unique_6",
+            skill_key = "wh3_dlc20_skill_chs_festus_unique_gardener_of_nurgle",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_1",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_01_miasma_of_pestilence_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_2",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_05_children_of_nurgle",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_3",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_02_stream_of_corruption_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_4",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_03_curse_of_the_leper_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_5",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_04_rancid_visitations_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_6",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_7",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_06_fleshy_abundance_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_8",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_07_blight_boil_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_9",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_10",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_festus_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_1",
+            skill_key = "wh_main_skill_chs_lord_battle_dominating_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_2",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_chaos_vanguard",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_3",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_savage_bloodlust",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_4",
+            skill_key = "wh3_dlc20_skill_chs_army_buff_warpfire",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_5",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_hammer_to_the_anvil",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_6",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_monstrous_strength",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_7",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_doomfire",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_8",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_9",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_legion_of_doom",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_10",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_speed_and_malice",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_11",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_freakish_mutations",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_12",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_guided_by_tzeentch",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_nur_festus_battle_13",
+            skill_key = "wh_main_skill_chs_lord_battle_stand_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc25_chs_lord_mnur = {
         {
             node_key = "wh3_dlc25_skill_node_chs_lord_mnur_chaos_steed",
@@ -1385,6 +1807,834 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc25_nur_epidemius = {
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_0",
+            skill_key = "wh3_main_skill_nur_generic_hates_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_self_3",
+            skill_key = "wh3_dlc25_nur_epidemius_ability_slime_trail",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_self_2",
+            skill_key = "wh3_main_skill_nur_locus_of_virulence",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_1",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_self_4",
+            skill_key = "wh3_main_skill_nur_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_unique_0",
+            skill_key = "wh3_dlc25_nur_epidemius_personal_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_unique_1",
+            skill_key = "wh3_dlc25_nur_epidemius_personal_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_unique_2",
+            skill_key = "wh3_dlc25_nur_epidemius_personal_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_unique_3",
+            skill_key = "wh3_dlc25_nur_epidemius_personal_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_unique_4",
+            skill_key = "wh3_dlc25_nur_epidemius_personal_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_unique_5",
+            skill_key = "wh3_dlc25_nur_epidemius_personal_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_0",
+            skill_key = "wh3_dlc25_nur_epidemius_battle_ability_0",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_01",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_05",
+            skill_key = "wh3_dlc25_nur_epidemius_battle_ability_1",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_06",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_epidemius_battle_self_10",
+            skill_key = "wh3_main_skill_nur_all_combat_pestilent_decay",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_2",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_3",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_4",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_5",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_6",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_2",
+            skill_key = "wh3_main_skill_nur_lord_army_blight_swarm",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_1",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_2",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_3",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_4",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_4",
+            skill_key = "wh3_main_skill_nur_lord_army_virulent_contagion",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc25_nur_tamurkhan = {
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_mount_toad_dragon_bubebolos",
+            skill_key = "wh3_dlc25_skill_nur_tamurkhan_toad_dragon_bubebolos",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_unique_0",
+            skill_key = "wh3_main_skill_nur_generic_hates_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_unique_1",
+            skill_key = "wh3_main_skill_nur_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_unique_2",
+            skill_key = "wh_main_skill_chs_lord_battle_voice_of_the_dark_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_unique_3",
+            skill_key = "wh3_dlc25_nur_tamurkhan_unique_1",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_unique_4",
+            skill_key = "wh3_dlc25_nur_tamurkhan_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_personal_1",
+            skill_key = "wh3_dlc25_nur_tamurkhan_personal_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_personal_2",
+            skill_key = "wh3_dlc25_nur_tamurkhan_personal_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_personal_3",
+            skill_key = "wh3_dlc25_nur_tamurkhan_personal_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_personal_4",
+            skill_key = "wh3_dlc25_nur_tamurkhan_personal_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_personal_5",
+            skill_key = "wh3_dlc25_nur_tamurkhan_personal_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_personal_0",
+            skill_key = "wh3_dlc25_nur_tamurkhan_personal_0",
+            category_key = "character",
+            indent = 1,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_0",
+            skill_key = "wh_main_skill_chs_lord_self_eye_of_the_gods",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_2",
+            skill_key = "wh3_main_skill_nur_all_combat_fetid_stench",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_fleet-footed",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_3_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_tamurkhan_combat_4",
+            skill_key = "wh3_main_skill_nur_all_combat_pestilent_decay",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_2",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_3",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_4",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_5",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_6",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_2",
+            skill_key = "wh3_main_skill_nur_lord_army_blight_swarm",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_1",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_2",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_3",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_4",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_4",
+            skill_key = "wh3_main_skill_nur_lord_army_virulent_contagion",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -3341,6 +4591,548 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_nur_kugath = {
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_0",
+            skill_key = "wh3_main_skill_nur_generic_hates_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_1",
+            skill_key = "wh3_main_skill_nur_generic_hates_dwarfs",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_2",
+            skill_key = "wh3_main_skill_nur_kugath_self_plaguefathers_oration",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_3",
+            skill_key = "wh3_main_skill_nur_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_4",
+            skill_key = "wh3_main_skill_nur_kugath_self_nurgling_tide",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_5",
+            skill_key = "wh3_main_skill_nur_kugath_self_3",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_6",
+            skill_key = "wh3_main_skill_nur_kugath_growth_postbattle",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_7",
+            skill_key = "wh3_main_skill_nur_kugath_self_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_8",
+            skill_key = "wh3_main_skill_nur_kugath_self_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_set_nur_kugath_self_9",
+            skill_key = "wh3_main_skill_nur_kugath_self_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_0",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit_starter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadeye",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_survivalist",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_2",
+            skill_key = "wh3_main_skill_nur_all_combat_fetid_stench",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_3_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_combat_4",
+            skill_key = "wh3_main_skill_nur_all_combat_pestilent_decay",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_0",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_01_miasma_of_pestilence_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_1_1",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_05_children_of_nurgle",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_1_2",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_02_stream_of_corruption_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_1_3",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_03_curse_of_the_leper_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_1_4",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_04_rancid_visitations_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_3_3",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_06_fleshy_abundance_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_3_4",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_07_blight_boil_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_magic_dummy",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_dummy_miasma_of_pestilence_stream_of_corruption",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_2",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_3",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_4",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_5",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_1_6",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_1_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_2",
+            skill_key = "wh3_main_skill_nur_lord_army_blight_swarm",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_1",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_2",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_3",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_3_4",
+            skill_key = "wh3_main_skill_nur_lord_army_buff_3_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_kugath_army_4",
+            skill_key = "wh3_main_skill_nur_lord_army_virulent_contagion",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },

@@ -6648,6 +6648,2080 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh2_dlc11_cst_aranessa = {
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_aranessa_00",
+            skill_key = "wh2_dlc11_skill_cst_mount_aranessa_rotting_promethean",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_aranessa_01",
+            skill_key = "wh2_dlc11_skill_cst_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_aranessa_02",
+            skill_key = "wh2_dlc11_skill_cst_misc_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_unique_00",
+            skill_key = "wh2_dlc11_skill_cst_aranessa_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_unique_01",
+            skill_key = "wh2_dlc11_skill_cst_aranessa_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_unique_02",
+            skill_key = "wh2_dlc11_skill_cst_aranessa_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_unique_03",
+            skill_key = "wh2_dlc11_skill_cst_aranessa_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_unique_04",
+            skill_key = "wh2_dlc11_skill_cst_aranessa_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_unique_05",
+            skill_key = "wh2_dlc11_skill_cst_aranessa_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_crime_04",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_0",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_05",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_crime_05",
+            skill_key = "wh2_dlc11_skill_cst_smuggler_aranessa",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_crime_06",
+            skill_key = "wh2_dlc11_skill_cst_poacher_aranessa",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_crime_07",
+            skill_key = "wh2_dlc11_skill_cst_arsonist_aranessa",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_00",
+            skill_key = "wh2_dlc11_skill_cst_personal_0_monkey_jacket",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_01",
+            skill_key = "wh2_dlc11_skill_all_lord_self_swashbuckler",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_02",
+            skill_key = "wh2_dlc11_skill_vmp_lord_self_master_strike",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_05",
+            skill_key = "wh2_dlc11_skill_cst_personal_5_taunt",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_06",
+            skill_key = "wh2_dlc11_skill_cst_lord_self_cutlass",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wild-eyed",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_personal_10",
+            skill_key = "wh2_dlc11_skill_cst_personal_10_hornswaggle",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_00",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_01",
+            skill_key = "wh2_dlc11_skill_cst_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_02",
+            skill_key = "wh2_dlc11_skill_cst_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_03",
+            skill_key = "wh2_dlc11_skill_cst_army_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_04",
+            skill_key = "wh2_dlc11_skill_cst_army_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_05",
+            skill_key = "wh2_dlc11_skill_cst_army_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_06",
+            skill_key = "wh2_dlc11_skill_cst_army_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_07_avast_ye",
+            skill_key = "wh2_dlc11_skill_cst_army_7_avast_ye",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_08",
+            skill_key = "wh2_dlc11_skill_cst_army_8",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_09",
+            skill_key = "wh2_dlc11_skill_cst_army_9",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_10",
+            skill_key = "wh2_dlc11_skill_cst_army_10",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_11",
+            skill_key = "wh2_dlc11_skill_cst_army_11",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_aranessa_army_12_all_hands_hoay",
+            skill_key = "wh2_dlc11_skill_cst_army_12_all_hands_hoay",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc11_cst_cylostra = {
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_cylostra_00",
+            skill_key = "wh2_dlc11_skill_cst_mount_cylostra_rotting_leviathan",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_cylostra_01",
+            skill_key = "wh2_dlc11_skill_cst_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_cylostra_02",
+            skill_key = "wh2_dlc11_skill_cst_misc_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_0",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_1",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 2 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_2",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_3",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_cst_cylostra_unique_4",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_4",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_cst_cylostra_unique_3",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_5",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_5",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_6",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_6",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_7",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_7",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_8",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_8",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_unique_9",
+            skill_key = "wh2_dlc11_skill_cst_cylostra_unique_9",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_01",
+            skill_key = "wh2_dlc11_skill_all_magic_deep_01_spiteful_shot",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_03",
+            skill_key = "wh2_dlc11_skill_all_magic_deep_03_lore_attribute",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_02",
+            skill_key = "wh2_dlc11_skill_all_magic_deep_02_tidecall_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_04",
+            skill_key = "wh2_dlc11_skill_all_magic_deep_04_denizens_of_the_deep_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_05",
+            skill_key = "wh2_dlc11_skill_all_magic_deep_05_fog_of_the_damned_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_07",
+            skill_key = "wh2_dlc11_skill_all_magic_deep_09_krakens_pull_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_08",
+            skill_key = "wh2_dlc11_skill_all_magic_deep_10_ghost_ship_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_09",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_10",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_cylostra_magic_00_dummy",
+            skill_key = "wh2_dlc11_skill_all_magic_deep_dummy_spiteful_shot_tidecall",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_00",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_01",
+            skill_key = "wh2_dlc11_skill_cst_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_02",
+            skill_key = "wh2_dlc11_skill_cst_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_03",
+            skill_key = "wh2_dlc11_skill_cst_army_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_04",
+            skill_key = "wh2_dlc11_skill_cst_army_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_05",
+            skill_key = "wh2_dlc11_skill_cst_army_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_06",
+            skill_key = "wh2_dlc11_skill_cst_army_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_07_avast_ye",
+            skill_key = "wh2_dlc11_skill_cst_army_7_avast_ye",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_08",
+            skill_key = "wh2_dlc11_skill_cst_army_8",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_09",
+            skill_key = "wh2_dlc11_skill_cst_army_9",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_10",
+            skill_key = "wh2_dlc11_skill_cst_army_10",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_11",
+            skill_key = "wh2_dlc11_skill_cst_army_11",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_cylostra_army_12_all_hands_hoay",
+            skill_key = "wh2_dlc11_skill_cst_army_12_all_hands_hoay",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc11_cst_harkon = {
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_harkon_00",
+            skill_key = "wh2_dlc11_skill_cst_mount_harkon_death_shriek_terrorgheist",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_harkon_01",
+            skill_key = "wh2_dlc11_skill_cst_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_harkon_02",
+            skill_key = "wh2_dlc11_skill_cst_misc_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_unique_00",
+            skill_key = "wh2_dlc11_skill_cst_luthor_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_unique_01",
+            skill_key = "wh2_dlc11_skill_cst_luthor_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_unique_02",
+            skill_key = "wh2_dlc11_skill_cst_luthor_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_unique_03",
+            skill_key = "wh2_dlc11_skill_cst_luthor_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_unique_04",
+            skill_key = "wh2_dlc11_skill_cst_luthor_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_unique_05",
+            skill_key = "wh2_dlc11_skill_cst_luthor_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_crime_00",
+            skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_crime_01",
+            skill_key = "wh_dlc11_skill_cst_lord_self_supernatural_horror",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_crime_02",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_0",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_05",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_crime_03",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_1",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_05",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_crime_04",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_2_sword",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_05",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_cst_harkon_crime_05",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_3",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_00",
+            skill_key = "wh2_dlc11_skill_cst_personal_0_monkey_jacket",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_01",
+            skill_key = "wh2_dlc11_skill_all_lord_self_swashbuckler",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_02",
+            skill_key = "wh2_dlc11_skill_vmp_lord_self_master_strike",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_05",
+            skill_key = "wh2_dlc11_skill_cst_personal_5_taunt",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_06",
+            skill_key = "wh2_dlc11_skill_cst_lord_self_cutlass",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_vampiric_leap",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wild-eyed",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_personal_10",
+            skill_key = "wh2_dlc11_skill_cst_personal_10_hornswaggle",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_00",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_01",
+            skill_key = "wh2_dlc11_skill_cst_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_02",
+            skill_key = "wh2_dlc11_skill_cst_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_03",
+            skill_key = "wh2_dlc11_skill_cst_army_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_04",
+            skill_key = "wh2_dlc11_skill_cst_army_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_05",
+            skill_key = "wh2_dlc11_skill_cst_army_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_06",
+            skill_key = "wh2_dlc11_skill_cst_army_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_07_avast_ye",
+            skill_key = "wh2_dlc11_skill_cst_army_7_avast_ye",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_08",
+            skill_key = "wh2_dlc11_skill_cst_army_8",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_09",
+            skill_key = "wh2_dlc11_skill_cst_army_9",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_10",
+            skill_key = "wh2_dlc11_skill_cst_army_10",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_11",
+            skill_key = "wh2_dlc11_skill_cst_army_11",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_harkon_army_12_all_hands_hoay",
+            skill_key = "wh2_dlc11_skill_cst_army_12_all_hands_hoay",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc11_cst_noctilus = {
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_noctilus_00",
+            skill_key = "wh2_dlc11_skill_cst_mount_noctilus_necrofex_colossus",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_noctilus_01",
+            skill_key = "wh2_dlc11_skill_cst_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_noctilus_02",
+            skill_key = "wh2_dlc11_skill_cst_misc_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_unique_00",
+            skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_unique_01",
+            skill_key = "wh2_dlc11_skill_cst_noctilus_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_unique_02",
+            skill_key = "wh2_dlc11_skill_cst_noctilus_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_unique_03",
+            skill_key = "wh2_dlc11_skill_cst_noctilus_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_unique_04",
+            skill_key = "wh2_dlc11_skill_cst_noctilus_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_unique_05",
+            skill_key = "wh2_dlc11_skill_cst_noctilus_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_unique_06",
+            skill_key = "wh2_dlc11_skill_cst_noctilus_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_00",
+            skill_key = "wh2_dlc11_skill_cst_personal_0_monkey_jacket",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_01",
+            skill_key = "wh2_dlc11_skill_all_lord_self_swashbuckler",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_02",
+            skill_key = "wh2_dlc11_skill_vmp_lord_self_master_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_05",
+            skill_key = "wh2_dlc11_skill_cst_personal_5_taunt",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_06",
+            skill_key = "wh2_dlc11_skill_cst_lord_self_cutlass",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_vampiric_leap",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wild-eyed",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_personal_10",
+            skill_key = "wh2_dlc11_skill_cst_personal_10_hornswaggle",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_01",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_02",
+            skill_key = "wh_main_skill_vmp_magic_vampires_03_the_curse_of_undeath",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_03",
+            skill_key = "wh_main_skill_vmp_magic_vampires_01_invocation_of_nehek",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_04",
+            skill_key = "wh2_dlc11_skill_cst_magic_vampires_05_drowned_dead_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_05",
+            skill_key = "wh2_main_skill_magic_shadow_the_withering_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_extra_passive",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_09",
+            skill_key = "wh2_main_skill_magic_shadow_pit_of_shades_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_10",
+            skill_key = "wh2_main_skill_vmp_magic_vampires_10_wind_of_death_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_cst_noctilus_death_magic_00_dummy",
+            skill_key = "wh2_dlc11_skill_magic_dummy_nocitlus",
+            category_key = "character",
+            indent = 3,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_00",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_01",
+            skill_key = "wh2_dlc11_skill_cst_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_02",
+            skill_key = "wh2_dlc11_skill_cst_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_03",
+            skill_key = "wh2_dlc11_skill_cst_army_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_04",
+            skill_key = "wh2_dlc11_skill_cst_army_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_05",
+            skill_key = "wh2_dlc11_skill_cst_army_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_06",
+            skill_key = "wh2_dlc11_skill_cst_army_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_07_avast_ye",
+            skill_key = "wh2_dlc11_skill_cst_army_7_avast_ye",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_08",
+            skill_key = "wh2_dlc11_skill_cst_army_8",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_09",
+            skill_key = "wh2_dlc11_skill_cst_army_9",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_10",
+            skill_key = "wh2_dlc11_skill_cst_army_10",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_11",
+            skill_key = "wh2_dlc11_skill_cst_army_11",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_noctilus_army_12_all_hands_hoay",
+            skill_key = "wh2_dlc11_skill_cst_army_12_all_hands_hoay",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
 }
 
 return data

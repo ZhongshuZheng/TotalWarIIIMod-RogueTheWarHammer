@@ -4,6 +4,502 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh_dlc05_wef_argwylon"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh2_dlc16_wef_drycha = {
+        {
+            node_key = "wh2_dlc16_drycha_misc_1",
+            skill_key = "wh_dlc05_skill_wef_ancient_treeman_unique_ap_damage_treekin",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_drycha_misc_2",
+            skill_key = "wh_dlc05_skill_wef_ancient_treeman_unique_damage_resistance_treekin",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_drycha_misc_3",
+            skill_key = "wh2_dlc16_skill_unique_malicious_treemen_dark_heart",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_drycha_misc_4",
+            skill_key = "wh2_dlc16_skill_unique_malicious_treemen_beasts_scent_of_blood",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_unique_0",
+            skill_key = "wh2_dlc16_wef_drycha_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_unique_1",
+            skill_key = "wh2_dlc16_wef_drycha_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_unique_2",
+            skill_key = "wh2_dlc16_wef_drycha_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_unique_3",
+            skill_key = "wh2_dlc16_wef_drycha_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_unique_4",
+            skill_key = "wh2_dlc16_wef_drycha_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_unique_5",
+            skill_key = "wh2_dlc16_wef_drycha_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_melee_0",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_melee_1",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_endurance_of_the_oak",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_melee_2",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_impenetrable_bark",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_melee_3",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_tempered_rigour",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_melee_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_violent_delights",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_drycha_melee_5",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_0",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_1",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_2",
+            skill_key = "wh2_main_skill_magic_shadow_enfeebling_foe_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_3",
+            skill_key = "wh2_main_skill_magic_shadow_the_withering_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_4",
+            skill_key = "wh2_main_skill_magic_shadow_penumbral_pendulum_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_5",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_8",
+            skill_key = "wh2_main_skill_magic_shadow_pit_of_shades_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_9",
+            skill_key = "wh2_main_skill_magic_shadow_okkams_mindrazor_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_6",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_7",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_10",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_drycha_magic_dummy",
+            skill_key = "wh2_main_skill_magic_shadow_mystifying_miasma_enfeebling_foe",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_1_1",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_piercing_thorns",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_1_2",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_bolts_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_1_3",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_striking_branches",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_1_4",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_swinging_boughs",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_1_5",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_ancient_bark",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_1_6",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_wings_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_3_1",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_shield_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_3_2",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_natures_quiver",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_3_3",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_swift_and_sturdy",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_3_4",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_the_forests_roar",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_drycha_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_dlc16_wef_malicious_ancient_treeman_beasts = {
         {
             node_key = "wh2_dlc16_skill_node_wef_malicious_ancient_treeman_beasts_unique_01",
@@ -1691,6 +2187,456 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc16_skill_node_wef_malicious_ancient_treeman_shadows_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc16_wef_sisters_of_twilight = {
+        {
+            node_key = "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_03",
+            skill_key = "wh2_dlc16_wef_sisters_unique_6",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_04",
+            skill_key = "wh_dlc05_skill_wef_army_buff_ranged_extra_reload",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_05",
+            skill_key = "wh_dlc05_skill_wef_glade_lord_unique_battle_speed_elven_units",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_06",
+            skill_key = "wh2_dlc16_skill_wef_ability_howl_of_the_forest",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_durthu_ability_04",
+                "wh2_dlc11_skill_node_wef_durthu_ability_06",
+                "wh2_dlc11_skill_node_wef_orion_ability_04",
+                "wh2_dlc11_skill_node_wef_orion_ability_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_07",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_08",
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_07",
+            skill_key = "wh2_dlc16_skill_wef_ability_sight_beyond_sight",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_durthu_ability_02",
+                "wh2_dlc11_skill_node_wef_durthu_ability_06",
+                "wh2_dlc11_skill_node_wef_orion_ability_02",
+                "wh2_dlc11_skill_node_wef_orion_ability_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_08",
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_08",
+            skill_key = "wh2_dlc16_skill_wef_ability_possessed_by_the_trickster_god",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_01",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_02",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_03",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_04",
+                "wh2_dlc11_skill_node_wef_durthu_ability_02",
+                "wh2_dlc11_skill_node_wef_durthu_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_04",
+                "wh2_dlc11_skill_node_wef_orion_ability_02",
+                "wh2_dlc11_skill_node_wef_orion_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_04",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_07",
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_unique_0",
+            skill_key = "wh2_dlc16_wef_sisters_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_unique_1",
+            skill_key = "wh2_dlc16_wef_sisters_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_unique_2",
+            skill_key = "wh2_dlc16_wef_sisters_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_unique_3",
+            skill_key = "wh2_dlc16_wef_sisters_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_unique_4",
+            skill_key = "wh2_dlc16_wef_sisters_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_unique_5",
+            skill_key = "wh2_dlc16_wef_sisters_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_combat_0",
+            skill_key = "wh2_dlc16_wef_sisters_combat_0",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_combat_1",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_endurance_of_the_oak",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_combat_2",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_impenetrable_bark",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_combat_3",
+            skill_key = "wh2_dlc16_wef_sisters_combat_1",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_combat_4",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_tempered_rigour",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_combat_5",
+            skill_key = "wh2_dlc16_wef_sisters_combat_2",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_combat_6",
+            skill_key = "wh2_dlc16_wef_sisters_combat_3",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_sisters_combat_7",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_melee_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_melee_06",
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_1",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_piercing_thorns",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_2",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_bolts_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_3",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_striking_branches",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_4",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_swinging_boughs",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_5",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_ancient_bark",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_6",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_wings_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_1",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_shield_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_2",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_natures_quiver",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_3",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_swift_and_sturdy",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_4",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_the_forests_roar",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_4",
             skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
             category_key = "battle",
             indent = 4,
@@ -5568,6 +6514,588 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh_dlc05_wef_durthu = {
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_unique_04",
+            skill_key = "wh_dlc05_skill_wef_ancient_treeman_unique_ap_damage_treekin",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_unique_03",
+            skill_key = "wh_dlc05_skill_wef_ancient_treeman_unique_damage_resistance_treekin",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_unique_05",
+            skill_key = "wh_dlc05_skill_wef_army_buff_ranged_extra_reload",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_unique_06",
+            skill_key = "wh_dlc05_skill_wef_glade_lord_unique_battle_speed_elven_units",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_ability_02",
+            skill_key = "wh2_dlc16_skill_wef_ability_howl_of_the_forest",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_durthu_ability_04",
+                "wh2_dlc11_skill_node_wef_durthu_ability_06",
+                "wh2_dlc11_skill_node_wef_orion_ability_04",
+                "wh2_dlc11_skill_node_wef_orion_ability_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_07",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_08",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_ability_04",
+            skill_key = "wh2_dlc16_skill_wef_ability_sight_beyond_sight",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_durthu_ability_02",
+                "wh2_dlc11_skill_node_wef_durthu_ability_06",
+                "wh2_dlc11_skill_node_wef_orion_ability_02",
+                "wh2_dlc11_skill_node_wef_orion_ability_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_08",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_ability_06",
+            skill_key = "wh2_dlc16_skill_wef_ability_possessed_by_the_trickster_god",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_01",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_02",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_03",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_04",
+                "wh2_dlc11_skill_node_wef_durthu_ability_02",
+                "wh2_dlc11_skill_node_wef_durthu_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_04",
+                "wh2_dlc11_skill_node_wef_orion_ability_02",
+                "wh2_dlc11_skill_node_wef_orion_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_04",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_07",
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_wef_durthu_unique_01",
+            skill_key = "wh2_dlc16_skill_unique_wef_durthu_ancient_emnity",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_wef_durthu_unique_02",
+            skill_key = "wh2_dlc16_skill_unique_wef_durthu_boughwarden",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_wef_durthu_unique_03",
+            skill_key = "wh2_dlc16_skill_unique_wef_durthu_ancient_wardbark",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_wef_durthu_unique_04",
+            skill_key = "wh_dlc05_skill_wef_durthu_unique_battle_melee_damage_factionwide",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_wef_durthu_unique_05",
+            skill_key = "wh2_dlc16_skill_unique_wef_durthu_oaken_hearts",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_wef_durthu_unique_06",
+            skill_key = "wh2_dlc16_skill_unique_wef_durthu_awaken_the_woods",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_self_melee_01",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_self_melee_02",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_endurance_of_the_oak",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_self_melee_03",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_impenetrable_bark",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_self_melee_04",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_tempered_rigour",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_self_melee_05",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_violent_delights",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_self_melee_06",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_01",
+            skill_key = "wh_dlc03_skill_magic_beasts_wyssans_wildform",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_02",
+            skill_key = "wh_dlc03_skill_magic_beasts_wild_heart",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_03",
+            skill_key = "wh2_main_skill_magic_beasts_flock_of_doom_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_04",
+            skill_key = "wh2_main_skill_magic_beasts_panns_impenetrable_pelt_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_05",
+            skill_key = "wh2_main_skill_magic_beasts_the_amber_spear_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_09",
+            skill_key = "wh2_main_skill_magic_beasts_the_curse_of_anraheir_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_10",
+            skill_key = "wh2_dlc15_skill_magic_beasts_transformation_of_kadon_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_durthu_beasts_magic_dummy",
+            skill_key = "wh2_main_skill_magic_beasts_dummy_wyssans_wildform_flock_of_doom",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_02",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_piercing_thorns",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_03",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_bolts_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_04",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_striking_branches",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_05",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_swinging_boughs",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_06",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_ancient_bark",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_07",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_wings_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_09",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_shield_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_10",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_natures_quiver",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_11",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_swift_and_sturdy",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_12",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_the_forests_roar",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_durthu_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh_dlc05_wef_glade_lord = {
         {
             node_key = "wh_dlc05_skill_node_wef_glade_lord_unique_01",
@@ -6777,6 +8305,492 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_wef_glade_lord_fem_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc05_wef_orion = {
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_unique_05",
+            skill_key = "wh_dlc05_skill_wef_army_buff_ranged_extra_reload",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_unique_06",
+            skill_key = "wh_dlc05_skill_wef_glade_lord_unique_battle_speed_elven_units",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_ability_02",
+            skill_key = "wh2_dlc16_skill_wef_ability_howl_of_the_forest",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_durthu_ability_04",
+                "wh2_dlc11_skill_node_wef_durthu_ability_06",
+                "wh2_dlc11_skill_node_wef_orion_ability_04",
+                "wh2_dlc11_skill_node_wef_orion_ability_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_07",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_08",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_ability_04",
+            skill_key = "wh2_dlc16_skill_wef_ability_sight_beyond_sight",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_durthu_ability_02",
+                "wh2_dlc11_skill_node_wef_durthu_ability_06",
+                "wh2_dlc11_skill_node_wef_orion_ability_02",
+                "wh2_dlc11_skill_node_wef_orion_ability_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_08",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_ability_06",
+            skill_key = "wh2_dlc16_skill_wef_ability_possessed_by_the_trickster_god",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_01",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_02",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_03",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_04",
+                "wh2_dlc11_skill_node_wef_durthu_ability_02",
+                "wh2_dlc11_skill_node_wef_durthu_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_04",
+                "wh2_dlc11_skill_node_wef_orion_ability_02",
+                "wh2_dlc11_skill_node_wef_orion_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_04",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_06",
+                "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_07",
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_orion_unique_01",
+            skill_key = "wh_dlc05_skill_wef_orion_unique_battle_ranged_damage_factionwide",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_orion_unique_02",
+            skill_key = "wh2_dlc16_skill_unique_wef_orion_bounty_of_kurnous",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_orion_unique_03",
+            skill_key = "wh2_dlc16_skill_unique_wef_orion_gather_the_huntsmen",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_orion_unique_04",
+            skill_key = "wh2_dlc16_skill_unique_wef_orion_hunter_in_the_woods",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_orion_unique_05",
+            skill_key = "wh2_dlc16_skill_unique_wef_orion_part_the_boughs",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_skill_node_wef_orion_unique_06",
+            skill_key = "wh2_dlc16_skill_unique_wef_orion_neverending_hunt",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_ranged_01",
+            skill_key = "wh_dlc05_skill_wef_orion_unique_hawks_talon",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_ranged_02",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_fleetfinger",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_ranged_03",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_piercing_shots",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_ranged_04",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_bottomless_quiver",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_ranged_05",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_ranged_06",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_melee_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_melee_06",
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_melee_01",
+            skill_key = "wh_dlc05_skill_wef_orion_unique_hounds_of_orion",
+            category_key = "battle",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_melee_02",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_endurance_of_the_oak",
+            category_key = "battle",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_melee_03",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_impenetrable_bark",
+            category_key = "battle",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_melee_04",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_tempered_rigour",
+            category_key = "battle",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_melee_05",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_violent_delights",
+            category_key = "battle",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_orion_self_melee_06",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "battle",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_02",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_piercing_thorns",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_03",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_bolts_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_04",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_striking_branches",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_05",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_swinging_boughs",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_06",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_ancient_bark",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_07",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_wings_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_09",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_shield_of_the_forest",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_10",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_natures_quiver",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_11",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_swift_and_sturdy",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_12",
+            skill_key = "wh2_dlc11_skill_wef_army_buff_the_forests_roar",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_wef_orion_battle_13",
             skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
             category_key = "battle",
             indent = 4,

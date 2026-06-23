@@ -444,6 +444,850 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc24_ksl_mother_ostankya = {
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_top_line_unique_1",
+            skill_key = "wh3_dlc24_skill_node_ksl_ostankya_top_line_1",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_top_line_unique_2",
+            skill_key = "wh3_dlc24_skill_node_ksl_ostankya_top_line_2",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_top_line_unique_3",
+            skill_key = "wh3_dlc24_skill_node_ksl_ostankya_top_line_3",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_1",
+            skill_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_2",
+            skill_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_3",
+            skill_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_4",
+            skill_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_5",
+            skill_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_6",
+            skill_key = "wh3_dlc24_skill_node_ksl_ostankya_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_0",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_01_witchbrew_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_1_1",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_07_fate_of_interlopers",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_1_2",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_02_the_forbidden_fens_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_1_3",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_03_curse_of_the_ancient_witch_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_1_4",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_04_vengeance_of_spirits_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_3_3",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_05_cursed_cauldron_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_3_4",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_06_malediction_of_madness_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_ostankya_magic_dummy",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_dummy_cursed_cauldron_the_forbidden_fens",
+            category_key = "character",
+            indent = 2,
+            tier = 30,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_1_1",
+            skill_key = "wh3_main_skill_ksl_army_buff_kossars_streltsi",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_1_3",
+            skill_key = "wh3_main_skill_ksl_army_buff_elite_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_1_4",
+            skill_key = "wh3_main_skill_ksl_army_buff_heavy_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_1_5",
+            skill_key = "wh3_main_skill_ksl_army_buff_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_1_6",
+            skill_key = "wh3_main_skill_ksl_army_buff_war_machines",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_3_1",
+            skill_key = "wh3_main_skill_ksl_army_buff_kossars_streltsi_ice_guard_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_3_2",
+            skill_key = "wh3_main_skill_ksl_army_buff_cavalry_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_3_3",
+            skill_key = "wh3_main_skill_ksl_army_buff_bears_tsar_guard_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_3_4",
+            skill_key = "wh3_main_skill_ksl_army_buff_war_machines_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_ice_witch_ice_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_ksl_boris = {
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_generic_03",
+            skill_key = "wh3_main_skill_ksl_boris_unique_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_generic_04",
+            skill_key = "wh3_main_skill_ksl_boris_unique_urskin",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_generic_06",
+            skill_key = "wh_main_skill_all_lord_battle_brass-lunged",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_generic_07",
+            skill_key = "wh3_main_skill_ksl_generic_heroic_resilience",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_generic_05",
+            skill_key = "wh3_main_skill_ksl_boris_unique_growth",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_unique_08",
+            skill_key = "wh3_main_skill_ksl_boris_unique_elemental_bear_regen",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_unique_06",
+            skill_key = "wh3_main_skill_ksl_boris_unique_06",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_unique_07",
+            skill_key = "wh3_main_skill_ksl_boris_unique_diplomacy",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_unique_01",
+            skill_key = "wh3_main_skill_ksl_boris_unique_01",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_unique_02",
+            skill_key = "wh3_main_skill_ksl_boris_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_unique_03",
+            skill_key = "wh3_main_skill_ksl_boris_unique_03",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_unique_04",
+            skill_key = "wh3_main_skill_ksl_boris_unique_04",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_unique_05",
+            skill_key = "wh3_main_skill_ksl_boris_unique_05",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_unique_09",
+            skill_key = "wh3_main_skill_ksl_boris_unique_devotion",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_0",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit_starter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_1_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_3_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_combat_4",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_1_1",
+            skill_key = "wh3_main_skill_ksl_army_buff_kossars_streltsi",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_1_3",
+            skill_key = "wh3_main_skill_ksl_army_buff_elite_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_1_4",
+            skill_key = "wh3_main_skill_ksl_army_buff_heavy_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_1_5",
+            skill_key = "wh3_main_skill_ksl_army_buff_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_1_6",
+            skill_key = "wh3_main_skill_ksl_army_buff_war_machines",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_3_1",
+            skill_key = "wh3_main_skill_ksl_army_buff_kossars_streltsi_ice_guard_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_3_2",
+            skill_key = "wh3_main_skill_ksl_army_buff_cavalry_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_3_3",
+            skill_key = "wh3_main_skill_ksl_army_buff_bears_tsar_guard_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_3_4",
+            skill_key = "wh3_main_skill_ksl_army_buff_war_machines_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_boris_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_main_ksl_boyar = {
         {
             node_key = "wh3_main_skill_node_ksl_boyar_unique_01",
@@ -1557,6 +2401,906 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh3_main_skill_node_ksl_ice_witch_tempest_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_ksl_katarin = {
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_generic_03",
+            skill_key = "wh3_main_skill_ksl_katarin_unique_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_generic_04",
+            skill_key = "wh3_main_skill_ksl_katarin_unique_war_bear",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_generic_09",
+            skill_key = "wh3_dlc24_skill_ksl_katarin_unique_frost_wyrm",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_generic_08",
+            skill_key = "wh3_dlc24_skill_ksl_katarin_unique_ice_court_sled",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 22 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_generic_05",
+            skill_key = "wh3_main_skill_ksl_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_generic_06",
+            skill_key = "wh3_main_skill_ksl_katarin_unique_snow_leopard_buffs",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_unique_01",
+            skill_key = "wh3_main_skill_ksl_katarin_unique_01",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_unique_06",
+            skill_key = "wh3_main_skill_ksl_katarin_unique_06",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_unique_03",
+            skill_key = "wh3_main_skill_ksl_katarin_unique_03",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_unique_04",
+            skill_key = "wh3_main_skill_ksl_katarin_unique_04",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_unique_05",
+            skill_key = "wh3_main_skill_ksl_katarin_unique_05",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_unique_02",
+            skill_key = "wh3_main_skill_ksl_katarin_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_0",
+            skill_key = "wh3_main_skill_ksl_magic_ice_01_ice_maidens_kiss_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_1_1",
+            skill_key = "wh3_main_skill_ksl_magic_ice_05_frost_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_1_2",
+            skill_key = "wh3_main_skill_ksl_magic_ice_02_ice_sheet_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_1_3",
+            skill_key = "wh3_main_skill_ksl_magic_ice_03_frost_blades_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_1_4",
+            skill_key = "wh3_main_skill_ksl_magic_ice_04_death_frost_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_3_3",
+            skill_key = "wh3_main_skill_ksl_magic_ice_07_crystal_sanctuary_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_3_4",
+            skill_key = "wh3_main_skill_ksl_magic_ice_08_heart_of_winter_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_4",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_magic_dummy",
+            skill_key = "wh3_main_skill_ksl_magic_ice_dummy_ice_maidens_kiss_ice_sheet",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_1_1",
+            skill_key = "wh3_main_skill_ksl_army_buff_kossars_streltsi",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_1_3",
+            skill_key = "wh3_main_skill_ksl_army_buff_elite_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_1_4",
+            skill_key = "wh3_main_skill_ksl_army_buff_heavy_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_1_5",
+            skill_key = "wh3_main_skill_ksl_army_buff_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_1_6",
+            skill_key = "wh3_main_skill_ksl_army_buff_war_machines",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_3_1",
+            skill_key = "wh3_main_skill_ksl_army_buff_kossars_streltsi_ice_guard_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_3_2",
+            skill_key = "wh3_main_skill_ksl_army_buff_cavalry_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_3_3",
+            skill_key = "wh3_main_skill_ksl_army_buff_bears_tsar_guard_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_3_4",
+            skill_key = "wh3_main_skill_ksl_army_buff_war_machines_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_katarin_army_4",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_ksl_kostaltyn = {
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_generic_01",
+            skill_key = "wh3_main_skill_ksl_kostaltyn_unique_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_generic_02",
+            skill_key = "wh3_main_skill_ksl_kostaltyn_unique_war_bear",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_generic_03",
+            skill_key = "wh3_main_skill_ksl_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_unique_fireball",
+            skill_key = "wh2_main_skill_lzd_skink_priest_arcane_vassal",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_unique_orthodox_religion",
+            skill_key = "wh3_main_skill_ksl_kostaltyn_unique_orthodox_religion",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_unique_01",
+            skill_key = "wh3_main_skill_ksl_kostaltyn_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_unique_02",
+            skill_key = "wh3_main_skill_ksl_kostaltyn_unique_06",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_unique_03",
+            skill_key = "wh3_main_skill_ksl_kostaltyn_unique_03",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_unique_04",
+            skill_key = "wh3_main_skill_ksl_kostaltyn_unique_04",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_unique_05",
+            skill_key = "wh3_main_skill_ksl_kostaltyn_unique_05",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_unique_06",
+            skill_key = "wh3_main_skill_ksl_kostaltyn_unique_01",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_01",
+            skill_key = "wh3_main_skill_ksl_patriarch_self_01",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_impassioned",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wild-eyed",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_conviction",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_05",
+            skill_key = "wh2_dlc11_skill_all_lord_self_soothsaying",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_06",
+            skill_key = "wh3_main_skill_ksl_patriarch_self_06",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_tenacity",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_10",
+            skill_key = "wh2_dlc11_skill_all_lord_self_fervour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_self_11",
+            skill_key = "wh3_main_skill_ksl_patriarch_self_11",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_01",
+            skill_key = "wh3_main_skill_ksl_dignitary_unique_patriarch_ursuns_roar",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_02",
+            skill_key = "wh3_main_skill_ksl_dignitary_unique_patriarch_dazs_song_of_winter_sunlight",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_pro_skill_node_ksl_patriarch_battle_prayers_04",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_03",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_04",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_03",
+            skill_key = "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_battle_hymn",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_02",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_04",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_04",
+            skill_key = "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_salyaks_lullaby",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_pro_skill_node_ksl_patriarch_battle_prayers_02",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_02",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_03",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_1_1",
+            skill_key = "wh3_main_skill_ksl_army_buff_kossars_streltsi",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_1_3",
+            skill_key = "wh3_main_skill_ksl_army_buff_elite_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_1_4",
+            skill_key = "wh3_main_skill_ksl_army_buff_heavy_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_1_5",
+            skill_key = "wh3_main_skill_ksl_army_buff_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_1_6",
+            skill_key = "wh3_main_skill_ksl_army_buff_war_machines",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_3_1",
+            skill_key = "wh3_main_skill_ksl_army_buff_kossars_streltsi_ice_guard_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_3_2",
+            skill_key = "wh3_main_skill_ksl_army_buff_cavalry_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_3_3",
+            skill_key = "wh3_main_skill_ksl_army_buff_bears_tsar_guard_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_3_4",
+            skill_key = "wh3_main_skill_ksl_army_buff_war_machines_rank_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_kostaltyn_army_4",
             skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
             category_key = "battle",
             indent = 4,

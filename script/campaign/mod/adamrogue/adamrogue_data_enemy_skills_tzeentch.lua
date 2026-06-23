@@ -944,6 +944,562 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc20_tze_vilitch = {
+        {
+            node_key = "wh3_dlc20_skill_node_vilitch_magic_dummy",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_dummy_blue_fire_pink_fire_of_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_vilitch_authority",
+            skill_key = "wh3_dlc20_skill_authority_tze_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_unique_8",
+            skill_key = "wh_main_skill_chs_lord_battle_voice_of_the_dark_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_unique_9",
+            skill_key = "wh_main_skill_chs_lord_battle_hearts_of_iron",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_unique_7",
+            skill_key = "wh3_main_skill_tze_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_unique_1",
+            skill_key = "wh3_dlc20_skill_chs_vilitch_unique_sword_and_sorcery",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_unique_2",
+            skill_key = "wh3_dlc20_skill_chs_vilitch_unique_twist_of_fate",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_unique_3",
+            skill_key = "wh3_dlc20_skill_chs_vilitch_unique_mindwipe",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_unique_4",
+            skill_key = "wh3_dlc20_skill_chs_vilitch_unique_pawns_of_fortune",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_unique_5",
+            skill_key = "wh3_dlc20_skill_chs_vilitch_unique_mine_all_mine",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_unique_6",
+            skill_key = "wh3_dlc20_skill_chs_vilitch_unique_master_of_misrule",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_1",
+            skill_key = "wh_main_skill_chs_lord_self_eye_of_the_gods",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_5",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_6",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_7",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_8",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_9",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_10",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_1",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_01_blue_fire_of_tzeentch_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_2",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_05_fires_of_change",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_3",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_02_pink_fire_of_tzeentch_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_4",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_03_glean_magic_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_5",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_04_treason_of_tzeentch_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_6",
+            skill_key = "wh3_main_skill_tze_all_magic_prismatic_plurality",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_7",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_06_tzeentchs_firestorm_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_8",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_07_infernal_gateway_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_9",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_10",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_vilitch_magic_11",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_1",
+            skill_key = "wh_main_skill_chs_lord_battle_dominating_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_2",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_chaos_vanguard",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_3",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_savage_bloodlust",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_4",
+            skill_key = "wh3_dlc20_skill_chs_army_buff_warpfire",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_5",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_hammer_to_the_anvil",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_6",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_monstrous_strength",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_7",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_doomfire",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_8",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_9",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_legion_of_doom",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_10",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_speed_and_malice",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_11",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_freakish_mutations",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_12",
+            skill_key = "wh2_dlc11_skill_chs_army_buff_guided_by_tzeentch",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_tze_vilitch_battle_13",
+            skill_key = "wh_main_skill_chs_lord_battle_stand_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc24_chs_lord_mtze = {
         {
             node_key = "wh3_dlc24_skill_node_chs_cha_chaos_lord_mtze_chaos_steed",
@@ -2259,6 +2815,524 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_4",
+            skill_key = "wh3_main_skill_tze_lord_army_master_of_fates",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc24_tze_the_changeling = {
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_top_2",
+            skill_key = "wh3_dlc24_skill_tze_changeling_top_3",
+            category_key = "character",
+            indent = 0,
+            tier = 22,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_top_3",
+            skill_key = "wh3_dlc24_skill_tze_changeling_top_1",
+            category_key = "character",
+            indent = 0,
+            tier = 23,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_tze_generic_missile_resistance_daemon",
+            skill_key = "wh3_main_skill_tze_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 25,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_top_1",
+            skill_key = "wh3_dlc24_skill_tze_changeling_top_2",
+            category_key = "character",
+            indent = 0,
+            tier = 29,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_unique_1",
+            skill_key = "wh3_dlc24_skill_tze_changeling_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_unique_2",
+            skill_key = "wh3_dlc24_skill_tze_changeling_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_unique_3",
+            skill_key = "wh3_dlc24_skill_tze_changeling_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_unique_4",
+            skill_key = "wh3_dlc24_skill_tze_changeling_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_unique_5",
+            skill_key = "wh3_dlc24_skill_tze_changeling_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_unique_6",
+            skill_key = "wh3_dlc24_skill_tze_changeling_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_0",
+            skill_key = "wh3_dlc24_skill_tze_changeling_magic_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_1_1",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_05_fires_of_change",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_1_2",
+            skill_key = "wh3_dlc24_skill_tze_changeling_magic_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_1_3",
+            skill_key = "wh3_dlc24_skill_tze_changeling_magic_3",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_1_4",
+            skill_key = "wh3_dlc24_skill_tze_changeling_magic_4",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_2",
+            skill_key = "wh3_main_skill_tze_all_magic_prismatic_plurality",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_3_3",
+            skill_key = "wh3_dlc24_skill_tze_changeling_magic_5",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_3_4",
+            skill_key = "wh3_dlc24_skill_tze_changeling_magic_6",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_magic_dummy",
+            skill_key = "wh3_dlc24_skill_tze_changeling_magic_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_combat_1",
+            skill_key = "wh3_dlc24_skill_tze_changeling_combat_1",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_combat_2",
+            skill_key = "wh3_dlc24_skill_tze_changeling_combat_2",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_combat_3",
+            skill_key = "wh3_dlc24_skill_tze_changeling_combat_3",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_combat_4",
+            skill_key = "wh3_dlc24_skill_tze_changeling_combat_4",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_combat_5",
+            skill_key = "wh3_dlc24_skill_tze_changeling_combat_5",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_combat_6",
+            skill_key = "wh3_dlc24_skill_tze_changeling_combat_6",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_combat_7",
+            skill_key = "wh3_dlc24_skill_tze_changeling_combat_7",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_combat_8",
+            skill_key = "wh3_dlc24_skill_tze_changeling_combat_8",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_changeling_combat_9",
+            skill_key = "wh3_dlc24_skill_tze_changeling_combat_9",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_1_1",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_1_2",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_1_3",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_1_4",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_1_6",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_2",
+            skill_key = "wh3_main_skill_tze_lord_army_seer_of_destiny",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_3_1",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_3_2",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_3_3",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_3_4",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_daemon_generic_army_4",
             skill_key = "wh3_main_skill_tze_lord_army_master_of_fates",
             category_key = "battle",
             indent = 4,
@@ -4223,6 +5297,404 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_army_4",
+            skill_key = "wh3_main_skill_tze_lord_army_master_of_fates",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_tze_kairos = {
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_self_1",
+            skill_key = "wh3_main_skill_tze_generic_hates_nurgle",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_self_3",
+            skill_key = "wh3_main_skill_tze_lord_unique_gaze_of_fate",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_self_4",
+            skill_key = "wh3_main_skill_tze_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_unique_0",
+            skill_key = "wh3_main_skill_tze_lord_unique_hidden_in_time",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_self_0",
+            skill_key = "wh3_main_skill_tze_kairos_self_oracle_of_eternity",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_self_2",
+            skill_key = "wh3_main_skill_tze_kairos_self_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_unique_4",
+            skill_key = "wh3_main_skill_tze_kairos_self_6",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_unique_1",
+            skill_key = "wh3_main_skill_tze_kairos_self_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_unique_3",
+            skill_key = "wh3_main_skill_tze_kairos_self_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_unique_2",
+            skill_key = "wh3_main_skill_tze_kairos_self_4",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_unique_6",
+            skill_key = "wh3_main_skill_tze_kairos_self_8",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_1_0",
+            skill_key = "wh3_main_skill_tze_kairos_magic_core_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_1_1",
+            skill_key = "wh3_main_skill_tze_kairos_magic_core_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_1_2",
+            skill_key = "wh3_main_skill_tze_kairos_magic_core_3",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_1_3",
+            skill_key = "wh3_main_skill_tze_kairos_magic_core_4",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_1_4",
+            skill_key = "wh3_main_skill_tze_kairos_magic_core_5",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_2_0",
+            skill_key = "wh3_main_skill_tze_kairos_magic_extra_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_2_1",
+            skill_key = "wh3_main_skill_tze_kairos_magic_extra_1",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_2_2",
+            skill_key = "wh3_main_skill_tze_kairos_magic_extra_2",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_2_4",
+            skill_key = "wh3_main_skill_tze_kairos_magic_extra_4",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_magic_2_5",
+            skill_key = "wh3_main_skill_tze_kairos_magic_extra_capstone",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_1_1",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_1_2",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_1_3",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_1_4",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_1_6",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_2",
+            skill_key = "wh3_main_skill_tze_lord_army_seer_of_destiny",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_3_1",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_3_2",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_3_3",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_3_4",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_kairos_army_4",
             skill_key = "wh3_main_skill_tze_lord_army_master_of_fates",
             category_key = "battle",
             indent = 4,
@@ -6615,6 +8087,446 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_main_chs_lord_of_change = {
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_unique_0",
+            skill_key = "wh3_main_skill_tze_lord_unique_gaze_of_fate",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_unique_1",
+            skill_key = "wh3_main_skill_tze_lord_unique_hidden_in_time",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_unique_2",
+            skill_key = "wh3_main_skill_tze_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_unique_3",
+            skill_key = "wh3_main_skill_tze_generic_hates_nurgle",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_1_1",
+            skill_key = "wh3_main_skill_tze_lord_of_change_exclusive_1_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_1_2",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_1_3",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_1_2",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_1_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_1_2",
+            skill_key = "wh3_main_skill_tze_lord_of_change_exclusive_1_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_1_1",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_1_3",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_1_1",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_1_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_1_3",
+            skill_key = "wh3_main_skill_tze_lord_of_change_exclusive_1_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_1_1",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_1_2",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_1_1",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_1_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_2_1",
+            skill_key = "wh3_main_skill_tze_lord_of_change_exclusive_2_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_dlc27_nor_azrik_unique_1_2",
+                "wh3_dlc27_nor_azrik_unique_1_3",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_2_2",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_2_3",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_2_2",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_2_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_2_2",
+            skill_key = "wh3_main_skill_tze_lord_of_change_exclusive_2_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_dlc27_nor_azrik_unique_1_1",
+                "wh3_dlc27_nor_azrik_unique_1_3",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_2_1",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_2_3",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_2_1",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_2_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_2_3",
+            skill_key = "wh3_main_skill_tze_lord_of_change_exclusive_2_3",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_dlc27_nor_azrik_unique_1_1",
+                "wh3_dlc27_nor_azrik_unique_1_2",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_2_1",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_metal_exclusive_2_2",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_2_1",
+                "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_exclusive_2_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_0",
+            skill_key = "wh_main_skill_all_magic_metal_01_searing_doom",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_1_1",
+            skill_key = "wh2_main_skill_all_magic_metal_02_plague_of_rust_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_1_2",
+            skill_key = "wh2_main_skill_all_magic_metal_04_glittering_robe_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_1_3",
+            skill_key = "wh2_main_skill_all_magic_metal_05_gehennas_golden_hounds_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_metal_03_metalshifting",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_2",
+            skill_key = "wh3_main_skill_tze_all_magic_prismatic_plurality",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_3_3",
+            skill_key = "wh2_main_skill_all_magic_metal_09_transmutation_of_lead_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_3_4",
+            skill_key = "wh2_main_skill_all_magic_metal_10_final_transmutation_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_4",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_metal_magic_dummy",
+            skill_key = "wh2_main_skill_all_magic_metal_dummy_searing_doom_plague_of_rust",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_1_1",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_1_2",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_1_3",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_1_4",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_1_6",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_1_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_2",
+            skill_key = "wh3_main_skill_tze_lord_army_seer_of_destiny",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_3_1",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_3_2",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_3_3",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_3_4",
+            skill_key = "wh3_main_skill_tze_lord_army_buff_3_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_exalted_lord_of_change_tzeentch_army_4",
+            skill_key = "wh3_main_skill_tze_lord_army_master_of_fates",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },

@@ -13,17 +13,6 @@ START_MARKER = "# AUTO-GENERATED NODE LOC START"
 END_MARKER = "# AUTO-GENERATED NODE LOC END"
 ANCILLARIES_OVERRIDE_OUTPUT_NAME = "!!adamrogue_all_faction_set_all.tsv"
 
-COMMON_EQUIPMENT_POOL = [
-    ("wh_main_anc_weapon_sword_of_might", "weapon", "common", 6, 1, 3, "WEAPON"),
-    ("wh_main_anc_armour_charmed_shield", "armour", "common", 6, 1, 3, "ARMOUR"),
-    ("wh_main_anc_armour_dragonhelm", "armour", "common", 5, 1, 3, "ARMOUR"),
-    ("wh_main_anc_armour_enchanted_shield", "armour", "common", 5, 1, 3, "ARMOUR"),
-    ("wh_main_anc_armour_gamblers_armour", "armour", "uncommon", 5, 2, 3, "ARMOUR"),
-    ("wh_main_anc_armour_helm_of_discord", "armour", "uncommon", 4, 2, 3, "ARMOUR"),
-    ("wh_main_anc_talisman_obsidian_trinket", "talisman", "common", 5, 1, 3, "ACCESSORY"),
-    ("wh_main_anc_enchanted_item_potion_of_foolhardiness", "enchanted_item", "common", 5, 1, 3, "ACCESSORY"),
-]
-
 ALLOWED_ANCILLARY_CATEGORIES = {"weapon", "armour", "talisman", "enchanted_item", "arcane_item"}
 ALLOWED_SKILL_CATEGORIES = {"character", "battle"}
 EXCLUDED_SKILL_NODE_KEYS = {
@@ -279,6 +268,68 @@ def is_high_tier_character_specific_set(set_key: str, set_items: list[dict[str, 
     return False
 
 
+def should_skip_ancillary_for_reward_pool(
+    ancillary: dict[str, str],
+    ancillary_keys_with_included_agent_subtypes: set[str],
+) -> bool:
+    item_key = ancillary.get("key", "")
+    if not item_key:
+        return True
+    if ancillary.get("category", "") not in ALLOWED_ANCILLARY_CATEGORIES:
+        return True
+    if ancillary.get("legendary_item", "").lower() == "true":
+        return True
+    if item_key in ancillary_keys_with_included_agent_subtypes:
+        return True
+    return False
+
+
+def build_equipment_pool_entry(
+    ancillary: dict[str, str],
+    ancillary_rarity_lookup: dict[int, tuple[str, int, int, int]],
+) -> dict[str, object]:
+    item_key = ancillary.get("key", "")
+    item_category = ancillary.get("category", "")
+    uniqueness_score = to_int(ancillary.get("uniqueness_score", "0"))
+    item_rarity, weight, min_tier, max_tier = derive_ancillary_rarity(uniqueness_score, ancillary_rarity_lookup)
+    return {
+        "item_key": item_key,
+        "item_category": item_category,
+        "item_rarity": item_rarity,
+        "weight": weight,
+        "min_battle_tier": min_tier,
+        "max_battle_tier": max_tier,
+        "reward_slot": derive_ancillary_reward_slot(item_category),
+    }
+
+
+def build_common_equipment_pool(
+    ancillary_rows: list[dict[str, str]],
+    ancillary_keys_with_included_agent_subtypes: set[str],
+    ancillary_rarity_lookup: dict[int, tuple[str, int, int, int]],
+) -> list[dict[str, object]]:
+    equipment_pool: list[dict[str, object]] = []
+    seen_items: set[str] = set()
+
+    for ancillary in ancillary_rows:
+        if should_skip_ancillary_for_reward_pool(ancillary, ancillary_keys_with_included_agent_subtypes):
+            continue
+        if ancillary.get("faction_set", "") != "all":
+            continue
+
+        item_key = ancillary.get("key", "")
+        if item_key in seen_items:
+            continue
+
+        equipment_pool.append(build_equipment_pool_entry(ancillary, ancillary_rarity_lookup))
+        seen_items.add(item_key)
+
+    return sorted(
+        equipment_pool,
+        key=lambda item: (str(item["item_rarity"]), str(item["item_category"]), str(item["item_key"])),
+    )
+
+
 def build_enemy_faction_candidates(
     blueprint_entry: dict[str, object],
     available_factions: set[str],
@@ -435,6 +486,7 @@ def render_battle_module(
 def render_ancillary_module(
     blueprint: list[dict[str, object]],
     faction_equipment_pools: dict[str, list[dict[str, object]]],
+    common_equipment_pool: list[dict[str, object]],
 ) -> str:
     lines = [
         "local data = {}",
@@ -452,7 +504,8 @@ def render_ancillary_module(
         "data.EQUIPMENT_REWARD_SLOT = {",
         '    WEAPON = "weapon_slot",',
         '    ARMOUR = "armour_slot",',
-        '    ACCESSORY = "accessory_slot"',
+        '    ACCESSORY = "accessory_slot",',
+        '    ANY = "any_slot"',
         "}",
         "",
         "data.EQUIPMENT_REWARD_SLOT_ORDER = {",
@@ -464,22 +517,22 @@ def render_ancillary_module(
         "data.COMMON_EQUIPMENT_POOL = {",
     ]
 
-    for item_key, item_category, item_rarity, weight, min_tier, max_tier, reward_slot in COMMON_EQUIPMENT_POOL:
+    for item in common_equipment_pool:
         lines.append(
             "    { item_key = "
-            + lua_string(item_key)
+            + lua_string(str(item["item_key"]))
             + ", item_category = "
-            + lua_string(item_category)
+            + lua_string(str(item["item_category"]))
             + ", item_rarity = "
-            + lua_string(item_rarity)
+            + lua_string(str(item["item_rarity"]))
             + ", weight = "
-            + str(weight)
+            + str(item["weight"])
             + ", min_battle_tier = "
-            + str(min_tier)
+            + str(item["min_battle_tier"])
             + ", max_battle_tier = "
-            + str(max_tier)
+            + str(item["max_battle_tier"])
             + ", enabled = true, reward_slot = data.EQUIPMENT_REWARD_SLOT."
-            + reward_slot
+            + str(item["reward_slot"])
             + " },"
         )
 
@@ -1151,13 +1204,8 @@ def main() -> None:
                 if permitted_general_subtypes and subtype_key not in permitted_general_subtypes:
                     continue
 
-                allowed_factions = [
-                    candidate_faction_key
-                    for candidate_faction_key in faction_candidates
-                    if subtype_key in permitted_generals_by_faction.get(candidate_faction_key, [])
-                ]
-                if not allowed_factions:
-                    continue
+                # Testing: do not require subtype to appear in each QB faction's permitted list.
+                allowed_factions = list(faction_candidates)
 
                 dedupe_key = (subtype_key, unit_key)
                 if dedupe_key in seen_general_option_keys:
@@ -1190,13 +1238,9 @@ def main() -> None:
             item_category = ancillary.get("category", "")
             faction_set_key = ancillary.get("faction_set", "")
 
-            if not item_key or item_key in seen_items:
+            if item_key in seen_items:
                 continue
-            if item_category not in ALLOWED_ANCILLARY_CATEGORIES:
-                continue
-            if ancillary.get("legendary_item", "").lower() == "true":
-                continue
-            if item_key in ancillary_keys_with_included_agent_subtypes:
+            if should_skip_ancillary_for_reward_pool(ancillary, ancillary_keys_with_included_agent_subtypes):
                 continue
             if faction_set_key in {"", "all"}:
                 continue
@@ -1223,17 +1267,7 @@ def main() -> None:
             item_rarity, weight, min_tier, max_tier = derive_ancillary_rarity(uniqueness_score, ancillary_rarity_lookup)
             if item_rarity in {"unique", "crafted"} and is_high_tier_character_specific_set(faction_set_key, set_items):
                 continue
-            equipment_pool.append(
-                {
-                    "item_key": item_key,
-                    "item_category": item_category,
-                    "item_rarity": item_rarity,
-                    "weight": weight,
-                    "min_battle_tier": min_tier,
-                    "max_battle_tier": max_tier,
-                    "reward_slot": derive_ancillary_reward_slot(item_category),
-                }
-            )
+            equipment_pool.append(build_equipment_pool_entry(ancillary, ancillary_rarity_lookup))
             seen_items.add(item_key)
 
         if not equipment_pool:
@@ -1276,8 +1310,6 @@ def main() -> None:
                 continue
             if subtype_row.get("recruitable", "").lower() != "true":
                 continue
-            if subtype_row.get("recruitment_category", "") == "legendary_lords":
-                continue
 
             associated_unit_key = subtype_row.get("associated_unit_override", "")
             if not associated_unit_key:
@@ -1308,7 +1340,7 @@ def main() -> None:
             warnings.append(
                 "Skipping playable faction "
                 + faction_key
-                + " because no non-legendary recruitable general options were found."
+                + " because no recruitable general options were found."
             )
             continue
 
@@ -1353,6 +1385,12 @@ def main() -> None:
             print(f"[ERROR] {error}")
         raise SystemExit(1)
 
+    common_equipment_pool = build_common_equipment_pool(
+        ancillary_rows,
+        ancillary_keys_with_included_agent_subtypes,
+        ancillary_rarity_lookup,
+    )
+
     nodes_module = render_nodes_module(blueprint)
     battle_module = render_battle_module(
         blueprint,
@@ -1363,7 +1401,7 @@ def main() -> None:
         enemy_general_values,
         embedded_agents,
     )
-    ancillary_module = render_ancillary_module(blueprint, faction_equipment_pools)
+    ancillary_module = render_ancillary_module(blueprint, faction_equipment_pools, common_equipment_pool)
     players_module = render_players_module(
         supported_player_factions,
         player_content_faction_by_faction,
@@ -1465,6 +1503,7 @@ def main() -> None:
     replace_block(REPO_ROOT / "text" / "db" / "en" / "adamrogue_mvp_EN.loc.tsv", en_loc_lines)
 
     print(f"[OK] Generated nodes for {len(blueprint)} factions.")
+    print(f"[OK] Generated common equipment pool: {len(common_equipment_pool)}")
     print(f"[OK] Generated supported player factions: {len(supported_player_factions)}")
     for entry in blueprint:
         faction_key = str(entry["faction_key"])

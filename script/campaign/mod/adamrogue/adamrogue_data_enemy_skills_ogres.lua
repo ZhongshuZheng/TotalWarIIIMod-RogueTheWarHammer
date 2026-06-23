@@ -932,6 +932,486 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc26_ogr_golgfag_maneater = {
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_6",
+            skill_key = "wh3_main_skill_ogr_lord_battle_bellower",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_2",
+            skill_key = "wh3_main_skill_ogr_generic_melee_attack",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_4",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_3",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_5",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_golgfag_unique_01",
+            skill_key = "wh3_dlc26_skill_ogr_golgfag_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_golgfag_unique_02",
+            skill_key = "wh3_dlc26_skill_ogr_golgfag_unique_01",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_golgfag_unique_03",
+            skill_key = "wh3_dlc26_skill_ogr_golgfag_unique_03",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_golgfag_unique_04",
+            skill_key = "wh3_dlc26_skill_ogr_golgfag_unique_04",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_golgfag_unique_05",
+            skill_key = "wh3_dlc26_skill_ogr_golgfag_unique_05",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_golgfag_unique_06",
+            skill_key = "wh3_dlc26_skill_ogr_golgfag_unique_06",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_greasus_goldtooth_mutual_1",
+            skill_key = "wh3_main_skill_ogr_tyrant_unique_greater_girth",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_2",
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_3",
+                "wh3_dlc26_skill_node_ogr_tyrant_unique_3_camp",
+                "wh3_main_skill_node_ogr_tyrant_generic_1",
+                "wh3_main_skill_node_ogr_tyrant_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_greasus_goldtooth_mutual_2",
+            skill_key = "wh3_main_skill_ogr_tyrant_unique_impressive_wealth",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_paymaster_mutual_1",
+                "wh3_dlc26_skill_node_ogr_paymaster_mutual_3",
+                "wh3_dlc26_skill_node_ogr_tyrant_unique_3_camp",
+                "wh3_main_skill_node_ogr_tyrant_generic_0",
+                "wh3_main_skill_node_ogr_tyrant_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_golgfag_maneater_mutual_1",
+            skill_key = "wh3_dlc26_skill_ogr_paymaster_unique_keep_walkin",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_paymaster_mutual_1",
+                "wh3_dlc26_skill_node_ogr_paymaster_mutual_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_0",
+            skill_key = "wh3_main_skill_ogr_self_unstoppable_force",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_1_2",
+            skill_key = "wh3_main_skill_ogr_self_healthy_appetite",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_1_3",
+            skill_key = "wh3_main_skill_ogr_self_larger_gutplate",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_3_1",
+            skill_key = "wh3_main_skill_ogr_self_dominant",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_3_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_combat_4",
+            skill_key = "wh3_main_skill_ogr_self_snacks",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_1_1",
+            skill_key = "wh3_main_skill_ogr_army_buff_ogre_warriors",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_1_2",
+            skill_key = "wh3_main_skill_ogr_army_buff_gnoblars",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_1_3",
+            skill_key = "wh3_main_skill_ogr_army_buff_ogre_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_1_4",
+            skill_key = "wh3_main_skill_ogr_army_buff_missiles",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_1_5",
+            skill_key = "wh3_main_skill_ogr_army_buff_elite_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_1_6",
+            skill_key = "wh3_main_skill_ogr_army_buff_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_3_1",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_warriors_ironguts_gnoblars",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_3_2",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_missiles",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_3_3",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_ogre_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_3_4",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_ogre_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_army_4",
+            skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_13",
+                "wh2_dlc11_skill_node_nor_throgg_battle_13",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_13",
+                "wh3_dlc27_skill_node_nor_sayl_battle_13",
+                "wh3_main_ie_nor_azrik_battle_13",
+                "wh3_main_ie_nor_burplesmirk_battle_13",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
+            }
+        },
+    },
     wh3_dlc26_ogr_paymaster = {
         {
             node_key = "wh3_main_skill_node_ogr_tyrant_generic_6",
@@ -1376,6 +1856,962 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh3_main_skill_node_ogr_tyrant_army_4",
+            skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_13",
+                "wh2_dlc11_skill_node_nor_throgg_battle_13",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_13",
+                "wh3_dlc27_skill_node_nor_sayl_battle_13",
+                "wh3_main_ie_nor_azrik_battle_13",
+                "wh3_main_ie_nor_burplesmirk_battle_13",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
+            }
+        },
+    },
+    wh3_main_ogr_greasus_goldtooth = {
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_generic_0",
+            skill_key = "wh3_main_skill_ogr_lord_battle_bellower",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_generic_1",
+            skill_key = "wh3_main_skill_ogr_generic_melee_attack",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_generic_3",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_generic_2",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_generic_6",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_unique_0",
+            skill_key = "wh3_main_skill_ogr_greasus_unique_tribestealer",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_unique_1",
+            skill_key = "wh3_main_skill_ogr_greasus_unique_drakecrush",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_generic_4",
+            skill_key = "wh3_main_skill_ogr_greasus_unique_greased_gnoblars",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_generic_10",
+            skill_key = "wh3_main_skill_ogr_greasus_unique_expert_camping",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_generic_7",
+            skill_key = "wh3_main_skill_ogr_greasus_unique_bigger_and_stronger",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_unique_3",
+            skill_key = "wh3_main_skill_ogr_greasus_unique_overtyrant",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_greasus_goldtooth_mutual_1",
+            skill_key = "wh3_main_skill_ogr_tyrant_unique_greater_girth",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_2",
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_3",
+                "wh3_dlc26_skill_node_ogr_tyrant_unique_3_camp",
+                "wh3_main_skill_node_ogr_tyrant_generic_1",
+                "wh3_main_skill_node_ogr_tyrant_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_greasus_goldtooth_mutual_2",
+            skill_key = "wh3_main_skill_ogr_tyrant_unique_impressive_wealth",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_paymaster_mutual_1",
+                "wh3_dlc26_skill_node_ogr_paymaster_mutual_3",
+                "wh3_dlc26_skill_node_ogr_tyrant_unique_3_camp",
+                "wh3_main_skill_node_ogr_tyrant_generic_0",
+                "wh3_main_skill_node_ogr_tyrant_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_greasus_goldtooth_mutual_3",
+            skill_key = "wh3_main_skill_ogr_tyrant_unique_tithe_taking",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_tyrant_generic_0",
+                "wh3_main_skill_node_ogr_tyrant_generic_1",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_0",
+            skill_key = "wh3_main_skill_ogr_self_unstoppable_force",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_1_2",
+            skill_key = "wh3_main_skill_ogr_self_healthy_appetite",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_1_3",
+            skill_key = "wh3_main_skill_ogr_self_larger_gutplate",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_3_1",
+            skill_key = "wh3_main_skill_ogr_self_dominant",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_3_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_3_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_combat_4",
+            skill_key = "wh3_main_skill_ogr_self_snacks",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_1_1",
+            skill_key = "wh3_main_skill_ogr_army_buff_ogre_warriors",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_1_2",
+            skill_key = "wh3_main_skill_ogr_army_buff_gnoblars",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_1_3",
+            skill_key = "wh3_main_skill_ogr_army_buff_ogre_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_1_4",
+            skill_key = "wh3_main_skill_ogr_army_buff_missiles",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_1_5",
+            skill_key = "wh3_main_skill_ogr_army_buff_elite_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_1_6",
+            skill_key = "wh3_main_skill_ogr_army_buff_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_3_1",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_warriors_ironguts_gnoblars",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_3_2",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_missiles",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_3_3",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_ogre_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_3_4",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_ogre_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_army_4",
+            skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_13",
+                "wh2_dlc11_skill_node_nor_throgg_battle_13",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_13",
+                "wh3_dlc27_skill_node_nor_sayl_battle_13",
+                "wh3_main_ie_nor_azrik_battle_13",
+                "wh3_main_ie_nor_burplesmirk_battle_13",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
+            }
+        },
+    },
+    wh3_main_ogr_skrag_the_slaughterer = {
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_generic_4",
+            skill_key = "wh3_main_skill_ogr_generic_magic_reserves",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_generic_6",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_generic_5",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_generic_7",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_unique_0",
+            skill_key = "wh3_main_skill_ogr_skrag_unique_gorger_onslaught",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_unique_1",
+            skill_key = "wh3_main_skill_ogr_skrag_unique_whirling_stumpblades",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_unique_2",
+            skill_key = "wh3_main_skill_ogr_skrag_unique_prophet_of_the_great_maw",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_unique_3",
+            skill_key = "wh3_main_skill_ogr_skrag_unique_offers_to_the_great_maw",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_unique_4",
+            skill_key = "wh3_main_skill_ogr_skrag_unique_underway_stance",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_skrag_the_slaughterer_unique_5",
+            skill_key = "wh3_main_skill_ogr_skrag_unique_the_maw_devours",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_generic_2",
+            skill_key = "wh3_main_skill_ogr_butcher_tolerance_to_toxins",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_4",
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_6",
+                "wh3_main_skill_node_ogr_butcher_unique_1",
+                "wh3_main_skill_node_ogr_butcher_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_generic_3",
+            skill_key = "wh3_main_skill_ogr_unique_slaughtermaster_feastmaster",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_4",
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_5",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_generic_1",
+            skill_key = "wh3_main_skill_ogr_unique_slaughtermaster_walking_larder",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_5",
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_6",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_0",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_01_bullgorger_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_1_4",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_05_bloodgruel",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_1_1",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_02_braingobbler_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_1_2",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_03_toothcracker_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_1_3",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_04_bonecrusher_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_2",
+            skill_key = "wh3_main_skill_ogr_magic_meat_cleaver",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_3_1",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_07_trollguts_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_3_2",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_08_the_maw_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_3_4",
+            skill_key = "wh3_main_skill_ogr_magic_meat_reserves",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_4",
+            skill_key = "wh3_main_skill_ogr_magic_all_11_extra_ingredients",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_magic_dummy",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_dummy_bullgorger_braingobbler",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_1_1",
+            skill_key = "wh3_main_skill_ogr_army_buff_ogre_warriors",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_1_2",
+            skill_key = "wh3_main_skill_ogr_army_buff_gnoblars",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_1_3",
+            skill_key = "wh3_main_skill_ogr_army_buff_ogre_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_1_4",
+            skill_key = "wh3_main_skill_ogr_army_buff_missiles",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_1_5",
+            skill_key = "wh3_main_skill_ogr_army_buff_elite_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_1_6",
+            skill_key = "wh3_main_skill_ogr_army_buff_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_3_1",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_warriors_ironguts_gnoblars",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_3_2",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_missiles",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_3_3",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_ogre_cavalry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_3_4",
+            skill_key = "wh3_main_skill_ogr_army_buff_rank7_ogre_monsters",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_skrag_the_slaughterer_army_4",
             skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
             category_key = "battle",
             indent = 4,

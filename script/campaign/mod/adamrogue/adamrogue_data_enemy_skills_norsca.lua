@@ -1474,6 +1474,544 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc27_nor_sayl_the_faithless = {
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_01",
+            skill_key = "wh3_dlc27_skill_nor_sayl_mount_norscan_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_02",
+            skill_key = "wh3_dlc27_skill_nor_sayl_mount_marauder_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_03",
+            skill_key = "wh3_dlc27_skill_nor_sayl_mount_war_mammoth_warshrine",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 21 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_04",
+            skill_key = "wh_main_skill_chs_lord_battle_voice_of_the_dark_gods_nor",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_10",
+            skill_key = "wh3_dlc27_skill_nor_sayl_unique_10",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_05",
+            skill_key = "wh3_dlc27_skill_nor_sayl_unique_7",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_06",
+            skill_key = "wh3_dlc27_skill_nor_sayl_unique_8",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_07",
+            skill_key = "wh_dlc08_skill_nor_lords_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_lord_battle_monster_hunter",
+            skill_key = "wh3_dlc27_skill_nor_lord_battle_monster_hunter",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_08",
+            skill_key = "wh_dlc08_skill_nor_lords_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_1",
+            skill_key = "wh3_dlc27_skill_nor_sayl_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_2",
+            skill_key = "wh3_dlc27_skill_nor_sayl_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_3",
+            skill_key = "wh3_dlc27_skill_nor_sayl_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_4",
+            skill_key = "wh3_dlc27_skill_nor_sayl_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_5",
+            skill_key = "wh3_dlc27_skill_nor_sayl_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_unique_6",
+            skill_key = "wh3_dlc27_skill_nor_sayl_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_0",
+            skill_key = "wh2_main_skill_magic_shadow_enfeebling_foe_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_heavens_03_roiling_skies",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_1_2",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_1_3",
+            skill_key = "wh2_main_skill_all_magic_heavens_02_wind_blast_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_1_4",
+            skill_key = "wh2_main_skill_magic_shadow_penumbral_pendulum_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_1_5",
+            skill_key = "wh2_main_skill_all_magic_heavens_05_urannons_thunderbolt_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_3_1",
+            skill_key = "wh2_main_skill_magic_shadow_okkams_mindrazor_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_3_2",
+            skill_key = "wh2_main_skill_all_magic_heavens_10_chain_lightning_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_magic_dummy",
+            skill_key = "wh3_dlc27_skill_nor_magic_sayl_dummy_enfeebling_foe_wind_blast",
+            category_key = "character",
+            indent = 2,
+            tier = 99,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_01",
+            skill_key = "wh_main_skill_chs_lord_battle_dominating_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_02",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_fearsome_warriors",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_03",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_beast_slayers",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_04",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_unnatural_selection",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_05",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_frostbitten",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_06",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_hail_of_teeth",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_07",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_monsters_of_the_north",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_09",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_champions_of_the_north",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_10",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_hardened_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_11",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_icy_wrath",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_12",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_hulks_of_death",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_13",
+            skill_key = "wh_dlc08_skill_nor_lord_battle_stand_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_14",
+                "wh2_dlc11_skill_node_nor_throgg_battle_14",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_14",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_14",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_14",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_14",
+                "wh3_dlc27_skill_node_nor_sayl_battle_14",
+                "wh3_main_ie_nor_azrik_battle_14",
+                "wh3_main_ie_nor_burplesmirk_battle_14",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_14",
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_sayl_battle_14",
+            skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 13,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_13",
+                "wh2_dlc11_skill_node_nor_throgg_battle_13",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_13",
+                "wh3_dlc27_skill_node_nor_sayl_battle_13",
+                "wh3_main_ie_nor_azrik_battle_13",
+                "wh3_main_ie_nor_burplesmirk_battle_13",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
+            }
+        },
+    },
     wh3_main_ie_nor_burplesmirk_spewpit = {
         {
             node_key = "wh3_main_ie_nor_burplesmirk_unique_0",
@@ -2519,6 +3057,1014 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh3_main_ie_nor_azrik_battle_14",
+            skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 13,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_13",
+                "wh2_dlc11_skill_node_nor_throgg_battle_13",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_13",
+                "wh3_dlc27_skill_node_nor_sayl_battle_13",
+                "wh3_main_ie_nor_azrik_battle_13",
+                "wh3_main_ie_nor_burplesmirk_battle_13",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
+            }
+        },
+    },
+    wh_dlc08_nor_throgg = {
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_unique_02",
+            skill_key = "wh_dlc08_skill_nor_lords_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_unique_04",
+            skill_key = "wh_main_skill_chs_lord_battle_voice_of_the_dark_gods_nor",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_lord_battle_monster_hunter",
+            skill_key = "wh3_dlc27_skill_nor_lord_battle_monster_hunter",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_unique_03",
+            skill_key = "wh_dlc08_skill_nor_lords_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_throgg_0_1",
+            skill_key = "wh_dlc08_skill_nor_throgg_unique_king_of_trolls",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_throgg_1_1",
+            skill_key = "wh2_dlc17_skill_nor_throgg_unique_primordial_might",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_throgg_2_1",
+            skill_key = "wh_dlc08_skill_nor_throgg_unique_mutant_regeneration",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_throgg_3_1",
+            skill_key = "wh_dlc08_skill_nor_throgg_battle_cyclopean_fiends",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_throgg_4_1",
+            skill_key = "wh2_dlc17_skill_nor_throgg_unique_dread_retainers",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_throgg_5_1",
+            skill_key = "wh2_dlc17_skill_nor_throgg_unique_age_of_beasts",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc27_skill_node_nor_throgg_personal_1",
+            skill_key = "wh3_dlc27_skill_nor_throgg_personal_troll_king",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc27_skill_node_nor_throgg_personal_2",
+            skill_key = "wh3_dlc27_skill_nor_throgg_personal_climate_resistant",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc27_skill_node_nor_throgg_personal_3",
+            skill_key = "wh3_dlc27_skill_nor_throgg_personal_unite_the_creatures",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 21 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_01",
+            skill_key = "wh_dlc08_skill_nor_throgg_self_copious_vomit",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_05",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_06",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_10",
+            skill_key = "wh2_dlc11_skill_nor_lords_self_quicksilver",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_throgg_self_11",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_01",
+            skill_key = "wh_main_skill_chs_lord_battle_dominating_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_02",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_fearsome_warriors",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_03",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_beast_slayers",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_04",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_unnatural_selection",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_05",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_frostbitten",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_06",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_hail_of_teeth",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_07",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_monsters_of_the_north",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_09",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_champions_of_the_north",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_10",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_hardened_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_11",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_icy_wrath",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_12",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_hulks_of_death",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_13",
+            skill_key = "wh_dlc08_skill_nor_lord_battle_stand_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_14",
+                "wh2_dlc11_skill_node_nor_throgg_battle_14",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_14",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_14",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_14",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_14",
+                "wh3_dlc27_skill_node_nor_sayl_battle_14",
+                "wh3_main_ie_nor_azrik_battle_14",
+                "wh3_main_ie_nor_burplesmirk_battle_14",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_14",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_throgg_battle_14",
+            skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 13,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_13",
+                "wh2_dlc11_skill_node_nor_throgg_battle_13",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_13",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_13",
+                "wh3_dlc27_skill_node_nor_sayl_battle_13",
+                "wh3_main_ie_nor_azrik_battle_13",
+                "wh3_main_ie_nor_burplesmirk_battle_13",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
+            }
+        },
+    },
+    wh_dlc08_nor_wulfrik = {
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_unique_02",
+            skill_key = "wh_dlc08_skill_nor_wulfrik_unique_norscan_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_unique_03",
+            skill_key = "wh_dlc08_skill_nor_wulfrik_unique_marauder_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_unique_04",
+            skill_key = "wh_dlc08_skill_nor_wulfrik_unique_war_mammoth",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_unique_05",
+            skill_key = "wh_dlc08_skill_nor_lords_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_wulfrik_unique_14",
+            skill_key = "wh_main_skill_chs_lord_battle_hearts_of_iron",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_unique_09",
+            skill_key = "wh_main_skill_chs_lord_battle_voice_of_the_dark_gods_nor",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_lord_battle_monster_hunter",
+            skill_key = "wh3_dlc27_skill_nor_lord_battle_monster_hunter",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_unique_06",
+            skill_key = "wh_dlc08_skill_nor_lords_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_wulfrik_0_1",
+            skill_key = "wh_dlc08_skill_nor_wulfrik_self_hunter_of_champions",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_wulfrik_1_1",
+            skill_key = "wh2_dlc17_skill_nor_wulfrik_unique_juggernauts_of_the_sarl",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_wulfrik_2_1",
+            skill_key = "wh_dlc08_skill_nor_wulfrik_unique_eternal_challenger",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_wulfrik_3_1",
+            skill_key = "wh2_dlc17_skill_nor_wulfrik_unique_gift_of_tongues",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_wulfrik_4_1",
+            skill_key = "wh2_dlc17_skill_nor_wulfrik_unique_echoes_of_ambition",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_nor_wulfrik_5_1",
+            skill_key = "wh_dlc08_skill_nor_wulfrik_unique_world_walker",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_wulfrik_unique_12",
+            skill_key = "wh3_dlc27_skill_nor_wulfrik_battle_lead_by_example",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_unique_11",
+            skill_key = "wh_dlc08_skill_nor_wulfrik_battle_fervent_creatures",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_nor_wulfrik_unique_13",
+            skill_key = "wh3_dlc27_skill_nor_wulfrik_battle_mammoth_tamer",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_01",
+            skill_key = "wh_dlc08_skill_nor_wulfrik_self_seafang",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_05",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_10",
+            skill_key = "wh2_dlc11_skill_nor_lords_self_quicksilver",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_nor_wulfrik_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_01",
+            skill_key = "wh_main_skill_chs_lord_battle_dominating_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_02",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_fearsome_warriors",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_03",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_beast_slayers",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_04",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_unnatural_selection",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_05",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_frostbitten",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_06",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_hail_of_teeth",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_07",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_monsters_of_the_north",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_09",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_champions_of_the_north",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_10",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_hardened_hunters",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_11",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_icy_wrath",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_12",
+            skill_key = "wh2_dlc11_skill_nor_army_buff_hulks_of_death",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+            skill_key = "wh_dlc08_skill_nor_lord_battle_stand_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_nor_marauder_chieftain_battle_14",
+                "wh2_dlc11_skill_node_nor_throgg_battle_14",
+                "wh2_dlc11_skill_node_nor_wulfrik_battle_14",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_battle_14",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_battle_14",
+                "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_metal_battle_14",
+                "wh3_dlc27_skill_node_nor_sayl_battle_14",
+                "wh3_main_ie_nor_azrik_battle_14",
+                "wh3_main_ie_nor_burplesmirk_battle_14",
+                "wh_main_skill_node_nor_sorcerer_lord_metal_battle_14",
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_nor_wulfrik_battle_14",
             skill_key = "wh_dlc08_skill_nor_lords_battle_fight_or_die",
             category_key = "battle",
             indent = 4,

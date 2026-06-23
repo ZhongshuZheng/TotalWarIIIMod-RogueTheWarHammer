@@ -112,7 +112,8 @@ local SAVE_KEYS = {
     destination_leave_current_enabled = "adamrogue_destination_leave_current_enabled",
     destination_selection_generated = "adamrogue_destination_selection_generated",
     destination_generation_seed = "adamrogue_destination_generation_seed",
-    destination_generation_attempts = "adamrogue_destination_generation_attempts"
+    destination_generation_attempts = "adamrogue_destination_generation_attempts",
+    initial_peace_applied = "adamrogue_initial_peace_applied"
 }
 
 local BATTLE_UNIT_POOLS_BY_CONTENT_FACTION = adamrogue_data_battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION
@@ -781,6 +782,202 @@ local function count_units_in_force(force)
     return force:unit_list():num_items()
 end
 
+local PLAYER_SPAWN_SETTLEMENT_SEARCH_RADII = { 10, 8, 6, 5 }
+local PLAYER_SPAWN_CHARACTER_SEARCH_RADII = { 10, 8, 6 }
+
+local function find_player_spawn_position_for_faction(faction, region_key, leader)
+    local faction_key = faction:name()
+
+    for _, radius in ipairs(PLAYER_SPAWN_SETTLEMENT_SEARCH_RADII) do
+        local x, y = cm:find_valid_spawn_location_for_character_from_settlement(
+            faction_key,
+            region_key,
+            false,
+            true,
+            radius
+        )
+        if x >= 0 and y >= 0 then
+            log(
+                "Resolved player spawn from settlement. faction=["
+                    .. tostring(faction_key)
+                    .. "], region=["
+                    .. tostring(region_key)
+                    .. "], radius=["
+                    .. tostring(radius)
+                    .. "], x=["
+                    .. tostring(x)
+                    .. "], y=["
+                    .. tostring(y)
+                    .. "]."
+            )
+            return x, y, "from_settlement_r" .. tostring(radius)
+        end
+    end
+
+    if leader and not leader:is_null_interface() then
+        local leader_lookup = cm:char_lookup_str(leader)
+        for _, radius in ipairs(PLAYER_SPAWN_CHARACTER_SEARCH_RADII) do
+            local x, y = cm:find_valid_spawn_location_for_character_from_character(
+                faction_key,
+                leader_lookup,
+                true,
+                radius
+            )
+            if x >= 0 and y >= 0 then
+                log(
+                    "Resolved player spawn from faction leader. faction=["
+                        .. tostring(faction_key)
+                        .. "], radius=["
+                        .. tostring(radius)
+                        .. "], x=["
+                        .. tostring(x)
+                        .. "], y=["
+                        .. tostring(y)
+                        .. "]."
+                )
+                return x, y, "from_leader_r" .. tostring(radius)
+            end
+        end
+    end
+
+    log(
+        "Failed to resolve player spawn position. faction=["
+            .. tostring(faction_key)
+            .. "], region=["
+            .. tostring(region_key)
+            .. "]."
+    )
+    return nil
+end
+
+local function find_random_player_spawn_position_for_faction(faction, region_key, leader)
+    local faction_key = faction:name()
+    local candidates = {}
+    local seen_positions = {}
+
+    local function add_candidate(x, y, source)
+        if x < 0 or y < 0 then
+            return
+        end
+
+        local position_key = tostring(x) .. ":" .. tostring(y)
+        if seen_positions[position_key] then
+            return
+        end
+
+        seen_positions[position_key] = true
+        candidates[#candidates + 1] = {
+            x = x,
+            y = y,
+            source = source,
+        }
+    end
+
+    for _, radius in ipairs(PLAYER_SPAWN_SETTLEMENT_SEARCH_RADII) do
+        local x, y = cm:find_valid_spawn_location_for_character_from_settlement(
+            faction_key,
+            region_key,
+            false,
+            true,
+            radius
+        )
+        add_candidate(x, y, "from_settlement_r" .. tostring(radius))
+    end
+
+    if leader and not leader:is_null_interface() then
+        local leader_lookup = cm:char_lookup_str(leader)
+        for _, radius in ipairs(PLAYER_SPAWN_CHARACTER_SEARCH_RADII) do
+            local x, y = cm:find_valid_spawn_location_for_character_from_character(
+                faction_key,
+                leader_lookup,
+                true,
+                radius
+            )
+            add_candidate(x, y, "from_leader_r" .. tostring(radius))
+        end
+    end
+
+    if #candidates == 0 then
+        return nil
+    end
+
+    local picked = candidates[cm:random_number(#candidates, 1)]
+    return picked.x, picked.y, picked.source
+end
+
+local function try_relocate_player_force_for_variety(reason)
+    local faction = get_local_player_faction()
+    if not is_supported_player_faction(faction) then
+        log("try_relocate_player_force_for_variety skipped because the local faction is unsupported. reason=[" .. tostring(reason) .. "].")
+        return false
+    end
+
+    local player_general = get_saved_player_general()
+    if not player_general or player_general:is_null_interface() or not player_general:has_military_force() then
+        log("try_relocate_player_force_for_variety skipped because the player general is unavailable. reason=[" .. tostring(reason) .. "].")
+        return false
+    end
+
+    local region = player_general:region()
+    if not region or region:is_null_interface() then
+        region = faction:home_region()
+    end
+    if not region or region:is_null_interface() then
+        log("try_relocate_player_force_for_variety skipped because no region could be resolved. reason=[" .. tostring(reason) .. "].")
+        return false
+    end
+
+    local region_key = region:name()
+    local old_x = player_general:logical_position_x()
+    local old_y = player_general:logical_position_y()
+    local x, y, source = find_random_player_spawn_position_for_faction(faction, region_key, player_general)
+    if not x or not y then
+        log(
+            "try_relocate_player_force_for_variety skipped because no valid relocation position was found. reason=["
+                .. tostring(reason)
+                .. "], region=["
+                .. tostring(region_key)
+                .. "]."
+        )
+        return false
+    end
+
+    if x == old_x and y == old_y then
+        log(
+            "try_relocate_player_force_for_variety skipped because the resolved position matches the current position. reason=["
+                .. tostring(reason)
+                .. "], source=["
+                .. tostring(source)
+                .. "], x=["
+                .. tostring(x)
+                .. "], y=["
+                .. tostring(y)
+                .. "]."
+        )
+        return false
+    end
+
+    cm:teleport_to(cm:char_lookup_str(player_general), x, y)
+    log(
+        "Relocated player force for terrain variety. reason=["
+            .. tostring(reason)
+            .. "], region=["
+            .. tostring(region_key)
+            .. "], source=["
+            .. tostring(source)
+            .. "], from_x=["
+            .. tostring(old_x)
+            .. "], from_y=["
+            .. tostring(old_y)
+            .. "], to_x=["
+            .. tostring(x)
+            .. "], to_y=["
+            .. tostring(y)
+            .. "]."
+    )
+    return true
+end
+
 local function get_spawn_region_and_position_for_faction(faction)
     local leader = faction:faction_leader()
     if not leader or leader:is_null_interface() then
@@ -798,28 +995,27 @@ local function get_spawn_region_and_position_for_faction(faction)
         return nil
     end
 
-    local x, y = cm:find_valid_spawn_location_for_character_from_settlement(
-        faction:name(),
-        region:name(),
-        false,
-        true,
-        5
-    )
-
-    if x < 0 or y < 0 then
-        x, y = cm:find_valid_spawn_location_for_character_from_character(
-            faction:name(),
-            cm:char_lookup_str(leader),
-            true,
-            5
-        )
-    end
-
-    if x < 0 or y < 0 then
+    local region_key = region:name()
+    local x, y, source = find_player_spawn_position_for_faction(faction, region_key, leader)
+    if not x or not y then
         return nil
     end
 
-    return region:name(), x, y
+    log(
+        "Player spawn region resolved. faction=["
+            .. tostring(faction:name())
+            .. "], region=["
+            .. tostring(region_key)
+            .. "], source=["
+            .. tostring(source)
+            .. "], x=["
+            .. tostring(x)
+            .. "], y=["
+            .. tostring(y)
+            .. "]."
+    )
+
+    return region_key, x, y
 end
 
 local function find_enemy_spawn_near_player(enemy_faction_key, player_general)
@@ -2076,6 +2272,74 @@ local function ensure_run_started()
     return true
 end
 
+-- 战役层无法像战斗脚本那样禁止援军入场；附近同战争派系军队仍可能加入 pending battle。
+-- 首次点击 Mod 入口按钮时，先与所有交战派系强制议和，避免原版外交战争中的援军卷入 Mod 战斗。
+local function force_peace_with_all_player_enemies(player_faction, reason_label)
+    if not player_faction or player_faction:is_null_interface() then
+        log("force_peace_with_all_player_enemies aborted: invalid player faction. reason=[" .. tostring(reason_label) .. "].")
+        return 0
+    end
+
+    local war_factions = player_faction:factions_at_war_with()
+    if not war_factions or war_factions:is_empty() then
+        log("force_peace_with_all_player_enemies: player has no active wars. reason=[" .. tostring(reason_label) .. "].")
+        return 0
+    end
+
+    local enemy_faction_keys = {}
+    for i = 0, war_factions:num_items() - 1 do
+        local enemy_faction = war_factions:item_at(i)
+        if enemy_faction and not enemy_faction:is_null_interface() and not enemy_faction:is_dead() then
+            table.insert(enemy_faction_keys, enemy_faction:name())
+        end
+    end
+
+    if #enemy_faction_keys == 0 then
+        log("force_peace_with_all_player_enemies: no valid enemy factions to pacify. reason=[" .. tostring(reason_label) .. "].")
+        return 0
+    end
+
+    log(
+        "force_peace_with_all_player_enemies started. player_faction=["
+            .. player_faction:name()
+            .. "], enemy_count=["
+            .. tostring(#enemy_faction_keys)
+            .. "], reason=["
+            .. tostring(reason_label)
+            .. "]."
+    )
+
+    cm:disable_event_feed_events(true, "wh_event_category_diplomacy", "", "")
+    for _, enemy_faction_key in ipairs(enemy_faction_keys) do
+        log("force_peace_with_all_player_enemies: " .. player_faction:name() .. " <-> " .. tostring(enemy_faction_key))
+        cm:force_make_peace(player_faction:name(), enemy_faction_key)
+    end
+    cm:disable_event_feed_events(false, "wh_event_category_diplomacy", "", "")
+
+    return #enemy_faction_keys
+end
+
+local function ensure_initial_peace_on_first_entry(player_faction, reason)
+    if get_saved_value(SAVE_KEYS.initial_peace_applied, false) then
+        return false
+    end
+
+    if reason ~= "ui_button" then
+        return false
+    end
+
+    local peace_count = force_peace_with_all_player_enemies(player_faction, reason)
+    set_saved_value(SAVE_KEYS.initial_peace_applied, true)
+    log(
+        "ensure_initial_peace_on_first_entry finished. peace_count=["
+            .. tostring(peace_count)
+            .. "], reason=["
+            .. tostring(reason)
+            .. "]."
+    )
+    return true
+end
+
 local function prepare_unit_reward_event()
     local faction = get_local_player_faction()
     if not is_supported_player_faction(faction) then
@@ -2527,6 +2791,7 @@ local function prepare_destination_event()
 
     set_current_event_context(EVENT_TYPE.DESTINATION, DILEMMA_DESTINATION_KEY, seed, payload)
     set_current_state(STATE.DESTINATION_PENDING)
+    try_relocate_player_force_for_variety("destination_event_prepared")
     log(
         "Prepared destination event. current_node_key=["
             .. tostring(current_node.node_key)
@@ -2560,11 +2825,11 @@ local function launch_equipment_reward_dilemma(faction)
 
     local dilemma_builder = cm:create_dilemma_builder(DILEMMA_EQUIPMENT_REWARD_KEY)
     local payload_builder = cm:create_payload()
-    local choice_keys = { "FIRST", "SECOND", "THIRD" }
+    local choice_keys = { "FIRST", "SECOND", "THIRD", "FOURTH" }
     local valid_choice_count = 0
 
     -- Rebuild the dilemma from the saved payload so the same item choices survive save/load.
-    for choice_index = 0, 2 do
+    for choice_index = 0, 3 do
         local ancillary_key = payload["ancillary_" .. tostring(choice_index)]
         local item_category = payload["category_" .. tostring(choice_index)] or "unknown"
         local item_rarity = payload["rarity_" .. tostring(choice_index)] or "unknown"
@@ -2750,6 +3015,7 @@ local function open_current_event(reason)
     end
 
     ensure_current_node_initialized("open_current_event")
+    ensure_initial_peace_on_first_entry(faction, reason)
 
     local state = get_current_state()
     log("Entry triggered by player. reason=[" .. tostring(reason) .. "], current_state=[" .. tostring(state) .. "]")
@@ -4214,7 +4480,7 @@ local function handle_equipment_reward_dilemma_choice(context)
     cm:callback(function()
         log("Processing deferred equipment reward dilemma choice: " .. tostring(choice))
 
-        if choice >= 0 and choice <= 2 then
+        if choice >= 0 and choice <= 3 then
             if not record_reward_ancillary_choice(choice) then
                 return
             end

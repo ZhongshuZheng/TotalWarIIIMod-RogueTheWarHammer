@@ -4,6 +4,1454 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh_main_brt_bretonnia"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh2_dlc14_brt_repanse = {
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_2",
+            skill_key = "wh2_dlc14_skill_brt_repanse_barded_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_3",
+            skill_key = "wh_main_skill_brt_lord_battle_virtue_of_empathy",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_4",
+            skill_key = "wh_main_skill_brt_lord_battle_basic_training",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_5",
+            skill_key = "wh_main_skill_brt_all_unique_ladys_mantle",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_12",
+            skill_key = "wh2_dlc14_skill_brt_repanse_banner_of_lyonesse",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_lionhearted",
+            skill_key = "wh_main_skill_brt_lord_battle_lionhearted",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_6",
+            skill_key = "wh2_dlc14_skill_brt_repanse_the_peoples_hero",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_7",
+            skill_key = "wh2_dlc14_skill_brt_repanse_banish_the_scourge",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_8",
+            skill_key = "wh2_dlc14_skill_brt_repanse_couragous",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_9",
+            skill_key = "wh2_dlc14_skill_brt_repanse_rebuild_the_ruins",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_10",
+            skill_key = "wh2_dlc14_skill_brt_repanse_honorable_and_pure",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_unique_11",
+            skill_key = "wh2_dlc14_skill_brt_repanse_eternal_errantry_war",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_05",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_tenacity",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_10",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_02",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_03",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_proficiency_of_peasants",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_04",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_05",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_glorfinials_progeny",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_06",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_guardians_of_the_lady",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_07",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_engines_of_war",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_09",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_the_peasants_duty",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_10",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_protectors_of_the_realm",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_11",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_chivalric_code",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_12",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_guided_by_the_lady",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_brt_repanse_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc07_brt_alberic = {
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_01",
+            skill_key = "wh_dlc07_skill_brt_alberic_unique_general_barded_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_03",
+            skill_key = "wh_dlc07_skill_brt_alberic_unique_general_royal_pegasus",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_02",
+            skill_key = "wh_dlc07_skill_brt_alberic_unique_general_hippogryph",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_06",
+            skill_key = "wh_main_skill_brt_lord_unique_general_lance_formation",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_11",
+            skill_key = "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_12",
+            skill_key = "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_08",
+            skill_key = "wh_main_skill_brt_lord_battle_virtue_of_empathy",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_09",
+            skill_key = "wh_main_skill_brt_lord_battle_lionhearted",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_10",
+            skill_key = "wh_main_skill_brt_lord_battle_basic_training",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_07",
+            skill_key = "wh_main_skill_brt_all_unique_ladys_mantle",
+            category_key = "character",
+            indent = 0,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc12_skill_node_brt_alberic_hidden_vows",
+            skill_key = "wh2_dlc12_skill_brt_hidden_skill_bretonnian_knights_vow_alberic",
+            category_key = "character",
+            indent = 0,
+            tier = 20,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_vows_01",
+            skill_key = "wh_dlc07_skill_brt_knight_vow",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_vows_02",
+            skill_key = "wh_dlc07_skill_brt_questing_vow",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_vows_03",
+            skill_key = "wh_dlc07_skill_brt_grail_vow",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_alberic_special_0",
+            skill_key = "wh2_dlc07_skill_brt_alberic_special_0",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_alberic_special_1",
+            skill_key = "wh2_dlc07_skill_brt_alberic_special_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_alberic_special_2",
+            skill_key = "wh2_dlc07_skill_brt_alberic_special_2",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_alberic_special_3",
+            skill_key = "wh2_dlc07_skill_brt_alberic_special_3",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_unique_05",
+            skill_key = "wh_main_skill_brt_lord_unique_the_blessing_of_the_lady",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_05",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_10",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_self_11",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_02",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_03",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_proficiency_of_peasants",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_04",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_05",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_glorfinials_progeny",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_06",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_guardians_of_the_lady",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_07",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_engines_of_war",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_09",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_the_peasants_duty",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_10",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_protectors_of_the_realm",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_11",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_chivalric_code",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_12",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_guided_by_the_lady",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_alberic_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc07_brt_fay_enchantress = {
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_unique_04",
+            skill_key = "wh_dlc07_skill_brt_fay_enchantress_unique_silvaron",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_unique_05",
+            skill_key = "wh_dlc07_skill_brt_lord_unique_fay_enchantress_loremaster_lore_of_life",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_unique_02",
+            skill_key = "wh_dlc07_skill_brt_fay_enchantress_unique_power_familiar",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_unique_09",
+            skill_key = "wh_dlc07_skill_brt_fay_battle_blessed_water",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_unique_10",
+            skill_key = "wh_dlc07_skill_brt_fay_battle_secrets_of_the_grail",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_unique_06",
+            skill_key = "wh_main_skill_brt_lord_battle_virtue_of_empathy",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_unique_07",
+            skill_key = "wh_main_skill_brt_lord_battle_lionhearted",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_unique_08",
+            skill_key = "wh_main_skill_brt_lord_battle_basic_training",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_unique_01",
+            skill_key = "wh_dlc07_skill_brt_fay_enchantress_unique_girdle_of_gold",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_vows_01",
+            skill_key = "wh_dlc07_skill_brt_knight_vow",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_vows_02",
+            skill_key = "wh_dlc07_skill_brt_questing_vow",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_vows_03",
+            skill_key = "wh_dlc07_skill_brt_grail_vow_unique_fay",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_fay_enchantress_special_0",
+            skill_key = "wh2_dlc07_skill_brt_fay_enchantress_special_0",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_fay_enchantress_special_1",
+            skill_key = "wh2_dlc07_skill_brt_fay_enchantress_special_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_fay_enchantress_special_2",
+            skill_key = "wh2_dlc07_skill_brt_fay_enchantress_special_2",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_fay_enchantress_special_3",
+            skill_key = "wh2_dlc07_skill_brt_fay_enchantress_special_3",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_01",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_awakening_of_the_wood",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_02",
+            skill_key = "wh_dlc05_skill_magic_life_life_bloom",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_03",
+            skill_key = "wh2_main_skill_magic_life_wizard_earth_blood_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_04",
+            skill_key = "wh2_main_skill_magic_life_wizard_shield_of_thorns_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_05",
+            skill_key = "wh2_main_skill_magic_life_wizard_flesh_to_stone_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_09",
+            skill_key = "wh2_main_skill_magic_life_wizard_regrowth_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_10",
+            skill_key = "wh2_main_skill_magic_life_wizard_the_dwellers_below_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_magic_dummy",
+            skill_key = "wh2_main_skill_magic_life_wizard_awakening_of_the_wood_earth_blood_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_02",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_03",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_proficiency_of_peasants",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_04",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_05",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_glorfinials_progeny",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_06",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_guardians_of_the_lady",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_07",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_engines_of_war",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_09",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_the_peasants_duty",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_10",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_protectors_of_the_realm",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_11",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_chivalric_code",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_12",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_guided_by_the_lady",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc07_skill_node_brt_fay_enchantress_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh_dlc07_brt_prophetess_beasts = {
         {
             node_key = "wh_dlc07_skill_node_brt_prophetess_beasts_unique_08",
@@ -1695,6 +3143,538 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_main_skill_node_brt_lord_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_main_brt_louen_leoncouer = {
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_00",
+            skill_key = "wh_main_skill_brt_lord_unique_louen_barded_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_01",
+            skill_key = "wh_main_skill_brt_lord_unique_louen_royal_pegasus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_02",
+            skill_key = "wh_main_skill_brt_lord_unique_louen_beaquis",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_08",
+            skill_key = "wh_dlc07_skill_brt_louen_unique_crown_of_bretonnia",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_05",
+            skill_key = "wh_main_skill_brt_lord_unique_louen_the_army_of_the_king",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_10",
+            skill_key = "wh_main_skill_brt_lord_battle_virtue_of_empathy",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_11",
+            skill_key = "wh_main_skill_brt_lord_battle_lionhearted",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_12",
+            skill_key = "wh_main_skill_brt_lord_battle_basic_training",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_09",
+            skill_key = "wh_main_skill_brt_all_unique_ladys_mantle",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc12_skill_node_brt_louen_hidden_vows",
+            skill_key = "wh2_dlc12_skill_brt_hidden_skill_all_bretonnian_vows_king_louen",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_vows_01",
+            skill_key = "wh_dlc07_skill_brt_knight_vow",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_vows_02",
+            skill_key = "wh_dlc07_skill_brt_questing_vow",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_vows_03",
+            skill_key = "wh_dlc07_skill_brt_grail_vow",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_louen_special_0",
+            skill_key = "wh2_dlc07_skill_brt_louen_special_0",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_louen_special_1",
+            skill_key = "wh2_dlc07_skill_brt_louen_special_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_louen_special_2",
+            skill_key = "wh2_dlc07_skill_brt_louen_special_2",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc07_skill_node_brt_louen_special_3",
+            skill_key = "wh2_dlc07_skill_brt_louen_special_3",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_04",
+            skill_key = "wh_main_skill_brt_lord_unique_louen_the_ladys_champion",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_06",
+            skill_key = "wh_main_skill_brt_lord_unique_louen_beloved_son_of_bretonnia",
+            category_key = "character",
+            indent = 1,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_unique_03",
+            skill_key = "wh_dlc07_skill_brt_louen_unique_lions_shield",
+            category_key = "character",
+            indent = 1,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_05",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_10",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_02",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_03",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_proficiency_of_peasants",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_04",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_05",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_glorfinials_progeny",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_06",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_guardians_of_the_lady",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_07",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_engines_of_war",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_09",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_the_peasants_duty",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_10",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_protectors_of_the_realm",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_11",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_chivalric_code",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_12",
+            skill_key = "wh2_dlc11_skill_brt_army_buff_guided_by_the_lady",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_brt_louen_battle_13",
             skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
             category_key = "battle",
             indent = 4,

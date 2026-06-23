@@ -4,6 +4,2186 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh2_dlc09_tmb_khemri"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh2_dlc09_tmb_arkhan = {
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_mount_skeletal_steed",
+            skill_key = "wh2_dlc09_skill_tmb_lord_unique_arkhan_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_mount_skeleton_chariot",
+            skill_key = "wh2_dlc09_skill_tmb_lord_unique_arkhan_skeleton_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_misc_0",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_returned_in_madness",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_misc_1",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ancient_tyrant",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_misc_2",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_misc_3",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tmb_dynasty_restless",
+            skill_key = "wh3_main_skill_tmb_never_say_die",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_god_blessing_2",
+            skill_key = "wh2_dlc09_skill_tmb_god_blessing_2",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_unique_0",
+            skill_key = "wh2_dlc09_skill_tmb_arkhan_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_unique_1",
+            skill_key = "wh2_dlc09_skill_tmb_arkhan_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_unique_2",
+            skill_key = "wh2_dlc09_skill_tmb_arkhan_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_unique_3",
+            skill_key = "wh2_dlc09_skill_tmb_arkhan_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_unique_4",
+            skill_key = "wh2_dlc09_skill_tmb_arkhan_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_unique_5",
+            skill_key = "wh2_dlc09_skill_tmb_arkhan_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_0",
+            skill_key = "wh2_dlc09_skill_tmb_personal_base",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_1",
+            skill_key = "wh2_dlc09_skill_tmb_personal_conqueror",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_5",
+            skill_key = "wh2_dlc09_skill_tmb_personal_5",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_6",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_7",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_8",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_9",
+            skill_key = "wh2_dlc09_skill_tmb_personal_9",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_personal_10",
+            skill_key = "wh2_dlc09_skill_tmb_personal_10_arkhan",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_0",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_1",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_2",
+            skill_key = "wh2_main_skill_all_magic_death_02_aspect_of_the_dreadknight_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_3",
+            skill_key = "wh2_main_skill_all_magic_death_04_soulblight_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_4",
+            skill_key = "wh2_main_skill_all_magic_death_05_doom_and_darkness_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_5",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_6",
+            skill_key = "wh2_main_skill_all_magic_death_09_the_fate_of_bjuna_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_7",
+            skill_key = "wh2_main_skill_all_magic_death_10_the_purple_sun_of_xereus_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_8",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_9",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_10",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_lore_dummy",
+            skill_key = "wh2_main_skill_all_magic_death_dummy_spirit_leech_aspect_of_the_dreadknight",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_0",
+            skill_key = "wh2_dlc09_skill_tmb_lord_army_base",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_1",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_archers",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_2",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_3",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_4",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_chariot",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_5",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_structure_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_6",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_elite_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_7",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_8",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_archer",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_9",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_10",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_11",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_army_12",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc09_tmb_khalida = {
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_mount_skeleton_chariot",
+            skill_key = "wh2_dlc09_skill_tmb_lord_unique_khalida_skeleton_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_mount_necroserpent",
+            skill_key = "wh2_dlc09_skill_tmb_lord_unique_khalida_necroserpent",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_misc_0",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_returned_in_madness",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_misc_1",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ancient_tyrant",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_misc_2",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_misc_3",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tmb_dynasty_restless",
+            skill_key = "wh3_main_skill_tmb_never_say_die",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_god_blessing_3",
+            skill_key = "wh2_dlc09_skill_tmb_god_blessing_3",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_unique_0",
+            skill_key = "wh2_dlc09_skill_tmb_khalida_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_unique_1",
+            skill_key = "wh2_dlc09_skill_tmb_khalida_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_unique_2",
+            skill_key = "wh2_dlc09_skill_tmb_khalida_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_unique_3",
+            skill_key = "wh2_dlc09_skill_tmb_khalida_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_unique_4",
+            skill_key = "wh2_dlc09_skill_tmb_khalida_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_unique_5",
+            skill_key = "wh2_dlc09_skill_tmb_khalida_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_0",
+            skill_key = "wh2_dlc09_skill_tmb_personal_base",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_1",
+            skill_key = "wh2_dlc09_skill_tmb_personal_graceful_warrior",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_4",
+            skill_key = "wh_main_skill_all_dignitary_self_tenacity_2",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_5",
+            skill_key = "wh2_dlc09_skill_tmb_personal_5",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_6",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_7",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_8",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_9",
+            skill_key = "wh2_dlc09_skill_tmb_personal_9",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_personal_10",
+            skill_key = "wh2_dlc09_skill_tmb_personal_10",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_0",
+            skill_key = "wh2_dlc09_skill_tmb_lord_army_base",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_1",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_archers",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_2",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_3",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_4",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_chariot",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_5",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_structure_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_6",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_elite_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_7",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_8",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_archer",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_9",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_10",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_11",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khalida_army_12",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc09_tmb_khatep = {
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_god_blessing_1",
+            skill_key = "wh2_dlc09_skill_tmb_god_blessing_1",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_mount_skeletal_steed",
+            skill_key = "wh2_dlc09_skill_tmb_lord_unique_khatep_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_mount_skeleton_chariot",
+            skill_key = "wh2_dlc09_skill_tmb_lord_unique_khatep_skeleton_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_mount_casket_of_souls",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_mount_casket_of_souls",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_misc_0",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_arcane_knowledge",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_misc_1",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_mortuary_cult_scholar",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_misc_2",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_witness_to_the_golden_age",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_misc_4",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_misc_3",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_soul_binding",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tmb_dynasty_restless",
+            skill_key = "wh3_main_skill_tmb_never_say_die",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_unique_0",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_unique_1",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_unique_2",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_unique_3",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_unique_4",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_unique_5",
+            skill_key = "wh2_dlc09_skill_tmb_khatep_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_0",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_0_djafs_incantation_of_cursed_blades_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_1",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_1_passive",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_2",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_2_nerus_incantation_of_protection_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_3",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_3_ptras_incantation_of_righteous_smiting_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_4",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_4_usirians_incantation_of_vengeance_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_5",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_6",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_6_usekhps_incantation_of_desiccation_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_7",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_7_sakhmets_incantation_of_the_skullstorm_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_8",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_9",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_10",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_lore_dummy",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_dummy_0_djafs_incantation_of_cursed_blades",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_0",
+            skill_key = "wh2_dlc09_skill_tmb_lord_army_base",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_1",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_archers",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_2",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_3",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_4",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_chariot",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_5",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_structure_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_6",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_elite_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_7",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_8",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_archer",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_9",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_10",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_11",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_khatep_army_12",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc09_tmb_settra = {
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_mount_skeletal_steed",
+            skill_key = "wh2_dlc09_skill_tmb_lord_unique_settra_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_mount_khemrian_warsphinx",
+            skill_key = "wh2_dlc09_skill_tmb_lord_unique_settra_khemrian_warsphinx",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_mount_chariot_of_the_gods",
+            skill_key = "wh2_dlc09_skill_tmb_lord_unique_settra_chariot_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_misc_0",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_returned_in_madness",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_misc_1",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ancient_tyrant",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_misc_2",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_misc_3",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tmb_dynasty_restless",
+            skill_key = "wh3_main_skill_tmb_never_say_die",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_god_blessing_0",
+            skill_key = "wh2_dlc09_skill_tmb_god_blessing_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_unique_0",
+            skill_key = "wh2_dlc09_skill_tmb_settra_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_unique_1",
+            skill_key = "wh2_dlc09_skill_tmb_settra_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_unique_2",
+            skill_key = "wh2_dlc09_skill_tmb_settra_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_unique_3",
+            skill_key = "wh2_dlc09_skill_tmb_settra_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_unique_4",
+            skill_key = "wh2_dlc09_skill_tmb_settra_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_unique_5",
+            skill_key = "wh2_dlc09_skill_tmb_settra_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_0",
+            skill_key = "wh2_dlc09_skill_tmb_personal_base",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_1",
+            skill_key = "wh2_dlc09_skill_tmb_personal_conqueror",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_5",
+            skill_key = "wh2_dlc09_skill_tmb_personal_5",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_6",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_7",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_8",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_9",
+            skill_key = "wh2_dlc09_skill_tmb_personal_9",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_personal_10",
+            skill_key = "wh2_dlc09_skill_tmb_personal_10",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_0",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_0_djafs_incantation_of_cursed_blades_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_1",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_1_passive",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_2",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_2_nerus_incantation_of_protection_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_3",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_3_ptras_incantation_of_righteous_smiting_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_4",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_4_usirians_incantation_of_vengeance_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_5",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_6",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_6_usekhps_incantation_of_desiccation_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_7",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_7_sakhmets_incantation_of_the_skullstorm_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_8",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_9",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_10",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_lore_dummy",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_dummy_0_djafs_incantation_of_cursed_blades",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_0",
+            skill_key = "wh2_dlc09_skill_tmb_lord_army_base",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_1",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_archers",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_2",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_3",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_4",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_chariot",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_5",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_structure_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_6",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_elite_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_7",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_8",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_archer",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_9",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_10",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_11",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_settra_army_12",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_dlc09_tmb_tomb_king = {
         {
             node_key = "wh2_dlc09_skill_tmb_tomb_king_mount_skeletal_steed",

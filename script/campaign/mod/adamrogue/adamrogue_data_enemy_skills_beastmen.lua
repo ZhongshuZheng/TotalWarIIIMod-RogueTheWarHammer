@@ -430,6 +430,480 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh2_dlc17_bst_taurox = {
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_misc_01",
+            skill_key = "wh_dlc03_skill_bst_lord_fuelled_by_blood",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_misc_02",
+            skill_key = "wh2_dlc17_skill_bst_lord_battle_voice_of_the_dark_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_misc_03",
+            skill_key = "wh_dlc03_skill_bst_gorebull_gouge_tusks",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_misc_04",
+            skill_key = "wh_dlc03_skill_bst_bray_shaman_unique_uncanny_senses",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_misc_05",
+            skill_key = "wh_dlc03_skill_bst_all_unique_shadow_hide",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_01",
+            skill_key = "wh2_dlc17_skill_bst_taurox_unique_favoured_of_the_skull_throne",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_02",
+            skill_key = "wh2_dlc17_skill_bst_taurox_unique_juggernaut",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_03",
+            skill_key = "wh2_dlc17_skill_bst_taurox_unique_drowned_in_blood",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_04",
+            skill_key = "wh2_dlc17_skill_bst_taurox_unique_titans_of_the_deep_forest",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_05",
+            skill_key = "wh2_dlc17_skill_bst_taurox_unique_gorefeast",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_06",
+            skill_key = "wh2_dlc17_skill_bst_taurox_unique_daemonic_vigour",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_07",
+            skill_key = "wh2_dlc17_skill_bst_doombull_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_bst_taurox_unique_09",
+                "wh2_dlc17_skill_node_set_bst_doombull_unique_11",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_08",
+            skill_key = "wh2_dlc17_skill_bst_doombull_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_09",
+            skill_key = "wh2_dlc17_skill_bst_doombull_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_bst_taurox_unique_07",
+                "wh2_dlc17_skill_node_set_bst_doombull_unique_09",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_bst_taurox_unique_10",
+            skill_key = "wh2_dlc17_skill_bst_doombull_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_01",
+            skill_key = "wh_dlc03_skill_bst_lord_primal_fury",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_04",
+            skill_key = "wh2_dlc11_skill_bst_lord_primal_instincts",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_05",
+            skill_key = "wh_dlc03_skill_bst_lord_hatred_of_man",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_06",
+            skill_key = "wh_dlc03_skill_bst_lord_banquet_of_flesh",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_07",
+            skill_key = "wh_dlc03_skill_bst_lord_savage_beast",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_08",
+            skill_key = "wh2_dlc11_skill_bst_lord_unnatural_thirst",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_10",
+            skill_key = "wh_dlc03_skill_bst_lord_prized_horns",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_self_11",
+            skill_key = "wh_dlc03_skill_bst_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_0",
+            skill_key = "wh_dlc03_skill_bst_lord_presence_of_morrslieb",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_1_1",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_fury_of_the_herd",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_1_2",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_leader_of_the_raucous_host",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_1_3",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_beastlords_spite",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_1_4",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_beastlords_lash",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_1_5",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_hooved_heavyweights",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_1_6",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_freakish_mutations",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_2",
+            skill_key = "wh_dlc03_skill_bst_lord_call_of_violence",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_3_1",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_unrelenting_savagery",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_3_2",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_creatures_of_the_herd",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_3_3",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_bestial_butchers",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_3_4",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_mage_hunter",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_set_bst_taurox_army_4",
+            skill_key = "wh_dlc03_skill_bst_lord_apocalyptic_vision",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_twa04_bst_great_bray_shaman_beasts = {
         {
             node_key = "wh2_dlc17_skill_node_set_bst_great_bray_shaman_beast_unique_01",
@@ -2719,6 +3193,1486 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_dlc03_skill_node_bst_beastlord_battle_13",
+            skill_key = "wh_dlc03_skill_bst_lord_apocalyptic_vision",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc03_bst_khazrak = {
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_13",
+            skill_key = "wh2_dlc17_skill_bst_khazrak_one_eye_unique_tuskgor",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_03",
+            skill_key = "wh_dlc03_skill_bst_khazrak_one_eye_unique_razorgor",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_09",
+            skill_key = "wh_dlc03_skill_bst_lord_fuelled_by_blood",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_11",
+            skill_key = "wh2_dlc17_skill_bst_lord_battle_voice_of_the_dark_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_10",
+            skill_key = "wh_dlc03_skill_bst_lord_self_blood_lust",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_14",
+            skill_key = "wh_dlc03_skill_bst_bray_shaman_unique_uncanny_senses",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_08",
+            skill_key = "wh_dlc03_skill_bst_all_unique_shadow_hide",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_04",
+            skill_key = "wh_dlc03_skill_bst_lord_bestial_cunning",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_khazrak_unique_underhoof",
+            skill_key = "wh2_dlc17_bst_khazrak_unique_underhoof",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_khazrak_unique_drakwald_hordes",
+            skill_key = "wh2_dlc17_bst_khazrak_unique_drakwald_hordes",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_khazrak_unique_houndmaster",
+            skill_key = "wh2_dlc17_bst_khazrak_unique_houndmaster",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_khazrak_unique_manslayer",
+            skill_key = "wh2_dlc17_bst_khazrak_unique_manslayer",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_khazrak_unique_cunning_combatant",
+            skill_key = "wh2_dlc17_bst_khazrak_unique_cunning_combatant",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_12",
+            skill_key = "wh_dlc03_skill_bst_lord_man_bane",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh_dlc03_skill_node_bst_beastlord_unique_05",
+                "wh_dlc03_skill_node_bst_khazrak_unique_07",
+                "wh_dlc03_skill_node_bst_morghur_unique_11",
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_05",
+            skill_key = "wh_dlc03_skill_bst_lord_crown_of_horns",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_07",
+            skill_key = "wh_dlc03_skill_bst_lord_rune_of_the_true_beast",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh_dlc03_skill_node_bst_beastlord_unique_02",
+                "wh_dlc03_skill_node_bst_khazrak_unique_12",
+                "wh_dlc03_skill_node_bst_morghur_unique_12",
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_unique_06",
+            skill_key = "wh_dlc03_skill_bst_lord_slug_skin",
+            category_key = "character",
+            indent = 1,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_01",
+            skill_key = "wh_dlc03_skill_bst_lord_primal_fury",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_04",
+            skill_key = "wh2_dlc11_skill_bst_lord_primal_instincts",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_05",
+            skill_key = "wh_dlc03_skill_bst_lord_hatred_of_man",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_06",
+            skill_key = "wh_dlc03_skill_bst_lord_banquet_of_flesh",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_07",
+            skill_key = "wh_dlc03_skill_bst_lord_savage_beast",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_08",
+            skill_key = "wh2_dlc11_skill_bst_lord_unnatural_thirst",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_10",
+            skill_key = "wh_dlc03_skill_bst_lord_prized_horns",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_self_11",
+            skill_key = "wh_dlc03_skill_bst_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_01",
+            skill_key = "wh_dlc03_skill_bst_lord_presence_of_morrslieb",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_02",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_fury_of_the_herd",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_03",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_leader_of_the_raucous_host",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_04",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_beastlords_spite",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_05",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_beastlords_lash",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_06",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_hooved_heavyweights",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_07",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_freakish_mutations",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_08",
+            skill_key = "wh_dlc03_skill_bst_lord_call_of_violence",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_09",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_unrelenting_savagery",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_10",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_creatures_of_the_herd",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_11",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_bestial_butchers",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_12",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_mage_hunter",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_khazrak_battle_13",
+            skill_key = "wh_dlc03_skill_bst_lord_apocalyptic_vision",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc03_bst_malagor = {
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_unique_2",
+            skill_key = "wh_dlc03_skill_bst_lord_fuelled_by_blood",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_unique_3",
+            skill_key = "wh2_dlc17_skill_bst_lord_battle_voice_of_the_dark_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_unique_5",
+            skill_key = "wh_dlc03_skill_bst_bray_shaman_unique_uncanny_senses",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_unique_6",
+            skill_key = "wh_dlc03_skill_bst_all_unique_shadow_hide",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_unique_02",
+            skill_key = "wh_dlc03_skill_malagor_something_wicked_this_way_comes",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_unique_03",
+            skill_key = "wh_dlc03_skill_malagor_unholy_power",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_unique_04",
+            skill_key = "wh_dlc03_skill_malagor_crowfather",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 24 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_malagor_unique_portents_of_doom",
+            skill_key = "wh2_dlc17_bst_malagor_unique_portents_of_doom",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_malagor_unique_nightmarish_cabal",
+            skill_key = "wh2_dlc17_bst_malagor_unique_nightmarish_cabal",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_malagor_unique_mantle_of_crows",
+            skill_key = "wh2_dlc17_bst_malagor_unique_mantle_of_crows",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_unique_05",
+            skill_key = "wh2_dlc17_skill_bst_great_bray_shaman_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_set_bst_great_bray_shaman_beast_unique_13",
+                "wh2_dlc17_skill_node_set_bst_great_bray_shaman_death_unique_13",
+                "wh2_dlc17_skill_node_set_bst_great_bray_shaman_shadows_unique_13",
+                "wh2_dlc17_skill_node_set_bst_great_bray_shaman_wild_unique_13",
+                "wh_dlc03_skill_node_set_bst_malagor_unique_07",
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_unique_06",
+            skill_key = "wh2_dlc17_skill_bst_great_bray_shaman_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_unique_07",
+            skill_key = "wh2_dlc17_skill_bst_great_bray_shaman_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_set_bst_great_bray_shaman_beast_unique_11",
+                "wh2_dlc17_skill_node_set_bst_great_bray_shaman_death_unique_11",
+                "wh2_dlc17_skill_node_set_bst_great_bray_shaman_shadows_unique_11",
+                "wh2_dlc17_skill_node_set_bst_great_bray_shaman_wild_unique_11",
+                "wh_dlc03_skill_node_set_bst_malagor_unique_05",
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_unique_08",
+            skill_key = "wh2_dlc17_skill_bst_great_bray_shaman_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_magic_0",
+            skill_key = "wh2_main_skill_magic_dark_flock_of_doom_teclis",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_magic_1_1",
+            skill_key = "wh2_main_skill_magic_shadow_enfeebling_foe_teclis",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_magic_1_2",
+            skill_key = "wh2_main_skill_magic_shadow_penumbral_pendulum_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_magic_1_3",
+            skill_key = "wh2_main_skill_all_magic_death_05_doom_and_darkness_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_magic_1_4",
+            skill_key = "wh2_main_skill_magic_wild_mantle_of_ghorok_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_magic_1_5",
+            skill_key = "wh2_main_skill_magic_wild_savage_dominion_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_magic_2",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_magic_dummy",
+            skill_key = "wh2_main_skill_magic_dark_flock_of_doom_teclis_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_lore_0",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_lore_1_1",
+            skill_key = "wh_dlc03_skill_magic_wild_bestial_surge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_lore_1_2",
+            skill_key = "wh_dlc03_skill_magic_beasts_wild_heart",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_lore_1_3",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_lore_1_4",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_set_bst_malagor_lore_2",
+            skill_key = "wh2_dlc17_skill_bst_malagor_doom_of_mankind",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_01",
+            skill_key = "wh_dlc03_skill_bst_lord_presence_of_morrslieb",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_02",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_fury_of_the_herd",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_03",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_leader_of_the_raucous_host",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_04",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_beastlords_spite",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_05",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_beastlords_lash",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_06",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_hooved_heavyweights",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_07",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_freakish_mutations",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_08",
+            skill_key = "wh_dlc03_skill_bst_lord_call_of_violence",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_09",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_unrelenting_savagery",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_10",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_creatures_of_the_herd",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_11",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_bestial_butchers",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_12",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_mage_hunter",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_malagor_battle_13",
+            skill_key = "wh_dlc03_skill_bst_lord_apocalyptic_vision",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc05_bst_morghur = {
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_06",
+            skill_key = "wh_dlc03_skill_bst_lord_fuelled_by_blood",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_08",
+            skill_key = "wh2_dlc17_skill_bst_lord_battle_voice_of_the_dark_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_07",
+            skill_key = "wh_dlc03_skill_bst_lord_self_blood_lust",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_13",
+            skill_key = "wh_dlc03_skill_bst_bray_shaman_unique_uncanny_senses",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_05",
+            skill_key = "wh_dlc03_skill_bst_all_unique_shadow_hide",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_02",
+            skill_key = "wh_dlc03_skill_bst_morghur_unique_primal_fury",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_03",
+            skill_key = "wh_dlc03_skill_bst_morghur_unique_upgraded_spawn_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_04",
+            skill_key = "wh_dlc03_skill_bst_morghur_unique_upgraded_spawn_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_morghur_unique_herald_of_corruption",
+            skill_key = "wh2_dlc17_bst_morghur_unique_herald_of_corruption",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_morghur_unique_profane_blessings",
+            skill_key = "wh2_dlc17_bst_morghur_unique_profane_blessings",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_bst_morghur_unique_touch_of_corruption",
+            skill_key = "wh2_dlc17_bst_morghur_unique_touch_of_corruption",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_12",
+            skill_key = "wh_dlc03_skill_bst_lord_man_bane",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh_dlc03_skill_node_bst_beastlord_unique_05",
+                "wh_dlc03_skill_node_bst_khazrak_unique_07",
+                "wh_dlc03_skill_node_bst_morghur_unique_11",
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_09",
+            skill_key = "wh_dlc03_skill_bst_lord_crown_of_horns",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_11",
+            skill_key = "wh_dlc03_skill_bst_lord_rune_of_the_true_beast",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh_dlc03_skill_node_bst_beastlord_unique_02",
+                "wh_dlc03_skill_node_bst_khazrak_unique_12",
+                "wh_dlc03_skill_node_bst_morghur_unique_12",
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_unique_10",
+            skill_key = "wh_dlc03_skill_bst_lord_slug_skin",
+            category_key = "character",
+            indent = 1,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_01",
+            skill_key = "wh_dlc03_skill_bst_lord_primal_fury",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_04",
+            skill_key = "wh2_dlc11_skill_bst_lord_primal_instincts",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_05",
+            skill_key = "wh_dlc03_skill_bst_lord_hatred_of_man",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_06",
+            skill_key = "wh_dlc03_skill_bst_lord_banquet_of_flesh",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_07",
+            skill_key = "wh_dlc03_skill_bst_lord_savage_beast",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_08",
+            skill_key = "wh2_dlc11_skill_bst_lord_unnatural_thirst",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_10",
+            skill_key = "wh_dlc03_skill_bst_lord_prized_horns",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_self_11",
+            skill_key = "wh_dlc03_skill_bst_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_01",
+            skill_key = "wh_dlc03_skill_bst_lord_presence_of_morrslieb",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_02",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_fury_of_the_herd",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_03",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_leader_of_the_raucous_host",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_04",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_beastlords_spite",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_05",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_beastlords_lash",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_06",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_hooved_heavyweights",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_07",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_freakish_mutations",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_08",
+            skill_key = "wh_dlc03_skill_bst_lord_call_of_violence",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_09",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_unrelenting_savagery",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_10",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_creatures_of_the_herd",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_11",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_bestial_butchers",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_12",
+            skill_key = "wh2_dlc11_skill_bst_army_buff_mage_hunter",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_bst_morghur_battle_13",
             skill_key = "wh_dlc03_skill_bst_lord_apocalyptic_vision",
             category_key = "battle",
             indent = 4,
