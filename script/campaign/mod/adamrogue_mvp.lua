@@ -31,6 +31,8 @@ local DILEMMA_BATTLE_KEY = "adamrogue_mvp_battle_dilemma"
 local DILEMMA_EQUIPMENT_REWARD_KEY = "adamrogue_mvp_equipment_reward_dilemma"
 local DILEMMA_DESTINATION_KEY = "adamrogue_mvp_destination_dilemma"
 local DILEMMA_ARMY_PREVIEW_KEY = "adamrogue_mvp_army_preview_dilemma"
+local DILEMMA_HERO_REWARD_KEY = "adamrogue_mvp_hero_reward_dilemma"
+local DILEMMA_HERO_REWARD_FULL_KEY = "adamrogue_mvp_hero_reward_full_dilemma"
 
 local DEFAULT_SUPPORTED_PLAYER_FACTION_KEY = adamrogue_data_players.DEFAULT_SUPPORTED_PLAYER_FACTION_KEY
 local DEFAULT_PLAYER_CONTENT_FACTION_KEY = adamrogue_data_players.DEFAULT_CONTENT_FACTION_KEY
@@ -62,6 +64,7 @@ local DEFAULT_DIFFICULTY_LEVEL = adamrogue_balance_config.DEFAULT_DIFFICULTY_LEV
 
 local EVENT_TYPE = {
     UNIT_REWARD = "unit_reward",
+    HERO_REWARD = "hero_reward",
     BATTLE = "battle",
     EQUIPMENT_REWARD = "equipment_reward",
     DESTINATION = "destination"
@@ -72,6 +75,8 @@ local BATTLE_TIER = adamrogue_data_cth.BATTLE_TIER
 local STATE = {
     INIT = "INIT",
     ARMY_PREVIEW_PENDING = "ARMY_PREVIEW_PENDING",
+    HERO_REWARD_PENDING = "HERO_REWARD_PENDING",
+    HERO_REWARD_FULL_PENDING = "HERO_REWARD_FULL_PENDING",
     UNIT_REWARD_PENDING = "UNIT_REWARD_PENDING",
     BATTLE_PENDING = "BATTLE_PENDING",
     EQUIPMENT_REWARD_PENDING = "EQUIPMENT_REWARD_PENDING",
@@ -101,6 +106,7 @@ local SAVE_KEYS = {
     last_battle_force_source = "adamrogue_last_battle_force_source",
     last_battle_budget = "adamrogue_last_battle_budget",
     pre_battle_unit_snapshot = "adamrogue_pre_battle_unit_snapshot",
+    pre_battle_embedded_hero_snapshot = "adamrogue_pre_battle_embedded_hero_snapshot",
     pre_battle_general_rank = "adamrogue_pre_battle_general_rank",
     player_general_subtype = "adamrogue_player_general_subtype",
     current_cycle = "adamrogue_current_cycle",
@@ -128,6 +134,10 @@ end
 
 local function build_destination_current_payload_component_key(node_key)
     return "adamrogue_destination_payload_current_" .. tostring(node_key)
+end
+
+local function build_hero_reward_payload_component_key(agent_subtype)
+    return "adamrogue_hero_reward_payload_" .. tostring(agent_subtype)
 end
 
 local function log(message)
@@ -697,6 +707,8 @@ end
 
 local function is_supported_runtime_state(state)
     return state == STATE.INIT
+        or state == STATE.HERO_REWARD_PENDING
+        or state == STATE.HERO_REWARD_FULL_PENDING
         or state == STATE.UNIT_REWARD_PENDING
         or state == STATE.BATTLE_PENDING
         or state == STATE.EQUIPMENT_REWARD_PENDING
@@ -2525,6 +2537,136 @@ local function compute_reward_unit_count(unit_value, value_band)
     return 1
 end
 
+function adamrogue_is_hero_reward_cycle(cycle)
+    local normalized_cycle = math.max(1, math.floor(tonumber(cycle) or 1))
+    return normalized_cycle == 5
+        or normalized_cycle == 10
+        or normalized_cycle == 15
+        or normalized_cycle == 20
+        or normalized_cycle == 25
+end
+
+function adamrogue_pick_unique_player_hero_options(hero_pool, target_count)
+    local selected = {}
+    local selected_lookup = {}
+    local attempts = 0
+    local max_attempts = math.max(30, (target_count or 3) * 20)
+
+    if not hero_pool or #hero_pool == 0 then
+        return selected
+    end
+
+    local weighted_pool = {}
+    for _, hero_entry in ipairs(hero_pool) do
+        if hero_entry and hero_entry.agent_subtype and hero_entry.agent_subtype ~= "" then
+            for _ = 1, math.max(1, tonumber(hero_entry.weight) or 1) do
+                weighted_pool[#weighted_pool + 1] = hero_entry
+            end
+        end
+    end
+
+    while #selected < target_count and attempts < max_attempts and #weighted_pool > 0 do
+        attempts = attempts + 1
+        local candidate = weighted_pool[cm:random_number(#weighted_pool, 1)]
+        if candidate and not selected_lookup[candidate.agent_subtype] then
+            selected_lookup[candidate.agent_subtype] = true
+            selected[#selected + 1] = candidate
+        end
+    end
+
+    if #selected < target_count then
+        for _, candidate in ipairs(hero_pool) do
+            if #selected >= target_count then
+                break
+            end
+            if candidate and candidate.agent_subtype and not selected_lookup[candidate.agent_subtype] then
+                selected_lookup[candidate.agent_subtype] = true
+                selected[#selected + 1] = candidate
+            end
+        end
+    end
+
+    return selected
+end
+
+function adamrogue_prepare_player_hero_reward_event()
+    local faction = get_local_player_faction()
+    if not is_supported_player_faction(faction) then
+        log("prepare_player_hero_reward_event aborted because the local faction is unsupported.")
+        return false
+    end
+    if not faction or faction:is_null_interface() then
+        log("prepare_player_hero_reward_event aborted because the local faction interface is invalid.")
+        return false
+    end
+    local faction_name = faction:name()
+
+    local current_cycle = get_current_cycle()
+    if not adamrogue_is_hero_reward_cycle(current_cycle) then
+        log("prepare_player_hero_reward_event skipped because current_cycle=[" .. tostring(current_cycle) .. "] is not a hero reward cycle.")
+        return false
+    end
+
+    local player_content_faction_key, player_content_resolution = resolve_player_content_faction_key(faction_name)
+    local hero_pool = ENEMY_HERO_POOLS_BY_CONTENT_FACTION[player_content_faction_key] or {}
+    local selected_heroes = adamrogue_pick_unique_player_hero_options(hero_pool, 3)
+    if #selected_heroes < 3 then
+        log(
+            "prepare_player_hero_reward_event aborted because fewer than 3 hero options were available. faction=["
+                .. tostring(faction_name)
+                .. "], player_content_faction_key=["
+                .. tostring(player_content_faction_key)
+                .. "], available=["
+                .. tostring(#hero_pool)
+                .. "], selected=["
+                .. tostring(#selected_heroes)
+                .. "]."
+        )
+        return false
+    end
+
+    local seed = new_event_seed()
+    local payload = {
+        hero_current_cycle = current_cycle,
+        hero_player_faction_key = faction_name,
+        hero_content_faction_key = player_content_faction_key,
+        hero_content_resolution = player_content_resolution,
+        pause_choice = 3,
+        unit_reward_choice = 4
+    }
+
+    for index = 0, 2 do
+        local hero_entry = selected_heroes[index + 1]
+        if not hero_entry then
+            log("prepare_player_hero_reward_event aborted because selected_heroes unexpectedly lost an entry at index=[" .. tostring(index) .. "].")
+            return false
+        end
+        payload["hero_" .. tostring(index) .. "_agent_type"] = hero_entry.agent_type
+        payload["hero_" .. tostring(index) .. "_agent_subtype"] = hero_entry.agent_subtype
+        payload["hero_" .. tostring(index) .. "_unit_key"] = hero_entry.unit_key
+        payload["hero_" .. tostring(index) .. "_unit_value"] = hero_entry.unit_value
+    end
+
+    set_current_event_context(EVENT_TYPE.HERO_REWARD, DILEMMA_HERO_REWARD_KEY, seed, payload)
+    set_current_state(STATE.HERO_REWARD_PENDING)
+    log(
+        "Prepared player hero reward event. faction=["
+            .. tostring(faction_name)
+            .. "], content_faction=["
+            .. tostring(player_content_faction_key)
+            .. "], current_cycle=["
+            .. tostring(current_cycle)
+            .. "], heroes=["
+            .. tostring(payload.hero_0_agent_subtype)
+            .. ","
+            .. tostring(payload.hero_1_agent_subtype)
+            .. ","
+            .. tostring(payload.hero_2_agent_subtype)
+            .. "]."
+    )
+    return true
+end
+
 local function prepare_unit_reward_event()
     local faction = get_local_player_faction()
     if not is_supported_player_faction(faction) then
@@ -3080,6 +3222,80 @@ local function launch_equipment_reward_dilemma(faction)
     return true
 end
 
+local function launch_hero_reward_dilemma(faction)
+    local payload = get_current_event_payload()
+    if not payload or type(payload) ~= "table" then
+        log("launch_hero_reward_dilemma aborted because the current hero reward payload could not be decoded.")
+        return false
+    end
+
+    local player_force = get_saved_player_force()
+    if not player_force then
+        log("launch_hero_reward_dilemma aborted because the saved player force is unavailable.")
+        return false
+    end
+
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_HERO_REWARD_KEY)
+    local payload_builder = cm:create_payload()
+    local choice_keys = { "FIRST", "SECOND", "THIRD" }
+
+    for choice_index = 0, 2 do
+        local agent_subtype = payload["hero_" .. tostring(choice_index) .. "_agent_subtype"]
+        local choice_key = choice_keys[choice_index + 1]
+        if not agent_subtype or agent_subtype == "" then
+            log("launch_hero_reward_dilemma aborted because a saved hero choice is missing. choice_index=[" .. tostring(choice_index) .. "].")
+            return false
+        end
+
+        payload_builder:text_display(build_hero_reward_payload_component_key(agent_subtype))
+        dilemma_builder:add_choice_payload(choice_key, payload_builder)
+        payload_builder:clear()
+    end
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FOURTH", payload_builder)
+    payload_builder:clear()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FIFTH", payload_builder)
+    payload_builder:clear()
+
+    dilemma_builder:add_target("default", player_force)
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log(
+        "Launched custom hero reward dilemma for faction ["
+            .. tostring(faction:name())
+            .. "]. heroes=["
+            .. tostring(payload.hero_0_agent_subtype)
+            .. ","
+            .. tostring(payload.hero_1_agent_subtype)
+            .. ","
+            .. tostring(payload.hero_2_agent_subtype)
+            .. "]."
+    )
+    return true
+end
+
+local function launch_hero_reward_full_dilemma(faction)
+    local player_force = get_saved_player_force()
+    if not player_force then
+        log("launch_hero_reward_full_dilemma aborted because the saved player force is unavailable.")
+        return false
+    end
+
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_HERO_REWARD_FULL_KEY)
+    local payload_builder = cm:create_payload()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FIRST", payload_builder)
+    payload_builder:clear()
+    dilemma_builder:add_target("default", player_force)
+
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log("Launched hero reward full-stack warning dilemma for faction [" .. tostring(faction:name()) .. "].")
+    return true
+end
+
 local function launch_reward_dilemma(faction)
     local payload = get_current_event_payload()
     if not payload or type(payload) ~= "table" then
@@ -3277,10 +3493,14 @@ local function open_current_event(reason)
             end
         else
             -- Run 已确认：进入常规奖励流程
-            if not prepare_unit_reward_event() then
-                return
+            if adamrogue_is_hero_reward_cycle(get_current_cycle()) and adamrogue_prepare_player_hero_reward_event() then
+                state = STATE.HERO_REWARD_PENDING
+            else
+                if not prepare_unit_reward_event() then
+                    return
+                end
+                state = STATE.UNIT_REWARD_PENDING
             end
-            state = STATE.UNIT_REWARD_PENDING
         end
     end
 
@@ -3304,6 +3524,14 @@ local function open_current_event(reason)
 
     if state == STATE.ARMY_PREVIEW_PENDING then
         launch_army_preview_dilemma(faction)
+    elseif state == STATE.HERO_REWARD_PENDING then
+        if not launch_hero_reward_dilemma(faction) then
+            return
+        end
+    elseif state == STATE.HERO_REWARD_FULL_PENDING then
+        if not launch_hero_reward_full_dilemma(faction) then
+            return
+        end
     elseif state == STATE.UNIT_REWARD_PENDING then
         if not launch_reward_dilemma(faction) then
             return
@@ -4944,6 +5172,244 @@ local function handle_post_battle_state_transition(player_won)
     log("Battle defeat could not prepare a destination event and fell back to INIT. The current node remains unchanged for the next loop.")
 end
 
+function adamrogue_get_player_hero_reward_entry_from_payload(payload, choice)
+    if not payload or type(payload) ~= "table" then
+        return nil
+    end
+    if choice < 0 or choice > 2 then
+        return nil
+    end
+
+    local prefix = "hero_" .. tostring(choice)
+    local agent_type = payload[prefix .. "_agent_type"] or ""
+    local agent_subtype = payload[prefix .. "_agent_subtype"] or ""
+    if agent_type == "" or agent_subtype == "" then
+        return nil
+    end
+
+    return {
+        agent_type = agent_type,
+        agent_subtype = agent_subtype,
+        unit_key = payload[prefix .. "_unit_key"] or "",
+        unit_value = tonumber(payload[prefix .. "_unit_value"]) or 0,
+    }
+end
+
+function adamrogue_show_hero_reward_full_warning()
+    set_current_state(STATE.HERO_REWARD_FULL_PENDING)
+    cm:callback(function()
+        if get_current_state() == STATE.HERO_REWARD_FULL_PENDING then
+            open_current_event("hero_reward_full_warning")
+        end
+    end, 0.1)
+end
+
+function adamrogue_grant_player_hero_reward(hero_entry, on_complete)
+    local faction = get_local_player_faction()
+    local force = get_saved_player_force()
+    if not faction or faction:is_null_interface() or not force or force:is_null_interface() then
+        log("grant_player_hero_reward aborted because faction or force is invalid.")
+        if on_complete then on_complete(false) end
+        return
+    end
+
+    if force:unit_list():num_items() >= 20 then
+        log(
+            "grant_player_hero_reward detected full player force. unit_count=["
+                .. tostring(force:unit_list():num_items())
+                .. "], agent_subtype=["
+                .. tostring(hero_entry and hero_entry.agent_subtype or "")
+                .. "]."
+        )
+        adamrogue_show_hero_reward_full_warning()
+        return
+    end
+
+    local agent_type = hero_entry.agent_type
+    local agent_subtype = hero_entry.agent_subtype
+    local target_rank = math.max(1, math.floor(tonumber(get_current_cycle()) or 1))
+    local force_cqi = force:command_queue_index()
+    local listener_name = MODULE_KEY
+        .. "_player_hero_reward_created_"
+        .. tostring(force_cqi)
+        .. "_"
+        .. tostring(agent_subtype)
+
+    core:remove_listener(listener_name)
+    core:add_listener(
+        listener_name,
+        "CharacterCreated",
+        function(ctx)
+            local created_character = ctx:character()
+            local created_subtype = created_character
+                and not created_character:is_null_interface()
+                and created_character:character_subtype_key()
+                or ""
+            local created_faction = created_character
+                and not created_character:is_null_interface()
+                and created_character:faction():name()
+                or ""
+            log(
+                "player_hero_reward_character_created_seen: expected_faction=["
+                    .. tostring(faction:name())
+                    .. "], created_faction=["
+                    .. tostring(created_faction)
+                    .. "], expected_subtype=["
+                    .. tostring(agent_subtype)
+                    .. "], created_subtype=["
+                    .. tostring(created_subtype)
+                    .. "]."
+            )
+            return created_character
+                and not created_character:is_null_interface()
+                and created_faction == faction:name()
+                and created_subtype == agent_subtype
+        end,
+        function(ctx)
+            local created_character = ctx:character()
+            local hero_cqi = created_character and created_character:command_queue_index() or 0
+            log(
+                "player_hero_reward_character_created_matched. agent_subtype=["
+                    .. tostring(agent_subtype)
+                    .. "], hero_cqi=["
+                    .. tostring(hero_cqi)
+                    .. "]."
+            )
+
+            cm:callback(function()
+                local refreshed_force = cm:get_military_force_by_cqi(force_cqi)
+                local hero_char = cm:get_character_by_cqi(hero_cqi)
+                if not refreshed_force or refreshed_force:is_null_interface()
+                    or not hero_char or hero_char:is_null_interface() then
+                    log("player_hero_reward embed aborted because hero or force is invalid.")
+                    if on_complete then on_complete(false) end
+                    return
+                end
+
+                cm:embed_agent_in_force(hero_char, refreshed_force)
+                log(
+                    "player_hero_reward embedded hero. agent_subtype=["
+                        .. tostring(agent_subtype)
+                        .. "], embedded=["
+                        .. tostring(hero_char:is_embedded_in_military_force())
+                        .. "]."
+                )
+                cm:replenish_action_points(cm:char_lookup_str(hero_char:command_queue_index()))
+
+                cm:callback(function()
+                    local hero_for_rank = cm:get_character_by_cqi(hero_cqi)
+                    if not hero_for_rank or hero_for_rank:is_null_interface() then
+                        log("player_hero_reward rank setup aborted because hero is invalid.")
+                        if on_complete then on_complete(false) end
+                        return
+                    end
+                    if hero_for_rank:rank() < target_rank then
+                        cm:add_agent_experience(cm:char_lookup_str(hero_for_rank), target_rank, true)
+                    end
+
+                    log(
+                        "player_hero_reward completed rank setup without auto-skilling. agent_subtype=["
+                            .. tostring(agent_subtype)
+                            .. "], final_rank=["
+                            .. tostring(hero_for_rank:rank())
+                            .. "]."
+                    )
+                    if on_complete then on_complete(true) end
+                end, 0.05)
+            end, 0.05)
+        end,
+        false
+    )
+
+    log(
+        "grant_player_hero_reward calling spawn_agent_at_military_force. faction=["
+            .. tostring(faction:name())
+            .. "], force_cqi=["
+            .. tostring(force_cqi)
+            .. "], agent_type=["
+            .. tostring(agent_type)
+            .. "], agent_subtype=["
+            .. tostring(agent_subtype)
+            .. "]."
+    )
+    local spawn_ok, spawn_err = pcall(function()
+        cm:spawn_agent_at_military_force(faction, force, agent_type, agent_subtype)
+    end)
+    if not spawn_ok then
+        core:remove_listener(listener_name)
+        log("grant_player_hero_reward spawn_agent_at_military_force failed. error=[" .. tostring(spawn_err) .. "].")
+        if on_complete then on_complete(false) end
+    end
+end
+
+function adamrogue_handle_hero_reward_dilemma_choice(context)
+    if context:dilemma() ~= DILEMMA_HERO_REWARD_KEY then
+        return
+    end
+
+    local choice = context:choice()
+    log(
+        "Hero reward dilemma choice received: "
+            .. tostring(choice)
+            .. ", current_state=["
+            .. tostring(get_current_state())
+            .. "], payload=["
+            .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, ""))
+            .. "]"
+    )
+
+    cm:callback(function()
+        if choice == 3 then
+            pause_current_event()
+            return
+        end
+
+        if choice == 4 then
+            log("Hero reward fifth choice selected. Switching to normal unit reward event.")
+            if prepare_unit_reward_event() then
+                cm:callback(function()
+                    if get_current_state() == STATE.UNIT_REWARD_PENDING then
+                        open_current_event("hero_reward_switched_to_unit_reward")
+                    end
+                end, 0.1)
+            end
+            return
+        end
+
+        if choice >= 0 and choice <= 2 then
+            local payload = get_current_event_payload()
+            local hero_entry = adamrogue_get_player_hero_reward_entry_from_payload(payload, choice)
+            if not hero_entry then
+                log("handle_hero_reward_dilemma_choice aborted because selected hero payload is missing. choice=[" .. tostring(choice) .. "].")
+                return
+            end
+
+            adamrogue_grant_player_hero_reward(hero_entry, function(success)
+                if not success then
+                    log("Player hero reward did not complete successfully; continuing to battle event to avoid blocking the run.")
+                end
+                finalize_reward_resolution(true)
+            end)
+            return
+        end
+
+        log("Hero reward dilemma choice did not match any known action.")
+    end, 0.1)
+end
+
+function adamrogue_handle_hero_reward_full_dilemma_choice(context)
+    if context:dilemma() ~= DILEMMA_HERO_REWARD_FULL_KEY then
+        return
+    end
+
+    local choice = context:choice()
+    log("Hero reward full warning choice received: " .. tostring(choice))
+    cm:callback(function()
+        set_current_state(STATE.HERO_REWARD_PENDING)
+        open_current_event("hero_reward_full_return")
+    end, 0.1)
+end
+
 local function handle_reward_dilemma_choice(context)
     if context:dilemma() ~= DILEMMA_REWARD_KEY then
         return
@@ -5113,7 +5579,14 @@ local function handle_destination_dilemma_choice(context)
                 .. "]."
         )
 
-        if not prepare_unit_reward_event() then
+        local prepared_next_reward = false
+        if adamrogue_is_hero_reward_cycle(get_current_cycle()) then
+            prepared_next_reward = adamrogue_prepare_player_hero_reward_event()
+        end
+        if not prepared_next_reward then
+            prepared_next_reward = prepare_unit_reward_event()
+        end
+        if not prepared_next_reward then
             set_current_cycle(previous_cycle)
             return
         end
@@ -5129,10 +5602,11 @@ local function handle_destination_dilemma_choice(context)
                 .. tostring(previous_cycle)
                 .. "], current_cycle=["
                 .. tostring(get_current_cycle())
-                .. "]. The next unit reward event is now pending and will be opened immediately."
+                .. "]. The next reward event is now pending and will be opened immediately."
         )
         cm:callback(function()
-            if get_current_state() == STATE.UNIT_REWARD_PENDING then
+            if get_current_state() == STATE.UNIT_REWARD_PENDING
+                or get_current_state() == STATE.HERO_REWARD_PENDING then
                 open_current_event("destination_resolved_auto_open")
             end
         end, 0.1)
@@ -5227,6 +5701,8 @@ local function register_listeners()
         function(context)
             local dilemma_key = context:dilemma()
             return dilemma_key == DILEMMA_REWARD_KEY
+                or dilemma_key == DILEMMA_HERO_REWARD_KEY
+                or dilemma_key == DILEMMA_HERO_REWARD_FULL_KEY
                 or dilemma_key == DILEMMA_BATTLE_KEY
                 or dilemma_key == DILEMMA_EQUIPMENT_REWARD_KEY
                 or dilemma_key == DILEMMA_DESTINATION_KEY
@@ -5235,6 +5711,10 @@ local function register_listeners()
         function(context)
             if context:dilemma() == DILEMMA_ARMY_PREVIEW_KEY then
                 handle_army_preview_dilemma_choice(context)
+            elseif context:dilemma() == DILEMMA_HERO_REWARD_KEY then
+                adamrogue_handle_hero_reward_dilemma_choice(context)
+            elseif context:dilemma() == DILEMMA_HERO_REWARD_FULL_KEY then
+                adamrogue_handle_hero_reward_full_dilemma_choice(context)
             elseif context:dilemma() == DILEMMA_REWARD_KEY then
                 handle_reward_dilemma_choice(context)
             elseif context:dilemma() == DILEMMA_BATTLE_KEY then
