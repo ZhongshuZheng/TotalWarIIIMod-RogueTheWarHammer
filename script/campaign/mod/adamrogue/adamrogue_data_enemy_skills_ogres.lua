@@ -4,6 +4,1209 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh3_main_ogr_disciples_of_the_maw"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh3_dlc26_ogr_bragg_the_gutsman = {
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_6",
+            skill_key = "wh3_main_skill_ogr_lord_battle_bellower",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_2",
+            skill_key = "wh3_main_skill_ogr_generic_melee_attack",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_4",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_3",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_5",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_unique_01",
+            skill_key = "wh3_dlc26_ogr_bragg_the_gutsman_head_lopper",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_unique_02",
+            skill_key = "wh3_dlc26_ogr_bragg_the_gutsman_gutsman",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_unique_03",
+            skill_key = "wh3_dlc26_ogr_bragg_the_gutsman_welcomed_for_now",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_unique_04",
+            skill_key = "wh3_dlc26_ogr_bragg_the_gutsman_dreaded_aura",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_unique_05",
+            skill_key = "wh3_dlc26_ogr_bragg_the_gutsman_lone_wanderer",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_unique_06",
+            skill_key = "wh3_dlc26_ogr_bragg_the_gutsman_forboding_executioner",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_mutual_1",
+            skill_key = "wh3_main_skill_ogr_hunter_unique_great_beast_hunter",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_hunter_unique_1",
+                "wh3_main_skill_node_ogr_hunter_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_mutual_2",
+            skill_key = "wh3_dlc26_skill_ogr_bruiser_drawn_to_slaughter",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_1",
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_mutual_3",
+            skill_key = "wh3_main_skill_ogr_hunter_unique_gutsy",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_hunter_unique_0",
+                "wh3_main_skill_node_ogr_hunter_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_0",
+            skill_key = "wh3_main_skill_ogr_self_unstoppable_force",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_1_1",
+            skill_key = "wh_main_skill_all_all_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_1_2",
+            skill_key = "wh3_dlc26_skill_ogr_self_healthy_appetite_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_1_3",
+            skill_key = "wh3_dlc26_skill_ogr_self_larger_gutplate_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_1_4",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_3_1",
+            skill_key = "wh3_dlc26_ogr_bragg_the_gutsman_brute_force",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_3_2",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_3_3",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_3_4",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bragg_the_gutsman_self_4",
+            skill_key = "wh3_main_skill_ogr_self_snacks",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc26_ogr_bruiser = {
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_unique_1",
+            skill_key = "wh3_dlc26_skill_ogr_bruiser_where_you_goin",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_2",
+            skill_key = "wh3_main_skill_ogr_generic_melee_attack",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_4",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_3",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_tyrant_generic_5",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_unique_01",
+            skill_key = "wh3_dlc26_skill_ogr_bruiser_puncture",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_unique_02",
+            skill_key = "wh3_dlc26_skill_ogr_bruiser_immovable_bulk",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_unique_03",
+            skill_key = "wh3_dlc26_skill_ogr_bruiser_tyrants_fist",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_unique_04",
+            skill_key = "wh3_dlc26_skill_ogr_bruiser_brutish_thug",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_unique_05",
+            skill_key = "wh3_dlc26_skill_ogr_bruiser_stand_or_die",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_mutual_1",
+            skill_key = "wh3_main_skill_ogr_tyrant_unique_greater_girth",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_2",
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_3",
+                "wh3_dlc26_skill_node_ogr_tyrant_unique_3_camp",
+                "wh3_main_skill_node_ogr_tyrant_generic_1",
+                "wh3_main_skill_node_ogr_tyrant_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_mutual_2",
+            skill_key = "wh3_dlc26_skill_ogr_bruiser_drawn_to_slaughter",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_1",
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_mutual_3",
+            skill_key = "wh3_dlc26_skill_ogr_bruiser_under_chieftain",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_1",
+                "wh3_dlc26_skill_node_ogr_bruiser_mutual_2",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_0",
+            skill_key = "wh3_main_skill_ogr_self_unstoppable_force",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_1_1",
+            skill_key = "wh_main_skill_all_all_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_1_2",
+            skill_key = "wh3_dlc26_skill_ogr_self_healthy_appetite_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_1_3",
+            skill_key = "wh3_dlc26_skill_ogr_self_larger_gutplate_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_1_4",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_3_1",
+            skill_key = "wh3_main_skill_ogr_self_dominant",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_3_2",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_3_3",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_3_4",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_bruiser_self_4",
+            skill_key = "wh3_main_skill_ogr_self_snacks",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc26_ogr_cha_butcher_death = {
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_0",
+            skill_key = "wh3_main_skill_ogr_generic_magic_reserves",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_1",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_2",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_3",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_0",
+            skill_key = "wh3_dlc26_skill_ogr_butcher_self_foe_seeker",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_1",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_emissary",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_2",
+            skill_key = "wh3_dlc26_skill_ogr_unique_butcher_servant_of_the_maw",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_3",
+            skill_key = "wh3_dlc26_skill_ogr_unique_butcher_gore_soaked_ritualist",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_4",
+            skill_key = "wh3_dlc26_skill_ogr_butcher_dinner_bell",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_0",
+            skill_key = "wh3_main_skill_ogr_butcher_tolerance_to_toxins",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_4",
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_6",
+                "wh3_main_skill_node_ogr_butcher_unique_1",
+                "wh3_main_skill_node_ogr_butcher_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_1",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_feastmaster",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_butcher_unique_0",
+                "wh3_main_skill_node_ogr_butcher_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_2",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_befouler",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_butcher_unique_0",
+                "wh3_main_skill_node_ogr_butcher_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_0",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_death_02_aspect_of_the_dreadknight",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_death_04_soulblight",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_death_05_doom_and_darkness",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_2",
+            skill_key = "wh3_main_skill_ogr_magic_meat_cleaver",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_death_10_the_purple_sun_of_xereus",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_3_4",
+            skill_key = "wh3_main_skill_ogr_magic_meat_reserves",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_4",
+            skill_key = "wh3_main_skill_ogr_magic_all_11_extra_ingredients",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_death_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_death_dummy_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc26_ogr_cha_butcher_heavens = {
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_0",
+            skill_key = "wh3_main_skill_ogr_generic_magic_reserves",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_1",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_2",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_3",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_0",
+            skill_key = "wh3_dlc26_skill_ogr_butcher_self_foe_seeker",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_1",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_emissary",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_2",
+            skill_key = "wh3_dlc26_skill_ogr_unique_butcher_servant_of_the_maw",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_3",
+            skill_key = "wh3_dlc26_skill_ogr_unique_butcher_gore_soaked_ritualist",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_4",
+            skill_key = "wh3_dlc26_skill_ogr_butcher_dinner_bell",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_0",
+            skill_key = "wh3_main_skill_ogr_butcher_tolerance_to_toxins",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_4",
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_6",
+                "wh3_main_skill_node_ogr_butcher_unique_1",
+                "wh3_main_skill_node_ogr_butcher_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_1",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_feastmaster",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_butcher_unique_0",
+                "wh3_main_skill_node_ogr_butcher_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_2",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_befouler",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_butcher_unique_0",
+                "wh3_main_skill_node_ogr_butcher_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_0",
+            skill_key = "wh_main_skill_all_magic_heavens_01_harmonic_convergence",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_heavens_03_rolling_skies",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_heavens_02_wind_blast",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_heavens_04_curse_of_the_midnight_wind",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_heavens_05_urannons_thunderbolt",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_2",
+            skill_key = "wh3_main_skill_ogr_magic_meat_cleaver",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_heavens_09_comet_of_casandora",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_heavens_10_chain_lightning",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_3_4",
+            skill_key = "wh3_main_skill_ogr_magic_meat_reserves",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_4",
+            skill_key = "wh3_main_skill_ogr_magic_all_11_extra_ingredients",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_heavens_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_heavens_dummy_harmonic_convergence",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc26_ogr_cha_slaughtermaster_death = {
         {
             node_key = "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_0",
@@ -1877,6 +3080,898 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_main_ogr_butcher_beasts = {
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_0",
+            skill_key = "wh3_main_skill_ogr_generic_magic_reserves",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_1",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_2",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_3",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_0",
+            skill_key = "wh3_dlc26_skill_ogr_butcher_self_foe_seeker",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_1",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_emissary",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_2",
+            skill_key = "wh3_dlc26_skill_ogr_unique_butcher_servant_of_the_maw",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_3",
+            skill_key = "wh3_dlc26_skill_ogr_unique_butcher_gore_soaked_ritualist",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_4",
+            skill_key = "wh3_dlc26_skill_ogr_butcher_dinner_bell",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_0",
+            skill_key = "wh3_main_skill_ogr_butcher_tolerance_to_toxins",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_4",
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_6",
+                "wh3_main_skill_node_ogr_butcher_unique_1",
+                "wh3_main_skill_node_ogr_butcher_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_1",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_feastmaster",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_butcher_unique_0",
+                "wh3_main_skill_node_ogr_butcher_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_2",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_befouler",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_butcher_unique_0",
+                "wh3_main_skill_node_ogr_butcher_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_0",
+            skill_key = "wh_dlc03_skill_magic_beasts_wyssans_wildform",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_1_4",
+            skill_key = "wh_dlc03_skill_magic_beasts_wild_heart",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_1_1",
+            skill_key = "wh_dlc03_skill_magic_beasts_flock_of_doom",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_1_2",
+            skill_key = "wh_dlc03_skill_magic_beasts_panns_impenetrable_pelt",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_1_3",
+            skill_key = "wh_dlc03_skill_magic_beasts_the_amber_spear",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_2",
+            skill_key = "wh3_main_skill_ogr_magic_meat_cleaver",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_3_3",
+            skill_key = "wh_dlc03_skill_magic_beasts_transformation_of_kadon",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_3_4",
+            skill_key = "wh_dlc03_skill_magic_beasts_the_curse_of_anraheir",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_3_2",
+            skill_key = "wh3_main_skill_ogr_magic_meat_reserves",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_4",
+            skill_key = "wh3_main_skill_ogr_magic_all_11_extra_ingredients",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_beasts_magic_dummy",
+            skill_key = "wh_dlc03_skill_magic_beasts_dummy_wyssans_wildform",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_ogr_butcher_great_maw = {
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_0",
+            skill_key = "wh3_main_skill_ogr_generic_magic_reserves",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_1",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_2",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_generic_3",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_0",
+            skill_key = "wh3_dlc26_skill_ogr_butcher_self_foe_seeker",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_1",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_emissary",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_2",
+            skill_key = "wh3_dlc26_skill_ogr_unique_butcher_servant_of_the_maw",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_3",
+            skill_key = "wh3_dlc26_skill_ogr_unique_butcher_gore_soaked_ritualist",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_ogr_butcher_personal_4",
+            skill_key = "wh3_dlc26_skill_ogr_butcher_dinner_bell",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_0",
+            skill_key = "wh3_main_skill_ogr_butcher_tolerance_to_toxins",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_4",
+                "wh3_dlc26_skill_node_ogr_slaughtermaster_generic_6",
+                "wh3_main_skill_node_ogr_butcher_unique_1",
+                "wh3_main_skill_node_ogr_butcher_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_1",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_feastmaster",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_butcher_unique_0",
+                "wh3_main_skill_node_ogr_butcher_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_unique_2",
+            skill_key = "wh3_main_skill_ogr_unique_butcher_befouler",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_butcher_unique_0",
+                "wh3_main_skill_node_ogr_butcher_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_0",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_01_bullgorger",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_1_4",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_05_bloodgruel",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_1_1",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_02_braingobbler",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_1_2",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_03_toothcracker",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_1_3",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_04_bonecrusher",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_2",
+            skill_key = "wh3_main_skill_ogr_magic_meat_cleaver",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_3_3",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_07_trollguts",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_3_4",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_08_the_maw",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_3_2",
+            skill_key = "wh3_main_skill_ogr_magic_meat_reserves",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_4",
+            skill_key = "wh3_main_skill_ogr_magic_all_11_extra_ingredients",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_butcher_great_maw_magic_dummy",
+            skill_key = "wh3_main_skill_ogr_magic_great_maw_dummy_bullgorger",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_ogr_firebelly = {
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_generic_7",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_generic_5",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_generic_8",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_generic_2",
+            skill_key = "wh3_main_skill_ogr_firebelly_fire_breath",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_generic_0",
+            skill_key = "wh3_main_skill_ogr_firebelly_blessing_of_the_volcano_god",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_generic_1",
+            skill_key = "wh3_main_skill_ogr_firebelly_fire_within",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_generic_3",
+            skill_key = "wh3_main_skill_ogr_firebelly_flame_incarnate",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_generic_4",
+            skill_key = "wh3_main_skill_ogr_firebelly_eruption",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_unique_0",
+            skill_key = "wh3_main_skill_ogr_firebelly_unique_incendiary",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_unique_1",
+            skill_key = "wh3_main_skill_ogr_firebelly_unique_wanderer",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_firebelly_unique_2",
+                "wh3_main_skill_node_ogr_firebelly_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_unique_2",
+            skill_key = "wh3_main_skill_ogr_firebelly_unique_firebrand",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_firebelly_unique_1",
+                "wh3_main_skill_node_ogr_firebelly_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_unique_3",
+            skill_key = "wh3_main_skill_ogr_firebelly_unique_destroyer",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_firebelly_unique_1",
+                "wh3_main_skill_node_ogr_firebelly_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_0",
+            skill_key = "wh_main_skill_all_magic_fire_01_fireball",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_fire_04_kindleflame",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_fire_02_cascading_fire-cloak",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_fire_03_flaming_sword_of_rhuin",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_fire_05_the_burning_head",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_fire_09_piercing_bolts_of_burning",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_fire_10_flame_storm",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_firebelly_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_fire_dummy_fireball",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_main_ogr_greasus_goldtooth = {
         {
             node_key = "wh3_main_skill_node_ogr_greasus_goldtooth_generic_0",
@@ -2354,6 +4449,302 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh3_main_ie_nor_azrik_battle_13",
                 "wh3_main_ie_nor_burplesmirk_battle_13",
                 "wh_main_skill_node_nor_sorcerer_lord_metal_battle_13",
+            }
+        },
+    },
+    wh3_main_ogr_hunter = {
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_mount_1",
+            skill_key = "wh3_main_skill_ogr_hunter_stonehorn",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_generic_0",
+            skill_key = "wh3_main_skill_ogr_generic_melee_attack",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_generic_1",
+            skill_key = "wh3_main_skill_ogr_generic_physical_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_generic_2",
+            skill_key = "wh3_main_skill_ogr_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_generic_3",
+            skill_key = "wh3_main_skill_ogr_generic_magic_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_ogr_hunter_sabretusks_0",
+            skill_key = "wh3_main_skill_ogr_hunter_unique_running_with_the_pack",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_ogr_hunter_sabretusks_1",
+            skill_key = "wh3_main_skill_ogr_hunter_unique_silent_hunters",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_ogr_hunter_sabretusks_2",
+            skill_key = "wh3_main_skill_ogr_hunter_roaming_free",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_ogr_hunter_sabretusks_3",
+            skill_key = "wh3_main_skill_ogr_hunter_unique_beastmaster",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_ogr_hunter_sabretusks_4",
+            skill_key = "wh3_main_skill_ogr_hunter_unique_savage_predators",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_unique_0",
+            skill_key = "wh3_main_skill_ogr_hunter_unique_great_beast_hunter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_hunter_unique_1",
+                "wh3_main_skill_node_ogr_hunter_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_unique_1",
+            skill_key = "wh3_main_skill_ogr_hunter_unique_stalker",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_hunter_unique_0",
+                "wh3_main_skill_node_ogr_hunter_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_unique_2",
+            skill_key = "wh3_main_skill_ogr_hunter_unique_gutsy",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ogr_hunter_unique_0",
+                "wh3_main_skill_node_ogr_hunter_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_0",
+            skill_key = "wh3_main_skill_ogr_hunter_vanguard",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_1_1",
+            skill_key = "wh3_dlc26_skill_ogr_self_larger_gutplate_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_1_2",
+            skill_key = "wh3_main_skill_ogr_hunter_combat_sharpened_spears",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_1_3",
+            skill_key = "wh3_main_skill_ogr_hunter_combat_larger_bundle",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_1_4",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_3_1",
+            skill_key = "wh3_main_skill_ogr_hunter_combat_quick_throw",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_3_2",
+            skill_key = "wh3_main_skill_ogr_hunter_combat_beast_slayer",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_3_3",
+            skill_key = "wh_main_skill_all_spy_self_elusive",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_3_4",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ogr_hunter_self_4",
+            skill_key = "wh3_main_skill_ogr_hunter_crippling_throw",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
             }
         },
     },

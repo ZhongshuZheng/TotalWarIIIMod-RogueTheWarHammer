@@ -452,6 +452,442 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh2_dlc10_def_sorceress_beasts = {
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_mount_1",
+            skill_key = "wh2_dlc10_skill_def_sorceress_beasts_mount_dark_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_mount_2",
+            skill_key = "wh2_dlc10_skill_def_sorceress_beasts_mount_cold_one",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_mount_3",
+            skill_key = "wh2_dlc10_skill_def_sorceress_beasts_mount_dark_pegasus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_generic_1",
+            skill_key = "wh2_main_skill_def_generic_hekartis_blessing",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_generic_2",
+            skill_key = "wh2_main_skill_def_generic_ward_of_hekarti",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_generic_3",
+            skill_key = "wh2_main_skill_def_generic_ward_of_khaine",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_0",
+            skill_key = "wh_dlc03_skill_magic_beasts_wyssans_wildform",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_1_1",
+            skill_key = "wh_dlc03_skill_magic_beasts_wild_heart",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_1_2",
+            skill_key = "wh_dlc03_skill_magic_beasts_flock_of_doom",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_1_3",
+            skill_key = "wh_dlc03_skill_magic_beasts_panns_impenetrable_pelt",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_1_4",
+            skill_key = "wh_dlc03_skill_magic_beasts_the_amber_spear",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_3_1",
+            skill_key = "wh_dlc03_skill_magic_beasts_the_curse_of_anraheir",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_3_2",
+            skill_key = "wh_dlc03_skill_magic_beasts_transformation_of_kadon",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_beasts_magic_dummy",
+            skill_key = "wh_dlc03_skill_magic_beasts_dummy_wyssans_wildform",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_dlc10_def_sorceress_death = {
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_mount_1",
+            skill_key = "wh2_dlc10_skill_def_sorceress_death_mount_dark_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_mount_2",
+            skill_key = "wh2_dlc10_skill_def_sorceress_death_mount_cold_one",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_mount_3",
+            skill_key = "wh2_dlc10_skill_def_sorceress_death_mount_dark_pegasus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_generic_1",
+            skill_key = "wh2_main_skill_def_generic_hekartis_blessing",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_generic_2",
+            skill_key = "wh2_main_skill_def_generic_ward_of_hekarti",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_generic_3",
+            skill_key = "wh2_main_skill_def_generic_ward_of_khaine",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_0",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_death_05_doom_and_darkness",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_death_02_aspect_of_the_dreadknight",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_death_04_soulblight",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_death_10_the_purple_sun_of_xereus",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc10_skill_node_def_sorceress_death_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_death_dummy_spirit_leech",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_dlc10_def_supreme_sorceress_beasts = {
         {
             node_key = "wh2_dlc10_skill_node_def_supreme_sorceress_beasts_mount_1",
@@ -4360,6 +4796,266 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh2_dlc14_def_master = {
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_mount_2",
+            skill_key = "wh2_dlc14_skill_def_master_mount_dark_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_mount_1",
+            skill_key = "wh2_dlc14_skill_def_master_mount_cold_one",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_mount_3",
+            skill_key = "wh2_dlc14_skill_def_master_mount_cold_one_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_mount_4",
+            skill_key = "wh2_dlc14_skill_def_master_mount_dark_pegasus",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_generic_1",
+            skill_key = "wh2_main_skill_def_generic_ward_of_khaine",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_unique_1",
+            skill_key = "wh2_dlc14_skill_def_master_unique_noble_born",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_unique_2",
+            skill_key = "wh2_dlc14_skill_def_master_unique_sycophantic_schemer",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_unique_3",
+            skill_key = "wh2_dlc14_skill_def_master_unique_weakness_abhorred",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_unique_4",
+            skill_key = "wh2_main_skill_def_names_of_power_1",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc10_skill_node_def_supreme_sorceress_beasts_names_of_power_2",
+                "wh2_dlc10_skill_node_def_supreme_sorceress_beasts_names_of_power_3",
+                "wh2_dlc10_skill_node_def_supreme_sorceress_dark_names_of_power_2",
+                "wh2_dlc10_skill_node_def_supreme_sorceress_dark_names_of_power_3",
+                "wh2_dlc10_skill_node_def_supreme_sorceress_death_names_of_power_2",
+                "wh2_dlc10_skill_node_def_supreme_sorceress_death_names_of_power_3",
+                "wh2_dlc10_skill_node_def_supreme_sorceress_fire_names_of_power_2",
+                "wh2_dlc10_skill_node_def_supreme_sorceress_fire_names_of_power_3",
+                "wh2_dlc10_skill_node_def_supreme_sorceress_shadow_names_of_power_2",
+                "wh2_dlc10_skill_node_def_supreme_sorceress_shadow_names_of_power_3",
+                "wh2_dlc14_skill_node_def_beastmaster_unique_8",
+                "wh2_dlc14_skill_node_def_beastmaster_unique_9",
+                "wh2_main_skill_node_def_black_ark_blessed_dread_names_of_power_2",
+                "wh2_main_skill_node_def_black_ark_names_of_power_2",
+                "wh2_main_skill_node_def_dreadlord_fem_names_of_power_2",
+                "wh2_main_skill_node_def_dreadlord_fem_names_of_power_3",
+                "wh2_main_skill_node_def_dreadlord_names_of_power_2",
+                "wh2_main_skill_node_def_dreadlord_names_of_power_3",
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_0",
+            skill_key = "wh2_dlc09_skill_tmb_personal_base",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_1_1",
+            skill_key = "wh2_dlc09_skill_tmb_personal_conqueror",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_1_2",
+            skill_key = "wh_main_skill_all_all_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_1_3",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_1_4",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_3_1",
+            skill_key = "wh_main_skill_all_all_self_wound-maker_2",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_3_2",
+            skill_key = "wh_main_skill_all_lord_self_full_plate_armour_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_3_3",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_3_4",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_battle_speed",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc14_skill_node_def_master_combat_4",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_main_def_black_ark = {
         {
             node_key = "wh2_main_skill_def_black_ark_cannot_steal",
@@ -5273,6 +5969,220 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+    },
+    wh2_main_def_death_hag = {
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_mount_1",
+            skill_key = "wh2_main_skill_def_death_hag_mount_cauldron_of_blood",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_generic_1",
+            skill_key = "wh2_main_skill_def_generic_ward_of_khaine",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_generic_2",
+            skill_key = "wh2_main_skill_def_death_hag_bride_of_khaine",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_gifts_1",
+            skill_key = "wh2_main_skill_def_death_hag_gift_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_main_skill_node_def_death_hag_gifts_2",
+                "wh2_main_skill_node_def_death_hag_gifts_3",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_gifts_2",
+            skill_key = "wh2_main_skill_def_death_hag_gift_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_main_skill_node_def_death_hag_gifts_1",
+                "wh2_main_skill_node_def_death_hag_gifts_3",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_gifts_3",
+            skill_key = "wh2_main_skill_def_witchbrew",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_main_skill_node_def_death_hag_gifts_1",
+                "wh2_main_skill_node_def_death_hag_gifts_2",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_0",
+            skill_key = "wh2_main_skill_def_combat_dance_of_death",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_1_1",
+            skill_key = "wh_main_skill_all_dignitary_self_impassioned",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_1_2",
+            skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_1_3",
+            skill_key = "wh_main_skill_all_dignitary_self_conviction",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_1_4",
+            skill_key = "wh_main_skill_all_dignitary_self_soothsaying",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_3_1",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_3_2",
+            skill_key = "wh_main_skill_all_dignitary_self_augury",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_3_3",
+            skill_key = "wh_main_skill_all_dignitary_self_tenacity",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_3_4",
+            skill_key = "wh_main_skill_all_dignitary_self_fervour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_death_hag_combat_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
             }
         },
     },
@@ -6219,6 +7129,254 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_main_def_khainite_assassin = {
+        {
+            node_key = "wh2_main_skill_node_def_assassin_generic_1",
+            skill_key = "wh2_main_skill_def_spy_unbreakable",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_generic_2",
+            skill_key = "wh2_main_skill_def_generic_ward_of_khaine",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_generic_3",
+            skill_key = "wh2_main_skill_assassin_unique_loyalty",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_poisons_1",
+            skill_key = "wh2_main_skill_def_spy_poison_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_main_skill_node_def_assassin_poisons_2",
+                "wh2_main_skill_node_def_assassin_poisons_3",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_poisons_2",
+            skill_key = "wh2_main_skill_def_spy_poison_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_main_skill_node_def_assassin_poisons_1",
+                "wh2_main_skill_node_def_assassin_poisons_3",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_poisons_3",
+            skill_key = "wh2_main_skill_def_spy_poison_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+                "wh2_main_skill_node_def_assassin_poisons_1",
+                "wh2_main_skill_node_def_assassin_poisons_2",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_0",
+            skill_key = "wh2_main_skill_def_combat_dance_of_death",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_1_1",
+            skill_key = "wh_main_skill_all_spy_self_gutter_fighter_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_1_2",
+            skill_key = "wh_main_skill_all_spy_self_elusive",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_1_3",
+            skill_key = "wh_main_skill_all_spy_self_precise_2",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_1_4",
+            skill_key = "wh_main_skill_all_spy_self_survivalist_2",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_2",
+            skill_key = "wh2_main_skill_def_spy_shroud_of_darkness",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_3_1",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_3_2",
+            skill_key = "wh_main_skill_all_spy_self_opportunist",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_3_3",
+            skill_key = "wh_main_skill_all_spy_self_counter-striker_2",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_3_4",
+            skill_key = "wh_main_skill_all_spy_self_bloody_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_combat_4",
+            skill_key = "wh2_main_skill_skv_trophy_heads_assassin",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_missile_0",
+            skill_key = "wh2_main_skill_def_assassin_missile_range_hawk_eyed",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_missile_1",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_missile_damage",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_assassin_missile_2",
+            skill_key = "wh2_main_skill_def_combat_deadeye",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -7453,6 +8611,660 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_main_def_sorceress_dark = {
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_mount_1",
+            skill_key = "wh2_main_skill_def_sorceress_dark_mount_dark_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_mount_2",
+            skill_key = "wh2_main_skill_def_sorceress_dark_mount_cold_one",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_mount_3",
+            skill_key = "wh2_main_skill_def_sorceress_dark_mount_dark_pegasus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_generic_1",
+            skill_key = "wh2_main_skill_def_generic_hekartis_blessing",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_generic_2",
+            skill_key = "wh2_main_skill_def_generic_ward_of_hekarti",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_generic_3",
+            skill_key = "wh2_main_skill_def_generic_ward_of_khaine",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_0",
+            skill_key = "wh2_main_skill_magic_dark_chillwind",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_1_4",
+            skill_key = "wh2_main_skill_magic_dark_lore_attribute",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_1_1",
+            skill_key = "wh2_main_skill_magic_dark_power_of_darkness",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_1_2",
+            skill_key = "wh2_main_skill_magic_dark_word_of_pain",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_1_3",
+            skill_key = "wh2_main_skill_magic_dark_bladewind",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_3_1",
+            skill_key = "wh2_main_skill_magic_dark_doombolt",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_3_2",
+            skill_key = "wh2_main_skill_magic_dark_soul_stealer",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_dark_magic_dummy",
+            skill_key = "wh2_main_skill_magic_dark_chillwind_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_main_def_sorceress_fire = {
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_mount_1",
+            skill_key = "wh2_main_skill_def_sorceress_fire_mount_dark_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_mount_2",
+            skill_key = "wh2_main_skill_def_sorceress_fire_mount_cold_one",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_mount_3",
+            skill_key = "wh2_main_skill_def_sorceress_fire_mount_dark_pegasus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_generic_1",
+            skill_key = "wh2_main_skill_def_generic_hekartis_blessing",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_generic_2",
+            skill_key = "wh2_main_skill_def_generic_ward_of_hekarti",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_generic_3",
+            skill_key = "wh2_main_skill_def_generic_ward_of_khaine",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_0",
+            skill_key = "wh_main_skill_all_magic_fire_01_fireball",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_fire_04_kindleflame",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_fire_02_cascading_fire-cloak",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_fire_03_flaming_sword_of_rhuin",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_fire_05_the_burning_head",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_fire_09_piercing_bolts_of_burning",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_fire_10_flame_storm",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_fire_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_fire_dummy_fireball",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_main_def_sorceress_shadow = {
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_mount_1",
+            skill_key = "wh2_main_skill_def_sorceress_shadow_mount_dark_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_mount_2",
+            skill_key = "wh2_main_skill_def_sorceress_shadow_mount_cold_one",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_mount_3",
+            skill_key = "wh2_main_skill_def_sorceress_shadow_mount_dark_pegasus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_generic_1",
+            skill_key = "wh2_main_skill_def_generic_hekartis_blessing",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_generic_2",
+            skill_key = "wh2_main_skill_def_generic_ward_of_hekarti",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_generic_3",
+            skill_key = "wh2_main_skill_def_generic_ward_of_khaine",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_0",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_1_1",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_1_2",
+            skill_key = "wh_dlc05_skill_magic_shadow_enfeebling_foe",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_1_3",
+            skill_key = "wh_dlc05_skill_magic_shadow_the_withering",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_1_4",
+            skill_key = "wh_dlc05_skill_magic_shadow_penumbral_pendulum",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_3_3",
+            skill_key = "wh_dlc05_skill_magic_shadow_pit_of_shades",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_3_4",
+            skill_key = "wh_dlc05_skill_magic_shadow_okkams_mindrazor",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_def_sorceress_shadow_magic_dummy",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },

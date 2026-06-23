@@ -430,6 +430,7 @@ def render_battle_module(
     enemy_general_options: dict[str, list[dict[str, object]]],
     enemy_general_values: dict[str, int],
     embedded_agents: dict[str, str],
+    enemy_hero_pools: dict[str, list[dict[str, object]]],
 ) -> str:
     lines = [
         "local data = {}",
@@ -500,6 +501,26 @@ def render_battle_module(
                 + str(unit_entry["weight"])
                 + ", role_tag = "
                 + lua_string(str(unit_entry["role_tag"]))
+                + " },"
+            )
+        lines.append("    },")
+    lines.extend(["}", "", "data.ENEMY_HERO_POOLS_BY_CONTENT_FACTION = {"])
+
+    for entry in blueprint:
+        faction_key = str(entry["faction_key"])
+        lines.append(f"    {format_lua_key(faction_key)} = {{")
+        for hero_entry in enemy_hero_pools.get(faction_key, []):
+            lines.append(
+                "        { agent_type = "
+                + lua_string(str(hero_entry["agent_type"]))
+                + ", agent_subtype = "
+                + lua_string(str(hero_entry["agent_subtype"]))
+                + ", unit_key = "
+                + lua_string(str(hero_entry["unit_key"]))
+                + ", unit_value = "
+                + str(hero_entry["unit_value"])
+                + ", weight = "
+                + str(hero_entry["weight"])
                 + " },"
             )
         lines.append("    },")
@@ -1085,15 +1106,19 @@ def main() -> None:
         units_by_battle_faction[row["faction"]].append(row)
 
     permitted_generals_by_faction: dict[str, list[str]] = defaultdict(list)
+    permitted_heroes_by_faction: dict[str, list[str]] = defaultdict(list)
     for row in faction_agent_permitted_subtype_rows:
-        if row.get("agent") != "general":
-            continue
         if row.get("mod_disabled", "").lower() == "true":
             continue
         faction_key = row.get("faction", "")
         subtype_key = row.get("subtype", "")
-        if faction_key and subtype_key:
+        agent_type = row.get("agent", "")
+        if not faction_key or not subtype_key:
+            continue
+        if agent_type == "general":
             permitted_generals_by_faction[faction_key].append(subtype_key)
+        elif agent_type not in {"general", ""}:
+            permitted_heroes_by_faction[faction_key].append(subtype_key)
 
     agent_subtypes_by_associated_unit: dict[str, list[str]] = defaultdict(list)
     for row in agent_subtype_rows:
@@ -1128,6 +1153,7 @@ def main() -> None:
     enemy_general_options: dict[str, list[dict[str, object]]] = {}
     enemy_general_values: dict[str, int] = {}
     embedded_agents: dict[str, str] = {}
+    enemy_hero_pools: dict[str, list[dict[str, object]]] = {}
     faction_equipment_pools: dict[str, list[dict[str, object]]] = {}
     supported_player_factions: list[str] = []
     player_content_faction_by_faction: dict[str, str] = {}
@@ -1194,6 +1220,53 @@ def main() -> None:
             validation_errors.append(f"No battle units generated for {faction_key}")
             continue
         battle_unit_pools[faction_key] = sorted(unit_pool, key=lambda item: (int(item["unit_value"]), str(item["unit_key"])))
+
+        # Build hero (non-lord agent) pool for this content faction.
+        # Use the non-general permitted subtype list as the source of truth for which
+        # agent subtypes are available, then verify the associated unit caste is "hero".
+        permitted_hero_subtypes = set(permitted_heroes_by_faction.get(faction_key, []))
+        agent_subtypes_by_key_local = {row["key"]: row for row in agent_subtype_rows if row.get("key")}
+        hero_pool: list[dict[str, object]] = []
+        seen_hero_subtype_keys: set[str] = set()
+        for subtype_key in sorted(permitted_hero_subtypes, key=natural_sort_key):
+            if subtype_key in seen_hero_subtype_keys:
+                continue
+            agent_row = agent_subtypes_by_key_local.get(subtype_key)
+            if agent_row is None:
+                continue
+            if agent_row.get("recruitable", "").lower() != "true":
+                continue
+            if agent_row.get("can_gain_xp", "").lower() != "true":
+                continue
+            associated_unit_key = agent_row.get("associated_unit_override", "")
+            if not associated_unit_key:
+                continue
+            main_unit = main_units_by_key.get(associated_unit_key)
+            if main_unit is None:
+                continue
+            if (main_unit.get("caste") or "").lower() != "hero":
+                continue
+            unit_value = to_int(main_unit.get("multiplayer_cost", "0"))
+            if unit_value <= 0:
+                continue
+            seen_hero_subtype_keys.add(subtype_key)
+            # Determine the agent type from the permitted entry for this subtype.
+            agent_type_for_subtype = next(
+                (r["agent"] for r in faction_agent_permitted_subtype_rows
+                 if r.get("faction") == faction_key and r.get("subtype") == subtype_key),
+                "champion",
+            )
+            hero_pool.append(
+                {
+                    "agent_type": agent_type_for_subtype,
+                    "agent_subtype": subtype_key,
+                    "unit_key": associated_unit_key,
+                    "unit_value": unit_value,
+                    "weight": derive_unit_weight(unit_value),
+                }
+            )
+        hero_pool.sort(key=lambda item: (int(item["unit_value"]), str(item["agent_subtype"])))
+        enemy_hero_pools[faction_key] = hero_pool
 
         faction_candidates = build_enemy_faction_candidates(entry, available_factions)
         if not faction_candidates:
@@ -1429,6 +1502,9 @@ def main() -> None:
             else:
                 for expanded_subtype_key in agent_subtypes_by_associated_unit.get(subtype_key, []):
                     subtype_keys_by_content_faction[content_faction_key].add(expanded_subtype_key)
+    for content_faction_key, hero_pool in enemy_hero_pools.items():
+        for hero_entry in hero_pool:
+            subtype_keys_by_content_faction[content_faction_key].add(str(hero_entry["agent_subtype"]))
     for player_faction_key, general_options in player_general_options_by_faction.items():
         content_faction_key = player_content_faction_by_faction.get(player_faction_key, "")
         if not content_faction_key:
@@ -1458,6 +1534,7 @@ def main() -> None:
         enemy_general_options,
         enemy_general_values,
         embedded_agents,
+        enemy_hero_pools,
     )
     ancillary_module = render_ancillary_module(blueprint, faction_equipment_pools, common_equipment_pool)
     players_module = render_players_module(

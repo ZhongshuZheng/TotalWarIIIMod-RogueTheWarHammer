@@ -1406,6 +1406,660 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh2_dlc15_grn_river_troll_hag = {
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_unique_01",
+            skill_key = "wh2_dlc15_skill_grn_river_troll_hag_slimy_shanks",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_unique_03",
+            skill_key = "wh2_dlc15_skill_grn_river_troll_hag_teach_em_right",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_unique_04",
+            skill_key = "wh2_dlc15_skill_grn_river_troll_hag_bag_batterin",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_unique_02",
+            skill_key = "wh_main_skill_grn_all_unique_dodgy_geezer",
+            category_key = "character",
+            indent = 0,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_river_troll_hag_unique_starter",
+            skill_key = "wh3_main_skill_grn_river_troll_hag_unique_starter",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_river_troll_hag_unique_1",
+            skill_key = "wh3_main_skill_grn_river_troll_hag_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_river_troll_hag_unique_2",
+            skill_key = "wh3_main_skill_grn_river_troll_hag_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_river_troll_hag_unique_3",
+            skill_key = "wh3_main_skill_grn_river_troll_hag_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_river_troll_hag_unique_capstone",
+            skill_key = "wh3_main_skill_grn_river_troll_hag_unique_capstone",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_0",
+            skill_key = "wh_dlc15_skill_all_all_self_horrid_mass",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_1_1",
+            skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_1_2",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_1_3",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_battle_speed",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_1_4",
+            skill_key = "wh_main_skill_all_dignitary_self_conviction",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_2",
+            skill_key = "wh2_dlc15_skill_grn_river_troll_hag_mither",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_3_1",
+            skill_key = "wh_main_skill_all_dignitary_self_fervour",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_3_2",
+            skill_key = "wh_main_skill_all_dignitary_self_tenacity",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_3_3",
+            skill_key = "wh_main_skill_all_dignitary_self_soothsaying",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_3_4",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc15_skill_node_grn_river_troll_hag_combat_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_01",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_02",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_03",
+            skill_key = "wh_main_skill_all_magic_death_02_aspect_of_the_dreadknight",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_04",
+            skill_key = "wh_main_skill_all_magic_death_04_soulblight",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_05",
+            skill_key = "wh_main_skill_all_magic_death_05_doom_and_darkness",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_09",
+            skill_key = "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_10",
+            skill_key = "wh_main_skill_all_magic_death_10_the_purple_sun_of_xereus",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc15_skill_node_grn_river_troll_hag_magic1_dummy",
+            skill_key = "wh_main_skill_all_magic_death_dummy_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh2_pro09_grn_black_orc_big_boss = {
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_orc_big_boss_mount_boar",
+            skill_key = "wh2_pro09_skill_grn_black_orc_big_boss_mount_boar",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_unique_01",
+            skill_key = "wh3_dlc26_skill_grn_black_orc_big_boss_fearsome_presence",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_unique_02",
+            skill_key = "wh2_dlc15_skill_grn_champion_unique_black_orc_big_boss_armed_to_da_teeth",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_unique_03",
+            skill_key = "wh_main_skill_grn_all_unique_dodgy_geezer",
+            category_key = "character",
+            indent = 0,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_black_orc_big_boss_character_01",
+            skill_key = "wh2_dlc15_skill_grn_champion_unique_black_orc_big_boss_boss_o_this_field",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_grn_black_orc_big_boss_character_02",
+                "wh3_dlc26_skill_grn_black_orc_big_boss_character_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_black_orc_big_boss_character_02",
+            skill_key = "wh3_dlc26_skill_grn_heroic_killing_blow",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_grn_black_orc_big_boss_character_01",
+                "wh3_dlc26_skill_grn_black_orc_big_boss_character_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_black_orc_big_boss_character_03",
+            skill_key = "wh2_dlc15_skill_grn_champion_unique_black_orc_big_boss_speshul_fightin",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc26_skill_grn_black_orc_big_boss_character_01",
+                "wh3_dlc26_skill_grn_black_orc_big_boss_character_02",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_black_orc_big_boss_exclusive_1",
+            skill_key = "wh3_main_skill_grn_black_orc_big_boss_exclusive_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_black_orc_big_boss_exclusive_2",
+                "wh3_main_skill_grn_black_orc_big_boss_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_black_orc_big_boss_exclusive_2",
+            skill_key = "wh3_main_skill_grn_black_orc_big_boss_exclusive_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_black_orc_big_boss_exclusive_1",
+                "wh3_main_skill_grn_black_orc_big_boss_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_black_orc_big_boss_exclusive_3",
+            skill_key = "wh3_main_skill_grn_black_orc_big_boss_exclusive_3",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_black_orc_big_boss_exclusive_1",
+                "wh3_main_skill_grn_black_orc_big_boss_exclusive_2",
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_01",
+            skill_key = "wh2_dlc15_skill_grn_hero_personal_dead_ard",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_03",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit_2",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_06",
+            skill_key = "wh_main_skill_grn_lord_battle_get_back_ere",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_09",
+            skill_key = "wh2_dlc15_skill_all_hero_self_crack_some_eads",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_pro09_skill_node_grn_black_ork_big_boss_self_11",
+            skill_key = "wh_main_skill_grn_lord_battle_stand_your_ground",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc26_grn_gorbad_ironclaw = {
         {
             node_key = "wh3_dlc26_skill_node_grn_gorbad_ironclaw_mount_gnarla",
@@ -1894,6 +2548,262 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc26_grn_night_goblin_big_boss = {
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_mount_great_cave_squig",
+            skill_key = "wh3_dlc26_skill_mount_grn_night_goblin_big_boss_great_cave_squig",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_unique_06",
+            skill_key = "wh_main_skill_all_spy_self_stalker",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_generic_1",
+            skill_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_deadly_schemer",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_generic_0",
+            skill_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_dark_deeds",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_unique_05",
+            skill_key = "wh_main_skill_grn_all_unique_dodgy_geezer",
+            category_key = "character",
+            indent = 0,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_unique_01",
+            skill_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_empowering_shrooms",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_unique_02",
+            skill_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_release_da_squigs",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_unique_03",
+            skill_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_craziest_squigs",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_unique_04",
+            skill_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_herder",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_unique_05",
+            skill_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_tricksy",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_01",
+            skill_key = "wh_main_skill_all_spy_self_bloody_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_02",
+            skill_key = "wh_main_skill_all_spy_self_gutter_fighter_2",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_03",
+            skill_key = "wh_main_skill_all_spy_self_elusive",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_04",
+            skill_key = "wh_main_skill_all_spy_self_precise_2",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_05",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_07",
+            skill_key = "wh_main_skill_all_spy_self_opportunist",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_08",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_09",
+            skill_key = "wh_main_skill_all_spy_self_survivalist_2",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_10",
+            skill_key = "wh_main_skill_all_spy_self_cornered_rat",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_big_boss_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+    },
     wh3_dlc26_grn_savage_orc_great_shaman = {
         {
             node_key = "wh3_dlc26_skill_node_grn_savage_orc_great_shaman_mount_war_boar",
@@ -2351,6 +3261,332 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc26_grn_snagla_grobpsit = {
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_generic_02",
+            skill_key = "wh_main_skill_all_spy_self_stalker",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_generic_01",
+            skill_key = "wh_main_skill_grn_spy_unique_goblin_big_boss_nasty_skulker",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_generic_03",
+            skill_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_low_blow",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_generic_04",
+            skill_key = "wh_main_skill_grn_all_unique_dodgy_geezer",
+            category_key = "character",
+            indent = 0,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_self_01",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_red_venom",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_self_02",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_web_attacks",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_self_03",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_undulating_cry",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_self_04",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_spider_gods_chosen",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_self_05",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_venom_drinker",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_self_06",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_out_of_the_very_shadows_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_spiders_01",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_extra_strong_venom",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_spiders_02",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_grim_trophies",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_spiders_03",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_bubblin_venom",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_spiders_04",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_beneath_the_gloomy_canopy",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_spiders_05",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_wiry_frame",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_unique_spiders_06",
+            skill_key = "wh3_dlc26_skill_grn_snagla_grobspit_digestive_venom",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_01",
+            skill_key = "wh_main_skill_all_spy_self_bloody_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_02",
+            skill_key = "wh_main_skill_all_spy_self_gutter_fighter_2",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_03",
+            skill_key = "wh_main_skill_all_spy_self_elusive",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_04",
+            skill_key = "wh_main_skill_all_spy_self_precise_2",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_05",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_06",
+            skill_key = "wh_main_skill_all_spy_self_slippery",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_07",
+            skill_key = "wh_main_skill_all_spy_self_opportunist",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_08",
+            skill_key = "wh_main_skill_all_spy_self_counter-striker_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_09",
+            skill_key = "wh_main_skill_all_spy_self_survivalist_2",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_10",
+            skill_key = "wh_main_skill_all_spy_self_cornered_rat",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_grn_snagla_grobspit_self_11",
+            skill_key = "wh2_dlc15_skill_grn_they_needs_stabbin",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -4420,6 +5656,308 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh_main_grn_goblin_big_boss = {
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_unique_01",
+            skill_key = "wh_main_skill_grn_spy_unique_goblin_big_boss_giant_wolf",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_unique_02",
+            skill_key = "wh_main_skill_grn_spy_unique_goblin_big_boss_giant_spider",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_unique_06",
+            skill_key = "wh_main_skill_all_spy_self_stalker",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_unique_03",
+            skill_key = "wh2_dlc15_skill_grn_spy_unique_goblin_big_boss_ambusher",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_unique_04",
+            skill_key = "wh_main_skill_grn_spy_unique_goblin_big_boss_nasty_skulker",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_goblin_big_boss_unique_07",
+            skill_key = "wh3_dlc26_skill_grn_night_goblin_big_boss_low_blow",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_unique_05",
+            skill_key = "wh_main_skill_grn_all_unique_dodgy_geezer",
+            category_key = "character",
+            indent = 0,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_1_1",
+            skill_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_1_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_1_2",
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_1_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_1_2",
+            skill_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_1_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_1_1",
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_1_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_1_3",
+            skill_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_1_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_1_1",
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_1_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_2_1",
+            skill_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_2_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_2_2",
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_2_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_2_2",
+            skill_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_2_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_2_1",
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_2_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_2_3",
+            skill_key = "wh3_main_skill_grn_goblin_big_boss_exclusive_2_3",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_2_1",
+                "wh3_main_skill_grn_goblin_big_boss_exclusive_2_2",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_01",
+            skill_key = "wh_main_skill_all_spy_self_bloody_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_02",
+            skill_key = "wh_main_skill_all_spy_self_gutter_fighter_2",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_03",
+            skill_key = "wh_main_skill_all_spy_self_elusive",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_04",
+            skill_key = "wh_main_skill_all_spy_self_precise_2",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_05",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_06",
+            skill_key = "wh_main_skill_all_spy_self_slippery",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_07",
+            skill_key = "wh_main_skill_all_spy_self_opportunist",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_08",
+            skill_key = "wh_main_skill_all_spy_self_counter-striker_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_09",
+            skill_key = "wh_main_skill_all_spy_self_survivalist_2",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_10",
+            skill_key = "wh_main_skill_all_spy_self_cornered_rat",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_grn_goblin_big_boss_self_11",
+            skill_key = "wh2_dlc15_skill_grn_they_needs_stabbin",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh_main_grn_goblin_great_shaman = {
         {
             node_key = "wh_main_skill_node_grn_goblin_great_shaman_unique_01",
@@ -5351,6 +6889,490 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_main_grn_night_goblin_shaman = {
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_unique_02",
+            skill_key = "wh_main_skill_grn_all_unique_dodgy_geezer",
+            category_key = "character",
+            indent = 0,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_goblin_shaman_exclusive_1",
+            skill_key = "wh3_main_skill_grn_goblin_shaman_exclusive_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_goblin_shaman_exclusive_2",
+                "wh3_main_skill_grn_goblin_shaman_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_goblin_shaman_exclusive_2",
+            skill_key = "wh3_main_skill_grn_goblin_shaman_exclusive_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_goblin_shaman_exclusive_1",
+                "wh3_main_skill_grn_goblin_shaman_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_goblin_shaman_exclusive_3",
+            skill_key = "wh3_main_skill_grn_goblin_shaman_exclusive_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_goblin_shaman_exclusive_1",
+                "wh3_main_skill_grn_goblin_shaman_exclusive_2",
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_shaman_character_01",
+            skill_key = "wh_main_skill_grn_wizard_unique_night_goblin_shaman_magic_mushrooms",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_shaman_character_02",
+            skill_key = "wh3_dlc26_skill_grn_goblin_shaman_shrouded_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_night_goblin_shaman_character_03",
+            skill_key = "wh3_dlc26_skill_grn_goblin_shaman_subtle_spellcraftin",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_01",
+            skill_key = "wh_main_skill_grn_magic_little_waaagh_01_sneaky_stabbin",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_02",
+            skill_key = "wh_main_skill_grn_magic_little_waaagh_03_sneaky_stealin",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_03",
+            skill_key = "wh_main_skill_grn_magic_little_waaagh_02_vindictive_glare",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_04",
+            skill_key = "wh_main_skill_grn_magic_little_waaagh_04_itchy_nuisance",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_05",
+            skill_key = "wh_main_skill_grn_magic_little_waaagh_05_gorkll_fix_it",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_09",
+            skill_key = "wh_main_skill_grn_magic_little_waaagh_09_night_shroud",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_10",
+            skill_key = "wh_main_skill_grn_magic_little_waaagh_10_curse_of_da_bad_moon",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_night_goblin_shaman_magic1_dummy",
+            skill_key = "wh_main_skill_grn_magic_little_waaagh_dummy_sneaky_stabbin",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_main_grn_orc_shaman = {
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_unique_01",
+            skill_key = "wh_main_skill_grn_wizard_unique_orc_shaman_war_boar",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_unique_02",
+            skill_key = "wh_main_skill_grn_all_unique_dodgy_geezer",
+            category_key = "character",
+            indent = 0,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_orc_shaman_character_01",
+            skill_key = "wh3_dlc26_skill_grn_orc_shaman_one_of_da_boyz",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_orc_shaman_character_02",
+            skill_key = "wh3_dlc26_skill_grn_orc_shaman_dont_look_em_in_da_eye",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc26_skill_node_grn_orc_shaman_character_03",
+            skill_key = "wh3_dlc26_skill_grn_orc_shaman_da_great_green",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_orc_shaman_exclusive_1",
+            skill_key = "wh3_main_skill_grn_orc_shaman_exclusive_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_orc_shaman_exclusive_2",
+                "wh3_main_skill_grn_orc_shaman_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_orc_shaman_exclusive_2",
+            skill_key = "wh3_main_skill_grn_orc_shaman_exclusive_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_orc_shaman_exclusive_1",
+                "wh3_main_skill_grn_orc_shaman_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_grn_orc_shaman_exclusive_3",
+            skill_key = "wh3_main_skill_grn_orc_shaman_exclusive_3",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh3_main_skill_grn_orc_shaman_exclusive_1",
+                "wh3_main_skill_grn_orc_shaman_exclusive_2",
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_01",
+            skill_key = "wh_main_skill_grn_magic_big_waaagh_01_gaze_of_mork",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_02",
+            skill_key = "wh_main_skill_grn_magic_big_waaagh_04_power_of_da_waaagh",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_03",
+            skill_key = "wh_main_skill_grn_magic_big_waaagh_02_brain_bursta",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_04",
+            skill_key = "wh_main_skill_grn_magic_big_waaagh_03_fists_of_gork",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_05",
+            skill_key = "wh_main_skill_grn_magic_big_waaagh_05_eadbutt",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_09",
+            skill_key = "wh_main_skill_grn_magic_big_waaagh_09_ere_we_go",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_10",
+            skill_key = "wh_main_skill_grn_magic_big_waaagh_10_foot_of_gork",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_grn_orc_shaman_magic1_dummy",
+            skill_key = "wh_main_skill_grn_magic_big_waaagh_dummy_gaze_of_mork",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },

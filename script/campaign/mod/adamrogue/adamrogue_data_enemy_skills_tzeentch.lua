@@ -944,6 +944,794 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc20_chs_sorcerer_metal_mtze = {
+        {
+            node_key = "wh3_dlc20_skill_node_sorcerer_metal_mtze_campaign_actions_dummy",
+            skill_key = "wh3_dlc20_skill_all_dummy_agent_actions_chs_sorcerer_mtze",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_cha_chaos_sorcerer_metal_mtze_chaos_steed",
+            skill_key = "wh3_dlc20_skill_mount_chs_cha_chaos_sorcerer_metal_mtze_chaos_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_cha_chaos_sorcerer_metal_mtze_disc",
+            skill_key = "wh3_dlc20_skill_mount_chs_cha_chaos_sorcerer_metal_mtze_disc",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_cha_chaos_sorcerer_metal_mtze_warshrine",
+            skill_key = "wh3_dlc20_skill_mount_chs_cha_chaos_sorcerer_metal_mtze_warshrine",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_sorcerer_metal_mtze_authority",
+            skill_key = "wh3_dlc20_skill_authority_tze_hero",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_unique_02",
+            skill_key = "wh_main_skill_chs_all_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_unique_03",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_chs_chaos_sorcerer_unique_1",
+            skill_key = "wh3_dlc27_skill_chs_chaos_sorcerer_unique_1",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_chs_chaos_sorcerer_unique_2",
+            skill_key = "wh3_dlc27_skill_chs_chaos_sorcerer_unique_2",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_01",
+            skill_key = "wh_main_skill_all_magic_metal_01_searing_doom",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_02",
+            skill_key = "wh_main_skill_all_magic_metal_03_metalshifting",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_03",
+            skill_key = "wh_main_skill_all_magic_metal_02_plague_of_rust",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_04",
+            skill_key = "wh_main_skill_all_magic_metal_04_glittering_robe",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_05",
+            skill_key = "wh_main_skill_all_magic_metal_05_gehennas_golden_hounds",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_06",
+            skill_key = "wh3_main_skill_tze_all_magic_prismatic_plurality",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_09",
+            skill_key = "wh_main_skill_all_magic_metal_09_transmutation_of_lead",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_10",
+            skill_key = "wh_main_skill_all_magic_metal_10_final_transmutation",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_01",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_battlemage",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_03",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_3",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_3",
+                "wh3_main_ie_nor_kihar_shared_02",
+                "wh3_main_ie_nor_kihar_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_02",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_quick",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_03",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_3",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_3",
+                "wh3_main_ie_nor_kihar_shared_01",
+                "wh3_main_ie_nor_kihar_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_03",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_02",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_2",
+                "wh3_main_ie_nor_kihar_shared_01",
+                "wh3_main_ie_nor_kihar_shared_02",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_04",
+            skill_key = "wh3_dlc20_skills_shared_tzeentch_spirit",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_05",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_06",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_05",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_05",
+            skill_key = "wh3_dlc20_skills_shared_tzeentch_energy",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_06",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_06",
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_04",
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_06",
+            skill_key = "wh3_dlc20_skills_shared_tzeentch_flame",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_05",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_05",
+            }
+        },
+    },
+    wh3_dlc20_chs_sorcerer_tzeentch_mtze = {
+        {
+            node_key = "wh3_dlc20_skill_node_sorcerer_tzeentch_mtze_campaign_actions_dummy",
+            skill_key = "wh3_dlc20_skill_all_dummy_agent_actions_chs_sorcerer_mtze",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_cha_chaos_sorcerer_tzeentch_mtze_chaos_steed",
+            skill_key = "wh3_dlc20_skill_mount_chs_cha_chaos_sorcerer_tzeentch_mtze_chaos_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_cha_chaos_sorcerer_tzeentch_mtze_disc",
+            skill_key = "wh3_dlc20_skill_mount_chs_cha_chaos_sorcerer_tzeentch_mtze_disc",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_cha_chaos_sorcerer_tzeentch_mtze_warshrine",
+            skill_key = "wh3_dlc20_skill_mount_chs_cha_chaos_sorcerer_tzeentch_mtze_warshrine",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_sorcerer_tzeentch_mtze_authority",
+            skill_key = "wh3_dlc20_skill_authority_tze_hero",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_unique_02",
+            skill_key = "wh_main_skill_chs_all_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_unique_03",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_chs_chaos_sorcerer_unique_1",
+            skill_key = "wh3_dlc27_skill_chs_chaos_sorcerer_unique_1",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_chs_chaos_sorcerer_unique_2",
+            skill_key = "wh3_dlc27_skill_chs_chaos_sorcerer_unique_2",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_01",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_01_blue_fire_of_tzeentch",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_02",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_05_fires_of_change",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_03",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_02_pink_fire_of_tzeentch",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_04",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_03_glean_magic",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_05",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_04_treason_of_tzeentch",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_06",
+            skill_key = "wh3_main_skill_tze_all_magic_prismatic_plurality",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_09",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_06_tzeentchs_firestorm",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_10",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_07_infernal_gateway",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_01",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_battlemage",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_03",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_3",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_3",
+                "wh3_main_ie_nor_kihar_shared_02",
+                "wh3_main_ie_nor_kihar_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_02",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_quick",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_03",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_3",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_3",
+                "wh3_main_ie_nor_kihar_shared_01",
+                "wh3_main_ie_nor_kihar_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_03",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_02",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_2",
+                "wh3_main_ie_nor_kihar_shared_01",
+                "wh3_main_ie_nor_kihar_shared_02",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_04",
+            skill_key = "wh3_dlc20_skills_shared_tzeentch_spirit",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_05",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_06",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_05",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_05",
+            skill_key = "wh3_dlc20_skills_shared_tzeentch_energy",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_06",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_06",
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_04",
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_06",
+            skill_key = "wh3_dlc20_skills_shared_tzeentch_flame",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_05",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_05",
+            }
+        },
+    },
     wh3_dlc20_tze_vilitch = {
         {
             node_key = "wh3_dlc20_skill_node_vilitch_magic_dummy",
@@ -1500,6 +2288,342 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc24_chs_exalted_hero_mtze = {
+        {
+            node_key = "wh3_dlc24_skill_node_chs_cha_exalted_hero_mtze_chaos_steed",
+            skill_key = "wh3_dlc24_skill_mount_chs_cha_exalted_hero_mtze_chaos_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_cha_exalted_hero_mtze_disc_of_tzeentch",
+            skill_key = "wh3_dlc24_skill_mount_chs_cha_exalted_hero_mtze_disc_of_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_cha_exalted_hero_mtze_chaos_chariot",
+            skill_key = "wh3_dlc24_skill_mount_chs_cha_exalted_hero_mtze_chaos_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_cha_exalted_hero_mtze_resist",
+            skill_key = "wh3_main_skill_tze_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_sorcerer_tzeentch_mtze_authority",
+            skill_key = "wh3_dlc20_skill_authority_tze_hero",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mkho_unique_03",
+            skill_key = "wh_main_skill_chs_all_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mkho_unique_04",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_03",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_09",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 1,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_self_11",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 1,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_01",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_exalted_hero_duelist",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_03",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_02",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_03",
+                "wh3_main_ie_nor_killgore_shared_02",
+                "wh3_main_ie_nor_killgore_shared_03",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_02",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_02",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_exalted_hero_tactician",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_03",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_01",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_03",
+                "wh3_main_ie_nor_killgore_shared_01",
+                "wh3_main_ie_nor_killgore_shared_03",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_01",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_03",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_exalted_hero_strategist",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_02",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_01",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_02",
+                "wh3_main_ie_nor_killgore_shared_01",
+                "wh3_main_ie_nor_killgore_shared_02",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_01",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_02",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_04",
+            skill_key = "wh3_dlc24_skill_chs_exalted_hero_mtze_self_meeting_of_the_minds",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_05",
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_05",
+            skill_key = "wh3_dlc20_skills_shared_tzeentch_energy",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_06",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_04",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_06",
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_04",
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_06",
+            skill_key = "wh3_dlc24_skill_chs_exalted_hero_mtze_self_assume_command",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_04",
+                "wh3_dlc24_skill_node_chs_exalted_hero_mtze_shared_05",
+            }
+        },
+    },
     wh3_dlc24_chs_lord_mtze = {
         {
             node_key = "wh3_dlc24_skill_node_chs_cha_chaos_lord_mtze_chaos_steed",
@@ -1943,6 +3067,238 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc24_tze_aekold_helbrass = {
+        {
+            node_key = "wh3_dlc24_skill_tze_aekold_top_1",
+            skill_key = "wh3_dlc24_skill_tze_aekold_top_1",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_aekold_top_2",
+            skill_key = "wh3_dlc24_skill_tze_aekold_top_2",
+            category_key = "character",
+            indent = 0,
+            tier = 20,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chaos_generic_weapon_strength",
+            skill_key = "wh_main_skill_chs_all_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 24,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chaos_generic_missile_resistance",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 25,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_aekold_unique_1",
+            skill_key = "wh3_dlc24_skill_tze_aekold_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_aekold_unique_2",
+            skill_key = "wh3_dlc24_skill_tze_aekold_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_aekold_unique_3",
+            skill_key = "wh3_dlc24_skill_tze_aekold_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_tze_aekold_unique_4",
+            skill_key = "wh3_dlc24_skill_tze_aekold_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_03",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_09",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_chs_combat_hero_generic_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
             }
         },
     },
@@ -3336,6 +4692,224 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh3_main_skill_tze_lord_army_master_of_fates",
             category_key = "battle",
             indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_tze_cultist = {
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_mount_chaos_steed",
+            skill_key = "wh3_main_skill_tze_cultist_mount_chaos_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_mount_warshrine",
+            skill_key = "wh3_dlc20_skill_mount_tze_cultist_warshrine",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_unique_0",
+            skill_key = "wh3_main_skill_tze_cultist_unique_gate_of_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_unique_1",
+            skill_key = "wh3_main_skill_tze_cultist_unique_greater_gate_of_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_unique_2",
+            skill_key = "wh3_main_skill_tze_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_unique_3",
+            skill_key = "wh3_main_skill_tze_generic_hates_nurgle",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_0",
+            skill_key = "wh_main_skill_all_magic_fire_01_fireball",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_fire_04_kindleflame",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_fire_02_cascading_fire-cloak",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_fire_03_flaming_sword_of_rhuin",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_fire_05_the_burning_head",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_2",
+            skill_key = "wh3_main_skill_tze_all_magic_prismatic_plurality",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_fire_09_piercing_bolts_of_burning",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_fire_10_flame_storm",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_cultist_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_fire_dummy_fireball",
+            category_key = "character",
+            indent = 2,
             tier = 11,
             max_level = 1,
             is_mount_skill = false,
@@ -5300,6 +6874,514 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh3_main_skill_tze_lord_army_master_of_fates",
             category_key = "battle",
             indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_tze_iridescent_horror_metal = {
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_mount_disc_of_tzeentch",
+            skill_key = "wh3_main_skill_tze_iridescent_horror_metal_mount_disc_of_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_mount_burning_chariot",
+            skill_key = "wh3_main_skill_tze_iridescent_horror_metal_mount_burning_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_unique_3",
+            skill_key = "wh3_main_skill_tze_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_unique_4",
+            skill_key = "wh3_main_skill_tze_generic_hates_nurgle",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_unique_0",
+            skill_key = "wh3_main_skill_tze_locus_of_change",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_2",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_3",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_2",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_3",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_1",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_2",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_1",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_unique_1",
+            skill_key = "wh3_main_skill_tze_locus_of_conjuration",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_1",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_3",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_1",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_3",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_0",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_2",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_0",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_unique_2",
+            skill_key = "wh3_main_skill_tze_locus_of_transmogrification",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_1",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_2",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_1",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_2",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_0",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_1",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_0",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_0",
+            skill_key = "wh_main_skill_all_magic_metal_01_searing_doom",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_metal_03_metalshifting",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_metal_02_plague_of_rust",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_metal_04_glittering_robe",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_metal_05_gehennas_golden_hounds",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_2",
+            skill_key = "wh3_main_skill_tze_all_magic_prismatic_plurality",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_metal_09_transmutation_of_lead",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_metal_10_final_transmutation",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_metal_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_metal_dummy_searing_doom",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_tze_iridescent_horror_tzeentch = {
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_mount_disc_of_tzeentch",
+            skill_key = "wh3_main_skill_tze_iridescent_horror_tzeentch_mount_disc_of_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_mount_burning_chariot",
+            skill_key = "wh3_main_skill_tze_iridescent_horror_tzeentch_mount_burning_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_3",
+            skill_key = "wh3_main_skill_tze_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_4",
+            skill_key = "wh3_main_skill_tze_generic_hates_nurgle",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_0",
+            skill_key = "wh3_main_skill_tze_locus_of_change",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_2",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_3",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_2",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_3",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_1",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_2",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_1",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_1",
+            skill_key = "wh3_main_skill_tze_locus_of_conjuration",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_1",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_3",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_1",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_3",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_0",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_2",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_0",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_2",
+            skill_key = "wh3_main_skill_tze_locus_of_transmogrification",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_1",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_2",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_1",
+                "wh3_main_skill_node_tze_herald_of_tzeentch_tzeentch_locus_2",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_0",
+                "wh3_main_skill_node_tze_iridescent_horror_metal_unique_1",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_0",
+                "wh3_main_skill_node_tze_iridescent_horror_tzeentch_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_0",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_01_blue_fire_of_tzeentch",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_1_1",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_05_fires_of_change",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_1_2",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_02_pink_fire_of_tzeentch",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_1_3",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_03_glean_magic",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_1_4",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_04_treason_of_tzeentch",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_2",
+            skill_key = "wh3_main_skill_tze_all_magic_prismatic_plurality",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_3_3",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_06_tzeentchs_firestorm",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_3_4",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_07_infernal_gateway",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_tze_iridescent_horror_tzeentch_magic_dummy",
+            skill_key = "wh3_main_skill_tze_magic_tzeentch_dummy_blue_fire_of_tzeentch",
+            category_key = "character",
+            indent = 2,
             tier = 11,
             max_level = 1,
             is_mount_skill = false,

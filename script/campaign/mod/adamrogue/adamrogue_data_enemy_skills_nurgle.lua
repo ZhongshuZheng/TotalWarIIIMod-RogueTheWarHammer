@@ -4,6 +4,330 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh3_main_nur_poxmakers_of_nurgle"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh3_dlc20_chs_exalted_hero_mnur = {
+        {
+            node_key = "wh3_dlc20_skill_node_chs_cha_exalted_hero_mnur_chaos_steed",
+            skill_key = "wh3_dlc20_skill_mount_chs_cha_exalted_hero_mnur_chaos_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_cha_exalted_hero_mnur_chaos_chariot",
+            skill_key = "wh3_dlc20_skill_mount_chs_cha_exalted_hero_mnur_chaos_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_cha_exalted_hero_mnur_rot_beast",
+            skill_key = "wh3_dlc25_skill_mount_chs_cha_exalted_hero_mnur_lord_rot_beast",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_authority",
+            skill_key = "wh3_dlc20_skill_authority_nur_hero",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_unique_03",
+            skill_key = "wh_main_skill_chs_all_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_unique_04",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_03",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_06",
+            skill_key = "wh2_main_skill_hef_alastar_unique_heroic_killing_blow",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_09",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 1,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 1,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_01",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_exalted_hero_duelist",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_03",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_02",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_03",
+                "wh3_main_ie_nor_killgore_shared_02",
+                "wh3_main_ie_nor_killgore_shared_03",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_02",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_02",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_exalted_hero_tactician",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_03",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_01",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_03",
+                "wh3_main_ie_nor_killgore_shared_01",
+                "wh3_main_ie_nor_killgore_shared_03",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_01",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_03",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_exalted_hero_strategist",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_02",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_02",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_01",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_02",
+                "wh3_main_ie_nor_killgore_shared_01",
+                "wh3_main_ie_nor_killgore_shared_02",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_01",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_02",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_04",
+            skill_key = "wh3_dlc20_skills_shared_nurgle_stench",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_05",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_05",
+            skill_key = "wh3_dlc20_skills_shared_nurgle_toxicity",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_04",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_06",
+            skill_key = "wh3_dlc20_skills_shared_nurgle_feed",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_04",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_05",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_04",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_05",
+            }
+        },
+    },
     wh3_dlc20_chs_sorcerer_lord_death_mnur = {
         {
             node_key = "wh3_dlc20_skill_node_chs_cha_chaos_sorcerer_lord_death_mnur_chaos_steed",
@@ -1814,6 +2138,814 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc25_chs_sorcerer_death_mnur = {
+        {
+            node_key = "wh3_dlc25_skill_node_sorcerer_nurgle_mnur_campaign_actions_dummy",
+            skill_key = "wh3_dlc25_skill_all_dummy_agent_actions_chs_sorcerer_mnur",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_death_mnur_chaos_steed",
+            skill_key = "wh3_dlc25_skill_mount_chs_cha_chaos_sorcerer_death_mnur_chaos_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_death_mnur_warshrine",
+            skill_key = "wh3_dlc25_skill_mount_chs_cha_chaos_sorcerer_death_mnur_warshrine",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_death_mnur_rot_beast",
+            skill_key = "wh3_dlc25_skill_mount_chs_cha_chaos_sorcerer_death_mnur_rot_beast",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_chs_sorcerer_death_mnur_authority",
+            skill_key = "wh3_dlc20_skill_authority_nur_hero",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_unique_02",
+            skill_key = "wh_main_skill_chs_all_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_unique_03",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_chs_chaos_sorcerer_unique_1",
+            skill_key = "wh3_dlc27_skill_chs_chaos_sorcerer_unique_1",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_chs_chaos_sorcerer_unique_2",
+            skill_key = "wh3_dlc27_skill_chs_chaos_sorcerer_unique_2",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_1",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_2_1",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_2_2",
+            skill_key = "wh_main_skill_all_magic_death_02_aspect_of_the_dreadknight",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_2_3",
+            skill_key = "wh_main_skill_all_magic_death_04_soulblight",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_2_4",
+            skill_key = "wh_main_skill_all_magic_death_05_doom_and_darkness",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_3",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_4_1",
+            skill_key = "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_4_2",
+            skill_key = "wh_main_skill_all_magic_death_10_the_purple_sun_of_xereus",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_4_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_4_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_magic_5",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_sorcerer_death_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_death_dummy_spirit_leech",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_1",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_battlemage",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_03",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_3",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_3",
+                "wh3_main_ie_nor_kihar_shared_02",
+                "wh3_main_ie_nor_kihar_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_2",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_quick",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_03",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_3",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_3",
+                "wh3_main_ie_nor_kihar_shared_01",
+                "wh3_main_ie_nor_kihar_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_3",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_02",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_2",
+                "wh3_main_ie_nor_kihar_shared_01",
+                "wh3_main_ie_nor_kihar_shared_02",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_4",
+            skill_key = "wh3_dlc25_skills_shared_nurgle_sorceror_rancid",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_5",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_6",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_5",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_6",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_5",
+            skill_key = "wh3_dlc25_skills_shared_nurgle_sorceror_putrid",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_4",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_6",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_4",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_6",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_6",
+            skill_key = "wh3_dlc25_skills_shared_nurgle_sorceror_filthy",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_4",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_5",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_4",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_5",
+            }
+        },
+    },
+    wh3_dlc25_chs_sorcerer_nurgle_mnur = {
+        {
+            node_key = "wh3_dlc25_skill_node_sorcerer_nurgle_mnur_campaign_actions_dummy",
+            skill_key = "wh3_dlc25_skill_all_dummy_agent_actions_chs_sorcerer_mnur",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_chaos_steed",
+            skill_key = "wh3_dlc25_skill_mount_chs_cha_chaos_sorcerer_nurgle_mnur_chaos_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_warshrine",
+            skill_key = "wh3_dlc25_skill_mount_chs_cha_chaos_sorcerer_nurgle_mnur_warshrine",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_rot_beast",
+            skill_key = "wh3_dlc25_skill_mount_chs_cha_chaos_sorcerer_nurgle_mnur_rot_beast",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_chs_sorcerer_nurgle_mnur_authority",
+            skill_key = "wh3_dlc20_skill_authority_nur_hero",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_unique_02",
+            skill_key = "wh_main_skill_chs_all_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_unique_03",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_chs_chaos_sorcerer_unique_1",
+            skill_key = "wh3_dlc27_skill_chs_chaos_sorcerer_unique_1",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc27_skill_node_chs_chaos_sorcerer_unique_2",
+            skill_key = "wh3_dlc27_skill_chs_chaos_sorcerer_unique_2",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_1",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_01_miasma_of_pestilence",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_2_1",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_05_children_of_nurgle",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_2_2",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_02_stream_of_corruption",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_2_3",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_03_curse_of_the_leper",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_2_4",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_04_rancid_visitations",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_3",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_4_1",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_06_fleshy_abundance",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_4_2",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_07_blight_boil",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_4_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_4_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_magic_5",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_sorcerer_nurgle_magic_dummy",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_dummy_miasma_of_pestilence",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_1",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_battlemage",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_03",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_3",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_3",
+                "wh3_main_ie_nor_kihar_shared_02",
+                "wh3_main_ie_nor_kihar_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_2",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_quick",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_03",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_03",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_3",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_3",
+                "wh3_main_ie_nor_kihar_shared_01",
+                "wh3_main_ie_nor_kihar_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_3",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_death_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_fire_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_mtze_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_metal_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_slaanesh_msla_shared_02",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_01",
+                "wh3_dlc20_skill_node_chs_chaos_sorcerer_tzeentch_mtze_shared_02",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_2",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_1",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_2",
+                "wh3_main_ie_nor_kihar_shared_01",
+                "wh3_main_ie_nor_kihar_shared_02",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_4",
+            skill_key = "wh3_dlc25_skills_shared_nurgle_sorceror_rancid",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_5",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_6",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_5",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_6",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_5",
+            skill_key = "wh3_dlc25_skills_shared_nurgle_sorceror_putrid",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_4",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_6",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_4",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_6",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_6",
+            skill_key = "wh3_dlc25_skills_shared_nurgle_sorceror_filthy",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_4",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_death_shared_5",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_4",
+                "wh3_dlc25_skill_node_chs_chaos_sorcerer_nurgle_mnur_shared_5",
+            }
+        },
+    },
     wh3_dlc25_nur_epidemius = {
         {
             node_key = "wh3_main_skill_node_set_nur_kugath_self_0",
@@ -2213,6 +3345,322 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc25_nur_kayzk_the_befouled = {
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_unique_0",
+            skill_key = "wh3_dlc25_nur_kayzk_rot_beast",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_unique_1",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_battle_05",
+            skill_key = "wh3_dlc25_nur_kayzk_battle_5",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_unique_3",
+            skill_key = "wh3_dlc25_skill_nur_kayzk_unique_corruption_attrition",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_personal_0",
+            skill_key = "wh3_dlc25_nur_kayzk_personal_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_personal_01",
+            skill_key = "wh3_dlc25_nur_kayzk_personal_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_personal_02",
+            skill_key = "wh3_dlc25_nur_kayzk_personal_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_personal_03",
+            skill_key = "wh3_dlc25_nur_kayzk_personal_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_personal_04",
+            skill_key = "wh3_dlc25_nur_kayzk_personal_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_personal_05",
+            skill_key = "wh3_dlc25_nur_kayzk_personal_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_03",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_06",
+            skill_key = "wh2_main_skill_hef_alastar_unique_heroic_killing_blow",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_09",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_battle_0",
+            skill_key = "wh3_dlc25_nur_kayzk_battle_0",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_battle_01",
+            skill_key = "wh3_dlc25_nur_kayzk_battle_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_battle_02",
+            skill_key = "wh3_dlc25_nur_kayzk_battle_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_battle_03",
+            skill_key = "wh3_dlc25_nur_kayzk_battle_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_nur_kayzk_the_befouled_battle_04",
+            skill_key = "wh3_dlc25_nur_kayzk_battle_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -2639,6 +4087,214 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_nur_cultist = {
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_mount_chaos_steed",
+            skill_key = "wh3_main_skill_nur_cultist_mount_chaos_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_mount_warshrine",
+            skill_key = "wh3_dlc20_skill_mount_nur_cultist_warshrine",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_unique_0",
+            skill_key = "wh3_main_skill_nur_cultist_unique_gate_of_nurgle",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_unique_1",
+            skill_key = "wh3_main_skill_nur_cultist_unique_greater_gate_of_nurgle",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_unique_2",
+            skill_key = "wh3_main_skill_nur_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_unique_3",
+            skill_key = "wh3_main_skill_nur_generic_hates_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_0",
+            skill_key = "wh_main_skill_chs_lord_self_eye_of_the_gods",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_1_1",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_1_2",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_1_3",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_1_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_3_1",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_3_2",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_3_3",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_3_4",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_cultist_combat_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
             }
         },
     },
@@ -5132,6 +6788,782 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh3_main_skill_nur_lord_army_virulent_contagion",
             category_key = "battle",
             indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_nur_plagueridden_death = {
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_mount_nurgling_palanquin",
+            skill_key = "wh3_main_skill_nur_plagueridden_death_mount_nurgling_palanquin",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_mount_rot_fly",
+            skill_key = "wh3_main_skill_nur_plagueridden_death_mount_rot_fly",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_unique_3",
+            skill_key = "wh3_main_skill_nur_generic_hates_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_unique_4",
+            skill_key = "wh3_main_skill_nur_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_unique_0",
+            skill_key = "wh3_main_skill_nur_locus_of_contagion",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_1",
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_2",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_1",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_2",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_2",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_unique_1",
+            skill_key = "wh3_main_skill_nur_locus_of_fecundity",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_2",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_2",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_2",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_unique_2",
+            skill_key = "wh3_main_skill_nur_locus_of_virulence",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_1",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_0",
+            skill_key = "wh_main_skill_chs_lord_self_eye_of_the_gods",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_1_1",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_1_2",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_1_3",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_1_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_3_1",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_3_2",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_3_3",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_3_4",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_combat_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_0",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_death_02_aspect_of_the_dreadknight",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_death_04_soulblight",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_death_05_doom_and_darkness",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_death_10_the_purple_sun_of_xereus",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_death_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_death_dummy_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_nur_plagueridden_nurgle = {
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_mount_nurgling_palanquin",
+            skill_key = "wh3_main_skill_nur_plagueridden_nurgle_mount_nurgling_palanquin",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_mount_rot_fly",
+            skill_key = "wh3_main_skill_nur_plagueridden_nurgle_mount_rot_fly",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_unique_3",
+            skill_key = "wh3_main_skill_nur_generic_hates_tzeentch",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_unique_4",
+            skill_key = "wh3_main_skill_nur_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_unique_0",
+            skill_key = "wh3_main_skill_nur_locus_of_contagion",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_1",
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_2",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_1",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_2",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_2",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_unique_1",
+            skill_key = "wh3_main_skill_nur_locus_of_fecundity",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_2",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_2",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_2",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_unique_2",
+            skill_key = "wh3_main_skill_nur_locus_of_virulence",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_1",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_0",
+                "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_death_unique_1",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_0",
+                "wh3_main_skill_node_nur_plagueridden_nurgle_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_0",
+            skill_key = "wh_main_skill_chs_lord_self_eye_of_the_gods",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_1_1",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_1_2",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_1_3",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_1_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_3_1",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_3_2",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_3_3",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_3_4",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_combat_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_0",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_01_miasma_of_pestilence",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_1_1",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_05_children_of_nurgle",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_1_2",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_02_stream_of_corruption",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_1_3",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_03_curse_of_the_leper",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_1_4",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_04_rancid_visitations",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_3_1",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_06_fleshy_abundance",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_3_2",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_07_blight_boil",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_nur_plagueridden_nurgle_magic_dummy",
+            skill_key = "wh3_main_skill_nur_magic_nurgle_dummy_miasma_of_pestilence",
+            category_key = "character",
+            indent = 3,
             tier = 11,
             max_level = 1,
             is_mount_skill = false,

@@ -4,6 +4,308 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh_dlc05_wef_argwylon"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh2_dlc16_wef_ariel = {
+        {
+            node_key = "wh2_dlc16_wef_ariel_misc_0",
+            skill_key = "wh2_dlc16_wef_ariel_campaign_0",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_misc_1",
+            skill_key = "wh2_dlc16_wef_ariel_campaign_1",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_misc_2",
+            skill_key = "wh2_dlc16_wef_ariel_campaign_2",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_battle_0",
+            skill_key = "wh2_dlc16_wef_ariel_battle_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_battle_1",
+            skill_key = "wh2_dlc16_wef_ariel_battle_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_battle_2",
+            skill_key = "wh2_dlc16_wef_ariel_battle_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_battle_3",
+            skill_key = "wh2_dlc16_wef_ariel_battle_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_campaign_0",
+            skill_key = "wh2_dlc16_wef_ariel_abilities_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5, 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_campaign_1",
+            skill_key = "wh2_dlc16_wef_ariel_abilities_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8, 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_campaign_2",
+            skill_key = "wh2_dlc16_wef_ariel_abilities_3",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_0",
+            skill_key = "wh2_main_skill_all_magic_high_02_apotheosis",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_1_1",
+            skill_key = "wh2_main_skill_magic_dark_word_of_pain_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_1_2",
+            skill_key = "wh2_main_skill_magic_life_wizard_shield_of_thorns_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_1_3",
+            skill_key = "wh2_main_skill_all_magic_high_05_tempest_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_1_4",
+            skill_key = "wh2_main_skill_magic_dark_soul_stealer_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_1_5",
+            skill_key = "wh2_main_skill_magic_life_wizard_the_dwellers_below_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_3_1",
+            skill_key = "wh_dlc05_skill_magic_life_life_bloom",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_3_2",
+            skill_key = "wh2_dlc16_skill_wef_spellweaver_lore_attribute_high",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_3_3",
+            skill_key = "wh2_dlc16_skill_wef_spellweaver_lore_attribute_dark",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_4",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc16_skill_node_set_wef_ariel_magic_dummy",
+            skill_key = "wh2_dlc16_skill_magic_ariel_dummy",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_army_1",
+            skill_key = "wh2_dlc16_wef_ariel_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_army_2",
+            skill_key = "wh2_dlc16_wef_ariel_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc16_wef_ariel_army_3",
+            skill_key = "wh2_dlc16_wef_ariel_army_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh2_dlc16_wef_drycha = {
         {
             node_key = "wh2_dlc16_drycha_misc_1",
@@ -5858,6 +6160,340 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh2_twa02_wef_glade_captain = {
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_mount_1",
+            skill_key = "wh2_twa02_skill_wef_glade_captain_mount_elven_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_mount_2",
+            skill_key = "wh2_twa02_skill_wef_glade_captain_mount_great_stag",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_mount_3",
+            skill_key = "wh2_twa02_skill_wef_glade_captain_mount_great_eagle",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_unique_1",
+            skill_key = "wh2_twa02_skill_wef_glade_captain_unique_1",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_unique_2",
+            skill_key = "wh2_twa02_skill_wef_glade_captain_unique_2",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_generic_01",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_generic_02",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_ranged_0",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_ranged_1_1",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_extra_reload",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_ranged_1_2",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_missile_damage",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_ranged_1_3",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_ammunition",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_ranged_1_4",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_battle_speed",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_melee_0",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_melee_1_1",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_hitpoints",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_melee_1_2",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_melee_1_3",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_melee_attack_defence",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_melee_1_4",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_damage",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_combat_melee_2",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_glade_captain_army_1",
+            skill_key = "wh2_twa02_skill_wef_glade_captain_army_1",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh2_twa02_skill_node_glade_captain_army_2",
+                "wh2_twa02_skill_node_glade_captain_army_3",
+                "wh2_twa02_skill_node_glade_captain_army_4",
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_glade_captain_army_2",
+            skill_key = "wh2_twa02_skill_wef_glade_captain_army_2",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh2_twa02_skill_node_glade_captain_army_1",
+                "wh2_twa02_skill_node_glade_captain_army_3",
+                "wh2_twa02_skill_node_glade_captain_army_4",
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_glade_captain_army_3",
+            skill_key = "wh2_twa02_skill_wef_glade_captain_army_3",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh2_twa02_skill_node_glade_captain_army_1",
+                "wh2_twa02_skill_node_glade_captain_army_2",
+                "wh2_twa02_skill_node_glade_captain_army_4",
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_glade_captain_army_4",
+            skill_key = "wh2_twa02_skill_wef_glade_captain_army_4",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh2_twa02_skill_node_glade_captain_army_1",
+                "wh2_twa02_skill_node_glade_captain_army_2",
+                "wh2_twa02_skill_node_glade_captain_army_3",
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_ranged_battle_01",
+            skill_key = "wh2_dlc16_skill_wef_ability_dance_of_loec",
+            category_key = "character",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_01",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_02",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_03",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_04",
+            }
+        },
+        {
+            node_key = "wh2_twa02_skill_node_wef_glade_captain_ranged_battle_02",
+            skill_key = "wh2_dlc16_skill_wef_ability_possessed_by_the_trickster_god_replace",
+            category_key = "character",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh_dlc05_wef_ancient_treeman = {
         {
             node_key = "wh_dlc05_skill_node_wef_ancient_treeman_unique_01",
@@ -6510,6 +7146,270 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc05_wef_branchwraith = {
+        {
+            node_key = "wh_dlc03_skill_node_branchwraith_unique_01",
+            skill_key = "wh_dlc05_skill_wef_branchwraith_unique_damage_reduction_bonus_in_forest",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc03_skill_node_branchwraith_unique_02",
+            skill_key = "wh_dlc05_skill_wef_branchwraith_unique_leadership_bonus_in_forest",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_life_magic_01",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma_branchwraith",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_life_magic_02",
+            skill_key = "wh_dlc05_skill_magic_shadow_penumbral_pendulum_branchwraith",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_life_magic_03",
+            skill_key = "wh_dlc05_skill_magic_shadow_the_withering_branchwraith",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_life_magic_04",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_awakening_of_the_wood_branchwraith",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_life_magic_05",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_earth_blood_branchwraith",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_life_magic_06",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_shield_of_thorns_branchwraith",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_life_magic_07",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_life_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_life_magic_dummy",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma_branchwraith_dummy",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_self_melee_01",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_self_melee_02",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_hitpoints",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_self_melee_03",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_self_melee_04",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_melee_attack_defence",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_self_melee_05",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_damage",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_self_melee_06",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_melee_battle_01",
+            skill_key = "wh_dlc05_skill_wef_army_buff_melee_melee_ability_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_03",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_04",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_05",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_06",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_05",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_06",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_03",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_04",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_05",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_03",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_04",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_06",
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_branchwraith_melee_battle_02",
+            skill_key = "wh_dlc05_skill_wef_army_buff_branchwraith_melee_melee_ability_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
             locked_node_keys = {
             }
         },
@@ -8798,6 +9698,840 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc05_wef_spellsinger_beasts = {
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_unique_01",
+            skill_key = "wh_dlc05_skill_wef_spellsinger_beasts_unique_elven_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_unique_02",
+            skill_key = "wh_dlc05_skill_wef_spellsinger_beasts_unique_unicorn",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_unique_03",
+            skill_key = "wh_dlc05_skill_wef_spellsinger_beasts_unique_great_eagle",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_unique_04",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_unique_05",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_01",
+            skill_key = "wh_dlc03_skill_magic_beasts_wyssans_wildform",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_02",
+            skill_key = "wh_dlc03_skill_magic_beasts_wild_heart",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_03",
+            skill_key = "wh_dlc03_skill_magic_beasts_flock_of_doom",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_04",
+            skill_key = "wh_dlc03_skill_magic_beasts_panns_impenetrable_pelt",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_05",
+            skill_key = "wh_dlc03_skill_magic_beasts_the_amber_spear",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_09",
+            skill_key = "wh_dlc03_skill_magic_beasts_the_curse_of_anraheir",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_10",
+            skill_key = "wh2_dlc15_skill_magic_beasts_transformation_of_kadon",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_beasts_magic_dummy",
+            skill_key = "wh_dlc03_skill_magic_beasts_dummy_wyssans_wildform",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc05_wef_spellsinger_life = {
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_unique_01",
+            skill_key = "wh_dlc05_skill_wef_spellsinger_life_unique_elven_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_unique_02",
+            skill_key = "wh_dlc05_skill_wef_spellsinger_life_unique_unicorn",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_unique_03",
+            skill_key = "wh_dlc05_skill_wef_spellsinger_life_unique_great_eagle",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_unique_04",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_unique_05",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_01",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_awakening_of_the_wood",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_02",
+            skill_key = "wh_dlc05_skill_magic_life_life_bloom",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_03",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_earth_blood",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_04",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_shield_of_thorns",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_05",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_flesh_to_stone",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_09",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_regrowth",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_10",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_the_dwellers_below",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_life_magic1_dummy",
+            skill_key = "wh_dlc05_skill_magic_life_wizard_awakening_of_the_wood_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc05_wef_spellsinger_shadow = {
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_unique_01",
+            skill_key = "wh_dlc05_skill_wef_spellsinger_shadow_unique_elven_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_unique_02",
+            skill_key = "wh_dlc05_skill_wef_spellsinger_shadow_unique_unicorn",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_unique_03",
+            skill_key = "wh_dlc05_skill_wef_spellsinger_shadow_unique_great_eagle",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_unique_04",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_unique_05",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_01",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_02",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_03",
+            skill_key = "wh_dlc05_skill_magic_shadow_enfeebling_foe",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_04",
+            skill_key = "wh_dlc05_skill_magic_shadow_the_withering",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_05",
+            skill_key = "wh_dlc05_skill_magic_shadow_penumbral_pendulum",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_09",
+            skill_key = "wh_dlc05_skill_magic_shadow_pit_of_shades",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_10",
+            skill_key = "wh_dlc05_skill_magic_shadow_okkams_mindrazor",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_spellsinger_shadow_magic_dummy",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc05_wef_waystalker = {
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_unique_01",
+            skill_key = "wh_dlc05_skill_wef_waystalked_unique_reload_when_in_forest",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_generic_01",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_loec",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_generic_02",
+            skill_key = "wh2_main_skill_hef_generic_warding_of_hoeth",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_ranged_01",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_ranged_02",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_extra_reload",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_ranged_03",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_missile_damage",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_ranged_04",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_ammunition",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_ranged_05",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_battle_speed",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_ranged_06",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_melee_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_melee_06",
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_melee_01",
+            skill_key = "wh2_main_skill_hef_combat_graceful_strikes",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_melee_02",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_hitpoints",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_melee_03",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_melee_attack_defence",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_self_melee_04",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_ranged_battle_01",
+            skill_key = "wh_dlc05_skill_wef_army_buff_ranged_ranged_ability_1",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_01",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_02",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_05",
+                "wh2_dlc11_skill_node_wef_ancient_treeman_ability_06",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_05",
+                "wh2_dlc11_skill_node_wef_glade_lord_ability_06",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_01",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_02",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_05",
+                "wh2_dlc11_skill_node_wef_glade_lord_fem_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_beasts_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_dark_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_high_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_life_ability_06",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_01",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_02",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_05",
+                "wh2_dlc16_skill_node_set_wef_spellweaver_shadows_ability_06",
+            }
+        },
+        {
+            node_key = "wh_dlc05_skill_node_wef_waystalker_ranged_battle_02",
+            skill_key = "wh_dlc05_skill_wef_army_buff_waystalker_unique_ranged_ranged_ability_2",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
             locked_node_keys = {
             }
         },

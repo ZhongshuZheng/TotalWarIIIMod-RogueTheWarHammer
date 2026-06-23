@@ -4,6 +4,2271 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh3_dlc23_chd_astragoth"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh3_dlc23_chd_bull_centaur_taurruk = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_generic_1",
+            skill_key = "wh3_dlc23_skill_hero_self_bull_gore",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_generic_4",
+            skill_key = "wh3_dlc23_skill_chd_bull_centaur_taurruk_frenzy",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_generic_5",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_terror",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_generic_6",
+            skill_key = "wh3_dlc23_skill_chd_bull_centaur_taurruk_living_metal_flesh",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_generic_2",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_generic_3",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_1",
+            skill_key = "wh3_dlc23_skill_chd_hero_temple_guardian",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_3",
+                "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_5",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_2",
+            skill_key = "wh3_dlc23_skill_chd_bull_centaur_taurruk_stalwart_defender",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_3",
+            skill_key = "wh3_dlc23_skill_chd_bull_centaur_taurruk_effective_agent",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_1",
+                "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_5",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_4",
+            skill_key = "wh3_dlc23_skill_chd_bull_centaur_taurruk_trusted_agent",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_5",
+            skill_key = "wh3_dlc23_skill_all_all_murderous_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_1",
+                "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_unique_6",
+            skill_key = "wh3_dlc23_skill_chd_bull_centaur_taurruk_seeing_red",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_0",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_1_1",
+            skill_key = "wh_main_skill_all_all_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_1_2",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_1_3",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_battle_speed",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_1_4",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_3_1",
+            skill_key = "wh_main_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_3_2",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_3_3",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_3_4",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_combat_4",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc23_chd_daemonsmith_sorcerer_death = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_mount_great_taurus",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_death_mount_great_taurus",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_mount_lammasu",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_death_mount_lammasu",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_mount_bale_taurus",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_death_mount_bale_taurus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 18 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_4",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerers_curse",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 16 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_5",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_5",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_careful_casting_death",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 16 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_1",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_2",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_7",
+            skill_key = "wh3_dlc23_skill_chd_infernal_engineer",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_3",
+            skill_key = "wh3_dlc23_skill_all_self_reforge",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_8",
+            skill_key = "wh3_dlc23_skill_chd_all_terrain_vehicle",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_0",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_death_02_aspect_of_the_dreadknight",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_death_04_soulblight",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_death_05_doom_and_darkness",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_death_10_the_purple_sun_of_xereus",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_death_dummy_spirit_leech",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_combat_0",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_combat_1_1",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_always_ready",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_combat_1_2",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_bandolier",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_combat_1_3",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_battle_speed",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_combat_1_4",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_piercing_shots",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc23_chd_daemonsmith_sorcerer_fire = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_mount_great_taurus",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_fire_mount_great_taurus",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_mount_lammasu",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_fire_mount_lammasu",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_mount_bale_taurus",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_fire_mount_bale_taurus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 18 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_4",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerers_curse",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 16 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_5",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_5",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_careful_casting_fire",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 16 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_1",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_2",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_7",
+            skill_key = "wh3_dlc23_skill_chd_infernal_engineer",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_3",
+            skill_key = "wh3_dlc23_skill_all_self_reforge",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_8",
+            skill_key = "wh3_dlc23_skill_chd_all_terrain_vehicle",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_0",
+            skill_key = "wh_main_skill_all_magic_fire_01_fireball",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_fire_02_cascading_fire-cloak",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_fire_04_kindleflame",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_fire_03_flaming_sword_of_rhuin",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_fire_05_the_burning_head",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_fire_09_piercing_bolts_of_burning",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_fire_10_flame_storm",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_fire_dummy_fireball",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_combat_0",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_combat_1_1",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_always_ready",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_combat_1_2",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_bandolier",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_combat_1_3",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_battle_speed",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_combat_1_4",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_piercing_shots",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc23_chd_daemonsmith_sorcerer_hashut = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_mount_great_taurus",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_hashut_mount_great_taurus",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_mount_lammasu",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_hashut_mount_lammasu",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_mount_bale_taurus",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_hashut_mount_bale_taurus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 18 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_4",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerers_curse",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 16 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_5",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_5",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_careful_casting_hashut",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 16 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_1",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_2",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_7",
+            skill_key = "wh3_dlc23_skill_chd_infernal_engineer",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_3",
+            skill_key = "wh3_dlc23_skill_all_self_reforge",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_8",
+            skill_key = "wh3_dlc23_skill_chd_all_terrain_vehicle",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_0",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_01_burning_wrath",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_1_2",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_03_killing_fire",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_1_1",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_02_dark_subjugation",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_1_3",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_04_ash_storm",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_1_4",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_05_curse_of_hashut",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_3_3",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_06_hell_hammer",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_3_4",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_07_flames_of_azgorh",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_magic_dummy",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_dummy_burning_wrath",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_combat_0",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_combat_1_1",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_always_ready",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_combat_1_2",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_bandolier",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_combat_1_3",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_battle_speed",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_combat_1_4",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_piercing_shots",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc23_chd_daemonsmith_sorcerer_metal = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_mount_great_taurus",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_metal_mount_great_taurus",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_mount_lammasu",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_metal_mount_lammasu",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_mount_bale_taurus",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerer_metal_mount_bale_taurus",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 18 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_4",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_sorcerers_curse",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 16 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_death_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_fire_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_hashut_generic_5",
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_5",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_5",
+            skill_key = "wh3_dlc23_skill_chd_daemonsmith_careful_casting_metal",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 16 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_1",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_2",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_7",
+            skill_key = "wh3_dlc23_skill_chd_infernal_engineer",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_3",
+            skill_key = "wh3_dlc23_skill_all_self_reforge",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_generic_8",
+            skill_key = "wh3_dlc23_skill_chd_all_terrain_vehicle",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_0",
+            skill_key = "wh_main_skill_all_magic_metal_01_searing_doom",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_metal_02_plague_of_rust",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_metal_03_metalshifting",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_metal_04_glittering_robe",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_metal_05_gehennas_golden_hounds",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_metal_09_transmutation_of_lead",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_metal_10_final_transmutation",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_metal_dummy_searing_doom",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_combat_0",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_combat_1_1",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_always_ready",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_combat_1_2",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_bandolier",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_combat_1_3",
+            skill_key = "wh_dlc05_skill_wef_general_personal_buff_battle_speed",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_combat_1_4",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_piercing_shots",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_daemonsmith_sorcerer_metal_combat_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc23_chd_gorduz_backstabber = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_mount_wolf",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_mount_wolf",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_general_1",
+            skill_key = "wh3_dlc23_skill_chd_they_needs_stabbin",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_general_2",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_frenzy",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_general_3",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_general_4",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_general_5",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_fated",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_general_6",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_lucky",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_general_7",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_sneaky",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_hobgoblins_1",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_the_stabbiest",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_hobgoblins_2",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_stab_em",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_hobgoblins_3",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_shoot_em",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_hobgoblins_4",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_dodge_em",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_hobgoblins_5",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_get_em",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_hobgoblins_6",
+            skill_key = "wh3_dlc23_skill_chd_gorduz_backstabber_get_tha_gitz",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_0",
+            skill_key = "wh_main_skill_all_spy_self_bloody_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_1_1",
+            skill_key = "wh_main_skill_all_spy_self_gutter_fighter_2",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_1_2",
+            skill_key = "wh_main_skill_all_spy_self_elusive",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_1_3",
+            skill_key = "wh_main_skill_all_spy_self_precise_2",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_1_4",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_2",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_3_1",
+            skill_key = "wh_main_skill_all_spy_self_opportunist",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_3_2",
+            skill_key = "wh_main_skill_all_spy_self_counter-striker_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_3_3",
+            skill_key = "wh_main_skill_all_spy_self_survivalist_2",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_3_4",
+            skill_key = "wh_main_skill_all_spy_self_cornered_rat",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_gorduz_backstabber_combat_4",
+            skill_key = "wh_main_skill_all_spy_self_slippery",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc23_chd_infernal_castellan = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_general_3",
+            skill_key = "wh3_dlc23_skill_chd_infernal_castellan_inspiring_inferno",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_general_5",
+            skill_key = "wh3_dlc23_skill_chd_infernal_castellan_deathmask",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_general_6",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_general_7",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_0",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_1_1",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_1_2",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_bandolier",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_1_3",
+            skill_key = "wh_main_skill_all_all_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_1_4",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_piercing_shots_no_exp",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_2",
+            skill_key = "wh_main_skill_dwf_engineer_self_extra_powder",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_3_1",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_3_2",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_gunsight",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_3_3",
+            skill_key = "wh3_dlc23_skill_chd_hero_self_always_ready",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_3_4",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_combat_4",
+            skill_key = "wh3_dlc23_skill_all_all_self_restock",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_short_range_1",
+            skill_key = "wh3_dlc23_skill_chd_infernal_castellan_infernal_slugs",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_infernal_castellan_long_range_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_short_range_2",
+            skill_key = "wh3_dlc23_skill_chd_self_dig_in_short_range_upgraded",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_short_range_3",
+            skill_key = "wh3_dlc23_skill_chd_infernal_castellan_blast_protection",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_short_range_4",
+            skill_key = "wh_pro01_skill_grombrindal_flash_bang",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_short_range_5",
+            skill_key = "wh3_dlc23_skill_chd_infernal_castellan_up_close_and_personal",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_long_range_1",
+            skill_key = "wh3_dlc23_skill_chd_infernal_castellan_hellforged_bolts",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc23_skill_node_chd_infernal_castellan_short_range_1",
+                "wh3_dlc25_skill_node_nur_esar_doombolt_short_range_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_long_range_2",
+            skill_key = "wh3_dlc23_skill_chd_self_dig_in_long_range_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_long_range_3",
+            skill_key = "wh3_dlc23_skill_chd_infernal_castellan_skirmish_tactics",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_long_range_4",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_cinderblast_shell",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_infernal_castellan_long_range_5",
+            skill_key = "wh3_dlc23_skill_chd_infernal_castellan_molten_cores",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc23_chd_overseer = {
         {
             node_key = "wh3_dlc23_skill_node_chd_overseer_mount_great_taurus",

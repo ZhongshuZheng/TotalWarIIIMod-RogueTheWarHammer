@@ -16,6 +16,8 @@ function battle_generator.new(context)
     local enemy_embedded_agent_subtypes_by_faction = context.enemy_embedded_agent_subtypes_by_faction or {}
     local default_enemy_faction_key = context.default_enemy_faction_key
     local enemy_unit_count_config = context.enemy_unit_count_config or {}
+    local enemy_hero_pools_by_faction = context.enemy_hero_pools_by_faction or {}
+    local enemy_growth_config = context.enemy_growth_config or {}
 
     function self.get_unit_pool_for_faction(content_faction_key)
         local faction_key = content_faction_key or ""
@@ -220,6 +222,75 @@ function battle_generator.new(context)
         }
     end
 
+    function self.get_hero_num_for_cycle(current_cycle)
+        local normalized_cycle = math.max(1, math.floor(tonumber(current_cycle) or 1))
+        for _, entry in ipairs(enemy_growth_config) do
+            local min_c = tonumber(entry.min_cycle) or 1
+            local max_c = entry.max_cycle and tonumber(entry.max_cycle) or math.huge
+            if normalized_cycle >= min_c and normalized_cycle <= max_c then
+                return math.max(0, math.floor(tonumber(entry.hero_num) or 0))
+            end
+        end
+        return 0
+    end
+
+    function self.pick_heroes_for_faction(content_faction_key, hero_num)
+        if not hero_num or hero_num <= 0 then
+            return {}, 0
+        end
+        local pool = enemy_hero_pools_by_faction[content_faction_key]
+        if not pool or #pool == 0 then
+            log(
+                "pick_heroes_for_faction: no hero pool found for content_faction_key=["
+                    .. tostring(content_faction_key)
+                    .. "]. Returning empty hero list."
+            )
+            return {}, 0
+        end
+
+        local weighted_pool = {}
+        for _, hero_entry in ipairs(pool) do
+            for _ = 1, (tonumber(hero_entry.weight) or 1) do
+                weighted_pool[#weighted_pool + 1] = hero_entry
+            end
+        end
+
+        local selected_heroes = {}
+        local total_hero_value = 0
+        for _ = 1, hero_num do
+            local picked = weighted_pool[cm:random_number(#weighted_pool, 1)]
+            if picked then
+                selected_heroes[#selected_heroes + 1] = {
+                    agent_type = picked.agent_type,
+                    agent_subtype = picked.agent_subtype,
+                    unit_key = picked.unit_key,
+                    unit_value = tonumber(picked.unit_value) or 0,
+                }
+                total_hero_value = total_hero_value + (tonumber(picked.unit_value) or 0)
+                log(
+                    "pick_heroes_for_faction picked hero. agent_subtype=["
+                        .. tostring(picked.agent_subtype)
+                        .. "], unit_value=["
+                        .. tostring(picked.unit_value)
+                        .. "]."
+                )
+            end
+        end
+
+        log(
+            "pick_heroes_for_faction completed. content_faction_key=["
+                .. tostring(content_faction_key)
+                .. "], hero_num=["
+                .. tostring(hero_num)
+                .. "], selected=["
+                .. tostring(#selected_heroes)
+                .. "], total_hero_value=["
+                .. tostring(total_hero_value)
+                .. "]."
+        )
+        return selected_heroes, total_hero_value
+    end
+
     function self.build_budget_enemy_force_definition(target_value_budget, battle_tier, allow_embedded_agent, content_faction_key, generation_context)
         local build_context = generation_context or {}
         local unit_count_targets = self.get_enemy_unit_count_targets(build_context.current_cycle)
@@ -259,25 +330,44 @@ function battle_generator.new(context)
             0,
             math.floor(tonumber(selected_general_option and selected_general_option.unit_value) or 0)
         )
-        local unit_only_target_value_budget = math.max(0, (tonumber(target_value_budget) or 0) - enemy_general_unit_value)
+
+        -- Pick heroes based on the current cycle's hero_num setting.
+        local current_cycle_for_heroes = (build_context and build_context.current_cycle) or 1
+        local hero_num = self.get_hero_num_for_cycle(current_cycle_for_heroes)
+        local slots_for_troops = math.max(0, unit_count_targets.hard_cap - 1 - hero_num)
+        local effective_hard_cap = unit_count_targets.hard_cap - 1 - hero_num
+
+        local selected_heroes, total_hero_value = self.pick_heroes_for_faction(
+            resolved_content_faction_key,
+            hero_num
+        )
+
+        local unit_only_target_value_budget = math.max(
+            0,
+            (tonumber(target_value_budget) or 0) - enemy_general_unit_value - total_hero_value
+        )
         log(
-            "build_budget_enemy_force_definition resolved enemy general budget deduction. total_budget=["
+            "build_budget_enemy_force_definition resolved enemy general and hero budget deductions. total_budget=["
                 .. tostring(target_value_budget)
                 .. "], selected_general_agent_subtype=["
                 .. tostring(selected_general_option and selected_general_option.agent_subtype or "")
-                .. "], selected_general_unit_key=["
-                .. tostring(selected_general_option and selected_general_option.unit_key or "")
                 .. "], enemy_general_unit_value=["
                 .. tostring(enemy_general_unit_value)
+                .. "], hero_num=["
+                .. tostring(hero_num)
+                .. "], total_hero_value=["
+                .. tostring(total_hero_value)
                 .. "], unit_only_target_value_budget=["
                 .. tostring(unit_only_target_value_budget)
+                .. "], slots_for_troops=["
+                .. tostring(slots_for_troops)
                 .. "]."
         )
 
         local chosen_units = {}
         local chosen_unit_counts = {}
         local total_value = 0
-        local max_units = unit_count_targets.hard_cap
+        local max_units = math.max(0, effective_hard_cap)
         local attempts = 0
         local preferred_budget_floor = math.floor(unit_only_target_value_budget * 0.9)
         local fallback_budget_floor = math.floor(unit_only_target_value_budget * 0.85)
@@ -502,10 +592,14 @@ function battle_generator.new(context)
                 .. tostring(total_value)
                 .. "], enemy_general_unit_value=["
                 .. tostring(enemy_general_unit_value)
+                .. "], total_hero_value=["
+                .. tostring(total_hero_value)
                 .. "], combined_total_value=["
-                .. tostring(total_value + enemy_general_unit_value)
+                .. tostring(total_value + enemy_general_unit_value + total_hero_value)
                 .. "], unit_count=["
                 .. tostring(#chosen_units)
+                .. "], hero_count=["
+                .. tostring(#selected_heroes)
                 .. "], min_units=["
                 .. tostring(unit_count_targets.min_units)
                 .. "], target_units=["
@@ -520,23 +614,36 @@ function battle_generator.new(context)
             lord_subtype = selected_general_option and selected_general_option.agent_subtype or enemy_general_subtype,
             lord_unit_key = selected_general_option and selected_general_option.unit_key or "",
             unit_list = chosen_units,
+            hero_list = selected_heroes,
             embedded_agent_subtype = self.pick_enemy_agent_subtype_for_tier(
                 battle_tier,
                 allow_embedded_agent,
                 resolved_content_faction_key
             ),
             enemy_general_unit_value = enemy_general_unit_value,
+            total_hero_value = total_hero_value,
             generated_total_value = total_value,
-            budget_delta = (total_value + enemy_general_unit_value) - target_value_budget,
+            budget_delta = (total_value + enemy_general_unit_value + total_hero_value) - target_value_budget,
             content_faction_key = resolved_general_content_faction_key or resolved_content_faction_key,
             used_pool_fallback = used_pool_fallback and "true" or "false",
             generated_unit_count = #chosen_units,
+            generated_hero_count = #selected_heroes,
             min_unit_target = unit_count_targets.min_units,
             desired_unit_target = unit_count_targets.target_units
         }
     end
 
     function self.create_battle_payload_from_definition(battle_definition, target_value_budget, battle_tier, spawn_retry_index, enemy_faction_key)
+        -- Serialize the hero list as a pipe-delimited string: "agent_type:agent_subtype:unit_key"
+        local hero_list_parts = {}
+        local hero_list_raw = battle_definition.hero_list or {}
+        for _, hero in ipairs(hero_list_raw) do
+            hero_list_parts[#hero_list_parts + 1] = tostring(hero.agent_type)
+                .. ":" .. tostring(hero.agent_subtype)
+                .. ":" .. tostring(hero.unit_key)
+        end
+        local serialized_hero_list = table.concat(hero_list_parts, "|")
+
         local payload = {
             battle_template_key = battle_definition.template_type,
             battle_force_source = battle_definition.battle_force_source,
@@ -549,10 +656,13 @@ function battle_generator.new(context)
             enemy_general_unit_key = battle_definition.lord_unit_key or "",
             enemy_general_unit_value = battle_definition.enemy_general_unit_value or 0,
             enemy_unit_list = table.concat(battle_definition.unit_list, ","),
+            enemy_hero_list = serialized_hero_list,
             enemy_agent_subtype = battle_definition.embedded_agent_subtype,
             generated_total_value = battle_definition.generated_total_value,
+            total_hero_value = battle_definition.total_hero_value or 0,
             budget_delta = battle_definition.budget_delta,
             generated_unit_count = battle_definition.generated_unit_count or 0,
+            generated_hero_count = battle_definition.generated_hero_count or 0,
             min_unit_target = battle_definition.min_unit_target or 0,
             desired_unit_target = battle_definition.desired_unit_target or 0,
             spawn_retry_index = spawn_retry_index or 0,

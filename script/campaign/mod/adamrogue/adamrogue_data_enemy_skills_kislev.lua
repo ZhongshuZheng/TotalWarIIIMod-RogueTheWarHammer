@@ -4,6 +4,406 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh3_main_ksl_the_ice_court"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh3_dlc23_neu_ulrika = {
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_unique_01",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_3",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_3",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_missile_resist",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_spell_resist",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_spell_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_0",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_1",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_2",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_3",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_4",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_2",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_ability_lesser_hunger_dummy",
+            skill_key = "wh3_dlc23_ability_lesser_hunger_dummy",
+            category_key = "character",
+            indent = 1,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_battle_0",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_0",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_1",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_1",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 1, 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_2",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 1, 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_3",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_3",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 1, 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_4",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_4",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 1, 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_1",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_1",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_2",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_3",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_3",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_4",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_4",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_0",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_1_1",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_1_2",
+            skill_key = "wh_dlc05_skill_magic_shadow_enfeebling_foe",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_1_3",
+            skill_key = "wh_dlc05_skill_magic_shadow_the_withering",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_1_4",
+            skill_key = "wh_dlc05_skill_magic_shadow_penumbral_pendulum",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_3_1",
+            skill_key = "wh_dlc05_skill_magic_shadow_pit_of_shades",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_3_2",
+            skill_key = "wh_dlc05_skill_magic_shadow_okkams_mindrazor",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc24_ksl_druzhina = {
         {
             node_key = "wh3_dlc24_skill_node_ksl_druzhina_mount_warhorse",
@@ -444,6 +844,1022 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc24_ksl_hag_witch_beasts = {
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_1",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_1",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_2",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_2",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_4",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_4",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_0",
+            skill_key = "wh_dlc03_skill_magic_beasts_wyssans_wildform",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_1_1",
+            skill_key = "wh_dlc03_skill_magic_beasts_wild_heart",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_1_2",
+            skill_key = "wh_dlc03_skill_magic_beasts_flock_of_doom",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_1_3",
+            skill_key = "wh_dlc03_skill_magic_beasts_panns_impenetrable_pelt",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_1_4",
+            skill_key = "wh_dlc03_skill_magic_beasts_the_amber_spear",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_3_1",
+            skill_key = "wh_dlc03_skill_magic_beasts_the_curse_of_anraheir",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_3_2",
+            skill_key = "wh_dlc03_skill_magic_beasts_transformation_of_kadon",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_beasts_magic_dummy",
+            skill_key = "wh_dlc03_skill_magic_beasts_dummy_wyssans_wildform",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc24_ksl_hag_witch_death = {
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_1",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_1",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_2",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_2",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_4",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_4",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_0",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_1_4",
+            skill_key = "wh_main_skill_all_magic_death_05_doom_and_darkness",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_1_1",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_death_02_aspect_of_the_dreadknight",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_1_3",
+            skill_key = "wh_main_skill_all_magic_death_04_soulblight",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_death_10_the_purple_sun_of_xereus",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_death_magic_dummy",
+            skill_key = "wh_main_skill_all_magic_death_dummy_spirit_leech",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc24_ksl_hag_witch_hag = {
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_1",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_1",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_2",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_2",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_4",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_4",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_0",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_01_witchbrew",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_1_1",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_07_fate_of_interlopers",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_1_2",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_02_the_forbidden_fens",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_1_3",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_03_curse_of_the_ancient_witch",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_1_4",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_04_vengeance_of_spirits",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_3_1",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_05_cursed_cauldron",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_3_2",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_06_malediction_of_madness",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_hag_magic_dummy",
+            skill_key = "wh3_dlc24_skill_ksl_magic_hag_dummy_cursed_cauldron",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc24_ksl_hag_witch_shadows = {
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_1",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_1",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_2",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_2",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_4",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_top_4",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            skill_key = "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_1",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_2",
+                "wh3_dlc24_skill_node_set_ksl_hag_witch_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_0",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_1_1",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_1_2",
+            skill_key = "wh_dlc05_skill_magic_shadow_enfeebling_foe",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_1_3",
+            skill_key = "wh_dlc05_skill_magic_shadow_the_withering",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_1_4",
+            skill_key = "wh_dlc05_skill_magic_shadow_penumbral_pendulum",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_3_3",
+            skill_key = "wh_dlc05_skill_magic_shadow_pit_of_shades",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_3_4",
+            skill_key = "wh_dlc05_skill_magic_shadow_okkams_mindrazor",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_hag_witch_shadows_magic_dummy",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc24_ksl_mother_ostankya = {
         {
             node_key = "wh3_dlc24_skill_node_ksl_ostankya_top_line_unique_1",
@@ -835,6 +2251,406 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc24_ksl_the_golden_knight = {
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_mount_warhorse",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_unique_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_special_0",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_special_0",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_general_3",
+            skill_key = "wh3_main_skill_ksl_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_general_5",
+            skill_key = "wh3_main_skill_ksl_generic_heroic_resilience",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_character_0",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_character_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_character_1",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_character_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_character_2",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_character_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_character_3",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_character_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_character_4",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_character_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_character_5",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_character_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_bodyguard_0",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_bodyguard_0",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_bodyguard_1",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_bodyguard_1",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_bodyguard_2",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_bodyguard_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_bodyguard_3",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_bodyguard_3",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_bodyguard_4",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_bodyguard_4",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_bodyguard_5",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_bodyguard_5",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_0",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_generic_0",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_conviction",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_1_2",
+            skill_key = "wh_main_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_1_3",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_soothsaying",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_tenacity",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_3_2",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_3_3",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_3_4",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_generic_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_units_0",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_units_0",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_units_1",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_units_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_units_2",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_units_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_units_3",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_units_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_units_4",
+            skill_key = "wh3_dlc24_skill_ksl_golden_knight_units_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc24_skill_node_ksl_golden_knight_units_5",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -1704,6 +3520,594 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
             category_key = "battle",
             indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_ksl_frost_maiden_ice = {
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_generic_01",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_ice_unique_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_generic_02",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_ice_unique_war_bear",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_generic_03",
+            skill_key = "wh3_main_skill_ksl_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_generic_04",
+            skill_key = "wh3_main_skill_ksl_wizard_unique_guardian_call",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_unique_01",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_01",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_05",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_unique_02",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_05",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_unique_03",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_03",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_05",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_unique_04",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_04",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_05",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_unique_05",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_05",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_04",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_0",
+            skill_key = "wh3_main_skill_ksl_magic_ice_01_ice_maidens_kiss",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_1_1",
+            skill_key = "wh3_main_skill_ksl_magic_ice_05_frost_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_1_2",
+            skill_key = "wh3_main_skill_ksl_magic_ice_02_ice_sheet",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_1_3",
+            skill_key = "wh3_main_skill_ksl_magic_ice_03_frost_blades",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_1_4",
+            skill_key = "wh3_main_skill_ksl_magic_ice_04_death_frost",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_3_3",
+            skill_key = "wh3_main_skill_ksl_magic_ice_07_crystal_sanctuary",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_3_4",
+            skill_key = "wh3_main_skill_ksl_magic_ice_08_heart_of_winter",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_ice_magic_dummy",
+            skill_key = "wh3_main_skill_ksl_magic_ice_dummy_ice_maidens_kiss",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_ksl_frost_maiden_tempest = {
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_generic_01",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_tempest_unique_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_generic_02",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_tempest_unique_war_bear",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_generic_03",
+            skill_key = "wh3_main_skill_ksl_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_generic_04",
+            skill_key = "wh3_main_skill_ksl_wizard_unique_guardian_call",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_01",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_01",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_05",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_02",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_05",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_03",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_03",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_05",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_04",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_04",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_05",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_05",
+            skill_key = "wh3_main_skill_ksl_frost_maiden_unique_05",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_ice_unique_04",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_01",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_02",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_03",
+                "wh3_main_skill_node_ksl_frost_maiden_tempest_unique_04",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_0",
+            skill_key = "wh3_main_skill_ksl_magic_tempest_01_hailstorm",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_1_1",
+            skill_key = "wh3_main_skill_ksl_magic_tempest_05_freezing_winds",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_1_2",
+            skill_key = "wh3_main_skill_ksl_magic_tempest_02_gust_of_true_flight",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_1_3",
+            skill_key = "wh3_main_skill_ksl_magic_tempest_03_swiftwing",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_1_4",
+            skill_key = "wh3_main_skill_ksl_magic_tempest_04_biting_wind",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_3_3",
+            skill_key = "wh3_main_skill_ksl_magic_tempest_07_blizzard",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_3_4",
+            skill_key = "wh3_main_skill_ksl_magic_tempest_07_hawks_of_miska",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_frost_maiden_tempest_magic_dummy",
+            skill_key = "wh3_main_skill_ksl_magic_tempest_dummy_hailstorm",
+            category_key = "character",
+            indent = 2,
             tier = 11,
             max_level = 1,
             is_mount_skill = false,
@@ -3309,6 +5713,320 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+    },
+    wh3_main_ksl_patriarch = {
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_generic_01",
+            skill_key = "wh3_main_skill_ksl_patriarch_unique_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_generic_02",
+            skill_key = "wh3_main_skill_ksl_patriarch_unique_war_bear",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_generic_03",
+            skill_key = "wh3_main_skill_ksl_all_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_unique_01",
+            skill_key = "wh3_main_skill_ksl_patriarch_unique_01",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_pro_skill_node_ksl_patriarch_unique_03",
+                "wh3_main_skill_node_ksl_patriarch_unique_02",
+                "wh3_main_skill_node_ksl_patriarch_unique_03",
+                "wh3_main_skill_node_ksl_patriarch_unique_04",
+                "wh3_main_skill_node_ksl_patriarch_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_unique_02",
+            skill_key = "wh3_main_skill_ksl_patriarch_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_pro_skill_node_ksl_patriarch_unique_01",
+                "wh3_main_pro_skill_node_ksl_patriarch_unique_03",
+                "wh3_main_skill_node_ksl_patriarch_unique_01",
+                "wh3_main_skill_node_ksl_patriarch_unique_03",
+                "wh3_main_skill_node_ksl_patriarch_unique_04",
+                "wh3_main_skill_node_ksl_patriarch_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_unique_03",
+            skill_key = "wh3_main_skill_ksl_patriarch_unique_03",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_pro_skill_node_ksl_patriarch_unique_01",
+                "wh3_main_skill_node_ksl_patriarch_unique_01",
+                "wh3_main_skill_node_ksl_patriarch_unique_02",
+                "wh3_main_skill_node_ksl_patriarch_unique_04",
+                "wh3_main_skill_node_ksl_patriarch_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_unique_04",
+            skill_key = "wh3_main_skill_ksl_patriarch_unique_04",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_pro_skill_node_ksl_patriarch_unique_01",
+                "wh3_main_pro_skill_node_ksl_patriarch_unique_03",
+                "wh3_main_skill_node_ksl_patriarch_unique_01",
+                "wh3_main_skill_node_ksl_patriarch_unique_02",
+                "wh3_main_skill_node_ksl_patriarch_unique_03",
+                "wh3_main_skill_node_ksl_patriarch_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_unique_05",
+            skill_key = "wh3_main_skill_ksl_patriarch_unique_05",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_main_pro_skill_node_ksl_patriarch_unique_01",
+                "wh3_main_pro_skill_node_ksl_patriarch_unique_03",
+                "wh3_main_skill_node_ksl_patriarch_unique_01",
+                "wh3_main_skill_node_ksl_patriarch_unique_02",
+                "wh3_main_skill_node_ksl_patriarch_unique_03",
+                "wh3_main_skill_node_ksl_patriarch_unique_04",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_01",
+            skill_key = "wh3_main_skill_ksl_patriarch_self_01",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_02",
+            skill_key = "wh_main_skill_all_dignitary_self_impassioned",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_03",
+            skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_04",
+            skill_key = "wh_main_skill_all_dignitary_self_conviction",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_05",
+            skill_key = "wh_main_skill_all_dignitary_self_soothsaying",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_06",
+            skill_key = "wh3_main_skill_ksl_patriarch_self_06",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_07",
+            skill_key = "wh_main_skill_all_dignitary_self_tenacity",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_08",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_09",
+            skill_key = "wh_main_skill_all_dignitary_self_inviolable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_10",
+            skill_key = "wh_main_skill_all_dignitary_self_fervour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_self_11",
+            skill_key = "wh3_main_skill_ksl_patriarch_self_11",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_battle_prayers_01",
+            skill_key = "wh3_main_skill_ksl_dignitary_unique_patriarch_ursuns_roar",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_battle_prayers_02",
+            skill_key = "wh3_main_skill_ksl_dignitary_unique_patriarch_dazs_song_of_winter_sunlight",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_pro_skill_node_ksl_patriarch_battle_prayers_04",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_03",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_04",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_battle_prayers_03",
+            skill_key = "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_battle_hymn",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_02",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_04",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_ksl_patriarch_battle_prayers_04",
+            skill_key = "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_salyaks_lullaby",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_main_pro_skill_node_ksl_patriarch_battle_prayers_02",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_02",
+                "wh3_main_skill_node_ksl_patriarch_battle_prayers_03",
             }
         },
     },

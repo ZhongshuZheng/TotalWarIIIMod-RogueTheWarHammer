@@ -4,6 +4,280 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh_main_dwf_dwarfs"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh2_dlc17_dwf_thane_ghost_artifact = {
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_unique_01",
+            skill_key = "wh2_dlc17_skill_dwf_unique_ghost_thane_0",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_unique_02",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_unique_03",
+            skill_key = "wh_main_skill_dwf_all_unique_relentless",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_unique_04",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_artifact_champion_unique_01",
+            skill_key = "wh3_dlc25_skill_dwf_thane_ghost_self_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_artifact_champion_unique_02",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_3",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_artifact_champion_unique_03",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_4",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_artifact_champion_unique_04",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_5",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_artifact_champion_unique_05",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_unique_01",
+            skill_key = "wh2_dlc17_skill_unique_thane_01",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_03",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_03",
+                "wh2_dlc17_skill_node_dwf_thane_unique_02",
+                "wh2_dlc17_skill_node_dwf_thane_unique_03",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_unique_02",
+            skill_key = "wh2_dlc17_skill_unique_thane_02",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_03",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_03",
+                "wh2_dlc17_skill_node_dwf_thane_unique_01",
+                "wh2_dlc17_skill_node_dwf_thane_unique_03",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_unique_03",
+            skill_key = "wh2_dlc17_skill_unique_thane_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_02",
+                "wh2_dlc17_skill_node_dwf_thane_unique_01",
+                "wh2_dlc17_skill_node_dwf_thane_unique_02",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_self_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_self_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_self_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_self_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_self_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_ghost_artifact_champion_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+    },
     wh2_dlc17_dwf_thorek = {
         {
             node_key = "wh2_dlc17_skill_node_dwf_thorek_misc_2",
@@ -949,6 +1223,638 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc25_dwf_dragon_slayer = {
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_deathblow_01",
+            skill_key = "wh_dlc08_skill_ability_dummy_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_deathblow_02",
+            skill_key = "wh3_dlc25_skill_dwf_garagrim_determined_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_deathblow_03",
+            skill_key = "wh3_dlc25_skill_dwf_slayer_extremely_daring_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_top_02",
+            skill_key = "wh_main_skill_dwf_all_unique_ancestral_grudge",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_top_03",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_top_04",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_personal_01",
+            skill_key = "wh3_dlc25_dwf_daemon_slayer_personal_2_3",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_personal_02",
+            skill_key = "wh3_dlc25_dwf_dragon_slayer_personal_2_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_personal_03",
+            skill_key = "wh3_dlc25_dwf_dragon_slayer_personal_2_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_personal_04",
+            skill_key = "wh3_dlc25_dwf_dragon_slayer_personal_2_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_personal_05",
+            skill_key = "wh3_dlc25_dwf_dragon_slayer_personal_1",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_01",
+            skill_key = "wh3_dlc25_skill_choice_dwf_dragon_slayer_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_02",
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_02",
+            skill_key = "wh3_dlc25_skill_choice_dwf_dragon_slayer_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_01",
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_03",
+            skill_key = "wh3_dlc25_skill_choice_dwf_dragon_slayer_3",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_01",
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_02",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_03",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_04",
+            skill_key = "wh3_dlc25_skill_neu_gotrek_self_1",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_09",
+            skill_key = "wh_main_skill_dwf_lord_self_relentless",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_dragon_slayer_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+    },
+    wh3_dlc25_dwf_garagrim_ironfist = {
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_character_01",
+            skill_key = "wh_dlc08_skill_ability_dummy_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_character_02",
+            skill_key = "wh3_dlc25_skill_dwf_garagrim_determined_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_character_03",
+            skill_key = "wh3_dlc25_skill_dwf_garagrim_extremely_daring_deathblow",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_character_04",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_character_05",
+            skill_key = "wh_main_skill_dwf_all_unique_relentless",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_character_06",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_unique_1",
+            skill_key = "wh3_dlc25_skill_dwf_garagrim_unique_01",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_unique_4",
+            skill_key = "wh3_dlc25_dwf_daemon_slayer_personal_2_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_unique_2",
+            skill_key = "wh3_dlc25_skill_dwf_garagrim_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_unique_3",
+            skill_key = "wh3_dlc25_skill_dwf_garagrim_unique_06",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_unique_5",
+            skill_key = "wh3_dlc25_skill_dwf_garagrim_unique_05",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_unique_6",
+            skill_key = "wh3_dlc25_skill_dwf_garagrim_unique_07",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_choice_1",
+            skill_key = "wh3_dlc25_skill_choice_dwf_dragon_slayer_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_02",
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_choice_2",
+            skill_key = "wh3_dlc25_skill_choice_dwf_dragon_slayer_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_01",
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_choice_3",
+            skill_key = "wh3_dlc25_skill_choice_dwf_dragon_slayer_3",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_01",
+                "wh3_dlc25_skill_node_dwf_dragon_slayer_choice_02",
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_03",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_04",
+            skill_key = "wh3_dlc25_skill_neu_gotrek_self_1",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_05",
+            skill_key = "wh_main_skill_dwf_lord_self_ancestral_grudge",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_08",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_09",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_garagrim_ironfist_combat_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
             }
         },
     },
@@ -2390,6 +3296,266 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh_dlc06_dwf_master_engineer_ghost = {
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_unique_01",
+            skill_key = "wh_main_skill_dwf_all_unique_ancestral_grudge",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_ghost_flash_bomb",
+            skill_key = "wh_pro01_skill_grombrindal_flash_bang",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_unique_02",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_unique_03",
+            skill_key = "wh_main_skill_dwf_all_unique_relentless",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_unique_04",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_self_01",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_restock",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_self_02",
+            skill_key = "wh_main_skill_dwf_engineer_self_requisition",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_self_04",
+            skill_key = "wh_main_skill_dwf_engineer_self_triangulation",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_self_07",
+            skill_key = "wh_main_skill_dwf_engineer_self_overseer",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_self_10",
+            skill_key = "wh_main_skill_dwf_engineer_self_sapper",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_ghost_zhufbar_cannons",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_zhufbar_cannons",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_self_05",
+            skill_key = "wh_main_skill_dwf_engineer_self_dead_eye",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_dwf_master_engineer_ghost_grudge_raker",
+                "wh2_dlc17_skill_dwf_master_engineer_grudge_raker",
+                "wh3_dlc25_skill_node_emp_hunter_jorek_self_12",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_ghost_hand_loaded",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_hand_loaded",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_ghost_bare_essentials",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_bare_essentials",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_self_06",
+            skill_key = "wh_main_skill_dwf_engineer_self_ballistics_calibration",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_ghost_barak_varr_handshake",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_barak_varr_handshake",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_ghost_grudge_raker",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_grudge_raker",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc13_skill_node_emp_hunter_jorek_self_07",
+                "wh_main_skill_node_dwf_engineer_ghost_self_05",
+                "wh_main_skill_node_dwf_engineer_self_05",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_ghost_carry_a_big_stick",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_carry_a_big_stick",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_ghost_percussive_maintenance",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_percussive_maintenance",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_ghost_self_03",
+            skill_key = "wh_main_skill_dwf_engineer_self_technical_enhancements",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_ghost_cinderblast_shell",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_cinderblast_shell",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh_dlc06_dwf_runelord = {
         {
             node_key = "wh_dlc06_skill_node_dwf_runelord_unique_01",
@@ -2890,6 +4056,844 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh_dlc06_dwf_runesmith_ghost = {
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_unique_05",
+            skill_key = "wh2_dlc10_skill_dwf_runesmith_generic_master_of_the_forge",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 2, 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_unique_01",
+            skill_key = "wh_main_skill_dwf_all_unique_ancestral_grudge",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_unique_02",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_unique_04",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_unique_03",
+            skill_key = "wh_main_skill_dwf_all_unique_relentless",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_ghost_unique_01",
+            skill_key = "wh3_dlc25_skill_dwf_runesmith_ghost_self_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_ghost_unique_02",
+            skill_key = "wh3_dlc25_skill_dwf_runesmith_self_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_ghost_unique_03",
+            skill_key = "wh3_dlc25_skill_dwf_runesmith_self_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_ghost_unique_04",
+            skill_key = "wh3_dlc25_skill_dwf_runesmith_self_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_ghost_unique_05",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_runemaster",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_01",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_self_rune_of_speed",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_03",
+            skill_key = "wh_main_skill_dwf_runesmith_self_rune_of_oath_&_steel",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_02",
+            skill_key = "wh_main_skill_dwf_runesmith_self_rune_of_wrath_&_ruin",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_04",
+            skill_key = "wh_main_skill_dwf_runesmith_self_damping",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_05",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_self_rune_of_slowness",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_06",
+            skill_key = "wh_main_skill_dwf_runesmith_self_forgefire",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_07",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_self_rune_of_breaking",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_08",
+            skill_key = "wh_main_skill_dwf_runesmith_self_rune_of_negation",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_09",
+            skill_key = "wh_main_skill_dwf_runesmith_self_rune_of_hearth_&_home",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_10",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_self_wardbreaker",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_runesmith_ghost_self_11",
+            skill_key = "wh_main_skill_dwf_runesmith_self_strike_the_runes",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_runesmith_ghost_magic_hidden",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_starting_runes_hidden",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_runesmith_ghost_campaign_07",
+            skill_key = "wh2_dlc17_skill_runesmith_assist_army_harden_armour",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_runesmith_ghost_campaign_08",
+            skill_key = "wh2_dlc17_skill_runesmith_assist_army_sharpen_weapons",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_dlc06_dwf_thane_ghost_1 = {
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_unique_01",
+            skill_key = "wh_main_skill_dwf_all_unique_ancestral_grudge",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_unique_02",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_unique_03",
+            skill_key = "wh_main_skill_dwf_all_unique_relentless",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_unique_04",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_1_01",
+            skill_key = "wh3_dlc25_skill_dwf_thane_ghost_self_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_1_02",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_3",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_1_03",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_4",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_1_04",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_5",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_1_05",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_01",
+            skill_key = "wh2_dlc17_skill_unique_thane_01",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_03",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_03",
+                "wh2_dlc17_skill_node_dwf_thane_unique_02",
+                "wh2_dlc17_skill_node_dwf_thane_unique_03",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_02",
+            skill_key = "wh2_dlc17_skill_unique_thane_02",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_03",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_03",
+                "wh2_dlc17_skill_node_dwf_thane_unique_01",
+                "wh2_dlc17_skill_node_dwf_thane_unique_03",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_03",
+            skill_key = "wh2_dlc17_skill_unique_thane_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_02",
+                "wh2_dlc17_skill_node_dwf_thane_unique_01",
+                "wh2_dlc17_skill_node_dwf_thane_unique_02",
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_self_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_self_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_self_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_self_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_self_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_1_champion_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+    },
+    wh_dlc06_dwf_thane_ghost_2 = {
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_unique_01",
+            skill_key = "wh_main_skill_dwf_all_unique_ancestral_grudge",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_unique_02",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_unique_03",
+            skill_key = "wh_main_skill_dwf_all_unique_relentless",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_unique_04",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_2_01",
+            skill_key = "wh3_dlc25_skill_dwf_thane_ghost_self_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_2_02",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_3",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_2_03",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_4",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_2_04",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_5",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_ghost_unique_2_05",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_01",
+            skill_key = "wh2_dlc17_skill_unique_thane_01",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_03",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_03",
+                "wh2_dlc17_skill_node_dwf_thane_unique_02",
+                "wh2_dlc17_skill_node_dwf_thane_unique_03",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_02",
+            skill_key = "wh2_dlc17_skill_unique_thane_02",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_03",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_03",
+                "wh2_dlc17_skill_node_dwf_thane_unique_01",
+                "wh2_dlc17_skill_node_dwf_thane_unique_03",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_03",
+            skill_key = "wh2_dlc17_skill_unique_thane_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_02",
+                "wh2_dlc17_skill_node_dwf_thane_unique_01",
+                "wh2_dlc17_skill_node_dwf_thane_unique_02",
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_self_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_self_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_self_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_self_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_self_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc06_skill_node_dwf_ghost_2_champion_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+    },
     wh_main_dwf_lord = {
         {
             node_key = "wh_main_skill_node_dwf_lord_unique_03",
@@ -3359,6 +5363,854 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+    },
+    wh_main_dwf_master_engineer = {
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_unique_01",
+            skill_key = "wh_main_skill_dwf_all_unique_ancestral_grudge",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_flash_bomb",
+            skill_key = "wh_pro01_skill_grombrindal_flash_bang",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_unique_02",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_unique_03",
+            skill_key = "wh_main_skill_dwf_all_unique_relentless",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_unique_04",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_self_01",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_restock",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_self_02",
+            skill_key = "wh_main_skill_dwf_engineer_self_requisition",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_self_04",
+            skill_key = "wh_main_skill_dwf_engineer_self_triangulation",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_self_07",
+            skill_key = "wh_main_skill_dwf_engineer_self_overseer",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_self_10",
+            skill_key = "wh_main_skill_dwf_engineer_self_sapper",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_zhufbar_cannons",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_zhufbar_cannons",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_self_05",
+            skill_key = "wh_main_skill_dwf_engineer_self_dead_eye",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_dwf_master_engineer_ghost_grudge_raker",
+                "wh2_dlc17_skill_dwf_master_engineer_grudge_raker",
+                "wh3_dlc25_skill_node_emp_hunter_jorek_self_12",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_hand_loaded",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_hand_loaded",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_bare_essentials",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_bare_essentials",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_self_06",
+            skill_key = "wh_main_skill_dwf_engineer_self_ballistics_calibration",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_barak_varr_handshake",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_barak_varr_handshake",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_grudge_raker",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_grudge_raker",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh2_dlc13_skill_node_emp_hunter_jorek_self_07",
+                "wh_main_skill_node_dwf_engineer_ghost_self_05",
+                "wh_main_skill_node_dwf_engineer_self_05",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_carry_a_big_stick",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_carry_a_big_stick",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_percussive_maintenance",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_percussive_maintenance",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_engineer_self_03",
+            skill_key = "wh_main_skill_dwf_engineer_self_technical_enhancements",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_dwf_master_engineer_cinderblast_shell",
+            skill_key = "wh2_dlc17_skill_dwf_master_engineer_cinderblast_shell",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_main_dwf_runesmith = {
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_unique_05",
+            skill_key = "wh2_dlc10_skill_dwf_runesmith_generic_master_of_the_forge",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 2, 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_unique_01",
+            skill_key = "wh_main_skill_dwf_all_unique_ancestral_grudge",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_unique_02",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_unique_04",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_unique_03",
+            skill_key = "wh_main_skill_dwf_all_unique_relentless",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_unique_01",
+            skill_key = "wh3_dlc25_skill_dwf_runelord_self_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_unique_02",
+            skill_key = "wh3_dlc25_skill_dwf_runesmith_self_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_unique_03",
+            skill_key = "wh3_dlc25_skill_dwf_runesmith_self_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_unique_04",
+            skill_key = "wh3_dlc25_skill_dwf_runesmith_self_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_runesmith_unique_05",
+            skill_key = "wh2_dlc17_skill_dwf_thorek_runemaster",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_01",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_self_rune_of_speed",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_03",
+            skill_key = "wh_main_skill_dwf_runesmith_self_rune_of_oath_&_steel",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_02",
+            skill_key = "wh_main_skill_dwf_runesmith_self_rune_of_wrath_&_ruin",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_04",
+            skill_key = "wh_main_skill_dwf_runesmith_self_damping",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_05",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_self_rune_of_slowness",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_06",
+            skill_key = "wh_main_skill_dwf_runesmith_self_forgefire",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_07",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_self_rune_of_breaking",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_08",
+            skill_key = "wh_main_skill_dwf_runesmith_self_rune_of_negation",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_09",
+            skill_key = "wh_main_skill_dwf_runesmith_self_rune_of_hearth_&_home",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_10",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_self_wardbreaker",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_dwf_runesmith_self_11",
+            skill_key = "wh_main_skill_dwf_runesmith_self_strike_the_runes",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_runesmith_magic_hidden",
+            skill_key = "wh2_dlc17_skill_dwf_runesmith_starting_runes_hidden",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_runesmith_campaign_07",
+            skill_key = "wh2_dlc17_skill_runesmith_assist_army_harden_armour",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_runesmith_campaign_08",
+            skill_key = "wh2_dlc17_skill_runesmith_assist_army_sharpen_weapons",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh_main_dwf_thane = {
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_unique_01",
+            skill_key = "wh_main_skill_dwf_all_unique_ancestral_grudge",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_unique_02",
+            skill_key = "wh_main_skill_dwf_all_unique_resolute",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_unique_03",
+            skill_key = "wh_main_skill_dwf_all_unique_relentless",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_unique_04",
+            skill_key = "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_unique_01",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_unique_02",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_3",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_unique_03",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_4",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_unique_04",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_5",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_dwf_thane_unique_05",
+            skill_key = "wh3_dlc25_skill_unique_dwf_thane_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_unique_01",
+            skill_key = "wh2_dlc17_skill_unique_thane_01",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_03",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_03",
+                "wh2_dlc17_skill_node_dwf_thane_unique_02",
+                "wh2_dlc17_skill_node_dwf_thane_unique_03",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_unique_02",
+            skill_key = "wh2_dlc17_skill_unique_thane_02",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_03",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_03",
+                "wh2_dlc17_skill_node_dwf_thane_unique_01",
+                "wh2_dlc17_skill_node_dwf_thane_unique_03",
+            }
+        },
+        {
+            node_key = "wh2_dlc17_skill_node_dwf_thane_unique_03",
+            skill_key = "wh2_dlc17_skill_unique_thane_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_1_unique_02",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_01",
+                "wh2_dlc17_skill_node_dwf_ghost_thane_2_unique_02",
+                "wh2_dlc17_skill_node_dwf_thane_unique_01",
+                "wh2_dlc17_skill_node_dwf_thane_unique_02",
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_01",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_02",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_03",
+            skill_key = "wh_main_skill_all_lord_self_full_plate_armour_2",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_05",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_07",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_08",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_09",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_dwf_thane_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
             }
         },
     },
