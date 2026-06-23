@@ -22,6 +22,7 @@ local MAX_CONSECUTIVE_DEFEATS = 3
 local MAX_BATTLE_SPAWN_POLL_ATTEMPTS = 10
 -- This is only a retry ceiling. The actual candidate list comes from the current content faction.
 local MAX_BATTLE_SPAWN_RETRIES = 5
+local WAR_ATTACK_DELAY = 0.2
 local UNIT_VALUE_SOURCE = "main_units_tables.multiplayer_cost"
 
 local DILEMMA_REWARD_KEY = "adamrogue_mvp_reward_dilemma"
@@ -1084,6 +1085,20 @@ local function is_enemy_spawn_faction_compatible_with_content(content_faction_ke
     return false
 end
 
+-- QB / 占位敌军派系在战役里通常 is_dead()==true（无城镇、无领主），
+-- 但 create_force_with_general 仍可正常生成；spawn 候选筛选不要用 is_dead()。
+local function can_use_faction_for_enemy_spawn(faction)
+    if not faction or faction:is_null_interface() then
+        return false
+    end
+
+    if faction:is_human() then
+        return false
+    end
+
+    return true
+end
+
 local function get_enemy_faction_candidate_sequence(player_faction_key, preferred_enemy_faction_key, candidate_list_string, content_faction_key)
     local content_candidates = get_enemy_faction_candidates_for_content_faction(content_faction_key)
     local content_candidate_set = {}
@@ -1148,7 +1163,7 @@ local function find_enemy_faction_fallback_candidate(
     for index = target_index, #candidate_keys do
         local faction_key = candidate_keys[index]
         local faction = cm:get_faction(faction_key)
-        if faction and not faction:is_null_interface() and not faction:is_dead() and not faction:is_human() then
+        if can_use_faction_for_enemy_spawn(faction) then
             local x, y, source = find_alternative_enemy_spawn_position(faction_key, player_general, -1, -1)
             log(
                 "find_enemy_faction_fallback_candidate evaluated faction candidate. faction_key=["
@@ -1195,30 +1210,24 @@ local function pick_initial_enemy_faction_key(player_faction_key, player_general
 
     for index, faction_key in ipairs(candidate_keys) do
         local faction = cm:get_faction(faction_key)
-        if not faction or faction:is_null_interface() then
-            log(
-                "pick_initial_enemy_faction_key skipped faction candidate because faction interface is unavailable. index=["
-                    .. tostring(index)
-                    .. "], faction_key=["
-                    .. tostring(faction_key)
-                    .. "]."
-            )
-        elseif faction:is_dead() then
-            log(
-                "pick_initial_enemy_faction_key skipped faction candidate because faction is dead. index=["
-                    .. tostring(index)
-                    .. "], faction_key=["
-                    .. tostring(faction_key)
-                    .. "]."
-            )
-        elseif faction:is_human() then
-            log(
-                "pick_initial_enemy_faction_key skipped faction candidate because faction is human-controlled. index=["
-                    .. tostring(index)
-                    .. "], faction_key=["
-                    .. tostring(faction_key)
-                    .. "]."
-            )
+        if not can_use_faction_for_enemy_spawn(faction) then
+            if not faction or faction:is_null_interface() then
+                log(
+                    "pick_initial_enemy_faction_key skipped faction candidate because faction interface is unavailable. index=["
+                        .. tostring(index)
+                        .. "], faction_key=["
+                        .. tostring(faction_key)
+                        .. "]."
+                )
+            else
+                log(
+                    "pick_initial_enemy_faction_key skipped faction candidate because faction is human-controlled. index=["
+                        .. tostring(index)
+                        .. "], faction_key=["
+                        .. tostring(faction_key)
+                        .. "]."
+                )
+            end
         elseif not is_enemy_spawn_faction_compatible_with_content(content_faction_key, faction_key) then
             log(
                 "pick_initial_enemy_faction_key skipped faction candidate because it is incompatible with battle content faction. index=["
@@ -1838,7 +1847,7 @@ local function regenerate_battle_payload_for_spawn_retry(spawn_attempt, failure_
         for index = target_candidate_index, #configured_candidates do
             local faction_key = configured_candidates[index]
             local faction = cm:get_faction(faction_key)
-            if faction_key ~= player_faction_key and faction and not faction:is_null_interface() and not faction:is_dead() and not faction:is_human() then
+            if faction_key ~= player_faction_key and can_use_faction_for_enemy_spawn(faction) then
                 resolved_retry_faction_key = faction_key
                 target_candidate_index = index
                 break
@@ -3444,7 +3453,7 @@ local function issue_enemy_force_spawn_with_general(
                 cm:set_force_has_retreated_this_turn(enemy_force)
             end
 
-            -- 宣战后延迟 0.5s 再发起进攻（匹配测试Mod的 WAR_ATTACK_DELAY），确保引擎处理完外交状态。
+            -- 宣战后延迟再发起进攻，确保引擎处理完外交状态。
             -- 使用 CQI 在延迟内重新获取接口，避免持有过期引用。
             local enemy_char_cqi_for_attack = char_cqi or 0
             local player_force_cqi_for_attack = tonumber(get_saved_value(SAVE_KEYS.player_force_cqi, 0)) or 0
@@ -3484,7 +3493,7 @@ local function issue_enemy_force_spawn_with_general(
                             .. "]."
                     )
                     cm:force_attack_of_opportunity(enemy_mf_cqi, player_mf_cqi, false)
-                end, 0.5)
+                end, WAR_ATTACK_DELAY)
             else
                 log(
                     "issue_enemy_force_spawn_with_general could not schedule battle attack: one or more CQIs are invalid. spawn_reason_label=["
@@ -3554,7 +3563,7 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
                 .. tostring(current_spawn_attempt)
                 .. "]. Battle attack has been scheduled from spawn callback; locking retreat UI and exiting poll."
         )
-        -- 战斗攻击已由 issue_enemy_force_spawn_with_general 回调内的 force_declare_war+0.5s 延迟负责发起。
+        -- 战斗攻击已由 issue_enemy_force_spawn_with_general 回调内的 force_declare_war+WAR_ATTACK_DELAY 延迟负责发起。
         -- 此处仅做 UI retreat 锁定，不再通过 caravans:create_caravan_battle 传送玩家部队（该函数
         -- 会将玩家部队传送到敌军生成坐标附近，在 AdamRogue 语境下会导致战斗无法正常触发）。
         local uim = cm:get_campaign_ui_manager()
