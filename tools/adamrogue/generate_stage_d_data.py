@@ -139,6 +139,30 @@ def format_lua_key(key: str) -> str:
     return key if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", key) else f'["{key}"]'
 
 
+def classify_player_general_lord_type(ui_unit_group_land: str) -> str:
+    group = (ui_unit_group_land or "").strip().lower()
+    if group == "lord":
+        return "lord"
+    if "wizard" in group:
+        return "spellcaster_lord"
+    return "lord"
+
+
+def merge_player_general_options(option_lists: list[list[dict[str, object]]]) -> list[dict[str, object]]:
+    by_subtype: dict[str, dict[str, object]] = {}
+    for options in option_lists:
+        for option in options:
+            subtype_key = str(option.get("subtype") or "")
+            if not subtype_key:
+                continue
+            existing = by_subtype.get(subtype_key)
+            if existing is None or int(option.get("unit_value") or 0) > int(existing.get("unit_value") or 0):
+                by_subtype[subtype_key] = option
+    merged = list(by_subtype.values())
+    merged.sort(key=lambda item: (int(item["unit_value"]), str(item["subtype"])))
+    return merged
+
+
 def derive_unit_weight(unit_value: int) -> int:
     if unit_value <= 350:
         return 8
@@ -640,6 +664,8 @@ def render_players_module(
                 + lua_string(str(option["unit_key"]))
                 + ", unit_value = "
                 + str(int(option["unit_value"]))
+                + ", lord_type = "
+                + lua_string(str(option.get("lord_type") or "lord"))
                 + " },"
             )
         lines.append("    },")
@@ -1332,6 +1358,9 @@ def main() -> None:
                     "subtype": subtype_key,
                     "unit_key": associated_unit_key,
                     "unit_value": unit_value,
+                    "lord_type": classify_player_general_lord_type(
+                        main_unit_row.get("ui_unit_group_land", "")
+                    ),
                 }
             )
             seen_general_subtypes.add(subtype_key)
@@ -1353,7 +1382,36 @@ def main() -> None:
             + faction_key
             + " -> "
             + resolved_content_faction_key
-            + f" ({resolution}), generals={len(general_options)}"
+            + f" ({resolution}), generals={len(general_options)} (pre-merge)"
+        )
+
+    options_by_content_faction: dict[str, list[list[dict[str, object]]]] = defaultdict(list)
+    for faction_key in supported_player_factions:
+        content_faction_key = player_content_faction_by_faction.get(faction_key, "")
+        if not content_faction_key:
+            continue
+        options_by_content_faction[content_faction_key].append(player_general_options_by_faction[faction_key])
+
+    merged_general_options_by_content_faction: dict[str, list[dict[str, object]]] = {}
+    for content_faction_key, option_lists in options_by_content_faction.items():
+        merged_general_options_by_content_faction[content_faction_key] = merge_player_general_options(option_lists)
+
+    for faction_key in supported_player_factions:
+        content_faction_key = player_content_faction_by_faction.get(faction_key, "")
+        merged_options = merged_general_options_by_content_faction.get(content_faction_key)
+        if merged_options is not None:
+            player_general_options_by_faction[faction_key] = merged_options
+
+    for content_faction_key, merged_options in sorted(merged_general_options_by_content_faction.items()):
+        member_count = sum(
+            1
+            for faction_key in supported_player_factions
+            if player_content_faction_by_faction.get(faction_key, "") == content_faction_key
+        )
+        player_mapping_summaries.append(
+            "Shared player general pool for content faction "
+            + content_faction_key
+            + f": {len(merged_options)} options across {member_count} playable factions."
         )
 
     subtype_keys_by_content_faction: dict[str, set[str]] = defaultdict(set)
