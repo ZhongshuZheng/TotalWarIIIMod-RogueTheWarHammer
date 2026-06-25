@@ -179,6 +179,16 @@ def derive_unit_weight(unit_value: int) -> int:
     return 1
 
 
+def derive_hero_weight(unit_value: int) -> int:
+    if unit_value <= 1000:
+        return 4
+    if unit_value <= 1500:
+        return 3
+    if unit_value <= 2000:
+        return 2
+    return 1
+
+
 def derive_battle_tier(unit_tier: int, unit_value: int) -> tuple[int, int]:
     if unit_tier <= 1 or unit_value <= 450:
         return 1, 3
@@ -1262,7 +1272,7 @@ def main() -> None:
                     "agent_subtype": subtype_key,
                     "unit_key": associated_unit_key,
                     "unit_value": unit_value,
-                    "weight": derive_unit_weight(unit_value),
+                    "weight": derive_hero_weight(unit_value),
                 }
             )
         hero_pool.sort(key=lambda item: (int(item["unit_value"]), str(item["agent_subtype"])))

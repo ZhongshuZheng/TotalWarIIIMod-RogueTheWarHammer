@@ -1976,6 +1976,7 @@ local generate_equipment_reward_payload = adamrogue_ancillary_generator.generate
 
 local adamrogue_force_snapshot = adamrogue_force_snapshot_module.new({
     cm = cm,
+    core = core,
     log = log,
     save_keys = SAVE_KEYS,
     get_default_player_general_subtype_for_faction = get_default_player_general_subtype_for_faction,
@@ -5108,6 +5109,58 @@ spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
     launch_spawned_enemy_force_battle(caravan_bridge, player_region:name(), false, spawn_x, spawn_y, 1, current_spawn_attempt)
 end
 
+local function advance_post_battle_flow(player_won, consecutive_defeat_count, restore_success, restore_reason)
+    if not restore_success then
+        log(
+            "Post-battle flow continuing after force restore failure. player_won=["
+                .. tostring(player_won)
+                .. "], restore_reason=["
+                .. tostring(restore_reason)
+                .. "]."
+        )
+    end
+
+    if player_won then
+        set_saved_value(SAVE_KEYS.paused_from_state, "")
+        if prepare_equipment_reward_event() then
+            log("Battle victory advanced to EQUIPMENT_REWARD_PENDING.")
+            cm:callback(function()
+                if get_current_state() == STATE.EQUIPMENT_REWARD_PENDING then
+                    open_current_event("battle_victory_equipment_reward_auto_open")
+                end
+            end, 0.1)
+            return
+        end
+
+        log("Battle victory could not prepare the equipment reward event and will fall back to INIT.")
+    end
+
+    if not player_won and consecutive_defeat_count >= MAX_CONSECUTIVE_DEFEATS then
+        set_current_state(STATE.GAME_OVER)
+        clear_current_event_context()
+        clear_destination_selection_state("game_over")
+        set_saved_value(SAVE_KEYS.paused_from_state, "")
+        log("Entering GAME_OVER because consecutive defeats reached [" .. tostring(consecutive_defeat_count) .. "].")
+        return
+    end
+
+    set_saved_value(SAVE_KEYS.paused_from_state, "")
+    if prepare_destination_event() then
+        log("Battle defeat advanced to DESTINATION_PENDING.")
+        cm:callback(function()
+            if get_current_state() == STATE.DESTINATION_PENDING then
+                open_current_event("battle_defeat_destination_auto_open")
+            end
+        end, 0.1)
+        return
+    end
+
+    set_current_state(STATE.INIT)
+    clear_current_event_context()
+    clear_destination_selection_state("battle_flow_reset_to_init")
+    log("Battle defeat could not prepare a destination event and fell back to INIT. The current node remains unchanged for the next loop.")
+end
+
 local function handle_post_battle_state_transition(player_won)
     log("handle_post_battle_state_transition started. player_won=[" .. tostring(player_won) .. "]")
     local completed_battle_count = get_completed_battle_count()
@@ -5145,47 +5198,16 @@ local function handle_post_battle_state_transition(player_won)
             .. "."
     )
 
-    restore_player_force_after_battle()
-
-    if player_won then
-        set_saved_value(SAVE_KEYS.paused_from_state, "")
-        if prepare_equipment_reward_event() then
-            log("Battle victory advanced to EQUIPMENT_REWARD_PENDING. The equipment reward event will be opened immediately so the run can continue toward destination selection.")
-            cm:callback(function()
-                if get_current_state() == STATE.EQUIPMENT_REWARD_PENDING then
-                    open_current_event("battle_victory_equipment_reward_auto_open")
-                end
-            end, 0.1)
-            return
+    restore_player_force_after_battle(function(restore_success, restore_reason)
+        if not restore_success then
+            log(
+                "restore_player_force_after_battle finished with failure. reason=["
+                    .. tostring(restore_reason)
+                    .. "]."
+            )
         end
-
-        log("Battle victory could not prepare the equipment reward event and will fall back to INIT.")
-    end
-
-    if not player_won and consecutive_defeat_count >= MAX_CONSECUTIVE_DEFEATS then
-        set_current_state(STATE.GAME_OVER)
-        clear_current_event_context()
-        clear_destination_selection_state("game_over")
-        set_saved_value(SAVE_KEYS.paused_from_state, "")
-        log("Entering GAME_OVER because consecutive defeats reached [" .. tostring(consecutive_defeat_count) .. "].")
-        return
-    end
-
-    set_saved_value(SAVE_KEYS.paused_from_state, "")
-    if prepare_destination_event() then
-        log("Battle defeat advanced to DESTINATION_PENDING. The next node choice will be opened immediately.")
-        cm:callback(function()
-            if get_current_state() == STATE.DESTINATION_PENDING then
-                open_current_event("battle_defeat_destination_auto_open")
-            end
-        end, 0.1)
-        return
-    end
-
-    set_current_state(STATE.INIT)
-    clear_current_event_context()
-    clear_destination_selection_state("battle_flow_reset_to_init")
-    log("Battle defeat could not prepare a destination event and fell back to INIT. The current node remains unchanged for the next loop.")
+        advance_post_battle_flow(player_won, consecutive_defeat_count, restore_success, restore_reason)
+    end)
 end
 
 function adamrogue_get_player_hero_reward_entry_from_payload(payload, choice)
