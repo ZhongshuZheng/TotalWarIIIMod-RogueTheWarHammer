@@ -226,8 +226,8 @@ function battle_generator.new(context)
         local normalized_cycle = math.max(1, math.floor(tonumber(current_cycle) or 1))
         for _, entry in ipairs(enemy_growth_config) do
             local min_c = tonumber(entry.min_cycle) or 1
-            local max_c = entry.max_cycle and tonumber(entry.max_cycle) or math.huge
-            if normalized_cycle >= min_c and normalized_cycle <= max_c then
+            local max_c = entry.max_cycle and tonumber(entry.max_cycle) or nil
+            if normalized_cycle >= min_c and (not max_c or normalized_cycle <= max_c) then
                 return math.max(0, math.floor(tonumber(entry.hero_num) or 0))
             end
         end
@@ -369,8 +369,8 @@ function battle_generator.new(context)
         local total_value = 0
         local max_units = math.max(0, effective_hard_cap)
         local attempts = 0
-        local preferred_budget_floor = math.floor(unit_only_target_value_budget * 0.9)
-        local fallback_budget_floor = math.floor(unit_only_target_value_budget * 0.85)
+        local preferred_budget_floor = math.floor(unit_only_target_value_budget * 0.95)
+        local phase_a_accept_budget_floor = math.floor(unit_only_target_value_budget * 0.85)
         local unique_pool = {}
         local seen_unit_keys = {}
 
@@ -404,7 +404,7 @@ function battle_generator.new(context)
             if projected_total <= unit_only_target_value_budget then
                 if #chosen_units < unit_count_targets.min_units then
                     should_take = true
-                elseif total_value < preferred_budget_floor then
+                elseif total_value < phase_a_accept_budget_floor then
                     should_take = true
                 elseif #chosen_units < unit_count_targets.target_units then
                     should_take = true
@@ -434,14 +434,13 @@ function battle_generator.new(context)
             end
         end
 
-        -- If the weighted random pass undershoots the target stack shape, pad with the cheapest
-        -- legal units that still fit in budget before giving up on the quantity curve.
+        -- Phase B: pad with the cheapest legal units when stack size is still below target.
         local fill_attempts = 0
         while #chosen_units < max_units and fill_attempts < max_units do
             fill_attempts = fill_attempts + 1
-            local should_continue_fill = #chosen_units < unit_count_targets.min_units
-                or (#chosen_units < unit_count_targets.target_units and total_value < unit_only_target_value_budget)
-                or total_value < fallback_budget_floor
+            local should_continue_fill = (#chosen_units < unit_count_targets.min_units
+                or #chosen_units < unit_count_targets.target_units)
+                and total_value < preferred_budget_floor
 
             if not should_continue_fill then
                 break
@@ -475,7 +474,10 @@ function battle_generator.new(context)
             )
         end
 
-        if total_value < preferred_budget_floor and #chosen_units > 0 then
+        -- Phase C: upgrade low-value picks when stack size is already sufficient but budget is still underfilled.
+        if #chosen_units >= unit_count_targets.target_units
+            and total_value < preferred_budget_floor
+            and #chosen_units > 0 then
             local upgrade_pass = 0
             while total_value < preferred_budget_floor do
                 upgrade_pass = upgrade_pass + 1
