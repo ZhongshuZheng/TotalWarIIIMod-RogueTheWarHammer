@@ -3223,56 +3223,72 @@ local function launch_equipment_reward_dilemma(faction)
 end
 
 local function launch_hero_reward_dilemma(faction)
+    log("launch_hero_reward_dilemma entered.")
     local payload = get_current_event_payload()
     if not payload or type(payload) ~= "table" then
-        log("launch_hero_reward_dilemma aborted because the current hero reward payload could not be decoded.")
+        log("launch_hero_reward_dilemma aborted: payload could not be decoded.")
         return false
     end
+    log("launch_hero_reward_dilemma: payload OK.")
 
     local player_force = get_saved_player_force()
     if not player_force then
-        log("launch_hero_reward_dilemma aborted because the saved player force is unavailable.")
+        log("launch_hero_reward_dilemma aborted: saved player force is unavailable.")
         return false
     end
+    log("launch_hero_reward_dilemma: player_force OK.")
 
-    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_HERO_REWARD_KEY)
-    local payload_builder = cm:create_payload()
-    local choice_keys = { "FIRST", "SECOND", "THIRD" }
+    local ok_build, build_err = pcall(function()
+        local dilemma_builder = cm:create_dilemma_builder(DILEMMA_HERO_REWARD_KEY)
+        if not dilemma_builder then
+            log("launch_hero_reward_dilemma aborted: create_dilemma_builder returned nil for key=[" .. tostring(DILEMMA_HERO_REWARD_KEY) .. "].")
+            return
+        end
+        log("launch_hero_reward_dilemma: dilemma_builder created.")
 
-    for choice_index = 0, 2 do
-        local agent_subtype = payload["hero_" .. tostring(choice_index) .. "_agent_subtype"]
-        local choice_key = choice_keys[choice_index + 1]
-        if not agent_subtype or agent_subtype == "" then
-            log("launch_hero_reward_dilemma aborted because a saved hero choice is missing. choice_index=[" .. tostring(choice_index) .. "].")
-            return false
+        local payload_builder = cm:create_payload()
+        local choice_keys = { "FIRST", "SECOND", "THIRD" }
+
+        for choice_index = 0, 2 do
+            local agent_subtype = payload["hero_" .. tostring(choice_index) .. "_agent_subtype"]
+            local choice_key = choice_keys[choice_index + 1]
+            if not agent_subtype or agent_subtype == "" then
+                log("launch_hero_reward_dilemma aborted: hero choice missing. choice_index=[" .. tostring(choice_index) .. "].")
+                return
+            end
+            local component_key = build_hero_reward_payload_component_key(agent_subtype)
+            log("launch_hero_reward_dilemma: adding choice. index=[" .. tostring(choice_index) .. "], subtype=[" .. tostring(agent_subtype) .. "], component_key=[" .. tostring(component_key) .. "].")
+            payload_builder:text_display(component_key)
+            dilemma_builder:add_choice_payload(choice_key, payload_builder)
+            payload_builder:clear()
         end
 
-        payload_builder:text_display(build_hero_reward_payload_component_key(agent_subtype))
-        dilemma_builder:add_choice_payload(choice_key, payload_builder)
+        payload_builder:text_display("dummy_do_nothing")
+        dilemma_builder:add_choice_payload("FOURTH", payload_builder)
         payload_builder:clear()
+
+        payload_builder:text_display("dummy_do_nothing")
+        dilemma_builder:add_choice_payload("FIFTH", payload_builder)
+        payload_builder:clear()
+
+        dilemma_builder:add_target("default", player_force)
+        cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+        log(
+            "launch_hero_reward_dilemma: launched. faction=["
+                .. tostring(faction:name())
+                .. "], heroes=["
+                .. tostring(payload.hero_0_agent_subtype)
+                .. ","
+                .. tostring(payload.hero_1_agent_subtype)
+                .. ","
+                .. tostring(payload.hero_2_agent_subtype)
+                .. "]."
+        )
+    end)
+    if not ok_build then
+        log("launch_hero_reward_dilemma: pcall caught error. error=[" .. tostring(build_err) .. "].")
+        return false
     end
-
-    payload_builder:text_display("dummy_do_nothing")
-    dilemma_builder:add_choice_payload("FOURTH", payload_builder)
-    payload_builder:clear()
-
-    payload_builder:text_display("dummy_do_nothing")
-    dilemma_builder:add_choice_payload("FIFTH", payload_builder)
-    payload_builder:clear()
-
-    dilemma_builder:add_target("default", player_force)
-    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
-    log(
-        "Launched custom hero reward dilemma for faction ["
-            .. tostring(faction:name())
-            .. "]. heroes=["
-            .. tostring(payload.hero_0_agent_subtype)
-            .. ","
-            .. tostring(payload.hero_1_agent_subtype)
-            .. ","
-            .. tostring(payload.hero_2_agent_subtype)
-            .. "]."
-    )
     return true
 end
 

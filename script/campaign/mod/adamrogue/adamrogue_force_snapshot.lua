@@ -79,58 +79,73 @@ function force_snapshot.new(context)
     function self.snapshot_embedded_heroes(force)
         local heroes = {}
         if not force or force:is_null_interface() then
+            log("snapshot_embedded_heroes aborted: force is nil or null.")
             return heroes
         end
 
-        local player_faction_name = get_saved_value(save_keys.player_faction_key, "")
-        if player_faction_name == "" then
+        -- Resolve the general CQI so we can skip the commanding character.
+        local general_cqi = 0
+        local ok_gen, err_gen = pcall(function()
+            local g = force:general_character()
+            if g and not g:is_null_interface() then
+                general_cqi = g:command_queue_index()
+            end
+        end)
+        if not ok_gen then
+            log("snapshot_embedded_heroes: general_character() failed. error=[" .. tostring(err_gen) .. "].")
+        end
+
+        -- Use force:character_list() – includes embedded heroes, is safe to iterate.
+        local ok_list, char_list = pcall(function()
+            return force:character_list()
+        end)
+        if not ok_list or not char_list then
+            log("snapshot_embedded_heroes: force:character_list() failed. error=[" .. tostring(char_list) .. "].")
             return heroes
         end
 
-        local faction = cm:get_faction(player_faction_name)
-        if not faction or faction:is_null_interface() then
-            return heroes
-        end
+        local num = char_list:num_items()
+        log(
+            "snapshot_embedded_heroes: iterating. count=["
+                .. tostring(num)
+                .. "], general_cqi=["
+                .. tostring(general_cqi)
+                .. "]."
+        )
 
-        local target_force_cqi = force:command_queue_index()
-        local character_list = faction:character_list()
-        if not character_list or character_list:is_null_interface() then
-            return heroes
-        end
-
-        for i = 0, character_list:num_items() - 1 do
-            local character = character_list:item_at(i)
-            if character and not character:is_null_interface() then
-                local ok, belongs_to_force = pcall(function()
-                    if not character:is_embedded_in_military_force() then
-                        return false
-                    end
-                    local embedded_force = character:embedded_in_military_force()
-                    return embedded_force
-                        and not embedded_force:is_null_interface()
-                        and embedded_force:command_queue_index() == target_force_cqi
+        for i = 0, num - 1 do
+            local ok_item, character = pcall(function()
+                return char_list:item_at(i)
+            end)
+            if not ok_item or not character then
+                log("snapshot_embedded_heroes: item_at(" .. tostring(i) .. ") failed. error=[" .. tostring(character) .. "].")
+            elseif not character:is_null_interface() then
+                local ok_cqi, cqi = pcall(function()
+                    return character:command_queue_index()
                 end)
-
-                if ok and belongs_to_force then
-                    local agent_type = ""
-                    local type_ok, type_or_error = pcall(function()
-                        return character:character_type_key()
+                if not ok_cqi then
+                    log("snapshot_embedded_heroes: cqi failed at index [" .. tostring(i) .. "]. error=[" .. tostring(cqi) .. "].")
+                elseif cqi ~= general_cqi then
+                    local ok_data, hero_data = pcall(function()
+                        local a_type = character:character_type_key()
+                        local a_sub  = character:character_subtype_key()
+                        local a_rank = math.max(1, tonumber(character:rank()) or 1)
+                        return { agent_type = a_type, agent_subtype = a_sub, rank = a_rank, cqi = cqi }
                     end)
-                    if type_ok then
-                        agent_type = type_or_error
+                    if ok_data and hero_data and hero_data.agent_type ~= "" and hero_data.agent_subtype ~= "" then
+                        heroes[#heroes + 1] = hero_data
+                        log(
+                            "snapshot_embedded_heroes: captured hero. subtype=["
+                                .. tostring(hero_data.agent_subtype)
+                                .. "], rank=["
+                                .. tostring(hero_data.rank)
+                                .. "], cqi=["
+                                .. tostring(cqi)
+                                .. "]."
+                        )
+                    elseif not ok_data then
+                        log("snapshot_embedded_heroes: read failed at index [" .. tostring(i) .. "]. error=[" .. tostring(hero_data) .. "].")
                     end
-
-                    local agent_subtype = character:character_subtype_key()
-                    if agent_type ~= "" and agent_subtype ~= "" then
-                        heroes[#heroes + 1] = {
-                            agent_type = agent_type,
-                            agent_subtype = agent_subtype,
-                            rank = math.max(1, tonumber(character:rank()) or 1),
-                            cqi = character:command_queue_index(),
-                        }
-                    end
-                elseif not ok then
-                    log("snapshot_embedded_heroes could not inspect character embedded state. error=[" .. tostring(belongs_to_force) .. "].")
                 end
             end
         end
@@ -444,26 +459,44 @@ function force_snapshot.new(context)
             return
         end
 
+        log("capture_pre_battle_force_snapshot: step 1 – snapshot_force_units.")
         local unit_keys = self.snapshot_force_units(force)
-        local embedded_heroes = self.snapshot_embedded_heroes(force)
-        local general = force:general_character()
-        local general_rank = 1
-        if general and not general:is_null_interface() then
-            general_rank = general:rank()
+
+        log("capture_pre_battle_force_snapshot: step 2 – snapshot_embedded_heroes.")
+        local embedded_heroes = {}
+        local ok_heroes, err_heroes = pcall(function()
+            embedded_heroes = self.snapshot_embedded_heroes(force)
+        end)
+        if not ok_heroes then
+            log("capture_pre_battle_force_snapshot: snapshot_embedded_heroes raised an error. error=[" .. tostring(err_heroes) .. "]. Proceeding with empty hero list.")
+            embedded_heroes = {}
         end
-        log("capture_pre_battle_force_snapshot encoding snapshot. units=[" .. tostring(#unit_keys) .. "]")
-        set_saved_value(save_keys.pre_battle_unit_snapshot, self.encode_unit_snapshot(unit_keys))
-        set_saved_value(save_keys.pre_battle_embedded_hero_snapshot, self.encode_embedded_hero_snapshot(embedded_heroes))
-        set_saved_value(save_keys.pre_battle_general_rank, general_rank)
+
+        log("capture_pre_battle_force_snapshot: step 3 – read general rank.")
+        local general_rank = 1
+        local ok_rank, err_rank = pcall(function()
+            local general = force:general_character()
+            if general and not general:is_null_interface() then
+                general_rank = general:rank()
+            end
+        end)
+        if not ok_rank then
+            log("capture_pre_battle_force_snapshot: general rank read failed. error=[" .. tostring(err_rank) .. "]. Defaulting to rank 1.")
+        end
+
         log(
-            "Captured pre-battle force snapshot. units=["
+            "capture_pre_battle_force_snapshot: step 4 – persisting. units=["
                 .. tostring(#unit_keys)
-                .. "], embedded_heroes=["
+                .. "], heroes=["
                 .. tostring(#embedded_heroes)
                 .. "], general_rank=["
                 .. tostring(general_rank)
                 .. "]."
         )
+        set_saved_value(save_keys.pre_battle_unit_snapshot, self.encode_unit_snapshot(unit_keys))
+        set_saved_value(save_keys.pre_battle_embedded_hero_snapshot, self.encode_embedded_hero_snapshot(embedded_heroes))
+        set_saved_value(save_keys.pre_battle_general_rank, general_rank)
+        log("capture_pre_battle_force_snapshot completed.")
     end
 
     function self.restore_player_force_after_battle()
