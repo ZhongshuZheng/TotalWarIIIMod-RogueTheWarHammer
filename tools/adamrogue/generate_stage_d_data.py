@@ -1713,7 +1713,7 @@ def main() -> None:
         "campaign_payload_ui_details_description_adamrogue_destination_payload_delay\t[[col:yellow]]保留当前候选，下次点击入口时继续选择。[[/col]]\tfalse"
     )
     en_loc_lines.append(
-        "campaign_payload_ui_details_description_adamrogue_destination_payload_delay\t[[col:yellow]]Keep the current destination candidates and choose again later through the entry button.[[/col]]\tfalse"
+        "campaign_payload_ui_details_description_adamrogue_destination_payload_delay\t[[col:yellow]]Keep the current candidates and choose again the next time you press the button.[[/col]]\tfalse"
     )
 
     replace_block(REPO_ROOT / "text" / "db" / "adamrogue_mvp_CN.loc.tsv", cn_loc_lines)
