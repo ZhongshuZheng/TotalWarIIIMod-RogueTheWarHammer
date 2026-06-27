@@ -16,6 +16,7 @@ local adamrogue_battle_generator_module = require("adamrogue_battle_generator")
 local adamrogue_ancillary_generator_module = require("adamrogue_ancillary_generator")
 local adamrogue_force_snapshot_module = require("adamrogue_force_snapshot")
 local adamrogue_enemy_skill_allocator_module = require("adamrogue_enemy_skill_allocator")
+local adamrogue_runtime_state_module = require("adamrogue_runtime_state")
 
 local BUTTON_CONTEXT_PREFIX = "adamrogue_phase_a_entry"
 local AUTO_RESUME_ON_TURN_START = false
@@ -72,59 +73,8 @@ local EVENT_TYPE = {
 
 local BATTLE_TIER = adamrogue_data_cth.BATTLE_TIER
 
-local STATE = {
-    INIT = "INIT",
-    ARMY_PREVIEW_PENDING = "ARMY_PREVIEW_PENDING",
-    HERO_REWARD_PENDING = "HERO_REWARD_PENDING",
-    HERO_REWARD_FULL_PENDING = "HERO_REWARD_FULL_PENDING",
-    UNIT_REWARD_PENDING = "UNIT_REWARD_PENDING",
-    BATTLE_PENDING = "BATTLE_PENDING",
-    EQUIPMENT_REWARD_PENDING = "EQUIPMENT_REWARD_PENDING",
-    DESTINATION_PENDING = "DESTINATION_PENDING",
-    PAUSED = "PAUSED",
-    GAME_OVER = "GAME_OVER"
-}
-
-local SAVE_KEYS = {
-    run_started = "adamrogue_run_started",
-    player_faction_key = "adamrogue_player_faction_key",
-    player_force_cqi = "adamrogue_force_cqi",
-    player_leader_cqi = "adamrogue_leader_cqi",
-    current_state = "adamrogue_current_state",
-    paused_from_state = "adamrogue_paused_from_state",
-    current_event_type = "adamrogue_current_event_type",
-    current_event_key = "adamrogue_current_event_key",
-    current_event_seed = "adamrogue_current_event_seed",
-    current_event_payload = "adamrogue_current_event_payload",
-    last_reward_unit = "adamrogue_last_reward_unit",
-    last_reward_ancillary = "adamrogue_last_reward_ancillary",
-    last_battle_result = "adamrogue_last_battle_result",
-    completed_battle_count = "adamrogue_completed_battle_count",
-    victory_count = "adamrogue_victory_count",
-    defeat_count = "adamrogue_defeat_count",
-    consecutive_defeat_count = "adamrogue_consecutive_defeat_count",
-    last_battle_force_source = "adamrogue_last_battle_force_source",
-    last_battle_budget = "adamrogue_last_battle_budget",
-    pre_battle_unit_snapshot = "adamrogue_pre_battle_unit_snapshot",
-    pre_battle_embedded_hero_snapshot = "adamrogue_pre_battle_embedded_hero_snapshot",
-    pre_battle_general_rank = "adamrogue_pre_battle_general_rank",
-    player_general_subtype = "adamrogue_player_general_subtype",
-    current_cycle = "adamrogue_current_cycle",
-    difficulty_level = "adamrogue_difficulty_level",
-    enemy_faction_key = "adamrogue_enemy_faction_key",
-    enemy_force_cqi = "adamrogue_enemy_force_cqi",
-    enemy_leader_cqi = "adamrogue_enemy_leader_cqi",
-    enemy_agent_cqi = "adamrogue_enemy_agent_cqi",
-    current_node_key = "adamrogue_current_node_key",
-    current_node_faction_key = "adamrogue_current_node_faction_key",
-    destination_candidate_node_keys = "adamrogue_destination_candidate_node_keys",
-    destination_candidate_faction_keys = "adamrogue_destination_candidate_faction_keys",
-    destination_leave_current_enabled = "adamrogue_destination_leave_current_enabled",
-    destination_selection_generated = "adamrogue_destination_selection_generated",
-    destination_generation_seed = "adamrogue_destination_generation_seed",
-    destination_generation_attempts = "adamrogue_destination_generation_attempts",
-    initial_peace_applied = "adamrogue_initial_peace_applied"
-}
+local STATE = adamrogue_runtime_state_module.STATE
+local SAVE_KEYS = adamrogue_runtime_state_module.SAVE_KEYS
 
 local BATTLE_UNIT_POOLS_BY_CONTENT_FACTION = adamrogue_data_battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION
 
@@ -159,18 +109,6 @@ local function log(message)
     logfile:close()
 end
 
-local function get_saved_value(key, default_value)
-    local value = cm:get_saved_value(key)
-    if value == nil then
-        return default_value
-    end
-    return value
-end
-
-local function set_saved_value(key, value)
-    cm:set_saved_value(key, value)
-end
-
 local function split_string(input, delimiter)
     local result = {}
     if not input or input == "" then
@@ -185,9 +123,30 @@ local function split_string(input, delimiter)
     return result
 end
 
-local function get_current_state()
-    return get_saved_value(SAVE_KEYS.current_state, STATE.INIT)
-end
+local adamrogue_runtime_state = adamrogue_runtime_state_module.new({
+    cm = cm,
+    log = log,
+    state_keys = STATE,
+    save_keys = SAVE_KEYS,
+    default_state = STATE.INIT
+})
+
+local get_saved_value = adamrogue_runtime_state.get_saved_value
+local set_saved_value = adamrogue_runtime_state.set_saved_value
+local get_current_state = adamrogue_runtime_state.get_current_state
+local set_current_state = adamrogue_runtime_state.set_current_state
+local set_paused_state = adamrogue_runtime_state.set_paused_state
+local get_paused_from_state = adamrogue_runtime_state.get_paused_from_state
+local encode_payload = adamrogue_runtime_state.encode_payload
+local decode_payload = adamrogue_runtime_state.decode_payload
+local get_saved_payload_field = adamrogue_runtime_state.get_saved_payload_field
+local get_current_event_type = adamrogue_runtime_state.get_current_event_type
+local get_current_event_key = adamrogue_runtime_state.get_current_event_key
+local get_current_event_seed = adamrogue_runtime_state.get_current_event_seed
+local set_current_event_context = adamrogue_runtime_state.set_current_event_context
+local clear_current_event_context = adamrogue_runtime_state.clear_current_event_context
+
+get_current_event_payload = adamrogue_runtime_state.get_current_event_payload
 
 local function get_current_cycle()
     local cycle = tonumber(get_saved_value(SAVE_KEYS.current_cycle, DEFAULT_CURRENT_CYCLE)) or DEFAULT_CURRENT_CYCLE
@@ -209,12 +168,6 @@ end
 local function get_difficulty_level()
     local saved_level = tostring(get_saved_value(SAVE_KEYS.difficulty_level, DEFAULT_DIFFICULTY_LEVEL) or DEFAULT_DIFFICULTY_LEVEL)
     return adamrogue_balance_config.normalize_difficulty_level(saved_level)
-end
-
-local function set_difficulty_level(level)
-    local normalized_level = adamrogue_balance_config.normalize_difficulty_level(level)
-    set_saved_value(SAVE_KEYS.difficulty_level, normalized_level)
-    log("Difficulty -> " .. tostring(normalized_level))
 end
 
 local function ensure_balance_state_initialized(reason)
@@ -685,26 +638,6 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
     return unit_list, unit_list, total_value, resolved_faction_key or player_faction_key
 end
 
-local function set_current_state(state)
-    set_saved_value(SAVE_KEYS.current_state, state)
-    log("State -> " .. state)
-end
-
-local function set_paused_state(from_state)
-    set_saved_value(SAVE_KEYS.paused_from_state, from_state)
-    set_current_state(STATE.PAUSED)
-    log("Paused from state -> " .. tostring(from_state))
-end
-
-local function get_paused_from_state()
-    local paused_from_state = get_saved_value(SAVE_KEYS.paused_from_state, STATE.INIT)
-    if paused_from_state == nil or paused_from_state == "" then
-        return STATE.INIT
-    end
-
-    return paused_from_state
-end
-
 local function is_supported_runtime_state(state)
     return state == STATE.INIT
         or state == STATE.HERO_REWARD_PENDING
@@ -769,20 +702,6 @@ end
 
 local function get_saved_player_force()
     local general = get_saved_player_general()
-    if not general or not general:has_military_force() then
-        return nil
-    end
-
-    local force = general:military_force()
-    if force:is_null_interface() then
-        return nil
-    end
-
-    return force
-end
-
-local function get_saved_enemy_force()
-    local general = get_saved_enemy_general()
     if not general or not general:has_military_force() then
         return nil
     end
@@ -1037,40 +956,6 @@ local function get_spawn_region_and_position_for_faction(faction)
     )
 
     return region_key, x, y
-end
-
-local function find_enemy_spawn_near_player(enemy_faction_key, player_general)
-    local x, y = cm:find_valid_spawn_location_for_character_from_character(
-        enemy_faction_key,
-        cm:char_lookup_str(player_general),
-        true,
-        6
-    )
-
-    if x >= 0 and y >= 0 then
-        return x, y, "from_character"
-    end
-
-    x, y = cm:find_valid_spawn_location_for_character_from_position(
-        enemy_faction_key,
-        player_general:logical_position_x(),
-        player_general:logical_position_y(),
-        true
-    )
-
-    if x >= 0 and y >= 0 then
-        return x, y, "from_position"
-    end
-
-    local player_faction = player_general:faction()
-    if player_faction and not player_faction:is_null_interface() then
-        local _, fallback_x, fallback_y = get_spawn_region_and_position_for_faction(player_faction)
-        if fallback_x and fallback_y then
-            return fallback_x, fallback_y, "player_faction_region"
-        end
-    end
-
-    return -1, -1, "not_found"
 end
 
 local function find_alternative_enemy_spawn_position(enemy_faction_key, player_general, disallowed_x, disallowed_y)
@@ -1992,87 +1877,6 @@ local adamrogue_force_snapshot = adamrogue_force_snapshot_module.new({
 local capture_pre_battle_force_snapshot = adamrogue_force_snapshot.capture_pre_battle_force_snapshot
 local restore_player_force_after_battle = adamrogue_force_snapshot.restore_player_force_after_battle
 
-local function encode_payload(payload)
-    local entries = {}
-
-    for key, value in pairs(payload) do
-        entries[#entries + 1] = tostring(key) .. "=" .. tostring(value)
-    end
-
-    table.sort(entries)
-    return table.concat(entries, "|")
-end
-
-local function decode_payload(serialized)
-    local payload = {}
-    log("decode_payload called. serialized=[" .. tostring(serialized) .. "]")
-
-    if type(serialized) ~= "string" or serialized == "" then
-        return payload
-    end
-
-    for _, entry in ipairs(split_string(serialized, "|")) do
-        local key, value = string.match(entry, "^([^=]+)=(.*)$")
-        if key ~= nil then
-            payload[key] = value
-        else
-            log("decode_payload skipped malformed entry=[" .. tostring(entry) .. "]")
-        end
-    end
-
-    log("decode_payload completed.")
-    return payload
-end
-
-local function get_saved_payload_field(field_name, default_value)
-    log("get_saved_payload_field requested. field=[" .. tostring(field_name) .. "]")
-    local serialized_before_decode = get_saved_value(SAVE_KEYS.current_event_payload, "")
-    log(
-        "get_saved_payload_field raw serialized payload before decode. field=["
-            .. tostring(field_name)
-            .. "], serialized=["
-            .. tostring(serialized_before_decode)
-            .. "]"
-    )
-
-    local decode_ok, payload_or_error = pcall(get_current_event_payload)
-    if not decode_ok then
-        log(
-            "get_saved_payload_field failed while decoding payload. field=["
-                .. tostring(field_name)
-                .. "], error=["
-                .. tostring(payload_or_error)
-                .. "]"
-        )
-        payload_or_error = {}
-    else
-        log("get_saved_payload_field decode step completed successfully. field=[" .. tostring(field_name) .. "]")
-    end
-
-    local payload = payload_or_error
-    local value = payload[field_name]
-    if value ~= nil and value ~= "" then
-        log("get_saved_payload_field resolved from decoded payload. field=[" .. tostring(field_name) .. "], value=[" .. tostring(value) .. "]")
-        return value
-    end
-
-    local serialized = serialized_before_decode
-    if type(serialized) ~= "string" or serialized == "" then
-        log("get_saved_payload_field fell back to default because serialized payload is empty. field=[" .. tostring(field_name) .. "]")
-        return default_value
-    end
-
-    local pattern = field_name .. "=([^|]+)"
-    local matched_value = string.match(serialized, pattern)
-    if matched_value ~= nil and matched_value ~= "" then
-        log("get_saved_payload_field resolved from serialized payload. field=[" .. tostring(field_name) .. "], value=[" .. tostring(matched_value) .. "]")
-        return matched_value
-    end
-
-    log("get_saved_payload_field returned default. field=[" .. tostring(field_name) .. "], default=[" .. tostring(default_value) .. "]")
-    return default_value
-end
-
 local function get_completed_battle_count()
     local value = get_saved_value(SAVE_KEYS.completed_battle_count, 0)
     log("get_completed_battle_count resolved value=[" .. tostring(value) .. "]")
@@ -2183,67 +1987,8 @@ local function regenerate_battle_payload_for_spawn_retry(spawn_attempt, failure_
     return payload
 end
 
-local function get_current_event_type()
-    return get_saved_value(SAVE_KEYS.current_event_type, "")
-end
-
-local function get_current_event_key()
-    return get_saved_value(SAVE_KEYS.current_event_key, "")
-end
-
-local function get_current_event_seed()
-    return get_saved_value(SAVE_KEYS.current_event_seed, 0)
-end
-
-get_current_event_payload = function()
-    local serialized = get_saved_value(SAVE_KEYS.current_event_payload, "")
-    log("get_current_event_payload called. serialized=[" .. tostring(serialized) .. "]")
-    return decode_payload(serialized)
-end
-
-local function set_current_event_context(event_type, event_key, event_seed, payload)
-    set_saved_value(SAVE_KEYS.current_event_type, event_type)
-    set_saved_value(SAVE_KEYS.current_event_key, event_key)
-    set_saved_value(SAVE_KEYS.current_event_seed, event_seed)
-    set_saved_value(SAVE_KEYS.current_event_payload, encode_payload(payload))
-
-    log(
-        "Event context saved. type=["
-            .. tostring(event_type)
-            .. "], key=["
-            .. tostring(event_key)
-            .. "], seed=["
-            .. tostring(event_seed)
-            .. "], payload=["
-            .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, ""))
-            .. "]"
-    )
-end
-
-local function clear_current_event_context()
-    set_saved_value(SAVE_KEYS.current_event_type, "")
-    set_saved_value(SAVE_KEYS.current_event_key, "")
-    set_saved_value(SAVE_KEYS.current_event_seed, 0)
-    set_saved_value(SAVE_KEYS.current_event_payload, "")
-end
-
 local function new_event_seed()
     return cm:random_number(2147483647)
-end
-
-local function force_attack_once(attacker_force_cqi, defender_force_cqi, source_label)
-    log(
-        "Launching forced test battle from ["
-            .. tostring(source_label)
-            .. "]. Attacker force CQI="
-            .. tostring(attacker_force_cqi)
-            .. ", Defender force CQI="
-            .. tostring(defender_force_cqi)
-    )
-
-    cm:callback(function()
-        cm:force_attack_of_opportunity(attacker_force_cqi, defender_force_cqi, false, true)
-    end, 0.05)
 end
 
 local function create_formal_entry_button()
