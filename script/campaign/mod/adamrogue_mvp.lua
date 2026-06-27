@@ -858,61 +858,14 @@ local function try_relocate_player_force_for_variety(reason)
         return false
     end
 
-    local region = player_general:region()
-    if not region or region:is_null_interface() then
-        region = faction:home_region()
-    end
-    if not region or region:is_null_interface() then
-        log("try_relocate_player_force_for_variety skipped because no region could be resolved. reason=[" .. tostring(reason) .. "].")
-        return false
-    end
-
-    local region_key = region:name()
-    local old_x = player_general:logical_position_x()
-    local old_y = player_general:logical_position_y()
-    local x, y, source = find_random_player_spawn_position_for_faction(faction, region_key, player_general)
-    if not x or not y then
-        log(
-            "try_relocate_player_force_for_variety skipped because no valid relocation position was found. reason=["
-                .. tostring(reason)
-                .. "], region=["
-                .. tostring(region_key)
-                .. "]."
-        )
-        return false
-    end
-
-    if x == old_x and y == old_y then
-        log(
-            "try_relocate_player_force_for_variety skipped because the resolved position matches the current position. reason=["
-                .. tostring(reason)
-                .. "], source=["
-                .. tostring(source)
-                .. "], x=["
-                .. tostring(x)
-                .. "], y=["
-                .. tostring(y)
-                .. "]."
-        )
-        return false
-    end
-
-    cm:teleport_to(cm:char_lookup_str(player_general), x, y)
+    cm:replenish_action_points(cm:char_lookup_str(player_general:command_queue_index()))
     log(
-        "Relocated player force for terrain variety. reason=["
+        "Replenished player action points for destination transition. reason=["
             .. tostring(reason)
-            .. "], region=["
-            .. tostring(region_key)
-            .. "], source=["
-            .. tostring(source)
-            .. "], from_x=["
-            .. tostring(old_x)
-            .. "], from_y=["
-            .. tostring(old_y)
-            .. "], to_x=["
-            .. tostring(x)
-            .. "], to_y=["
-            .. tostring(y)
+            .. "], faction=["
+            .. tostring(faction:name())
+            .. "], general_cqi=["
+            .. tostring(player_general:command_queue_index())
             .. "]."
     )
     return true
@@ -2211,6 +2164,7 @@ local function ensure_run_started()
             ensure_balance_state_initialized("player_force_created")
             set_saved_value(SAVE_KEYS.paused_from_state, "")
             set_current_state(STATE.INIT)
+            cm:replenish_action_points(cm:char_lookup_str(character:command_queue_index()))
 
             log(
                 "Player test force created. General CQI="
@@ -2221,6 +2175,7 @@ local function ensure_run_started()
                     .. tostring(count_units_in_force(force))
                     .. ", general_subtype=["
                     .. tostring(character:character_subtype_key())
+                    .. "], action_points_replenished=[true"
                     .. "], starting_unit_value=["
                     .. tostring(starting_unit_value)
                     .. ", current_cycle=["
