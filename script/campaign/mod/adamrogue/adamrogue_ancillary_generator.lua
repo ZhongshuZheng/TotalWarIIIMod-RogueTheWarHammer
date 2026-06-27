@@ -217,12 +217,11 @@ function ancillary_generator.new(context)
 
         local cycle_allowed_bands = self.get_allowed_rarity_bands_for_cycle(current_cycle)
         local reward_allowed_bands = self.get_allowed_rarity_bands_for_reward(current_cycle, elite_battle)
-        local selected_rarity_band = self.pick_rarity_band_for_cycle(current_cycle, reward_allowed_bands, force_highest_rarity)
         local generation_seed = cm:random_number(99999, 1)
         local generation_attempts = 0
         local fallback_steps = {}
+        local picked_rarity_bands = {}
         local payload = {
-            selected_rarity_band = selected_rarity_band,
             candidate_generation_seed = generation_seed,
             candidate_generation_attempts = 0,
             fallback_strategy_used = "none",
@@ -244,9 +243,7 @@ function ancillary_generator.new(context)
                 .. tostring(battle_tier)
                 .. "], current_cycle=["
                 .. tostring(current_cycle)
-                .. "], selected_rarity_band=["
-                .. tostring(selected_rarity_band)
-                .. "], cycle_allowed_rarity_bands=["
+                .. "], rarity_roll_mode=[per_choice], cycle_allowed_rarity_bands=["
                 .. table.concat(cycle_allowed_bands, ",")
                 .. "], reward_allowed_rarity_bands=["
                 .. table.concat(reward_allowed_bands, ",")
@@ -263,19 +260,22 @@ function ancillary_generator.new(context)
                 .. "]."
         )
 
-        -- Dilemma buttons are static: choices 0-2 bind to fixed slot categories, choice 3 is any category.
-        for choice_index, slot_key in ipairs(slot_order) do
-            local zero_based_choice = choice_index - 1
+        local function select_equipment_for_choice(zero_based_choice, slot_key, slot_label, excluded_item_keys)
+            local rolled_rarity_band = self.pick_rarity_band_for_cycle(current_cycle, reward_allowed_bands, force_highest_rarity)
+            payload["picked_rarity_band_" .. tostring(zero_based_choice)] = rolled_rarity_band
+            picked_rarity_bands[#picked_rarity_bands + 1] = rolled_rarity_band
+
             local weighted_pool = self.build_weighted_pool_for_slot(
                 slot_key,
                 battle_tier,
-                { selected_rarity_band },
+                { rolled_rarity_band },
                 player_faction_key,
                 current_node_faction_key
             )
+            weighted_pool = filter_pool_excluding_item_keys(weighted_pool, excluded_item_keys)
 
             if #weighted_pool == 0 then
-                fallback_steps[#fallback_steps + 1] = tostring(slot_key) .. ":expand_to_reward_allowed_rarities"
+                fallback_steps[#fallback_steps + 1] = tostring(slot_label) .. ":expand_to_reward_allowed_rarities"
                 weighted_pool = self.build_weighted_pool_for_slot(
                     slot_key,
                     battle_tier,
@@ -283,10 +283,11 @@ function ancillary_generator.new(context)
                     player_faction_key,
                     current_node_faction_key
                 )
+                weighted_pool = filter_pool_excluding_item_keys(weighted_pool, excluded_item_keys)
             end
 
             if #weighted_pool == 0 then
-                fallback_steps[#fallback_steps + 1] = tostring(slot_key) .. ":expand_to_any_tier_item"
+                fallback_steps[#fallback_steps + 1] = tostring(slot_label) .. ":expand_to_any_tier_item"
                 weighted_pool = self.build_weighted_pool_for_slot(
                     slot_key,
                     battle_tier,
@@ -294,101 +295,40 @@ function ancillary_generator.new(context)
                     player_faction_key,
                     current_node_faction_key
                 )
+                weighted_pool = filter_pool_excluding_item_keys(weighted_pool, excluded_item_keys)
             end
 
             if #weighted_pool == 0 then
-                log("generate_equipment_reward_payload could not produce a candidate for slot [" .. tostring(slot_key) .. "].")
-            else
-                generation_attempts = generation_attempts + 1
-                local selected_entry = weighted_pool[cm:random_number(#weighted_pool, 1)]
-                payload["ancillary_" .. tostring(zero_based_choice)] = selected_entry.item_key
-                payload["category_" .. tostring(zero_based_choice)] = selected_entry.item_category
-                payload["rarity_" .. tostring(zero_based_choice)] = selected_entry.item_rarity
-                payload["slot_" .. tostring(zero_based_choice)] = selected_entry.reward_slot
-                payload["source_scope_" .. tostring(zero_based_choice)] = selected_entry.source_scope or "unknown"
-                payload["source_faction_" .. tostring(zero_based_choice)] = selected_entry.source_faction_key or "unknown"
-                payload.candidate_count = payload.candidate_count + 1
-
                 log(
-                    "generate_equipment_reward_payload selected ancillary for choice=["
+                    "generate_equipment_reward_payload could not produce a candidate for slot ["
+                        .. tostring(slot_label)
+                        .. "], choice=["
                         .. tostring(zero_based_choice)
-                        .. "], slot=["
-                        .. tostring(slot_key)
-                        .. "], item_key=["
-                        .. tostring(selected_entry.item_key)
-                        .. "], category=["
-                        .. tostring(selected_entry.item_category)
-                        .. "], rarity=["
-                        .. tostring(selected_entry.item_rarity)
-                        .. "], source_scope=["
-                        .. tostring(selected_entry.source_scope)
-                        .. "], source_faction_key=["
-                        .. tostring(selected_entry.source_faction_key)
+                        .. "], rolled_rarity_band=["
+                        .. tostring(rolled_rarity_band)
                         .. "]."
                 )
+                return nil
             end
-        end
 
-        local wildcard_choice_index = 3
-        local wildcard_slot_key = nil
-        local excluded_item_keys = {}
-        for choice_index = 0, wildcard_choice_index - 1 do
-            local selected_item_key = payload["ancillary_" .. tostring(choice_index)]
-            if selected_item_key and selected_item_key ~= "" then
-                excluded_item_keys[selected_item_key] = true
-            end
-        end
-
-        local wildcard_pool = self.build_weighted_pool_for_slot(
-            wildcard_slot_key,
-            battle_tier,
-            { selected_rarity_band },
-            player_faction_key,
-            current_node_faction_key
-        )
-        wildcard_pool = filter_pool_excluding_item_keys(wildcard_pool, excluded_item_keys)
-
-        if #wildcard_pool == 0 then
-            fallback_steps[#fallback_steps + 1] = "any_slot:expand_to_reward_allowed_rarities"
-            wildcard_pool = self.build_weighted_pool_for_slot(
-                wildcard_slot_key,
-                battle_tier,
-                reward_allowed_bands,
-                player_faction_key,
-                current_node_faction_key
-            )
-            wildcard_pool = filter_pool_excluding_item_keys(wildcard_pool, excluded_item_keys)
-        end
-
-        if #wildcard_pool == 0 then
-            fallback_steps[#fallback_steps + 1] = "any_slot:expand_to_any_tier_item"
-            wildcard_pool = self.build_weighted_pool_for_slot(
-                wildcard_slot_key,
-                battle_tier,
-                nil,
-                player_faction_key,
-                current_node_faction_key
-            )
-            wildcard_pool = filter_pool_excluding_item_keys(wildcard_pool, excluded_item_keys)
-        end
-
-        if #wildcard_pool == 0 then
-            log("generate_equipment_reward_payload could not produce a wildcard candidate for any_slot.")
-        else
             generation_attempts = generation_attempts + 1
-            local selected_entry = wildcard_pool[cm:random_number(#wildcard_pool, 1)]
-            payload["ancillary_" .. tostring(wildcard_choice_index)] = selected_entry.item_key
-            payload["category_" .. tostring(wildcard_choice_index)] = selected_entry.item_category
-            payload["rarity_" .. tostring(wildcard_choice_index)] = selected_entry.item_rarity
-            payload["slot_" .. tostring(wildcard_choice_index)] = "any_slot"
-            payload["source_scope_" .. tostring(wildcard_choice_index)] = selected_entry.source_scope or "unknown"
-            payload["source_faction_" .. tostring(wildcard_choice_index)] = selected_entry.source_faction_key or "unknown"
+            local selected_entry = weighted_pool[cm:random_number(#weighted_pool, 1)]
+            payload["ancillary_" .. tostring(zero_based_choice)] = selected_entry.item_key
+            payload["category_" .. tostring(zero_based_choice)] = selected_entry.item_category
+            payload["rarity_" .. tostring(zero_based_choice)] = selected_entry.item_rarity
+            payload["slot_" .. tostring(zero_based_choice)] = slot_key or "any_slot"
+            payload["source_scope_" .. tostring(zero_based_choice)] = selected_entry.source_scope or "unknown"
+            payload["source_faction_" .. tostring(zero_based_choice)] = selected_entry.source_faction_key or "unknown"
             payload.candidate_count = payload.candidate_count + 1
 
             log(
                 "generate_equipment_reward_payload selected ancillary for choice=["
-                    .. tostring(wildcard_choice_index)
-                    .. "], slot=[any_slot], item_key=["
+                    .. tostring(zero_based_choice)
+                    .. "], slot=["
+                    .. tostring(slot_label)
+                    .. "], rolled_rarity_band=["
+                    .. tostring(rolled_rarity_band)
+                    .. "], item_key=["
                     .. tostring(selected_entry.item_key)
                     .. "], category=["
                     .. tostring(selected_entry.item_category)
@@ -400,7 +340,28 @@ function ancillary_generator.new(context)
                     .. tostring(selected_entry.source_faction_key)
                     .. "]."
             )
+            return selected_entry
         end
+
+        -- Dilemma buttons are static: choices 0-2 bind to fixed slot categories, choice 3 is any category.
+        for choice_index, slot_key in ipairs(slot_order) do
+            local zero_based_choice = choice_index - 1
+            select_equipment_for_choice(zero_based_choice, slot_key, slot_key, nil)
+        end
+
+        local wildcard_choice_index = 3
+        local excluded_item_keys = {}
+        for choice_index = 0, wildcard_choice_index - 1 do
+            local selected_item_key = payload["ancillary_" .. tostring(choice_index)]
+            if selected_item_key and selected_item_key ~= "" then
+                excluded_item_keys[selected_item_key] = true
+            end
+        end
+
+        select_equipment_for_choice(wildcard_choice_index, nil, "any_slot", excluded_item_keys)
+
+        payload.selected_rarity_bands = table.concat(picked_rarity_bands, ",")
+        payload.selected_rarity_band = payload.selected_rarity_bands
 
         payload.candidate_generation_attempts = generation_attempts
         if #fallback_steps > 0 then

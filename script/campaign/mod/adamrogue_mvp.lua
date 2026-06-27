@@ -2713,8 +2713,8 @@ local function prepare_equipment_reward_event()
             .. table.concat(rarity_context.tiers, ",")
             .. "], elite_battle=["
             .. tostring(elite_battle)
-            .. "]. selected_rarity_band=["
-            .. tostring(payload.selected_rarity_band)
+            .. "]. selected_rarity_bands=["
+            .. tostring(payload.selected_rarity_bands or payload.selected_rarity_band)
             .. "], candidate_count=["
             .. tostring(payload.candidate_count)
             .. "], fallback_strategy_used=["
