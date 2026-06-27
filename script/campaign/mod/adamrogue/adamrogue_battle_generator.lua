@@ -636,16 +636,7 @@ function battle_generator.new(context)
     end
 
     function self.create_battle_payload_from_definition(battle_definition, target_value_budget, battle_tier, spawn_retry_index, enemy_faction_key)
-        -- Serialize the hero list as a pipe-delimited string: "agent_type:agent_subtype:unit_key"
-        local hero_list_parts = {}
         local hero_list_raw = battle_definition.hero_list or {}
-        for _, hero in ipairs(hero_list_raw) do
-            hero_list_parts[#hero_list_parts + 1] = tostring(hero.agent_type)
-                .. ":" .. tostring(hero.agent_subtype)
-                .. ":" .. tostring(hero.unit_key)
-        end
-        local serialized_hero_list = table.concat(hero_list_parts, "|")
-
         local payload = {
             battle_template_key = battle_definition.template_type,
             battle_force_source = battle_definition.battle_force_source,
@@ -658,7 +649,7 @@ function battle_generator.new(context)
             enemy_general_unit_key = battle_definition.lord_unit_key or "",
             enemy_general_unit_value = battle_definition.enemy_general_unit_value or 0,
             enemy_unit_list = table.concat(battle_definition.unit_list, ","),
-            enemy_hero_list = serialized_hero_list,
+            enemy_hero_count = #hero_list_raw,
             enemy_agent_subtype = battle_definition.embedded_agent_subtype,
             generated_total_value = battle_definition.generated_total_value,
             total_hero_value = battle_definition.total_hero_value or 0,
@@ -672,6 +663,15 @@ function battle_generator.new(context)
             pause_choice = 1
         }
 
+        for index, hero in ipairs(hero_list_raw) do
+            local payload_index = index - 1
+            local prefix = "enemy_hero_" .. tostring(payload_index)
+            payload[prefix .. "_agent_type"] = tostring(hero.agent_type or "")
+            payload[prefix .. "_agent_subtype"] = tostring(hero.agent_subtype or "")
+            payload[prefix .. "_unit_key"] = tostring(hero.unit_key or "")
+            payload[prefix .. "_unit_value"] = tonumber(hero.unit_value) or 0
+        end
+
         log(
             "create_battle_payload_from_definition completed. target_value_budget=["
                 .. tostring(target_value_budget)
@@ -683,8 +683,26 @@ function battle_generator.new(context)
                 .. tostring(payload.enemy_unit_list)
                 .. "], enemy_general_unit_value=["
                 .. tostring(payload.enemy_general_unit_value)
+                .. "], enemy_hero_count=["
+                .. tostring(payload.enemy_hero_count)
                 .. "]."
         )
+        for index = 0, (#hero_list_raw - 1) do
+            local prefix = "enemy_hero_" .. tostring(index)
+            log(
+                "create_battle_payload_from_definition hero entry. index=["
+                    .. tostring(index)
+                    .. "], agent_type=["
+                    .. tostring(payload[prefix .. "_agent_type"])
+                    .. "], agent_subtype=["
+                    .. tostring(payload[prefix .. "_agent_subtype"])
+                    .. "], unit_key=["
+                    .. tostring(payload[prefix .. "_unit_key"])
+                    .. "], unit_value=["
+                    .. tostring(payload[prefix .. "_unit_value"])
+                    .. "]."
+            )
+        end
         return payload
     end
 

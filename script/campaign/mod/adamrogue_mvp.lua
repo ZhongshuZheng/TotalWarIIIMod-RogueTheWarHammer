@@ -1603,6 +1603,7 @@ local create_battle_payload_from_definition = adamrogue_battle_generator.create_
 local log_unit_list_details = adamrogue_battle_generator.log_unit_list_details
 
 local unit_value_lookup_cache = nil
+local character_value_lookup_cache = nil
 
 local function build_unit_value_lookup()
     if unit_value_lookup_cache then
@@ -1638,12 +1639,63 @@ local function build_unit_value_lookup()
     return lookup
 end
 
+local function build_character_value_lookup()
+    if character_value_lookup_cache then
+        return character_value_lookup_cache
+    end
+
+    local lookup = {}
+
+    local function record_character_value(subtype_key, unit_value, source_label)
+        if not subtype_key or subtype_key == "" then
+            return
+        end
+        local normalized_value = tonumber(unit_value) or 0
+        if not lookup[subtype_key] or normalized_value > lookup[subtype_key].value then
+            lookup[subtype_key] = {
+                value = normalized_value,
+                source = source_label or "unknown"
+            }
+        end
+    end
+
+    for faction_key, options in pairs(PLAYER_GENERAL_OPTIONS_BY_FACTION) do
+        for _, option in ipairs(options or {}) do
+            record_character_value(option.subtype, option.unit_value, "player_general_options:" .. tostring(faction_key))
+        end
+    end
+
+    for faction_key, options in pairs(ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION) do
+        for _, option in ipairs(options or {}) do
+            record_character_value(option.agent_subtype, option.unit_value, "enemy_general_options:" .. tostring(faction_key))
+        end
+    end
+
+    for faction_key, hero_pool in pairs(ENEMY_HERO_POOLS_BY_CONTENT_FACTION) do
+        for _, hero_entry in ipairs(hero_pool or {}) do
+            record_character_value(hero_entry.agent_subtype, hero_entry.unit_value, "enemy_hero_pool:" .. tostring(faction_key))
+        end
+    end
+
+    character_value_lookup_cache = lookup
+    return lookup
+end
+
 local function get_unit_value_for_key(unit_key)
     if not unit_key or unit_key == "" then
         return 0
     end
 
     return tonumber(build_unit_value_lookup()[unit_key]) or 0
+end
+
+local function get_character_value_for_subtype(subtype_key)
+    if not subtype_key or subtype_key == "" then
+        return 0
+    end
+
+    local entry = build_character_value_lookup()[subtype_key]
+    return tonumber(entry and entry.value) or 0
 end
 
 local function get_force_total_unit_value(force)
@@ -1663,11 +1715,63 @@ local function get_force_total_unit_value(force)
     return total_value
 end
 
+local function get_force_embedded_hero_total_value(force)
+    if not force or force:is_null_interface() then
+        return 0
+    end
+
+    local total_value = 0
+    local ok_list, char_list = pcall(function()
+        return force:character_list()
+    end)
+    if not ok_list or not char_list then
+        return 0
+    end
+
+    local general_cqi = 0
+    local ok_general = pcall(function()
+        local general = force:general_character()
+        if general and not general:is_null_interface() then
+            general_cqi = general:command_queue_index()
+        end
+    end)
+    if not ok_general then
+        general_cqi = 0
+    end
+
+    for i = 0, char_list:num_items() - 1 do
+        local ok_character, character = pcall(function()
+            return char_list:item_at(i)
+        end)
+        if ok_character and character and not character:is_null_interface() then
+            local ok_cqi, cqi = pcall(function()
+                return character:command_queue_index()
+            end)
+            if ok_cqi and cqi ~= general_cqi then
+                local ok_subtype, subtype_key = pcall(function()
+                    return character:character_subtype_key()
+                end)
+                if ok_subtype then
+                    total_value = total_value + get_character_value_for_subtype(subtype_key)
+                end
+            end
+        end
+    end
+
+    return total_value
+end
+
 local function log_battle_balance_check(payload)
     local current_cycle = tonumber(payload and payload.current_cycle) or get_current_cycle()
     local player_force = get_saved_player_force()
-    local player_value = player_force and get_force_total_unit_value(player_force) or 0
-    local enemy_value = tonumber(payload and payload.generated_total_value) or 0
+    local player_unit_value = player_force and get_force_total_unit_value(player_force) or 0
+    local player_hero_value = player_force and get_force_embedded_hero_total_value(player_force) or 0
+    local player_value = player_unit_value + player_hero_value
+    local enemy_budget_value = tonumber(payload and payload.target_value_budget) or 0
+    local enemy_unit_value = tonumber(payload and payload.generated_total_value) or 0
+    local enemy_general_value = tonumber(payload and payload.enemy_general_unit_value) or 0
+    local enemy_hero_value = tonumber(payload and payload.total_hero_value) or 0
+    local enemy_value = enemy_unit_value + enemy_general_value + enemy_hero_value
 
     log(
         "[Balance Check] TURN:["
@@ -1676,6 +1780,18 @@ local function log_battle_balance_check(payload)
             .. tostring(player_value)
             .. "] VS Enemy Value ["
             .. tostring(enemy_value)
+            .. "] Player Units ["
+            .. tostring(player_unit_value)
+            .. "] Player Heroes ["
+            .. tostring(player_hero_value)
+            .. "] Enemy Units ["
+            .. tostring(enemy_unit_value)
+            .. "] Enemy Budget ["
+            .. tostring(enemy_budget_value)
+            .. "] Enemy General ["
+            .. tostring(enemy_general_value)
+            .. "] Enemy Heroes ["
+            .. tostring(enemy_hero_value)
             .. "]"
     )
 end
@@ -2720,6 +2836,29 @@ local function prepare_battle_event()
             .. tostring(current_node.faction_key)
             .. "]."
     )
+    log(
+        "Prepared battle payload hero summary. enemy_hero_count=["
+            .. tostring(payload.enemy_hero_count or 0)
+            .. "], total_hero_value=["
+            .. tostring(payload.total_hero_value or 0)
+            .. "]."
+    )
+    for hero_index = 0, (math.max(0, tonumber(payload.enemy_hero_count) or 0) - 1) do
+        local prefix = "enemy_hero_" .. tostring(hero_index)
+        log(
+            "Prepared battle payload hero entry. index=["
+                .. tostring(hero_index)
+                .. "], agent_type=["
+                .. tostring(payload[prefix .. "_agent_type"] or "")
+                .. "], agent_subtype=["
+                .. tostring(payload[prefix .. "_agent_subtype"] or "")
+                .. "], unit_key=["
+                .. tostring(payload[prefix .. "_unit_key"] or "")
+                .. "], unit_value=["
+                .. tostring(payload[prefix .. "_unit_value"] or 0)
+                .. "]."
+        )
+    end
     log_unit_list_details("prepare_battle_event_generated_payload", payload.enemy_unit_list)
     log(
         "Prepared battle event for faction ["
@@ -3874,6 +4013,128 @@ end
 local spawn_enemy_force_and_start_battle
 local spawn_enemy_force_with_direct_create_force_fallback
 
+local function decode_enemy_hero_entries_from_payload(payload, log_context)
+    local hero_entries = {}
+    local context_label = log_context or "battle_payload"
+    if not payload or type(payload) ~= "table" then
+        log("decode_enemy_hero_entries_from_payload aborted because payload is invalid. context=[" .. tostring(context_label) .. "].")
+        return hero_entries
+    end
+
+    local declared_count = math.max(0, math.floor(tonumber(payload.enemy_hero_count) or 0))
+    if declared_count > 0 then
+        for index = 0, declared_count - 1 do
+            local prefix = "enemy_hero_" .. tostring(index)
+            local agent_type = tostring(payload[prefix .. "_agent_type"] or "")
+            local agent_subtype = tostring(payload[prefix .. "_agent_subtype"] or "")
+            local unit_key = tostring(payload[prefix .. "_unit_key"] or "")
+            local unit_value = tonumber(payload[prefix .. "_unit_value"]) or 0
+            if agent_type ~= "" and agent_subtype ~= "" then
+                hero_entries[#hero_entries + 1] = {
+                    index = index,
+                    agent_type = agent_type,
+                    agent_subtype = agent_subtype,
+                    unit_key = unit_key,
+                    unit_value = unit_value,
+                }
+                log(
+                    "decode_enemy_hero_entries_from_payload expanded hero entry accepted. context=["
+                        .. tostring(context_label)
+                        .. "], index=["
+                        .. tostring(index)
+                        .. "], agent_type=["
+                        .. tostring(agent_type)
+                        .. "], agent_subtype=["
+                        .. tostring(agent_subtype)
+                        .. "], unit_key=["
+                        .. tostring(unit_key)
+                        .. "], unit_value=["
+                        .. tostring(unit_value)
+                        .. "]."
+                )
+            else
+                log(
+                    "decode_enemy_hero_entries_from_payload expanded hero entry skipped because required fields are missing. context=["
+                        .. tostring(context_label)
+                        .. "], index=["
+                        .. tostring(index)
+                        .. "], agent_type=["
+                        .. tostring(agent_type)
+                        .. "], agent_subtype=["
+                        .. tostring(agent_subtype)
+                        .. "]."
+                )
+            end
+        end
+        log(
+            "decode_enemy_hero_entries_from_payload completed using expanded payload fields. context=["
+                .. tostring(context_label)
+                .. "], declared_count=["
+                .. tostring(declared_count)
+                .. "], parsed_count=["
+                .. tostring(#hero_entries)
+                .. "]."
+        )
+        return hero_entries
+    end
+
+    local legacy_serialized_hero_list = tostring(payload.enemy_hero_list or "")
+    if legacy_serialized_hero_list == "" then
+        log("decode_enemy_hero_entries_from_payload found no enemy hero data. context=[" .. tostring(context_label) .. "].")
+        return hero_entries
+    end
+
+    for index, hero_entry_str in ipairs(split_string(legacy_serialized_hero_list, "|")) do
+        local parts = split_string(hero_entry_str, ":")
+        local agent_type = parts[1] or ""
+        local agent_subtype = parts[2] or ""
+        local unit_key = parts[3] or ""
+        if agent_type ~= "" and agent_subtype ~= "" then
+            hero_entries[#hero_entries + 1] = {
+                index = index - 1,
+                agent_type = agent_type,
+                agent_subtype = agent_subtype,
+                unit_key = unit_key,
+                unit_value = 0,
+            }
+            log(
+                "decode_enemy_hero_entries_from_payload legacy hero entry accepted. context=["
+                    .. tostring(context_label)
+                    .. "], index=["
+                    .. tostring(index - 1)
+                    .. "], agent_type=["
+                    .. tostring(agent_type)
+                    .. "], agent_subtype=["
+                    .. tostring(agent_subtype)
+                    .. "], unit_key=["
+                    .. tostring(unit_key)
+                    .. "]."
+            )
+        else
+            log(
+                "decode_enemy_hero_entries_from_payload legacy hero entry skipped because required fields are missing. context=["
+                    .. tostring(context_label)
+                    .. "], index=["
+                    .. tostring(index - 1)
+                    .. "], raw_entry=["
+                    .. tostring(hero_entry_str)
+                    .. "]."
+            )
+        end
+    end
+
+    log(
+        "decode_enemy_hero_entries_from_payload completed using legacy enemy_hero_list fallback. context=["
+            .. tostring(context_label)
+            .. "], parsed_count=["
+            .. tostring(#hero_entries)
+            .. "], raw_legacy_value=["
+            .. tostring(legacy_serialized_hero_list)
+            .. "]."
+    )
+    return hero_entries
+end
+
 local function issue_enemy_force_spawn_with_general(
     enemy_faction_key,
     enemy_unit_list,
@@ -3884,7 +4145,7 @@ local function issue_enemy_force_spawn_with_general(
     spawn_x,
     spawn_y,
     spawn_reason_label,
-    enemy_hero_list_str
+    enemy_hero_entries
 )
     log(
         "issue_enemy_force_spawn_with_general started. spawn_reason_label=["
@@ -3903,6 +4164,8 @@ local function issue_enemy_force_spawn_with_general(
             .. tostring(spawn_y)
             .. "], enemy_unit_list=["
             .. tostring(enemy_unit_list)
+            .. "], enemy_hero_count=["
+            .. tostring(enemy_hero_entries and #enemy_hero_entries or 0)
             .. "]."
     )
 
@@ -3964,21 +4227,23 @@ local function issue_enemy_force_spawn_with_general(
                 cm:disable_event_feed_events(false, "", "", "diplomacy_war_declared")
             end, 0.2)
 
-            -- Parse valid hero entries from the serialized list up front so we know the count.
-            local hero_entries_valid = {}
-            if enemy_force_cqi and enemy_force_cqi > 0
-                and enemy_hero_list_str and enemy_hero_list_str ~= "" then
-                for _, hero_entry_str in ipairs(split_string(enemy_hero_list_str, "|")) do
-                    local parts = split_string(hero_entry_str, ":")
-                    local h_agent_type = parts[1] or ""
-                    local h_agent_subtype = parts[2] or ""
-                    if h_agent_type ~= "" and h_agent_subtype ~= "" then
-                        hero_entries_valid[#hero_entries_valid + 1] = {
-                            agent_type = h_agent_type,
-                            agent_subtype = h_agent_subtype,
-                        }
-                    end
-                end
+            local hero_entries_valid = enemy_hero_entries or {}
+            for hero_index, hero_entry in ipairs(hero_entries_valid) do
+                log(
+                    "issue_enemy_force_spawn_with_general resolved hero entry. hero_index=["
+                        .. tostring(hero_index)
+                        .. "], payload_index=["
+                        .. tostring(hero_entry.index)
+                        .. "], agent_type=["
+                        .. tostring(hero_entry.agent_type)
+                        .. "], agent_subtype=["
+                        .. tostring(hero_entry.agent_subtype)
+                        .. "], unit_key=["
+                        .. tostring(hero_entry.unit_key or "")
+                        .. "], unit_value=["
+                        .. tostring(hero_entry.unit_value or 0)
+                        .. "]."
+                )
             end
 
             -- Counted battle launch: fire force_attack_of_opportunity only after the lord
@@ -4077,27 +4342,68 @@ local function issue_enemy_force_spawn_with_general(
                     .. tostring(pending_setup_count)
                     .. "], hero_target_rank=["
                     .. tostring(hero_target_rank)
-                    .. "], enemy_force_cqi=["
+                .. "], enemy_force_cqi=["
                     .. tostring(enemy_force_cqi)
                     .. "]."
             )
-            for hero_index, hero_entry in ipairs(hero_entries_valid) do
+            local function continue_enemy_hero_spawn_chain(hero_index)
+                local hero_entry = hero_entries_valid[hero_index]
+                if not hero_entry then
+                    log(
+                        "enemy_hero_spawn_chain completed. processed_count=["
+                            .. tostring(#hero_entries_valid)
+                            .. "], enemy_force_cqi=["
+                            .. tostring(enemy_force_cqi)
+                            .. "]."
+                    )
+                    return
+                end
+
                 local h_agent_type = hero_entry.agent_type
                 local h_agent_subtype = hero_entry.agent_subtype
+                local payload_index = tonumber(hero_entry.index) or (hero_index - 1)
                 local listener_name = MODULE_KEY
                     .. "_enemy_hero_created_"
                     .. tostring(enemy_force_cqi)
                     .. "_"
                     .. tostring(hero_index)
+                local hero_step_finished = false
+
+                local function finish_current_hero(result_label)
+                    if hero_step_finished then
+                        return
+                    end
+                    hero_step_finished = true
+                    core:remove_listener(listener_name)
+                    log(
+                        "enemy_hero_spawn_chain step finished. hero_index=["
+                            .. tostring(hero_index)
+                            .. "], payload_index=["
+                            .. tostring(payload_index)
+                            .. "], agent_subtype=["
+                            .. tostring(h_agent_subtype)
+                            .. "], result=["
+                            .. tostring(result_label)
+                            .. "]."
+                    )
+                    on_character_setup_done("hero_" .. tostring(hero_index) .. "_" .. tostring(result_label))
+                    cm:callback(function()
+                        continue_enemy_hero_spawn_chain(hero_index + 1)
+                    end, 0.05)
+                end
 
                 log(
-                    "hero_setup_dispatch: hero_index=["
+                    "enemy_hero_spawn_chain dispatching hero spawn. hero_index=["
                         .. tostring(hero_index)
+                        .. "], payload_index=["
+                        .. tostring(payload_index)
                         .. "], agent_type=["
                         .. tostring(h_agent_type)
                         .. "], agent_subtype=["
                         .. tostring(h_agent_subtype)
-                        .. "]. Scheduling spawn_agent_at_military_force in 0.05s."
+                        .. "], enemy_force_cqi=["
+                        .. tostring(enemy_force_cqi)
+                        .. "]."
                 )
 
                 core:remove_listener(listener_name)
@@ -4115,8 +4421,10 @@ local function issue_enemy_force_spawn_with_general(
                             and created_character:faction():name()
                             or ""
                         log(
-                            "hero_character_created_listener_seen: listener=["
+                            "enemy_hero_spawn_chain listener seen CharacterCreated. listener=["
                                 .. tostring(listener_name)
+                                .. "], hero_index=["
+                                .. tostring(hero_index)
                                 .. "], expected_faction=["
                                 .. tostring(enemy_faction_key)
                                 .. "], created_faction=["
@@ -4136,8 +4444,10 @@ local function issue_enemy_force_spawn_with_general(
                         local created_character = ctx:character()
                         local hero_cqi = created_character and created_character:command_queue_index() or 0
                         log(
-                            "hero_character_created_listener_matched: listener=["
+                            "enemy_hero_spawn_chain listener matched CharacterCreated. listener=["
                                 .. tostring(listener_name)
+                                .. "], hero_index=["
+                                .. tostring(hero_index)
                                 .. "], hero_cqi=["
                                 .. tostring(hero_cqi)
                                 .. "], agent_subtype=["
@@ -4149,31 +4459,37 @@ local function issue_enemy_force_spawn_with_general(
                             local fresh_force = cm:get_military_force_by_cqi(enemy_force_cqi)
                             if not fresh_force or fresh_force:is_null_interface() then
                                 log(
-                                    "hero_embed_callback: force no longer valid. enemy_force_cqi=["
+                                    "enemy_hero_spawn_chain embed aborted because force is invalid. hero_index=["
+                                        .. tostring(hero_index)
+                                        .. "], enemy_force_cqi=["
                                         .. tostring(enemy_force_cqi)
                                         .. "], agent_subtype=["
                                         .. tostring(h_agent_subtype)
-                                        .. "]. Decrementing counter."
+                                        .. "]."
                                 )
-                                on_character_setup_done("hero_force_invalid_" .. h_agent_subtype)
+                                finish_current_hero("force_invalid_before_embed")
                                 return
                             end
 
                             local hero_char = cm:get_character_by_cqi(hero_cqi)
                             if not hero_char or hero_char:is_null_interface() then
                                 log(
-                                    "hero_embed_callback: character interface invalid. hero_cqi=["
+                                    "enemy_hero_spawn_chain embed aborted because hero interface is invalid. hero_index=["
+                                        .. tostring(hero_index)
+                                        .. "], hero_cqi=["
                                         .. tostring(hero_cqi)
                                         .. "], agent_subtype=["
                                         .. tostring(h_agent_subtype)
-                                        .. "]. Decrementing counter."
+                                        .. "]."
                                 )
-                                on_character_setup_done("hero_char_invalid_" .. h_agent_subtype)
+                                finish_current_hero("hero_invalid_before_embed")
                                 return
                             end
 
                             log(
-                                "hero_embed_callback: calling embed_agent_in_force. hero_cqi=["
+                                "enemy_hero_spawn_chain embedding hero. hero_index=["
+                                    .. tostring(hero_index)
+                                    .. "], hero_cqi=["
                                     .. tostring(hero_cqi)
                                     .. "], force_cqi=["
                                     .. tostring(enemy_force_cqi)
@@ -4187,18 +4503,22 @@ local function issue_enemy_force_spawn_with_general(
                                 local refreshed_hero = cm:get_character_by_cqi(hero_cqi)
                                 if not refreshed_hero or refreshed_hero:is_null_interface() then
                                     log(
-                                        "hero_rank_callback: character no longer valid. hero_cqi=["
+                                        "enemy_hero_spawn_chain rank setup aborted because hero refresh failed. hero_index=["
+                                            .. tostring(hero_index)
+                                            .. "], hero_cqi=["
                                             .. tostring(hero_cqi)
                                             .. "], agent_subtype=["
                                             .. tostring(h_agent_subtype)
-                                            .. "]. Decrementing counter."
+                                            .. "]."
                                     )
-                                    on_character_setup_done("hero_refresh_invalid_" .. h_agent_subtype)
+                                    finish_current_hero("hero_invalid_after_embed")
                                     return
                                 end
 
                                 log(
-                                    "hero_rank_callback: embedded=["
+                                    "enemy_hero_spawn_chain rank check. hero_index=["
+                                        .. tostring(hero_index)
+                                        .. "], embedded=["
                                         .. tostring(refreshed_hero:is_embedded_in_military_force())
                                         .. "], current_rank=["
                                         .. tostring(refreshed_hero:rank())
@@ -4216,18 +4536,22 @@ local function issue_enemy_force_spawn_with_general(
                                     local hero_for_skills = cm:get_character_by_cqi(hero_cqi)
                                     if not hero_for_skills or hero_for_skills:is_null_interface() then
                                         log(
-                                            "hero_skills_callback: character no longer valid. hero_cqi=["
+                                            "enemy_hero_spawn_chain skill setup aborted because hero refresh failed. hero_index=["
+                                                .. tostring(hero_index)
+                                                .. "], hero_cqi=["
                                                 .. tostring(hero_cqi)
                                                 .. "], agent_subtype=["
                                                 .. tostring(h_agent_subtype)
-                                                .. "]. Decrementing counter."
+                                                .. "]."
                                         )
-                                        on_character_setup_done("hero_skills_invalid_" .. h_agent_subtype)
+                                        finish_current_hero("hero_invalid_before_skills")
                                         return
                                     end
 
                                     log(
-                                        "hero_skills_callback: applying skills. hero_cqi=["
+                                        "enemy_hero_spawn_chain applying skills. hero_index=["
+                                            .. tostring(hero_index)
+                                            .. "], hero_cqi=["
                                             .. tostring(hero_cqi)
                                             .. "], agent_subtype=["
                                             .. tostring(h_agent_subtype)
@@ -4240,13 +4564,15 @@ local function issue_enemy_force_spawn_with_general(
                                         "enemy_hero_spawn"
                                     )
                                     log(
-                                        "hero_skills_callback: setup complete. agent_subtype=["
+                                        "enemy_hero_spawn_chain setup complete. hero_index=["
+                                            .. tostring(hero_index)
+                                            .. "], agent_subtype=["
                                             .. tostring(h_agent_subtype)
                                             .. "], final_rank=["
                                             .. tostring(hero_for_skills:rank())
                                             .. "]."
                                     )
-                                    on_character_setup_done(h_agent_subtype)
+                                    finish_current_hero("completed")
                                 end, 0.05)
                             end, 0.05)
                         end, 0.05)
@@ -4258,33 +4584,39 @@ local function issue_enemy_force_spawn_with_general(
                     local fresh_force = cm:get_military_force_by_cqi(enemy_force_cqi)
                     if not fresh_force or fresh_force:is_null_interface() then
                         log(
-                            "hero_spawn_agent_at_military_force: force no longer valid before spawn. enemy_force_cqi=["
+                            "enemy_hero_spawn_chain spawn aborted because force is invalid. hero_index=["
+                                .. tostring(hero_index)
+                                .. "], enemy_force_cqi=["
                                 .. tostring(enemy_force_cqi)
                                 .. "], agent_subtype=["
                                 .. tostring(h_agent_subtype)
-                                .. "]. Decrementing counter."
+                                .. "]."
                         )
-                        core:remove_listener(listener_name)
-                        on_character_setup_done("hero_force_invalid_" .. h_agent_subtype)
+                        finish_current_hero("force_invalid_before_spawn")
                         return
                     end
 
                     local enemy_faction = cm:get_faction(enemy_faction_key)
                     if not enemy_faction or enemy_faction:is_null_interface() then
                         log(
-                            "hero_spawn_agent_at_military_force: faction invalid before spawn. enemy_faction_key=["
+                            "enemy_hero_spawn_chain spawn aborted because faction is invalid. hero_index=["
+                                .. tostring(hero_index)
+                                .. "], enemy_faction_key=["
                                 .. tostring(enemy_faction_key)
                                 .. "], agent_subtype=["
                                 .. tostring(h_agent_subtype)
-                                .. "]. Decrementing counter."
+                                .. "]."
                         )
-                        core:remove_listener(listener_name)
-                        on_character_setup_done("hero_faction_invalid_" .. h_agent_subtype)
+                        finish_current_hero("faction_invalid_before_spawn")
                         return
                     end
 
                     log(
-                        "hero_spawn_agent_at_military_force: calling API. faction=["
+                        "enemy_hero_spawn_chain calling spawn_agent_at_military_force. hero_index=["
+                            .. tostring(hero_index)
+                            .. "], payload_index=["
+                            .. tostring(payload_index)
+                            .. "], faction=["
                             .. tostring(enemy_faction_key)
                             .. "], force_cqi=["
                             .. tostring(enemy_force_cqi)
@@ -4300,22 +4632,50 @@ local function issue_enemy_force_spawn_with_general(
 
                     if spawn_ok then
                         log(
-                            "hero_spawn_agent_at_military_force: API call completed, waiting CharacterCreated. agent_subtype=["
+                            "enemy_hero_spawn_chain API call completed, waiting CharacterCreated. hero_index=["
+                                .. tostring(hero_index)
+                                .. "], agent_subtype=["
                                 .. tostring(h_agent_subtype)
                                 .. "]."
                         )
+                        cm:callback(function()
+                            if hero_step_finished then
+                                return
+                            end
+                            log(
+                                "enemy_hero_spawn_chain timed out waiting for CharacterCreated. hero_index=["
+                                    .. tostring(hero_index)
+                                    .. "], payload_index=["
+                                    .. tostring(payload_index)
+                                    .. "], agent_subtype=["
+                                    .. tostring(h_agent_subtype)
+                                    .. "], enemy_force_cqi=["
+                                    .. tostring(enemy_force_cqi)
+                                    .. "]."
+                            )
+                            finish_current_hero("character_created_timeout")
+                        end, 2)
                     else
                         log(
-                            "hero_spawn_agent_at_military_force: API call failed. agent_subtype=["
+                            "enemy_hero_spawn_chain API call failed. hero_index=["
+                                .. tostring(hero_index)
+                                .. "], agent_subtype=["
                                 .. tostring(h_agent_subtype)
                                 .. "], error=["
                                 .. tostring(spawn_err)
-                                .. "]. Decrementing counter."
+                                .. "]."
                         )
-                        core:remove_listener(listener_name)
-                        on_character_setup_done("hero_spawn_failed_" .. h_agent_subtype)
+                        finish_current_hero("spawn_api_failed")
                     end
                 end, 0.05)
+            end
+
+            if #hero_entries_valid > 0 then
+                cm:callback(function()
+                    continue_enemy_hero_spawn_chain(1)
+                end, 0.05)
+            else
+                log("enemy_hero_spawn_chain skipped because the payload resolved zero enemy heroes.")
             end
 
             if enemy_force and not enemy_force:is_null_interface() then
@@ -4483,7 +4843,7 @@ spawn_enemy_force_with_direct_create_force_fallback = function(
     local enemy_general_subtype = active_payload.enemy_general_subtype or ""
     local enemy_general_unit_key = active_payload.enemy_general_unit_key or ""
     local enemy_agent_subtype = active_payload.enemy_agent_subtype or ""
-    local enemy_hero_list = active_payload.enemy_hero_list or ""
+    local enemy_hero_entries = decode_enemy_hero_entries_from_payload(active_payload, "spawn_enemy_force_with_direct_create_force_fallback")
     local enemy_faction_candidates = active_payload.enemy_faction_candidates or ""
     local battle_content_faction_key = active_payload.battle_content_faction_key or DEFAULT_CONTENT_FACTION_KEY
     local fallback_stage_index = get_enemy_faction_fallback_stage_index(fallback_stage_label) or 2
@@ -4633,7 +4993,7 @@ spawn_enemy_force_with_direct_create_force_fallback = function(
         fallback_x,
         fallback_y,
         "direct_create_force_callback",
-        enemy_hero_list
+        enemy_hero_entries
     )
 
     log(
@@ -4711,7 +5071,7 @@ spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
     local enemy_general_subtype = active_payload.enemy_general_subtype or ""
     local enemy_general_unit_key = active_payload.enemy_general_unit_key or ""
     local enemy_agent_subtype = active_payload.enemy_agent_subtype or ""
-    local enemy_hero_list = active_payload.enemy_hero_list or ""
+    local enemy_hero_entries = decode_enemy_hero_entries_from_payload(active_payload, "spawn_enemy_force_and_start_battle")
     local battle_content_faction_key = active_payload.battle_content_faction_key or DEFAULT_CONTENT_FACTION_KEY
     local enemy_faction_candidates = active_payload.enemy_faction_candidates or ""
     if not enemy_unit_list or enemy_unit_list == "" then
@@ -4836,7 +5196,7 @@ spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
         spawn_x,
         spawn_y,
         "caravan_spawn_ready",
-        enemy_hero_list
+        enemy_hero_entries
     )
 
     log(

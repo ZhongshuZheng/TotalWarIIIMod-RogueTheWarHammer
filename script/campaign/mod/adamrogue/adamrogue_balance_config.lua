@@ -48,9 +48,9 @@ data.CONFIG = {
         { min_cycle = 31, max_cycle = nil, min_value = 1500, max_value = 5000, double_line = 1500 }
     },
     equipment_rarity_by_cycle = {
-        { min_cycle = 1, max_cycle = 5, tiers = { "common" } },
-        { min_cycle = 6, max_cycle = 10, tiers = { "common", "uncommon" } },
-        { min_cycle = 11, max_cycle = 15, tiers = { "common", "uncommon", "rare" } },
+        { min_cycle = 1, max_cycle = 5, tiers = { "common", "uncommon" } },
+        { min_cycle = 6, max_cycle = 10, tiers = { "common", "uncommon", "rare" } },
+        { min_cycle = 11, max_cycle = 15, tiers = { "common", "uncommon", "rare", "unique", "crafted" } },
         { min_cycle = 16, max_cycle = 20, tiers = { "uncommon", "rare", "unique", "crafted" } },
         { min_cycle = 21, max_cycle = 25, tiers = { "rare", "unique", "crafted" } },
         { min_cycle = 26, max_cycle = nil, tiers = { "rare", "unique", "crafted" } }
