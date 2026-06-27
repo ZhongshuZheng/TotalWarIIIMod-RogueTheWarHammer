@@ -334,8 +334,10 @@ function battle_generator.new(context)
         -- Pick heroes based on the current cycle's hero_num setting.
         local current_cycle_for_heroes = (build_context and build_context.current_cycle) or 1
         local hero_num = self.get_hero_num_for_cycle(current_cycle_for_heroes)
+        -- Reserve one slot for the lord and hero_num slots for embedded/spawned heroes.
         local slots_for_troops = math.max(0, unit_count_targets.hard_cap - 1 - hero_num)
-        local effective_hard_cap = unit_count_targets.hard_cap - 1 - hero_num
+        local effective_min_units = math.min(unit_count_targets.min_units, slots_for_troops)
+        local effective_target_units = math.min(unit_count_targets.target_units, slots_for_troops)
 
         local selected_heroes, total_hero_value = self.pick_heroes_for_faction(
             resolved_content_faction_key,
@@ -361,13 +363,17 @@ function battle_generator.new(context)
                 .. tostring(unit_only_target_value_budget)
                 .. "], slots_for_troops=["
                 .. tostring(slots_for_troops)
+                .. "], effective_min_units=["
+                .. tostring(effective_min_units)
+                .. "], effective_target_units=["
+                .. tostring(effective_target_units)
                 .. "]."
         )
 
         local chosen_units = {}
         local chosen_unit_counts = {}
         local total_value = 0
-        local max_units = math.max(0, effective_hard_cap)
+        local max_units = slots_for_troops
         local attempts = 0
         local preferred_budget_floor = math.floor(unit_only_target_value_budget * 0.95)
         local phase_a_accept_budget_floor = math.floor(unit_only_target_value_budget * 0.85)
@@ -402,11 +408,11 @@ function battle_generator.new(context)
             local should_take = false
 
             if projected_total <= unit_only_target_value_budget then
-                if #chosen_units < unit_count_targets.min_units then
+                if #chosen_units < effective_min_units then
                     should_take = true
                 elseif total_value < phase_a_accept_budget_floor then
                     should_take = true
-                elseif #chosen_units < unit_count_targets.target_units then
+                elseif #chosen_units < effective_target_units then
                     should_take = true
                 elseif (unit_only_target_value_budget - total_value) >= math.min(350, unit_entry.unit_value) then
                     should_take = true
@@ -428,7 +434,7 @@ function battle_generator.new(context)
                 )
             end
 
-            if total_value >= preferred_budget_floor and #chosen_units >= unit_count_targets.target_units then
+            if total_value >= preferred_budget_floor and #chosen_units >= effective_target_units then
                 log("build_budget_enemy_force_definition reached stop threshold and will exit the selection loop.")
                 break
             end
@@ -438,8 +444,8 @@ function battle_generator.new(context)
         local fill_attempts = 0
         while #chosen_units < max_units and fill_attempts < max_units do
             fill_attempts = fill_attempts + 1
-            local should_continue_fill = (#chosen_units < unit_count_targets.min_units
-                or #chosen_units < unit_count_targets.target_units)
+            local should_continue_fill = (#chosen_units < effective_min_units
+                or #chosen_units < effective_target_units)
                 and total_value < preferred_budget_floor
 
             if not should_continue_fill then
@@ -475,7 +481,7 @@ function battle_generator.new(context)
         end
 
         -- Phase C: upgrade low-value picks when stack size is already sufficient but budget is still underfilled.
-        if #chosen_units >= unit_count_targets.target_units
+        if #chosen_units >= effective_target_units
             and total_value < preferred_budget_floor
             and #chosen_units > 0 then
             local upgrade_pass = 0
@@ -602,10 +608,16 @@ function battle_generator.new(context)
                 .. tostring(#chosen_units)
                 .. "], hero_count=["
                 .. tostring(#selected_heroes)
-                .. "], min_units=["
+                .. "], raw_min_units=["
                 .. tostring(unit_count_targets.min_units)
-                .. "], target_units=["
+                .. "], raw_target_units=["
                 .. tostring(unit_count_targets.target_units)
+                .. "], effective_min_units=["
+                .. tostring(effective_min_units)
+                .. "], effective_target_units=["
+                .. tostring(effective_target_units)
+                .. "], slots_for_troops=["
+                .. tostring(slots_for_troops)
                 .. "], attempts=["
                 .. tostring(attempts)
                 .. "]."
@@ -630,8 +642,8 @@ function battle_generator.new(context)
             used_pool_fallback = used_pool_fallback and "true" or "false",
             generated_unit_count = #chosen_units,
             generated_hero_count = #selected_heroes,
-            min_unit_target = unit_count_targets.min_units,
-            desired_unit_target = unit_count_targets.target_units
+            min_unit_target = effective_min_units,
+            desired_unit_target = effective_target_units
         }
     end
 

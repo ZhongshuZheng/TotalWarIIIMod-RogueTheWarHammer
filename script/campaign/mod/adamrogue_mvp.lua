@@ -1,6 +1,3 @@
-local MODULE_KEY = "adamrogue_phase_a"
-local config_log = true
-local LOG_FILE_NAME = "adamrogue_phase_a_log.txt"
 local get_current_event_payload
 local launch_army_preview_dilemma
 
@@ -18,50 +15,43 @@ local adamrogue_force_snapshot_module = require("adamrogue_force_snapshot")
 local adamrogue_enemy_skill_allocator_module = require("adamrogue_enemy_skill_allocator")
 local adamrogue_runtime_state_module = require("adamrogue_runtime_state")
 
-local BUTTON_CONTEXT_PREFIX = "adamrogue_phase_a_entry"
-local AUTO_RESUME_ON_TURN_START = false
-local MAX_CONSECUTIVE_DEFEATS = 3
-local MAX_BATTLE_SPAWN_POLL_ATTEMPTS = 10
--- This is only a retry ceiling. The actual candidate list comes from the current content faction.
-local MAX_BATTLE_SPAWN_RETRIES = 5
-local WAR_ATTACK_DELAY = 0.25
-local UNIT_VALUE_SOURCE = "main_units_tables.multiplayer_cost"
+local data_players = adamrogue_data_players
+local data_nodes = adamrogue_data_nodes
+local battle_pools = adamrogue_data_battle_pools
+local data_ancillaries = adamrogue_data_ancillaries
 
-local DILEMMA_REWARD_KEY = "adamrogue_mvp_reward_dilemma"
-local DILEMMA_BATTLE_KEY = "adamrogue_mvp_battle_dilemma"
-local DILEMMA_EQUIPMENT_REWARD_KEY = "adamrogue_mvp_equipment_reward_dilemma"
-local DILEMMA_DESTINATION_KEY = "adamrogue_mvp_destination_dilemma"
-local DILEMMA_ARMY_PREVIEW_KEY = "adamrogue_mvp_army_preview_dilemma"
-local DILEMMA_HERO_REWARD_KEY = "adamrogue_mvp_hero_reward_dilemma"
-local DILEMMA_HERO_REWARD_FULL_KEY = "adamrogue_mvp_hero_reward_full_dilemma"
+local LOG = {
+    enabled = true,
+    module_key = "adamrogue_phase_a",
+    file_name = "adamrogue_phase_a_log.txt",
+}
 
-local DEFAULT_SUPPORTED_PLAYER_FACTION_KEY = adamrogue_data_players.DEFAULT_SUPPORTED_PLAYER_FACTION_KEY
-local DEFAULT_PLAYER_CONTENT_FACTION_KEY = adamrogue_data_players.DEFAULT_CONTENT_FACTION_KEY
-local SUPPORTED_PLAYER_FACTIONS = adamrogue_data_players.SUPPORTED_PLAYER_FACTIONS or {}
-local PLAYER_CONTENT_FACTION_BY_FACTION = adamrogue_data_players.PLAYER_CONTENT_FACTION_BY_FACTION or {}
-local PLAYER_GENERAL_OPTIONS_BY_FACTION = adamrogue_data_players.PLAYER_GENERAL_OPTIONS_BY_FACTION or {}
-local DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION = adamrogue_data_players.DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION or {}
+local UI = {
+    BUTTON_CONTEXT_PREFIX = "adamrogue_phase_a_entry",
+    AUTO_RESUME_ON_TURN_START = false,
+}
 
-local STARTING_NODE_KEY = adamrogue_data_nodes.STARTING_NODE_KEY
-local NODE_POOL = adamrogue_data_nodes.NODE_POOL
+local MVP_LIMITS = {
+    MAX_CONSECUTIVE_DEFEATS = 3,
+    MAX_BATTLE_SPAWN_POLL_ATTEMPTS = 10,
+    MAX_BATTLE_SPAWN_RETRIES = 5,
+    UNIT_VALUE_SOURCE = "main_units_tables.multiplayer_cost",
+}
 
-local ENEMY_GENERAL_SUBTYPE = adamrogue_data_battle_pools.ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION.wh3_main_cth_the_northern_provinces
-local ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION or {}
-local ENEMY_EMBEDDED_AGENT_SUBTYPE = adamrogue_data_battle_pools.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION.wh3_main_cth_the_northern_provinces
-local DEFAULT_ENEMY_FACTION_KEY = adamrogue_data_battle_pools.DEFAULT_ENEMY_FACTION_KEY
-local DEFAULT_CONTENT_FACTION_KEY = adamrogue_data_battle_pools.DEFAULT_CONTENT_FACTION_KEY
-local ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION
-local ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION
-local ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION or {}
-local ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION
-local ENEMY_HERO_POOLS_BY_CONTENT_FACTION = adamrogue_data_battle_pools.ENEMY_HERO_POOLS_BY_CONTENT_FACTION or {}
-local EQUIPMENT_RARITY = adamrogue_data_ancillaries.EQUIPMENT_RARITY
-local EQUIPMENT_REWARD_SLOT_ORDER = adamrogue_data_ancillaries.EQUIPMENT_REWARD_SLOT_ORDER
-local COMMON_EQUIPMENT_POOL = adamrogue_data_ancillaries.COMMON_EQUIPMENT_POOL
-local FACTION_EQUIPMENT_POOLS = adamrogue_data_ancillaries.FACTION_EQUIPMENT_POOLS
-local BALANCE_CONFIG = adamrogue_balance_config.CONFIG
-local DEFAULT_CURRENT_CYCLE = adamrogue_balance_config.DEFAULT_CURRENT_CYCLE
-local DEFAULT_DIFFICULTY_LEVEL = adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL
+local DILEMMA_KEYS = {
+    REWARD = "adamrogue_mvp_reward_dilemma",
+    BATTLE = "adamrogue_mvp_battle_dilemma",
+    EQUIPMENT_REWARD = "adamrogue_mvp_equipment_reward_dilemma",
+    DESTINATION = "adamrogue_mvp_destination_dilemma",
+    ARMY_PREVIEW = "adamrogue_mvp_army_preview_dilemma",
+    HERO_REWARD = "adamrogue_mvp_hero_reward_dilemma",
+    HERO_REWARD_FULL = "adamrogue_mvp_hero_reward_full_dilemma",
+}
+
+local PLAYER_SPAWN = {
+    SETTLEMENT_SEARCH_RADII = { 10, 8, 6, 5 },
+    CHARACTER_SEARCH_RADII = { 10, 8, 6 },
+}
 
 local EVENT_TYPE = {
     UNIT_REWARD = "unit_reward",
@@ -71,36 +61,34 @@ local EVENT_TYPE = {
     DESTINATION = "destination"
 }
 
-local BATTLE_TIER = adamrogue_data_cth.BATTLE_TIER
+local BALANCE_CONFIG = adamrogue_balance_config.CONFIG
 
 local STATE = adamrogue_runtime_state_module.STATE
 local SAVE_KEYS = adamrogue_runtime_state_module.SAVE_KEYS
 
-local BATTLE_UNIT_POOLS_BY_CONTENT_FACTION = adamrogue_data_battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION
-
-local function build_destination_payload_component_key(node_key)
-    return "adamrogue_destination_payload_choice_" .. tostring(node_key)
-end
-
-local function build_destination_current_payload_component_key(node_key)
-    return "adamrogue_destination_payload_current_" .. tostring(node_key)
-end
-
-local function build_hero_reward_payload_component_key(agent_subtype)
-    return "adamrogue_hero_reward_payload_" .. tostring(agent_subtype)
-end
+local DilemmaPayloadKeys = {
+    destination_choice = function(node_key)
+        return "adamrogue_destination_payload_choice_" .. tostring(node_key)
+    end,
+    destination_current = function(node_key)
+        return "adamrogue_destination_payload_current_" .. tostring(node_key)
+    end,
+    hero_reward = function(agent_subtype)
+        return "adamrogue_hero_reward_payload_" .. tostring(agent_subtype)
+    end,
+}
 
 local function log(message)
-    if not config_log then
+    if not LOG.enabled then
         return
     end
 
     local logtext = tostring(message)
     local timestamp = os.date("%Y%m%d %X")
-    local logfile = io.open(LOG_FILE_NAME, "a")
+    local logfile = io.open(LOG.file_name, "a")
 
     if not logfile then
-        out("[" .. MODULE_KEY .. "][log-fallback] " .. logtext)
+        out("[" .. LOG.module_key .. "][log-fallback] " .. logtext)
         return
     end
 
@@ -149,48 +137,48 @@ local clear_current_event_context = adamrogue_runtime_state.clear_current_event_
 get_current_event_payload = adamrogue_runtime_state.get_current_event_payload
 
 local function get_current_cycle()
-    local cycle = tonumber(get_saved_value(SAVE_KEYS.current_cycle, DEFAULT_CURRENT_CYCLE)) or DEFAULT_CURRENT_CYCLE
+    local cycle = tonumber(get_saved_value(SAVE_KEYS.current_cycle, adamrogue_balance_config.DEFAULT_CURRENT_CYCLE)) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE
     cycle = math.floor(cycle)
-    if cycle < DEFAULT_CURRENT_CYCLE then
-        cycle = DEFAULT_CURRENT_CYCLE
+    if cycle < adamrogue_balance_config.DEFAULT_CURRENT_CYCLE then
+        cycle = adamrogue_balance_config.DEFAULT_CURRENT_CYCLE
     end
 
     return cycle
 end
 
 local function set_current_cycle(cycle)
-    local normalized_cycle = tonumber(cycle) or DEFAULT_CURRENT_CYCLE
-    normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(normalized_cycle))
+    local normalized_cycle = tonumber(cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE
+    normalized_cycle = math.max(adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, math.floor(normalized_cycle))
     set_saved_value(SAVE_KEYS.current_cycle, normalized_cycle)
     log("Cycle -> " .. tostring(normalized_cycle))
 end
 
 local function get_difficulty_level()
-    local saved_level = tostring(get_saved_value(SAVE_KEYS.difficulty_level, DEFAULT_DIFFICULTY_LEVEL) or DEFAULT_DIFFICULTY_LEVEL)
+    local saved_level = tostring(get_saved_value(SAVE_KEYS.difficulty_level, adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL) or adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL)
     return adamrogue_balance_config.normalize_difficulty_level(saved_level)
 end
 
 local function ensure_balance_state_initialized(reason)
     local current_cycle = tonumber(get_saved_value(SAVE_KEYS.current_cycle, 0)) or 0
-    if current_cycle < DEFAULT_CURRENT_CYCLE then
-        set_saved_value(SAVE_KEYS.current_cycle, DEFAULT_CURRENT_CYCLE)
+    if current_cycle < adamrogue_balance_config.DEFAULT_CURRENT_CYCLE then
+        set_saved_value(SAVE_KEYS.current_cycle, adamrogue_balance_config.DEFAULT_CURRENT_CYCLE)
         log(
             "ensure_balance_state_initialized seeded current_cycle. reason=["
                 .. tostring(reason)
                 .. "], cycle=["
-                .. tostring(DEFAULT_CURRENT_CYCLE)
+                .. tostring(adamrogue_balance_config.DEFAULT_CURRENT_CYCLE)
                 .. "]."
         )
     end
 
     local saved_difficulty_level = tostring(get_saved_value(SAVE_KEYS.difficulty_level, "") or "")
     if not adamrogue_balance_config.is_supported_difficulty_level(saved_difficulty_level) then
-        set_saved_value(SAVE_KEYS.difficulty_level, DEFAULT_DIFFICULTY_LEVEL)
+        set_saved_value(SAVE_KEYS.difficulty_level, adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL)
         log(
             "ensure_balance_state_initialized seeded difficulty_level. reason=["
                 .. tostring(reason)
                 .. "], difficulty_level=["
-                .. tostring(DEFAULT_DIFFICULTY_LEVEL)
+                .. tostring(adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL)
                 .. "]."
         )
     end
@@ -198,13 +186,15 @@ end
 
 local function get_difficulty_config()
     return adamrogue_balance_config.DIFFICULTY_LEVELS[get_difficulty_level()]
-        or adamrogue_balance_config.DIFFICULTY_LEVELS[DEFAULT_DIFFICULTY_LEVEL]
+        or adamrogue_balance_config.DIFFICULTY_LEVELS[adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL]
 end
 
-local function get_enemy_growth_for_cycle(cycle)
-    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+local BalanceCycle = {}
+
+function BalanceCycle.enemy_growth(cycle)
+    local normalized_cycle = math.max(adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE))
     for _, entry in ipairs(BALANCE_CONFIG.enemy_growth or {}) do
-        local min_cycle = tonumber(entry.min_cycle) or DEFAULT_CURRENT_CYCLE
+        local min_cycle = tonumber(entry.min_cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE
         local max_cycle = entry.max_cycle and tonumber(entry.max_cycle) or nil
         if normalized_cycle >= min_cycle and (not max_cycle or normalized_cycle <= max_cycle) then
             return tonumber(entry.growth) or 0
@@ -214,8 +204,8 @@ local function get_enemy_growth_for_cycle(cycle)
     return 0
 end
 
-local function is_elite_battle_cycle(cycle)
-    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+function BalanceCycle.is_elite_battle(cycle)
+    local normalized_cycle = math.max(adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE))
     local elite_config = BALANCE_CONFIG.elite_battles or {}
     for _, elite_cycle in ipairs(elite_config.battle_cycles or {}) do
         if normalized_cycle == tonumber(elite_cycle) then
@@ -226,19 +216,19 @@ local function is_elite_battle_cycle(cycle)
     return false
 end
 
-local function get_enemy_value_budget_for_cycle(cycle)
-    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+function BalanceCycle.enemy_value_budget(cycle)
+    local normalized_cycle = math.max(adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE))
     local base_value = tonumber(BALANCE_CONFIG.initial_enemy_value) or 0
     local value_before_difficulty = base_value
 
-    for growth_cycle = DEFAULT_CURRENT_CYCLE, normalized_cycle do
-        value_before_difficulty = value_before_difficulty + get_enemy_growth_for_cycle(growth_cycle)
+    for growth_cycle = adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, normalized_cycle do
+        value_before_difficulty = value_before_difficulty + BalanceCycle.enemy_growth(growth_cycle)
     end
 
     local difficulty_config = get_difficulty_config()
     local difficulty_multiplier = tonumber(difficulty_config.enemy_value_multiplier) or 1
     local elite_multiplier = 1
-    local elite_battle = is_elite_battle_cycle(normalized_cycle)
+    local elite_battle = BalanceCycle.is_elite_battle(normalized_cycle)
     if elite_battle then
         elite_multiplier = tonumber(difficulty_config.elite_enemy_value_multiplier) or 1
     end
@@ -258,12 +248,12 @@ local function get_enemy_value_budget_for_cycle(cycle)
     }
 end
 
-local function get_player_reward_value_band_for_cycle(cycle)
-    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+function BalanceCycle.player_reward_value_band(cycle)
+    local normalized_cycle = math.max(adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE))
     local resolved_entry = nil
 
     for _, entry in ipairs(BALANCE_CONFIG.player_reward_value or {}) do
-        local min_cycle = tonumber(entry.min_cycle) or DEFAULT_CURRENT_CYCLE
+        local min_cycle = tonumber(entry.min_cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE
         local max_cycle = entry.max_cycle and tonumber(entry.max_cycle) or nil
         if normalized_cycle >= min_cycle and (not max_cycle or normalized_cycle <= max_cycle) then
             resolved_entry = entry
@@ -301,75 +291,75 @@ local function get_player_reward_value_band_for_cycle(cycle)
     }
 end
 
-local function get_equipment_rarity_context_for_cycle(cycle)
-    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+function BalanceCycle.equipment_rarity_context(cycle)
+    local normalized_cycle = math.max(adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE))
     for _, entry in ipairs(BALANCE_CONFIG.equipment_rarity_by_cycle or {}) do
-        local min_cycle = tonumber(entry.min_cycle) or DEFAULT_CURRENT_CYCLE
+        local min_cycle = tonumber(entry.min_cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE
         local max_cycle = entry.max_cycle and tonumber(entry.max_cycle) or nil
         if normalized_cycle >= min_cycle and (not max_cycle or normalized_cycle <= max_cycle) then
             return {
                 cycle = normalized_cycle,
-                tiers = entry.tiers or { EQUIPMENT_RARITY.COMMON }
+                tiers = entry.tiers or { data_ancillaries.EQUIPMENT_RARITY.COMMON }
             }
         end
     end
 
     return {
         cycle = normalized_cycle,
-        tiers = { EQUIPMENT_RARITY.COMMON }
+        tiers = { data_ancillaries.EQUIPMENT_RARITY.COMMON }
     }
 end
 
 local function resolve_player_content_faction_key(player_faction_key)
     if type(player_faction_key) ~= "string" or player_faction_key == "" then
-        return DEFAULT_PLAYER_CONTENT_FACTION_KEY or DEFAULT_CONTENT_FACTION_KEY, "default_empty_player_faction"
+        return data_players.DEFAULT_CONTENT_FACTION_KEY or battle_pools.DEFAULT_CONTENT_FACTION_KEY, "default_empty_player_faction"
     end
 
-    local mapped_content_faction_key = PLAYER_CONTENT_FACTION_BY_FACTION[player_faction_key]
+    local mapped_content_faction_key = data_players.PLAYER_CONTENT_FACTION_BY_FACTION[player_faction_key]
     if mapped_content_faction_key and mapped_content_faction_key ~= "" then
         return mapped_content_faction_key, "player_mapping"
     end
 
-    if BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[player_faction_key] then
+    if battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[player_faction_key] then
         return player_faction_key, "direct_content_pool"
     end
 
-    return DEFAULT_PLAYER_CONTENT_FACTION_KEY or DEFAULT_CONTENT_FACTION_KEY, "default_fallback"
+    return data_players.DEFAULT_CONTENT_FACTION_KEY or battle_pools.DEFAULT_CONTENT_FACTION_KEY, "default_fallback"
 end
 
 local function get_player_general_options_for_faction(player_faction_key)
-    local options = PLAYER_GENERAL_OPTIONS_BY_FACTION[player_faction_key]
+    local options = data_players.PLAYER_GENERAL_OPTIONS_BY_FACTION[player_faction_key]
     if options and #options > 0 then
         return options, player_faction_key, "exact_player_faction"
     end
 
     local resolved_content_faction_key = resolve_player_content_faction_key(player_faction_key)
-    for supported_faction_key, content_faction_key in pairs(PLAYER_CONTENT_FACTION_BY_FACTION) do
+    for supported_faction_key, content_faction_key in pairs(data_players.PLAYER_CONTENT_FACTION_BY_FACTION) do
         if content_faction_key == resolved_content_faction_key then
-            local shared_options = PLAYER_GENERAL_OPTIONS_BY_FACTION[supported_faction_key]
+            local shared_options = data_players.PLAYER_GENERAL_OPTIONS_BY_FACTION[supported_faction_key]
             if shared_options and #shared_options > 0 then
                 return shared_options, supported_faction_key, "shared_content_faction"
             end
         end
     end
 
-    local default_options = PLAYER_GENERAL_OPTIONS_BY_FACTION[DEFAULT_SUPPORTED_PLAYER_FACTION_KEY] or {}
-    return default_options, DEFAULT_SUPPORTED_PLAYER_FACTION_KEY, "default_supported_player_faction"
+    local default_options = data_players.PLAYER_GENERAL_OPTIONS_BY_FACTION[data_players.DEFAULT_SUPPORTED_PLAYER_FACTION_KEY] or {}
+    return default_options, data_players.DEFAULT_SUPPORTED_PLAYER_FACTION_KEY, "default_supported_player_faction"
 end
 
 local function get_default_player_general_subtype_for_faction(player_faction_key)
-    local default_subtype = DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION[player_faction_key]
+    local default_subtype = data_players.DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION[player_faction_key]
     if default_subtype and default_subtype ~= "" then
         return default_subtype
     end
 
-    local options = PLAYER_GENERAL_OPTIONS_BY_FACTION[player_faction_key]
+    local options = data_players.PLAYER_GENERAL_OPTIONS_BY_FACTION[player_faction_key]
     if options and options[1] and options[1].subtype and options[1].subtype ~= "" then
         return options[1].subtype
     end
 
-    if DEFAULT_SUPPORTED_PLAYER_FACTION_KEY and DEFAULT_SUPPORTED_PLAYER_FACTION_KEY ~= "" then
-        local fallback_subtype = DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION[DEFAULT_SUPPORTED_PLAYER_FACTION_KEY]
+    if data_players.DEFAULT_SUPPORTED_PLAYER_FACTION_KEY and data_players.DEFAULT_SUPPORTED_PLAYER_FACTION_KEY ~= "" then
+        local fallback_subtype = data_players.DEFAULT_PLAYER_GENERAL_SUBTYPE_BY_FACTION[data_players.DEFAULT_SUPPORTED_PLAYER_FACTION_KEY]
         if fallback_subtype and fallback_subtype ~= "" then
             return fallback_subtype
         end
@@ -428,7 +418,7 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
     local selected_general_value = tonumber(selected_general_option and selected_general_option.unit_value) or 0
     local target_value_budget = math.max(0, total_value_budget - selected_general_value)
     local resolved_faction_key, content_resolution = resolve_player_content_faction_key(player_faction_key)
-    local source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[resolved_faction_key]
+    local source_pool = battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[resolved_faction_key]
 
     local function build_dynamic_starting_fallback_unit_list()
         local fallback_source_pool = source_pool or {}
@@ -451,8 +441,8 @@ local function build_starting_player_unit_list(player_faction_key, selected_gene
     end
 
     if not source_pool or #source_pool == 0 then
-        source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {}
-        resolved_faction_key = DEFAULT_CONTENT_FACTION_KEY
+        source_pool = battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[battle_pools.DEFAULT_CONTENT_FACTION_KEY] or {}
+        resolved_faction_key = battle_pools.DEFAULT_CONTENT_FACTION_KEY
         log(
             "[ERROR] build_starting_player_unit_list is falling back to the default content faction pool. requested_content_faction_key=["
                 .. tostring(player_faction_key)
@@ -670,11 +660,11 @@ local function is_supported_player_faction(faction)
     end
 
     local faction_name = faction:name()
-    if SUPPORTED_PLAYER_FACTIONS[faction_name] then
+    if data_players.SUPPORTED_PLAYER_FACTIONS[faction_name] then
         return true
     end
 
-    return PLAYER_CONTENT_FACTION_BY_FACTION[faction_name] ~= nil
+    return data_players.PLAYER_CONTENT_FACTION_BY_FACTION[faction_name] ~= nil
 end
 
 local function get_saved_character(saved_key)
@@ -722,13 +712,10 @@ local function count_units_in_force(force)
     return force:unit_list():num_items()
 end
 
-local PLAYER_SPAWN_SETTLEMENT_SEARCH_RADII = { 10, 8, 6, 5 }
-local PLAYER_SPAWN_CHARACTER_SEARCH_RADII = { 10, 8, 6 }
-
 local function find_player_spawn_position_for_faction(faction, region_key, leader)
     local faction_key = faction:name()
 
-    for _, radius in ipairs(PLAYER_SPAWN_SETTLEMENT_SEARCH_RADII) do
+    for _, radius in ipairs(PLAYER_SPAWN.SETTLEMENT_SEARCH_RADII) do
         local x, y = cm:find_valid_spawn_location_for_character_from_settlement(
             faction_key,
             region_key,
@@ -756,7 +743,7 @@ local function find_player_spawn_position_for_faction(faction, region_key, leade
 
     if leader and not leader:is_null_interface() then
         local leader_lookup = cm:char_lookup_str(leader)
-        for _, radius in ipairs(PLAYER_SPAWN_CHARACTER_SEARCH_RADII) do
+        for _, radius in ipairs(PLAYER_SPAWN.CHARACTER_SEARCH_RADII) do
             local x, y = cm:find_valid_spawn_location_for_character_from_character(
                 faction_key,
                 leader_lookup,
@@ -788,61 +775,6 @@ local function find_player_spawn_position_for_faction(faction, region_key, leade
             .. "]."
     )
     return nil
-end
-
-local function find_random_player_spawn_position_for_faction(faction, region_key, leader)
-    local faction_key = faction:name()
-    local candidates = {}
-    local seen_positions = {}
-
-    local function add_candidate(x, y, source)
-        if x < 0 or y < 0 then
-            return
-        end
-
-        local position_key = tostring(x) .. ":" .. tostring(y)
-        if seen_positions[position_key] then
-            return
-        end
-
-        seen_positions[position_key] = true
-        candidates[#candidates + 1] = {
-            x = x,
-            y = y,
-            source = source,
-        }
-    end
-
-    for _, radius in ipairs(PLAYER_SPAWN_SETTLEMENT_SEARCH_RADII) do
-        local x, y = cm:find_valid_spawn_location_for_character_from_settlement(
-            faction_key,
-            region_key,
-            false,
-            true,
-            radius
-        )
-        add_candidate(x, y, "from_settlement_r" .. tostring(radius))
-    end
-
-    if leader and not leader:is_null_interface() then
-        local leader_lookup = cm:char_lookup_str(leader)
-        for _, radius in ipairs(PLAYER_SPAWN_CHARACTER_SEARCH_RADII) do
-            local x, y = cm:find_valid_spawn_location_for_character_from_character(
-                faction_key,
-                leader_lookup,
-                true,
-                radius
-            )
-            add_candidate(x, y, "from_leader_r" .. tostring(radius))
-        end
-    end
-
-    if #candidates == 0 then
-        return nil
-    end
-
-    local picked = candidates[cm:random_number(#candidates, 1)]
-    return picked.x, picked.y, picked.source
 end
 
 local function try_relocate_player_force_for_variety(reason)
@@ -1103,7 +1035,9 @@ local function find_alternative_enemy_spawn_position(enemy_faction_key, player_g
     return -1, -1, "not_found"
 end
 
-local function get_enemy_faction_candidates_for_content_faction(content_faction_key)
+local EnemySpawn = {}
+
+function EnemySpawn.content_faction_candidates(content_faction_key)
     local combined_candidates = {}
     local seen = {}
     local function append_candidates(candidate_list)
@@ -1115,20 +1049,20 @@ local function get_enemy_faction_candidates_for_content_faction(content_faction_
         end
     end
 
-    append_candidates(ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION[content_faction_key] or {})
+    append_candidates(battle_pools.ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION[content_faction_key] or {})
     -- 仅在该内容派系没有配置候选时才回退到默认派系，避免帝国战斗混入震旦 QB 派系。
     if #combined_candidates == 0 then
-        append_candidates(ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {})
+        append_candidates(battle_pools.ENEMY_FACTION_CANDIDATES_BY_CONTENT_FACTION[battle_pools.DEFAULT_CONTENT_FACTION_KEY] or {})
     end
     return combined_candidates
 end
 
-local function is_enemy_spawn_faction_compatible_with_content(content_faction_key, enemy_faction_key)
+function EnemySpawn.is_faction_compatible_with_content(content_faction_key, enemy_faction_key)
     if not enemy_faction_key or enemy_faction_key == "" then
         return false
     end
 
-    local options = ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION[content_faction_key] or {}
+    local options = battle_pools.ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION[content_faction_key] or {}
     for _, option in ipairs(options) do
         for _, allowed_faction_key in ipairs(option.allowed_factions or {}) do
             if allowed_faction_key == enemy_faction_key then
@@ -1142,7 +1076,7 @@ end
 
 -- QB / 占位敌军派系在战役里通常 is_dead()==true（无城镇、无领主），
 -- 但 create_force_with_general 仍可正常生成；spawn 候选筛选不要用 is_dead()。
-local function can_use_faction_for_enemy_spawn(faction)
+function EnemySpawn.can_use_faction(faction)
     if not faction or faction:is_null_interface() then
         return false
     end
@@ -1154,8 +1088,8 @@ local function can_use_faction_for_enemy_spawn(faction)
     return true
 end
 
-local function get_enemy_faction_candidate_sequence(player_faction_key, preferred_enemy_faction_key, candidate_list_string, content_faction_key)
-    local content_candidates = get_enemy_faction_candidates_for_content_faction(content_faction_key)
+function EnemySpawn.candidate_sequence(player_faction_key, preferred_enemy_faction_key, candidate_list_string, content_faction_key)
+    local content_candidates = EnemySpawn.content_faction_candidates(content_faction_key)
     local content_candidate_set = {}
     for _, faction_key in ipairs(content_candidates) do
         content_candidate_set[faction_key] = true
@@ -1199,7 +1133,7 @@ local function get_enemy_faction_candidate_sequence(player_faction_key, preferre
     return candidate_keys
 end
 
-local function find_enemy_faction_fallback_candidate(
+function EnemySpawn.find_fallback_candidate(
     player_faction_key,
     current_enemy_faction_key,
     player_general,
@@ -1207,7 +1141,7 @@ local function find_enemy_faction_fallback_candidate(
     candidate_list_string,
     content_faction_key
 )
-    local candidate_keys = get_enemy_faction_candidate_sequence(
+    local candidate_keys = EnemySpawn.candidate_sequence(
         player_faction_key,
         current_enemy_faction_key,
         candidate_list_string,
@@ -1218,10 +1152,10 @@ local function find_enemy_faction_fallback_candidate(
     for index = target_index, #candidate_keys do
         local faction_key = candidate_keys[index]
         local faction = cm:get_faction(faction_key)
-        if can_use_faction_for_enemy_spawn(faction) then
+        if EnemySpawn.can_use_faction(faction) then
             local x, y, source = find_alternative_enemy_spawn_position(faction_key, player_general, -1, -1)
             log(
-                "find_enemy_faction_fallback_candidate evaluated faction candidate. faction_key=["
+                "EnemySpawn.find_fallback_candidate evaluated faction candidate. faction_key=["
                     .. tostring(faction_key)
                     .. "], candidate_index=["
                     .. tostring(index)
@@ -1243,10 +1177,10 @@ local function find_enemy_faction_fallback_candidate(
     return nil, -1, -1, "not_found", nil
 end
 
-local function pick_initial_enemy_faction_key(player_faction_key, player_general, preferred_enemy_faction_key, candidate_list_string, content_faction_key)
-    local candidate_keys = get_enemy_faction_candidate_sequence(
+function EnemySpawn.pick_initial_faction_key(player_faction_key, player_general, preferred_enemy_faction_key, candidate_list_string, content_faction_key)
+    local candidate_keys = EnemySpawn.candidate_sequence(
         player_faction_key,
-        preferred_enemy_faction_key or DEFAULT_ENEMY_FACTION_KEY,
+        preferred_enemy_faction_key or battle_pools.DEFAULT_ENEMY_FACTION_KEY,
         candidate_list_string,
         content_faction_key
     )
@@ -1265,7 +1199,7 @@ local function pick_initial_enemy_faction_key(player_faction_key, player_general
 
     for index, faction_key in ipairs(candidate_keys) do
         local faction = cm:get_faction(faction_key)
-        if not can_use_faction_for_enemy_spawn(faction) then
+        if not EnemySpawn.can_use_faction(faction) then
             if not faction or faction:is_null_interface() then
                 log(
                     "pick_initial_enemy_faction_key skipped faction candidate because faction interface is unavailable. index=["
@@ -1283,7 +1217,7 @@ local function pick_initial_enemy_faction_key(player_faction_key, player_general
                         .. "]."
                 )
             end
-        elseif not is_enemy_spawn_faction_compatible_with_content(content_faction_key, faction_key) then
+        elseif not EnemySpawn.is_faction_compatible_with_content(content_faction_key, faction_key) then
             log(
                 "pick_initial_enemy_faction_key skipped faction candidate because it is incompatible with battle content faction. index=["
                     .. tostring(index)
@@ -1333,7 +1267,7 @@ local function pick_initial_enemy_faction_key(player_faction_key, player_general
 end
 
 local function cleanup_enemy_force()
-    local enemy_faction_name = get_saved_value(SAVE_KEYS.enemy_faction_key, DEFAULT_ENEMY_FACTION_KEY)
+    local enemy_faction_name = get_saved_value(SAVE_KEYS.enemy_faction_key, battle_pools.DEFAULT_ENEMY_FACTION_KEY)
     local enemy_faction = nil
 
     if enemy_faction_name ~= "" then
@@ -1370,7 +1304,7 @@ local function cleanup_enemy_force()
 end
 
 local function cleanup_enemy_force_before_spawn(reason)
-    local enemy_faction_name = get_saved_value(SAVE_KEYS.enemy_faction_key, DEFAULT_ENEMY_FACTION_KEY)
+    local enemy_faction_name = get_saved_value(SAVE_KEYS.enemy_faction_key, battle_pools.DEFAULT_ENEMY_FACTION_KEY)
     local enemy_faction = nil
     if enemy_faction_name ~= "" then
         enemy_faction = cm:get_faction(enemy_faction_name)
@@ -1406,8 +1340,10 @@ local function cleanup_enemy_force_before_spawn(reason)
     set_saved_value(SAVE_KEYS.enemy_agent_cqi, 0)
 end
 
-local function find_node_data_by_key(node_key)
-    for _, node_data in ipairs(NODE_POOL) do
+local NodeRuntime = {}
+
+function NodeRuntime.find_by_key(node_key)
+    for _, node_data in ipairs(data_nodes.NODE_POOL) do
         if node_data.node_key == node_key then
             return node_data
         end
@@ -1416,8 +1352,8 @@ local function find_node_data_by_key(node_key)
     return nil
 end
 
-local function find_node_data_by_faction_key(faction_key)
-    for _, node_data in ipairs(NODE_POOL) do
+function NodeRuntime.find_by_faction_key(faction_key)
+    for _, node_data in ipairs(data_nodes.NODE_POOL) do
         if node_data.faction_key == faction_key then
             return node_data
         end
@@ -1426,7 +1362,7 @@ local function find_node_data_by_faction_key(faction_key)
     return nil
 end
 
-local function clear_destination_selection_state(reason)
+function NodeRuntime.clear_destination_selection(reason)
     set_saved_value(SAVE_KEYS.destination_candidate_node_keys, "")
     set_saved_value(SAVE_KEYS.destination_candidate_faction_keys, "")
     set_saved_value(SAVE_KEYS.destination_leave_current_enabled, "false")
@@ -1436,7 +1372,7 @@ local function clear_destination_selection_state(reason)
     log("Destination selection state cleared. reason=[" .. tostring(reason) .. "].")
 end
 
-local function set_current_node(node_data, reason)
+function NodeRuntime.set_current(node_data, reason)
     if not node_data then
         log("set_current_node aborted because node_data is nil. reason=[" .. tostring(reason) .. "].")
         return false
@@ -1458,17 +1394,17 @@ local function set_current_node(node_data, reason)
     return true
 end
 
-local function ensure_current_node_initialized(reason)
+function NodeRuntime.ensure_initialized(reason)
     local current_node_key = get_saved_value(SAVE_KEYS.current_node_key, "")
     local current_node_faction_key = get_saved_value(SAVE_KEYS.current_node_faction_key, "")
 
     if current_node_key ~= "" then
-        local existing_node = find_node_data_by_key(current_node_key)
+        local existing_node = NodeRuntime.find_by_key(current_node_key)
         if existing_node then
             if current_node_faction_key ~= existing_node.faction_key then
                 set_saved_value(SAVE_KEYS.current_node_faction_key, existing_node.faction_key)
                 log(
-                    "ensure_current_node_initialized repaired node faction key. reason=["
+                    "NodeRuntime.ensure_initialized repaired node faction key. reason=["
                         .. tostring(reason)
                         .. "], node_key=["
                         .. tostring(current_node_key)
@@ -1483,7 +1419,7 @@ local function ensure_current_node_initialized(reason)
         end
 
         log(
-            "ensure_current_node_initialized found an unknown node key and will reset it. reason=["
+            "NodeRuntime.ensure_initialized found an unknown node key and will reset it. reason=["
                 .. tostring(reason)
                 .. "], current_node_key=["
                 .. tostring(current_node_key)
@@ -1506,22 +1442,22 @@ local function ensure_current_node_initialized(reason)
 
     local starting_node = nil
     if resolved_content_faction_key and resolved_content_faction_key ~= "" then
-        starting_node = find_node_data_by_faction_key(resolved_content_faction_key)
+        starting_node = NodeRuntime.find_by_faction_key(resolved_content_faction_key)
     end
     if not starting_node then
-        starting_node = find_node_data_by_key(STARTING_NODE_KEY) or find_node_data_by_faction_key(DEFAULT_CONTENT_FACTION_KEY)
+        starting_node = NodeRuntime.find_by_key(data_nodes.STARTING_NODE_KEY) or NodeRuntime.find_by_faction_key(battle_pools.DEFAULT_CONTENT_FACTION_KEY)
     end
     if not starting_node then
-        log("ensure_current_node_initialized failed because no starting node could be resolved.")
+        log("NodeRuntime.ensure_initialized failed because no starting node could be resolved.")
         return nil
     end
 
-    set_current_node(starting_node, reason or "initialize_default_node")
+    NodeRuntime.set_current(starting_node, reason or "initialize_default_node")
     return starting_node
 end
 
-local function get_current_node_data()
-    local node_data = ensure_current_node_initialized("get_current_node_data")
+function NodeRuntime.get_current()
+    local node_data = NodeRuntime.ensure_initialized("get_current_node_data")
     if not node_data then
         return nil
     end
@@ -1533,19 +1469,19 @@ local adamrogue_battle_generator = adamrogue_battle_generator_module.new({
     log = log,
     cm = cm,
     split_string = split_string,
-    default_unit_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {},
-    unit_pools_by_faction = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION,
-    battle_tier = BATTLE_TIER,
-    enemy_general_subtype = ENEMY_GENERAL_SUBTYPE,
-    enemy_general_subtypes_by_faction = ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION,
-    enemy_general_options_by_faction = ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION,
-    enemy_general_unit_values_by_faction = ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION,
-    enemy_embedded_agent_subtype = ENEMY_EMBEDDED_AGENT_SUBTYPE,
-    enemy_embedded_agent_subtypes_by_faction = ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION,
-    default_content_faction_key = DEFAULT_CONTENT_FACTION_KEY,
-    default_enemy_faction_key = DEFAULT_ENEMY_FACTION_KEY,
+    default_unit_pool = battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[battle_pools.DEFAULT_CONTENT_FACTION_KEY] or {},
+    unit_pools_by_faction = battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION,
+    battle_tier = adamrogue_data_cth.BATTLE_TIER,
+    enemy_general_subtype = battle_pools.ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION[battle_pools.DEFAULT_CONTENT_FACTION_KEY],
+    enemy_general_subtypes_by_faction = battle_pools.ENEMY_GENERAL_SUBTYPE_BY_CONTENT_FACTION,
+    enemy_general_options_by_faction = battle_pools.ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION,
+    enemy_general_unit_values_by_faction = battle_pools.ENEMY_GENERAL_UNIT_VALUE_BY_CONTENT_FACTION,
+    enemy_embedded_agent_subtype = battle_pools.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION[battle_pools.DEFAULT_CONTENT_FACTION_KEY],
+    enemy_embedded_agent_subtypes_by_faction = battle_pools.ENEMY_EMBEDDED_AGENT_SUBTYPE_BY_CONTENT_FACTION,
+    default_content_faction_key = battle_pools.DEFAULT_CONTENT_FACTION_KEY,
+    default_enemy_faction_key = battle_pools.DEFAULT_ENEMY_FACTION_KEY,
     enemy_unit_count_config = BALANCE_CONFIG.enemy_unit_count,
-    enemy_hero_pools_by_faction = ENEMY_HERO_POOLS_BY_CONTENT_FACTION,
+    enemy_hero_pools_by_faction = battle_pools.ENEMY_HERO_POOLS_BY_CONTENT_FACTION,
     enemy_growth_config = BALANCE_CONFIG.enemy_growth
 })
 
@@ -1555,16 +1491,18 @@ local build_budget_enemy_force_definition = adamrogue_battle_generator.build_bud
 local create_battle_payload_from_definition = adamrogue_battle_generator.create_battle_payload_from_definition
 local log_unit_list_details = adamrogue_battle_generator.log_unit_list_details
 
-local unit_value_lookup_cache = nil
-local character_value_lookup_cache = nil
+local UnitValues = {
+    unit_cache = nil,
+    character_cache = nil,
+}
 
-local function build_unit_value_lookup()
-    if unit_value_lookup_cache then
-        return unit_value_lookup_cache
+function UnitValues.build_unit_lookup()
+    if UnitValues.unit_cache then
+        return UnitValues.unit_cache
     end
 
     local lookup = {}
-    for _, pool in pairs(BATTLE_UNIT_POOLS_BY_CONTENT_FACTION) do
+    for _, pool in pairs(battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION) do
         for _, entry in ipairs(pool) do
             local unit_key = entry.unit_key
             if unit_key and unit_key ~= "" then
@@ -1576,7 +1514,7 @@ local function build_unit_value_lookup()
         end
     end
 
-    for _, options in pairs(PLAYER_GENERAL_OPTIONS_BY_FACTION) do
+    for _, options in pairs(data_players.PLAYER_GENERAL_OPTIONS_BY_FACTION) do
         for _, option in ipairs(options) do
             local unit_key = option.unit_key
             if unit_key and unit_key ~= "" then
@@ -1588,13 +1526,13 @@ local function build_unit_value_lookup()
         end
     end
 
-    unit_value_lookup_cache = lookup
+    UnitValues.unit_cache = lookup
     return lookup
 end
 
-local function build_character_value_lookup()
-    if character_value_lookup_cache then
-        return character_value_lookup_cache
+function UnitValues.build_character_lookup()
+    if UnitValues.character_cache then
+        return UnitValues.character_cache
     end
 
     local lookup = {}
@@ -1612,46 +1550,46 @@ local function build_character_value_lookup()
         end
     end
 
-    for faction_key, options in pairs(PLAYER_GENERAL_OPTIONS_BY_FACTION) do
+    for faction_key, options in pairs(data_players.PLAYER_GENERAL_OPTIONS_BY_FACTION) do
         for _, option in ipairs(options or {}) do
             record_character_value(option.subtype, option.unit_value, "player_general_options:" .. tostring(faction_key))
         end
     end
 
-    for faction_key, options in pairs(ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION) do
+    for faction_key, options in pairs(battle_pools.ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION) do
         for _, option in ipairs(options or {}) do
             record_character_value(option.agent_subtype, option.unit_value, "enemy_general_options:" .. tostring(faction_key))
         end
     end
 
-    for faction_key, hero_pool in pairs(ENEMY_HERO_POOLS_BY_CONTENT_FACTION) do
+    for faction_key, hero_pool in pairs(battle_pools.ENEMY_HERO_POOLS_BY_CONTENT_FACTION) do
         for _, hero_entry in ipairs(hero_pool or {}) do
             record_character_value(hero_entry.agent_subtype, hero_entry.unit_value, "enemy_hero_pool:" .. tostring(faction_key))
         end
     end
 
-    character_value_lookup_cache = lookup
+    UnitValues.character_cache = lookup
     return lookup
 end
 
-local function get_unit_value_for_key(unit_key)
+function UnitValues.get_unit_value(unit_key)
     if not unit_key or unit_key == "" then
         return 0
     end
 
-    return tonumber(build_unit_value_lookup()[unit_key]) or 0
+    return tonumber(UnitValues.build_unit_lookup()[unit_key]) or 0
 end
 
-local function get_character_value_for_subtype(subtype_key)
+function UnitValues.get_character_value(subtype_key)
     if not subtype_key or subtype_key == "" then
         return 0
     end
 
-    local entry = build_character_value_lookup()[subtype_key]
+    local entry = UnitValues.build_character_lookup()[subtype_key]
     return tonumber(entry and entry.value) or 0
 end
 
-local function get_force_total_unit_value(force)
+function UnitValues.get_force_unit_total(force)
     if not force or force:is_null_interface() then
         return 0
     end
@@ -1661,14 +1599,14 @@ local function get_force_total_unit_value(force)
     for i = 0, unit_list:num_items() - 1 do
         local unit = unit_list:item_at(i)
         if unit and not unit:is_null_interface() then
-            total_value = total_value + get_unit_value_for_key(unit:unit_key())
+            total_value = total_value + UnitValues.get_unit_value(unit:unit_key())
         end
     end
 
     return total_value
 end
 
-local function get_force_embedded_hero_total_value(force)
+function UnitValues.get_force_hero_total(force)
     if not force or force:is_null_interface() then
         return 0
     end
@@ -1705,7 +1643,7 @@ local function get_force_embedded_hero_total_value(force)
                     return character:character_subtype_key()
                 end)
                 if ok_subtype then
-                    total_value = total_value + get_character_value_for_subtype(subtype_key)
+                    total_value = total_value + UnitValues.get_character_value(subtype_key)
                 end
             end
         end
@@ -1714,11 +1652,11 @@ local function get_force_embedded_hero_total_value(force)
     return total_value
 end
 
-local function log_battle_balance_check(payload)
+function UnitValues.log_battle_balance_check(payload)
     local current_cycle = tonumber(payload and payload.current_cycle) or get_current_cycle()
     local player_force = get_saved_player_force()
-    local player_unit_value = player_force and get_force_total_unit_value(player_force) or 0
-    local player_hero_value = player_force and get_force_embedded_hero_total_value(player_force) or 0
+    local player_unit_value = player_force and UnitValues.get_force_unit_total(player_force) or 0
+    local player_hero_value = player_force and UnitValues.get_force_hero_total(player_force) or 0
     local player_value = player_unit_value + player_hero_value
     local enemy_budget_value = tonumber(payload and payload.target_value_budget) or 0
     local enemy_unit_value = tonumber(payload and payload.generated_total_value) or 0
@@ -1750,12 +1688,12 @@ local function log_battle_balance_check(payload)
 end
 
 local function get_reward_unit_pool_for_faction(content_faction_key, battle_tier, use_battle_tier_filter)
-    local source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[content_faction_key]
+    local source_pool = battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[content_faction_key]
     local resolved_faction_key = content_faction_key
 
     if not source_pool or #source_pool == 0 then
-        source_pool = BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[DEFAULT_CONTENT_FACTION_KEY] or {}
-        resolved_faction_key = DEFAULT_CONTENT_FACTION_KEY
+        source_pool = battle_pools.BATTLE_UNIT_POOLS_BY_CONTENT_FACTION[battle_pools.DEFAULT_CONTENT_FACTION_KEY] or {}
+        resolved_faction_key = battle_pools.DEFAULT_CONTENT_FACTION_KEY
         log(
             "[ERROR] get_reward_unit_pool_for_faction is falling back to the default content faction pool. requested_content_faction_key=["
                 .. tostring(content_faction_key)
@@ -1916,11 +1854,11 @@ end
 local adamrogue_ancillary_generator = adamrogue_ancillary_generator_module.new({
     log = log,
     cm = cm,
-    common_pool = COMMON_EQUIPMENT_POOL,
-    faction_pools = FACTION_EQUIPMENT_POOLS,
-    battle_tier = BATTLE_TIER,
-    equipment_rarity = EQUIPMENT_RARITY,
-    slot_order = EQUIPMENT_REWARD_SLOT_ORDER,
+    common_pool = data_ancillaries.COMMON_EQUIPMENT_POOL,
+    faction_pools = data_ancillaries.FACTION_EQUIPMENT_POOLS,
+    battle_tier = adamrogue_data_cth.BATTLE_TIER,
+    equipment_rarity = data_ancillaries.EQUIPMENT_RARITY,
+    slot_order = data_ancillaries.EQUIPMENT_REWARD_SLOT_ORDER,
     equipment_rarity_by_cycle = BALANCE_CONFIG.equipment_rarity_by_cycle,
     elite_battle_cycles = BALANCE_CONFIG.elite_battles and BALANCE_CONFIG.elite_battles.battle_cycles or {},
     elite_reward_highest_tier = BALANCE_CONFIG.elite_battles and BALANCE_CONFIG.elite_battles.reward_highest_tier == true
@@ -1973,7 +1911,7 @@ end
 local function regenerate_battle_payload_for_spawn_retry(spawn_attempt, failure_reason)
     local existing_payload = get_current_event_payload()
     local target_value_budget = tonumber(get_saved_payload_field("target_value_budget", 0)) or 0
-    local battle_tier = tonumber(get_saved_payload_field("battle_budget_tier", BATTLE_TIER.EARLY)) or BATTLE_TIER.EARLY
+    local battle_tier = tonumber(get_saved_payload_field("battle_budget_tier", adamrogue_data_cth.BATTLE_TIER.EARLY)) or adamrogue_data_cth.BATTLE_TIER.EARLY
     local previous_unit_list = get_saved_payload_field("enemy_unit_list", "")
     local player_faction_key = get_saved_value(SAVE_KEYS.player_faction_key, "")
 
@@ -2004,10 +1942,10 @@ local function regenerate_battle_payload_for_spawn_retry(spawn_attempt, failure_
 
     -- Retry the caravan spawn with the next configured faction before falling back to create_force.
     if spawn_attempt > 1 then
-        local content_faction_key = existing_payload.battle_content_faction_key or DEFAULT_CONTENT_FACTION_KEY
-        local configured_candidates = get_enemy_faction_candidate_sequence(
+        local content_faction_key = existing_payload.battle_content_faction_key or battle_pools.DEFAULT_CONTENT_FACTION_KEY
+        local configured_candidates = EnemySpawn.candidate_sequence(
             player_faction_key,
-            existing_payload.enemy_faction_key or DEFAULT_ENEMY_FACTION_KEY,
+            existing_payload.enemy_faction_key or battle_pools.DEFAULT_ENEMY_FACTION_KEY,
             existing_payload.enemy_faction_candidates or "",
             content_faction_key
         )
@@ -2018,7 +1956,7 @@ local function regenerate_battle_payload_for_spawn_retry(spawn_attempt, failure_
         for index = target_candidate_index, #configured_candidates do
             local faction_key = configured_candidates[index]
             local faction = cm:get_faction(faction_key)
-            if faction_key ~= player_faction_key and can_use_faction_for_enemy_spawn(faction) then
+            if faction_key ~= player_faction_key and EnemySpawn.can_use_faction(faction) then
                 resolved_retry_faction_key = faction_key
                 target_candidate_index = index
                 break
@@ -2075,119 +2013,6 @@ local function create_formal_entry_button()
     if button then
         button:SetTooltipText(common.get_localised_string("campaign_localised_strings_button_adamrogue_phase_a_tooltip"), true)
     end
-end
-
-local function ensure_run_started()
-    local faction = get_local_player_faction()
-    if not is_supported_player_faction(faction) then
-        log("Local player faction is not supported yet. Waiting for a supported human faction.")
-        return false
-    end
-
-    if get_saved_value(SAVE_KEYS.run_started, false) then
-        return true
-    end
-
-    local region_key, x, y = get_spawn_region_and_position_for_faction(faction)
-    if not region_key then
-        log("Failed to find a valid spawn position for the player test force.")
-        return false
-    end
-
-    log(string.format("Spawning player test force for [%s] at (%s, %s) in region [%s]", faction:name(), tostring(x), tostring(y), region_key))
-    local resolved_player_content_faction_key = resolve_player_content_faction_key(faction:name())
-    local selected_player_general_option = pick_random_player_general_option(faction:name())
-    local player_general_subtype = selected_player_general_option.subtype or get_default_player_general_subtype_for_faction(faction:name())
-    local starting_unit_list, logged_starting_unit_list, starting_unit_value, resolved_starting_pool_faction_key =
-        build_starting_player_unit_list(faction:name(), selected_player_general_option)
-    log(
-        "Spawning randomized player test force. faction=["
-            .. faction:name()
-            .. "], resolved_player_content_faction_key=["
-            .. tostring(resolved_player_content_faction_key)
-            .. "], selected_general_unit_key=["
-            .. tostring(selected_player_general_option.unit_key or "")
-            .. "], general_subtype=["
-            .. tostring(player_general_subtype)
-            .. "], general_value=["
-            .. tostring(selected_player_general_option.unit_value or 0)
-            .. "], resolved_starting_pool_faction_key=["
-            .. tostring(resolved_starting_pool_faction_key)
-            .. "], starting_unit_value=["
-            .. tostring(starting_unit_value)
-            .. "], target_value_budget=["
-            .. tostring(math.max(0, (tonumber(BALANCE_CONFIG.initial_player_value) or 4500) - (tonumber(selected_player_general_option.unit_value) or 0)))
-            .. "], starting_unit_list=["
-            .. tostring(logged_starting_unit_list)
-            .. "]."
-    )
-
-    cm:create_force_with_general(
-        faction:name(),
-        starting_unit_list,
-        region_key,
-        x,
-        y,
-        "general",
-        player_general_subtype,
-        "",
-        "",
-        "",
-        "",
-        false,
-        function(character_cqi)
-            local character = cm:get_character_by_cqi(character_cqi)
-            if not character or character:is_null_interface() or not character:has_military_force() then
-                log("Player test force creation callback fired, but the created general was invalid.")
-                return
-            end
-
-            local force = character:military_force()
-            set_saved_value(SAVE_KEYS.run_started, true)
-            set_saved_value(SAVE_KEYS.player_faction_key, faction:name())
-            set_saved_value(SAVE_KEYS.player_general_subtype, character:character_subtype_key())
-            set_saved_value(SAVE_KEYS.player_leader_cqi, character:command_queue_index())
-            set_saved_value(SAVE_KEYS.player_force_cqi, force:command_queue_index())
-            set_saved_value(SAVE_KEYS.completed_battle_count, get_saved_value(SAVE_KEYS.completed_battle_count, 0))
-            set_saved_value(SAVE_KEYS.victory_count, get_saved_value(SAVE_KEYS.victory_count, 0))
-            set_saved_value(SAVE_KEYS.defeat_count, get_saved_value(SAVE_KEYS.defeat_count, 0))
-            set_saved_value(SAVE_KEYS.consecutive_defeat_count, get_saved_value(SAVE_KEYS.consecutive_defeat_count, 0))
-
-            clear_current_event_context()
-            clear_destination_selection_state("player_force_created")
-            local starting_node = find_node_data_by_faction_key(resolved_player_content_faction_key)
-            if not starting_node then
-                starting_node = ensure_current_node_initialized("player_force_created")
-            else
-                set_current_node(starting_node, "player_force_created_from_player_faction")
-            end
-            ensure_balance_state_initialized("player_force_created")
-            set_saved_value(SAVE_KEYS.paused_from_state, "")
-            set_current_state(STATE.INIT)
-            cm:replenish_action_points(cm:char_lookup_str(character:command_queue_index()))
-
-            log(
-                "Player test force created. General CQI="
-                    .. tostring(character:command_queue_index())
-                    .. ", Force CQI="
-                    .. tostring(force:command_queue_index())
-                    .. ", Units="
-                    .. tostring(count_units_in_force(force))
-                    .. ", general_subtype=["
-                    .. tostring(character:character_subtype_key())
-                    .. "], action_points_replenished=[true"
-                    .. "], starting_unit_value=["
-                    .. tostring(starting_unit_value)
-                    .. ", current_cycle=["
-                    .. tostring(get_current_cycle())
-                    .. "], difficulty_level=["
-                    .. tostring(get_difficulty_level())
-                    .. "]."
-            )
-        end
-    )
-
-    return true
 end
 
 -- 生成预览部队（不设 run_started，生成完成后自动弹出预览困境）。
@@ -2247,12 +2072,12 @@ local function spawn_new_preview_army(faction)
             set_saved_value(SAVE_KEYS.player_force_cqi, force:command_queue_index())
 
             clear_current_event_context()
-            clear_destination_selection_state("preview_army_created")
-            local starting_node = find_node_data_by_faction_key(resolved_player_content_faction_key)
+            NodeRuntime.clear_destination_selection("preview_army_created")
+            local starting_node = NodeRuntime.find_by_faction_key(resolved_player_content_faction_key)
             if not starting_node then
-                starting_node = ensure_current_node_initialized("preview_army_created")
+                starting_node = NodeRuntime.ensure_initialized("preview_army_created")
             else
-                set_current_node(starting_node, "preview_army_created_from_player_faction")
+                NodeRuntime.set_current(starting_node, "preview_army_created_from_player_faction")
             end
             ensure_balance_state_initialized("preview_army_created")
             set_saved_value(SAVE_KEYS.paused_from_state, "")
@@ -2425,7 +2250,7 @@ function adamrogue_prepare_player_hero_reward_event()
     end
 
     local player_content_faction_key, player_content_resolution = resolve_player_content_faction_key(faction_name)
-    local hero_pool = ENEMY_HERO_POOLS_BY_CONTENT_FACTION[player_content_faction_key] or {}
+    local hero_pool = battle_pools.ENEMY_HERO_POOLS_BY_CONTENT_FACTION[player_content_faction_key] or {}
     local selected_heroes = adamrogue_pick_unique_player_hero_options(hero_pool, 3)
     if #selected_heroes < 3 then
         log(
@@ -2464,7 +2289,7 @@ function adamrogue_prepare_player_hero_reward_event()
         payload["hero_" .. tostring(index) .. "_unit_value"] = hero_entry.unit_value
     end
 
-    set_current_event_context(EVENT_TYPE.HERO_REWARD, DILEMMA_HERO_REWARD_KEY, seed, payload)
+    set_current_event_context(EVENT_TYPE.HERO_REWARD, DILEMMA_KEYS.HERO_REWARD, seed, payload)
     set_current_state(STATE.HERO_REWARD_PENDING)
     log(
         "Prepared player hero reward event. faction=["
@@ -2491,7 +2316,7 @@ local function prepare_unit_reward_event()
         return false
     end
 
-    local current_node = get_current_node_data()
+    local current_node = NodeRuntime.get_current()
     if not current_node then
         log("prepare_unit_reward_event aborted because the current node could not be resolved.")
         return false
@@ -2500,7 +2325,7 @@ local function prepare_unit_reward_event()
     local completed_battle_count = get_completed_battle_count()
     local battle_tier = get_battle_tier_for_progress(completed_battle_count)
     local current_cycle = get_current_cycle()
-    local reward_value_band = get_player_reward_value_band_for_cycle(current_cycle)
+    local reward_value_band = BalanceCycle.player_reward_value_band(current_cycle)
     local resolved_player_content_faction_key, player_content_resolution = resolve_player_content_faction_key(faction:name())
     local player_pool, resolved_player_pool_faction_key =
         get_reward_unit_pool_for_faction(resolved_player_content_faction_key, battle_tier, false)
@@ -2610,7 +2435,7 @@ local function prepare_unit_reward_event()
         pause_choice = 3
     }
 
-    set_current_event_context(EVENT_TYPE.UNIT_REWARD, DILEMMA_REWARD_KEY, seed, payload)
+    set_current_event_context(EVENT_TYPE.UNIT_REWARD, DILEMMA_KEYS.REWARD, seed, payload)
     set_current_state(STATE.UNIT_REWARD_PENDING)
     log(
         "Prepared unit reward event for faction ["
@@ -2664,7 +2489,7 @@ local function prepare_battle_event()
         return false
     end
 
-    local current_node = get_current_node_data()
+    local current_node = NodeRuntime.get_current()
     if not current_node then
         log("prepare_battle_event aborted because the current node could not be resolved.")
         return false
@@ -2673,7 +2498,7 @@ local function prepare_battle_event()
     local current_cycle = get_current_cycle()
     local completed_battle_count = get_completed_battle_count()
     local battle_tier = get_battle_tier_for_progress(completed_battle_count)
-    local budget_context = get_enemy_value_budget_for_cycle(current_cycle)
+    local budget_context = BalanceCycle.enemy_value_budget(current_cycle)
     local target_value_budget = budget_context.final_value
     log(
         "prepare_battle_event progress resolved. current_cycle=["
@@ -2719,10 +2544,10 @@ local function prepare_battle_event()
     end
 
     local spawn_content_faction_key = battle_definition.content_faction_key or current_node.faction_key
-    local enemy_faction_candidates = get_enemy_faction_candidates_for_content_faction(spawn_content_faction_key)
-    local enemy_faction_key = enemy_faction_candidates[1] or DEFAULT_ENEMY_FACTION_KEY
+    local enemy_faction_candidates = EnemySpawn.content_faction_candidates(spawn_content_faction_key)
+    local enemy_faction_key = enemy_faction_candidates[1] or battle_pools.DEFAULT_ENEMY_FACTION_KEY
     if not enemy_faction_key or enemy_faction_key == "" then
-        enemy_faction_key = DEFAULT_ENEMY_FACTION_KEY
+        enemy_faction_key = battle_pools.DEFAULT_ENEMY_FACTION_KEY
         log(
             "prepare_battle_event could not resolve a faction-specific enemy candidate list and is falling back to the default enemy faction key=["
                 .. tostring(enemy_faction_key)
@@ -2755,13 +2580,13 @@ local function prepare_battle_event()
     payload.elite_enemy_value_multiplier = budget_context.elite_multiplier
 
     set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
-    set_current_event_context(EVENT_TYPE.BATTLE, DILEMMA_BATTLE_KEY, seed, payload)
+    set_current_event_context(EVENT_TYPE.BATTLE, DILEMMA_KEYS.BATTLE, seed, payload)
     set_current_state(STATE.BATTLE_PENDING)
     log(
         "Building enemy force with budget ["
             .. tostring(target_value_budget)
             .. "], value_source=["
-            .. UNIT_VALUE_SOURCE
+            .. MVP_LIMITS.UNIT_VALUE_SOURCE
             .. "], tier=["
             .. tostring(battle_tier)
             .. "], generated_unit_count=["
@@ -2838,7 +2663,7 @@ local function prepare_equipment_reward_event()
         return false
     end
 
-    local current_node = get_current_node_data()
+    local current_node = NodeRuntime.get_current()
     if not current_node then
         log("prepare_equipment_reward_event aborted because the current node could not be resolved.")
         return false
@@ -2847,8 +2672,8 @@ local function prepare_equipment_reward_event()
     local completed_battle_count = get_completed_battle_count()
     local battle_tier = get_battle_tier_for_progress(completed_battle_count)
     local current_cycle = get_current_cycle()
-    local elite_battle = is_elite_battle_cycle(current_cycle)
-    local rarity_context = get_equipment_rarity_context_for_cycle(current_cycle)
+    local elite_battle = BalanceCycle.is_elite_battle(current_cycle)
+    local rarity_context = BalanceCycle.equipment_rarity_context(current_cycle)
     local resolved_player_content_faction_key, player_content_resolution = resolve_player_content_faction_key(faction:name())
     local payload = generate_equipment_reward_payload(
         completed_battle_count,
@@ -2869,7 +2694,7 @@ local function prepare_equipment_reward_event()
     payload.current_node_key = current_node.node_key
     payload.current_node_faction_key = current_node.faction_key
     local seed = new_event_seed()
-    set_current_event_context(EVENT_TYPE.EQUIPMENT_REWARD, DILEMMA_EQUIPMENT_REWARD_KEY, seed, payload)
+    set_current_event_context(EVENT_TYPE.EQUIPMENT_REWARD, DILEMMA_KEYS.EQUIPMENT_REWARD, seed, payload)
     set_current_state(STATE.EQUIPMENT_REWARD_PENDING)
     log(
         "Prepared equipment reward event for faction ["
@@ -2906,7 +2731,7 @@ local function prepare_destination_event()
         return false
     end
 
-    local current_node = get_current_node_data()
+    local current_node = NodeRuntime.get_current()
     if not current_node then
         log("prepare_destination_event aborted because the current node could not be resolved.")
         return false
@@ -2915,7 +2740,7 @@ local function prepare_destination_event()
     local current_cycle = get_current_cycle()
 
     local enabled_candidates = {}
-    for _, node_data in ipairs(NODE_POOL) do
+    for _, node_data in ipairs(data_nodes.NODE_POOL) do
         if node_data.enabled and node_data.node_key ~= current_node.node_key then
             enabled_candidates[#enabled_candidates + 1] = node_data
         end
@@ -2975,7 +2800,7 @@ local function prepare_destination_event()
     set_saved_value(SAVE_KEYS.destination_generation_seed, seed)
     set_saved_value(SAVE_KEYS.destination_generation_attempts, generation_attempts)
 
-    set_current_event_context(EVENT_TYPE.DESTINATION, DILEMMA_DESTINATION_KEY, seed, payload)
+    set_current_event_context(EVENT_TYPE.DESTINATION, DILEMMA_KEYS.DESTINATION, seed, payload)
     set_current_state(STATE.DESTINATION_PENDING)
     try_relocate_player_force_for_variety("destination_event_prepared")
     log(
@@ -3009,7 +2834,7 @@ local function launch_equipment_reward_dilemma(faction)
         return false
     end
 
-    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_EQUIPMENT_REWARD_KEY)
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.EQUIPMENT_REWARD)
     local payload_builder = cm:create_payload()
     local choice_keys = { "FIRST", "SECOND", "THIRD", "FOURTH" }
     local valid_choice_count = 0
@@ -3079,9 +2904,9 @@ local function launch_hero_reward_dilemma(faction)
     log("launch_hero_reward_dilemma: player_force OK.")
 
     local ok_build, build_err = pcall(function()
-        local dilemma_builder = cm:create_dilemma_builder(DILEMMA_HERO_REWARD_KEY)
+        local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.HERO_REWARD)
         if not dilemma_builder then
-            log("launch_hero_reward_dilemma aborted: create_dilemma_builder returned nil for key=[" .. tostring(DILEMMA_HERO_REWARD_KEY) .. "].")
+            log("launch_hero_reward_dilemma aborted: create_dilemma_builder returned nil for key=[" .. tostring(DILEMMA_KEYS.HERO_REWARD) .. "].")
             return
         end
         log("launch_hero_reward_dilemma: dilemma_builder created.")
@@ -3096,7 +2921,7 @@ local function launch_hero_reward_dilemma(faction)
                 log("launch_hero_reward_dilemma aborted: hero choice missing. choice_index=[" .. tostring(choice_index) .. "].")
                 return
             end
-            local component_key = build_hero_reward_payload_component_key(agent_subtype)
+            local component_key = DilemmaPayloadKeys.hero_reward(agent_subtype)
             log("launch_hero_reward_dilemma: adding choice. index=[" .. tostring(choice_index) .. "], subtype=[" .. tostring(agent_subtype) .. "], component_key=[" .. tostring(component_key) .. "].")
             payload_builder:text_display(component_key)
             dilemma_builder:add_choice_payload(choice_key, payload_builder)
@@ -3139,7 +2964,7 @@ local function launch_hero_reward_full_dilemma(faction)
         return false
     end
 
-    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_HERO_REWARD_FULL_KEY)
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.HERO_REWARD_FULL)
     local payload_builder = cm:create_payload()
 
     payload_builder:text_display("dummy_do_nothing")
@@ -3165,7 +2990,7 @@ local function launch_reward_dilemma(faction)
         return false
     end
 
-    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_REWARD_KEY)
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.REWARD)
     local payload_builder = cm:create_payload()
 
     for choice_index = 0, 2 do
@@ -3212,9 +3037,9 @@ local function launch_battle_dilemma(faction)
         return false
     end
 
-    log_battle_balance_check(payload)
+    UnitValues.log_battle_balance_check(payload)
 
-    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_BATTLE_KEY)
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.BATTLE)
     local payload_builder = cm:create_payload()
 
     payload_builder:text_display("dummy_do_nothing")
@@ -3237,9 +3062,9 @@ local function launch_destination_dilemma(faction)
         return false
     end
 
-    local candidate_node_a = find_node_data_by_key(payload.destination_candidate_node_0)
-    local candidate_node_b = find_node_data_by_key(payload.destination_candidate_node_1)
-    local current_node = find_node_data_by_key(payload.current_node_key) or get_current_node_data()
+    local candidate_node_a = NodeRuntime.find_by_key(payload.destination_candidate_node_0)
+    local candidate_node_b = NodeRuntime.find_by_key(payload.destination_candidate_node_1)
+    local current_node = NodeRuntime.find_by_key(payload.current_node_key) or NodeRuntime.get_current()
     if not candidate_node_a or not candidate_node_b or not current_node then
         log(
             "launch_destination_dilemma aborted because one or more saved destination nodes are invalid. payload=["
@@ -3249,18 +3074,18 @@ local function launch_destination_dilemma(faction)
         return false
     end
 
-    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_DESTINATION_KEY)
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.DESTINATION)
     local payload_builder = cm:create_payload()
 
-    payload_builder:text_display(build_destination_payload_component_key(candidate_node_a.node_key))
+    payload_builder:text_display(DilemmaPayloadKeys.destination_choice(candidate_node_a.node_key))
     dilemma_builder:add_choice_payload("FIRST", payload_builder)
     payload_builder:clear()
 
-    payload_builder:text_display(build_destination_payload_component_key(candidate_node_b.node_key))
+    payload_builder:text_display(DilemmaPayloadKeys.destination_choice(candidate_node_b.node_key))
     dilemma_builder:add_choice_payload("SECOND", payload_builder)
     payload_builder:clear()
 
-    payload_builder:text_display(build_destination_current_payload_component_key(current_node.node_key))
+    payload_builder:text_display(DilemmaPayloadKeys.destination_current(current_node.node_key))
     dilemma_builder:add_choice_payload("THIRD", payload_builder)
     payload_builder:clear()
 
@@ -3290,7 +3115,7 @@ launch_army_preview_dilemma = function(faction)
         return false
     end
 
-    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_ARMY_PREVIEW_KEY)
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.ARMY_PREVIEW)
     local payload_builder = cm:create_payload()
 
     payload_builder:text_display("dummy_do_nothing")
@@ -3322,7 +3147,7 @@ local function open_current_event(reason)
         return
     end
 
-    ensure_current_node_initialized("open_current_event")
+    NodeRuntime.ensure_initialized("open_current_event")
     ensure_initial_peace_on_first_entry(faction, reason)
 
     local state = get_current_state()
@@ -3578,7 +3403,7 @@ local function update_payload_enemy_faction_key(enemy_faction_key, reason)
 end
 
 local function resolve_enemy_general_option_for_spawn_faction(content_faction_key, enemy_faction_key, preferred_unit_key)
-    local options = ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION[content_faction_key] or {}
+    local options = battle_pools.ENEMY_GENERAL_OPTIONS_BY_CONTENT_FACTION[content_faction_key] or {}
     if #options == 0 then
         log(
             "[ERROR] resolve_enemy_general_option_for_spawn_faction found no configured general options. content_faction_key=["
@@ -3657,7 +3482,7 @@ local function resolve_enemy_general_option_for_spawn_faction(content_faction_ke
 end
 
 local function get_enemy_general_target_rank_for_cycle(cycle)
-    local normalized_cycle = math.max(DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or DEFAULT_CURRENT_CYCLE))
+    local normalized_cycle = math.max(adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE))
     return normalized_cycle
 end
 
@@ -4317,7 +4142,7 @@ local function issue_enemy_force_spawn_with_general(
                 local h_agent_type = hero_entry.agent_type
                 local h_agent_subtype = hero_entry.agent_subtype
                 local payload_index = tonumber(hero_entry.index) or (hero_index - 1)
-                local listener_name = MODULE_KEY
+                local listener_name = LOG.module_key
                     .. "_enemy_hero_created_"
                     .. tostring(enemy_force_cqi)
                     .. "_"
@@ -4694,7 +4519,7 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
                 .. tostring(current_spawn_attempt)
                 .. "]. Battle attack has been scheduled from spawn callback; locking retreat UI and exiting poll."
         )
-        -- 战斗攻击已由 issue_enemy_force_spawn_with_general 回调内的 force_declare_war+WAR_ATTACK_DELAY 延迟负责发起。
+        -- 战斗攻击已由 issue_enemy_force_spawn_with_general 回调内的 force_declare_war 延迟负责发起。
         -- 此处仅做 UI retreat 锁定，不再通过 caravans:create_caravan_battle 传送玩家部队（该函数
         -- 会将玩家部队传送到敌军生成坐标附近，在 AdamRogue 语境下会导致战斗无法正常触发）。
         local uim = cm:get_campaign_ui_manager()
@@ -4704,7 +4529,7 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
         return
     end
 
-    if current_attempt >= MAX_BATTLE_SPAWN_POLL_ATTEMPTS then
+    if current_attempt >= MVP_LIMITS.MAX_BATTLE_SPAWN_POLL_ATTEMPTS then
         log(
             "Enemy battle force was not ready in time. enemy_force_cqi=["
                 .. tostring(enemy_force_cqi)
@@ -4719,19 +4544,19 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
                 .. "]."
         )
 
-        if current_spawn_attempt_number and current_spawn_attempt_number < MAX_BATTLE_SPAWN_RETRIES then
+        if current_spawn_attempt_number and current_spawn_attempt_number < MVP_LIMITS.MAX_BATTLE_SPAWN_RETRIES then
             log(
                 "Primary caravan spawn timed out. Switching to the next enemy faction candidate and retrying spawn_caravan_battle_force. next_spawn_attempt=["
                     .. tostring(current_spawn_attempt_number + 1)
                     .. "], max_spawn_retries=["
-                    .. tostring(MAX_BATTLE_SPAWN_RETRIES)
+                    .. tostring(MVP_LIMITS.MAX_BATTLE_SPAWN_RETRIES)
                     .. "]."
             )
             spawn_enemy_force_and_start_battle(current_spawn_attempt_number + 1, "enemy_force_not_ready_after_polling")
         elseif is_same_faction_direct_fallback then
             log(
                 "Direct create_force fallback using the original faction also timed out. Escalating to alternate faction fallback stage=[2], max_spawn_retries=["
-                    .. tostring(MAX_BATTLE_SPAWN_RETRIES)
+                    .. tostring(MVP_LIMITS.MAX_BATTLE_SPAWN_RETRIES)
                     .. "]."
             )
             spawn_enemy_force_with_direct_create_force_fallback(
@@ -4741,12 +4566,12 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
                 "faction_fallback_2",
                 "direct_same_faction_not_ready_after_polling"
             )
-        elseif current_fallback_stage_index and current_fallback_stage_index < MAX_BATTLE_SPAWN_RETRIES then
+        elseif current_fallback_stage_index and current_fallback_stage_index < MVP_LIMITS.MAX_BATTLE_SPAWN_RETRIES then
             log(
                 "Faction fallback stage timed out. Advancing to the next candidate stage=["
                     .. tostring(current_fallback_stage_index + 1)
                     .. "], max_spawn_retries=["
-                    .. tostring(MAX_BATTLE_SPAWN_RETRIES)
+                    .. tostring(MVP_LIMITS.MAX_BATTLE_SPAWN_RETRIES)
                     .. "]."
             )
             spawn_enemy_force_with_direct_create_force_fallback(
@@ -4759,7 +4584,7 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
         else
             log(
                 "Enemy battle spawn retries exhausted after polling timeout. max_spawn_retries=["
-                    .. tostring(MAX_BATTLE_SPAWN_RETRIES)
+                    .. tostring(MVP_LIMITS.MAX_BATTLE_SPAWN_RETRIES)
                     .. "]."
             )
             log(
@@ -4794,13 +4619,13 @@ spawn_enemy_force_with_direct_create_force_fallback = function(
     end
 
     local enemy_unit_list = active_payload.enemy_unit_list or ""
-    local enemy_faction_key = active_payload.enemy_faction_key or DEFAULT_ENEMY_FACTION_KEY
+    local enemy_faction_key = active_payload.enemy_faction_key or battle_pools.DEFAULT_ENEMY_FACTION_KEY
     local enemy_general_subtype = active_payload.enemy_general_subtype or ""
     local enemy_general_unit_key = active_payload.enemy_general_unit_key or ""
     local enemy_agent_subtype = active_payload.enemy_agent_subtype or ""
     local enemy_hero_entries = decode_enemy_hero_entries_from_payload(active_payload, "spawn_enemy_force_with_direct_create_force_fallback")
     local enemy_faction_candidates = active_payload.enemy_faction_candidates or ""
-    local battle_content_faction_key = active_payload.battle_content_faction_key or DEFAULT_CONTENT_FACTION_KEY
+    local battle_content_faction_key = active_payload.battle_content_faction_key or battle_pools.DEFAULT_CONTENT_FACTION_KEY
     local fallback_stage_index = get_enemy_faction_fallback_stage_index(fallback_stage_label) or 2
     local use_same_faction_coordinates = fallback_stage_label == "direct_same_faction"
 
@@ -4859,7 +4684,7 @@ spawn_enemy_force_with_direct_create_force_fallback = function(
         )
     else
         local fallback_ok, selected_faction_or_error, resolved_x, resolved_y, resolved_source, resolved_index = pcall(
-            find_enemy_faction_fallback_candidate,
+            EnemySpawn.find_fallback_candidate,
             player_faction_name,
             enemy_faction_key,
             player_general,
@@ -5022,12 +4847,12 @@ spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
     local enemy_unit_list = active_payload.enemy_unit_list or ""
     local battle_force_source = active_payload.battle_force_source or "unknown"
     local target_value_budget = active_payload.target_value_budget or ""
-    local enemy_faction_key = active_payload.enemy_faction_key or DEFAULT_ENEMY_FACTION_KEY
+    local enemy_faction_key = active_payload.enemy_faction_key or battle_pools.DEFAULT_ENEMY_FACTION_KEY
     local enemy_general_subtype = active_payload.enemy_general_subtype or ""
     local enemy_general_unit_key = active_payload.enemy_general_unit_key or ""
     local enemy_agent_subtype = active_payload.enemy_agent_subtype or ""
     local enemy_hero_entries = decode_enemy_hero_entries_from_payload(active_payload, "spawn_enemy_force_and_start_battle")
-    local battle_content_faction_key = active_payload.battle_content_faction_key or DEFAULT_CONTENT_FACTION_KEY
+    local battle_content_faction_key = active_payload.battle_content_faction_key or battle_pools.DEFAULT_CONTENT_FACTION_KEY
     local enemy_faction_candidates = active_payload.enemy_faction_candidates or ""
     if not enemy_unit_list or enemy_unit_list == "" then
         log("Battle payload does not contain a generated enemy unit list. raw_payload=[" .. tostring(get_saved_value(SAVE_KEYS.current_event_payload, "")) .. "]")
@@ -5062,7 +4887,7 @@ spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
             .. "]."
     )
 
-    local resolved_enemy_faction_key, spawn_x, spawn_y = pick_initial_enemy_faction_key(
+    local resolved_enemy_faction_key, spawn_x, spawn_y = EnemySpawn.pick_initial_faction_key(
         player_faction_name,
         player_general,
         enemy_faction_key,
@@ -5169,7 +4994,9 @@ spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
     launch_spawned_enemy_force_battle(caravan_bridge, player_region:name(), false, spawn_x, spawn_y, 1, current_spawn_attempt)
 end
 
-local function advance_post_battle_flow(player_won, consecutive_defeat_count, restore_success, restore_reason)
+local PostBattle = {}
+
+function PostBattle.advance_flow(player_won, consecutive_defeat_count, restore_success, restore_reason)
     if not restore_success then
         log(
             "Post-battle flow continuing after force restore failure. player_won=["
@@ -5195,10 +5022,10 @@ local function advance_post_battle_flow(player_won, consecutive_defeat_count, re
         log("Battle victory could not prepare the equipment reward event and will fall back to INIT.")
     end
 
-    if not player_won and consecutive_defeat_count >= MAX_CONSECUTIVE_DEFEATS then
+    if not player_won and consecutive_defeat_count >= MVP_LIMITS.MAX_CONSECUTIVE_DEFEATS then
         set_current_state(STATE.GAME_OVER)
         clear_current_event_context()
-        clear_destination_selection_state("game_over")
+        NodeRuntime.clear_destination_selection("game_over")
         set_saved_value(SAVE_KEYS.paused_from_state, "")
         log("Entering GAME_OVER because consecutive defeats reached [" .. tostring(consecutive_defeat_count) .. "].")
         return
@@ -5217,11 +5044,11 @@ local function advance_post_battle_flow(player_won, consecutive_defeat_count, re
 
     set_current_state(STATE.INIT)
     clear_current_event_context()
-    clear_destination_selection_state("battle_flow_reset_to_init")
+    NodeRuntime.clear_destination_selection("battle_flow_reset_to_init")
     log("Battle defeat could not prepare a destination event and fell back to INIT. The current node remains unchanged for the next loop.")
 end
 
-local function handle_post_battle_state_transition(player_won)
+function PostBattle.handle_state_transition(player_won)
     log("handle_post_battle_state_transition started. player_won=[" .. tostring(player_won) .. "]")
     local completed_battle_count = get_completed_battle_count()
     local victory_count = get_saved_value(SAVE_KEYS.victory_count, 0)
@@ -5266,7 +5093,7 @@ local function handle_post_battle_state_transition(player_won)
                     .. "]."
             )
         end
-        advance_post_battle_flow(player_won, consecutive_defeat_count, restore_success, restore_reason)
+        PostBattle.advance_flow(player_won, consecutive_defeat_count, restore_success, restore_reason)
     end)
 end
 
@@ -5327,7 +5154,7 @@ function adamrogue_grant_player_hero_reward(hero_entry, on_complete)
     local agent_subtype = hero_entry.agent_subtype
     local target_rank = math.max(1, math.floor(tonumber(get_current_cycle()) or 1))
     local force_cqi = force:command_queue_index()
-    local listener_name = MODULE_KEY
+    local listener_name = LOG.module_key
         .. "_player_hero_reward_created_"
         .. tostring(force_cqi)
         .. "_"
@@ -5441,7 +5268,7 @@ function adamrogue_grant_player_hero_reward(hero_entry, on_complete)
 end
 
 function adamrogue_handle_hero_reward_dilemma_choice(context)
-    if context:dilemma() ~= DILEMMA_HERO_REWARD_KEY then
+    if context:dilemma() ~= DILEMMA_KEYS.HERO_REWARD then
         return
     end
 
@@ -5496,7 +5323,7 @@ function adamrogue_handle_hero_reward_dilemma_choice(context)
 end
 
 function adamrogue_handle_hero_reward_full_dilemma_choice(context)
-    if context:dilemma() ~= DILEMMA_HERO_REWARD_FULL_KEY then
+    if context:dilemma() ~= DILEMMA_KEYS.HERO_REWARD_FULL then
         return
     end
 
@@ -5508,8 +5335,10 @@ function adamrogue_handle_hero_reward_full_dilemma_choice(context)
     end, 0.1)
 end
 
-local function handle_reward_dilemma_choice(context)
-    if context:dilemma() ~= DILEMMA_REWARD_KEY then
+local DilemmaHandlers = {}
+
+function DilemmaHandlers.reward(context)
+    if context:dilemma() ~= DILEMMA_KEYS.REWARD then
         return
     end
 
@@ -5549,8 +5378,8 @@ local function handle_reward_dilemma_choice(context)
     end, 0.1)
 end
 
-local function handle_battle_dilemma_choice(context)
-    if context:dilemma() ~= DILEMMA_BATTLE_KEY then
+function DilemmaHandlers.battle(context)
+    if context:dilemma() ~= DILEMMA_KEYS.BATTLE then
         return
     end
 
@@ -5581,8 +5410,8 @@ local function handle_battle_dilemma_choice(context)
     end, 0.1)
 end
 
-local function handle_equipment_reward_dilemma_choice(context)
-    if context:dilemma() ~= DILEMMA_EQUIPMENT_REWARD_KEY then
+function DilemmaHandlers.equipment_reward(context)
+    if context:dilemma() ~= DILEMMA_KEYS.EQUIPMENT_REWARD then
         return
     end
 
@@ -5621,8 +5450,8 @@ local function handle_equipment_reward_dilemma_choice(context)
     end, 0.1)
 end
 
-local function handle_destination_dilemma_choice(context)
-    if context:dilemma() ~= DILEMMA_DESTINATION_KEY then
+function DilemmaHandlers.destination(context)
+    if context:dilemma() ~= DILEMMA_KEYS.DESTINATION then
         return
     end
 
@@ -5653,11 +5482,11 @@ local function handle_destination_dilemma_choice(context)
 
         local selected_node
         if choice == 0 then
-            selected_node = find_node_data_by_key(payload.destination_candidate_node_0)
+            selected_node = NodeRuntime.find_by_key(payload.destination_candidate_node_0)
         elseif choice == 1 then
-            selected_node = find_node_data_by_key(payload.destination_candidate_node_1)
+            selected_node = NodeRuntime.find_by_key(payload.destination_candidate_node_1)
         elseif choice == 2 then
-            selected_node = find_node_data_by_key(payload.current_node_key)
+            selected_node = NodeRuntime.find_by_key(payload.current_node_key)
         else
             log("Destination dilemma choice did not match any known action.")
             return
@@ -5669,7 +5498,7 @@ local function handle_destination_dilemma_choice(context)
         end
 
         local previous_cycle = get_current_cycle()
-        set_current_node(selected_node, "destination_choice_" .. tostring(choice))
+        NodeRuntime.set_current(selected_node, "destination_choice_" .. tostring(choice))
         set_current_cycle(previous_cycle + 1)
         log(
             "Destination resolved without applying player character minimum-rank scaling. reason=[destination_choice_"
@@ -5689,7 +5518,7 @@ local function handle_destination_dilemma_choice(context)
             return
         end
 
-        clear_destination_selection_state("destination_choice_resolved")
+        NodeRuntime.clear_destination_selection("destination_choice_resolved")
 
         log(
             "Destination resolved. selected_node_key=["
@@ -5711,8 +5540,8 @@ local function handle_destination_dilemma_choice(context)
     end, 0.1)
 end
 
-local function handle_army_preview_dilemma_choice(context)
-    if context:dilemma() ~= DILEMMA_ARMY_PREVIEW_KEY then
+function DilemmaHandlers.army_preview(context)
+    if context:dilemma() ~= DILEMMA_KEYS.ARMY_PREVIEW then
         return
     end
 
@@ -5777,10 +5606,10 @@ local function register_listeners()
         "adamrogue_phase_a_entry_button",
         "ContextTriggerEvent",
         function(context)
-            return type(context.string) == "string" and context.string:starts_with(BUTTON_CONTEXT_PREFIX .. ":")
+            return type(context.string) == "string" and context.string:starts_with(UI.BUTTON_CONTEXT_PREFIX .. ":")
         end,
         function(context)
-            local faction_name = string.sub(context.string, string.len(BUTTON_CONTEXT_PREFIX) + 2)
+            local faction_name = string.sub(context.string, string.len(UI.BUTTON_CONTEXT_PREFIX) + 2)
             local faction = cm:get_faction(faction_name)
             if not faction or faction:is_null_interface() or not faction:is_human() then
                 log("Formal entry was triggered for an invalid faction key [" .. tostring(faction_name) .. "].")
@@ -5798,35 +5627,35 @@ local function register_listeners()
         "DilemmaChoiceMadeEvent",
         function(context)
             local dilemma_key = context:dilemma()
-            return dilemma_key == DILEMMA_REWARD_KEY
-                or dilemma_key == DILEMMA_HERO_REWARD_KEY
-                or dilemma_key == DILEMMA_HERO_REWARD_FULL_KEY
-                or dilemma_key == DILEMMA_BATTLE_KEY
-                or dilemma_key == DILEMMA_EQUIPMENT_REWARD_KEY
-                or dilemma_key == DILEMMA_DESTINATION_KEY
-                or dilemma_key == DILEMMA_ARMY_PREVIEW_KEY
+            return dilemma_key == DILEMMA_KEYS.REWARD
+                or dilemma_key == DILEMMA_KEYS.HERO_REWARD
+                or dilemma_key == DILEMMA_KEYS.HERO_REWARD_FULL
+                or dilemma_key == DILEMMA_KEYS.BATTLE
+                or dilemma_key == DILEMMA_KEYS.EQUIPMENT_REWARD
+                or dilemma_key == DILEMMA_KEYS.DESTINATION
+                or dilemma_key == DILEMMA_KEYS.ARMY_PREVIEW
         end,
         function(context)
-            if context:dilemma() == DILEMMA_ARMY_PREVIEW_KEY then
-                handle_army_preview_dilemma_choice(context)
-            elseif context:dilemma() == DILEMMA_HERO_REWARD_KEY then
+            if context:dilemma() == DILEMMA_KEYS.ARMY_PREVIEW then
+                DilemmaHandlers.army_preview(context)
+            elseif context:dilemma() == DILEMMA_KEYS.HERO_REWARD then
                 adamrogue_handle_hero_reward_dilemma_choice(context)
-            elseif context:dilemma() == DILEMMA_HERO_REWARD_FULL_KEY then
+            elseif context:dilemma() == DILEMMA_KEYS.HERO_REWARD_FULL then
                 adamrogue_handle_hero_reward_full_dilemma_choice(context)
-            elseif context:dilemma() == DILEMMA_REWARD_KEY then
-                handle_reward_dilemma_choice(context)
-            elseif context:dilemma() == DILEMMA_BATTLE_KEY then
-                handle_battle_dilemma_choice(context)
-            elseif context:dilemma() == DILEMMA_EQUIPMENT_REWARD_KEY then
-                handle_equipment_reward_dilemma_choice(context)
+            elseif context:dilemma() == DILEMMA_KEYS.REWARD then
+                DilemmaHandlers.reward(context)
+            elseif context:dilemma() == DILEMMA_KEYS.BATTLE then
+                DilemmaHandlers.battle(context)
+            elseif context:dilemma() == DILEMMA_KEYS.EQUIPMENT_REWARD then
+                DilemmaHandlers.equipment_reward(context)
             else
-                handle_destination_dilemma_choice(context)
+                DilemmaHandlers.destination(context)
             end
         end,
         true
     )
 
-    if AUTO_RESUME_ON_TURN_START then
+    if UI.AUTO_RESUME_ON_TURN_START then
         core:remove_listener("adamrogue_phase_a_turn_resume")
         core:add_listener(
             "adamrogue_phase_a_turn_resume",
@@ -5871,7 +5700,7 @@ local function register_listeners()
             )
 
             log("Player test force completed a tracked battle as [" .. side .. "] with result [" .. result .. "].")
-            handle_post_battle_state_transition(player_won)
+            PostBattle.handle_state_transition(player_won)
 
             cm:callback(function()
                 cleanup_enemy_force()
