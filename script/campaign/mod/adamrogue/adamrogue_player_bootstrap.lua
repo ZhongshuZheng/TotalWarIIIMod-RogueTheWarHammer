@@ -29,7 +29,6 @@ function player_bootstrap.new(context)
     local get_saved_player_force = context.get_saved_player_force
     local count_units_in_force = context.count_units_in_force
     local get_current_cycle = context.get_current_cycle
-    local get_difficulty_level = context.get_difficulty_level
     local get_spawn_region_and_position_for_faction = context.get_spawn_region_and_position_for_faction
     local dilemma_army_preview_key = context.dilemma_army_preview_key
 

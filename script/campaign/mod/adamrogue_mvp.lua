@@ -153,9 +153,12 @@ local function set_current_cycle(cycle)
     log("Cycle -> " .. tostring(normalized_cycle))
 end
 
-local function get_difficulty_level()
-    local saved_level = tostring(get_saved_value(SAVE_KEYS.difficulty_level, adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL) or adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL)
-    return adamrogue_balance_config.normalize_difficulty_level(saved_level)
+local function get_player_reward_value_multiplier()
+    return tonumber(BALANCE_CONFIG.player_reward_value_multiplier) or 1
+end
+
+local function get_enemy_value_multiplier()
+    return tonumber(BALANCE_CONFIG.enemy_value_multiplier) or 1
 end
 
 local function ensure_balance_state_initialized(reason)
@@ -170,23 +173,6 @@ local function ensure_balance_state_initialized(reason)
                 .. "]."
         )
     end
-
-    local saved_difficulty_level = tostring(get_saved_value(SAVE_KEYS.difficulty_level, "") or "")
-    if not adamrogue_balance_config.is_supported_difficulty_level(saved_difficulty_level) then
-        set_saved_value(SAVE_KEYS.difficulty_level, adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL)
-        log(
-            "ensure_balance_state_initialized seeded difficulty_level. reason=["
-                .. tostring(reason)
-                .. "], difficulty_level=["
-                .. tostring(adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL)
-                .. "]."
-        )
-    end
-end
-
-local function get_difficulty_config()
-    return adamrogue_balance_config.DIFFICULTY_LEVELS[get_difficulty_level()]
-        or adamrogue_balance_config.DIFFICULTY_LEVELS[adamrogue_balance_config.DEFAULT_DIFFICULTY_LEVEL]
 end
 
 local BalanceCycle = {}
@@ -216,34 +202,85 @@ function BalanceCycle.is_elite_battle(cycle)
     return false
 end
 
+function BalanceCycle.elite_auto_battle_switch_enabled()
+    local elite_config = BALANCE_CONFIG.elite_battles or {}
+    local switch = elite_config.auto_battle_switch
+    if switch == nil then
+        switch = elite_config.elite_auto_battle_switch
+    end
+    return switch == true
+end
+
+function BalanceCycle.is_current_rogue_elite_battle()
+    local payload = get_current_event_payload()
+    if payload and payload.elite_battle ~= nil then
+        local raw = payload.elite_battle
+        if raw == true or raw == "true" or raw == 1 or raw == "1" then
+            return true
+        end
+        if raw == false or raw == "false" or raw == 0 or raw == "0" then
+            return false
+        end
+    end
+
+    return BalanceCycle.is_elite_battle(get_current_cycle())
+end
+
+function BalanceCycle.should_disable_elite_autoresolve()
+    if not BalanceCycle.is_current_rogue_elite_battle() then
+        return false
+    end
+    return not BalanceCycle.elite_auto_battle_switch_enabled()
+end
+
+local function apply_rogue_battle_pre_fight_ui_locks()
+    local uim = cm:get_campaign_ui_manager()
+    if not uim then
+        return
+    end
+
+    uim:override("retreat"):lock()
+    if BalanceCycle.should_disable_elite_autoresolve() then
+        uim:override("autoresolve"):lock()
+        log(
+            "Elite rogue battle: autoresolve locked. auto_battle_switch=["
+                .. tostring(BalanceCycle.elite_auto_battle_switch_enabled())
+                .. "], elite_battle=["
+                .. tostring(BalanceCycle.is_current_rogue_elite_battle())
+                .. "]."
+        )
+    end
+end
+
+local function release_rogue_battle_pre_fight_ui_locks()
+    local uim = cm:get_campaign_ui_manager()
+    if not uim then
+        return
+    end
+
+    uim:override("retreat"):unlock()
+    uim:override("autoresolve"):unlock()
+end
+
 function BalanceCycle.enemy_value_budget(cycle)
     local normalized_cycle = math.max(adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, math.floor(tonumber(cycle) or adamrogue_balance_config.DEFAULT_CURRENT_CYCLE))
     local base_value = tonumber(BALANCE_CONFIG.initial_enemy_value) or 0
-    local value_before_difficulty = base_value
+    local value_before_multiplier = base_value
 
     for growth_cycle = adamrogue_balance_config.DEFAULT_CURRENT_CYCLE, normalized_cycle do
-        value_before_difficulty = value_before_difficulty + BalanceCycle.enemy_growth(growth_cycle)
+        value_before_multiplier = value_before_multiplier + BalanceCycle.enemy_growth(growth_cycle)
     end
 
-    local difficulty_config = get_difficulty_config()
-    local difficulty_multiplier = tonumber(difficulty_config.enemy_value_multiplier) or 1
-    local elite_multiplier = 1
+    local enemy_value_multiplier = get_enemy_value_multiplier()
     local elite_battle = BalanceCycle.is_elite_battle(normalized_cycle)
-    if elite_battle then
-        elite_multiplier = tonumber(difficulty_config.elite_enemy_value_multiplier) or 1
-    end
-
-    local value_after_difficulty = math.floor((value_before_difficulty * difficulty_multiplier) + 0.5)
-    local final_value = math.floor((value_after_difficulty * elite_multiplier) + 0.5)
+    local final_value = math.floor((value_before_multiplier * enemy_value_multiplier) + 0.5)
 
     return {
         cycle = normalized_cycle,
         base_value = base_value,
-        value_before_difficulty = value_before_difficulty,
-        difficulty_multiplier = difficulty_multiplier,
-        value_after_difficulty = value_after_difficulty,
+        value_before_multiplier = value_before_multiplier,
+        enemy_value_multiplier = enemy_value_multiplier,
         elite_battle = elite_battle,
-        elite_multiplier = elite_multiplier,
         final_value = final_value
     }
 end
@@ -266,8 +303,7 @@ function BalanceCycle.player_reward_value_band(cycle)
         max_value = 700
     }
 
-    local difficulty_config = get_difficulty_config()
-    local player_reward_value_multiplier = tonumber(difficulty_config.player_reward_value_multiplier) or 1
+    local player_reward_value_multiplier = get_player_reward_value_multiplier()
     local base_min_value = tonumber(resolved_entry.min_value) or 300
     local base_max_value = tonumber(resolved_entry.max_value) or base_min_value
     local base_double_line = tonumber(resolved_entry.double_line) or 0
@@ -2509,14 +2545,12 @@ local function prepare_battle_event()
             .. tostring(battle_tier)
             .. "], target_value_budget=["
             .. tostring(target_value_budget)
-            .. "], budget_before_difficulty=["
-            .. tostring(budget_context.value_before_difficulty)
-            .. "], difficulty_multiplier=["
-            .. tostring(budget_context.difficulty_multiplier)
+            .. "], budget_before_multiplier=["
+            .. tostring(budget_context.value_before_multiplier)
+            .. "], enemy_value_multiplier=["
+            .. tostring(budget_context.enemy_value_multiplier)
             .. "], elite_battle=["
             .. tostring(budget_context.elite_battle)
-            .. "], elite_multiplier=["
-            .. tostring(budget_context.elite_multiplier)
             .. "], current_node_key=["
             .. tostring(current_node.node_key)
             .. "], current_node_faction_key=["
@@ -2573,11 +2607,10 @@ local function prepare_battle_event()
     payload.current_node_key = current_node.node_key
     payload.current_node_faction_key = current_node.faction_key
     payload.current_cycle = current_cycle
-    payload.enemy_value_before_difficulty = budget_context.value_before_difficulty
-    payload.enemy_value_after_difficulty = budget_context.value_after_difficulty
-    payload.enemy_value_difficulty_multiplier = budget_context.difficulty_multiplier
+    payload.enemy_value_before_multiplier = budget_context.value_before_multiplier
+    payload.enemy_value_after_multiplier = budget_context.final_value
+    payload.enemy_value_multiplier = budget_context.enemy_value_multiplier
     payload.elite_battle = budget_context.elite_battle and "true" or "false"
-    payload.elite_enemy_value_multiplier = budget_context.elite_multiplier
 
     set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
     set_current_event_context(EVENT_TYPE.BATTLE, DILEMMA_KEYS.BATTLE, seed, payload)
@@ -4522,10 +4555,7 @@ local function launch_spawned_enemy_force_battle(caravan_bridge, player_region_n
         -- 战斗攻击已由 issue_enemy_force_spawn_with_general 回调内的 force_declare_war 延迟负责发起。
         -- 此处仅做 UI retreat 锁定，不再通过 caravans:create_caravan_battle 传送玩家部队（该函数
         -- 会将玩家部队传送到敌军生成坐标附近，在 AdamRogue 语境下会导致战斗无法正常触发）。
-        local uim = cm:get_campaign_ui_manager()
-        if uim then
-            uim:override("retreat"):lock()
-        end
+        apply_rogue_battle_pre_fight_ui_locks()
         return
     end
 
@@ -5672,14 +5702,31 @@ local function register_listeners()
         )
     end
 
+    core:remove_listener("adamrogue_phase_a_pre_battle_panel")
+    core:add_listener(
+        "adamrogue_phase_a_pre_battle_panel",
+        "PanelOpenedCampaign",
+        function(context)
+            return context.string == "popup_pre_battle"
+                and get_current_event_type() == EVENT_TYPE.BATTLE
+                and BalanceCycle.should_disable_elite_autoresolve()
+        end,
+        function()
+            local uim = cm:get_campaign_ui_manager()
+            if uim then
+                uim:override("autoresolve"):lock()
+            end
+        end,
+        true
+    )
+
     core:remove_listener("adamrogue_phase_a_battle_completed")
     core:add_listener(
         "adamrogue_phase_a_battle_completed",
         "BattleCompleted",
         true,
         function()
-            local uim = cm:get_campaign_ui_manager()
-            uim:override("retreat"):unlock()
+            release_rogue_battle_pre_fight_ui_locks()
 
             local side = player_force_participated_in_pending_battle()
             if not side then
@@ -5740,8 +5787,10 @@ cm:add_first_tick_callback(function()
     log(
         "Balance config initialized. current_cycle=["
             .. tostring(get_current_cycle())
-            .. "], difficulty_level=["
-            .. tostring(get_difficulty_level())
+            .. "], player_reward_value_multiplier=["
+            .. tostring(get_player_reward_value_multiplier())
+            .. "], enemy_value_multiplier=["
+            .. tostring(get_enemy_value_multiplier())
             .. "], initial_player_value=["
             .. tostring(BALANCE_CONFIG.initial_player_value)
             .. "], initial_enemy_value=["

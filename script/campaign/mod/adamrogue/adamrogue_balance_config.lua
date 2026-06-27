@@ -1,34 +1,12 @@
 local data = {}
 
 data.DEFAULT_CURRENT_CYCLE = 1
-data.DEFAULT_DIFFICULTY_LEVEL = "normal"
-
-data.DIFFICULTY_LEVELS = {
-    easy = {
-        enemy_value_multiplier = 0.85,
-        player_reward_value_multiplier = 1.15,
-        elite_enemy_value_multiplier = 1.15
-    },
-    normal = {
-        enemy_value_multiplier = 1.00,
-        player_reward_value_multiplier = 1.00,
-        elite_enemy_value_multiplier = 1.25
-    },
-    hard = {
-        enemy_value_multiplier = 1.15,
-        player_reward_value_multiplier = 0.95,
-        elite_enemy_value_multiplier = 1.30
-    },
-    very_hard = {
-        enemy_value_multiplier = 1.30,
-        player_reward_value_multiplier = 0.90,
-        elite_enemy_value_multiplier = 1.35
-    }
-}
 
 data.CONFIG = {
     initial_player_value = 4500,
     initial_enemy_value = 3500,
+    player_reward_value_multiplier = 1.00,
+    enemy_value_multiplier = 1.00,
     enemy_growth = {
         { min_cycle = 1, max_cycle = 5, growth = 400, hero_num = 0 },
         { min_cycle = 6, max_cycle = 10, growth = 750, hero_num = 1 },
@@ -57,7 +35,9 @@ data.CONFIG = {
     },
     elite_battles = {
         battle_cycles = { 5, 10, 15, 20, 25, 30 },
-        reward_highest_tier = true
+        reward_highest_tier = true,
+        -- false = 精英战禁用战前「自动战斗」；true = 允许自动战斗
+        auto_battle_switch = false
     },
     enemy_unit_count = {
         minimum_units_base = 7,
@@ -67,17 +47,5 @@ data.CONFIG = {
         full_stack_from_cycle_19 = true
     }
 }
-
-function data.is_supported_difficulty_level(level)
-    return type(level) == "string" and data.DIFFICULTY_LEVELS[string.lower(level)] ~= nil
-end
-
-function data.normalize_difficulty_level(level)
-    if not data.is_supported_difficulty_level(level) then
-        return data.DEFAULT_DIFFICULTY_LEVEL
-    end
-
-    return string.lower(level)
-end
 
 return data
