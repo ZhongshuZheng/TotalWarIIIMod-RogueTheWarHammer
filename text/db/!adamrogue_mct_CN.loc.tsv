@@ -1,0 +1,14 @@
+key	text	tooltip
+#Loc;1;text/db/!adamrogue_mct_CN.loc	
+mct_adamrogue_title	战锤尖塔	false
+mct_adamrogue_author	AdamHt	false
+mct_adamrogue_description	调整战锤尖塔的平衡参数、精英战自动战斗与日志开关。	false
+mct_adamrogue_main_section	主要设置	false
+mct_adamrogue_player_reward_multiplier_text	玩家奖励系数	false
+mct_adamrogue_player_reward_multiplier_tooltip	作用于玩家奖励价值区间的倍率。默认值：1.00。范围：0.00 到 3.00。	false
+mct_adamrogue_enemy_value_multiplier_text	敌人难度系数	false
+mct_adamrogue_enemy_value_multiplier_tooltip	作用于敌人价值预算的倍率。默认值：1.00。范围：0.00 到 3.00。	false
+mct_adamrogue_auto_battle_switch_text	允许精英战自动战斗	false
+mct_adamrogue_auto_battle_switch_tooltip	启用后，战锤尖塔的精英战允许使用自动战斗。禁用后，精英战将锁定自动战斗。	false
+mct_adamrogue_logging_enabled_text	启用 Mod 日志	false
+mct_adamrogue_logging_enabled_tooltip	启用后，战锤尖塔会在游戏目录中写出调试日志文件 `adamrogue_phase_a_log.txt`。	false

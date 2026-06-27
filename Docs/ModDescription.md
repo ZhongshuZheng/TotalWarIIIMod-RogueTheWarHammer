@@ -93,6 +93,8 @@
 - 部分《Total War: Warhammer I》时期的传奇领主，例如卡尔·弗兰兹，人物模型可能无法被正确读取，并自动使用“绿皮萨满”替代模型。  
   目前属性、技能树与战斗能力均正常，但模型问题暂未解决。
 
+- 多数同种族的派系在本Mod几乎没有差别；部分种族（如混沌勇士）的细分派系是存在差别的
+
 - 在游玩后期，尤其是 30 层之后，进入战斗前可能出现一定卡顿。
 
 - 仍存在少量暂未能稳定复现的游戏崩溃问题。
@@ -207,6 +209,8 @@ In this mod, you do not need to recruit units manually, construct buildings, man
 
 - Some Legendary Lords from Total War: Warhammer I, such as Karl Franz, may fail to load their correct character model and instead use a Greenskin Shaman placeholder model.  
   Their stats, skills, and combat functionality are currently working as expected, but the model issue has not yet been resolved.
+
+- Most factions within the same race play almost identically in this mod, though some races with distinct sub-factions, such as Warriors of Chaos, may differ.
 
 - In the late game, especially after floor 30, there may be some stuttering before entering battle.
 

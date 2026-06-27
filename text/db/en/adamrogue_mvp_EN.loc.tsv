@@ -58,18 +58,6 @@ cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_equipmen
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_equipment_reward_dilemmaFOURTH	What have we here?	false
 dilemmas_localised_title_adamrogue_mvp_destination_dilemma	Warhammer Spire: Choose Destination	false
 dilemmas_localised_description_adamrogue_mvp_destination_dilemma	Choose the next destination on your journey.\\n\\nAt that node, you will face enemies of the chosen faction and gain access to that faction's unit and equipment rewards.	false
-mct_adamrogue_title	Warhammer Spire	false
-mct_adamrogue_author	Adam	false
-mct_adamrogue_description	Adjust Warhammer Spire balance settings, elite battle autoresolve, and logging.	false
-mct_adamrogue_main_section	Main Settings	false
-mct_adamrogue_player_reward_multiplier_text	Player Reward Multiplier	false
-mct_adamrogue_player_reward_multiplier_tooltip	Multiplier applied to player reward value bands. Default: 1.00. Range: 0.00 to 3.00.	false
-mct_adamrogue_enemy_value_multiplier_text	Enemy Value Multiplier	false
-mct_adamrogue_enemy_value_multiplier_tooltip	Multiplier applied to enemy value budgets. Default: 1.00. Range: 0.00 to 3.00.	false
-mct_adamrogue_auto_battle_switch_text	Allow Elite Autoresolve	false
-mct_adamrogue_auto_battle_switch_tooltip	If enabled, elite Warhammer Spire battles may use autoresolve. If disabled, autoresolve remains locked for elite battles.	false
-mct_adamrogue_logging_enabled_text	Enable Mod Logging	false
-mct_adamrogue_logging_enabled_tooltip	If enabled, Warhammer Spire writes debug logs to adamrogue_phase_a_log.txt in the game directory.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_destination_dilemmaFIRST	March to Target Faction	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_destination_dilemmaFIRST	The road onward lies here.	false
 cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_destination_dilemmaSECOND	March to Candidate Faction	false
