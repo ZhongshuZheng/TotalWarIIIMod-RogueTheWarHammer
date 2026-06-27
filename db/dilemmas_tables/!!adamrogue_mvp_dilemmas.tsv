@@ -7,3 +7,7 @@ adamrogue_mvp_destination_dilemma	false	dummy	dummy	plus_event_public_order	fals
 adamrogue_mvp_army_preview_dilemma	false	dummy	dummy	army_morale_up	false	Event				false
 adamrogue_mvp_hero_reward_dilemma	false	dummy	dummy	agent	false	Event				false
 adamrogue_mvp_hero_reward_full_dilemma	false	dummy	dummy	warning	false	Event				false
+adamrogue_mvp_opening_dilemma	false	dummy	dummy	plus_event_public_order	false	Event				false
+adamrogue_mvp_elite_battle_dilemma	false	dummy	dummy	enemy_spotted	false	Event				false
+adamrogue_mvp_first_defeat_dilemma	false	dummy	dummy	warning	false	Event				false
+adamrogue_mvp_game_over_dilemma	false	dummy	dummy	warning	false	Event				false

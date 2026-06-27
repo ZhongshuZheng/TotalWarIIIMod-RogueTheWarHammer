@@ -660,6 +660,15 @@ function force_snapshot.new(context)
 
                 local force = character:military_force()
                 local current_rank = character:rank()
+                cm:replenish_action_points(cm:char_lookup_str(character:command_queue_index()))
+                log(
+                    "respawn_player_force_from_snapshot callback: replenished player action points after force respawn. general_cqi=["
+                        .. tostring(character:command_queue_index())
+                        .. "], force_cqi=["
+                        .. tostring(force:command_queue_index())
+                        .. "]."
+                )
+
                 set_saved_value(save_keys.player_general_subtype, character:character_subtype_key())
                 set_saved_value(save_keys.player_leader_cqi, character:command_queue_index())
                 set_saved_value(save_keys.player_force_cqi, force:command_queue_index())

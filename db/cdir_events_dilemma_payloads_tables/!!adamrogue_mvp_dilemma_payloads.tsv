@@ -7,3 +7,8 @@ id	choice_key	dilemma_key	payload_key	value	target_key
 610190107	FIFTH	adamrogue_mvp_reward_dilemma	TEXT_DISPLAY	LOOKUP[dummy_do_nothing]	default
 610190105	FIRST	adamrogue_mvp_battle_dilemma	TEXT_DISPLAY	LOOKUP[dummy_do_nothing]	default
 610190106	SECOND	adamrogue_mvp_battle_dilemma	TEXT_DISPLAY	LOOKUP[dummy_do_nothing]	default
+610190108	FIRST	adamrogue_mvp_opening_dilemma	TEXT_DISPLAY	LOOKUP[dummy_do_nothing]	default
+610190109	FIRST	adamrogue_mvp_elite_battle_dilemma	TEXT_DISPLAY	LOOKUP[dummy_do_nothing]	default
+610190110	SECOND	adamrogue_mvp_elite_battle_dilemma	TEXT_DISPLAY	LOOKUP[dummy_do_nothing]	default
+610190111	FIRST	adamrogue_mvp_first_defeat_dilemma	TEXT_DISPLAY	LOOKUP[dummy_do_nothing]	default
+610190112	FIRST	adamrogue_mvp_game_over_dilemma	TEXT_DISPLAY	LOOKUP[dummy_do_nothing]	default

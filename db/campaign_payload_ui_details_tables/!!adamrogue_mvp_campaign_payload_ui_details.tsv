@@ -1,5 +1,7 @@
 component	icon	state	sort_order
 #campaign_payload_ui_details_tables;2;db/campaign_payload_ui_details_tables/!!adamrogue_mvp_campaign_payload_ui_details.tsv			
+adamrogue_reward_payload_confirm_skip	UI/skins/default/icon_alert_message.png	default	0
+adamrogue_battle_payload_enter_battle	UI/skins/default/icon_alert_message.png	default	0
 adamrogue_destination_payload_choice_cathay	UI/skins/default/icon_alert_message.png	default	0
 adamrogue_destination_payload_current_cathay	UI/skins/default/icon_alert_message.png	default	0
 adamrogue_destination_payload_choice_kislev	UI/skins/default/icon_alert_message.png	default	0

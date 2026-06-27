@@ -21,7 +21,7 @@ local battle_pools = adamrogue_data_battle_pools
 local data_ancillaries = adamrogue_data_ancillaries
 
 local LOG = {
-    enabled = true,
+    enabled = false,
     module_key = "adamrogue_phase_a",
     file_name = "adamrogue_phase_a_log.txt",
 }
@@ -39,13 +39,17 @@ local MVP_LIMITS = {
 }
 
 local DILEMMA_KEYS = {
+    OPENING = "adamrogue_mvp_opening_dilemma",
     REWARD = "adamrogue_mvp_reward_dilemma",
     BATTLE = "adamrogue_mvp_battle_dilemma",
+    ELITE_BATTLE = "adamrogue_mvp_elite_battle_dilemma",
     EQUIPMENT_REWARD = "adamrogue_mvp_equipment_reward_dilemma",
+    FIRST_DEFEAT = "adamrogue_mvp_first_defeat_dilemma",
     DESTINATION = "adamrogue_mvp_destination_dilemma",
     ARMY_PREVIEW = "adamrogue_mvp_army_preview_dilemma",
     HERO_REWARD = "adamrogue_mvp_hero_reward_dilemma",
     HERO_REWARD_FULL = "adamrogue_mvp_hero_reward_full_dilemma",
+    GAME_OVER = "adamrogue_mvp_game_over_dilemma",
 }
 
 local PLAYER_SPAWN = {
@@ -54,17 +58,37 @@ local PLAYER_SPAWN = {
 }
 
 local EVENT_TYPE = {
+    OPENING = "opening",
     UNIT_REWARD = "unit_reward",
     HERO_REWARD = "hero_reward",
     BATTLE = "battle",
+    FIRST_DEFEAT = "first_defeat",
     EQUIPMENT_REWARD = "equipment_reward",
-    DESTINATION = "destination"
+    DESTINATION = "destination",
+    GAME_OVER = "game_over"
 }
 
 local BALANCE_CONFIG = adamrogue_balance_config.CONFIG
 
 local STATE = adamrogue_runtime_state_module.STATE
 local SAVE_KEYS = adamrogue_runtime_state_module.SAVE_KEYS
+
+local MCT_KEYS = {
+    mod = "adamrogue_roguemod",
+    player_reward_value_multiplier = "player_reward_value_multiplier",
+    enemy_value_multiplier = "enemy_value_multiplier",
+    auto_battle_switch = "auto_battle_switch",
+    logging_enabled = "logging_enabled",
+}
+
+local MCT_CONFIG = {
+    mod = nil,
+    initialized = false,
+    player_reward_value_multiplier = nil,
+    enemy_value_multiplier = nil,
+    auto_battle_switch = nil,
+    logging_enabled = nil,
+}
 
 local DilemmaPayloadKeys = {
     destination_choice = function(node_key)
@@ -79,7 +103,12 @@ local DilemmaPayloadKeys = {
 }
 
 local function log(message)
-    if not LOG.enabled then
+    local logging_enabled = LOG.enabled
+    if MCT_CONFIG.logging_enabled ~= nil then
+        logging_enabled = MCT_CONFIG.logging_enabled == true
+    end
+
+    if not logging_enabled then
         return
     end
 
@@ -153,11 +182,117 @@ local function set_current_cycle(cycle)
     log("Cycle -> " .. tostring(normalized_cycle))
 end
 
+local function clamp_mct_number(value, fallback, min_value, max_value)
+    local numeric = tonumber(value)
+    if not numeric then
+        return fallback
+    end
+
+    if min_value ~= nil and numeric < min_value then
+        numeric = min_value
+    end
+    if max_value ~= nil and numeric > max_value then
+        numeric = max_value
+    end
+
+    return numeric
+end
+
+local function coerce_mct_boolean(value, fallback)
+    if value == nil then
+        return fallback
+    end
+    if value == true or value == false then
+        return value
+    end
+    if value == 1 or value == "1" or value == "true" then
+        return true
+    end
+    if value == 0 or value == "0" or value == "false" then
+        return false
+    end
+
+    return fallback
+end
+
+local function try_get_adamrogue_mct_mod(mct)
+    if not mct or type(mct.get_mod_by_key) ~= "function" then
+        return nil
+    end
+
+    return mct:get_mod_by_key(MCT_KEYS.mod)
+end
+
+local function refresh_mct_config(mct_mod, reason_label)
+    if not mct_mod then
+        MCT_CONFIG.mod = nil
+        MCT_CONFIG.initialized = false
+        MCT_CONFIG.player_reward_value_multiplier = nil
+        MCT_CONFIG.enemy_value_multiplier = nil
+        MCT_CONFIG.auto_battle_switch = nil
+        MCT_CONFIG.logging_enabled = nil
+        return false
+    end
+
+    MCT_CONFIG.mod = mct_mod
+    MCT_CONFIG.initialized = true
+
+    local player_multiplier_option = mct_mod:get_option_by_key(MCT_KEYS.player_reward_value_multiplier)
+    local enemy_multiplier_option = mct_mod:get_option_by_key(MCT_KEYS.enemy_value_multiplier)
+    local auto_battle_switch_option = mct_mod:get_option_by_key(MCT_KEYS.auto_battle_switch)
+    local logging_enabled_option = mct_mod:get_option_by_key(MCT_KEYS.logging_enabled)
+
+    MCT_CONFIG.player_reward_value_multiplier = clamp_mct_number(
+        player_multiplier_option and player_multiplier_option:get_finalized_setting() or nil,
+        tonumber(BALANCE_CONFIG.player_reward_value_multiplier) or 1,
+        0,
+        3
+    )
+    MCT_CONFIG.enemy_value_multiplier = clamp_mct_number(
+        enemy_multiplier_option and enemy_multiplier_option:get_finalized_setting() or nil,
+        tonumber(BALANCE_CONFIG.enemy_value_multiplier) or 1,
+        0,
+        3
+    )
+    MCT_CONFIG.auto_battle_switch = coerce_mct_boolean(
+        auto_battle_switch_option and auto_battle_switch_option:get_finalized_setting() or nil,
+        (BALANCE_CONFIG.elite_battles and BALANCE_CONFIG.elite_battles.auto_battle_switch == true) or false
+    )
+    MCT_CONFIG.logging_enabled = coerce_mct_boolean(
+        logging_enabled_option and logging_enabled_option:get_finalized_setting() or nil,
+        LOG.enabled == true
+    )
+
+    log(
+        "MCT config refreshed. reason=["
+            .. tostring(reason_label)
+            .. "], player_reward_value_multiplier=["
+            .. tostring(MCT_CONFIG.player_reward_value_multiplier)
+            .. "], enemy_value_multiplier=["
+            .. tostring(MCT_CONFIG.enemy_value_multiplier)
+            .. "], auto_battle_switch=["
+            .. tostring(MCT_CONFIG.auto_battle_switch)
+            .. "], logging_enabled=["
+            .. tostring(MCT_CONFIG.logging_enabled)
+            .. "]."
+    )
+
+    return true
+end
+
 local function get_player_reward_value_multiplier()
+    if MCT_CONFIG.player_reward_value_multiplier ~= nil then
+        return MCT_CONFIG.player_reward_value_multiplier
+    end
+
     return tonumber(BALANCE_CONFIG.player_reward_value_multiplier) or 1
 end
 
 local function get_enemy_value_multiplier()
+    if MCT_CONFIG.enemy_value_multiplier ~= nil then
+        return MCT_CONFIG.enemy_value_multiplier
+    end
+
     return tonumber(BALANCE_CONFIG.enemy_value_multiplier) or 1
 end
 
@@ -203,6 +338,10 @@ function BalanceCycle.is_elite_battle(cycle)
 end
 
 function BalanceCycle.elite_auto_battle_switch_enabled()
+    if MCT_CONFIG.auto_battle_switch ~= nil then
+        return MCT_CONFIG.auto_battle_switch == true
+    end
+
     local elite_config = BALANCE_CONFIG.elite_battles or {}
     local switch = elite_config.auto_battle_switch
     if switch == nil then
@@ -307,7 +446,7 @@ function BalanceCycle.player_reward_value_band(cycle)
     local base_min_value = tonumber(resolved_entry.min_value) or 300
     local base_max_value = tonumber(resolved_entry.max_value) or base_min_value
     local base_double_line = tonumber(resolved_entry.double_line) or 0
-    local min_value = math.floor((base_min_value * player_reward_value_multiplier) + 0.5)
+    local min_value = math.floor(base_min_value + 0.5)
     local max_value = math.floor((base_max_value * player_reward_value_multiplier) + 0.5)
     -- double_line 不随难度系数同步缩放，使难度不影响双倍奖励的触发范围
     local double_line = base_double_line
@@ -666,11 +805,13 @@ end
 
 local function is_supported_runtime_state(state)
     return state == STATE.INIT
+        or state == STATE.OPENING_PENDING
         or state == STATE.HERO_REWARD_PENDING
         or state == STATE.HERO_REWARD_FULL_PENDING
         or state == STATE.UNIT_REWARD_PENDING
         or state == STATE.BATTLE_PENDING
         or state == STATE.EQUIPMENT_REWARD_PENDING
+        or state == STATE.FIRST_DEFEAT_PENDING
         or state == STATE.DESTINATION_PENDING
         or state == STATE.PAUSED
         or state == STATE.GAME_OVER
@@ -2102,6 +2243,15 @@ local function spawn_new_preview_army(faction)
             end
 
             local force = character:military_force()
+            cm:replenish_action_points(cm:char_lookup_str(character:command_queue_index()))
+            log(
+                "spawn_new_preview_army callback: replenished player action points after initial preview force creation. general_cqi=["
+                    .. tostring(character:command_queue_index())
+                    .. "], force_cqi=["
+                    .. tostring(force:command_queue_index())
+                    .. "]."
+            )
+
             set_saved_value(SAVE_KEYS.player_faction_key, faction_name_capture)
             set_saved_value(SAVE_KEYS.player_general_subtype, character:character_subtype_key())
             set_saved_value(SAVE_KEYS.player_leader_cqi, character:command_queue_index())
@@ -2613,7 +2763,12 @@ local function prepare_battle_event()
     payload.elite_battle = budget_context.elite_battle and "true" or "false"
 
     set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
-    set_current_event_context(EVENT_TYPE.BATTLE, DILEMMA_KEYS.BATTLE, seed, payload)
+    set_current_event_context(
+        EVENT_TYPE.BATTLE,
+        budget_context.elite_battle and DILEMMA_KEYS.ELITE_BATTLE or DILEMMA_KEYS.BATTLE,
+        seed,
+        payload
+    )
     set_current_state(STATE.BATTLE_PENDING)
     log(
         "Building enemy force with budget ["
@@ -3048,7 +3203,7 @@ local function launch_reward_dilemma(faction)
     dilemma_builder:add_choice_payload("FOURTH", payload_builder)
     payload_builder:clear()
 
-    payload_builder:text_display("dummy_do_nothing")
+    payload_builder:text_display("adamrogue_reward_payload_confirm_skip")
     dilemma_builder:add_choice_payload("FIFTH", payload_builder)
     payload_builder:clear()
     dilemma_builder:add_target("default", player_force)
@@ -3072,10 +3227,15 @@ local function launch_battle_dilemma(faction)
 
     UnitValues.log_battle_balance_check(payload)
 
-    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.BATTLE)
+    local dilemma_key = get_current_event_key()
+    if dilemma_key ~= DILEMMA_KEYS.ELITE_BATTLE then
+        dilemma_key = DILEMMA_KEYS.BATTLE
+    end
+
+    local dilemma_builder = cm:create_dilemma_builder(dilemma_key)
     local payload_builder = cm:create_payload()
 
-    payload_builder:text_display("dummy_do_nothing")
+    payload_builder:text_display("adamrogue_battle_payload_enter_battle")
     dilemma_builder:add_choice_payload("FIRST", payload_builder)
     payload_builder:clear()
 
@@ -3084,7 +3244,52 @@ local function launch_battle_dilemma(faction)
     payload_builder:clear()
 
     cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
-    log("Launched custom battle dilemma for faction [" .. faction:name() .. "].")
+    log(
+        "Launched custom battle dilemma for faction ["
+            .. faction:name()
+            .. "], dilemma_key=["
+            .. tostring(dilemma_key)
+            .. "]."
+    )
+    return true
+end
+
+local function launch_opening_dilemma(faction)
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.OPENING)
+    local payload_builder = cm:create_payload()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FIRST", payload_builder)
+    payload_builder:clear()
+
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log("launch_opening_dilemma: launched for faction [" .. faction:name() .. "].")
+    return true
+end
+
+local function launch_first_defeat_dilemma(faction)
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.FIRST_DEFEAT)
+    local payload_builder = cm:create_payload()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FIRST", payload_builder)
+    payload_builder:clear()
+
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log("launch_first_defeat_dilemma: launched for faction [" .. faction:name() .. "].")
+    return true
+end
+
+local function launch_game_over_dilemma(faction)
+    local dilemma_builder = cm:create_dilemma_builder(DILEMMA_KEYS.GAME_OVER)
+    local payload_builder = cm:create_payload()
+
+    payload_builder:text_display("dummy_do_nothing")
+    dilemma_builder:add_choice_payload("FIRST", payload_builder)
+    payload_builder:clear()
+
+    cm:launch_custom_dilemma_from_builder(dilemma_builder, faction)
+    log("launch_game_over_dilemma: launched for faction [" .. faction:name() .. "].")
     return true
 end
 
@@ -3192,28 +3397,34 @@ local function open_current_event(reason)
         set_current_state(paused_from_state)
         state = paused_from_state
     elseif state == STATE.INIT then
-        local run_started = get_saved_value(SAVE_KEYS.run_started, false)
-        if not run_started then
-            -- Run 未确认：检查是否已有预览部队
-            local preview_general = get_saved_player_general()
-            if preview_general then
-                -- 预览部队已存在（玩家选了"稍后"），直接弹出预览困境
-                set_current_state(STATE.ARMY_PREVIEW_PENDING)
-                state = STATE.ARMY_PREVIEW_PENDING
-            else
-                -- 首次或重新随机后：异步生成部队，callback 内自动弹出预览困境
-                spawn_new_preview_army(faction)
-                return
-            end
+        if not get_saved_value(SAVE_KEYS.opening_dilemma_shown, false) then
+            set_current_event_context(EVENT_TYPE.OPENING, DILEMMA_KEYS.OPENING, new_event_seed(), {})
+            set_current_state(STATE.OPENING_PENDING)
+            state = STATE.OPENING_PENDING
         else
-            -- Run 已确认：进入常规奖励流程
-            if adamrogue_is_hero_reward_cycle(get_current_cycle()) and adamrogue_prepare_player_hero_reward_event() then
-                state = STATE.HERO_REWARD_PENDING
-            else
-                if not prepare_unit_reward_event() then
+        local run_started = get_saved_value(SAVE_KEYS.run_started, false)
+            if not run_started then
+                -- Run 未确认：检查是否已有预览部队
+                local preview_general = get_saved_player_general()
+                if preview_general then
+                    -- 预览部队已存在（玩家选了"稍后"），直接弹出预览困境
+                    set_current_state(STATE.ARMY_PREVIEW_PENDING)
+                    state = STATE.ARMY_PREVIEW_PENDING
+                else
+                    -- 首次或重新随机后：异步生成部队，callback 内自动弹出预览困境
+                    spawn_new_preview_army(faction)
                     return
                 end
-                state = STATE.UNIT_REWARD_PENDING
+            else
+                -- Run 已确认：进入常规奖励流程
+                if adamrogue_is_hero_reward_cycle(get_current_cycle()) and adamrogue_prepare_player_hero_reward_event() then
+                    state = STATE.HERO_REWARD_PENDING
+                else
+                    if not prepare_unit_reward_event() then
+                        return
+                    end
+                    state = STATE.UNIT_REWARD_PENDING
+                end
             end
         end
     end
@@ -3236,7 +3447,11 @@ local function open_current_event(reason)
             .. "]"
     )
 
-    if state == STATE.ARMY_PREVIEW_PENDING then
+    if state == STATE.OPENING_PENDING then
+        if not launch_opening_dilemma(faction) then
+            return
+        end
+    elseif state == STATE.ARMY_PREVIEW_PENDING then
         launch_army_preview_dilemma(faction)
     elseif state == STATE.HERO_REWARD_PENDING then
         if not launch_hero_reward_dilemma(faction) then
@@ -3258,12 +3473,18 @@ local function open_current_event(reason)
         if not launch_equipment_reward_dilemma(faction) then
             return
         end
+    elseif state == STATE.FIRST_DEFEAT_PENDING then
+        if not launch_first_defeat_dilemma(faction) then
+            return
+        end
     elseif state == STATE.DESTINATION_PENDING then
         if not launch_destination_dilemma(faction) then
             return
         end
     elseif state == STATE.GAME_OVER then
-        log("Run is in GAME_OVER. Phase A leaves this as a placeholder and does not open a summary window yet.")
+        if not launch_game_over_dilemma(faction) then
+            return
+        end
     else
         log("Formal entry found an unsupported state [" .. tostring(state) .. "].")
     end
@@ -5053,11 +5274,28 @@ function PostBattle.advance_flow(player_won, consecutive_defeat_count, restore_s
     end
 
     if not player_won and consecutive_defeat_count >= MVP_LIMITS.MAX_CONSECUTIVE_DEFEATS then
+        set_current_event_context(EVENT_TYPE.GAME_OVER, DILEMMA_KEYS.GAME_OVER, new_event_seed(), {})
         set_current_state(STATE.GAME_OVER)
-        clear_current_event_context()
         NodeRuntime.clear_destination_selection("game_over")
         set_saved_value(SAVE_KEYS.paused_from_state, "")
         log("Entering GAME_OVER because consecutive defeats reached [" .. tostring(consecutive_defeat_count) .. "].")
+        cm:callback(function()
+            if get_current_state() == STATE.GAME_OVER then
+                open_current_event("battle_defeat_game_over_auto_open")
+            end
+        end, 0.1)
+        return
+    end
+
+    if not player_won and get_saved_value(SAVE_KEYS.defeat_count, 0) == 1 then
+        set_current_event_context(EVENT_TYPE.FIRST_DEFEAT, DILEMMA_KEYS.FIRST_DEFEAT, new_event_seed(), {})
+        set_current_state(STATE.FIRST_DEFEAT_PENDING)
+        log("Entering FIRST_DEFEAT_PENDING after the player's first defeat.")
+        cm:callback(function()
+            if get_current_state() == STATE.FIRST_DEFEAT_PENDING then
+                open_current_event("battle_first_defeat_notice_auto_open")
+            end
+        end, 0.1)
         return
     end
 
@@ -5409,7 +5647,7 @@ function DilemmaHandlers.reward(context)
 end
 
 function DilemmaHandlers.battle(context)
-    if context:dilemma() ~= DILEMMA_KEYS.BATTLE then
+    if context:dilemma() ~= DILEMMA_KEYS.BATTLE and context:dilemma() ~= DILEMMA_KEYS.ELITE_BATTLE then
         return
     end
 
@@ -5438,6 +5676,58 @@ function DilemmaHandlers.battle(context)
             log("Battle dilemma choice did not match any known action.")
         end
     end, 0.1)
+end
+
+function DilemmaHandlers.opening(context)
+    if context:dilemma() ~= DILEMMA_KEYS.OPENING then
+        return
+    end
+
+    log("Opening dilemma acknowledged by the player.")
+    cm:callback(function()
+        set_saved_value(SAVE_KEYS.opening_dilemma_shown, true)
+        set_saved_value(SAVE_KEYS.paused_from_state, "")
+        clear_current_event_context()
+        set_current_state(STATE.INIT)
+        cm:callback(function()
+            if get_current_state() == STATE.INIT then
+                open_current_event("opening_acknowledged")
+            end
+        end, 0.1)
+    end, 0.1)
+end
+
+function DilemmaHandlers.first_defeat(context)
+    if context:dilemma() ~= DILEMMA_KEYS.FIRST_DEFEAT then
+        return
+    end
+
+    log("First defeat reminder acknowledged by the player.")
+    cm:callback(function()
+        set_saved_value(SAVE_KEYS.paused_from_state, "")
+        if prepare_destination_event() then
+            log("First defeat reminder resolved. The destination event is now pending and will be opened immediately.")
+            cm:callback(function()
+                if get_current_state() == STATE.DESTINATION_PENDING then
+                    open_current_event("first_defeat_destination_auto_open")
+                end
+            end, 0.1)
+            return
+        end
+
+        set_current_state(STATE.INIT)
+        clear_current_event_context()
+        NodeRuntime.clear_destination_selection("first_defeat_fallback_to_init")
+        log("First defeat reminder could not prepare a destination event and fell back to INIT.")
+    end, 0.1)
+end
+
+function DilemmaHandlers.game_over(context)
+    if context:dilemma() ~= DILEMMA_KEYS.GAME_OVER then
+        return
+    end
+
+    log("Game-over dilemma acknowledged by the player. The run remains in GAME_OVER.")
 end
 
 function DilemmaHandlers.equipment_reward(context)
@@ -5631,6 +5921,28 @@ function DilemmaHandlers.army_preview(context)
 end
 
 local function register_listeners()
+    core:remove_listener("adamrogue_phase_a_mct_initialized")
+    core:add_listener(
+        "adamrogue_phase_a_mct_initialized",
+        "MctInitialized",
+        true,
+        function(context)
+            refresh_mct_config(try_get_adamrogue_mct_mod(context:mct()), "mct_initialized")
+        end,
+        true
+    )
+
+    core:remove_listener("adamrogue_phase_a_mct_finalized")
+    core:add_listener(
+        "adamrogue_phase_a_mct_finalized",
+        "MctFinalized",
+        true,
+        function(context)
+            refresh_mct_config(try_get_adamrogue_mct_mod(context:mct()), "mct_finalized")
+        end,
+        true
+    )
+
     core:remove_listener("adamrogue_phase_a_entry_button")
     core:add_listener(
         "adamrogue_phase_a_entry_button",
@@ -5657,16 +5969,22 @@ local function register_listeners()
         "DilemmaChoiceMadeEvent",
         function(context)
             local dilemma_key = context:dilemma()
-            return dilemma_key == DILEMMA_KEYS.REWARD
+            return dilemma_key == DILEMMA_KEYS.OPENING
+                or dilemma_key == DILEMMA_KEYS.REWARD
                 or dilemma_key == DILEMMA_KEYS.HERO_REWARD
                 or dilemma_key == DILEMMA_KEYS.HERO_REWARD_FULL
                 or dilemma_key == DILEMMA_KEYS.BATTLE
+                or dilemma_key == DILEMMA_KEYS.ELITE_BATTLE
                 or dilemma_key == DILEMMA_KEYS.EQUIPMENT_REWARD
+                or dilemma_key == DILEMMA_KEYS.FIRST_DEFEAT
                 or dilemma_key == DILEMMA_KEYS.DESTINATION
                 or dilemma_key == DILEMMA_KEYS.ARMY_PREVIEW
+                or dilemma_key == DILEMMA_KEYS.GAME_OVER
         end,
         function(context)
-            if context:dilemma() == DILEMMA_KEYS.ARMY_PREVIEW then
+            if context:dilemma() == DILEMMA_KEYS.OPENING then
+                DilemmaHandlers.opening(context)
+            elseif context:dilemma() == DILEMMA_KEYS.ARMY_PREVIEW then
                 DilemmaHandlers.army_preview(context)
             elseif context:dilemma() == DILEMMA_KEYS.HERO_REWARD then
                 adamrogue_handle_hero_reward_dilemma_choice(context)
@@ -5674,10 +5992,14 @@ local function register_listeners()
                 adamrogue_handle_hero_reward_full_dilemma_choice(context)
             elseif context:dilemma() == DILEMMA_KEYS.REWARD then
                 DilemmaHandlers.reward(context)
-            elseif context:dilemma() == DILEMMA_KEYS.BATTLE then
+            elseif context:dilemma() == DILEMMA_KEYS.BATTLE or context:dilemma() == DILEMMA_KEYS.ELITE_BATTLE then
                 DilemmaHandlers.battle(context)
             elseif context:dilemma() == DILEMMA_KEYS.EQUIPMENT_REWARD then
                 DilemmaHandlers.equipment_reward(context)
+            elseif context:dilemma() == DILEMMA_KEYS.FIRST_DEFEAT then
+                DilemmaHandlers.first_defeat(context)
+            elseif context:dilemma() == DILEMMA_KEYS.GAME_OVER then
+                DilemmaHandlers.game_over(context)
             else
                 DilemmaHandlers.destination(context)
             end
@@ -5781,6 +6103,7 @@ local function reset_saved_flow_state_if_needed()
 end
 
 cm:add_first_tick_callback(function()
+    refresh_mct_config(try_get_adamrogue_mct_mod(get_mct and get_mct() or nil), "first_tick_pre_init")
     log("First tick initialization started.")
     reset_saved_flow_state_if_needed()
     ensure_balance_state_initialized("first_tick_initialization")
@@ -5791,6 +6114,10 @@ cm:add_first_tick_callback(function()
             .. tostring(get_player_reward_value_multiplier())
             .. "], enemy_value_multiplier=["
             .. tostring(get_enemy_value_multiplier())
+            .. "], auto_battle_switch=["
+            .. tostring(BalanceCycle.elite_auto_battle_switch_enabled())
+            .. "], logging_enabled=["
+            .. tostring(MCT_CONFIG.logging_enabled ~= nil and MCT_CONFIG.logging_enabled or LOG.enabled)
             .. "], initial_player_value=["
             .. tostring(BALANCE_CONFIG.initial_player_value)
             .. "], initial_enemy_value=["
