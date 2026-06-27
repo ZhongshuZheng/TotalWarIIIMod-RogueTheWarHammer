@@ -13,8 +13,8 @@ data.CONFIG = {
         { min_cycle = 11, max_cycle = 15, growth = 950, hero_num = 2 },
         { min_cycle = 16, max_cycle = 20, growth = 950, hero_num = 2 },
         { min_cycle = 21, max_cycle = 25, growth = 1050, hero_num = 3 },
-        { min_cycle = 26, max_cycle = 30, growth = 1100, hero_num = 3 },
-        { min_cycle = 31, max_cycle = nil, growth = 1500, hero_num = 3 }
+        { min_cycle = 26, max_cycle = 30, growth = 1300, hero_num = 3 },
+        { min_cycle = 31, max_cycle = nil, growth = 1750, hero_num = 3 }
     },
     player_reward_value = {
         { min_cycle = 1, max_cycle = 5, min_value = 300, max_value = 700, double_line = 0 },
