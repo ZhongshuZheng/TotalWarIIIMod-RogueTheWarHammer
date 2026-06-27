@@ -4,6 +4,502 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh3_dlc23_chd_astragoth"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh3_dlc23_chd_astragoth = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_character_0",
+            skill_key = "wh3_dlc23_skill_chd_unyielding_command",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_character_4",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_character_5",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_personal_0",
+            skill_key = "wh3_dlc23_skill_chd_astragoth_basalt_body",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_personal_1",
+            skill_key = "wh3_dlc23_skill_chd_astragoth_rightful_master",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_personal_2",
+            skill_key = "wh3_dlc23_skill_chd_astragoth_architect_of_evil",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_personal_3",
+            skill_key = "wh3_dlc23_skill_chd_astragoth_piercing_intellect",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_personal_4",
+            skill_key = "wh3_dlc23_skill_chd_astragoth_infernal_lord",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_personal_5",
+            skill_key = "wh3_dlc23_skill_chd_astragoth_dark_sacrifice",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_0",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_01_burning_wrath_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_1_3",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_03_killing_fire",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_1_2",
+            skill_key = "wh_main_skill_all_magic_fire_04_kindleflame",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_1_1",
+            skill_key = "wh2_main_skill_all_magic_fire_02_cascading_fire-cloak_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_1_4",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_04_ash_storm_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_1_5",
+            skill_key = "wh2_main_skill_all_magic_fire_03_flaming_sword_of_rhuin_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_3_3",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_06_hell_hammer_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_3_4",
+            skill_key = "wh2_main_skill_all_magic_fire_10_flame_storm_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_4",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_magic_dummy",
+            skill_key = "wh3_dlc23_skill_chd_magic_astragoth_dummy_burning_wrath_cascading_fire_cloak",
+            category_key = "character",
+            indent = 2,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_combat_0",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_combat_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_combat_1_3",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_combat_2",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_1_1",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_melee_labourer_hobgoblin",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_1_2",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_melee_chaos_dwarfs",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_1_3",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_missiles",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_1_4",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_artillery",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_1_5",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_bull_centaurs",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_1_6",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_monsters_kdaai_skullcracker",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_3_1",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_labourer_hobgoblin_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_3_2",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_melee_chaos_dwarfs_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_3_3",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_artillery_chaos_dwarf_missiles_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_3_4",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_monsters_kdaai_skullcracker_bull_centaurs_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_astragoth_army_4",
+            skill_key = "wh_main_skill_chs_lord_battle_stand_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc23_chd_bull_centaur_taurruk = {
         {
             node_key = "wh3_dlc23_skill_node_chd_bull_centaur_taurruk_generic_1",
@@ -1653,6 +2149,502 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "character",
             indent = 3,
             tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc23_chd_drazhoath = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_mount_bale_taurus_cinderbreath",
+            skill_key = "wh3_dlc23_skill_chd_drazhoath_mount_bale_taurus_cinderbreath",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_character_1",
+            skill_key = "wh3_dlc23_skill_chd_unyielding_command",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_character_2",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_character_3",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_personal_0",
+            skill_key = "wh3_dlc23_skill_chd_drazhoath_towering_heights",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_personal_1",
+            skill_key = "wh3_dlc23_skill_chd_drazhoath_we_are_legion",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_personal_2",
+            skill_key = "wh3_dlc23_skill_chd_drazhoath_greed_of_azgorh",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_personal_3",
+            skill_key = "wh3_dlc23_skill_chd_drazhoath_master_of_hell",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_personal_4",
+            skill_key = "wh3_dlc23_skill_chd_drazhoath_ashen",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_personal_5",
+            skill_key = "wh3_dlc23_skill_chd_drazhoath_long_exile",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_0",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_01_burning_wrath_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_1_2",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_03_killing_fire",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_1_1",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_02_dark_subjugation_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_1_3",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_04_ash_storm_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_1_4",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_05_curse_of_hashut_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_3_3",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_06_hell_hammer_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_3_4",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_07_flames_of_azgorh_lord",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_3_1",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_3_2",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_magic_dummy",
+            skill_key = "wh3_dlc23_skill_chd_magic_hashut_dummy_burning_wrath_dark_subjugation",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_combat_0",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_combat_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_combat_1_3",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_combat_2",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_1_1",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_melee_labourer_hobgoblin",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_1_2",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_melee_chaos_dwarfs",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_1_3",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_missiles",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_1_4",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_artillery",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_1_5",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_bull_centaurs",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_1_6",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_monsters_kdaai_skullcracker",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_3_1",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_labourer_hobgoblin_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_3_2",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_melee_chaos_dwarfs_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_3_3",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_artillery_chaos_dwarf_missiles_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_3_4",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_monsters_kdaai_skullcracker_bull_centaurs_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_drazhoath_army_4",
+            skill_key = "wh_main_skill_chs_lord_battle_stand_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -4840,6 +5832,428 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh3_dlc23_skill_node_chd_sorcerer_prophet_metal_army_4",
+            skill_key = "wh_main_skill_chs_lord_battle_stand_or_die",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc23_chd_zhatan = {
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_mount_great_taurus",
+            skill_key = "wh3_dlc23_skill_chd_zhatan_mount_great_taurus",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_mount_lammasu",
+            skill_key = "wh3_dlc23_skill_chd_zhatan_mount_lammasu",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 10 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_character_2",
+            skill_key = "wh3_dlc23_skill_chd_unyielding_command",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_character_3",
+            skill_key = "wh3_dlc23_skill_chd_hashuts_scales",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_character_4",
+            skill_key = "wh3_dlc23_skill_chd_headdress_of_zharr",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_personal_0",
+            skill_key = "wh3_dlc23_skill_chd_zhatan_brutality_of_zharr",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_personal_1",
+            skill_key = "wh3_dlc23_skill_chd_zhatan_subjugator",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_personal_2",
+            skill_key = "wh3_dlc23_skill_chd_zhatan_the_black",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_personal_3",
+            skill_key = "wh3_dlc23_skill_chd_zhatan_master_of_armies",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_personal_4",
+            skill_key = "wh3_dlc23_skill_chd_zhatan_haughty_resilience",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_personal_5",
+            skill_key = "wh3_dlc23_skill_chd_zhatan_laughing_killer",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_0",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_1_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_1_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_1_3",
+            skill_key = "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_1_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_2",
+            skill_key = "wh3_dlc23_skill_chd_zhatan_boundless_cruelty",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_3_1",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_3_2",
+            skill_key = "wh3_dlc23_skill_chd_all_self_violent_delights",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_3_3",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_3_4",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_combat_4",
+            skill_key = "wh2_main_skill_hef_alastar_unique_heroic_killing_blow",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_0",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_1_1",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_melee_labourer_hobgoblin",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_1_2",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_melee_chaos_dwarfs",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_1_3",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_missiles",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_1_4",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_artillery",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_1_5",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_bull_centaurs",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_1_6",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_monsters_kdaai_skullcracker",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_2",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_3_1",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_labourer_hobgoblin_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_3_2",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_melee_chaos_dwarfs_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_3_3",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_artillery_chaos_dwarf_missiles_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_3_4",
+            skill_key = "wh3_dlc23_skill_chd_army_buff_monsters_kdaai_skullcracker_bull_centaurs_rank7",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_chd_zhatan_army_4",
             skill_key = "wh_main_skill_chs_lord_battle_stand_or_die",
             category_key = "battle",
             indent = 4,

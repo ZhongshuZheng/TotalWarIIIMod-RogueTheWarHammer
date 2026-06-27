@@ -22,6 +22,14 @@ EXCLUDED_SKILL_KEY_PATTERNS = (
     "immortality",
     "mentor",
 )
+# Legendary lords available in custom battle but omitted from faction_agent_permitted_subtypes.
+EXTRA_GENERAL_SUBTYPES_BY_CONTENT_FACTION: dict[str, list[str]] = {
+    "wh3_dlc23_chd_astragoth": [
+        "wh3_dlc23_chd_zhatan",
+        "wh3_dlc23_chd_astragoth",
+        "wh3_dlc23_chd_drazhoath",
+    ],
+}
 PLAYER_CONTENT_NODE_BY_GENERATOR_CONFIG = {
     "WH_Cathay": "cathay",
     "WH_Kislev": "kislev",
@@ -146,6 +154,41 @@ def classify_player_general_lord_type(ui_unit_group_land: str) -> str:
     if "wizard" in group:
         return "spellcaster_lord"
     return "lord"
+
+
+def build_player_general_option_from_subtype(
+    subtype_key: str,
+    agent_subtypes_by_key: dict[str, dict[str, str]],
+    main_units_by_key: dict[str, dict[str, str]],
+) -> dict[str, object] | None:
+    subtype_row = agent_subtypes_by_key.get(subtype_key)
+    if subtype_row is None:
+        return None
+    if subtype_row.get("recruitable", "").lower() != "true":
+        return None
+
+    associated_unit_key = subtype_row.get("associated_unit_override", "")
+    if not associated_unit_key:
+        return None
+
+    main_unit_row = main_units_by_key.get(associated_unit_key)
+    if main_unit_row is None:
+        return None
+    if (main_unit_row.get("caste") or "").lower() != "lord":
+        return None
+
+    unit_value = to_int(main_unit_row.get("multiplayer_cost", "0"))
+    if unit_value <= 0:
+        unit_value = to_int(subtype_row.get("cost", "0"))
+    if unit_value <= 0:
+        return None
+
+    return {
+        "subtype": subtype_key,
+        "unit_key": associated_unit_key,
+        "unit_value": unit_value,
+        "lord_type": classify_player_general_lord_type(main_unit_row.get("ui_unit_group_land", "")),
+    }
 
 
 def merge_player_general_options(option_lists: list[list[dict[str, object]]]) -> list[dict[str, object]]:
@@ -1305,13 +1348,15 @@ def main() -> None:
         enemy_general_values[faction_key] = int(general_value_by_unit_key[enemy_generals[faction_key]])
 
         permitted_general_subtypes = set(permitted_generals_by_faction.get(faction_key, []))
+        patched_general_subtypes = set(EXTRA_GENERAL_SUBTYPES_BY_CONTENT_FACTION.get(faction_key, []))
         seen_general_option_keys: set[tuple[str, str]] = set()
         resolved_general_options: list[dict[str, object]] = []
         for unit_value, unit_key in general_candidates:
             subtype_candidates = sorted(agent_subtypes_by_associated_unit.get(unit_key, []), key=natural_sort_key)
             for subtype_key in subtype_candidates:
                 if permitted_general_subtypes and subtype_key not in permitted_general_subtypes:
-                    continue
+                    if subtype_key not in patched_general_subtypes:
+                        continue
 
                 # Testing: do not require subtype to appear in each QB faction's permitted list.
                 allowed_factions = list(faction_candidates)
@@ -1448,6 +1493,25 @@ def main() -> None:
             )
             seen_general_subtypes.add(subtype_key)
 
+        for subtype_key in EXTRA_GENERAL_SUBTYPES_BY_CONTENT_FACTION.get(resolved_content_faction_key, []):
+            if subtype_key in seen_general_subtypes:
+                continue
+            patched_option = build_player_general_option_from_subtype(
+                subtype_key,
+                agent_subtypes_by_key,
+                main_units_by_key,
+            )
+            if patched_option is None:
+                warnings.append(
+                    "Could not add patched general option "
+                    + subtype_key
+                    + " for playable faction "
+                    + faction_key
+                )
+                continue
+            general_options.append(patched_option)
+            seen_general_subtypes.add(subtype_key)
+
         if not general_options:
             warnings.append(
                 "Skipping playable faction "
@@ -1521,6 +1585,14 @@ def main() -> None:
             continue
         for general_option in general_options:
             subtype_key = str(general_option.get("subtype") or "")
+            if subtype_key:
+                subtype_keys_by_content_faction[content_faction_key].add(subtype_key)
+    for content_faction_key, subtype_keys in EXTRA_GENERAL_SUBTYPES_BY_CONTENT_FACTION.items():
+        for subtype_key in subtype_keys:
+            subtype_keys_by_content_faction[content_faction_key].add(subtype_key)
+    for content_faction_key, general_options in enemy_general_options.items():
+        for general_option in general_options:
+            subtype_key = str(general_option.get("agent_subtype") or "")
             if subtype_key:
                 subtype_keys_by_content_faction[content_faction_key].add(subtype_key)
 
