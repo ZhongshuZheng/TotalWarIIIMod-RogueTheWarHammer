@@ -412,13 +412,19 @@ function BalanceCycle.enemy_value_budget(cycle)
 
     local enemy_value_multiplier = get_enemy_value_multiplier()
     local elite_battle = BalanceCycle.is_elite_battle(normalized_cycle)
-    local final_value = math.floor((value_before_multiplier * enemy_value_multiplier) + 0.5)
+    local elite_value_multiplier = 1
+    if elite_battle then
+        elite_value_multiplier = tonumber(BALANCE_CONFIG.elite_battles and BALANCE_CONFIG.elite_battles.enemy_value_multiplier) or 1.25
+    end
+
+    local final_value = math.floor((value_before_multiplier * enemy_value_multiplier * elite_value_multiplier) + 0.5)
 
     return {
         cycle = normalized_cycle,
         base_value = base_value,
         value_before_multiplier = value_before_multiplier,
         enemy_value_multiplier = enemy_value_multiplier,
+        elite_value_multiplier = elite_value_multiplier,
         elite_battle = elite_battle,
         final_value = final_value
     }
@@ -2699,6 +2705,8 @@ local function prepare_battle_event()
             .. tostring(budget_context.value_before_multiplier)
             .. "], enemy_value_multiplier=["
             .. tostring(budget_context.enemy_value_multiplier)
+            .. "], elite_value_multiplier=["
+            .. tostring(budget_context.elite_value_multiplier)
             .. "], elite_battle=["
             .. tostring(budget_context.elite_battle)
             .. "], current_node_key=["
