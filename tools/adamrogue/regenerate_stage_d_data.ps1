@@ -10,6 +10,7 @@ $repoRoot = Split-Path -Parent (Split-Path -Parent $scriptRoot)
 $pythonExe = "D:\SoftWares\miniforge3\python.exe"
 $luacExe = "D:\SoftWares\Lua\luac55.exe"
 $generatorScript = Join-Path $scriptRoot "generate_stage_d_data.py"
+$heroRewardMetadataScript = Join-Path $scriptRoot "update_hero_reward_metadata.py"
 
 if (-not (Test-Path -LiteralPath $pythonExe)) {
     throw "Missing Python interpreter: $pythonExe"
@@ -19,8 +20,15 @@ if (-not (Test-Path -LiteralPath $generatorScript)) {
     throw "Missing generator script: $generatorScript"
 }
 
+if (-not (Test-Path -LiteralPath $heroRewardMetadataScript)) {
+    throw "Missing hero reward metadata script: $heroRewardMetadataScript"
+}
+
 Write-Host "[stage-d] Running generator..."
 & $pythonExe $generatorScript
+
+Write-Host "[stage-d] Updating hero reward metadata..."
+& $pythonExe $heroRewardMetadataScript
 
 $generatedLuaFiles = @(
     (Join-Path $repoRoot "script\campaign\mod\adamrogue\adamrogue_data_nodes.lua"),

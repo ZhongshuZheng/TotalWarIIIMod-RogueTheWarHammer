@@ -479,6 +479,12 @@ def render_campaign_payload_ui_details_table(blueprint: list[dict[str, object]])
         "#campaign_payload_ui_details_tables;2;db/campaign_payload_ui_details_tables/!!adamrogue_mvp_campaign_payload_ui_details.tsv\t\t\t",
     ]
 
+    static_payload_rows = [
+        "adamrogue_reward_payload_confirm_skip\tUI/skins/default/icon_alert_message.png\tdefault\t0",
+        "adamrogue_battle_payload_enter_battle\tUI/skins/default/icon_alert_message.png\tdefault\t0",
+    ]
+    lines.extend(static_payload_rows)
+
     for entry in blueprint:
         node_key = str(entry["node_key"])
         lines.append(f"{build_destination_payload_component_key(node_key)}\tUI/skins/default/icon_alert_message.png\tdefault\t0")
