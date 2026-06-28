@@ -12,6 +12,8 @@ BLUEPRINT_PATH = REPO_ROOT / "tools" / "adamrogue" / "faction_blueprint.json"
 START_MARKER = "# AUTO-GENERATED NODE LOC START"
 END_MARKER = "# AUTO-GENERATED NODE LOC END"
 ANCILLARIES_OVERRIDE_OUTPUT_NAME = "!!adamrogue_all_faction_set_all.tsv"
+CN_LOC_FILE_NAME = "adamrogue_mvp_CN.loc.tsv"
+EN_LOC_FILE_NAME = "!!adamrogue_mvp_EN.loc.tsv"
 
 ALLOWED_ANCILLARY_CATEGORIES = {"weapon", "armour", "talisman", "enchanted_item", "arcane_item"}
 ALLOWED_SKILL_CATEGORIES = {"character", "battle"}
@@ -348,6 +350,8 @@ def is_high_tier_character_specific_set(set_key: str, set_items: list[dict[str, 
 def should_skip_ancillary_for_reward_pool(
     ancillary: dict[str, str],
     ancillary_keys_with_included_agent_subtypes: set[str],
+    ancillary_keys_with_skill_requirements: set[str],
+    ancillary_keys_with_included_agents: set[str],
 ) -> bool:
     item_key = ancillary.get("key", "")
     if not item_key:
@@ -357,6 +361,10 @@ def should_skip_ancillary_for_reward_pool(
     if ancillary.get("legendary_item", "").lower() == "true":
         return True
     if item_key in ancillary_keys_with_included_agent_subtypes:
+        return True
+    if item_key in ancillary_keys_with_skill_requirements:
+        return True
+    if item_key in ancillary_keys_with_included_agents:
         return True
     return False
 
@@ -383,13 +391,20 @@ def build_equipment_pool_entry(
 def build_common_equipment_pool(
     ancillary_rows: list[dict[str, str]],
     ancillary_keys_with_included_agent_subtypes: set[str],
+    ancillary_keys_with_skill_requirements: set[str],
+    ancillary_keys_with_included_agents: set[str],
     ancillary_rarity_lookup: dict[int, tuple[str, int, int, int]],
 ) -> list[dict[str, object]]:
     equipment_pool: list[dict[str, object]] = []
     seen_items: set[str] = set()
 
     for ancillary in ancillary_rows:
-        if should_skip_ancillary_for_reward_pool(ancillary, ancillary_keys_with_included_agent_subtypes):
+        if should_skip_ancillary_for_reward_pool(
+            ancillary,
+            ancillary_keys_with_included_agent_subtypes,
+            ancillary_keys_with_skill_requirements,
+            ancillary_keys_with_included_agents,
+        ):
             continue
         if ancillary.get("faction_set", "") != "all":
             continue
@@ -1092,6 +1107,9 @@ def resolve_player_content_faction_key(
 def build_ancillaries_faction_set_all_override(
     header: list[str],
     rows: list[dict[str, str]],
+    ancillary_keys_with_included_agent_subtypes: set[str],
+    ancillary_keys_with_skill_requirements: set[str],
+    ancillary_keys_with_included_agents: set[str],
 ) -> str:
     output_header = "\t".join(header)
     output_meta = f"#ancillaries_tables;0;db/ancillaries_tables/{ANCILLARIES_OVERRIDE_OUTPUT_NAME}"
@@ -1102,6 +1120,13 @@ def build_ancillaries_faction_set_all_override(
     for row in rows:
         category = row.get(category_key, "")
         if category not in ALLOWED_ANCILLARY_CATEGORIES:
+            continue
+        if should_skip_ancillary_for_reward_pool(
+            row,
+            ancillary_keys_with_included_agent_subtypes,
+            ancillary_keys_with_skill_requirements,
+            ancillary_keys_with_included_agents,
+        ):
             continue
 
         updated_row = []
@@ -1128,6 +1153,9 @@ def main() -> None:
     faction_set_rows = read_tsv("faction_set_items_tables")
     ancillary_group_rows = read_tsv("ancillary_uniqueness_groupings_tables")
     ancillary_included_agent_subtype_rows = read_tsv("ancillaries_included_agent_subtypes_tables")
+    ancillaries_required_skills_rows = read_tsv("ancillaries_required_skills_tables")
+    character_skill_level_to_ancillaries_rows = read_tsv("character_skill_level_to_ancillaries_junctions_tables")
+    ancillary_to_included_agents_rows = read_tsv("ancillary_to_included_agents_tables")
     character_skill_category_rows = read_tsv("character_skill_categories_tables")
     character_skill_node_set_rows = read_tsv("character_skill_node_sets_tables")
     character_skill_node_set_item_rows = read_tsv("character_skill_node_set_items_tables")
@@ -1195,6 +1223,21 @@ def main() -> None:
     ancillary_keys_with_included_agent_subtypes = {
         row.get("ancillary", "")
         for row in ancillary_included_agent_subtype_rows
+        if row.get("ancillary", "")
+    }
+    ancillary_keys_with_skill_requirements = {
+        row.get("ancillary", "")
+        for row in ancillaries_required_skills_rows
+        if row.get("ancillary", "")
+    }
+    ancillary_keys_with_skill_requirements.update(
+        row.get("granted_ancillary", "")
+        for row in character_skill_level_to_ancillaries_rows
+        if row.get("granted_ancillary", "")
+    )
+    ancillary_keys_with_included_agents = {
+        row.get("ancillary", "")
+        for row in ancillary_to_included_agents_rows
         if row.get("ancillary", "")
     }
 
@@ -1394,7 +1437,12 @@ def main() -> None:
 
             if item_key in seen_items:
                 continue
-            if should_skip_ancillary_for_reward_pool(ancillary, ancillary_keys_with_included_agent_subtypes):
+            if should_skip_ancillary_for_reward_pool(
+                ancillary,
+                ancillary_keys_with_included_agent_subtypes,
+                ancillary_keys_with_skill_requirements,
+                ancillary_keys_with_included_agents,
+            ):
                 continue
             if faction_set_key in {"", "all"}:
                 continue
@@ -1604,6 +1652,8 @@ def main() -> None:
     common_equipment_pool = build_common_equipment_pool(
         ancillary_rows,
         ancillary_keys_with_included_agent_subtypes,
+        ancillary_keys_with_skill_requirements,
+        ancillary_keys_with_included_agents,
         ancillary_rarity_lookup,
     )
 
@@ -1638,6 +1688,9 @@ def main() -> None:
     ancillaries_faction_set_all_override = build_ancillaries_faction_set_all_override(
         list(ancillary_rows[0].keys()) if ancillary_rows else [],
         ancillary_rows,
+        ancillary_keys_with_included_agent_subtypes,
+        ancillary_keys_with_skill_requirements,
+        ancillary_keys_with_included_agents,
     )
     campaign_payload_ui_details_table = render_campaign_payload_ui_details_table(blueprint)
 
@@ -1716,8 +1769,8 @@ def main() -> None:
         "campaign_payload_ui_details_description_adamrogue_destination_payload_delay\t[[col:yellow]]Keep the current candidates and choose again the next time you press the button.[[/col]]\tfalse"
     )
 
-    replace_block(REPO_ROOT / "text" / "db" / "adamrogue_mvp_CN.loc.tsv", cn_loc_lines)
-    replace_block(REPO_ROOT / "text" / "db" / "en" / "adamrogue_mvp_EN.loc.tsv", en_loc_lines)
+    replace_block(REPO_ROOT / "text" / "db" / CN_LOC_FILE_NAME, cn_loc_lines)
+    replace_block(REPO_ROOT / "text" / "db" / EN_LOC_FILE_NAME, en_loc_lines)
 
     print(f"[OK] Generated nodes for {len(blueprint)} factions.")
     print(f"[OK] Generated common equipment pool: {len(common_equipment_pool)}")

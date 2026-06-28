@@ -6,6 +6,8 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+CN_LOC_FILE_NAME = "adamrogue_mvp_CN.loc.tsv"
+EN_LOC_FILE_NAME = "!!adamrogue_mvp_EN.loc.tsv"
 
 
 def find_workspace_root() -> Path:
@@ -201,8 +203,8 @@ def update_loc_tables(heroes: list[tuple[str, str, str]]) -> None:
             ]
         )
 
-    append_tsv_unique(REPO_ROOT / "text" / "db" / "adamrogue_mvp_CN.loc.tsv", base_cn + hero_rows_cn, [0])
-    append_tsv_unique(REPO_ROOT / "text" / "db" / "en" / "adamrogue_mvp_EN.loc.tsv", base_en + hero_rows_en, [0])
+    append_tsv_unique(REPO_ROOT / "text" / "db" / CN_LOC_FILE_NAME, base_cn + hero_rows_cn, [0])
+    append_tsv_unique(REPO_ROOT / "text" / "db" / EN_LOC_FILE_NAME, base_en + hero_rows_en, [0])
 
 
 def main() -> None:

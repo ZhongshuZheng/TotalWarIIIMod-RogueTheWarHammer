@@ -10,10 +10,10 @@ data.CONFIG = {
     enemy_growth = {
         { min_cycle = 1, max_cycle = 5, growth = 400, hero_num = 0 },
         { min_cycle = 6, max_cycle = 10, growth = 750, hero_num = 1 },
-        { min_cycle = 11, max_cycle = 15, growth = 950, hero_num = 2 },
-        { min_cycle = 16, max_cycle = 20, growth = 950, hero_num = 2 },
-        { min_cycle = 21, max_cycle = 25, growth = 1050, hero_num = 3 },
-        { min_cycle = 26, max_cycle = 30, growth = 1300, hero_num = 3 },
+        { min_cycle = 11, max_cycle = 15, growth = 1000, hero_num = 2 },
+        { min_cycle = 16, max_cycle = 20, growth = 1100, hero_num = 2 },
+        { min_cycle = 21, max_cycle = 25, growth = 1200, hero_num = 3 },
+        { min_cycle = 26, max_cycle = 30, growth = 1350, hero_num = 3 },
         { min_cycle = 31, max_cycle = nil, growth = 1450, hero_num = 3 }
     },
     player_reward_value = {
