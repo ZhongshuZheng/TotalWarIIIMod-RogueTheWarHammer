@@ -4,17 +4,17 @@ data.DEFAULT_CURRENT_CYCLE = 1
 
 data.CONFIG = {
     initial_player_value = 4500,
-    initial_enemy_value = 3500,
+    initial_enemy_value = 4300,
     player_reward_value_multiplier = 1.00,
     enemy_value_multiplier = 1.00,
     enemy_growth = {
-        { min_cycle = 1, max_cycle = 5, growth = 400, hero_num = 0 },
-        { min_cycle = 6, max_cycle = 10, growth = 750, hero_num = 1 },
-        { min_cycle = 11, max_cycle = 15, growth = 1000, hero_num = 2 },
-        { min_cycle = 16, max_cycle = 20, growth = 1100, hero_num = 2 },
+        { min_cycle = 1, max_cycle = 5, growth = 500, hero_num = 0 },
+        { min_cycle = 6, max_cycle = 10, growth = 850, hero_num = 1 },
+        { min_cycle = 11, max_cycle = 15, growth = 1100, hero_num = 2 },
+        { min_cycle = 16, max_cycle = 20, growth = 1200, hero_num = 2 },
         { min_cycle = 21, max_cycle = 25, growth = 1200, hero_num = 3 },
-        { min_cycle = 26, max_cycle = 30, growth = 1350, hero_num = 3 },
-        { min_cycle = 31, max_cycle = nil, growth = 1450, hero_num = 3 }
+        { min_cycle = 26, max_cycle = 30, growth = 1200, hero_num = 3 },
+        { min_cycle = 31, max_cycle = nil, growth = 1400, hero_num = 3 }
     },
     player_reward_value = {
         { min_cycle = 1, max_cycle = 5, min_value = 300, max_value = 700, double_line = 0 },
@@ -35,7 +35,7 @@ data.CONFIG = {
     },
     elite_battles = {
         battle_cycles = { 5, 10, 15, 20, 25, 30 },
-        enemy_value_multiplier = 1.25,
+        enemy_value_multiplier = 1.4,
         reward_highest_tier = true,
         -- false = 精英战禁用战前「自动战斗」；true = 允许自动战斗
         auto_battle_switch = false
