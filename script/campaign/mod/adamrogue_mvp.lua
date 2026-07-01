@@ -5375,16 +5375,21 @@ function PostBattle.handle_state_transition(player_won)
             .. "."
     )
 
-    restore_player_force_after_battle(function(restore_success, restore_reason)
-        if not restore_success then
-            log(
-                "restore_player_force_after_battle finished with failure. reason=["
-                    .. tostring(restore_reason)
-                    .. "]."
-            )
-        end
-        PostBattle.advance_flow(player_won, consecutive_defeat_count, restore_success, restore_reason)
-    end)
+    restore_player_force_after_battle(
+        function(restore_success, restore_reason)
+            if not restore_success then
+                log(
+                    "restore_player_force_after_battle finished with failure. reason=["
+                        .. tostring(restore_reason)
+                        .. "]."
+                )
+            end
+            PostBattle.advance_flow(player_won, consecutive_defeat_count, restore_success, restore_reason)
+        end,
+        {
+            force_respawn = not player_won
+        }
+    )
 end
 
 function adamrogue_get_player_hero_reward_entry_from_payload(payload, choice)

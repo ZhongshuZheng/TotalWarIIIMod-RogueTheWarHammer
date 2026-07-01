@@ -35,6 +35,20 @@ function force_snapshot.new(context)
         set_saved_value(save_keys.pre_battle_general_rank, 1)
     end
 
+    local function get_saved_player_force_by_cqi()
+        local force_cqi = tonumber(get_saved_value(save_keys.player_force_cqi, 0)) or 0
+        if force_cqi <= 0 then
+            return nil
+        end
+
+        local force = cm:get_military_force_by_cqi(force_cqi)
+        if not force or force:is_null_interface() then
+            return nil
+        end
+
+        return force
+    end
+
     local HERO_SPAWN_CHAIN_START_DELAY = 0.05
     local HERO_SPAWN_API_DELAY = 0.05
     local HERO_EMBED_DELAY = 0.1
@@ -70,7 +84,8 @@ function force_snapshot.new(context)
         return "adamrogue_restore_embedded_hero_" .. tostring(force_cqi) .. "_" .. tostring(index)
     end
 
-    local function collect_missing_embedded_heroes(self, force, heroes, player_faction_name)
+    local function collect_missing_embedded_heroes(self, force, heroes, player_faction_name, options)
+        local force_spawn_all_heroes = options and options.force_spawn_all_heroes == true
         local existing_counts = {}
         local current_heroes = self.snapshot_embedded_heroes(force)
         for _, hero in ipairs(current_heroes) do
@@ -84,7 +99,7 @@ function force_snapshot.new(context)
                 existing_counts[hero.agent_subtype] = existing_count - 1
             else
                 local restored_existing = false
-                if (tonumber(hero.cqi) or 0) > 0 then
+                if not force_spawn_all_heroes and (tonumber(hero.cqi) or 0) > 0 then
                     local existing_character = cm:get_character_by_cqi(hero.cqi)
                     if existing_character and not existing_character:is_null_interface() then
                         local existing_ok, existing_can_embed = pcall(function()
@@ -499,7 +514,7 @@ function force_snapshot.new(context)
         return heroes
     end
 
-    function self.restore_embedded_heroes_to_force(force, serialized_snapshot, reason, on_complete)
+    function self.restore_embedded_heroes_to_force(force, serialized_snapshot, reason, on_complete, options)
         log(
             "restore_embedded_heroes_to_force entered. reason=["
                 .. tostring(reason)
@@ -534,7 +549,8 @@ function force_snapshot.new(context)
             self,
             force,
             heroes,
-            player_faction_name
+            player_faction_name,
+            options
         )
         log(
             "restore_embedded_heroes_to_force: expected_count=["
@@ -563,7 +579,7 @@ function force_snapshot.new(context)
         })
     end
 
-    function self.respawn_player_force_from_snapshot(serialized_snapshot, reason, on_complete)
+    function self.respawn_player_force_from_snapshot(serialized_snapshot, reason, on_complete, options)
         log(
             "respawn_player_force_from_snapshot started. reason=["
                 .. tostring(reason)
@@ -724,10 +740,79 @@ function force_snapshot.new(context)
                     force,
                     embedded_hero_snapshot,
                     "respawn_player_force_from_snapshot",
-                    finalize_respawn
+                    finalize_respawn,
+                    options
                 )
             end
         )
+    end
+
+    function self.cleanup_saved_player_force_before_respawn(reason, on_complete)
+        log("cleanup_saved_player_force_before_respawn started. reason=[" .. tostring(reason) .. "].")
+
+        local force = get_saved_player_force_by_cqi() or get_saved_player_force()
+        if not force or force:is_null_interface() then
+            log("cleanup_saved_player_force_before_respawn skipped because no saved player force could be resolved.")
+            set_saved_value(save_keys.player_leader_cqi, 0)
+            set_saved_value(save_keys.player_force_cqi, 0)
+            if on_complete then
+                on_complete(true, "no_saved_force")
+            end
+            return
+        end
+
+        local character_cqis = {}
+        local list_ok, character_list = pcall(function()
+            return force:character_list()
+        end)
+
+        if list_ok and character_list then
+            for index = 0, character_list:num_items() - 1 do
+                local character = character_list:item_at(index)
+                if character and not character:is_null_interface() then
+                    character_cqis[#character_cqis + 1] = character:command_queue_index()
+                end
+            end
+        elseif force:has_general() then
+            local general = force:general_character()
+            if general and not general:is_null_interface() then
+                character_cqis[#character_cqis + 1] = general:command_queue_index()
+            end
+        end
+
+        log(
+            "cleanup_saved_player_force_before_respawn resolved characters. force_cqi=["
+                .. tostring(force:command_queue_index())
+                .. "], character_count=["
+                .. tostring(#character_cqis)
+                .. "]."
+        )
+
+        for _, cqi in ipairs(character_cqis) do
+            local character = cm:get_character_by_cqi(cqi)
+            if character and not character:is_null_interface() then
+                local kill_ok, kill_error = pcall(function()
+                    cm:kill_character(cm:char_lookup_str(character:command_queue_index()), true)
+                end)
+                if not kill_ok then
+                    log(
+                        "cleanup_saved_player_force_before_respawn failed to kill character. cqi=["
+                            .. tostring(cqi)
+                            .. "], error=["
+                            .. tostring(kill_error)
+                            .. "]."
+                    )
+                end
+            end
+        end
+
+        set_saved_value(save_keys.player_leader_cqi, 0)
+        set_saved_value(save_keys.player_force_cqi, 0)
+        cm:callback(function()
+            if on_complete then
+                on_complete(true, "cleanup_completed")
+            end
+        end, 0.2)
     end
 
     function self.capture_pre_battle_force_snapshot()
@@ -778,7 +863,7 @@ function force_snapshot.new(context)
         log("capture_pre_battle_force_snapshot completed.")
     end
 
-    function self.restore_player_force_after_battle(on_complete)
+    function self.restore_player_force_after_battle(on_complete, options)
         log("restore_player_force_after_battle started.")
         local finish = make_restore_complete_guard(on_complete, "restore_player_force_after_battle")
         local general = get_saved_player_general()
@@ -800,6 +885,22 @@ function force_snapshot.new(context)
                 .. tostring(embedded_hero_snapshot)
                 .. "]."
         )
+
+        if options and options.force_respawn == true then
+            log("restore_player_force_after_battle: force_respawn requested, cleaning saved player force before full respawn.")
+            self.cleanup_saved_player_force_before_respawn("force_respawn_after_defeat", function()
+                self.respawn_player_force_from_snapshot(
+                    serialized_snapshot,
+                    "force_respawn_after_defeat",
+                    finish,
+                    {
+                        force_spawn_all_heroes = true
+                    }
+                )
+            end)
+            return
+        end
+
         if not general or not force then
             log(
                 "restore_player_force_after_battle: force missing, taking respawn path. reason=[post_battle_missing_force], general_valid=["
