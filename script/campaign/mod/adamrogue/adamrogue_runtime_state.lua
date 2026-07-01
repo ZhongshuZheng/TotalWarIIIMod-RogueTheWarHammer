@@ -54,6 +54,8 @@ runtime_state.SAVE_KEYS = {
     destination_selection_generated = "adamrogue_destination_selection_generated",
     destination_generation_seed = "adamrogue_destination_generation_seed",
     destination_generation_attempts = "adamrogue_destination_generation_attempts",
+    travel_anchor_pool = "adamrogue_travel_anchor_pool",
+    last_travel_anchor_key = "adamrogue_last_travel_anchor_key",
     initial_peace_applied = "adamrogue_initial_peace_applied"
 }
 

@@ -14,6 +14,7 @@ local adamrogue_ancillary_generator_module = require("adamrogue_ancillary_genera
 local adamrogue_force_snapshot_module = require("adamrogue_force_snapshot")
 local adamrogue_enemy_skill_allocator_module = require("adamrogue_enemy_skill_allocator")
 local adamrogue_runtime_state_module = require("adamrogue_runtime_state")
+local adamrogue_travel_anchor_manager_module = require("adamrogue_travel_anchor_manager")
 
 local data_players = adamrogue_data_players
 local data_nodes = adamrogue_data_nodes
@@ -72,6 +73,7 @@ local BALANCE_CONFIG = adamrogue_balance_config.CONFIG
 
 local STATE = adamrogue_runtime_state_module.STATE
 local SAVE_KEYS = adamrogue_runtime_state_module.SAVE_KEYS
+local adamrogue_travel_anchor_manager
 
 local MCT_KEYS = {
     mod = "adamrogue_roguemod",
@@ -971,6 +973,10 @@ local function try_relocate_player_force_for_variety(reason)
     if not player_general or player_general:is_null_interface() or not player_general:has_military_force() then
         log("try_relocate_player_force_for_variety skipped because the player general is unavailable. reason=[" .. tostring(reason) .. "].")
         return false
+    end
+
+    if adamrogue_travel_anchor_manager then
+        adamrogue_travel_anchor_manager.relocate_player_near_saved_anchor(faction, player_general, reason)
     end
 
     cm:replenish_action_points(cm:char_lookup_str(player_general:command_queue_index()))
@@ -2066,6 +2072,14 @@ local adamrogue_force_snapshot = adamrogue_force_snapshot_module.new({
 
 local capture_pre_battle_force_snapshot = adamrogue_force_snapshot.capture_pre_battle_force_snapshot
 local restore_player_force_after_battle = adamrogue_force_snapshot.restore_player_force_after_battle
+
+adamrogue_travel_anchor_manager = adamrogue_travel_anchor_manager_module.new({
+    cm = cm,
+    log = log,
+    save_keys = SAVE_KEYS,
+    get_saved_value = get_saved_value,
+    set_saved_value = set_saved_value
+})
 
 local function get_completed_battle_count()
     local value = get_saved_value(SAVE_KEYS.completed_battle_count, 0)
@@ -5917,6 +5931,9 @@ function DilemmaHandlers.army_preview(context)
             set_saved_value(SAVE_KEYS.victory_count, get_saved_value(SAVE_KEYS.victory_count, 0))
             set_saved_value(SAVE_KEYS.defeat_count, get_saved_value(SAVE_KEYS.defeat_count, 0))
             set_saved_value(SAVE_KEYS.consecutive_defeat_count, get_saved_value(SAVE_KEYS.consecutive_defeat_count, 0))
+            if adamrogue_travel_anchor_manager then
+                adamrogue_travel_anchor_manager.ensure_pool(faction:name())
+            end
             set_current_state(STATE.INIT)
             log("handle_army_preview_dilemma_choice: run confirmed. run_started=true. Proceeding to reward event.")
             cm:callback(function()
