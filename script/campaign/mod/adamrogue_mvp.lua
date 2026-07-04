@@ -15,6 +15,7 @@ local adamrogue_force_snapshot_module = require("adamrogue_force_snapshot")
 local adamrogue_enemy_skill_allocator_module = require("adamrogue_enemy_skill_allocator")
 local adamrogue_runtime_state_module = require("adamrogue_runtime_state")
 local adamrogue_travel_anchor_manager_module = require("adamrogue_travel_anchor_manager")
+local adamrogue_reinforcement_battle_module = require("adamrogue_reinforcement_battle")
 
 local data_players = adamrogue_data_players
 local data_nodes = adamrogue_data_nodes
@@ -39,6 +40,15 @@ local MVP_LIMITS = {
     UNIT_VALUE_SOURCE = "main_units_tables.multiplayer_cost",
 }
 
+local REINFORCEMENT_BATTLE = {
+    TEMP_RANGE_BUNDLE_KEY = "adamrogue_temp_reinforcement_range",
+    SUPPORT_ARMY_COUNT = 1,
+    SUPPORT_SPAWN_DISTANCE = 5,
+    SUPPORT_MAX_PLAYER_DISTANCE = 5.8,
+    SUPPORT_PLAYER_SEARCH_RADII = { 1, 2, 3, 4, 5 },
+    SUPPORT_SPAWN_TIMEOUT_SECONDS = 3,
+}
+
 local DILEMMA_KEYS = {
     OPENING = "adamrogue_mvp_opening_dilemma",
     REWARD = "adamrogue_mvp_reward_dilemma",
@@ -54,8 +64,9 @@ local DILEMMA_KEYS = {
 }
 
 local PLAYER_SPAWN = {
-    SETTLEMENT_SEARCH_RADII = { 10, 8, 6, 5 },
-    CHARACTER_SEARCH_RADII = { 10, 8, 6 },
+    SETTLEMENT_SEARCH_RADII = { 30, 25, 20, 16, 12 },
+    CHARACTER_SEARCH_RADII = { 30, 25, 20, 16, 12 },
+    MIN_DISTANCE_FROM_FACTION_LEADER = 16,
 }
 
 local EVENT_TYPE = {
@@ -74,6 +85,7 @@ local BALANCE_CONFIG = adamrogue_balance_config.CONFIG
 local STATE = adamrogue_runtime_state_module.STATE
 local SAVE_KEYS = adamrogue_runtime_state_module.SAVE_KEYS
 local adamrogue_travel_anchor_manager
+local adamrogue_reinforcement_battle
 
 local MCT_KEYS = {
     mod = "adamrogue_roguemod",
@@ -897,8 +909,81 @@ local function count_units_in_force(force)
     return force:unit_list():num_items()
 end
 
+local function distance_between_xy(ax, ay, bx, by)
+    local normalized_ax = tonumber(ax)
+    local normalized_ay = tonumber(ay)
+    local normalized_bx = tonumber(bx)
+    local normalized_by = tonumber(by)
+    if not normalized_ax or not normalized_ay or not normalized_bx or not normalized_by then
+        return nil
+    end
+
+    local dx = normalized_ax - normalized_bx
+    local dy = normalized_ay - normalized_by
+    return math.sqrt((dx * dx) + (dy * dy))
+end
+
 local function find_player_spawn_position_for_faction(faction, region_key, leader)
     local faction_key = faction:name()
+    local leader_x = nil
+    local leader_y = nil
+    if leader and not leader:is_null_interface() then
+        leader_x = leader:logical_position_x()
+        leader_y = leader:logical_position_y()
+    end
+    local best_candidate = nil
+
+    local function consider_player_spawn_candidate(x, y, source, radius)
+        if not x or not y or x < 0 or y < 0 then
+            return
+        end
+
+        local leader_distance = distance_between_xy(x, y, leader_x, leader_y)
+        local safe_from_leader = leader_distance == nil or leader_distance >= PLAYER_SPAWN.MIN_DISTANCE_FROM_FACTION_LEADER
+        log(
+            "Evaluated player spawn candidate. faction=["
+                .. tostring(faction_key)
+                .. "], source=["
+                .. tostring(source)
+                .. "], radius=["
+                .. tostring(radius)
+                .. "], x=["
+                .. tostring(x)
+                .. "], y=["
+                .. tostring(y)
+                .. "], leader_distance=["
+                .. tostring(leader_distance and string.format("%.2f", leader_distance) or "unavailable")
+                .. "], min_leader_distance=["
+                .. tostring(PLAYER_SPAWN.MIN_DISTANCE_FROM_FACTION_LEADER)
+                .. "], safe_from_leader=["
+                .. tostring(safe_from_leader)
+                .. "]."
+        )
+
+        local candidate = {
+            x = x,
+            y = y,
+            source = source,
+            radius = radius,
+            leader_distance = leader_distance,
+            safe_from_leader = safe_from_leader,
+        }
+        if not best_candidate then
+            best_candidate = candidate
+            return
+        end
+        if candidate.safe_from_leader and not best_candidate.safe_from_leader then
+            best_candidate = candidate
+            return
+        end
+        if candidate.safe_from_leader == best_candidate.safe_from_leader then
+            local candidate_distance = candidate.leader_distance or -1
+            local best_distance = best_candidate.leader_distance or -1
+            if candidate_distance > best_distance then
+                best_candidate = candidate
+            end
+        end
+    end
 
     for _, radius in ipairs(PLAYER_SPAWN.SETTLEMENT_SEARCH_RADII) do
         local x, y = cm:find_valid_spawn_location_for_character_from_settlement(
@@ -908,22 +993,7 @@ local function find_player_spawn_position_for_faction(faction, region_key, leade
             true,
             radius
         )
-        if x >= 0 and y >= 0 then
-            log(
-                "Resolved player spawn from settlement. faction=["
-                    .. tostring(faction_key)
-                    .. "], region=["
-                    .. tostring(region_key)
-                    .. "], radius=["
-                    .. tostring(radius)
-                    .. "], x=["
-                    .. tostring(x)
-                    .. "], y=["
-                    .. tostring(y)
-                    .. "]."
-            )
-            return x, y, "from_settlement_r" .. tostring(radius)
-        end
+        consider_player_spawn_candidate(x, y, "from_settlement_r" .. tostring(radius), radius)
     end
 
     if leader and not leader:is_null_interface() then
@@ -935,21 +1005,29 @@ local function find_player_spawn_position_for_faction(faction, region_key, leade
                 true,
                 radius
             )
-            if x >= 0 and y >= 0 then
-                log(
-                    "Resolved player spawn from faction leader. faction=["
-                        .. tostring(faction_key)
-                        .. "], radius=["
-                        .. tostring(radius)
-                        .. "], x=["
-                        .. tostring(x)
-                        .. "], y=["
-                        .. tostring(y)
-                        .. "]."
-                )
-                return x, y, "from_leader_r" .. tostring(radius)
-            end
+            consider_player_spawn_candidate(x, y, "from_leader_r" .. tostring(radius), radius)
         end
+    end
+
+    if best_candidate then
+        log(
+            "Resolved player spawn from best distant candidate. faction=["
+                .. tostring(faction_key)
+                .. "], source=["
+                .. tostring(best_candidate.source)
+                .. "], radius=["
+                .. tostring(best_candidate.radius)
+                .. "], x=["
+                .. tostring(best_candidate.x)
+                .. "], y=["
+                .. tostring(best_candidate.y)
+                .. "], leader_distance=["
+                .. tostring(best_candidate.leader_distance and string.format("%.2f", best_candidate.leader_distance) or "unavailable")
+                .. "], safe_from_leader=["
+                .. tostring(best_candidate.safe_from_leader)
+                .. "]."
+        )
+        return best_candidate.x, best_candidate.y, best_candidate.source
     end
 
     log(
@@ -1456,6 +1534,10 @@ function EnemySpawn.pick_initial_faction_key(player_faction_key, player_general,
 end
 
 local function cleanup_enemy_force()
+    if adamrogue_reinforcement_battle then
+        adamrogue_reinforcement_battle.cleanup("cleanup_enemy_force")
+    end
+
     local enemy_faction_name = get_saved_value(SAVE_KEYS.enemy_faction_key, battle_pools.DEFAULT_ENEMY_FACTION_KEY)
     local enemy_faction = nil
 
@@ -1493,6 +1575,10 @@ local function cleanup_enemy_force()
 end
 
 local function cleanup_enemy_force_before_spawn(reason)
+    if adamrogue_reinforcement_battle then
+        adamrogue_reinforcement_battle.cleanup("cleanup_enemy_force_before_spawn_" .. tostring(reason))
+    end
+
     local enemy_faction_name = get_saved_value(SAVE_KEYS.enemy_faction_key, battle_pools.DEFAULT_ENEMY_FACTION_KEY)
     local enemy_faction = nil
     if enemy_faction_name ~= "" then
@@ -1677,6 +1763,7 @@ local adamrogue_battle_generator = adamrogue_battle_generator_module.new({
 local get_battle_tier_for_progress = adamrogue_battle_generator.get_battle_tier_for_progress
 local get_target_battle_budget = adamrogue_battle_generator.get_target_battle_budget
 local build_budget_enemy_force_definition = adamrogue_battle_generator.build_budget_enemy_force_definition
+local build_unit_only_enemy_force_definition = adamrogue_battle_generator.build_unit_only_enemy_force_definition
 local create_battle_payload_from_definition = adamrogue_battle_generator.create_battle_payload_from_definition
 local log_unit_list_details = adamrogue_battle_generator.log_unit_list_details
 
@@ -1847,11 +1934,14 @@ function UnitValues.log_battle_balance_check(payload)
     local player_unit_value = player_force and UnitValues.get_force_unit_total(player_force) or 0
     local player_hero_value = player_force and UnitValues.get_force_hero_total(player_force) or 0
     local player_value = player_unit_value + player_hero_value
-    local enemy_budget_value = tonumber(payload and payload.target_value_budget) or 0
+    local enemy_budget_value = tonumber(payload and payload.original_target_value_budget)
+        or tonumber(payload and payload.target_value_budget)
+        or 0
     local enemy_unit_value = tonumber(payload and payload.generated_total_value) or 0
     local enemy_general_value = tonumber(payload and payload.enemy_general_unit_value) or 0
     local enemy_hero_value = tonumber(payload and payload.total_hero_value) or 0
-    local enemy_value = enemy_unit_value + enemy_general_value + enemy_hero_value
+    local reinforcement_unit_value = tonumber(payload and payload.reinforcement_generated_total_value) or 0
+    local enemy_value = enemy_unit_value + enemy_general_value + enemy_hero_value + reinforcement_unit_value
 
     log(
         "[Balance Check] TURN:["
@@ -1872,6 +1962,8 @@ function UnitValues.log_battle_balance_check(payload)
             .. tostring(enemy_general_value)
             .. "] Enemy Heroes ["
             .. tostring(enemy_hero_value)
+            .. "] Enemy Reinforcement Units ["
+            .. tostring(reinforcement_unit_value)
             .. "]"
     )
 end
@@ -2729,8 +2821,57 @@ local function prepare_battle_event()
             .. tostring(current_node.faction_key)
             .. "]."
     )
+    local reinforcement_config = BALANCE_CONFIG.enemy_reinforcement_battle or {}
+    local reinforcement_min_total_value = math.max(0, tonumber(reinforcement_config.min_total_value) or 0)
+    local reinforcement_chance_percent = math.max(0, math.min(100, tonumber(reinforcement_config.chance_percent) or 0))
+    local reinforcement_roll = cm:random_number(100)
+    local reinforcement_enabled = target_value_budget >= reinforcement_min_total_value
+        and reinforcement_chance_percent > 0
+        and reinforcement_roll <= reinforcement_chance_percent
+    local main_target_value_budget = target_value_budget
+    local reinforcement_target_value_budget = 0
+    local reinforcement_definition = nil
+
+    log(
+        "prepare_battle_event reinforcement roll resolved. total_budget=["
+            .. tostring(target_value_budget)
+            .. "], min_total_value=["
+            .. tostring(reinforcement_min_total_value)
+            .. "], chance_percent=["
+            .. tostring(reinforcement_chance_percent)
+            .. "], roll=["
+            .. tostring(reinforcement_roll)
+            .. "], enabled=["
+            .. tostring(reinforcement_enabled)
+            .. "]."
+    )
+
+    if reinforcement_enabled then
+        main_target_value_budget = math.floor((target_value_budget * 2) / 3)
+        reinforcement_target_value_budget = target_value_budget - main_target_value_budget
+        reinforcement_definition = build_unit_only_enemy_force_definition(
+            reinforcement_target_value_budget,
+            battle_tier,
+            current_node.faction_key,
+            {
+                current_cycle = current_cycle,
+                context_label = "reinforcement_force"
+            }
+        )
+        if not reinforcement_definition then
+            log(
+                "prepare_battle_event reinforcement generation failed; falling back to single-force generation. reinforcement_budget=["
+                    .. tostring(reinforcement_target_value_budget)
+                    .. "]."
+            )
+            reinforcement_enabled = false
+            main_target_value_budget = target_value_budget
+            reinforcement_target_value_budget = 0
+        end
+    end
+
     local battle_definition = build_budget_enemy_force_definition(
-        target_value_budget,
+        main_target_value_budget,
         battle_tier,
         true,
         current_node.faction_key,
@@ -2774,7 +2915,7 @@ local function prepare_battle_event()
     )
 
     local seed = new_event_seed()
-    local payload = create_battle_payload_from_definition(battle_definition, target_value_budget, battle_tier, 0, enemy_faction_key)
+    local payload = create_battle_payload_from_definition(battle_definition, main_target_value_budget, battle_tier, 0, enemy_faction_key)
     payload.enemy_faction_candidates = table.concat(enemy_faction_candidates, ",")
     payload.current_node_key = current_node.node_key
     payload.current_node_faction_key = current_node.faction_key
@@ -2783,6 +2924,17 @@ local function prepare_battle_event()
     payload.enemy_value_after_multiplier = budget_context.final_value
     payload.enemy_value_multiplier = budget_context.enemy_value_multiplier
     payload.elite_battle = budget_context.elite_battle and "true" or "false"
+    payload.original_target_value_budget = target_value_budget
+    payload.reinforcement_battle_enabled = reinforcement_enabled and "true" or "false"
+    payload.reinforcement_target_value_budget = reinforcement_target_value_budget
+    if reinforcement_enabled and reinforcement_definition then
+        payload.reinforcement_unit_list = table.concat(reinforcement_definition.unit_list, ",")
+        payload.reinforcement_generated_total_value = reinforcement_definition.generated_total_value or 0
+        payload.reinforcement_generated_unit_count = reinforcement_definition.generated_unit_count or 0
+        payload.reinforcement_budget_delta = reinforcement_definition.budget_delta or 0
+        payload.reinforcement_battle_force_source = reinforcement_definition.battle_force_source or ""
+        log_unit_list_details("prepare_battle_event_reinforcement_payload", payload.reinforcement_unit_list)
+    end
 
     set_saved_value(SAVE_KEYS.enemy_faction_key, enemy_faction_key)
     set_current_event_context(
@@ -3870,6 +4022,22 @@ local function apply_enemy_general_rank_for_current_cycle(character, reason, on_
     end, 0.05)
 end
 
+adamrogue_reinforcement_battle = adamrogue_reinforcement_battle_module.new({
+    cm = cm,
+    core = core,
+    log = log,
+    module_key = LOG.module_key,
+    battle_pools = battle_pools,
+    default_enemy_faction_key = battle_pools.DEFAULT_ENEMY_FACTION_KEY,
+    temp_range_bundle_key = REINFORCEMENT_BATTLE.TEMP_RANGE_BUNDLE_KEY,
+    support_army_count = REINFORCEMENT_BATTLE.SUPPORT_ARMY_COUNT,
+    support_spawn_distance = REINFORCEMENT_BATTLE.SUPPORT_SPAWN_DISTANCE,
+    support_max_player_distance = REINFORCEMENT_BATTLE.SUPPORT_MAX_PLAYER_DISTANCE,
+    support_player_search_radii = REINFORCEMENT_BATTLE.SUPPORT_PLAYER_SEARCH_RADII,
+    support_spawn_timeout_seconds = REINFORCEMENT_BATTLE.SUPPORT_SPAWN_TIMEOUT_SECONDS,
+    apply_enemy_general_rank_for_current_cycle = apply_enemy_general_rank_for_current_cycle
+})
+
 local function apply_player_character_minimum_rank_for_cycle(reason)
     local player_faction = get_local_player_faction()
     if not player_faction or player_faction:is_null_interface() then
@@ -4068,6 +4236,84 @@ end
 
 local spawn_enemy_force_and_start_battle
 local spawn_enemy_force_with_direct_create_force_fallback
+
+local function restart_battle_as_single_full_budget_force(reason_label)
+    local active_payload = get_current_event_payload() or {}
+    local battle_tier = tonumber(active_payload.battle_budget_tier) or get_battle_tier_for_progress(get_completed_battle_count())
+    local total_budget = tonumber(active_payload.original_target_value_budget)
+        or tonumber(active_payload.enemy_value_after_multiplier)
+        or tonumber(active_payload.target_value_budget)
+        or 0
+    local content_faction_key = active_payload.battle_content_faction_key
+        or active_payload.current_node_faction_key
+        or battle_pools.DEFAULT_CONTENT_FACTION_KEY
+    local current_cycle = tonumber(active_payload.current_cycle) or get_current_cycle()
+
+    log(
+        "AR_REINF_FALLBACK_FULL_MAIN started. reason=["
+            .. tostring(reason_label)
+            .. "], total_budget=["
+            .. tostring(total_budget)
+            .. "], battle_tier=["
+            .. tostring(battle_tier)
+            .. "], content_faction_key=["
+            .. tostring(content_faction_key)
+            .. "]."
+    )
+    if total_budget <= 0 then
+        log("AR_REINF_FALLBACK_FULL_MAIN aborted because total_budget is invalid.")
+        return false
+    end
+
+    local battle_definition = build_budget_enemy_force_definition(
+        total_budget,
+        battle_tier,
+        true,
+        content_faction_key,
+        {
+            current_cycle = current_cycle,
+            context_label = "reinforcement_failed_full_main_fallback"
+        }
+    )
+    if not battle_definition then
+        log("AR_REINF_FALLBACK_FULL_MAIN aborted because full-budget main force generation failed.")
+        return false
+    end
+
+    local enemy_faction_key = active_payload.enemy_faction_key or battle_pools.DEFAULT_ENEMY_FACTION_KEY
+    local fallback_payload = create_battle_payload_from_definition(
+        battle_definition,
+        total_budget,
+        battle_tier,
+        tonumber(active_payload.spawn_retry_index) or 0,
+        enemy_faction_key
+    )
+    fallback_payload.enemy_faction_candidates = active_payload.enemy_faction_candidates or ""
+    fallback_payload.current_node_key = active_payload.current_node_key or ""
+    fallback_payload.current_node_faction_key = active_payload.current_node_faction_key or content_faction_key
+    fallback_payload.current_cycle = current_cycle
+    fallback_payload.enemy_value_before_multiplier = active_payload.enemy_value_before_multiplier or total_budget
+    fallback_payload.enemy_value_after_multiplier = active_payload.enemy_value_after_multiplier or total_budget
+    fallback_payload.enemy_value_multiplier = active_payload.enemy_value_multiplier or 1
+    fallback_payload.elite_battle = active_payload.elite_battle or "false"
+    fallback_payload.original_target_value_budget = total_budget
+    fallback_payload.reinforcement_battle_enabled = "false"
+    fallback_payload.reinforcement_target_value_budget = 0
+    fallback_payload.reinforcement_generated_total_value = 0
+    fallback_payload.reinforcement_generated_unit_count = 0
+    fallback_payload.reinforcement_budget_delta = 0
+    fallback_payload.reinforcement_unit_list = ""
+    fallback_payload.reinforcement_battle_force_source = ""
+    fallback_payload.retry_reason = "reinforcement_failed_full_main_fallback_" .. tostring(reason_label)
+
+    overwrite_current_battle_payload(fallback_payload, "reinforcement_failed_full_main_fallback")
+    log_unit_list_details("reinforcement_failed_full_main_fallback_payload", fallback_payload.enemy_unit_list)
+    cleanup_enemy_force_before_spawn("reinforcement_failed_full_main_fallback")
+    cm:callback(function()
+        spawn_enemy_force_and_start_battle(1, "reinforcement_failed_full_main_fallback")
+    end, 0.1)
+    return true
+end
 
 local function decode_enemy_hero_entries_from_payload(payload, log_context)
     local hero_entries = {}
@@ -4308,6 +4554,7 @@ local function issue_enemy_force_spawn_with_general(
             local pending_setup_count = 1 + #hero_entries_valid
             local enemy_char_cqi_for_attack = char_cqi or 0
             local player_force_cqi_for_attack = tonumber(get_saved_value(SAVE_KEYS.player_force_cqi, 0)) or 0
+            local active_battle_payload_for_attack = get_current_event_payload() or {}
             local battle_launched = false
 
             local function fire_battle_attack()
@@ -4351,16 +4598,57 @@ local function issue_enemy_force_spawn_with_general(
                 end
                 local enemy_mf_cqi = enemy_char_ref:military_force():command_queue_index()
                 local player_mf_cqi = player_force_ref:command_queue_index()
-                log(
-                    "fire_battle_attack issuing force_attack_of_opportunity. spawn_reason_label=["
-                        .. tostring(spawn_reason_label)
-                        .. "], enemy_mf_cqi=["
-                        .. tostring(enemy_mf_cqi)
-                        .. "], player_mf_cqi=["
-                        .. tostring(player_mf_cqi)
-                        .. "]."
-                )
-                cm:force_attack_of_opportunity(enemy_mf_cqi, player_mf_cqi, false)
+                local function issue_force_attack_of_opportunity(reinforcement_pre_spawned)
+                    if adamrogue_reinforcement_battle then
+                        adamrogue_reinforcement_battle.log_pending_battle_cache("before_force_attack_of_opportunity")
+                    end
+                    log(
+                        "fire_battle_attack issuing force_attack_of_opportunity. spawn_reason_label=["
+                            .. tostring(spawn_reason_label)
+                            .. "], enemy_mf_cqi=["
+                            .. tostring(enemy_mf_cqi)
+                            .. "], player_mf_cqi=["
+                            .. tostring(player_mf_cqi)
+                            .. "], reinforcement_pre_spawned=["
+                            .. tostring(reinforcement_pre_spawned)
+                            .. "]."
+                    )
+                    cm:force_attack_of_opportunity(enemy_mf_cqi, player_mf_cqi, false, true)
+                end
+
+                if adamrogue_reinforcement_battle then
+                    -- Test path: create reinforcement forces before the pending battle exists,
+                    -- wait five seconds for map-side inspection, then launch the attack.
+                    local function handle_reinforcement_pre_spawn_result(reinforcement_pre_spawned)
+                        if reinforcement_pre_spawned then
+                            issue_force_attack_of_opportunity(true)
+                            return
+                        end
+                        log(
+                            "fire_battle_attack detected reinforcement pre-spawn failure; attempting full-budget single-main fallback. spawn_reason_label=["
+                                .. tostring(spawn_reason_label)
+                                .. "]."
+                        )
+                        if restart_battle_as_single_full_budget_force("pre_spawn_failed") then
+                            return
+                        end
+                        log("fire_battle_attack full-budget fallback failed; issuing attack with existing main force to avoid a stuck battle event.")
+                        issue_force_attack_of_opportunity(false)
+                    end
+                    local pre_spawn_started = adamrogue_reinforcement_battle.prepare_reinforcements_before_attack(
+                        enemy_char_ref,
+                        player_force_ref,
+                        active_battle_payload_for_attack,
+                        enemy_faction_key,
+                        player_region_name,
+                        handle_reinforcement_pre_spawn_result,
+                        0
+                    )
+                    if pre_spawn_started then
+                        return
+                    end
+                end
+                issue_force_attack_of_opportunity(false)
             end
 
             local function on_character_setup_done(context_label)
@@ -5120,6 +5408,7 @@ spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
     local enemy_unit_list = active_payload.enemy_unit_list or ""
     local battle_force_source = active_payload.battle_force_source or "unknown"
     local target_value_budget = active_payload.target_value_budget or ""
+    local original_target_value_budget = active_payload.original_target_value_budget or target_value_budget
     local enemy_faction_key = active_payload.enemy_faction_key or battle_pools.DEFAULT_ENEMY_FACTION_KEY
     local enemy_general_subtype = active_payload.enemy_general_subtype or ""
     local enemy_general_unit_key = active_payload.enemy_general_unit_key or ""
@@ -5137,7 +5426,7 @@ spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
     set_saved_value(SAVE_KEYS.enemy_leader_cqi, 0)
     set_saved_value(SAVE_KEYS.enemy_agent_cqi, 0)
     set_saved_value(SAVE_KEYS.last_battle_force_source, battle_force_source)
-    set_saved_value(SAVE_KEYS.last_battle_budget, tonumber(target_value_budget) or 0)
+    set_saved_value(SAVE_KEYS.last_battle_budget, tonumber(original_target_value_budget) or tonumber(target_value_budget) or 0)
     cleanup_enemy_force_before_spawn("spawn_attempt_" .. tostring(current_spawn_attempt))
     if caravans then
         caravans.enemy_force_cqi = 0
@@ -5149,6 +5438,25 @@ spawn_enemy_force_and_start_battle = function(spawn_attempt, retry_reason)
     local caravan_bridge = build_caravan_battle_bridge(player_force, player_general)
     -- The generated unit list is now the canonical battle definition; retries only swap faction/spawn path.
     log_unit_list_details("spawn_attempt_" .. tostring(current_spawn_attempt) .. "_payload", enemy_unit_list)
+    if active_payload.reinforcement_battle_enabled == true or active_payload.reinforcement_battle_enabled == "true" then
+        log_unit_list_details(
+            "spawn_attempt_" .. tostring(current_spawn_attempt) .. "_reinforcement_payload",
+            active_payload.reinforcement_unit_list or ""
+        )
+        log(
+            "spawn_enemy_force_and_start_battle reinforcement payload active. spawn_attempt=["
+                .. tostring(current_spawn_attempt)
+                .. "], main_budget=["
+                .. tostring(active_payload.target_value_budget)
+                .. "], original_budget=["
+                .. tostring(active_payload.original_target_value_budget)
+                .. "], reinforcement_budget=["
+                .. tostring(active_payload.reinforcement_target_value_budget)
+                .. "], reinforcement_generated_value=["
+                .. tostring(active_payload.reinforcement_generated_total_value)
+                .. "]."
+        )
+    end
 
     log(
         "spawn_enemy_force_and_start_battle resolving spawn position. preferred_enemy_faction_key=["

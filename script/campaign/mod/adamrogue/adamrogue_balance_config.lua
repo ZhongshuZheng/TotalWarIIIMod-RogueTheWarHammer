@@ -40,6 +40,10 @@ data.CONFIG = {
         -- false = 精英战禁用战前「自动战斗」；true = 允许自动战斗
         auto_battle_switch = false
     },
+    enemy_reinforcement_battle = {
+        min_total_value = 25000,
+        chance_percent = 80
+    },
     enemy_unit_count = {
         minimum_units_base = 7,
         minimum_units_per_cycle = 1,
