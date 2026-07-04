@@ -18,6 +18,24 @@ function battle_generator.new(context)
     local enemy_unit_count_config = context.enemy_unit_count_config or {}
     local enemy_hero_pools_by_faction = context.enemy_hero_pools_by_faction or {}
     local enemy_growth_config = context.enemy_growth_config or {}
+    local enemy_unit_selection_config = context.enemy_unit_selection_config or {}
+
+    local function get_phase_a_early_exit_budget_ratio()
+        local ratio = tonumber(enemy_unit_selection_config.phase_a_early_exit_budget_ratio) or 0.85
+        return math.max(0, math.min(1, ratio))
+    end
+
+    local function build_unit_budget_thresholds(unit_value_budget)
+        local normalized_budget = math.max(0, math.floor(tonumber(unit_value_budget) or 0))
+        local phase_a_ratio = get_phase_a_early_exit_budget_ratio()
+        local phase_a_budget_floor = math.floor(normalized_budget * phase_a_ratio)
+        return {
+            normalized_budget = normalized_budget,
+            phase_a_early_exit_budget_floor = phase_a_budget_floor,
+            phase_a_accept_budget_floor = phase_a_budget_floor,
+            phase_bc_budget_cap = normalized_budget,
+        }
+    end
 
     function self.get_unit_pool_for_faction(content_faction_key)
         local faction_key = content_faction_key or ""
@@ -45,10 +63,10 @@ function battle_generator.new(context)
 
     function self.get_battle_tier_for_progress(completed_battle_count)
         log("get_battle_tier_for_progress called. completed_battle_count=[" .. tostring(completed_battle_count) .. "]")
-        if completed_battle_count >= 6 then
+        if completed_battle_count >= 9 then
             log("get_battle_tier_for_progress resolved tier=[LATE]")
             return battle_tier_keys.LATE
-        elseif completed_battle_count >= 3 then
+        elseif completed_battle_count >= 4 then
             log("get_battle_tier_for_progress resolved tier=[MID]")
             return battle_tier_keys.MID
         end
@@ -298,10 +316,12 @@ function battle_generator.new(context)
         local max_units = math.max(0, tonumber(unit_count_targets.max_units) or 0)
         local effective_min_units = math.max(0, tonumber(unit_count_targets.effective_min_units) or 0)
         local effective_target_units = math.max(0, tonumber(unit_count_targets.effective_target_units) or 0)
-        local normalized_budget = math.max(0, math.floor(tonumber(unit_value_budget) or 0))
+        local budget_thresholds = build_unit_budget_thresholds(unit_value_budget)
+        local normalized_budget = budget_thresholds.normalized_budget
+        local phase_a_early_exit_budget_floor = budget_thresholds.phase_a_early_exit_budget_floor
+        local phase_a_accept_budget_floor = budget_thresholds.phase_a_accept_budget_floor
+        local phase_bc_budget_cap = budget_thresholds.phase_bc_budget_cap
         local attempts = 0
-        local preferred_budget_floor = math.floor(normalized_budget * 0.95)
-        local phase_a_accept_budget_floor = math.floor(normalized_budget * 0.85)
         local unique_pool = {}
         local seen_unit_keys = {}
 
@@ -360,7 +380,7 @@ function battle_generator.new(context)
                 )
             end
 
-            if total_value >= preferred_budget_floor and #chosen_units >= effective_target_units then
+            if total_value >= phase_a_early_exit_budget_floor then
                 log("build_units_from_weighted_pool reached stop threshold. context=[" .. tostring(context_label) .. "].")
                 break
             end
@@ -371,7 +391,7 @@ function battle_generator.new(context)
             fill_attempts = fill_attempts + 1
             local should_continue_fill = (#chosen_units < effective_min_units
                 or #chosen_units < effective_target_units)
-                and total_value < preferred_budget_floor
+                and total_value < phase_bc_budget_cap
 
             if not should_continue_fill then
                 break
@@ -408,10 +428,10 @@ function battle_generator.new(context)
         end
 
         if #chosen_units >= effective_target_units
-            and total_value < preferred_budget_floor
+            and total_value < phase_bc_budget_cap
             and #chosen_units > 0 then
             local upgrade_pass = 0
-            while total_value < preferred_budget_floor do
+            while total_value < phase_bc_budget_cap do
                 upgrade_pass = upgrade_pass + 1
                 local upgraded_this_pass = false
                 local upgrade_indexes = {}
@@ -439,7 +459,7 @@ function battle_generator.new(context)
                 end)
 
                 for _, upgrade_target in ipairs(upgrade_indexes) do
-                    if total_value >= preferred_budget_floor then
+                    if total_value >= phase_bc_budget_cap then
                         break
                     end
 
@@ -501,8 +521,8 @@ function battle_generator.new(context)
                             .. tostring(upgrade_pass)
                             .. "], total_value=["
                             .. tostring(total_value)
-                            .. "], preferred_budget_floor=["
-                            .. tostring(preferred_budget_floor)
+                            .. "], phase_bc_budget_cap=["
+                            .. tostring(phase_bc_budget_cap)
                             .. "]."
                     )
                     break
@@ -602,8 +622,10 @@ function battle_generator.new(context)
         local total_value = 0
         local max_units = slots_for_troops
         local attempts = 0
-        local preferred_budget_floor = math.floor(unit_only_target_value_budget * 0.95)
-        local phase_a_accept_budget_floor = math.floor(unit_only_target_value_budget * 0.85)
+        local budget_thresholds = build_unit_budget_thresholds(unit_only_target_value_budget)
+        local phase_a_early_exit_budget_floor = budget_thresholds.phase_a_early_exit_budget_floor
+        local phase_a_accept_budget_floor = budget_thresholds.phase_a_accept_budget_floor
+        local phase_bc_budget_cap = budget_thresholds.phase_bc_budget_cap
         local unique_pool = {}
         local seen_unit_keys = {}
 
@@ -661,7 +683,7 @@ function battle_generator.new(context)
                 )
             end
 
-            if total_value >= preferred_budget_floor and #chosen_units >= effective_target_units then
+            if total_value >= phase_a_early_exit_budget_floor then
                 log("build_budget_enemy_force_definition reached stop threshold and will exit the selection loop.")
                 break
             end
@@ -673,7 +695,7 @@ function battle_generator.new(context)
             fill_attempts = fill_attempts + 1
             local should_continue_fill = (#chosen_units < effective_min_units
                 or #chosen_units < effective_target_units)
-                and total_value < preferred_budget_floor
+                and total_value < phase_bc_budget_cap
 
             if not should_continue_fill then
                 break
@@ -709,10 +731,10 @@ function battle_generator.new(context)
 
         -- Phase C: upgrade low-value picks when stack size is already sufficient but budget is still underfilled.
         if #chosen_units >= effective_target_units
-            and total_value < preferred_budget_floor
+            and total_value < phase_bc_budget_cap
             and #chosen_units > 0 then
             local upgrade_pass = 0
-            while total_value < preferred_budget_floor do
+            while total_value < phase_bc_budget_cap do
                 upgrade_pass = upgrade_pass + 1
                 local upgraded_this_pass = false
                 local upgrade_indexes = {}
@@ -740,7 +762,7 @@ function battle_generator.new(context)
                 end)
 
                 for _, upgrade_target in ipairs(upgrade_indexes) do
-                    if total_value >= preferred_budget_floor then
+                    if total_value >= phase_bc_budget_cap then
                         break
                     end
 
@@ -793,8 +815,8 @@ function battle_generator.new(context)
                                     .. tostring(selected_upgrade.weight)
                                     .. "], total_value=["
                                     .. tostring(total_value)
-                                    .. "], preferred_budget_floor=["
-                                    .. tostring(preferred_budget_floor)
+                                    .. "], phase_bc_budget_cap=["
+                                    .. tostring(phase_bc_budget_cap)
                                     .. "]."
                             )
                             break
@@ -808,8 +830,8 @@ function battle_generator.new(context)
                             .. tostring(upgrade_pass)
                             .. "], total_value=["
                             .. tostring(total_value)
-                            .. "], preferred_budget_floor=["
-                            .. tostring(preferred_budget_floor)
+                            .. "], phase_bc_budget_cap=["
+                            .. tostring(phase_bc_budget_cap)
                             .. "]."
                     )
                     break

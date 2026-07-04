@@ -42,7 +42,7 @@ data.CONFIG = {
     },
     enemy_reinforcement_battle = {
         min_total_value = 25000,
-        chance_percent = 80
+        chance_percent = 85
     },
     enemy_unit_count = {
         minimum_units_base = 7,
@@ -50,6 +50,10 @@ data.CONFIG = {
         hard_cap = 20,
         minimum_units_from_cycle_11 = 18,
         full_stack_from_cycle_19 = true
+    },
+    -- 敌军兵种预算三阶段：A 随机在达到该比例预算后停止（不要求满编）；B/C 吃满 100% 兵种预算
+    enemy_unit_selection = {
+        phase_a_early_exit_budget_ratio = 0.85
     }
 }
 

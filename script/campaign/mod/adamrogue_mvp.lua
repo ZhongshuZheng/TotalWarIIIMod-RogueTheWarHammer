@@ -1757,7 +1757,8 @@ local adamrogue_battle_generator = adamrogue_battle_generator_module.new({
     default_enemy_faction_key = battle_pools.DEFAULT_ENEMY_FACTION_KEY,
     enemy_unit_count_config = BALANCE_CONFIG.enemy_unit_count,
     enemy_hero_pools_by_faction = battle_pools.ENEMY_HERO_POOLS_BY_CONTENT_FACTION,
-    enemy_growth_config = BALANCE_CONFIG.enemy_growth
+    enemy_growth_config = BALANCE_CONFIG.enemy_growth,
+    enemy_unit_selection_config = BALANCE_CONFIG.enemy_unit_selection
 })
 
 local get_battle_tier_for_progress = adamrogue_battle_generator.get_battle_tier_for_progress
