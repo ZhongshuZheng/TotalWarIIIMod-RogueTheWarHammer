@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc;1;text/db/en/!adamrogue_mct_EN.loc	
+#Loc;1;text/db/!!adamrogue_mct_EN.loc		
 mct_adamrogue_title	Warhammer Spire	false
 mct_adamrogue_author	AdamHt	false
 mct_adamrogue_description	Adjust Warhammer Spire balance settings, elite battle autoresolve, and logging.	false

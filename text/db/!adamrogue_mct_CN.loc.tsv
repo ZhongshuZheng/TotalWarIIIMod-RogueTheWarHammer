@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc;1;text/db/!adamrogue_mct_CN.loc	
+#Loc;1;text/db/!adamrogue_mct_CN.loc		
 mct_adamrogue_title	战锤尖塔	false
 mct_adamrogue_author	AdamHt	false
 mct_adamrogue_description	调整战锤尖塔的平衡参数、精英战自动战斗与日志开关。	false
