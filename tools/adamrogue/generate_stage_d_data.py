@@ -235,9 +235,9 @@ def derive_hero_weight(unit_value: int) -> int:
 
 
 def derive_battle_tier(unit_tier: int, unit_value: int) -> tuple[int, int]:
-    if unit_tier <= 1 or unit_value <= 450:
+    if unit_tier <= 1 or unit_value <= 525:
         return 1, 3
-    if unit_tier <= 3:
+    if unit_tier <= 2 or unit_value <= 925:
         return 2, 3
     return 3, 3
 
