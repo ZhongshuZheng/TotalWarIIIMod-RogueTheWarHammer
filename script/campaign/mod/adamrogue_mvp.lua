@@ -49,6 +49,12 @@ local REINFORCEMENT_BATTLE = {
     SUPPORT_SPAWN_TIMEOUT_SECONDS = 3,
 }
 
+local WINDS_OF_MAGIC = {
+    RESOURCE_KEY = "wh3_main_winds_of_magic",
+    POSITIVE_FACTOR_KEY = "winds_of_magic_positive",
+    PRE_BATTLE_MINIMUM = 68,
+}
+
 local DILEMMA_KEYS = {
     OPENING = "adamrogue_mvp_opening_dilemma",
     REWARD = "adamrogue_mvp_reward_dilemma",
@@ -899,6 +905,61 @@ local function get_saved_player_force()
     end
 
     return force
+end
+
+local function ensure_player_force_winds_of_magic_floor_before_battle(force)
+    if not force or force:is_null_interface() then
+        log("ensure_player_force_winds_of_magic_floor_before_battle skipped because player force is unavailable.")
+        return false
+    end
+
+    local resource_manager = force:pooled_resource_manager()
+    if not resource_manager or resource_manager:is_null_interface() then
+        log("ensure_player_force_winds_of_magic_floor_before_battle skipped because resource manager is unavailable.")
+        return false
+    end
+
+    local winds_resource = resource_manager:resource(WINDS_OF_MAGIC.RESOURCE_KEY)
+    if not winds_resource or winds_resource:is_null_interface() then
+        log(
+            "ensure_player_force_winds_of_magic_floor_before_battle skipped because resource ["
+                .. tostring(WINDS_OF_MAGIC.RESOURCE_KEY)
+                .. "] is unavailable."
+        )
+        return false
+    end
+
+    local current_value = tonumber(winds_resource:value()) or 0
+    local maximum_value = tonumber(winds_resource:maximum_value()) or WINDS_OF_MAGIC.PRE_BATTLE_MINIMUM
+    local target_value = math.min(WINDS_OF_MAGIC.PRE_BATTLE_MINIMUM, maximum_value)
+    local delta = target_value - current_value
+
+    if delta <= 0 then
+        log(
+            "ensure_player_force_winds_of_magic_floor_before_battle kept existing value. current_value=["
+                .. tostring(current_value)
+                .. "], target_value=["
+                .. tostring(target_value)
+                .. "], maximum_value=["
+                .. tostring(maximum_value)
+                .. "]."
+        )
+        return true
+    end
+
+    cm:pooled_resource_factor_transaction(winds_resource, WINDS_OF_MAGIC.POSITIVE_FACTOR_KEY, delta)
+    log(
+        "ensure_player_force_winds_of_magic_floor_before_battle increased winds of magic. current_value=["
+            .. tostring(current_value)
+            .. "], delta=["
+            .. tostring(delta)
+            .. "], target_value=["
+            .. tostring(target_value)
+            .. "], maximum_value=["
+            .. tostring(maximum_value)
+            .. "]."
+    )
+    return true
 end
 
 local function count_units_in_force(force)
@@ -4614,6 +4675,7 @@ local function issue_enemy_force_spawn_with_general(
                             .. tostring(reinforcement_pre_spawned)
                             .. "]."
                     )
+                    ensure_player_force_winds_of_magic_floor_before_battle(player_force_ref)
                     cm:force_attack_of_opportunity(enemy_mf_cqi, player_mf_cqi, false, true)
                 end
 

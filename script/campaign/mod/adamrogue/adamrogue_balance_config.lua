@@ -4,7 +4,7 @@ data.DEFAULT_CURRENT_CYCLE = 1
 
 data.CONFIG = {
     initial_player_value = 4500,
-    initial_enemy_value = 4300,
+    initial_enemy_value = 4400,
     player_reward_value_multiplier = 1.00,
     enemy_value_multiplier = 1.00,
     enemy_growth = {

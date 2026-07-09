@@ -74,6 +74,8 @@
 
 [*]不会与 MIXER Unlocker 冲突。但本 Mod 暂时无法使用由 Unlocker 解锁的额外派系。实际上，本 Mod 的主要玩法与具体派系关系较小，更多取决于所选种族。
 
+[*]不会与SFO冲突，但平衡曲线并未针对SFO单独调整。
+
 [*]其他 Mod 中新增的领主、英雄、单位与道具，暂时不会出现在本 Mod 的奖励池中。
 
 [*]可能不兼容会大幅调整原版物品、装备或单位数据的 Mod。
@@ -84,7 +86,6 @@
 [h2]已知问题[/h2]
 
 [list]
-[*]部分《Total War: Warhammer I》时期的传奇领主，例如卡尔·弗兰兹，人物模型可能无法被正确读取，并自动使用“绿皮萨满”替代模型。目前属性、技能树与战斗能力均正常，但模型问题暂未解决。
 
 [*]多数同种族的派系在本 Mod 几乎没有差别；部分种族，例如混沌勇士，细分派系之间存在差别。
 
@@ -99,6 +100,7 @@
 [*]Yukino_Cth & Chd_Caravan Mod
 [*]SummonServant Mod
 [*]Special thanks to the author of [b]Cathay Campaign Difficulty Overhaul[/b]: Wyccc
+[*]OnePitchMan. He told me how to fix one of my known issues
 [/list]
 
 [h1][HT] RogueTotalWar: Warhammer Spire[/h1]
@@ -188,7 +190,7 @@ In this mod, you do not need to recruit units manually, construct buildings, man
 [h2]Known Issues[/h2]
 
 [list]
-[*]Some Legendary Lords from Total War: Warhammer I, such as Karl Franz, may fail to load their correct character model and instead use a Greenskin Shaman placeholder model. Their stats, skills, and combat functionality are currently working as expected, but the model issue has not yet been resolved.
+[*]A compatibility fix has been added for some Total War: Warhammer I Legendary Lords, such as Karl Franz, whose campaign models could previously fall back to a Greenskin Shaman placeholder. Their stats, skills, and combat functionality were unaffected; please report any remaining model issues.
 
 [*]Most factions within the same race play almost identically in this mod, though some races with distinct sub-factions, such as Warriors of Chaos, may differ.
 
@@ -203,4 +205,5 @@ In this mod, you do not need to recruit units manually, construct buildings, man
 [*]Yukino_Cth & Chd_Caravan Mod
 [*]SummonServant Mod
 [*]Special thanks to the author of [b]Cathay Campaign Difficulty Overhaul[/b]: Wyccc
+[*]OnePitchMan. He told me how to fix one of my known issues
 [/list]

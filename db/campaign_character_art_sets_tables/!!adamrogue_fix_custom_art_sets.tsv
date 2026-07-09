@@ -1,0 +1,17 @@
+art_set_id	agent_type	culture	subculture	faction	is_custom	is_male	agent_subtype	campaign_map_scale	prebattle_separation_offset
+#campaign_character_art_sets_tables;7;db/campaign_character_art_sets_tables/!!adamrogue_fix_custom_art_sets									
+wh_dlc05_art_set_wef_durthu	general				false	true	wh_dlc05_wef_durthu	0.5800	0.0000
+wh_dlc05_art_set_wef_orion	general				false	true	wh_dlc05_wef_orion	1.0000	0.0000
+wh_main_art_set_brt_louen_leoncoeur	general				false	true	wh_main_brt_louen_leoncouer	1.0000	0.0000
+wh_main_art_set_chs_sorcerer_death_01_general	general				false	true	wh_main_chs_chaos_sorcerer_death	1.0000	0.0000
+wh_main_art_set_dwf_thorgrim_grudgebearer	general				false	true	wh_main_dwf_thorgrim_grudgebearer	0.9000	0.0000
+wh_main_art_set_dwf_ungrim_ironfist	general				false	true	wh_main_dwf_ungrim_ironfist	1.0000	0.0000
+wh_main_art_set_emp_balthasar_gelt	general				false	true	wh_main_emp_balthasar_gelt	1.0000	0.0000
+wh_main_art_set_emp_karl_franz	general				false	true	wh_main_emp_karl_franz	1.0000	0.0000
+wh_main_art_set_grn_azhag_the_slaughterer	general				false	true	wh_main_grn_azhag_the_slaughterer	1.0000	0.0000
+wh_main_art_set_grn_grimgor_ironhide	general				false	true	wh_main_grn_grimgor_ironhide	1.0000	0.0000
+wh_main_art_set_vmp_heinrich_kemmler	general				false	true	wh_main_vmp_heinrich_kemmler	1.0000	0.0000
+wh_main_art_set_vmp_mannfred_von_carstein	general				false	true	wh_main_vmp_mannfred_von_carstein	1.0000	0.0000
+wh_main_qb_art_set_emp_captain_qb_general	general				false	true	wh_main_emp_captain	1.0000	0.0000
+wh_main_qb_art_set_emp_light_wizard_general	general				false	true	wh_main_emp_light_wizard	1.0000	0.0000
+wh_main_qb_art_set_grn_goblin_big_boss_01_general	general				false	true	wh_main_grn_goblin_big_boss	1.1000	0.0000
