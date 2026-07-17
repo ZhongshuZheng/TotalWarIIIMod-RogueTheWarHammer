@@ -42,7 +42,7 @@ data.CONFIG = {
     },
     enemy_reinforcement_battle = {
         min_total_value = 25000,
-        chance_percent = 85
+        chance_percent = 90
     },
     enemy_unit_count = {
         minimum_units_base = 7,

@@ -903,13 +903,22 @@ function force_snapshot.new(context)
 
         if not general or not force then
             log(
-                "restore_player_force_after_battle: force missing, taking respawn path. reason=[post_battle_missing_force], general_valid=["
+                "restore_player_force_after_battle: force missing, cleaning saved player force before full respawn. reason=[post_battle_missing_force], general_valid=["
                     .. tostring(general ~= nil)
                     .. "], force_valid=["
                     .. tostring(force ~= nil)
                     .. "]."
             )
-            self.respawn_player_force_from_snapshot(serialized_snapshot, "post_battle_missing_force", finish)
+            self.cleanup_saved_player_force_before_respawn("post_battle_missing_force", function()
+                self.respawn_player_force_from_snapshot(
+                    serialized_snapshot,
+                    "post_battle_missing_force",
+                    finish,
+                    {
+                        force_spawn_all_heroes = true
+                    }
+                )
+            end)
             return
         end
 
