@@ -86,10 +86,11 @@
 [h2]已知问题[/h2]
 
 [list]
-
 [*]多数同种族的派系在本 Mod 几乎没有差别；部分种族，例如混沌勇士，细分派系之间存在差别。
 
 [*]在游玩后期，尤其是 30 层之后，进入战斗前可能出现一定卡顿。
+
+[*]混沌领主手动升魔后将会无法继续游戏。
 
 [*]仍存在少量暂未能稳定复现的游戏崩溃问题。
 [/list]
@@ -101,6 +102,25 @@
 [*]SummonServant Mod
 [*]Special thanks to the author of [b]Cathay Campaign Difficulty Overhaul[/b]: Wyccc
 [*]OnePitchMan. He told me how to fix one of my known issues
+[/list]
+
+[h2]QA[/h2]
+
+[list]
+[*]Q: 为什么部队战斗后会移动到不同的大地图位置？
+A: 用来模拟四处游历，并提高战场地图的多样性。
+[*]Q: 为什么事件中没有显示文本？
+A: 需要注意订阅带有[EN Patch]的同名模组并启用。这个模组已经被设置为必备模组。
+[*]Q: 为什么显示的是英文？
+A: 中文玩家请关闭[EN Patch]的同名模组。
+[*]Q: 为什么某个种族找不到Mod按钮开关？
+A: 一般来说，主流种族与派系都可以正常支持；我估计可能有部分UI类Mod冲突导致这个问题。
+[*]Q: 我可以往Mod部队里面添加英雄与单位，这是否影响平衡？
+A: 这个Mod是为了让你玩着开心的，你可以在随心所欲。
+[*]Q: 一个存档只能打一把吗？
+A: 目前来说是的。
+[*]Q: 每次更新了什么？
+A: 我完善了改动日志以供查看。
 [/list]
 
 [h1][HT] RogueTotalWar: Warhammer Spire[/h1]
@@ -180,6 +200,8 @@ In this mod, you do not need to recruit units manually, construct buildings, man
 
 [*]Does not conflict with MIXER Unlocker. However, factions unlocked by Unlocker are not currently supported by this mod. In practice, Warhammer Spire is mostly based on race selection rather than specific playable factions.
 
+[*]Does not conflict with SFO.
+
 [*]Lords, heroes, units, and items added by other mods will not appear in Warhammer Spire reward pools for now.
 
 [*]May be incompatible with mods that heavily alter vanilla item, equipment, or unit data.
@@ -190,13 +212,16 @@ In this mod, you do not need to recruit units manually, construct buildings, man
 [h2]Known Issues[/h2]
 
 [list]
-[*]A compatibility fix has been added for some Total War: Warhammer I Legendary Lords, such as Karl Franz, whose campaign models could previously fall back to a Greenskin Shaman placeholder. Their stats, skills, and combat functionality were unaffected; please report any remaining model issues.
-
 [*]Most factions within the same race play almost identically in this mod, though some races with distinct sub-factions, such as Warriors of Chaos, may differ.
 
 [*]In the late game, especially after floor 30, there may be some stuttering before entering battle.
 
+[*]The game won't able to continue when chaos lords got replaced with daemon princes.
+
+[*]When using the Changeling as the starting faction, heroes fail to embed into the lord's army.
+
 [*]A small number of crash bugs may still exist and have not yet been reproduced consistently.
+
 [/list]
 
 [h2]Credits / Thanks[/h2]
@@ -207,3 +232,21 @@ In this mod, you do not need to recruit units manually, construct buildings, man
 [*]Special thanks to the author of [b]Cathay Campaign Difficulty Overhaul[/b]: Wyccc
 [*]OnePitchMan. He told me how to fix one of my known issues
 [/list]
+
+[h2]QA[/h2]
+
+[list]
+[*]Q: Why does my army move to a different location on the campaign map after each battle?
+A: This is to simulate a wandering adventurer's journey and to keep the battlefield maps varied throughout the run.
+
+[*]Q: Why is there no text showing up in the event popups?
+A: Make sure you've subscribed to and enabled the companion mod with the same name, tagged [EN Patch]. It's set as a required mod.
+
+[*]Q: I can't find the mod toggle button for a certain race. What's going on?
+A: Most major races and factions should work fine out of the box. This is likely caused by a UI mod conflict — try disabling other UI-altering mods and see if that fixes it.
+
+[*]Q: Can I add my own units or heroes to the mod army? Would that break the balance?
+A: This mod is meant to be fun — feel free to do anything you like. 
+
+[*]Q: Where can I see what changed in each update?
+A: I'm updating the changelog with details.
