@@ -1,4 +1,7 @@
-[h1][HT] RogueTotalWar: Warhammer Spire | 战锤尖塔[/h1]
+战锤尖塔 | RogueTotalWar: Warhammer Spire
+
+[h1] 中文玩家注意：请勿订阅依赖项中的[EN patch]  版本，避免造成文本被覆盖成英文
+ [/h1] 
 
 [i]A Slay-the-Spire-inspired rogue-lite campaign mode for Total War: Warhammer III.[/i]
 
@@ -92,15 +95,19 @@
 
 [*]混沌领主手动升魔后将会无法继续游戏。
 
+[*]玩马拉凯随机到铁眉作为对手时可能会导致崩溃。目前可以尝试使用其他矮人派系来游玩。
+
+[*]使用变化灵派系开始时，存在英雄无法入队问题。
+
 [*]仍存在少量暂未能稳定复现的游戏崩溃问题。
 [/list]
 
-[h2]Credits / Thanks[/h2]
+[h2]致谢[/h2]
 
 [list]
 [*]Yukino_Cth & Chd_Caravan Mod
 [*]SummonServant Mod
-[*]Special thanks to the author of [b]Cathay Campaign Difficulty Overhaul[/b]: Wyccc
+[*]特别感谢 [b]Cathay Campaign Difficulty Overhaul[/b] 的作者: Wyccc
 [*]OnePitchMan. He told me how to fix one of my known issues
 [/list]
 
@@ -109,21 +116,27 @@
 [list]
 [*]Q: 为什么部队战斗后会移动到不同的大地图位置？
 A: 用来模拟四处游历，并提高战场地图的多样性。
-[*]Q: 为什么事件中没有显示文本？
-A: 需要注意订阅带有[EN Patch]的同名模组并启用。这个模组已经被设置为必备模组。
+
 [*]Q: 为什么显示的是英文？
 A: 中文玩家请关闭[EN Patch]的同名模组。
+
 [*]Q: 为什么某个种族找不到Mod按钮开关？
 A: 一般来说，主流种族与派系都可以正常支持；我估计可能有部分UI类Mod冲突导致这个问题。
+
 [*]Q: 我可以往Mod部队里面添加英雄与单位，这是否影响平衡？
-A: 这个Mod是为了让你玩着开心的，你可以在随心所欲。
+A: 这个Mod是为了让你玩着开心的，你可以随心所欲。
+
 [*]Q: 一个存档只能打一把吗？
 A: 目前来说是的。
+
 [*]Q: 每次更新了什么？
 A: 我完善了改动日志以供查看。
+
+[*]Q: 某个派系太难/太简单了？
+A: 如此多的派系平衡非常难以掌控，建议根据游玩体验使用MCT调整难度系数。
+
 [/list]
 
-[h1][HT] RogueTotalWar: Warhammer Spire[/h1]
 
 [i]A Slay-the-Spire-inspired rogue-lite campaign mode for Total War: Warhammer III.[/i]
 
@@ -218,6 +231,8 @@ In this mod, you do not need to recruit units manually, construct buildings, man
 
 [*]The game won't able to continue when chaos lords got replaced with daemon princes.
 
+[*]Crash may occur when playing Malakai against Ironbrow. Workaround: use a different Dwarf faction.
+
 [*]When using the Changeling as the starting faction, heroes fail to embed into the lord's army.
 
 [*]A small number of crash bugs may still exist and have not yet been reproduced consistently.
@@ -250,3 +265,6 @@ A: This mod is meant to be fun — feel free to do anything you like.
 
 [*]Q: Where can I see what changed in each update?
 A: I'm updating the changelog with details.
+
+[*]Q: A certain faction feels too hard / too easy?
+A: Balancing so many factions is extremely difficult to get right. I'd recommend using MCT to adjust the difficulty toggles based on your own experience.
