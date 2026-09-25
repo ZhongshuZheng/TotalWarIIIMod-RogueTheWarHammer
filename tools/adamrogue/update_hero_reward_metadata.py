@@ -41,22 +41,27 @@ def read_loc(path: Path) -> dict[str, str]:
     return data
 
 
-def append_tsv_unique(path: Path, rows: list[list[object]], key_indices: list[int]) -> None:
+def upsert_tsv_rows(path: Path, rows: list[list[object]], key_indices: list[int]) -> None:
     lines = path.read_text(encoding="utf-8").splitlines()
-    existing: set[tuple[str, ...]] = set()
+    existing_line_by_key: dict[tuple[str, ...], int] = {}
 
-    for line in lines[1:]:
+    for line_index, line in enumerate(lines[1:], start=1):
         if not line or line.startswith("#"):
             continue
         parts = line.split("\t")
-        existing.add(tuple(parts[index] if index < len(parts) else "" for index in key_indices))
+        key = tuple(parts[index] if index < len(parts) else "" for index in key_indices)
+        existing_line_by_key[key] = line_index
 
     for row in rows:
         row_values = [str(value) for value in row]
         key = tuple(row_values[index] if index < len(row_values) else "" for index in key_indices)
-        if key not in existing:
-            lines.append("\t".join(row_values))
-            existing.add(key)
+        rendered_row = "\t".join(row_values)
+        existing_line_index = existing_line_by_key.get(key)
+        if existing_line_index is None:
+            existing_line_by_key[key] = len(lines)
+            lines.append(rendered_row)
+        else:
+            lines[existing_line_index] = rendered_row
 
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -75,8 +80,8 @@ def resolve_translation_ref(value: str, table: dict[str, str]) -> str:
 
 def resolve_hero_name(subtype_key: str, unit_key: str, table: dict[str, str]) -> str:
     candidate_keys = [
-        f"agent_subtypes_onscreen_name_override_{subtype_key}",
         f"land_units_onscreen_name_{unit_key}",
+        f"agent_subtypes_onscreen_name_override_{subtype_key}",
     ]
     for key in candidate_keys:
         value = resolve_translation_ref(table.get(key, ""), table)
@@ -104,7 +109,7 @@ def collect_unique_heroes() -> list[tuple[str, str, str]]:
 
 
 def update_db_tables(hero_subtypes: list[str]) -> None:
-    append_tsv_unique(
+    upsert_tsv_rows(
         REPO_ROOT / "db" / "dilemmas_tables" / "!!adamrogue_mvp_dilemmas.tsv",
         [
             ["adamrogue_mvp_hero_reward_dilemma", "false", "dummy", "dummy", "agent", "false", "Event", "", "", "", "false"],
@@ -112,7 +117,7 @@ def update_db_tables(hero_subtypes: list[str]) -> None:
         ],
         [0],
     )
-    append_tsv_unique(
+    upsert_tsv_rows(
         REPO_ROOT
         / "db"
         / "cdir_events_dilemma_choice_details_tables"
@@ -121,7 +126,7 @@ def update_db_tables(hero_subtypes: list[str]) -> None:
         + [["FIRST", "adamrogue_mvp_hero_reward_full_dilemma", "", ""]],
         [0, 1],
     )
-    append_tsv_unique(
+    upsert_tsv_rows(
         REPO_ROOT
         / "db"
         / "cdir_events_dilemma_option_junctions_tables"
@@ -132,7 +137,7 @@ def update_db_tables(hero_subtypes: list[str]) -> None:
         ],
         [1],
     )
-    append_tsv_unique(
+    upsert_tsv_rows(
         REPO_ROOT
         / "db"
         / "campaign_payload_ui_details_tables"
@@ -203,8 +208,8 @@ def update_loc_tables(heroes: list[tuple[str, str, str]]) -> None:
             ]
         )
 
-    append_tsv_unique(REPO_ROOT / "text" / "db" / CN_LOC_FILE_NAME, base_cn + hero_rows_cn, [0])
-    append_tsv_unique(REPO_ROOT / "text" / "db" / EN_LOC_FILE_NAME, base_en + hero_rows_en, [0])
+    upsert_tsv_rows(REPO_ROOT / "text" / "db" / CN_LOC_FILE_NAME, base_cn + hero_rows_cn, [0])
+    upsert_tsv_rows(REPO_ROOT / "text" / "db" / EN_LOC_FILE_NAME, base_en + hero_rows_en, [0])
 
 
 def main() -> None:

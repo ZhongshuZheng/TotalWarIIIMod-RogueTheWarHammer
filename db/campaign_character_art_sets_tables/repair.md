@@ -1,0 +1,1 @@
+This problem has a solution. If you go into the campaign_character_art_sets_tables, there is a column labelled "Is Custom" all of the lords with this checked will encounter this bug, uncheck them all and it should be fixed.

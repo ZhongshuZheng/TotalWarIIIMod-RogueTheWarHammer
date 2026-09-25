@@ -54,6 +54,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_main_skill_node_chs_daemon_prince_undivided_special_1",
             skill_key = "wh3_dlc20_skill_daemon_prince_undivided_special_1",
             category_key = "character",
@@ -1864,6 +1876,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_main_skill_node_dae_be_lakor_unique_01",
             skill_key = "wh3_main_skill_chs_lord_unique_belakor_0",
             category_key = "character",
@@ -2371,6 +2395,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
     },
     wh3_main_dae_daemon_prince = {
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
         {
             node_key = "wh3_main_skill_node_dae_daemon_prince_glory_5",
             skill_key = "wh3_main_skill_dae_lord_campaign_undivided",
@@ -3368,6 +3404,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_main_skill_node_kho_herald_of_khorne_unique_0",
             skill_key = "wh3_dlc26_skill_kho_herald_of_khorne_unique_03",
             category_key = "character",
@@ -3826,11 +3874,35 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_personal_1",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_personal_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_main_skill_node_nur_herald_of_nurgle_death_unique_0",
             skill_key = "wh3_main_skill_nur_locus_of_contagion",
             category_key = "character",
             indent = 1,
-            tier = 0,
+            tier = 1,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -3850,7 +3922,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh3_main_skill_nur_locus_of_fecundity",
             category_key = "character",
             indent = 1,
-            tier = 1,
+            tier = 2,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -3870,7 +3942,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh3_main_skill_nur_locus_of_virulence",
             category_key = "character",
             indent = 1,
-            tier = 2,
+            tier = 3,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -3883,6 +3955,66 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh3_main_skill_node_nur_plagueridden_death_unique_1",
                 "wh3_main_skill_node_nur_plagueridden_nurgle_unique_0",
                 "wh3_main_skill_node_nur_plagueridden_nurgle_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_personal_2",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_personal_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_1",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_shared_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_2",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_3",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_2",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_2",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_shared_2",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_1",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_3",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_1",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_3",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_shared_3",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_1",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_2",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_1",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_2",
             }
         },
         {
@@ -4358,11 +4490,35 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_personal_1",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_personal_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_main_skill_node_nur_herald_of_nurgle_nurgle_unique_0",
             skill_key = "wh3_main_skill_nur_locus_of_contagion",
             category_key = "character",
             indent = 1,
-            tier = 0,
+            tier = 1,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -4382,7 +4538,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh3_main_skill_nur_locus_of_fecundity",
             category_key = "character",
             indent = 1,
-            tier = 1,
+            tier = 2,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -4402,7 +4558,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh3_main_skill_nur_locus_of_virulence",
             category_key = "character",
             indent = 1,
-            tier = 2,
+            tier = 3,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -4415,6 +4571,66 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh3_main_skill_node_nur_plagueridden_death_unique_1",
                 "wh3_main_skill_node_nur_plagueridden_nurgle_unique_0",
                 "wh3_main_skill_node_nur_plagueridden_nurgle_unique_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_personal_2",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_personal_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_1",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_shared_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_2",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_3",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_2",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_2",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_shared_2",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_1",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_3",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_1",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_3",
+            skill_key = "wh3_dlc29_skill_nur_herald_of_nurgle_shared_3",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_1",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_death_shared_2",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_1",
+                "wh3_dlc29_skill_node_nur_herald_of_nurgle_nurgle_shared_2",
             }
         },
         {
@@ -6646,6 +6862,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_skill_node_sla_herald_of_slaanesh_shadow_personal_1",
             skill_key = "wh3_dlc27_skill_sla_herald_of_slaanesh_personal_1",
             category_key = "character",
@@ -7286,6 +7514,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_skill_node_sla_herald_of_slaanesh_slaanesh_personal_1",
             skill_key = "wh3_dlc27_skill_sla_herald_of_slaanesh_personal_1",
             category_key = "character",
@@ -7902,6 +8142,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_main_skill_node_tze_herald_of_tzeentch_metal_locus_starter",
             skill_key = "wh3_main_skill_tze_herald_of_tzeentch_tzeentch_locus_starter",
             category_key = "character",
@@ -8440,6 +8692,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },

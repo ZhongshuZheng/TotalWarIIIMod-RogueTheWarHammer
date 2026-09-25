@@ -54,6 +54,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc13_skill_emp_hunts_marshal_unique_0",
             skill_key = "wh2_dlc13_skill_emp_hunts_marshal_unique_0",
             category_key = "character",
@@ -343,7 +355,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_dlc13_skill_node_emp_huntsmarshal_battle_05",
-            skill_key = "wh2_dlc11_skill_emp_army_buff_honest_steel",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
             category_key = "battle",
             indent = 4,
             tier = 4,
@@ -496,6 +508,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -837,7 +861,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_dlc13_skill_node_emp_wulfhart_battle_05",
-            skill_key = "wh2_dlc11_skill_emp_army_buff_honest_steel",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
             category_key = "battle",
             indent = 4,
             tier = 4,
@@ -1308,8 +1332,32 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_dlc29_skill_vmp_ulrika_unique_1_3",
+            skill_key = "wh3_dlc29_skill_vmp_ulrika_unique_1_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_4",
             skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_vmp_ulrika_unique_1_4",
+            skill_key = "wh3_dlc29_skill_vmp_ulrika_unique_1_4",
             category_key = "character",
             indent = 1,
             tier = 4,
@@ -1720,6 +1768,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc25_skill_node_emp_elspeth_1",
             skill_key = "wh3_dlc25_skill_emp_elspeth_unsettling_radiance",
             category_key = "character",
@@ -1985,7 +2045,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh3_dlc25_skill_node_emp_elspeth_army_2_4",
-            skill_key = "wh2_dlc11_skill_emp_army_buff_honest_steel",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
             category_key = "battle",
             indent = 4,
             tier = 4,
@@ -2712,6 +2772,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc25_skill_node_emp_master_engineer_unique_2_1",
             skill_key = "wh3_dlc25_skill_emp_master_engineer_unique_3_1",
             category_key = "character",
@@ -3017,7 +3089,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh3_dlc25_skill_node_emp_master_engineer_army_2_4",
-            skill_key = "wh2_dlc11_skill_emp_army_buff_honest_steel",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
             category_key = "battle",
             indent = 4,
             tier = 4,
@@ -3380,6 +3452,1190 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc29_emp_cha_emil_valgeir = {
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_unique_08",
+            skill_key = "wh3_dlc29_skill_emp_emil_valgeir_barded_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_unique_09",
+            skill_key = "wh3_dlc25_skill_emp_all_unique_mark_of_hysh",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_unique_10",
+            skill_key = "wh3_dlc29_skill_emp_boris_unique_ulrics_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_legendary_01",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_legendary_emil_valgeir_the_ar_ulric",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_legendary_02",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_emil_valgeir_chosen_of_ulric",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_legendary_03",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_legendary_emil_valgeir_teutogen_bulwark",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_legendary_04",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_legendary_emil_valgeir_blessed_fangs",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_legendary_05",
+            skill_key = "wh3_dlc29_skill_emp_boris_special_blessed_by_ulric",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_legendary_06",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_legendary_emil_valgeir_pillar_of_faith",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_prayer_01",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_fury_of_ulric",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_prayer_02",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_battle_howl",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_prayer_03",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_winters_chill",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_prayer_04",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_destruction",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_prayer_05",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_ferocious_battle_howl",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_06",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_07",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_prayer_06",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_ferocious_winters_chill",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_05",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_07",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_prayer_07",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_ferocious_destruction",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_05",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_01",
+            skill_key = "wh_main_skill_all_dignitary_self_safeguard",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_02",
+            skill_key = "wh_main_skill_all_dignitary_self_impassioned",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_03",
+            skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_04",
+            skill_key = "wh_main_skill_all_dignitary_self_conviction",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_05",
+            skill_key = "wh_main_skill_all_dignitary_self_soothsaying",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_06",
+            skill_key = "wh_main_skill_emp_dignitary_self_faiths_bastion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_07",
+            skill_key = "wh_main_skill_all_dignitary_self_tenacity",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_08",
+            skill_key = "wh_main_skill_all_dignitary_self_augury",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_09",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_10",
+            skill_key = "wh_main_skill_all_dignitary_self_fervour",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_self_11",
+            skill_key = "wh_main_skill_emp_dignitary_self_benediction",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_shared_04",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_shared_priest_of_ulric_army_buff",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_02",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_shared_02",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_shared_emil_valgeir_offensive_specialization",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_emil_valgeir_shared_05",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_shared_priest_of_ulric_campaign_buff",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_01",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_02",
+            }
+        },
+    },
+    wh3_dlc29_emp_cha_priest_of_ulric = {
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_unique_08",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_barded_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_unique_09",
+            skill_key = "wh3_dlc25_skill_emp_all_unique_mark_of_hysh",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_unique_10",
+            skill_key = "wh3_dlc29_skill_emp_boris_unique_ulrics_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_shared_01",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_shared_priest_of_ulric_defensive_specialization",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_shared_02",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_shared_priest_of_ulric_combat_buff",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_shared_03_1",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_shared_priest_of_ulric_campaign_buff_01",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_shared_04",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_emil_valgeir_exalted_of_ulric",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_01",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_fury_of_ulric",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_02",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_battle_howl",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_03",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_winters_chill",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_04",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_destruction",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_05",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_ferocious_battle_howl",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_06",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_07",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_06",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_ferocious_winters_chill",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_05",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_07",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_07",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_unique_priest_of_ulric_ferocious_destruction",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_05",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_prayer_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_01",
+            skill_key = "wh_main_skill_all_dignitary_self_safeguard",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_02",
+            skill_key = "wh_main_skill_all_dignitary_self_impassioned",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_03",
+            skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_04",
+            skill_key = "wh_main_skill_all_dignitary_self_conviction",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_05",
+            skill_key = "wh_main_skill_all_dignitary_self_soothsaying",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_06",
+            skill_key = "wh_main_skill_emp_dignitary_self_faiths_bastion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_07",
+            skill_key = "wh_main_skill_all_dignitary_self_tenacity",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_08",
+            skill_key = "wh_main_skill_all_dignitary_self_augury",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_09",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_10",
+            skill_key = "wh_main_skill_all_dignitary_self_fervour",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_self_11",
+            skill_key = "wh_main_skill_emp_dignitary_self_benediction",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_01",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_shared_priest_of_ulric_army_buff",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_02",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_02",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_shared_priest_of_ulric_offensive_specialization",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_01",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_03",
+            skill_key = "wh3_dlc29_skill_emp_dignitary_shared_priest_of_ulric_campaign_buff",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_01",
+                "wh3_dlc29_skill_node_emp_priest_of_ulric_agent_02",
+            }
+        },
+    },
+    wh3_dlc29_emp_cha_seneschal_of_the_white_wolf = {
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_generic_01",
+            skill_key = "wh3_dlc29_skill_emp_seneschal_barded_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_unique_09",
+            skill_key = "wh3_dlc29_skill_emp_lord_unique_seneschal_commanding_presence",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_unique_06",
+            skill_key = "wh_main_skill_emp_lord_battle_hold_the_line",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc25_skill_node_emp_general_mark_of_hysh",
+            skill_key = "wh3_dlc25_skill_emp_all_unique_mark_of_hysh",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_seneschal_unique_09",
+            skill_key = "wh3_dlc29_skill_emp_boris_unique_ulrics_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_unique_01",
+            skill_key = "wh3_dlc29_skill_emp_seneschal_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_seneschal_unique_05",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_unique_02",
+            skill_key = "wh3_dlc29_skill_emp_seneschal_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_unique_03",
+            skill_key = "wh3_dlc29_skill_emp_seneschal_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_unique_04",
+            skill_key = "wh3_dlc29_skill_emp_seneschal_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_unique_05",
+            skill_key = "wh3_dlc29_skill_emp_seneschal_unique_5",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_seneschal_unique_01",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_unique_06",
+            skill_key = "wh3_dlc29_skill_emp_seneschal_unique_6",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_unique_07",
+            skill_key = "wh3_dlc29_skill_emp_seneschal_unique_7",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_seneschal_unique_08",
+            skill_key = "wh3_dlc29_skill_emp_seneschal_unique_8",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_01",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_05",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_10",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_02",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_emperors_finest",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_03",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_speed_of_horse",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_04",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_pistolkorps",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_05",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_06",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_mighty_forge",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_07",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_imperial_gunnery",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_09",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_strength_of_hardship",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_10",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_sharpshooter",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_11",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_taste_for_battle",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_12",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_artillery_master",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_emp_lord_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh_dlc03_emp_amber_wizard = {
         {
             node_key = "wh3_dlc25_skill_node_emp_wizard_unique_arcane_essays",
@@ -3658,6 +4914,478 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh_dlc03_emp_boris_todbringer = {
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_unique_01",
+            skill_key = "wh_dlc03_skill_emp_lord_unique_boris_todbringer_barded_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_unique_02",
+            skill_key = "wh2_dlc11_skill_emp_boris_unique_imperial_pegasus",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_unique_03",
+            skill_key = "wh2_dlc11_skill_emp_boris_unique_imperial_griffon",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_unique_06",
+            skill_key = "wh3_dlc29_skill_emp_lord_unique_boris_hates_beastmen",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_unique_04",
+            skill_key = "wh_main_skill_all_lord_battle_brass-lunged",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_unique_07",
+            skill_key = "wh_main_skill_emp_lord_battle_hold_the_line",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_unique_08",
+            skill_key = "wh3_dlc25_skill_emp_all_unique_mark_of_hysh",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_unique_09",
+            skill_key = "wh3_dlc29_skill_emp_boris_unique_ulrics_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_special_01",
+            skill_key = "wh3_dlc29_skill_emp_boris_special_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_special_02",
+            skill_key = "wh3_dlc29_skill_emp_boris_special_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_special_03",
+            skill_key = "wh3_dlc29_skill_emp_boris_special_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_special_04",
+            skill_key = "wh3_dlc29_skill_emp_boris_special_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_special_05",
+            skill_key = "wh3_dlc29_skill_emp_boris_special_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_special_06",
+            skill_key = "wh3_dlc29_skill_emp_boris_special_6",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_01",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_05",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_06",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_10",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_01",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_02",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_emperors_finest",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_03",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_speed_of_horse",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_04",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_pistolkorps",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_05",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_06",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_mighty_forge",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_07",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_imperial_gunnery",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_08",
+            skill_key = "wh_main_skill_all_lord_battle_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_09",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_strength_of_hardship",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_10",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_sharpshooter",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_11",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_taste_for_battle",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_12",
+            skill_key = "wh2_dlc11_skill_emp_army_buff_artillery_master",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_boris_general_battle_13",
+            skill_key = "wh_main_skill_all_lord_battle_stand_your_ground",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh_dlc04_emp_arch_lector = {
         {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_unique_11",
@@ -3696,18 +5424,6 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc04_skill_node_emp_arch_lector_unique_08",
-            skill_key = "wh_main_skill_emp_dignitary_unique_warrior_priest_righteous_fury",
-            category_key = "character",
-            indent = 0,
-            tier = 4,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 17 },
-            locked_node_keys = {
-            }
-        },
-        {
             node_key = "wh3_dlc25_skill_node_emp_arch_lector_unique_12",
             skill_key = "wh3_dlc25_skill_emp_all_unique_mark_of_hysh",
             category_key = "character",
@@ -3732,10 +5448,70 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc04_skill_node_emp_arch_lector_unique_02",
-            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_hammer_of_sigmar",
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_arch_lector_unique_01",
+            skill_key = "wh3_dlc29_skill_emp_arch_lector_unique_01",
             category_key = "character",
             indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_arch_lector_unique_02",
+            skill_key = "wh3_dlc29_skill_emp_arch_lector_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_arch_lector_unique_03",
+            skill_key = "wh3_dlc29_skill_emp_arch_lector_unique_03",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_arch_lector_unique_04",
+            skill_key = "wh3_dlc29_skill_emp_arch_lector_unique_04",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc04_skill_node_emp_arch_lector_unique_01",
+            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_hammer_of_sigmar",
+            category_key = "character",
+            indent = 2,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -3744,23 +5520,35 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc04_skill_node_emp_arch_lector_unique_03",
+            node_key = "wh_dlc04_skill_node_emp_arch_lector_unique_02",
             skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_priest_shield_of_faith",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 10 },
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc04_skill_node_emp_arch_lector_unique_03",
+            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_soulfire",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
             locked_node_keys = {
             }
         },
         {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_unique_04",
-            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_soulfire",
+            skill_key = "wh3_dlc29_skill_emp_battle_prayers_capstone",
             category_key = "character",
-            indent = 1,
-            tier = 2,
+            indent = 2,
+            tier = 3,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 14 },
@@ -3771,7 +5559,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_01",
             skill_key = "wh_main_skill_all_all_self_hard_to_hit_starter",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -3783,7 +5571,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_02",
             skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -3795,7 +5583,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_03",
             skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -3807,7 +5595,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_04",
             skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -3819,7 +5607,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_05",
             skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -3831,7 +5619,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_06",
             skill_key = "wh_main_skill_emp_dignitary_self_faiths_bastion",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -3843,7 +5631,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_07",
             skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -3855,7 +5643,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_08",
             skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -3867,7 +5655,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_09",
             skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -3879,7 +5667,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_10",
             skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -3891,7 +5679,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_self_11",
             skill_key = "wh_main_skill_emp_dignitary_self_benediction",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -3949,7 +5737,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_dlc04_skill_node_emp_arch_lector_battle_05",
-            skill_key = "wh2_dlc11_skill_emp_army_buff_honest_steel",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
             category_key = "battle",
             indent = 4,
             tier = 4,
@@ -4130,50 +5918,14 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc04_skill_node_emp_volkmar_unique_04",
-            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_hammer_of_sigmar",
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
             category_key = "character",
-            indent = 1,
-            tier = 0,
-            max_level = 1,
+            indent = 0,
+            tier = 28,
+            max_level = 3,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 4 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh_dlc04_skill_node_emp_volkmar_unique_05",
-            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_priest_shield_of_faith",
-            category_key = "character",
-            indent = 1,
-            tier = 1,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 10 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh_dlc04_skill_node_emp_volkmar_unique_06",
-            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_soulfire",
-            category_key = "character",
-            indent = 1,
-            tier = 2,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 14 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh_dlc04_skill_node_emp_volkmar_unique_08",
-            skill_key = "wh_dlc04_skill_emp_lord_unique_volkmar_the_grim_cooldown",
-            category_key = "character",
-            indent = 1,
-            tier = 3,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 19 },
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -4238,10 +5990,58 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh_dlc04_skill_node_emp_volkmar_unique_04",
+            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_hammer_of_sigmar",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc04_skill_node_emp_volkmar_unique_05",
+            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_priest_shield_of_faith",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc04_skill_node_emp_volkmar_unique_06",
+            skill_key = "wh_main_skill_emp_dignitary_unique_volkmar_soulfire",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc04_skill_node_emp_volkmar_unique_08",
+            skill_key = "wh_dlc04_skill_emp_lord_unique_volkmar_the_grim_cooldown",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_01",
             skill_key = "wh_main_skill_all_all_self_hard_to_hit_starter",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -4253,7 +6053,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_02",
             skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -4265,7 +6065,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_03",
             skill_key = "wh2_dlc11_skill_all_lord_self_full_plate_armour",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -4277,7 +6077,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_04",
             skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -4289,7 +6089,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_05",
             skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -4301,7 +6101,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_06",
             skill_key = "wh_main_skill_emp_dignitary_self_faiths_bastion",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -4313,7 +6113,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_07",
             skill_key = "wh2_dlc11_skill_all_lord_self_wound-maker",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -4325,7 +6125,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_08",
             skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -4337,7 +6137,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_09",
             skill_key = "wh2_dlc11_skill_all_lord_self_self_indomitable",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -4349,7 +6149,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_10",
             skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -4361,7 +6161,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_emp_volkmar_self_11",
             skill_key = "wh_main_skill_emp_dignitary_self_benediction",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -4419,7 +6219,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_dlc04_skill_node_emp_volkmar_battle_05",
-            skill_key = "wh2_dlc11_skill_emp_army_buff_honest_steel",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
             category_key = "battle",
             indent = 4,
             tier = 4,
@@ -5170,6 +6970,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_dlc08_skill_emp_lord_unique_balthasar_unique_5",
             skill_key = "wh3_dlc25_skill_emp_gelt_tempered_aura",
             category_key = "character",
@@ -5435,7 +7247,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_main_skill_node_emp_balthasar_battle_05",
-            skill_key = "wh2_dlc11_skill_emp_army_buff_honest_steel",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
             category_key = "battle",
             indent = 4,
             tier = 4,
@@ -6418,6 +8230,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_dlc08_skill_emp_lord_unique_karl_0",
             skill_key = "wh_dlc08_skill_emp_lord_unique_karl_0",
             category_key = "character",
@@ -6671,7 +8495,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_main_skill_node_emp_karl_franz_battle_05",
-            skill_key = "wh2_dlc11_skill_emp_army_buff_honest_steel",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
             category_key = "battle",
             indent = 4,
             tier = 4,
@@ -7130,6 +8954,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_main_skill_node_emp_lord_special_01",
             skill_key = "wh3_dlc25_skill_emp_lord_general_special_1",
             category_key = "character",
@@ -7417,7 +9253,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_main_skill_node_emp_lord_battle_05",
-            skill_key = "wh2_dlc11_skill_emp_army_buff_honest_steel",
+            skill_key = "wh3_dlc29_skill_emp_army_buff_noble_beasts",
             category_key = "battle",
             indent = 4,
             tier = 4,
@@ -7538,18 +9374,6 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_main_skill_node_emp_warrior_priest_unique_05",
-            skill_key = "wh_main_skill_emp_dignitary_unique_warrior_priest_righteous_fury_hero",
-            category_key = "character",
-            indent = 0,
-            tier = 5,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 17 },
-            locked_node_keys = {
-            }
-        },
-        {
             node_key = "wh2_main_skill_node_emp_warrior_priest_unique_08",
             skill_key = "wh3_dlc25_skill_emp_all_unique_mark_of_hysh",
             category_key = "character",
@@ -7574,11 +9398,47 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_main_skill_node_emp_warrior_priest_unique_02",
-            skill_key = "wh_main_skill_emp_dignitary_unique_warrior_priest_hammer_of_sigmar",
+            node_key = "wh3_dlc29_skill_node_emp_warrior_priest_unique_01",
+            skill_key = "wh3_dlc29_skill_emp_warrior_priest_unique_01",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_warrior_priest_unique_02",
+            skill_key = "wh3_dlc29_skill_emp_warrior_priest_unique_02",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_warrior_priest_unique_03",
+            skill_key = "wh3_dlc29_skill_emp_warrior_priest_unique_03",
             category_key = "character",
             indent = 1,
             tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_emp_warrior_priest_unique_02",
+            skill_key = "wh_main_skill_emp_dignitary_unique_warrior_priest_hammer_of_sigmar",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 4 },
@@ -7589,11 +9449,11 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_unique_03",
             skill_key = "wh_main_skill_emp_dignitary_unique_warrior_priest_shield_of_faith",
             category_key = "character",
-            indent = 1,
-            tier = 3,
+            indent = 2,
+            tier = 1,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 10 },
+            unlock_ranks_by_level = { 4 },
             locked_node_keys = {
             }
         },
@@ -7601,8 +9461,20 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_unique_04",
             skill_key = "wh_main_skill_emp_dignitary_unique_warrior_priest_soulfire",
             category_key = "character",
-            indent = 1,
-            tier = 4,
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_main_skill_node_emp_warrior_priest_unique_05",
+            skill_key = "wh3_dlc29_skill_emp_battle_prayers_capstone",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 14 },
@@ -7613,7 +9485,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_01",
             skill_key = "wh_main_skill_all_dignitary_self_safeguard",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -7625,7 +9497,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_02",
             skill_key = "wh_main_skill_all_dignitary_self_impassioned",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -7637,7 +9509,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_03",
             skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -7649,7 +9521,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_04",
             skill_key = "wh_main_skill_all_dignitary_self_conviction",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -7661,7 +9533,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_05",
             skill_key = "wh_main_skill_all_dignitary_self_soothsaying",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -7673,7 +9545,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_06",
             skill_key = "wh_main_skill_emp_dignitary_self_faiths_bastion",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -7685,7 +9557,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_07",
             skill_key = "wh_main_skill_all_dignitary_self_tenacity",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -7697,7 +9569,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_08",
             skill_key = "wh_main_skill_all_dignitary_self_augury",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -7709,7 +9581,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_09",
             skill_key = "wh_main_skill_all_dignitary_self_inviolable",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -7721,7 +9593,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_10",
             skill_key = "wh_main_skill_all_dignitary_self_fervour",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -7733,12 +9605,54 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_emp_warrior_priest_self_11",
             skill_key = "wh_main_skill_emp_dignitary_self_benediction",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_warrior_priest_unique_04",
+            skill_key = "wh3_dlc29_skill_emp_warrior_priest_unique_04",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_warrior_priest_unique_05",
+                "wh3_dlc29_skill_node_emp_warrior_priest_unique_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_warrior_priest_unique_05",
+            skill_key = "wh3_dlc29_skill_emp_warrior_priest_unique_05",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_warrior_priest_unique_04",
+                "wh3_dlc29_skill_node_emp_warrior_priest_unique_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_emp_warrior_priest_unique_06",
+            skill_key = "wh3_dlc29_skill_emp_warrior_priest_unique_06",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_emp_warrior_priest_unique_04",
+                "wh3_dlc29_skill_node_emp_warrior_priest_unique_05",
             }
         },
     },
@@ -8060,6 +9974,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },

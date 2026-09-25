@@ -189,6 +189,14 @@ data.NODE_POOL = {
         enabled = true
     },
     {
+        node_key = "nagash",
+        faction_key = "wh3_dlc29_nag_host_of_nagash",
+        culture_key = "wh3_dlc29_nag_undead_legions",
+        display_name_key = "adamrogue_destination_node_name_nagash",
+        choice_text_key = "adamrogue_destination_node_choice_nagash",
+        enabled = true
+    },
+    {
         node_key = "daemons_of_chaos",
         faction_key = "wh3_main_dae_daemon_prince",
         culture_key = "wh3_main_dae_daemons",

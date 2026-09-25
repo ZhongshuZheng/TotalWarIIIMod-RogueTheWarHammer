@@ -90,6 +90,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc20_chs_lord_msla_special_1",
             skill_key = "wh3_dlc20_skill_chs_lord_generic_1",
             category_key = "character",
@@ -1310,6 +1322,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc20_skill_node_sla_azazel_unique_1",
             skill_key = "wh3_dlc20_skill_chs_azazel_unique_unmatched_beauty",
             category_key = "character",
@@ -2212,6 +2236,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_chs_sorcerer_lord_shadows_msla_special_1",
             skill_key = "wh3_dlc20_skill_chs_sorcerer_lord_generic_1",
             category_key = "character",
@@ -2670,6 +2706,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_chs_sorcerer_lord_slaanesh_msla_special_1",
             skill_key = "wh3_dlc20_skill_chs_sorcerer_lord_generic_1",
             category_key = "character",
@@ -3100,6 +3148,30 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_dechala_authority",
+            skill_key = "wh3_dlc20_skill_authority_sla_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 27,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -3894,6 +3966,30 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_masque_authority",
+            skill_key = "wh3_dlc20_skill_authority_sla_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 27,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -5850,6 +5946,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_1",
             skill_key = "wh3_dlc27_skill_sla_exalted_keeper_of_secrets_shared_army_1",
             category_key = "character",
@@ -5857,7 +5965,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_2",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_3",
@@ -5873,7 +5981,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_1",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_3",
@@ -5889,7 +5997,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_1",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_2",
@@ -5905,7 +6013,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_5",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_6",
@@ -5921,7 +6029,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_4",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_6",
@@ -5937,7 +6045,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_4",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_5",
@@ -6440,6 +6548,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_slaanesh_personal_1",
             skill_key = "wh3_dlc27_skill_sla_exalted_keeper_of_secrets_shared_army_1",
             category_key = "character",
@@ -6447,7 +6567,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_2",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_3",
@@ -6463,7 +6583,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_1",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_3",
@@ -6479,7 +6599,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_1",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_2",
@@ -6495,7 +6615,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_5",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_6",
@@ -6511,7 +6631,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_4",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_6",
@@ -6527,7 +6647,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_4",
                 "wh3_dlc27_skill_node_sla_exalted_keeper_of_secrets_shadow_personal_5",
@@ -7038,6 +7158,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -7682,6 +7814,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_skill_node_sla_herald_of_slaanesh_slaanesh_personal_1",
             skill_key = "wh3_dlc27_skill_sla_herald_of_slaanesh_personal_1",
             category_key = "character",
@@ -8322,6 +8466,30 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_dlc29_skill_node_nkari_authority",
+            skill_key = "wh3_dlc20_skill_authority_sla_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 27,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_main_skill_node_sla_nkari_unique_0",
             skill_key = "wh3_main_skill_sla_nkari_self_willing_prey",
             category_key = "character",
@@ -8950,6 +9118,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_main_skill_node_chs_sorcerer_lord_death_special_1",
             skill_key = "wh3_dlc20_skill_chs_sorcerer_lord_generic_1",
             category_key = "character",
@@ -9428,6 +9608,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -9914,6 +10106,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_main_skill_node_chs_sorcerer_lord_metal_special_1",
             skill_key = "wh3_dlc20_skill_chs_sorcerer_lord_generic_1",
             category_key = "character",
@@ -10396,6 +10600,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_dlc07_skill_node_chs_sorcerer_lord_shadow_special_1",
             skill_key = "wh3_dlc20_skill_chs_sorcerer_lord_generic_1",
             category_key = "character",
@@ -10862,6 +11078,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },

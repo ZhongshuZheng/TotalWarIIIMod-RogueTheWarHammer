@@ -30,6 +30,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_cp1_skill_node_cth_bhashiva_unique_0",
             skill_key = "wh3_cp1_skill_cth_bhashiva_unique_0",
             category_key = "character",
@@ -1584,6 +1596,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_cp1_skill_node_cth_sawai_unique_0",
             skill_key = "wh3_cp1_skill_cth_sawai_unique_0",
             category_key = "character",
@@ -1982,6 +2006,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_cth_celestial_general_yang_generic_3",
+            skill_key = "wh3_cp1_skill_cth_all_unique_harmony_yang",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_main_skill_node_cth_generic_top_line_0",
             skill_key = "wh3_main_skill_cth_all_unique_magic_resist",
             category_key = "character",
@@ -2006,14 +2042,14 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_celestial_general_yang_generic_3",
-            skill_key = "wh3_cp1_skill_cth_all_unique_harmony_yang",
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
             category_key = "character",
             indent = 0,
-            tier = 30,
-            max_level = 1,
+            tier = 28,
+            max_level = 3,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -2422,6 +2458,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_cth_celestial_general_yin_generic_3",
+            skill_key = "wh3_cp1_skill_cth_all_unique_harmony_yin",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_main_skill_node_cth_generic_top_line_0",
             skill_key = "wh3_main_skill_cth_all_unique_magic_resist",
             category_key = "character",
@@ -2446,14 +2494,14 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_celestial_general_yin_generic_3",
-            skill_key = "wh3_cp1_skill_cth_all_unique_harmony_yin",
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
             category_key = "character",
             indent = 0,
-            tier = 30,
-            max_level = 1,
+            tier = 28,
+            max_level = 3,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -3560,6 +3608,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -4806,63 +4866,87 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_0",
-            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_life",
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_unique_0",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yang_unique_0",
             category_key = "character",
             indent = 1,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 12 },
             locked_node_keys = {
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_1",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_2",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_3",
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_1",
-            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_heavens",
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_unique_1",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yang_unique_1",
             category_key = "character",
             indent = 1,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_0",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_2",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_3",
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_2",
-            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_fire",
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_unique_2",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yang_unique_2",
             category_key = "character",
             indent = 1,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_0",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_1",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_3",
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_3",
-            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_light",
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_unique_3",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yang_unique_3",
             category_key = "character",
             indent = 1,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_0",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_1",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_unique_4",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yang_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_unique_5",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yang_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
             }
         },
         {
@@ -5007,6 +5091,66 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_0",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_life",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_1",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_2",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_1",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_heavens",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_0",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_2",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_2",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_fire",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_0",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_1",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_3",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_light",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_0",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_1",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yang_self_2",
             }
         },
         {
@@ -5240,63 +5384,87 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_0",
-            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_metal",
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_unique_0",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yin_unique_0",
             category_key = "character",
             indent = 1,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 12 },
             locked_node_keys = {
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_1",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_2",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_3",
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_1",
-            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_death",
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_unique_1",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yin_unique_1",
             category_key = "character",
             indent = 1,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_0",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_2",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_3",
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_2",
-            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_beasts",
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_unique_2",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yin_unique_2",
             category_key = "character",
             indent = 1,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_0",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_1",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_3",
             }
         },
         {
-            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_3",
-            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_shadow",
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_unique_3",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yin_unique_3",
             category_key = "character",
             indent = 1,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_0",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_1",
-                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_2",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_unique_4",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yin_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_unique_5",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_yin_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
             }
         },
         {
@@ -5441,6 +5609,66 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_0",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_metal",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_1",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_2",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_1",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_death",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_0",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_2",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_2",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_beasts",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_0",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_1",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_3",
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_3",
+            skill_key = "wh3_main_skill_cth_dragon_blooded_shugengan_self_shadow",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_0",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_1",
+                "wh3_main_skill_node_cth_dragon_blooded_shugengan_yin_self_2",
             }
         },
         {
@@ -5658,6 +5886,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -6096,6 +6336,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_main_skill_node_cth_lord_magistrate_yin_leadership_0",
             skill_key = "wh3_dlc24_skill_cth_lord_magistrate_tactical_prowess",
             category_key = "character",
@@ -6490,6 +6742,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -7104,6 +7368,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },

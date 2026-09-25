@@ -26,9 +26,15 @@ if (-not (Test-Path -LiteralPath $heroRewardMetadataScript)) {
 
 Write-Host "[stage-d] Running generator..."
 & $pythonExe $generatorScript
+if ($LASTEXITCODE -ne 0) {
+    throw "Stage D generator failed with exit code $LASTEXITCODE."
+}
 
 Write-Host "[stage-d] Updating hero reward metadata..."
 & $pythonExe $heroRewardMetadataScript
+if ($LASTEXITCODE -ne 0) {
+    throw "Hero reward metadata update failed with exit code $LASTEXITCODE."
+}
 
 $generatedLuaFiles = @(
     (Join-Path $repoRoot "script\campaign\mod\adamrogue\adamrogue_data_nodes.lua"),
@@ -50,6 +56,9 @@ if (Test-Path -LiteralPath $luacExe) {
     Write-Host "[stage-d] Running luac syntax checks..."
     foreach ($luaFile in $generatedLuaFiles) {
         & $luacExe -p $luaFile
+        if ($LASTEXITCODE -ne 0) {
+            throw "Lua syntax validation failed for $luaFile with exit code $LASTEXITCODE."
+        }
     }
     Write-Host "[stage-d] luac checks passed."
 } else {

@@ -912,6 +912,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_death_unique_1",
             skill_key = "wh3_dlc27_skill_nor_great_shaman_sorcerer_unique_1",
             category_key = "character",
@@ -1402,6 +1414,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_skill_node_nor_great_shaman_sorcerer_fire_unique_1",
             skill_key = "wh3_dlc27_skill_nor_great_shaman_sorcerer_unique_1",
             category_key = "character",
@@ -1888,6 +1912,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -2418,6 +2454,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh3_dlc27_skill_node_nor_sayl_unique_1",
             skill_key = "wh3_dlc27_skill_nor_sayl_unique_1",
             category_key = "character",
@@ -2834,6 +2882,336 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc29_chs_gutrot_spume = {
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_mount_warshrine",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_mount_warshrine",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_top_1",
+            skill_key = "wh3_dlc20_skill_shared_chs_cha_exalted_hero_tactician",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mkho_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_03",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_01",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_03",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_01",
+                "wh3_dlc27_skill_node_chs_exalted_hero_msla_shared_03",
+                "wh3_main_ie_nor_killgore_shared_01",
+                "wh3_main_ie_nor_killgore_shared_03",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_01",
+                "wh3_pro11_skill_node_chs_harald_hammerstorm_shared_03",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_top_2",
+            skill_key = "wh3_dlc20_skills_shared_nurgle_feed",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_04",
+                "wh3_dlc20_skill_node_chs_exalted_hero_mnur_shared_05",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_04",
+                "wh3_dlc20_skill_node_chs_exalted_hero_shared_05",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_top_3",
+            skill_key = "wh_main_skill_chs_all_unique_eye_of_the_gods",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_top_4",
+            skill_key = "wh_main_skill_chs_all_unique_aura_of_chaos",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_top_5",
+            skill_key = "wh3_dlc20_skill_authority_nur_hero",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 10, 20 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_unique_1",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_unique_2_1",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_unique_2_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_unique_2_2",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_unique_2_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_unique_2_3",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_unique_2_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_unique_2_4",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_unique_2_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_unique_3",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_special_1",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_special_1",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_special_2",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_special_2",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_special_3",
+            skill_key = "wh3_dlc29_skill_chs_gutrot_special_3",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_1",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_2",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_3",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_4",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_5",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_6",
+            skill_key = "wh2_main_skill_hef_alastar_unique_heroic_killing_blow",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_7",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_8",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_9",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_chs_gutrot_self_11",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_main_ie_nor_burplesmirk_spewpit = {
         {
             node_key = "wh3_main_ie_nor_burplesmirk_unique_0",
@@ -2868,6 +3246,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -2917,6 +3307,114 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_nor_burplesmirk_personal_1",
+            skill_key = "wh3_dlc29_skill_nur_exalted_great_unclean_one_shared_army_1",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_nor_burplesmirk_personal_2",
+                "wh3_dlc29_nor_burplesmirk_personal_3",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_2",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_3",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_2",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_nor_burplesmirk_personal_2",
+            skill_key = "wh3_dlc29_skill_nur_exalted_great_unclean_one_shared_army_2",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_nor_burplesmirk_personal_1",
+                "wh3_dlc29_nor_burplesmirk_personal_3",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_1",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_3",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_1",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_nor_burplesmirk_personal_3",
+            skill_key = "wh3_dlc29_skill_nur_exalted_great_unclean_one_shared_army_3",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_nor_burplesmirk_personal_1",
+                "wh3_dlc29_nor_burplesmirk_personal_2",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_1",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_2",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_1",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_2",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_nor_burplesmirk_personal_4",
+            skill_key = "wh3_dlc29_skill_nur_exalted_great_unclean_one_shared_self_1",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_nor_burplesmirk_personal_5",
+                "wh3_dlc29_nor_burplesmirk_personal_6",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_5",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_6",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_5",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_6",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_nor_burplesmirk_personal_5",
+            skill_key = "wh3_dlc29_skill_nur_exalted_great_unclean_one_shared_self_2",
+            category_key = "character",
+            indent = 1,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_nor_burplesmirk_personal_4",
+                "wh3_dlc29_nor_burplesmirk_personal_6",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_4",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_6",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_4",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_6",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_nor_burplesmirk_personal_6",
+            skill_key = "wh3_dlc29_skill_nur_exalted_great_unclean_one_shared_self_3",
+            category_key = "character",
+            indent = 1,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_nor_burplesmirk_personal_4",
+                "wh3_dlc29_nor_burplesmirk_personal_5",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_4",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_death_personal_5",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_4",
+                "wh3_dlc29_skill_node_nur_exalted_great_unclean_one_nurgle_personal_5",
             }
         },
         {
@@ -3776,6 +4274,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -6402,6 +6912,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc17_skill_node_nor_throgg_0_1",
             skill_key = "wh_dlc08_skill_nor_throgg_unique_king_of_trolls",
             category_key = "character",
@@ -6930,6 +7452,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc17_skill_node_nor_wulfrik_0_1",
             skill_key = "wh_dlc08_skill_nor_wulfrik_self_hunter_of_champions",
             category_key = "character",
@@ -7442,6 +7976,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },

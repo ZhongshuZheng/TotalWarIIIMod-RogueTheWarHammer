@@ -3,6 +3,7 @@
 import csv
 import json
 import re
+import struct
 from collections import defaultdict
 from pathlib import Path
 
@@ -26,6 +27,9 @@ EXCLUDED_SKILL_KEY_PATTERNS = (
 )
 # Legendary lords available in custom battle but omitted from faction_agent_permitted_subtypes.
 EXTRA_GENERAL_SUBTYPES_BY_CONTENT_FACTION: dict[str, list[str]] = {
+    "wh_main_emp_empire": [
+        "wh_dlc03_emp_boris_todbringer",
+    ],
     "wh3_dlc23_chd_astragoth": [
         "wh3_dlc23_chd_zhatan",
         "wh3_dlc23_chd_astragoth",
@@ -61,9 +65,11 @@ PLAYER_CONTENT_NODE_BY_GENERATOR_CONFIG = {
     "WH_Vampire_Coast_land": "vampire_coast",
     "WH_Chaos_Daemons": "daemons_of_chaos",
     "WH_CoC_Festus": "nurgle",
+    "WH_CoC_Glottkin": "nurgle",
     "WH_CoC_Valkia": "khorne",
     "WH_CoC_Azazel": "slaanesh",
     "WH_CoC_Vilitch": "tzeentch",
+    "WH_Undead_Legions": "nagash",
 }
 
 
@@ -78,8 +84,84 @@ WORKSPACE_ROOT = find_workspace_root()
 ORIGINAL_DB_ROOT = WORKSPACE_ROOT / "OriginalGameData" / "db"
 
 
+def read_character_skill_node_sets_binary(path: Path) -> list[dict[str, str]]:
+    data = path.read_bytes()
+    offset = 0
+
+    def read_bytes(length: int) -> bytes:
+        nonlocal offset
+        end = offset + length
+        if end > len(data):
+            raise ValueError(f"Unexpected end of binary DB table: {path}")
+        value = data[offset:end]
+        offset = end
+        return value
+
+    def read_u8() -> int:
+        return read_bytes(1)[0]
+
+    def read_u16() -> int:
+        return struct.unpack("<H", read_bytes(2))[0]
+
+    def read_u32() -> int:
+        return struct.unpack("<I", read_bytes(4))[0]
+
+    def read_utf8() -> str:
+        return read_bytes(read_u16()).decode("utf-8")
+
+    def read_optional_utf8() -> str:
+        marker = read_u8()
+        if marker == 0:
+            return ""
+        if marker != 1:
+            raise ValueError(f"Invalid optional-string marker {marker} at offset {offset - 1} in {path}")
+        return read_utf8()
+
+    if read_bytes(4) != b"\xfd\xfe\xfc\xff":
+        raise ValueError(f"Unsupported binary DB header: {path}")
+
+    guid_length = read_u16()
+    read_bytes(guid_length * 2).decode("utf-16-le")
+    if read_u8() != 1:
+        raise ValueError(f"Unsupported binary DB metadata marker: {path}")
+
+    row_count = read_u32()
+    rows: list[dict[str, str]] = []
+    for _ in range(row_count):
+        agent_key = read_optional_utf8()
+        for_army = read_u8() != 0
+        faction_key = read_optional_utf8()
+        key = read_utf8()
+        subculture = read_optional_utf8()
+        for_navy = read_u8() != 0
+        campaign_key = read_optional_utf8()
+        agent_subtype_key = read_optional_utf8()
+        rows.append(
+            {
+                "key": key,
+                "agent_key": agent_key,
+                "for_army": "true" if for_army else "false",
+                "faction_key": faction_key,
+                "for_navy": "true" if for_navy else "false",
+                "campaign_key": campaign_key,
+                "subculture": subculture,
+                "agent_subtype_key": agent_subtype_key,
+            }
+        )
+
+    if offset != len(data):
+        raise ValueError(f"Unexpected trailing bytes in binary DB table {path}: {len(data) - offset}")
+    return rows
+
+
 def read_tsv(table_name: str) -> list[dict[str, str]]:
     path = ORIGINAL_DB_ROOT / table_name / "data__.tsv"
+    if not path.exists():
+        binary_path = ORIGINAL_DB_ROOT / table_name / "data__"
+        if table_name == "character_skill_node_sets_tables" and binary_path.exists():
+            return read_character_skill_node_sets_binary(binary_path)
+        raise FileNotFoundError(f"Missing exported DB table: {path}")
+
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.reader(handle, delimiter="\t")
         header = next(reader)
@@ -133,11 +215,15 @@ def build_index(rows: list[dict[str, str]], key_name: str) -> dict[str, dict[str
 
 def replace_block(path: Path, generated_lines: list[str]) -> None:
     lines = path.read_text(encoding="utf-8").splitlines()
-    try:
-        start_index = lines.index(START_MARKER)
-        end_index = lines.index(END_MARKER)
-    except ValueError as exc:
-        raise RuntimeError(f"Missing marker in {path}") from exc
+
+    def find_marker_index(marker: str) -> int:
+        for index, line in enumerate(lines):
+            if line.split("\t", 1)[0] == marker:
+                return index
+        raise RuntimeError(f"Missing marker {marker} in {path}")
+
+    start_index = find_marker_index(START_MARKER)
+    end_index = find_marker_index(END_MARKER)
     if end_index <= start_index:
         raise RuntimeError(f"Invalid marker order in {path}")
 
@@ -1326,7 +1412,22 @@ def main() -> None:
         # Build hero (non-lord agent) pool for this content faction.
         # Use the non-general permitted subtype list as the source of truth for which
         # agent subtypes are available, then verify the associated unit caste is "hero".
-        permitted_hero_subtypes = set(permitted_heroes_by_faction.get(faction_key, []))
+        hero_source_faction_keys = [faction_key]
+        hero_source_faction_keys.extend(str(value) for value in entry.get("hero_source_factions", []))
+        hero_agent_type_by_subtype: dict[str, str] = {}
+        for hero_source_faction_key in hero_source_faction_keys:
+            for permitted_row in faction_agent_permitted_subtype_rows:
+                if permitted_row.get("mod_disabled", "").lower() == "true":
+                    continue
+                if permitted_row.get("faction") != hero_source_faction_key:
+                    continue
+                agent_type = permitted_row.get("agent", "")
+                subtype_key = permitted_row.get("subtype", "")
+                if not subtype_key or agent_type in {"", "general"}:
+                    continue
+                hero_agent_type_by_subtype.setdefault(subtype_key, agent_type)
+
+        permitted_hero_subtypes = set(hero_agent_type_by_subtype)
         agent_subtypes_by_key_local = {row["key"]: row for row in agent_subtype_rows if row.get("key")}
         hero_pool: list[dict[str, object]] = []
         seen_hero_subtype_keys: set[str] = set()
@@ -1352,15 +1453,9 @@ def main() -> None:
             if unit_value <= 0:
                 continue
             seen_hero_subtype_keys.add(subtype_key)
-            # Determine the agent type from the permitted entry for this subtype.
-            agent_type_for_subtype = next(
-                (r["agent"] for r in faction_agent_permitted_subtype_rows
-                 if r.get("faction") == faction_key and r.get("subtype") == subtype_key),
-                "champion",
-            )
             hero_pool.append(
                 {
-                    "agent_type": agent_type_for_subtype,
+                    "agent_type": hero_agent_type_by_subtype[subtype_key],
                     "agent_subtype": subtype_key,
                     "unit_key": associated_unit_key,
                     "unit_value": unit_value,

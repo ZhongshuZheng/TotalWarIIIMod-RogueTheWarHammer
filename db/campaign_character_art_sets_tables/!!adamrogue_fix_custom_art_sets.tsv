@@ -1,5 +1,7 @@
 art_set_id	agent_type	culture	subculture	faction	is_custom	is_male	agent_subtype	campaign_map_scale	prebattle_separation_offset
 #campaign_character_art_sets_tables;7;db/campaign_character_art_sets_tables/!!adamrogue_fix_custom_art_sets									
+wh_dlc03_art_set_emp_boris_todbringer	general				false	true	wh_dlc03_emp_boris_todbringer	1.0000	0.0000
+wh_dlc03_art_set_emp_boris_todbringer_visor	general				false	true	wh_dlc03_emp_boris_todbringer	1.0000	0.0000
 wh_dlc05_art_set_wef_durthu	general				false	true	wh_dlc05_wef_durthu	0.5800	0.0000
 wh_dlc05_art_set_wef_orion	general				false	true	wh_dlc05_wef_orion	1.0000	0.0000
 wh_main_art_set_brt_louen_leoncoeur	general				false	true	wh_main_brt_louen_leoncouer	1.0000	0.0000

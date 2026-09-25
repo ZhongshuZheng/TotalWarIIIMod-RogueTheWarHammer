@@ -142,10 +142,16 @@ for subtype_key, skill_plan in pairs(source_23.CHARACTER_SKILL_PLANS_BY_SUBTYPE 
     data.CONTENT_FACTION_KEY_BY_SUBTYPE[subtype_key] = source_23.CONTENT_FACTION_KEY
 end
 
-local source_24 = require("adamrogue_data_enemy_skills_daemons_of_chaos")
+local source_24 = require("adamrogue_data_enemy_skills_nagash")
 for subtype_key, skill_plan in pairs(source_24.CHARACTER_SKILL_PLANS_BY_SUBTYPE or {}) do
     data.CHARACTER_SKILL_PLANS_BY_SUBTYPE[subtype_key] = skill_plan
     data.CONTENT_FACTION_KEY_BY_SUBTYPE[subtype_key] = source_24.CONTENT_FACTION_KEY
+end
+
+local source_25 = require("adamrogue_data_enemy_skills_daemons_of_chaos")
+for subtype_key, skill_plan in pairs(source_25.CHARACTER_SKILL_PLANS_BY_SUBTYPE or {}) do
+    data.CHARACTER_SKILL_PLANS_BY_SUBTYPE[subtype_key] = skill_plan
+    data.CONTENT_FACTION_KEY_BY_SUBTYPE[subtype_key] = source_25.CONTENT_FACTION_KEY
 end
 
 return data

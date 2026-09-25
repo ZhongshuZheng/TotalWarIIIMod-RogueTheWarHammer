@@ -4,6 +4,304 @@ local data = {}
 data.CONTENT_FACTION_KEY = "wh_main_vmp_schwartzhafen"
 
 data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
+    wh2_dlc11_cst_mourngul = {
+        {
+            node_key = "wh3_dlc29_skill_dummy_agent_actions_spy_mourngul",
+            skill_key = "wh3_dlc29_skill_all_dummy_agent_actions_nag_mourngul",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_dummy_agent_actions_vmp_mourngul",
+            skill_key = "wh3_dlc29_skill_dummy_agent_actions_vmp_mourngul",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_mourngul_01",
+            skill_key = "wh2_dlc11_skill_cst_misc_haunter_of_the_dark",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_misc_mourngul_02",
+            skill_key = "wh2_dlc11_skill_cst_misc_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_0",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_1",
+            skill_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_2",
+            skill_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_3",
+            skill_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_4",
+            skill_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_5",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_00",
+            skill_key = "wh2_dlc11_skill_cst_personal_0_monkey_jacket",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_01",
+            skill_key = "wh2_dlc11_skill_cst_personal_1_ravenous_attack",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_02",
+            skill_key = "wh_main_skill_vmp_lord_self_master_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_03",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_05",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_06",
+            skill_key = "wh2_dlc11_skill_cst_personal_6_devourer_of_all",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_07",
+            skill_key = "wh2_dlc11_skill_cst_personal_carnophage",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_08",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_09",
+            skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_personal_10",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_1",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_exclusive_0",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_2",
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_2",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_exclusive_1",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_1",
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_3",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_exclusive_2",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_1",
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_2",
+            }
+        },
+    },
     wh2_dlc11_vmp_bloodline_blood_dragon = {
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_unique_01",
@@ -42,20 +340,20 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_unique_06",
-            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_blood_dragon_lord_unique_top_01",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_blood_dragon_unique_1",
             category_key = "character",
             indent = 0,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 7 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_unique_07",
-            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_unique_04",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
             category_key = "character",
             indent = 0,
             tier = 4,
@@ -67,18 +365,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_unique_05",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_the_ordo_draconis",
+            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
             category_key = "character",
             indent = 0,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_unique_04",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_unique_06",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
@@ -90,33 +388,44 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_special_01",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_doomrider",
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_blood_dragon_lord_unique_0",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_heart_piercing",
             category_key = "character",
             indent = 1,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
-                "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_special_04",
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_special_02",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_the_strength_of_steel",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_blood_dragon_lord_unique_1",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_doomrider",
             category_key = "character",
             indent = 1,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 9 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_special_03",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_heart_piercing",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_blood_dragon_lord_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_blood_dragon_unique_2",
             category_key = "character",
             indent = 1,
             tier = 2,
@@ -127,24 +436,11 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_special_04",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_grave_sentinels",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_blood_dragon_lord_unique_3",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_the_strength_of_steel",
             category_key = "character",
             indent = 1,
             tier = 3,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
-            locked_node_keys = {
-                "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_special_01",
-            }
-        },
-        {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_special_05",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_disciple_of_aborrash",
-            category_key = "character",
-            indent = 1,
-            tier = 4,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -152,7 +448,19 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_blood_dragon_lord_special_06",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_blood_dragon_lord_unique_4",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_the_ordo_draconis",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_blood_dragon_lord_unique_5",
             skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_honour_or_death",
             category_key = "character",
             indent = 1,
@@ -550,7 +858,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
     },
     wh2_dlc11_vmp_bloodline_lahmian = {
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_01",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_01",
             skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_barded_nightmare",
             category_key = "character",
             indent = 0,
@@ -562,7 +870,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_02",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_02",
             skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_hellsteed",
             category_key = "character",
             indent = 0,
@@ -574,7 +882,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_03",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_03",
             skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_zombie_dragon",
             category_key = "character",
             indent = 0,
@@ -586,31 +894,31 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_05",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_hive_mind",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_04",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_lahmian_lord_coven_throne",
             category_key = "character",
             indent = 0,
             tier = 3,
             max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 19 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_06",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_queen_bee",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_05",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_deathly_vigour",
             category_key = "character",
             indent = 0,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 5 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_07",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_06",
             skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
             category_key = "character",
             indent = 0,
@@ -622,7 +930,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_08",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_07",
             skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
             category_key = "character",
             indent = 0,
@@ -634,7 +942,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_04",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_08",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
@@ -646,20 +954,32 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_01",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_deathly_vigour",
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_01",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_queen_bee",
             category_key = "character",
             indent = 1,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_02",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_innocence_lost",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_02",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_lahmian_vampire_first_to_the_kill",
             category_key = "character",
             indent = 1,
             tier = 1,
@@ -670,11 +990,47 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_special_03",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_seduction",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_03",
+            skill_key = "wh3_dlc29_skill_vmp_lahmian_bloodline_bewilderment",
             category_key = "character",
             indent = 1,
             tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_04",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_innocence_lost",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_05",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_lahmian_vampire_bound_servitude",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_unique_06",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_lahmian_vampire_mist_form",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -731,7 +1087,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_self_05",
-            skill_key = "wh_main_skill_vmp_lord_self_quickblood",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
             category_key = "character",
             indent = 2,
             tier = 4,
@@ -743,7 +1099,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_self_06",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_self_lightning_reflexes",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_lahmian_vampire_lightning_reflexes",
             category_key = "character",
             indent = 2,
             tier = 5,
@@ -779,7 +1135,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_self_09",
-            skill_key = "wh_main_skill_vmp_lord_self_supernatural_horror",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
             category_key = "character",
             indent = 2,
             tier = 8,
@@ -791,7 +1147,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_self_10",
-            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            skill_key = "wh2_dlc11_skill_all_lord_self_fleet-footed",
             category_key = "character",
             indent = 2,
             tier = 9,
@@ -803,7 +1159,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_self_11",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_self_transfix",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_lahmian_vampire_transfix",
             category_key = "character",
             indent = 2,
             tier = 10,
@@ -839,7 +1195,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_03",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_magic_the_enfeebling_foe",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
             category_key = "character",
             indent = 3,
             tier = 2,
@@ -851,7 +1207,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_04",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_magic_penumbral_pendulum",
+            skill_key = "wh2_main_skill_vmp_magic_vampires_04_gaze_of_nagash_lord",
             category_key = "character",
             indent = 3,
             tier = 3,
@@ -886,8 +1242,8 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_09",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_magic_okkams_mindrazor",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_07",
+            skill_key = "wh2_main_skill_vmp_magic_vampires_09_curse_of_years_lord",
             category_key = "character",
             indent = 3,
             tier = 6,
@@ -898,8 +1254,8 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_10",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_magic_wind_of_death",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_08",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_magic_okkams_mindrazor",
             category_key = "character",
             indent = 3,
             tier = 7,
@@ -910,7 +1266,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_07",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_09",
             skill_key = "wh_main_skill_all_magic_all_07_earthing",
             category_key = "character",
             indent = 3,
@@ -922,7 +1278,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_08",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_lahmian_lord_magic1_10",
             skill_key = "wh_main_skill_all_magic_all_08_power_drain",
             category_key = "character",
             indent = 3,
@@ -1153,31 +1509,31 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_unique_05",
-            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_unique_cynosure",
             category_key = "character",
             indent = 0,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 5 },
             locked_node_keys = {
             }
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_unique_06",
-            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_unique_wild_heart",
             category_key = "character",
             indent = 0,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 7 },
             locked_node_keys = {
             }
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_unique_04",
-            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_unique_life_leeching",
             category_key = "character",
             indent = 0,
             tier = 5,
@@ -1188,20 +1544,68 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_necrarch_lord_unique_07",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_necrarch_lord_unique_08",
+            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_necrarch_lord_unique_09",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_special_01",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_unique_cynosure",
+            skill_key = "wh3_dlc29_skill_vmp_necrarch_lord_special_arcane_leech",
             category_key = "character",
             indent = 1,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
             }
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_special_02",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_unique_wild_heart",
+            skill_key = "wh3_dlc29_skill_vmp_necrarch_lord_special_dark_protection",
             category_key = "character",
             indent = 1,
             tier = 1,
@@ -1213,7 +1617,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_special_03",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_unique_life_leeching",
+            skill_key = "wh3_dlc29_skill_vmp_necrarch_lord_special_the_awakening",
             category_key = "character",
             indent = 1,
             tier = 2,
@@ -1225,10 +1629,34 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_special_04",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_unique_nehekharas_noble_blood",
+            skill_key = "wh3_dlc29_skill_vmp_necrarch_lord_special_hellish_vigour",
             category_key = "character",
             indent = 1,
             tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_necrarch_lord_special_05",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_unique_grave_sentinels",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_necrarch_lord_special_06",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_unique_nehekharas_noble_blood",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -1297,7 +1725,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_self_06",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_self_dark_protection",
+            skill_key = "wh3_dlc29_skill_vmp_necrarch_lord_self_flesh_reconstitution",
             category_key = "character",
             indent = 2,
             tier = 5,
@@ -1333,7 +1761,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_magic1_03",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_magic_spirit_leech",
+            skill_key = "wh_dlc03_skill_magic_beasts_wyssans_wildform",
             category_key = "character",
             indent = 3,
             tier = 2,
@@ -1381,7 +1809,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_necrarch_lord_magic1_09",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_magic_curse_of_anraheir",
+            skill_key = "wh2_main_skill_all_magic_death_09_the_fate_of_bjuna_lord",
             category_key = "character",
             indent = 3,
             tier = 6,
@@ -1622,71 +2050,47 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_unique_05",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_monstrosities_of_morr",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_unique_02",
+            skill_key = "wh3_dlc29_skill_vmp_strigoi_bloodline_misc_0",
             category_key = "character",
             indent = 0,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_unique_04",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_the_grotesque_court",
-            category_key = "character",
-            indent = 0,
-            tier = 2,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
             }
         },
         {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_unique_03",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_grave_eaters",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_unique_04",
+            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
             category_key = "character",
             indent = 0,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_unique_06",
-            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
-            category_key = "character",
-            indent = 0,
-            tier = 4,
-            max_level = 1,
-            is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_unique_07",
-            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
-            category_key = "character",
-            indent = 0,
-            tier = 5,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_unique_02",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_unique_05",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 6,
+            tier = 4,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -1694,20 +2098,31 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_special_01",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_curse_of_vorag",
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_strigoi_lord_unique_0",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_ghoul_king_of_ushoran",
             category_key = "character",
             indent = 1,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
-                "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_special_04",
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_special_02",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_strigoi_lord_unique_1",
             skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_bestial_monstrosity",
             category_key = "character",
             indent = 1,
@@ -1719,51 +2134,50 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_special_03",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_ghoul_king_of_ushoran",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_strigoi_lord_unique_2",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_grave_eaters",
             category_key = "character",
             indent = 1,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 9 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_special_04",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_infinite_hatred",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_strigoi_lord_unique_3",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_claws_of_mourkain",
             category_key = "character",
             indent = 1,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
-                "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_special_01",
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_special_05",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_bestial_force",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_strigoi_lord_unique_4",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_curse_of_vorag",
             category_key = "character",
             indent = 1,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 9 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_strigoi_lord_special_06",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_claws_of_mourkain",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_strigoi_lord_unique_5",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_infinite_hatred",
             category_key = "character",
             indent = 1,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 9 },
             locked_node_keys = {
             }
         },
@@ -2238,20 +2652,20 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_unique_05",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_benevolent_overlord",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_unique_04",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_fell_nest",
             category_key = "character",
             indent = 0,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 7 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_unique_06",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_cattle_herder",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_unique_05",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_sylvanian_marksmen",
             category_key = "character",
             indent = 0,
             tier = 4,
@@ -2262,11 +2676,23 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_unique_06",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_von_carstein_unique_storm_of_the_night_top_variant",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_unique_08",
             skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
             category_key = "character",
             indent = 0,
-            tier = 5,
+            tier = 6,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -2278,7 +2704,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
             category_key = "character",
             indent = 0,
-            tier = 6,
+            tier = 7,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -2286,11 +2712,11 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_unique_04",
+            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_unique_10",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 7,
+            tier = 8,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -2298,20 +2724,32 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_special_01",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_fell_nest",
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_von_carstein_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_von_carstein_unique_1",
             category_key = "character",
             indent = 1,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_special_02",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_mist_form",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_von_carstein_unique_1",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_brooding_horrors",
             category_key = "character",
             indent = 1,
             tier = 1,
@@ -2322,8 +2760,8 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_special_03",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_brooding_horrors",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_von_carstein_unique_2",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_mist_form",
             category_key = "character",
             indent = 1,
             tier = 2,
@@ -2334,8 +2772,8 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_special_04",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_storm_of_the_night",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_von_carstein_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_von_carstein_unique_3",
             category_key = "character",
             indent = 1,
             tier = 3,
@@ -2346,14 +2784,26 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc11_skill_node_vmp_bloodline_von_carstein_lord_unique_07",
-            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_sylvanian_marksmen",
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_von_carstein_unique_4",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_von_carstein_unique_benevolent_overlord",
             category_key = "character",
             indent = 1,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 4 },
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_bloodline_von_carstein_unique_5",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_von_carstein_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
             }
         },
@@ -2804,23 +3254,11 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc17_skill_node_kevon_unique_02",
-            skill_key = "wh_main_skill_vmp_champion_unique_wight_king_heroic_killing_blow",
-            category_key = "character",
-            indent = 0,
-            tier = 2,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 6 },
-            locked_node_keys = {
-            }
-        },
-        {
             node_key = "wh2_dlc17_skill_node_kevon_unique_03",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 3,
+            tier = 4,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -2828,10 +3266,70 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_unique_1",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_unique_4",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc17_skill_node_kevon_self_11",
             skill_key = "wh_main_skill_all_all_self_blade_master_starter",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -2843,7 +3341,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_01",
             skill_key = "wh_main_skill_all_all_self_devastating_charge",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -2855,7 +3353,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_02",
             skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -2867,7 +3365,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_03",
             skill_key = "wh_main_skill_all_all_self_hard_to_hit_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -2879,7 +3377,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_04",
             skill_key = "wh_main_skill_all_all_self_deadly_blade",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -2891,7 +3389,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_05",
             skill_key = "wh_main_skill_all_all_self_foe-seeker",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -2903,7 +3401,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_06",
             skill_key = "wh_main_skill_all_all_self_wound-maker",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -2915,7 +3413,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_07",
             skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -2927,7 +3425,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_08",
             skill_key = "wh_main_skill_all_all_self_indomitable",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -2939,7 +3437,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_09",
             skill_key = "wh_main_skill_all_all_self_blade_shield",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -2951,7 +3449,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_dlc17_skill_node_kevon_self_10",
             skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -2959,6 +3457,2420 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
                 "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_0",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_6",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_1",
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_2",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_1",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_2",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_1",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_exclusive_1",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_0",
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_2",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_0",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_2",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_2",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_exclusive_3",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_0",
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_1",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_0",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_embed_action_0",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_assist_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_kevon_embed_action_1",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_assist_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_vmp_dieter_helsnicht = {
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_undead_manticore",
+            skill_key = "wh3_dlc29_skill_nag_dieter_mount_undead_manticore",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_top_2",
+            skill_key = "wh_main_skill_vmp_all_unique_master_of_the_dead",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3, 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_top_3",
+            skill_key = "wh3_dlc29_skill_nag_dieter_special_1",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_top_4",
+            skill_key = "wh3_dlc29_skill_nag_dieter_unique_2",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_top_5",
+            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_leading_dead",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_top_6",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_top_7",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_unique_1",
+            skill_key = "wh3_dlc29_skill_nag_dieter_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_unique_2",
+            skill_key = "wh3_dlc29_skill_nag_dieter_special_3",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_unique_3",
+            skill_key = "wh3_dlc29_skill_nag_dieter_special_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_unique_3_nag",
+            skill_key = "wh3_dlc29_skill_nag_dieter_special_2_nag",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_unique_4",
+            skill_key = "wh3_dlc29_skill_nag_dieter_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_unique_5",
+            skill_key = "wh3_dlc29_skill_nag_dieter_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_unique_6",
+            skill_key = "wh3_dlc29_skill_nag_dieter_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_self_1",
+            skill_key = "wh3_dlc23_skill_chd_all_self_survivalist",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_self_2",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_self_3",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_self_4",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_self_5",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_self_6",
+            skill_key = "wh_main_skill_vmp_dignitary_self_immortal_will",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_1",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_01_morkharn_breath_of_darkness_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_2",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_magic_curse_of_undeath",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_3",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_4",
+            skill_key = "wh_main_skill_vmp_magic_vampires_04_gaze_of_nagash",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_5",
+            skill_key = "wh_main_skill_vmp_magic_vampires_05_raise_dead",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_6",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_7",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_07_akararan_the_dark_riders_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_8",
+            skill_key = "wh_dlc05_skill_magic_shadow_okkams_mindrazor",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_9",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_10",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_dieter_magic_dummy",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_dummy_morkharn_breath_of_darkness",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_vmp_krell = {
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_top_1",
+            skill_key = "wh3_main_skill_nur_generic_hates_dwarfs",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_top_2",
+            skill_key = "wh3_dlc29_skill_nag_krell_undeath_resurgent",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_top_4",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_top_5",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_unique_1",
+            skill_key = "wh3_dlc29_skill_nag_krell_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_unique_2",
+            skill_key = "wh3_dlc29_skill_nag_krell_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_unique_3",
+            skill_key = "wh3_dlc29_skill_nag_krell_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_unique_4",
+            skill_key = "wh3_dlc29_skill_nag_krell_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_unique_4_nag",
+            skill_key = "wh3_dlc29_skill_nag_krell_unique_7_nag",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_unique_5",
+            skill_key = "wh3_dlc29_skill_nag_krell_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_unique_6",
+            skill_key = "wh3_dlc29_skill_nag_krell_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_1",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_2",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_3",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_4",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit_2",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_5",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_6",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_7",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_8",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_9",
+            skill_key = "wh_main_skill_all_spy_self_fleet-footed",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_krell_self_11",
+            skill_key = "wh3_dlc24_skill_all_all_self_colossal_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_vmp_lahmian_vampire = {
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_top_01",
+            skill_key = "wh3_dlc29_skill_vmp_engineer_unique_lahmian_vampire_barded_nightmare",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_top_02",
+            skill_key = "wh3_dlc29_skill_vmp_engineer_unique_lahmian_vampire_hellsteed",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_top_03",
+            skill_key = "wh_main_skill_vmp_dignitary_unique_the_hunger",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_top_04",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_01",
+            skill_key = "wh3_dlc29_skill_vmp_lahmian_vampire_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_02",
+            skill_key = "wh3_dlc29_skill_vmp_lahmian_vampire_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_03",
+            skill_key = "wh3_dlc29_skill_vmp_lahmian_vampire_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_04",
+            skill_key = "wh3_dlc29_skill_vmp_lahmian_vampire_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_01",
+            skill_key = "wh_main_skill_all_dignitary_self_safeguard",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_02",
+            skill_key = "wh_main_skill_all_dignitary_self_impassioned",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_03",
+            skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_04",
+            skill_key = "wh_main_skill_all_dignitary_self_conviction",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_05",
+            skill_key = "wh_main_skill_all_dignitary_self_soothsaying",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_06",
+            skill_key = "wh_main_skill_vmp_dignitary_self_immortal_will",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_07",
+            skill_key = "wh_main_skill_all_dignitary_self_tenacity_2",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_08",
+            skill_key = "wh_main_skill_all_dignitary_self_augury",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_09",
+            skill_key = "wh_main_skill_all_dignitary_self_inviolable_2",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_10",
+            skill_key = "wh_main_skill_all_dignitary_self_fervour",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_personal_11",
+            skill_key = "wh_main_skill_vmp_dignitary_self_dark_benediction",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_01",
+            skill_key = "wh_main_skill_vmp_magic_vampires_01_invocation_of_nehek",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_02",
+            skill_key = "wh_main_skill_vmp_magic_vampires_03_the_curse_of_undeath",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_03",
+            skill_key = "wh_dlc05_skill_magic_shadow_enfeebling_foe",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_04",
+            skill_key = "wh_main_skill_all_magic_death_04_soulblight",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_05",
+            skill_key = "wh_main_skill_vmp_magic_vampires_05_raise_dead",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_07",
+            skill_key = "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_08",
+            skill_key = "wh_dlc05_skill_magic_shadow_pit_of_shades",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_09",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_10",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_magic_dummy",
+            skill_key = "wh_main_skill_vmp_magic_vampires_dummy_invocation_of_nehek",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_05_exclusive",
+            skill_key = "wh3_dlc29_skill_vmp_lahmian_vampire_unique_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_06_exclusive",
+                "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_07_exclusive",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_06_exclusive",
+            skill_key = "wh3_dlc29_skill_vmp_lahmian_vampire_unique_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_05_exclusive",
+                "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_07_exclusive",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_07_exclusive",
+            skill_key = "wh3_dlc29_skill_vmp_lahmian_vampire_unique_7",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_05_exclusive",
+                "wh3_dlc29_skill_node_vmp_lahmian_vampire_unique_06_exclusive",
+            }
+        },
+    },
+    wh3_dlc29_vmp_master_necromancer_undeath = {
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_01",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_necromancer_undeath_barded_nightmare",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_02",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_necromancer_undeath_hellsteed",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_03",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_necromancer_undeath_corpse_cart",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_04",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_necromancer_undeath_corpse_cart_balefire",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_05",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_necromancer_undeath_corpse_cart_lodestone",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_06",
+            skill_key = "wh_main_skill_vmp_all_unique_master_of_the_dead_lore_of_undeath",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3, 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_09",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_10",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_11",
+            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_0",
+            skill_key = "wh3_dlc29_skill_nag_master_necromancer_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_3",
+                "wh3_dlc29_skill_node_nag_master_necromancer_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_3",
+                "wh3_dlc29_skill_node_vmp_master_necromancer_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_1",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_2",
+            skill_key = "wh3_dlc29_skill_nag_master_necromancer_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_undeath_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_0",
+                "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_0",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_4",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_undeath_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_5",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_undeath_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_07",
+            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_leading_dead",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_08",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_necromancer_raising_dead_nag",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_08",
+            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_raising_dead",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_01",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_01_morkharn_breath_of_darkness",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_02",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_02_raise_the_dead",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_03",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_03_sulekhim_the_hand_of_dust",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_04",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_04_khizaar_the_soulstealer",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_05",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_05_Razkhar_the_abyssal_swarm",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_09",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_06_kandorak_the_harbinger",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_10",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_07_akararan_the_dark_riders",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_magic1_dummy",
+            skill_key = "wh3_dlc29_skill_undeath_magic_lord_dummy",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_01",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_supremacy",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_02",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_the_unliving_host",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_03",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_call_of_the_night",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_04",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_05",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_creatures_of_the_night",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_06",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_waking_dead",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_07",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_carriages_of_death",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_08",
+            skill_key = "wh_main_skill_vmp_lord_battle_magical_animus",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_09",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_legions_of_dead",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_10",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_dread_knights",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_11",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_deadly_power",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_12",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_flying_horrors",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_battle_13",
+            skill_key = "wh_main_skill_vmp_lord_battle_undeath_resurgent",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_vmp_necromancer_undeath = {
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_unique_01",
+            skill_key = "wh3_dlc29_skill_vmp_wizard_unique_necromancer_undeath_nightmare",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_unique_02",
+            skill_key = "wh3_dlc29_skill_vmp_wizard_unique_necromancer_undeath_corpse_cart",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_unique_03",
+            skill_key = "wh3_dlc29_skill_vmp_wizard_unique_necromancer_undeath_corpse_cart_balefire",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_unique_04",
+            skill_key = "wh3_dlc29_skill_vmp_wizard_unique_necromancer_undeath_corpse_cart_lodestone",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 15 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_unique_05",
+            skill_key = "wh_main_skill_vmp_all_unique_master_of_the_dead_lore_of_undeath",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 3, 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_unique_06",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_undeath_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_undeath_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_undeath_unique_1",
+            skill_key = "wh3_dlc29_skill_nag_necromancer_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_unique_1",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_undeath_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_undeath_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_undeath_unique_4",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_undeath_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_01",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_01_morkharn_breath_of_darkness_hero",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_02",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_02_raise_the_dead",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_03",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_03_sulekhim_the_hand_of_dust_hero",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_04",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_04_khizaar_the_soulstealer_hero",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_05",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_05_Razkhar_the_abyssal_swarm_hero",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_09",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_06_kandorak_the_harbinger_hero",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_10",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_07_akararan_the_dark_riders_hero",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_magic1_dummy",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_dummy_morkharn_breath_of_darkness",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_assist_army_1",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_assist_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_undeath_assist_army_2",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_assist_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_vmp_walach_harkon = {
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_walach_harkon_mount",
+            skill_key = "wh3_dlc29_skill_vmp_hero_unique_walach_harkon_barded_nightmare",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_top_2",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_top_3",
+            skill_key = "wh3_dlc29_skill_nag_walach_special_1",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_top_5",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_blood_dragon_unique_1",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_nag_top_4",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_blood_dragon_unique_the_ordo_draconis_nag",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_top_4",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_blood_dragon_unique_the_ordo_draconis_top_line",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_top_6",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_unique_1",
+            skill_key = "wh3_dlc29_skill_nag_walach_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_unique_2",
+            skill_key = "wh3_dlc29_skill_nag_walach_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_unique_3",
+            skill_key = "wh3_dlc29_skill_nag_walach_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_unique_3_nag",
+            skill_key = "wh3_dlc29_skill_nag_walach_unique_5_nag",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_unique_4",
+            skill_key = "wh3_dlc29_skill_nag_walach_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_unique_5",
+            skill_key = "wh3_dlc29_skill_nag_walach_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_unique_6",
+            skill_key = "wh3_dlc29_skill_nag_walach_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_1",
+            skill_key = "wh_main_skill_all_all_self_blade_master_starter",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_2",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_3",
+            skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_4",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit_2",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_5",
+            skill_key = "wh_main_skill_all_all_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_6",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_7",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_8",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_9",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_10",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_self_11",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_magic_1",
+            skill_key = "wh_main_skill_vmp_magic_vampires_01_invocation_of_nehek",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_magic_2",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_necrarch_magic_curse_of_undeath",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_magic_3",
+            skill_key = "wh_main_skill_vmp_magic_vampires_02_vanhels_danse_macabre",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_magic_4",
+            skill_key = "wh_main_skill_vmp_magic_vampires_04_gaze_of_nagash",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_magic_5",
+            skill_key = "wh_main_skill_vmp_magic_vampires_05_raise_dead",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_magic_6",
+            skill_key = "wh_main_skill_vmp_magic_vampires_09_curse_of_years",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_magic_7",
+            skill_key = "wh_main_skill_vmp_magic_vampires_10_wind_of_death",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_walach_magic_dummy",
+            skill_key = "wh_main_skill_vmp_magic_vampires_dummy_invocation_of_nehek",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
             }
         },
     },
@@ -3012,14 +5924,38 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc04_skill_node_vmp_helman_ghorst_unique_07",
-            skill_key = "wh_dlc04_skill_vmp_lord_unique_helman_ghorst_corpse_cart_boost",
+            node_key = "wh3_dlc29_skill_node_vmp_helman_ghorst_nag_unique_10",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_necromancer_raising_dead_nag",
             category_key = "character",
             indent = 0,
             tier = 5,
-            max_level = 1,
+            max_level = 2,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 9 },
+            unlock_ranks_by_level = { 0, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc04_skill_node_vmp_helman_ghorst_unique_10",
+            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_raising_dead",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc04_skill_node_vmp_helman_ghorst_unique_11",
+            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_leading_dead",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
             locked_node_keys = {
             }
         },
@@ -3028,7 +5964,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
             category_key = "character",
             indent = 0,
-            tier = 6,
+            tier = 7,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -3040,7 +5976,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
             category_key = "character",
             indent = 0,
-            tier = 7,
+            tier = 8,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -3052,10 +5988,22 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 8,
+            tier = 9,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -3096,11 +6044,23 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh_dlc04_skill_node_vmp_helman_ghorst_unique_07",
+            skill_key = "wh_dlc04_skill_vmp_lord_unique_helman_ghorst_corpse_cart_boost",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc04_skill_node_vmp_helman_ghorst_battle_4",
             skill_key = "wh2_dlc04_skill_vmp_lord_unique_helman_ghorst_battle_4",
             category_key = "character",
             indent = 1,
-            tier = 3,
+            tier = 4,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -3112,34 +6072,10 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh2_dlc04_skill_vmp_lord_unique_helman_ghorst_battle_5",
             category_key = "character",
             indent = 1,
-            tier = 4,
+            tier = 5,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh_dlc04_skill_node_vmp_helman_ghorst_unique_10",
-            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_raising_dead",
-            category_key = "character",
-            indent = 1,
-            tier = 5,
-            max_level = 2,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 0, 12 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh_dlc04_skill_node_vmp_helman_ghorst_unique_11",
-            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_leading_dead",
-            category_key = "character",
-            indent = 1,
-            tier = 6,
-            max_level = 2,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 0, 12 },
             locked_node_keys = {
             }
         },
@@ -3458,7 +6394,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_unique_03",
+            node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_unique_02",
             skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
             category_key = "character",
             indent = 0,
@@ -3470,7 +6406,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_unique_04",
+            node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_unique_03",
             skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
             category_key = "character",
             indent = 0,
@@ -3482,7 +6418,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_unique_02",
+            node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_unique_04",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
@@ -3494,10 +6430,96 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_strigoi_ghoul_king_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_strigoi_unique_bestial_monstrosity",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_strigoi_ghoul_king_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_strigoi_ghoul_king_unique_1",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_curse_of_vorag",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_strigoi_ghoul_king_unique_2",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_infinite_hatred",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_strigoi_ghoul_king_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_strigoi_unique_ghoul_king_of_ushoran",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_strigoi_ghoul_king_unique_0",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_strigoi_ghoul_king_unique_4",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_grave_eaters",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_strigoi_ghoul_king_unique_5",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_strigoi_unique_claws_of_mourkain",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_01",
             skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -3509,7 +6531,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_02",
             skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -3521,7 +6543,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_03",
             skill_key = "wh_main_skill_vmp_lord_self_dark_knight",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -3533,7 +6555,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_04",
             skill_key = "wh_main_skill_vmp_lord_self_beguile",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -3545,7 +6567,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_05",
             skill_key = "wh_main_skill_vmp_lord_self_quickblood",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -3557,7 +6579,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_06",
             skill_key = "wh_main_skill_vmp_lord_self_blood_lust",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -3569,7 +6591,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_07",
             skill_key = "wh2_dlc11_skill_vmp_lord_self_master_strike",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -3581,7 +6603,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_08",
             skill_key = "wh_main_skill_vmp_lord_self_curse_of_the_revenant",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -3593,7 +6615,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_09",
             skill_key = "wh_main_skill_vmp_lord_self_supernatural_horror",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -3605,7 +6627,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_10",
             skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -3617,7 +6639,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_self_11",
             skill_key = "wh_main_skill_vmp_lord_self_red_fury",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -3629,7 +6651,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_01",
             skill_key = "wh_dlc04_skill_vmp_magic_strigoi_01_invocation_of_nehek",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -3641,7 +6663,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_02",
             skill_key = "wh_main_skill_vmp_magic_vampires_03_the_curse_of_undeath",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -3653,7 +6675,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_03",
             skill_key = "wh_dlc04_skill_all_magic_strigoi_01_spirit_leech",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -3665,7 +6687,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_04",
             skill_key = "wh_dlc04_skill_vmp_magic_strigoi_04_gaze_of_nagash",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -3677,7 +6699,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_05",
             skill_key = "wh_dlc04_skill_vmp_magic_strigoi_05_raise_dead",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -3689,7 +6711,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_06",
             skill_key = "wh_main_skill_all_magic_all_06_evasion",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -3701,7 +6723,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_09",
             skill_key = "wh_dlc04_skill_vmp_magic_strigoi_04_soulblight",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -3713,7 +6735,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_10",
             skill_key = "wh_dlc04_skill_vmp_magic_strigoi_05_doom_and_darkness",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -3725,7 +6747,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_07",
             skill_key = "wh_main_skill_all_magic_all_07_earthing",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -3737,7 +6759,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_08",
             skill_key = "wh_main_skill_all_magic_all_08_power_drain",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -3749,7 +6771,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_11",
             skill_key = "wh_main_skill_all_magic_all_11_diviner",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -3761,7 +6783,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc04_skill_node_vmp_strigoi_ghoul_king_magic1_dummy",
             skill_key = "wh_dlc04_skill_vmp_magic_strigoi_dummy_invocation_of_nehek",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 11,
             max_level = 1,
             is_mount_skill = false,
@@ -3964,11 +6986,23 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh2_dlc17_skill_node_vmp_vlad_von_carstein_unique_10",
+            skill_key = "wh_main_skill_vmp_lord_unique_loremaster_lore_of_vampires",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_dlc04_skill_node_vmp_vlad_von_carstein_unique_06",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 5,
+            tier = 6,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -3976,14 +7010,14 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_dlc17_skill_node_vmp_vlad_von_carstein_unique_10",
-            skill_key = "wh_main_skill_vmp_lord_unique_loremaster_lore_of_vampires",
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
             category_key = "character",
             indent = 0,
-            tier = 6,
-            max_level = 1,
+            tier = 28,
+            max_level = 3,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 8 },
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -4026,6 +7060,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         {
             node_key = "wh2_dlc17_skill_node_vmp_vlad_von_carstein_unique_6",
             skill_key = "wh2_dlc17_skill_vmp_vlad_unique_mortal_levies",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_vlad_von_carstein_unique_6",
+            skill_key = "wh3_dlc29_skill_nag_vlad_unique_04",
             category_key = "character",
             indent = 1,
             tier = 3,
@@ -4518,11 +7564,11 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_unique_03",
-            skill_key = "wh_main_skill_vmp_dignitary_unique_the_hunger",
+            node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_unique_04",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 2,
+            tier = 4,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -4530,14 +7576,74 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_unique_04",
-            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            node_key = "wh3_dlc29_skill_node_vmp_shadow_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_unique_the_hunger_vampire_hero",
             category_key = "character",
-            indent = 0,
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_shadow_unique_1",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_shadow_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_shadow_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_1",
+            category_key = "character",
+            indent = 1,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 7 },
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_shadow_unique_4",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_exclusive_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_shadow_unique_5",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_exclusive_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
             }
         },
@@ -4545,7 +7651,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_01",
             skill_key = "wh_main_skill_all_dignitary_self_safeguard",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -4557,7 +7663,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_02",
             skill_key = "wh_main_skill_all_dignitary_self_impassioned",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -4569,7 +7675,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_03",
             skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -4581,7 +7687,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_04",
             skill_key = "wh_main_skill_all_dignitary_self_conviction",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -4593,7 +7699,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_05",
             skill_key = "wh_main_skill_all_dignitary_self_soothsaying",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -4605,7 +7711,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_06",
             skill_key = "wh_main_skill_vmp_dignitary_self_immortal_will",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -4617,7 +7723,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_07",
             skill_key = "wh_main_skill_all_dignitary_self_tenacity_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -4629,7 +7735,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_08",
             skill_key = "wh_main_skill_all_dignitary_self_augury",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -4641,7 +7747,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_09",
             skill_key = "wh_main_skill_all_dignitary_self_inviolable_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -4653,7 +7759,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_10",
             skill_key = "wh_main_skill_all_dignitary_self_fervour",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -4665,7 +7771,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_self_11",
             skill_key = "wh_main_skill_vmp_dignitary_self_dark_benediction",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -4677,7 +7783,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_01",
             skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -4689,7 +7795,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_02",
             skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -4701,7 +7807,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_03",
             skill_key = "wh_dlc05_skill_magic_shadow_enfeebling_foe",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -4713,7 +7819,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_04",
             skill_key = "wh_dlc05_skill_magic_shadow_the_withering",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -4725,7 +7831,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_05",
             skill_key = "wh_dlc05_skill_magic_shadow_penumbral_pendulum",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -4737,7 +7843,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_06",
             skill_key = "wh_main_skill_all_magic_all_06_evasion",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -4749,7 +7855,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_09",
             skill_key = "wh_dlc05_skill_magic_shadow_pit_of_shades",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -4761,7 +7867,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_10",
             skill_key = "wh_dlc05_skill_magic_shadow_okkams_mindrazor",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -4773,7 +7879,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_07",
             skill_key = "wh_main_skill_all_magic_all_07_earthing",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -4785,7 +7891,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_08",
             skill_key = "wh_main_skill_all_magic_all_08_power_drain",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -4797,7 +7903,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_11",
             skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -4809,7 +7915,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_dlc05_skill_node_vmp_dignitary_shadow_magic1_dummy",
             skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma_dummy",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 11,
             max_level = 1,
             is_mount_skill = false,
@@ -4820,23 +7926,11 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
     },
     wh_main_vmp_banshee = {
         {
-            node_key = "wh2_main_skill_node_vmp_banshee_unique_01",
-            skill_key = "wh_main_skill_vmp_spy_unique_tomb_banshee_ghostly_howl",
-            category_key = "character",
-            indent = 0,
-            tier = 0,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
-            locked_node_keys = {
-            }
-        },
-        {
             node_key = "wh2_main_skill_node_vmp_banshee_unique_02",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 1,
+            tier = 2,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -4844,10 +7938,94 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_banshee_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_1",
+            skill_key = "wh3_dlc29_skill_vmp_banshee_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_1_nag",
+            skill_key = "wh3_dlc29_skill_vmp_banshee_unique_3_nag",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_banshee_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_banshee_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_4",
+            skill_key = "wh3_dlc29_skill_vmp_banshee_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_5",
+            skill_key = "wh_main_skill_vmp_spy_unique_tomb_banshee_ghostly_howl",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_main_skill_node_vmp_banshee_self_01",
             skill_key = "wh_main_skill_all_spy_self_bloody_blade",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -4859,7 +8037,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_banshee_self_02",
             skill_key = "wh_main_skill_all_spy_self_gutter_fighter_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -4871,7 +8049,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_banshee_self_03",
             skill_key = "wh_main_skill_all_spy_self_elusive",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -4883,7 +8061,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_banshee_self_04",
             skill_key = "wh_main_skill_all_spy_self_precise_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -4895,7 +8073,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_banshee_self_05",
             skill_key = "wh_main_skill_all_spy_self_fleet-footed",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -4905,9 +8083,9 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_main_skill_node_vmp_banshee_self_06",
-            skill_key = "wh_main_skill_all_spy_self_stalker",
+            skill_key = "wh_main_skill_all_spy_self_slippery",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -4919,7 +8097,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_banshee_self_07",
             skill_key = "wh_main_skill_all_spy_self_opportunist",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -4931,7 +8109,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_banshee_self_08",
             skill_key = "wh_main_skill_all_spy_self_counter-striker_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -4943,7 +8121,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_banshee_self_09",
             skill_key = "wh_main_skill_all_spy_self_survivalist_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -4955,7 +8133,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_banshee_self_10",
             skill_key = "wh_main_skill_all_spy_self_cornered_rat",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -4965,14 +8143,56 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_main_skill_node_vmp_banshee_self_11",
-            skill_key = "wh_main_skill_all_spy_self_slippery",
+            skill_key = "wh2_main_skill_skv_trophy_heads_assassin",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_exclusive_1",
+            skill_key = "wh3_dlc29_skill_vmp_banshee_unique_4",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 6, 9 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_banshee_unique_exclusive_2",
+                "wh3_dlc29_skill_node_vmp_banshee_unique_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_exclusive_2",
+            skill_key = "wh3_dlc29_skill_vmp_banshee_unique_5",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 6, 9 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_banshee_unique_exclusive_1",
+                "wh3_dlc29_skill_node_vmp_banshee_unique_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_banshee_unique_exclusive_3",
+            skill_key = "wh3_dlc29_skill_vmp_banshee_unique_6",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 6, 9 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_banshee_unique_exclusive_1",
+                "wh3_dlc29_skill_node_vmp_banshee_unique_exclusive_2",
             }
         },
     },
@@ -4982,10 +8202,22 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh2_dlc11_skill_vmp_lord_unique_kemmler_barded_nightmare",
             category_key = "character",
             indent = 0,
-            tier = 3,
+            tier = 1,
             max_level = 1,
             is_mount_skill = true,
             unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_heinrich_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_heinrich_unique_2",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 10, 20 },
             locked_node_keys = {
             }
         },
@@ -4994,10 +8226,70 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_all_unique_master_of_the_dead",
             category_key = "character",
             indent = 0,
-            tier = 5,
+            tier = 3,
             max_level = 2,
             is_mount_skill = false,
             unlock_ranks_by_level = { 3, 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_vmp_heinrich_unique_11",
+            skill_key = "wh2_dlc17_skill_vmp_lord_unique_loremaster_lore_of_vampires_heinrich",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_heinrich_nag_unique_personal_02",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_necromancer_raising_dead_nag",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_vmp_heinrich_unique_10",
+            skill_key = "wh2_dlc17_skill_vmp_heinrich_kemmler_unique_barrow_kings",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_vmp_heinrich_unique_personal_01",
+            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_leading_dead",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_dlc08_skill_node_vmp_heinrich_unique_personal_02",
+            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_raising_dead",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
             locked_node_keys = {
             }
         },
@@ -5006,7 +8298,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
             category_key = "character",
             indent = 0,
-            tier = 6,
+            tier = 8,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -5018,7 +8310,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
             category_key = "character",
             indent = 0,
-            tier = 7,
+            tier = 9,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -5030,7 +8322,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 8,
+            tier = 10,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -5038,8 +8330,20 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_dlc08_skill_node_vmp_heinrich_unique_personal_07",
-            skill_key = "wh_dlc08_skill_vmp_heinrich_krell_4",
+            skill_key = "wh3_dlc29_skill_vmp_heinrich_unique_1",
             category_key = "character",
             indent = 1,
             tier = 0,
@@ -5051,19 +8355,19 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_dlc08_skill_node_vmp_heinrich_unique_personal_05",
-            skill_key = "wh_dlc08_skill_vmp_heinrich_krell_2",
+            skill_key = "wh3_dlc29_skill_vmp_heinrich_unique_3",
             category_key = "character",
             indent = 1,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 5 },
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
             }
         },
         {
             node_key = "wh_dlc08_skill_node_vmp_heinrich_unique_personal_06",
-            skill_key = "wh2_dlc17_skill_vmp_heinrich_kemmler_unique_barrow_kings",
+            skill_key = "wh2_dlc17_skill_vmp_heinrich_kemmler_unique_wightblades",
             category_key = "character",
             indent = 1,
             tier = 2,
@@ -5075,19 +8379,19 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_dlc08_skill_node_vmp_heinrich_unique_personal_04",
-            skill_key = "wh2_dlc17_skill_vmp_heinrich_kemmler_unique_seeker",
+            skill_key = "wh_dlc08_skill_vmp_heinrich_krell_2",
             category_key = "character",
             indent = 1,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 5 },
             locked_node_keys = {
             }
         },
         {
             node_key = "wh_dlc08_skill_node_vmp_heinrich_unique_personal_03",
-            skill_key = "wh2_dlc17_skill_vmp_heinrich_kemmler_unique_wightblades",
+            skill_key = "wh2_dlc17_skill_vmp_heinrich_kemmler_unique_seeker",
             category_key = "character",
             indent = 1,
             tier = 4,
@@ -5103,42 +8407,6 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "character",
             indent = 1,
             tier = 5,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh_dlc08_skill_node_vmp_heinrich_unique_personal_01",
-            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_leading_dead",
-            category_key = "character",
-            indent = 1,
-            tier = 6,
-            max_level = 2,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 0, 12 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh_dlc08_skill_node_vmp_heinrich_unique_personal_02",
-            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_raising_dead",
-            category_key = "character",
-            indent = 1,
-            tier = 7,
-            max_level = 2,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 0, 12 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh_dlc08_skill_ability_dummy_lord_of_the_undeath_dummy",
-            skill_key = "wh_dlc08_skill_ability_dummy_lord_of_the_undeath",
-            category_key = "character",
-            indent = 1,
-            tier = 11,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -5267,7 +8535,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh_main_skill_node_vmp_heinrich_magic1_11",
-            skill_key = "wh2_dlc17_skill_vmp_lord_unique_loremaster_lore_of_vampires_heinrich",
+            skill_key = "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
             category_key = "character",
             indent = 2,
             tier = 10,
@@ -5520,10 +8788,96 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_vmp_lord_unique_0",
+            skill_key = "wh3_dlc29_skill_nag_vmp_lord_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_vmp_lord_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_vmp_lord_unique_1",
+            skill_key = "wh3_dlc29_skill_nag_vmp_lord_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_vmp_lord_unique_2",
+            skill_key = "wh3_dlc29_skill_nag_vmp_lord_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_vmp_lord_unique_3",
+            skill_key = "wh3_dlc29_skill_nag_vmp_lord_unique_exclusive_2",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_vmp_lord_unique_0",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_vmp_lord_unique_4",
+            skill_key = "wh3_dlc29_skill_nag_vmp_lord_unique_exclusive_0",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_vmp_lord_unique_5",
+            skill_key = "wh3_dlc29_skill_nag_vmp_lord_unique_exclusive_3",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_main_skill_node_vmp_lord_self_01",
             skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -5535,7 +8889,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_02",
             skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -5547,7 +8901,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_03",
             skill_key = "wh_main_skill_vmp_lord_self_dark_knight",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -5559,7 +8913,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_04",
             skill_key = "wh_main_skill_vmp_lord_self_beguile",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -5571,7 +8925,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_05",
             skill_key = "wh_main_skill_vmp_lord_self_quickblood",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -5583,7 +8937,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_06",
             skill_key = "wh_main_skill_vmp_lord_self_blood_lust",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -5595,7 +8949,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_07",
             skill_key = "wh2_dlc11_skill_vmp_lord_self_master_strike",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -5607,7 +8961,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_08",
             skill_key = "wh_main_skill_vmp_lord_self_curse_of_the_revenant",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -5619,7 +8973,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_09",
             skill_key = "wh_main_skill_vmp_lord_self_supernatural_horror",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -5631,7 +8985,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_10",
             skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -5643,7 +8997,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_self_11",
             skill_key = "wh_main_skill_vmp_lord_self_red_fury",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -5655,7 +9009,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_01",
             skill_key = "wh_main_skill_vmp_magic_vampires_01_invocation_of_nehek",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -5667,7 +9021,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_02",
             skill_key = "wh_main_skill_vmp_magic_vampires_03_the_curse_of_undeath",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -5679,7 +9033,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_03",
             skill_key = "wh2_main_skill_vmp_magic_vampires_02_vanhels_danse_macabre_lord",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -5691,7 +9045,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_04",
             skill_key = "wh2_main_skill_vmp_magic_vampires_04_gaze_of_nagash_lord",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -5703,7 +9057,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_05",
             skill_key = "wh2_main_skill_vmp_magic_vampires_05_raise_dead_lord",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -5715,7 +9069,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_06",
             skill_key = "wh_main_skill_all_magic_all_06_evasion",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -5727,7 +9081,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_09",
             skill_key = "wh2_main_skill_vmp_magic_vampires_09_curse_of_years_lord",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -5739,7 +9093,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_10",
             skill_key = "wh2_main_skill_vmp_magic_vampires_10_wind_of_death_lord",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -5751,7 +9105,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_07",
             skill_key = "wh_main_skill_all_magic_all_07_earthing",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -5763,7 +9117,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_08",
             skill_key = "wh_main_skill_all_magic_all_08_power_drain",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -5775,7 +9129,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_11",
             skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -5787,7 +9141,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_lord_magic1_dummy",
             skill_key = "wh2_main_skill_vmp_magic_vampires_dummy_invocation_of_nehek_danse_macabre",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 11,
             max_level = 1,
             is_mount_skill = false,
@@ -5990,11 +9344,23 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh_main_skill_node_vmp_mannfred_unique_11",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_mannfred_dread_abyssal",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 21 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_main_skill_node_vmp_mannfred_unique_06",
             skill_key = "wh_main_skill_vmp_lord_unique_mannfred_loremaster_lore_of_death",
             category_key = "character",
             indent = 0,
-            tier = 5,
+            tier = 6,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 8 },
@@ -6006,7 +9372,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_lord_unique_loremaster_lore_of_vampires",
             category_key = "character",
             indent = 0,
-            tier = 6,
+            tier = 7,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 8 },
@@ -6018,7 +9384,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
             category_key = "character",
             indent = 0,
-            tier = 7,
+            tier = 8,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -6030,7 +9396,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
             category_key = "character",
             indent = 0,
-            tier = 8,
+            tier = 9,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -6042,10 +9408,22 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 9,
+            tier = 10,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -6652,31 +10030,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_main_skill_node_vmp_master_necromancer_unique_08",
-            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
-            category_key = "character",
-            indent = 0,
-            tier = 6,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
-            locked_node_keys = {
-            }
-        },
-        {
             node_key = "wh_main_skill_node_vmp_master_necromancer_unique_09",
-            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
-            category_key = "character",
-            indent = 0,
-            tier = 7,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
-            locked_node_keys = {
-            }
-        },
-        {
-            node_key = "wh_main_skill_node_vmp_master_necromancer_unique_07",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
@@ -6688,11 +10042,149 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc08_skill_node_vmp_master_necromancer_personal_01",
-            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_leading_dead",
+            node_key = "wh_main_skill_node_vmp_master_necromancer_unique_10",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_vmp_master_necromancer_unique_11",
+            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_unique_0",
+            skill_key = "wh3_dlc29_skill_nag_master_necromancer_unique_3",
             category_key = "character",
             indent = 1,
             tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_master_necromancer_undeath_unique_3",
+                "wh3_dlc29_skill_node_nag_master_necromancer_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_master_necromancer_undeath_unique_3",
+                "wh3_dlc29_skill_node_vmp_master_necromancer_unique_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_unique_1",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_unique_2",
+            skill_key = "wh3_dlc29_skill_nag_master_necromancer_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_master_necromancer_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_master_necromancer_unique_0",
+                "wh3_dlc29_skill_node_vmp_master_necromancer_unique_0",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_unique_4",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_master_necromancer_unique_5",
+            skill_key = "wh3_dlc29_skill_vmp_master_necromancer_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_vmp_master_necromancer_unique_07",
+            skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_leading_dead",
+            category_key = "character",
+            indent = 1,
+            tier = 6,
             max_level = 2,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0, 12 },
@@ -6700,11 +10192,23 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_dlc08_skill_node_vmp_master_necromancer_personal_02",
+            node_key = "wh_main_skill_node_nag_master_necromancer_unique_08",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_necromancer_raising_dead_nag",
+            category_key = "character",
+            indent = 1,
+            tier = 7,
+            max_level = 2,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh_main_skill_node_vmp_master_necromancer_unique_08",
             skill_key = "wh_dlc08_skill_vmp_lord_unique_necromancer_raising_dead",
             category_key = "character",
             indent = 1,
-            tier = 1,
+            tier = 7,
             max_level = 2,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0, 12 },
@@ -7086,6 +10590,78 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_unique_1",
+            skill_key = "wh3_dlc29_skill_nag_necromancer_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_unique_1",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_necromancer_unique_4",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh_main_skill_node_vmp_necromancer_magic1_01",
             skill_key = "wh_main_skill_vmp_magic_vampires_01_invocation_of_nehek",
             category_key = "character",
@@ -7229,6 +10805,30 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
             }
         },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_assist_army_1",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_assist_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_necromancer_assist_army_2",
+            skill_key = "wh3_dlc29_skill_vmp_necromancer_assist_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
     },
     wh_main_vmp_vampire_death = {
         {
@@ -7256,11 +10856,11 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_main_skill_node_vmp_dignitary_unique_03",
-            skill_key = "wh_main_skill_vmp_dignitary_unique_the_hunger",
+            node_key = "wh_main_skill_node_vmp_dignitary_unique_04",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 2,
+            tier = 4,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -7268,14 +10868,74 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh_main_skill_node_vmp_dignitary_unique_04",
-            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            node_key = "wh3_dlc29_skill_node_vmp_death_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_unique_the_hunger_vampire_hero",
             category_key = "character",
-            indent = 0,
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_death_unique_1",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_death_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_death_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_1",
+            category_key = "character",
+            indent = 1,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 7 },
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_death_unique_4",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_exclusive_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_death_unique_5",
+            skill_key = "wh3_dlc29_skill_vmp_vampire_unique_exclusive_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
             }
         },
@@ -7283,7 +10943,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_01",
             skill_key = "wh_main_skill_all_dignitary_self_safeguard",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -7295,7 +10955,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_02",
             skill_key = "wh_main_skill_all_dignitary_self_impassioned",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -7307,7 +10967,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_03",
             skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -7319,7 +10979,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_04",
             skill_key = "wh_main_skill_all_dignitary_self_conviction",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -7331,7 +10991,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_05",
             skill_key = "wh_main_skill_all_dignitary_self_soothsaying",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -7343,7 +11003,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_06",
             skill_key = "wh_main_skill_vmp_dignitary_self_immortal_will",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -7355,7 +11015,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_07",
             skill_key = "wh_main_skill_all_dignitary_self_tenacity_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -7367,7 +11027,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_08",
             skill_key = "wh_main_skill_all_dignitary_self_augury",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -7379,7 +11039,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_09",
             skill_key = "wh_main_skill_all_dignitary_self_inviolable_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -7391,7 +11051,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_10",
             skill_key = "wh_main_skill_all_dignitary_self_fervour",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -7403,7 +11063,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_self_11",
             skill_key = "wh_main_skill_vmp_dignitary_self_dark_benediction",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -7415,7 +11075,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_01",
             skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -7427,7 +11087,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_02",
             skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -7439,7 +11099,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_03",
             skill_key = "wh_main_skill_all_magic_death_02_aspect_of_the_dreadknight",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -7451,7 +11111,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_04",
             skill_key = "wh_main_skill_all_magic_death_04_soulblight",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -7463,7 +11123,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_05",
             skill_key = "wh_main_skill_all_magic_death_05_doom_and_darkness",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -7475,7 +11135,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_06",
             skill_key = "wh_main_skill_all_magic_all_06_evasion",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -7487,7 +11147,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_09",
             skill_key = "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -7499,7 +11159,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_10",
             skill_key = "wh_main_skill_all_magic_death_10_the_purple_sun_of_xereus",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -7511,7 +11171,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_07",
             skill_key = "wh_main_skill_all_magic_all_07_earthing",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -7523,7 +11183,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_08",
             skill_key = "wh_main_skill_all_magic_all_08_power_drain",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -7535,7 +11195,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_11",
             skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -7547,7 +11207,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh_main_skill_node_vmp_dignitary_magic1_dummy",
             skill_key = "wh_main_skill_all_magic_death_dummy_spirit_leech",
             category_key = "character",
-            indent = 2,
+            indent = 3,
             tier = 11,
             max_level = 1,
             is_mount_skill = false,
@@ -7570,23 +11230,11 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
-            node_key = "wh2_main_skill_node_vmp_wight_king_unique_02",
-            skill_key = "wh_main_skill_vmp_champion_unique_wight_king_heroic_killing_blow",
-            category_key = "character",
-            indent = 0,
-            tier = 2,
-            max_level = 1,
-            is_mount_skill = false,
-            unlock_ranks_by_level = { 6 },
-            locked_node_keys = {
-            }
-        },
-        {
             node_key = "wh2_main_skill_node_vmp_wight_king_unique_03",
             skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
             category_key = "character",
             indent = 0,
-            tier = 3,
+            tier = 4,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -7594,10 +11242,70 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_unique_0",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_unique_1",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_unique_2",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_unique_3",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_4",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_unique_4",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_5",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_01",
             skill_key = "wh_main_skill_all_all_self_blade_master_starter",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
@@ -7609,7 +11317,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_02",
             skill_key = "wh_main_skill_all_all_self_devastating_charge",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 1,
             max_level = 1,
             is_mount_skill = false,
@@ -7621,7 +11329,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_03",
             skill_key = "wh_main_skill_all_all_self_thick-skinned_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 2,
             max_level = 1,
             is_mount_skill = false,
@@ -7633,7 +11341,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_04",
             skill_key = "wh_main_skill_all_all_self_hard_to_hit_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 3,
             max_level = 1,
             is_mount_skill = false,
@@ -7645,7 +11353,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_05",
             skill_key = "wh_main_skill_all_all_self_deadly_blade",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 4,
             max_level = 1,
             is_mount_skill = false,
@@ -7657,7 +11365,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_06",
             skill_key = "wh_main_skill_all_all_self_foe-seeker",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 5,
             max_level = 1,
             is_mount_skill = false,
@@ -7669,7 +11377,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_07",
             skill_key = "wh_main_skill_all_all_self_wound-maker",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 6,
             max_level = 1,
             is_mount_skill = false,
@@ -7681,7 +11389,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_08",
             skill_key = "wh_main_skill_all_all_self_scarred_veteran_2",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 7,
             max_level = 1,
             is_mount_skill = false,
@@ -7693,7 +11401,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_09",
             skill_key = "wh_main_skill_all_all_self_indomitable",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 8,
             max_level = 1,
             is_mount_skill = false,
@@ -7705,7 +11413,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_10",
             skill_key = "wh_main_skill_all_all_self_blade_shield",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 9,
             max_level = 1,
             is_mount_skill = false,
@@ -7717,7 +11425,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             node_key = "wh2_main_skill_node_vmp_wight_king_self_11",
             skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
             category_key = "character",
-            indent = 1,
+            indent = 2,
             tier = 10,
             max_level = 1,
             is_mount_skill = false,
@@ -7725,6 +11433,78 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
                 "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_0",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_6",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_1",
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_2",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_1",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_2",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_1",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_exclusive_1",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_0",
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_2",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_0",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_2",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_2",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_unique_exclusive_3",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_0",
+                "wh3_dlc29_skill_node_vmp_kevon_unique_exclusive_1",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_0",
+                "wh3_dlc29_skill_node_vmp_wight_king_unique_exclusive_1",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_embed_action_0",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_assist_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_wight_king_embed_action_1",
+            skill_key = "wh3_dlc29_skill_vmp_wight_king_assist_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
             }
         },
     },

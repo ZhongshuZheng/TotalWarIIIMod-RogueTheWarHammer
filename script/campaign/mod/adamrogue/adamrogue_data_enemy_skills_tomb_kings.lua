@@ -30,11 +30,23 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_dlc29_skill_node_tmb_arkhan_unique_6",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_arkhan_dread_abyssal",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 21 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_arkhan_misc_0",
             skill_key = "wh2_dlc09_skill_tmb_tomb_king_returned_in_madness",
             category_key = "character",
             indent = 0,
-            tier = 4,
+            tier = 5,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 3 },
@@ -46,7 +58,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh2_dlc09_skill_tmb_tomb_king_ancient_tyrant",
             category_key = "character",
             indent = 0,
-            tier = 5,
+            tier = 6,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 3 },
@@ -58,7 +70,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
             category_key = "character",
             indent = 0,
-            tier = 6,
+            tier = 7,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -70,7 +82,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
             category_key = "character",
             indent = 0,
-            tier = 7,
+            tier = 8,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 7 },
@@ -90,8 +102,35 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_arkhan_god_blessing_2",
             skill_key = "wh2_dlc09_skill_tmb_god_blessing_2",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_arkhan_god_blessing_2_nag",
+            skill_key = "wh2_dlc29_skill_nag_god_blessing_2",
             category_key = "character",
             indent = 1,
             tier = 0,
@@ -695,6 +734,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_khalida_god_blessing_3",
             skill_key = "wh2_dlc09_skill_tmb_god_blessing_3",
             category_key = "character",
@@ -707,6 +758,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
             }
         },
         {
@@ -831,7 +883,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc09_skill_tmb_khalida_personal_4",
-            skill_key = "wh_main_skill_all_dignitary_self_tenacity_2",
+            skill_key = "wh2_dlc11_skill_all_lord_self_tenacity",
             category_key = "character",
             indent = 2,
             tier = 4,
@@ -1083,6 +1135,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -1191,6 +1244,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -2953,6 +3018,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_settra_god_blessing_0",
             skill_key = "wh2_dlc09_skill_tmb_god_blessing_0",
             category_key = "character",
@@ -2964,6 +3041,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -3558,6 +3636,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_tomb_king_general_0",
             skill_key = "wh3_main_skill_tmb_king_general_0",
             category_key = "character",
@@ -3617,6 +3707,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -3632,12 +3723,28 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
         {
             node_key = "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
             skill_key = "wh2_dlc09_skill_tmb_god_blessing_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
+            }
+        },
+        {
+            node_key = "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
+            skill_key = "wh2_dlc29_skill_nag_god_blessing_2",
             category_key = "character",
             indent = 2,
             tier = 2,
@@ -3663,6 +3770,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
             }
         },
         {
@@ -4052,6 +4160,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_tomb_king_general_0",
             skill_key = "wh3_main_skill_tmb_king_general_0",
             category_key = "character",
@@ -4111,6 +4231,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -4126,6 +4247,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -4157,6 +4279,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
             }
         },
         {
@@ -4546,6 +4669,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_tomb_king_general_0",
             skill_key = "wh3_main_skill_tmb_king_general_0",
             category_key = "character",
@@ -4605,6 +4740,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -4620,6 +4756,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -4651,6 +4788,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
             }
         },
         {
@@ -5040,6 +5178,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_tomb_king_general_0",
             skill_key = "wh3_main_skill_tmb_king_general_0",
             category_key = "character",
@@ -5099,6 +5249,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -5114,6 +5265,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -5145,6 +5297,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
             }
         },
         {
@@ -5534,6 +5687,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_tomb_king_general_0",
             skill_key = "wh3_main_skill_tmb_king_general_0",
             category_key = "character",
@@ -5593,6 +5758,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -5608,6 +5774,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -5639,6 +5806,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
             }
         },
         {
@@ -6028,6 +6196,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_tomb_king_general_0",
             skill_key = "wh3_main_skill_tmb_king_general_0",
             category_key = "character",
@@ -6087,6 +6267,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -6102,6 +6283,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -6133,6 +6315,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
             }
         },
         {
@@ -6522,6 +6705,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc09_skill_tmb_tomb_king_general_0",
             skill_key = "wh3_main_skill_tmb_king_general_0",
             category_key = "character",
@@ -6581,6 +6776,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -6596,6 +6792,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             locked_node_keys = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_3",
             }
         },
@@ -6627,6 +6824,7 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_0",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_1",
                 "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2",
+                "wh2_dlc09_skill_tmb_tomb_king_god_blessing_2_nag",
             }
         },
         {
@@ -7173,6 +7371,3238 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
             locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_tmb_liche_high_priest_death = {
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_mount_0",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_death_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_misc_0",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_0",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_misc_1",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_misc_2",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_misc_3",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_misc_4",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_trapped_soul",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_leader_01",
+            skill_key = "wh3_dlc29_skill_tmb_liche_high_priest_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_wizard_00",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_leader_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_00",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_leader_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_01",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_leader_04",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_leader_04",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_wizard_00",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_02",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_leader_01",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_wizard_01",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_master_of_the_dead_army",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_wizard_02",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_wizard_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_wizard_03",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_wizard_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_01",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_02",
+            skill_key = "wh_main_skill_all_magic_death_03_life_leeching",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_03",
+            skill_key = "wh2_main_skill_all_magic_death_02_aspect_of_the_dreadknight_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_04",
+            skill_key = "wh2_main_skill_all_magic_death_04_soulblight_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_05",
+            skill_key = "wh2_main_skill_all_magic_death_05_doom_and_darkness_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_09",
+            skill_key = "wh2_main_skill_all_magic_death_09_the_fate_of_bjuna_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_10",
+            skill_key = "wh2_main_skill_all_magic_death_10_the_purple_sun_of_xereus_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_death_magic_dummy",
+            skill_key = "wh2_main_skill_all_magic_death_dummy_spirit_leech_aspect_of_the_dreadknight",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_01",
+            skill_key = "wh2_dlc09_skill_tmb_lord_army_base",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_02",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_archers",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_03",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_04",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_05",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_chariot",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_06",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_structure_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_07",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_elite_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_08",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_09",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_archer",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_10",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_11",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_12",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_death_army_13",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_tmb_liche_high_priest_light = {
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_mount_0",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_light_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_misc_0",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_0",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_misc_1",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_misc_2",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_misc_3",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_misc_4",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_trapped_soul",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_leader_01",
+            skill_key = "wh3_dlc29_skill_tmb_liche_high_priest_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_wizard_00",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_leader_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_00",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_leader_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_01",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_leader_04",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_leader_04",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_wizard_00",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_02",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_leader_01",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_wizard_01",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_master_of_the_dead_army",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_wizard_02",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_wizard_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_wizard_03",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_wizard_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_01",
+            skill_key = "wh_main_skill_all_magic_light_01_shems_burning_gaze",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_02",
+            skill_key = "wh_main_skill_all_magic_light_03_exorcism",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_03",
+            skill_key = "wh2_main_skill_all_magic_light_02_phas_protection_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_04",
+            skill_key = "wh_main_skill_all_magic_light_04_light_of_battle_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_05",
+            skill_key = "wh2_main_skill_all_magic_light_05_net_of_amyntok_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_09",
+            skill_key = "wh2_dlc10_skill_hef_magic_alarielle_banishment",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_10",
+            skill_key = "wh2_main_skill_all_magic_light_10_bironas_timewarp_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_magic_light_dummy",
+            skill_key = "wh_main_skill_all_magic_light_dummy_shems_burning_gaze",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_01",
+            skill_key = "wh2_dlc09_skill_tmb_lord_army_base",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_02",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_archers",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_03",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_04",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_05",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_chariot",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_06",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_structure_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_07",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_elite_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_08",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_09",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_archer",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_10",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_11",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_12",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_light_army_13",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_tmb_liche_high_priest_nehekhara = {
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_mount_0",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_nehekhara_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_misc_0",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_0",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_misc_1",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_misc_2",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_misc_3",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_misc_4",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_trapped_soul",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_leader_01",
+            skill_key = "wh3_dlc29_skill_tmb_liche_high_priest_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_wizard_00",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_leader_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_00",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_leader_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_01",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_leader_04",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_leader_04",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_wizard_00",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_02",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_leader_01",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_wizard_01",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_master_of_the_dead_army",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_wizard_02",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_wizard_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_wizard_03",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_wizard_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_0",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_0_djafs_incantation_of_cursed_blades_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_1",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_1_passive",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_2",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_2_nerus_incantation_of_protection_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_3",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_3_ptras_incantation_of_righteous_smiting_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_4",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_4_usirians_incantation_of_vengeance_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_5",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_6",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_6_usekhps_incantation_of_desiccation_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_7",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_7_sakhmets_incantation_of_the_skullstorm_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_8",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_9",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_10",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_nehekhara_magic_dummy",
+            skill_key = "wh2_dlc09_skill_tmb_nehekhara_lore_dummy_0_djafs_incantation_of_cursed_blades",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_01",
+            skill_key = "wh2_dlc09_skill_tmb_lord_army_base",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_02",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_archers",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_03",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_04",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_05",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_chariot",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_06",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_structure_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_07",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_elite_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_08",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_09",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_archer",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_10",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_11",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_12",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_nehekhara_army_13",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_tmb_liche_high_priest_shadow = {
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_mount_0",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_shadow_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_misc_0",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_0",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_misc_1",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_misc_2",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_misc_3",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_misc_4",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_trapped_soul",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_leader_01",
+            skill_key = "wh3_dlc29_skill_tmb_liche_high_priest_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_wizard_00",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_leader_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_00",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_leader_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_01",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_leader_04",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_leader_04",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_wizard_00",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_02",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_leader_01",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_wizard_01",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_master_of_the_dead_army",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_wizard_02",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_wizard_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_wizard_03",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_wizard_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_01",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_02",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_03",
+            skill_key = "wh2_main_skill_magic_shadow_enfeebling_foe_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_04",
+            skill_key = "wh2_main_skill_magic_shadow_the_withering_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_05",
+            skill_key = "wh2_main_skill_magic_shadow_penumbral_pendulum_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_09",
+            skill_key = "wh2_main_skill_magic_shadow_pit_of_shades_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_10",
+            skill_key = "wh2_main_skill_magic_shadow_okkams_mindrazor_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_shadow_magic_12",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma_dummy",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_01",
+            skill_key = "wh2_dlc09_skill_tmb_lord_army_base",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_02",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_archers",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_03",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_04",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_05",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_chariot",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_06",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_structure_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_07",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_elite_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_08",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_09",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_archer",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_10",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_11",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_12",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_shadow_army_13",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_tmb_liche_high_priest_undeath = {
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_mount_0",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_undeath_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_misc_0",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_0",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_misc_1",
+            skill_key = "wh3_dlc29_skill_liche_high_priest_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_misc_2",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_misc_3",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_misc_4",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_trapped_soul",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_leader_01",
+            skill_key = "wh3_dlc29_skill_tmb_liche_high_priest_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_wizard_00",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_wizard_00",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_leader_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_00",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_leader_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_01",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_leader_04",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_leader_04",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_wizard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_wizard_00",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_02",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_death_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_light_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_nehekhara_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_shadow_leader_01",
+                "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_leader_01",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_wizard_01",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_master_of_the_dead_army",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_wizard_02",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_wizard_02",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_01",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_lord_unique_high_liche_priest_undeath_wizard_03",
+            skill_key = "wh3_dlc29_skill_nag_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_lord_unique_high_liche_priest_undeath_wizard_03",
+            skill_key = "wh3_dlc29_skill_tmb_lord_unique_high_liche_priest_leader_03",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_01",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_01_morkharn_breath_of_darkness",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_02",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_02_raise_the_dead",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_03",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_03_sulekhim_the_hand_of_dust",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_04",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_04_khizaar_the_soulstealer",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_05",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_05_Razkhar_the_abyssal_swarm",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_09",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_06_kandorak_the_harbinger",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_10",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_07_akararan_the_dark_riders",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_high_liche_priest_undeath_magic_dummy",
+            skill_key = "wh3_dlc29_skill_undeath_magic_lord_dummy",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_01",
+            skill_key = "wh2_dlc09_skill_tmb_lord_army_base",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_02",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_archers",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_03",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_basic_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_04",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_05",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_chariot",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_06",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_structure_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_07",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_elite_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_08",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_09",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_archer",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_10",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_cav",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_11",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_infantry",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_12",
+            skill_key = "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_high_liche_priest_undeath_army_13",
+            skill_key = "wh2_dlc09_skill_tmb_lord_rally_upgraded",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_tmb_liche_priest_undeath = {
+        {
+            node_key = "wh3_dlc29_skill_tmb_liche_priest_undeath_mount_0",
+            skill_key = "wh3_dlc29_skill_tmb_wizard_unique_liche_priest_undeath_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 6 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_liche_priest_undeath_misc_0",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_liche_priest_undeath_misc_1",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_trapped_soul",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_liche_priest_undeath_channelling",
+            skill_key = "wh3_main_skill_tmb_liche_priest_death",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_liche_priest_undeath_unique_0",
+            skill_key = "wh2_dlc09_skill_tmb_liche_priest_incantation_of_preservation",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_liche_priest_undeath_unique_1",
+            skill_key = "wh2_dlc09_skill_tmb_liche_priest_keeper_of_lore",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_liche_priest_undeath_unique_2",
+            skill_key = "wh2_dlc09_skill_tmb_liche_priest_cultist_of_mortuary",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_01",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_01_morkharn_breath_of_darkness_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_02",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_02_raise_the_dead",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_03",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_03_sulekhim_the_hand_of_dust_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_04",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_04_khizaar_the_soulstealer_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_05",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_05_Razkhar_the_abyssal_swarm_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_09",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_06_kandorak_the_harbinger_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_10",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_07_akararan_the_dark_riders_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_tmb_liche_priest_undeath_magic_dummy",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_dummy_morkharn_breath_of_darkness",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_tmb_tomb_herald = {
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_mount_0",
+            skill_key = "w3_dlc29_skill_tmb_dignitary_unique_tomb_herald_skeletal_steed",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 3 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_mount_1",
+            skill_key = "wh3_dlc29_skill_tmb_dignitary_unique_tomb_herald_skeleton_chariot",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_misc_0",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_ceremonial_bandages",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_misc_1",
+            skill_key = "wh2_dlc09_skill_tmb_tomb_king_embalmed_in_elixir",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_1",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_champion_03",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_2",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_bodyguard_01",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_3",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_champion_04",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_4",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_bodyguard_04",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_5",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_leadership_01",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_6",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_bodyguard_02",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_0",
+            skill_key = "wh2_dlc09_skill_tmb_personal_base",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_1",
+            skill_key = "wh2_dlc09_skill_tmb_personal_conqueror",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_2",
+            skill_key = "wh_main_skill_all_all_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_3",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_4",
+            skill_key = "wh_main_skill_all_all_self_indomitable",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_5",
+            skill_key = "wh2_dlc09_skill_tmb_personal_5",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_6",
+            skill_key = "wh_main_skill_all_all_self_wound-maker",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_7",
+            skill_key = "wh_main_skill_all_lord_self_full_plate_armour_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_8",
+            skill_key = "wh_main_skill_all_all_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_9",
+            skill_key = "wh2_dlc09_skill_tmb_personal_9",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_personal_10",
+            skill_key = "wh2_dlc09_skill_tmb_personal_10",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_1",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_leadership_02",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_2",
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_1_nag",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_leadership_02_nag",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_2",
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_2",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_champion_02",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_1",
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_1_nag",
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_3",
+            skill_key = "wh3_dlc29_skill_tmb_tomb_herald_unique_bodyguard_03",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_1",
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_1_nag",
+                "wh3_dlc29_skill_tmb_tomb_herald_unique_exclusive_2",
             }
         },
     },

@@ -53,7 +53,7 @@
 [h2]当前版本内容[/h2]
 
 [list]
-[*]支持至 [b]珀希瓦（Bhashiwa）版本[/b] 的几乎全部主要种族与派系。
+[*]支持至 [b]终焉之主版本[/b] 的几乎全部主要种族与派系。
 
 [*]游戏事件中会提供原版游戏内绝大多数领主、英雄、普通兵种、精英单位，以及大部分装备与神器奖励。
 [/list]
@@ -189,7 +189,7 @@ In this mod, you do not need to recruit units manually, construct buildings, man
 [h2]Current Version Content[/h2]
 
 [list]
-[*]Supports almost all major races and factions up to the [b]Bhashiwa[/b] version.
+[*]Supports almost all major races and factions up to the [b]LORDS OF THE END TIMES[/b] version.
 
 [*]Event rewards include most vanilla lords, heroes, regular units, elite units, and the majority of vanilla equipment and artifact rewards.
 [/list]

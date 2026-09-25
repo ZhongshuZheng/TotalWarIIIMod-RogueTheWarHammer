@@ -1,0 +1,3 @@
+id	art_set_id	level	age	portrait	season	uniform	card	info	sea_uniform	navy_uniform	land_animation	sea_animation	navy_animation	land_animation_vfx_filter	sea_animation_vfx_filter	navy_animation_vfx_filter
+#campaign_character_arts_tables;0;db/campaign_character_arts_tables/!!adamrogue_fix_boris_art																
+5418	wh_dlc03_art_set_emp_boris_todbringer_visor	0	0		none	wh3_dlc29_uniform_emp_boris_todbringer			wh_main_campaign_emp_ship_heavy	wh_main_campaign_emp_ship_heavy	cam_hu1_dlc29_emp_boris_sword_and_shield	cam_heavy_ship_01	cam_heavy_ship_01	3	0	0

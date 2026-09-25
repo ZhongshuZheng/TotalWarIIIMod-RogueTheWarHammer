@@ -69,6 +69,9 @@
     "battle_permissions_keys": [
       "wh3_main_nur_nurgle"
     ],
+    "hero_source_factions": [
+      "wh3_dlc29_chs_host_of_the_triplets"
+    ],
     "display_name_cn": "纳垢",
     "display_name_en": "Nurgle",
     "enemy_qb_prefix": "wh3_main_nur_nurgle_qb",
@@ -128,6 +131,9 @@
     "culture_key": "wh_main_emp_empire",
     "battle_permissions_keys": [
       "wh_main_emp_empire"
+    ],
+    "hero_source_factions": [
+      "wh_main_emp_middenland"
     ],
     "display_name_cn": "帝国",
     "display_name_en": "Empire",
@@ -290,6 +296,9 @@
     "battle_permissions_keys": [
       "wh2_main_skv_skaven"
     ],
+    "hero_source_factions": [
+      "wh3_dlc29_skv_clan_scruten"
+    ],
     "display_name_cn": "鼠人",
     "display_name_en": "Skaven",
     "enemy_qb_prefix": "wh2_main_skv_skaven_qb",
@@ -321,6 +330,19 @@
     "enemy_qb_prefix": "wh2_dlc11_cst_vampire_coast_qb",
     "fallback_enemy_factions": [],
     "enemy_general_subtype": "wh2_dlc11_cst_cha_vampire_fleet_admiral_0"
+  },
+  {
+    "node_key": "nagash",
+    "faction_key": "wh3_dlc29_nag_host_of_nagash",
+    "culture_key": "wh3_dlc29_nag_undead_legions",
+    "battle_permissions_keys": [
+      "wh3_dlc29_nag_host_of_nagash"
+    ],
+    "display_name_cn": "纳迦什",
+    "display_name_en": "Nagash",
+    "enemy_qb_prefix": "wh3_dlc29_nag_host_of_nagash_qb",
+    "fallback_enemy_factions": [],
+    "enemy_general_subtype": "wh3_dlc29_vmp_cha_master_necromancer_undeath"
   },
   {
     "node_key": "daemons_of_chaos",

@@ -54,6 +54,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_node_cst_admiral_death_crime_00",
             skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
             category_key = "character",
@@ -716,6 +728,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_node_cst_admiral_deep_crime_00",
             skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
             category_key = "character",
@@ -1374,6 +1398,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -2046,6 +2082,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_cst_admiral_fem_deep_crime_00",
             skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
             category_key = "character",
@@ -2710,6 +2758,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -3382,6 +3442,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_cst_admiral_tech_01_crime_00",
             skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
             category_key = "character",
@@ -4040,6 +4112,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -4706,6 +4790,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_cst_admiral_tech_03_crime_00",
             skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
             category_key = "character",
@@ -5364,6 +5460,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -6036,6 +6144,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_node_cst_admiral_crime_00",
             skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
             category_key = "character",
@@ -6686,6 +6806,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_cst_aranessa_unique_00",
             skill_key = "wh2_dlc11_skill_cst_aranessa_unique_0",
             category_key = "character",
@@ -7158,6 +7290,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -8854,6 +8998,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
         {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_node_cst_harkon_unique_00",
             skill_key = "wh2_dlc11_skill_cst_luthor_unique_0",
             category_key = "character",
@@ -9390,6 +9546,30 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
     },
     wh2_dlc11_cst_mourngul = {
         {
+            node_key = "wh3_dlc29_skill_dummy_agent_actions_spy_mourngul",
+            skill_key = "wh3_dlc29_skill_all_dummy_agent_actions_nag_mourngul",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_dummy_agent_actions_vmp_mourngul",
+            skill_key = "wh3_dlc29_skill_dummy_agent_actions_vmp_mourngul",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
             node_key = "wh2_dlc11_skill_cst_misc_mourngul_01",
             skill_key = "wh2_dlc11_skill_cst_misc_haunter_of_the_dark",
             category_key = "character",
@@ -9415,13 +9595,13 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
         },
         {
             node_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_0",
-            skill_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_0",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_0",
             category_key = "character",
             indent = 1,
             tier = 0,
             max_level = 1,
             is_mount_skill = false,
-            unlock_ranks_by_level = { 0 },
+            unlock_ranks_by_level = { 11 },
             locked_node_keys = {
             }
         },
@@ -9455,6 +9635,30 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "character",
             indent = 1,
             tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_4",
+            skill_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh2_dlc11_skill_cst_mourngul_haunter_unique_5",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },
@@ -9595,6 +9799,48 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
                 "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
             }
         },
+        {
+            node_key = "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_1",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_exclusive_0",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_2",
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_2",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_exclusive_1",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_1",
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_3",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_3",
+            skill_key = "wh3_dlc29_skill_mourngul_haunter_unique_exclusive_2",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_1",
+                "wh3_dlc29_skill_cst_mourngul_haunter_unique_exclusive_2",
+            }
+        },
     },
     wh2_dlc11_cst_noctilus = {
         {
@@ -9630,6 +9876,18 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
             locked_node_keys = {
             }
         },
@@ -10155,6 +10413,1710 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             category_key = "battle",
             indent = 4,
             tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_cst_vampire_fleet_admiral_female_undeath = {
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_misc_00",
+            skill_key = "wh3_dlc29_skill_cst_mount_admiral_fem_undeath_rotting_promethean",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_misc_01",
+            skill_key = "wh2_dlc11_skill_cst_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_misc_02",
+            skill_key = "wh2_dlc11_skill_cst_misc_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_misc_04",
+            skill_key = "wh2_dlc11_skill_cst_loyal_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_crime_00",
+            skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_crime_01",
+            skill_key = "wh_dlc11_skill_cst_lord_self_supernatural_horror",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_crime_02",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_0",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_05",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_crime_03",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_1",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_05",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_crime_04",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_2_sword",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_05",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_crime_05",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_3",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_personal_00",
+            skill_key = "wh2_dlc11_skill_cst_personal_0_monkey_jacket",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_personal_01",
+            skill_key = "wh2_dlc11_skill_all_lord_self_swashbuckler",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_personal_02",
+            skill_key = "wh2_dlc11_skill_vmp_lord_self_master_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_personal_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_personal_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_personal_05",
+            skill_key = "wh2_dlc11_skill_cst_personal_5_taunt",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_ranged_00",
+            skill_key = "wh2_dlc11_skill_cst_ranged_0",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_ranged_01",
+            skill_key = "wh2_dlc11_skill_cst_ranged_1_fem_admiral",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_ranged_02",
+            skill_key = "wh2_dlc11_skill_cst_ranged_2_fem_admiral",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_ranged_03",
+            skill_key = "wh2_dlc11_skill_cst_ranged_3_fem_admiral",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_ranged_04",
+            skill_key = "wh2_dlc11_skill_cst_ranged_4_fem_admiral",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_ranged_05",
+            skill_key = "wh2_dlc11_skill_cst_ranged_5_pyromaniac",
+            category_key = "character",
+            indent = 2,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_01",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_01_morkharn_breath_of_darkness",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_02",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_02_raise_the_dead",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_03",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_03_sulekhim_the_hand_of_dust",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_04",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_04_khizaar_the_soulstealer",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_05",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_05_Razkhar_the_abyssal_swarm",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_09",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_06_kandorak_the_harbinger",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_10",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_07_akararan_the_dark_riders",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_fem_undeath_magic_00_dummy",
+            skill_key = "wh3_dlc29_skill_undeath_magic_lord_dummy",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_00",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_01",
+            skill_key = "wh2_dlc11_skill_cst_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_02",
+            skill_key = "wh2_dlc11_skill_cst_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_03",
+            skill_key = "wh2_dlc11_skill_cst_army_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_04",
+            skill_key = "wh2_dlc11_skill_cst_army_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_05",
+            skill_key = "wh2_dlc11_skill_cst_army_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_06",
+            skill_key = "wh2_dlc11_skill_cst_army_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_07",
+            skill_key = "wh2_dlc11_skill_cst_army_7_avast_ye",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_08",
+            skill_key = "wh2_dlc11_skill_cst_army_8",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_09",
+            skill_key = "wh2_dlc11_skill_cst_army_9",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_10",
+            skill_key = "wh2_dlc11_skill_cst_army_10",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_11",
+            skill_key = "wh2_dlc11_skill_cst_army_11",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_fem_undeath_army_12",
+            skill_key = "wh2_dlc11_skill_cst_army_12_all_hands_hoay",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_cst_vampire_fleet_admiral_undeath = {
+        {
+            node_key = "wh3_dlc29_skill_cst_misc_admiral_undeath_00",
+            skill_key = "wh3_dlc29_skill_cst_mount_admiral_undeath_rotting_promethean",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_misc_admiral_undeath_01",
+            skill_key = "wh2_dlc11_skill_cst_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_misc_admiral_undeath_02",
+            skill_key = "wh2_dlc11_skill_cst_misc_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_misc_admiral_undeath_03",
+            skill_key = "wh2_dlc11_skill_cst_loyal_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_crime_00",
+            skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_crime_01",
+            skill_key = "wh_dlc11_skill_cst_lord_self_supernatural_horror",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_crime_02",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_0",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_05",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_crime_03",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_1",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_05",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_05",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_crime_04",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_2",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_05",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_05",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_05",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_crime_05",
+            skill_key = "wh2_dlc11_skill_cst_lord_crime_3",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+                "wh2_dlc11_skill_cst_admiral_fem_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_death_crime_04",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_02",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_03",
+                "wh2_dlc11_skill_cst_admiral_fem_deep_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_01_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_02_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_03_crime_04",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_02",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_03",
+                "wh2_dlc11_skill_cst_admiral_tech_04_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_death_crime_04",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_02",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_03",
+                "wh2_dlc11_skill_node_cst_admiral_deep_crime_04",
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_00",
+            skill_key = "wh2_dlc11_skill_cst_personal_0_monkey_jacket",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_01",
+            skill_key = "wh2_dlc11_skill_all_lord_self_swashbuckler",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_02",
+            skill_key = "wh2_dlc11_skill_vmp_lord_self_master_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_03",
+            skill_key = "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_04",
+            skill_key = "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_05",
+            skill_key = "wh2_dlc11_skill_cst_personal_5_taunt",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_06",
+            skill_key = "wh2_dlc11_skill_cst_personal_6_cutlass_male_admiral",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_07",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_08",
+            skill_key = "wh2_dlc11_skill_all_lord_self_vampiric_leap",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_wild-eyed",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_personal_10",
+            skill_key = "wh2_dlc11_skill_cst_personal_10_hornswaggle",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_01",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_01_morkharn_breath_of_darkness",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_02",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_02_raise_the_dead",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_03",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_03_sulekhim_the_hand_of_dust",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_04",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_04_khizaar_the_soulstealer",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_05",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_05_Razkhar_the_abyssal_swarm",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_09",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_10",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_07",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_06_kandorak_the_harbinger",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_08",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_07_akararan_the_dark_riders",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_admiral_undeath_magic_00_dummy",
+            skill_key = "wh3_dlc29_skill_undeath_magic_lord_dummy",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_00",
+            skill_key = "wh_main_skill_all_lord_battle_inspiring_presence",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_01",
+            skill_key = "wh2_dlc11_skill_cst_army_1",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_02",
+            skill_key = "wh2_dlc11_skill_cst_army_2",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_03",
+            skill_key = "wh2_dlc11_skill_cst_army_3",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_04",
+            skill_key = "wh2_dlc11_skill_cst_army_4",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_05",
+            skill_key = "wh2_dlc11_skill_cst_army_5",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_06",
+            skill_key = "wh2_dlc11_skill_cst_army_6",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_07",
+            skill_key = "wh2_dlc11_skill_cst_army_7_avast_ye",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_08",
+            skill_key = "wh2_dlc11_skill_cst_army_8",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_09",
+            skill_key = "wh2_dlc11_skill_cst_army_9",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_10",
+            skill_key = "wh2_dlc11_skill_cst_army_10",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_11",
+            skill_key = "wh2_dlc11_skill_cst_army_11",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_admiral_undeath_army_12",
+            skill_key = "wh2_dlc11_skill_cst_army_12_all_hands_hoay",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_cst_vampire_fleet_captain_undeath = {
+        {
+            node_key = "wh3_dlc11_skill_cst_fleet_captain_undeath_misc_00",
+            skill_key = "wh3_dlc29_skill_cst_mount_fleet_captain_undeath_rotting_promethean",
+            category_key = "character",
+            indent = 0,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc11_skill_cst_fleet_captain_undeath_misc_01",
+            skill_key = "wh2_dlc11_skill_cst_misc_1",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 4 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc11_skill_cst_fleet_captain_undeath_misc_02",
+            skill_key = "wh2_dlc11_skill_cst_misc_2",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_crime_01",
+            skill_key = "wh2_dlc11_skill_cst_agent_crime_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_crime_02",
+            skill_key = "wh2_dlc11_skill_cst_agent_crime_2",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_crime_03",
+            skill_key = "wh2_dlc11_skill_cst_agent_crime_3",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 8 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_00",
+            skill_key = "wh2_dlc11_skill_cst_personal_0_monkey_jacket",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_01",
+            skill_key = "wh2_dlc11_skill_cst_personal_1_swashbuckler",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_02",
+            skill_key = "wh_main_skill_vmp_lord_self_master_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_03",
+            skill_key = "wh_main_skill_all_all_self_scarred_veteran",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_04",
+            skill_key = "wh_main_skill_all_all_self_hard_to_hit",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_05",
+            skill_key = "wh2_dlc11_skill_cst_personal_5_taunt",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_06",
+            skill_key = "wh2_dlc11_skill_cst_personal_6_cutlass",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_07",
+            skill_key = "wh_main_skill_all_all_self_blade_shield",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_08",
+            skill_key = "wh2_dlc11_skill_cst_personal_vamperic_leap",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_09",
+            skill_key = "wh_main_skill_all_dignitary_self_wild-eyed",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_cst_fleet_captain_undeath_personal_10",
+            skill_key = "wh2_dlc11_skill_cst_personal_10_hornswaggle",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_01",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_01_morkharn_breath_of_darkness_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_02",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_02_raise_the_dead",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_03",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_03_sulekhim_the_hand_of_dust_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_04",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_04_khizaar_the_soulstealer_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_05",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_05_Razkhar_the_abyssal_swarm_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_09",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_06_kandorak_the_harbinger_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_10",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_07_akararan_the_dark_riders_hero",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_07",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_08",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_cst_fleet_captain_undeath_magic_00_dummy",
+            skill_key = "wh3_dlc29_skill_nag_magic_undeath_dummy_morkharn_breath_of_darkness",
+            category_key = "character",
+            indent = 3,
+            tier = 11,
             max_level = 1,
             is_mount_skill = false,
             unlock_ranks_by_level = { 0 },

@@ -159,6 +159,10 @@ adamrogue_destination_node_name_vampire_coast	Vampire Coast	false
 adamrogue_destination_node_choice_vampire_coast	Candidate Faction: Vampire Coast	false
 campaign_payload_ui_details_description_adamrogue_destination_payload_choice_vampire_coast	[[col:yellow]]Candidate Faction: Vampire Coast[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_destination_payload_current_vampire_coast	[[col:yellow]]Current Faction: Vampire Coast[[/col]]	false
+adamrogue_destination_node_name_nagash	Nagash	false
+adamrogue_destination_node_choice_nagash	Candidate Faction: Nagash	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_choice_nagash	[[col:yellow]]Candidate Faction: Nagash[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_destination_payload_current_nagash	[[col:yellow]]Current Faction: Nagash[[/col]]	false
 adamrogue_destination_node_name_daemons_of_chaos	Daemons of Chaos	false
 adamrogue_destination_node_choice_daemons_of_chaos	Candidate Faction: Daemons of Chaos	false
 campaign_payload_ui_details_description_adamrogue_destination_payload_choice_daemons_of_chaos	[[col:yellow]]Candidate Faction: Daemons of Chaos[[/col]]	false
@@ -168,38 +172,38 @@ campaign_payload_ui_details_description_adamrogue_destination_payload_delay	[[co
 campaign_localised_strings_button_adamrogue_phase_a_title	Warhammer Spire	false
 campaign_localised_strings_button_adamrogue_phase_a_tooltip	Begin a Warhammer Spire run, or resume an unfinished chain of events from where you last left it.	false
 dilemmas_localised_title_adamrogue_mvp_hero_reward_dilemma	Warhammer Spire: Hero Reward	false
-dilemmas_localised_description_adamrogue_mvp_hero_reward_dilemma	This stage offers you a choice of 1 from 3 heroes drawn from your own faction. Selecting a hero will replace this stage's normal unit reward.	false
-cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaFIRST	Recruit Hero I	false
-cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaFIRST	Recruit the first hero shown below. If your army has room, this hero will join your current Rogue force and be raised to the current stage's level.	false
-cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaSECOND	Recruit Hero II	false
-cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaSECOND	Recruit the second hero shown below. If your army has room, this hero will join your current Rogue force and be raised to the current stage's level.	false
-cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaTHIRD	Recruit Hero III	false
-cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaTHIRD	Recruit the third hero shown below. If your army has room, this hero will join your current Rogue force and be raised to the current stage's level.	false
-cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaFOURTH	Decide Later	false
-cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaFOURTH	Set this matter aside for now. You may reopen the same hero selection later from the Warhammer Spire button.	false
-cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaFIFTH	Take Unit Reward Instead	false
-cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaFIFTH	Forgo this stage's hero reward and proceed to the normal unit reward event instead. The usual battle flow will still follow.	false
+dilemmas_localised_description_adamrogue_mvp_hero_reward_dilemma	This round, you may choose 1 of 3 random heroes from your own faction to join your force. Choosing a hero will skip this round's unit reward.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaFIRST	Claim Hero Candidate I	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaFIRST	Claim the first hero shown below. If the army has room, this hero will join your current Rogue force and be raised to the current turn level.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaSECOND	Claim Hero Candidate II	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaSECOND	Claim the second hero shown below. If the army has room, this hero will join your current Rogue force and be raised to the current turn level.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaTHIRD	Claim Hero Candidate III	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaTHIRD	Claim the third hero shown below. If the army has room, this hero will join your current Rogue force and be raised to the current turn level.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaFOURTH	Choose Later	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaFOURTH	Close this event for now. You can reopen the same set of hero candidates later from the Warhammer Spire button.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_dilemmaFIFTH	Switch to Normal Unit Reward	false
+cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_dilemmaFIFTH	Give up this round's hero reward and proceed to the normal unit reward event instead. The regular battle flow will still follow.	false
 dilemmas_localised_title_adamrogue_mvp_hero_reward_full_dilemma	Warhammer Spire: Army Is Full	false
-dilemmas_localised_description_adamrogue_mvp_hero_reward_full_dilemma	Your current Rogue force already stands at 20 units, and no further hero may join it. Make room within the army, or return to the reward page and choose another option.	false
-cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_full_dilemmaFIRST	Return to Rewards	false
+dilemmas_localised_description_adamrogue_mvp_hero_reward_full_dilemma	Your current Rogue force has already reached 20 units, so no additional hero can join. Adjust your army capacity first, or return to the reward page and choose another option.	false
+cdir_events_dilemma_choice_details_localised_choice_label_adamrogue_mvp_hero_reward_full_dilemmaFIRST	Return to Reward Page	false
 cdir_events_dilemma_choice_details_localised_choice_title_adamrogue_mvp_hero_reward_full_dilemmaFIRST	Return to the previous page of hero reward candidates.	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_cth_alchemist	[[col:yellow]]Hero candidate: Alchemist[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_cth_astromancer	[[col:yellow]]Hero candidate: Astromancer[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_cp1_cth_cha_taoyan	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_cth_gate_master	[[col:yellow]]Hero candidate: GateMaster[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_cp1_cth_cha_taoyan	[[col:yellow]]Hero candidate: Taoyan the Merciless[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_cth_gate_master	[[col:yellow]]Hero candidate: Gate Master[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_cp1_cth_clawspeaker_beasts	[[col:yellow]]Hero candidate: Clawspeaker (Beasts)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_cp1_cth_clawspeaker_life	[[col:yellow]]Hero candidate: Clawspeaker (Life)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_cp1_cth_clawspeaker_shadows	[[col:yellow]]Hero candidate: Clawspeaker (Shadows)[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_cth_saytang_the_watcher	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_cth_saytang_the_watcher	[[col:yellow]]Hero candidate: Saytang the Watcher[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_ksl_frost_maiden_ice	[[col:yellow]]Hero candidate: Frost Maiden (Ice)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_ksl_frost_maiden_tempest	[[col:yellow]]Hero candidate: Frost Maiden (Tempest)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_ksl_patriarch	[[col:yellow]]Hero candidate: Patriarch[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc23_neu_ulrika	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc23_neu_ulrika	[[col:yellow]]Hero candidate: Ulrika Magdova[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_ksl_hag_witch_beasts	[[col:yellow]]Hero candidate: Hag Witch (Beasts)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_ksl_hag_witch_death	[[col:yellow]]Hero candidate: Hag Witch (Death)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_ksl_hag_witch_hag	[[col:yellow]]Hero candidate: Hag Witch (Hag)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_ksl_hag_witch_shadows	[[col:yellow]]Hero candidate: Hag Witch (Shadows)[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_ksl_the_golden_knight	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_ksl_the_golden_knight	[[col:yellow]]Hero candidate: The Golden Knight Naryska Leysa[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_ogr_cha_butcher_death	[[col:yellow]]Hero candidate: Butcher (Death)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_ogr_cha_butcher_heavens	[[col:yellow]]Hero candidate: Butcher (Heavens)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_ogr_butcher_beasts	[[col:yellow]]Hero candidate: Butcher (Beasts)[[/col]]	false
@@ -207,27 +211,27 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_o
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_ogr_firebelly	[[col:yellow]]Hero candidate: Firebelly[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_ogr_hunter	[[col:yellow]]Hero candidate: Hunter[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_ogr_bruiser	[[col:yellow]]Hero candidate: Bruiser[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_ogr_bragg_the_gutsman	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_ogr_bragg_the_gutsman	[[col:yellow]]Hero candidate: Bragg the Gutsman[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_kho_bloodreaper	[[col:yellow]]Hero candidate: Bloodreaper[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_kho_cultist	[[col:yellow]]Hero candidate: Cultist of Khorne[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc20_chs_exalted_hero_mkho	[[col:yellow]]Hero candidate: Exalted Hero of Khorne[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_pro12_kho_cha_karanak	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_kho_scyla_anfingrimm	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_kho_skarr_bloodwrath	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_pro12_kho_cha_karanak	[[col:yellow]]Hero candidate: Karanak[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_kho_scyla_anfingrimm	[[col:yellow]]Hero candidate: Scyla Anfingrimm[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_kho_skarr_bloodwrath	[[col:yellow]]Hero candidate: Skarr Bloodwrath[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_chs_sorcerer_death_mnur	[[col:yellow]]Hero candidate: Chaos Sorcerer of Nurgle (Death)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_chs_sorcerer_nurgle_mnur	[[col:yellow]]Hero candidate: Chaos Sorcerer of Nurgle (Nurgle)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_nur_cultist	[[col:yellow]]Hero candidate: Cultist of Nurgle[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_nur_plagueridden_death	[[col:yellow]]Hero candidate: Plagueridden (Death)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_nur_plagueridden_nurgle	[[col:yellow]]Hero candidate: Plagueridden (Nurgle)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc20_chs_exalted_hero_mnur	[[col:yellow]]Hero candidate: Exalted Hero of Nurgle[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_nur_kayzk_the_befouled	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_nur_kayzk_the_befouled	[[col:yellow]]Hero candidate: Kayzk the Befouled[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_tze_cultist	[[col:yellow]]Hero candidate: Cultist of Tzeentch[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc20_chs_sorcerer_metal_mtze	[[col:yellow]]Hero candidate: Chaos Sorcerer of Tzeentch (Metal)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc20_chs_sorcerer_tzeentch_mtze	[[col:yellow]]Hero candidate: Chaos Sorcerer of Tzeentch (Tzeentch)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_tze_iridescent_horror_metal	[[col:yellow]]Hero candidate: Iridescent Horror (Metal)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_tze_iridescent_horror_tzeentch	[[col:yellow]]Hero candidate: Iridescent Horror (Tzeentch)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_chs_exalted_hero_mtze	[[col:yellow]]Hero candidate: Exalted Hero of Tzeentch[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_tze_aekold_helbrass	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc24_tze_aekold_helbrass	[[col:yellow]]Hero candidate: Aekold Helbrass[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc20_chs_sorcerer_shadows_msla	[[col:yellow]]Hero candidate: Chaos Sorcerer of Slaanesh (Shadows)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc20_chs_sorcerer_slaanesh_msla	[[col:yellow]]Hero candidate: Chaos Sorcerer of Slaanesh (Slaanesh)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_sla_cultist	[[col:yellow]]Hero candidate: Cultist of Slaanesh[[/col]]	false
@@ -235,8 +239,8 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_s
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_sla_alluress_slaanesh	[[col:yellow]]Hero candidate: Alluress (Slaanesh)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc27_sla_druchii_anointed	[[col:yellow]]Hero candidate: Druchii Anointed[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc27_chs_exalted_hero_msla	[[col:yellow]]Hero candidate: Exalted Hero of Slaanesh[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc27_sla_styrkaar_the_sortsvinaer	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc23_chd_gorduz_backstabber	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc27_sla_styrkaar_the_sortsvinaer	[[col:yellow]]Hero candidate: Styrkaar of the Sortsvinaer[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc23_chd_gorduz_backstabber	[[col:yellow]]Hero candidate: Gorduz Backstabber[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc23_chd_daemonsmith_sorcerer_death	[[col:yellow]]Hero candidate: Daemonsmith Sorcerer (Death)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc23_chd_daemonsmith_sorcerer_fire	[[col:yellow]]Hero candidate: Daemonsmith Sorcerer (Fire)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc23_chd_daemonsmith_sorcerer_hashut	[[col:yellow]]Hero candidate: Daemonsmith Sorcerer (Hashut)[[/col]]	false
@@ -255,25 +259,25 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_em
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_emp_warrior_priest	[[col:yellow]]Hero candidate: Warrior Priest[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_emp_witch_hunter	[[col:yellow]]Hero candidate: Witch Hunter[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_emp_engineer	[[col:yellow]]Hero candidate: Engineer[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_emp_theodore_bruckner	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_emp_theodore_bruckner	[[col:yellow]]Hero candidate: Theodore Bruckner[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_dwf_runesmith	[[col:yellow]]Hero candidate: Runesmith[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_dwf_master_engineer	[[col:yellow]]Hero candidate: Master Engineer[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_dwf_thane	[[col:yellow]]Hero candidate: Thane[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_dwf_dragon_slayer	[[col:yellow]]Hero candidate: Dragon Slayer[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_dwf_garagrim_ironfist	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc17_dwf_thane_ghost_artifact	[[col:yellow]]Hero candidate: Great Axe Thane[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc06_dwf_thane_ghost_1	[[col:yellow]]Hero candidate: Thane[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc06_dwf_thane_ghost_2	[[col:yellow]]Hero candidate: Thane[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc06_dwf_master_engineer_ghost	[[col:yellow]]Hero candidate: Master Engineer[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc06_dwf_runesmith_ghost	[[col:yellow]]Hero candidate: Runesmith[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_dwf_garagrim_ironfist	[[col:yellow]]Hero candidate: Garagrim Ironfist[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc17_dwf_thane_ghost_artifact	[[col:yellow]]Hero candidate: Hans Valhirsson[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc06_dwf_thane_ghost_1	[[col:yellow]]Hero candidate: King Lunn Ironhammer[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc06_dwf_thane_ghost_2	[[col:yellow]]Hero candidate: Halkenhaf Stonebeard[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc06_dwf_master_engineer_ghost	[[col:yellow]]Hero candidate: Dramar Hammerfist[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc06_dwf_runesmith_ghost	[[col:yellow]]Hero candidate: Throni Ironbrow[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_grn_night_goblin_shaman	[[col:yellow]]Hero candidate: Night Goblin Shaman[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_grn_goblin_big_boss	[[col:yellow]]Hero candidate: Goblin Big Boss[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_grn_orc_shaman	[[col:yellow]]Hero candidate: Orc Shaman[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_grn_night_goblin_big_boss	[[col:yellow]]Hero candidate: Night Goblin Big Boss[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc15_grn_river_troll_hag	[[col:yellow]]Hero candidate: Giant River Troll Hag[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_grn_snagla_grobpsit	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc26_grn_snagla_grobpsit	[[col:yellow]]Hero candidate: Snagla Grobspit[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_pro09_grn_black_orc_big_boss	[[col:yellow]]Hero candidate: Black Orc Big Boss[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_vmp_necromancer	[[col:yellow]]Hero candidate: Necromancer[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_vmp_necromancer	[[col:yellow]]Hero candidate: Necromancer (Vampires)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc17_vmp_kevon_lloydstein	[[col:yellow]]Hero candidate: Wight King[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_vmp_wight_king	[[col:yellow]]Hero candidate: Wight King[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc05_vmp_vampire_shadow	[[col:yellow]]Hero candidate: Vampire (Shadows)[[/col]]	false
@@ -289,7 +293,7 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_ch
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_chs_chaos_sorcerer_metal	[[col:yellow]]Hero candidate: Chaos Sorcerer (Metal)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_main_chs_exalted_hero	[[col:yellow]]Hero candidate: Exalted Hero[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc27_nor_beorg_bearstruck	[[col:yellow]]Hero candidate: Beorg Bearstruck[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_pro11_chs_cha_harald_hammerstorm	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_pro11_chs_cha_harald_hammerstorm	[[col:yellow]]Hero candidate: Harald Hammerstorm[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc03_bst_bray_shaman_beasts	[[col:yellow]]Hero candidate: Bray-Shaman (Beasts)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc03_bst_bray_shaman_death	[[col:yellow]]Hero candidate: Bray-Shaman (Death)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc03_bst_bray_shaman_shadows	[[col:yellow]]Hero candidate: Bray-Shaman (Shadows)[[/col]]	false
@@ -302,7 +306,7 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc05_w
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc05_wef_branchwraith	[[col:yellow]]Hero candidate: Branchwraith[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc05_wef_waystalker	[[col:yellow]]Hero candidate: Waystalker[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_twa02_wef_glade_captain	[[col:yellow]]Hero candidate: Glade Captain[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc16_wef_ariel	[[col:yellow]]Hero candidate: Avatar of Isha[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc16_wef_ariel	[[col:yellow]]Hero candidate: Ariel[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc08_nor_shaman_sorcerer_death	[[col:yellow]]Hero candidate: Shaman-Sorcerer (Death)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc08_nor_shaman_sorcerer_fire	[[col:yellow]]Hero candidate: Shaman-Sorcerer (Fire)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc08_nor_shaman_sorcerer_metal	[[col:yellow]]Hero candidate: Shaman-Sorcerer (Metal)[[/col]]	false
@@ -310,8 +314,8 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc08_n
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc08_nor_fimir_balefiend_shadow	[[col:yellow]]Hero candidate: Fimir Balefiend (Shadows)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc27_nor_fimir_noble	[[col:yellow]]Hero candidate: Fimir Noble[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc08_nor_skin_wolf_werekin	[[col:yellow]]Hero candidate: Skin Wolf Werekin[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_ie_nor_killgore_slaymaim	[[col:yellow]]Hero candidate: Legendary Champion[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc08_nor_kihar	[[col:yellow]]Hero candidate: Legendary Sorcerer[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_main_ie_nor_killgore_slaymaim	[[col:yellow]]Hero candidate: Killgore Slaymaim[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh_dlc08_nor_kihar	[[col:yellow]]Hero candidate: Kihar the Tormentor[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc10_hef_mage_heavens	[[col:yellow]]Hero candidate: Mage (Heavens)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc10_hef_mage_shadows	[[col:yellow]]Hero candidate: Mage (Shadows)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc15_hef_mage_beasts	[[col:yellow]]Hero candidate: Mage (Beasts)[[/col]]	false
@@ -323,9 +327,9 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_h
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_hef_mage_light	[[col:yellow]]Hero candidate: Mage (Light)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc27_hef_mist_mage	[[col:yellow]]Hero candidate: Mist Mage[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_hef_noble	[[col:yellow]]Hero candidate: Noble[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc10_hef_handmaiden	[[col:yellow]]Hero candidate: Handmaiden[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc10_hef_handmaiden	[[col:yellow]]Hero candidate: Handmaiden of the Everqueen[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_hef_loremaster_of_hoeth	[[col:yellow]]Hero candidate: Loremaster of Hoeth[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc27_hef_caradryan	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc27_hef_caradryan	[[col:yellow]]Hero candidate: Caradryan[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc10_def_sorceress_beasts	[[col:yellow]]Hero candidate: Sorceress (Beasts)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc10_def_sorceress_death	[[col:yellow]]Hero candidate: Sorceress (Death)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_def_sorceress_dark	[[col:yellow]]Hero candidate: Sorceress (Dark)[[/col]]	false
@@ -338,7 +342,7 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_l
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_lzd_skink_priest_heavens	[[col:yellow]]Hero candidate: Skink Priest (Heavens)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_lzd_skink_chief	[[col:yellow]]Hero candidate: Skink Chief[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_lzd_saurus_scar_veteran	[[col:yellow]]Hero candidate: Saurus Scar-Veteran[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc12_lzd_lord_kroak	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc12_lzd_lord_kroak	[[col:yellow]]Hero candidate: Lord Kroak[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc17_lzd_skink_oracle_troglodon	[[col:yellow]]Hero candidate: Skink Oracle[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc14_skv_eshin_sorcerer	[[col:yellow]]Hero candidate: Eshin Sorcerer[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_skv_warlock_engineer	[[col:yellow]]Hero candidate: Warlock Engineer[[/col]]	false
@@ -346,7 +350,7 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_s
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc16_skv_packmaster	[[col:yellow]]Hero candidate: Packmaster[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_main_skv_assassin	[[col:yellow]]Hero candidate: Assassin[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc16_skv_chieftain	[[col:yellow]]Hero candidate: Chieftain[[/col]]	false
-campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc16_skv_ghoritch	[[col:yellow]]Hero candidate: Legendary Hero[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc16_skv_ghoritch	[[col:yellow]]Hero candidate: Ghoritch[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc09_tmb_liche_priest_death	[[col:yellow]]Hero candidate: Liche Priest (Death)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc09_tmb_liche_priest_light	[[col:yellow]]Hero candidate: Liche Priest (Light)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc09_tmb_liche_priest_nehekhara	[[col:yellow]]Hero candidate: Liche Priest (Nehekhara)[[/col]]	false
@@ -358,3 +362,22 @@ campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc11_
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc11_cst_fleet_captain_vampires	[[col:yellow]]Hero candidate: Vampire Fleet Captain (Vampires)[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc11_cst_gunnery_wight	[[col:yellow]]Hero candidate: Gunnery Wight[[/col]]	false
 campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh2_dlc11_cst_mourngul	[[col:yellow]]Hero candidate: Mourngul Haunter[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_chs_gutrot_spume	[[col:yellow]]Hero candidate: Gutrot Spume[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_emp_cha_priest_of_ulric	[[col:yellow]]Hero candidate: Priest of Ulric[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_emp_cha_emil_valgeir	[[col:yellow]]Hero candidate: Emil Valgeir[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_vmp_necromancer_undeath	[[col:yellow]]Hero candidate: Necromancer (Undeath)[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_vmp_dieter_helsnicht	[[col:yellow]]Hero candidate: Dieter Helsnicht[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_vmp_lahmian_vampire	[[col:yellow]]Hero candidate: Lahmian Vampire[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_vmp_krell	[[col:yellow]]Hero candidate: Krell[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_vmp_walach_harkon	[[col:yellow]]Hero candidate: Walach Harkon[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_nur_bray_shaman_wild_chieftain	[[col:yellow]]Hero candidate: Grukmur Three-Horn[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_nur_fimir_balefiend_shadow_chieftain	[[col:yellow]]Hero candidate: Ketzak Fimdirach[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_nur_exalted_hero_chieftain	[[col:yellow]]Hero candidate: Khargan the Crazed[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc25_nur_castellan_chieftain	[[col:yellow]]Hero candidate: Ezar Doombolt[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_chs_bloab	[[col:yellow]]Hero candidate: Bloab Rotspawned[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_chs_morbidex	[[col:yellow]]Hero candidate: Morbidex Twiceborn[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_chs_orghotts	[[col:yellow]]Hero candidate: Orghotts Daemonspew[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_tmb_liche_priest_undeath	[[col:yellow]]Hero candidate: Liche Priest (Undeath)[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_tmb_tomb_herald	[[col:yellow]]Hero candidate: Tomb Herald[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_cst_vampire_fleet_captain_undeath	[[col:yellow]]Hero candidate: Vampire Fleet Captain (Undeath)[[/col]]	false
+campaign_payload_ui_details_description_adamrogue_hero_reward_payload_wh3_dlc29_skv_skreech_verminking	[[col:yellow]]Hero candidate: Skreech Verminking[[/col]]	false
