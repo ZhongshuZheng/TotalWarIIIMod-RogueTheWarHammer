@@ -1261,6 +1261,7 @@ def main() -> None:
     agent_subtypes_by_key = build_index(agent_subtype_rows, "key")
     available_factions = {row["faction"] for row in start_pos_rows if row.get("faction")}
     blueprint_by_node_key = {str(entry["node_key"]): entry for entry in blueprint}
+    blueprint_by_faction_key = {str(entry["faction_key"]): entry for entry in blueprint}
     blueprint_faction_keys = {str(entry["faction_key"]) for entry in blueprint}
     blueprint_subculture_lookup = build_blueprint_subculture_lookup(blueprint, factions_by_key)
 
@@ -1493,11 +1494,14 @@ def main() -> None:
 
         permitted_general_subtypes = set(permitted_generals_by_faction.get(faction_key, []))
         patched_general_subtypes = set(EXTRA_GENERAL_SUBTYPES_BY_CONTENT_FACTION.get(faction_key, []))
+        general_subtype_allowlist = {str(value) for value in entry.get("general_subtype_allowlist", [])}
         seen_general_option_keys: set[tuple[str, str]] = set()
         resolved_general_options: list[dict[str, object]] = []
         for unit_value, unit_key in general_candidates:
             subtype_candidates = sorted(agent_subtypes_by_associated_unit.get(unit_key, []), key=natural_sort_key)
             for subtype_key in subtype_candidates:
+                if general_subtype_allowlist and subtype_key not in general_subtype_allowlist:
+                    continue
                 if permitted_general_subtypes and subtype_key not in permitted_general_subtypes:
                     if subtype_key not in patched_general_subtypes:
                         continue
@@ -1602,10 +1606,16 @@ def main() -> None:
             )
             continue
 
+        resolved_blueprint_entry = blueprint_by_faction_key[resolved_content_faction_key]
+        general_subtype_allowlist = {
+            str(value) for value in resolved_blueprint_entry.get("general_subtype_allowlist", [])
+        }
         general_options: list[dict[str, object]] = []
         seen_general_subtypes: set[str] = set()
         for subtype_key in permitted_generals_by_faction.get(faction_key, []):
             if subtype_key in seen_general_subtypes:
+                continue
+            if general_subtype_allowlist and subtype_key not in general_subtype_allowlist:
                 continue
 
             subtype_row = agent_subtypes_by_key.get(subtype_key)
@@ -1644,6 +1654,8 @@ def main() -> None:
 
         for subtype_key in EXTRA_GENERAL_SUBTYPES_BY_CONTENT_FACTION.get(resolved_content_faction_key, []):
             if subtype_key in seen_general_subtypes:
+                continue
+            if general_subtype_allowlist and subtype_key not in general_subtype_allowlist:
                 continue
             patched_option = build_player_general_option_from_subtype(
                 subtype_key,

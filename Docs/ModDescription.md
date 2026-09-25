@@ -91,13 +91,13 @@
 [list]
 [*]多数同种族的派系在本 Mod 几乎没有差别；部分种族，例如混沌勇士，细分派系之间存在差别。
 
-[*]在游玩后期，尤其是 30 层之后，进入战斗前可能出现一定卡顿。
+[*]在游玩后期，尤其是 30 层之后，进入战斗前可能出现一定卡顿。建议超过30轮游戏即可认为获胜，结束本轮游戏。
 
-[*]混沌领主手动升魔后将会无法继续游戏。
+[*]混沌领主手动升魔后将会无法继续游戏。目前不建议手动升魔。
 
-[*]玩马拉凯随机到铁眉作为对手时可能会导致崩溃。目前可以尝试使用其他矮人派系来游玩。
+[*]玩马拉凯随机到铁眉作为对手时可能会导致崩溃。目前建议尝试使用其他矮人派系来游玩。
 
-[*]使用变化灵派系开始时，存在英雄无法入队问题。
+[*]使用变化灵、纳加什派系开始时，存在英雄无法入队问题。目前建议选择“跳过英雄选择”来继续游戏。
 
 [*]仍存在少量暂未能稳定复现的游戏崩溃问题。
 [/list]
@@ -134,6 +134,9 @@ A: 我完善了改动日志以供查看。
 
 [*]Q: 某个派系太难/太简单了？
 A: 如此多的派系平衡非常难以掌控，建议根据游玩体验使用MCT调整难度系数。
+
+[*]Q: 游玩过程遇到各种Bug？
+A: 可以先查看上文中“已知问题”及其替代方案。没有提及的话可以在评论区留言。
 
 [/list]
 
@@ -227,13 +230,13 @@ In this mod, you do not need to recruit units manually, construct buildings, man
 [list]
 [*]Most factions within the same race play almost identically in this mod, though some races with distinct sub-factions, such as Warriors of Chaos, may differ.
 
-[*]In the late game, especially after floor 30, there may be some stuttering before entering battle.
+[*]In the late game, especially after floor 30, there may be some stuttering before entering battle. Suggestion: consider round 30 a win and end the run.
 
-[*]The game won't able to continue when chaos lords got replaced with daemon princes.
+[*]The game won't able to continue when chaos lords got replaced with daemon princes. Don't choose that.
 
 [*]Crash may occur when playing Malakai against Ironbrow. Workaround: use a different Dwarf faction.
 
-[*]When using the Changeling as the starting faction, heroes fail to embed into the lord's army.
+[*]When starting as the Changeling or Nagash, there's an issue where heroes cannot join the army. Workaround: use 'Skip Hero Selection'
 
 [*]A small number of crash bugs may still exist and have not yet been reproduced consistently.
 
@@ -268,3 +271,6 @@ A: I'm updating the changelog with details.
 
 [*]Q: A certain faction feels too hard / too easy?
 A: Balancing so many factions is extremely difficult to get right. I'd recommend using MCT to adjust the difficulty toggles based on your own experience.
+
+[*]Q: Hit a bug while playing?
+A: Check the "Known Issues" list above first — there might already be a workaround. If not, drop a comment and let me know!

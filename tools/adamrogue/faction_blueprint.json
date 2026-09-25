@@ -342,7 +342,10 @@
     "display_name_en": "Nagash",
     "enemy_qb_prefix": "wh3_dlc29_nag_host_of_nagash_qb",
     "fallback_enemy_factions": [],
-    "enemy_general_subtype": "wh3_dlc29_vmp_cha_master_necromancer_undeath"
+    "enemy_general_subtype": "wh3_dlc29_vmp_cha_nagash",
+    "general_subtype_allowlist": [
+      "wh3_dlc29_nag_nagash"
+    ]
   },
   {
     "node_key": "daemons_of_chaos",
