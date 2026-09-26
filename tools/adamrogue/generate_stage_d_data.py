@@ -30,6 +30,9 @@ EXTRA_GENERAL_SUBTYPES_BY_CONTENT_FACTION: dict[str, list[str]] = {
     "wh_main_emp_empire": [
         "wh_dlc03_emp_boris_todbringer",
     ],
+    "wh_main_vmp_schwartzhafen": [
+        "wh3_dlc29_vmp_neferata",
+    ],
     "wh3_dlc23_chd_astragoth": [
         "wh3_dlc23_chd_zhatan",
         "wh3_dlc23_chd_astragoth",
@@ -1521,6 +1524,29 @@ def main() -> None:
                         "allowed_factions": allowed_factions,
                     }
                 )
+
+        for subtype_key in sorted(patched_general_subtypes, key=natural_sort_key):
+            patched_option = build_player_general_option_from_subtype(
+                subtype_key,
+                agent_subtypes_by_key,
+                main_units_by_key,
+            )
+            if patched_option is None:
+                warnings.append(f"Could not add patched enemy general option {subtype_key} for {faction_key}")
+                continue
+            unit_key = str(patched_option["unit_key"])
+            dedupe_key = (subtype_key, unit_key)
+            if dedupe_key in seen_general_option_keys:
+                continue
+            seen_general_option_keys.add(dedupe_key)
+            resolved_general_options.append(
+                {
+                    "agent_subtype": subtype_key,
+                    "unit_key": unit_key,
+                    "unit_value": int(patched_option["unit_value"]),
+                    "allowed_factions": list(faction_candidates),
+                }
+            )
 
         if not resolved_general_options:
             validation_errors.append(f"No enemy general agent subtype option found for {faction_key}")

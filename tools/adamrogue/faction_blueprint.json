@@ -174,6 +174,9 @@
     "battle_permissions_keys": [
       "wh_main_vmp_vampire_counts"
     ],
+    "hero_source_factions": [
+      "wh3_dlc29_vmp_neferata"
+    ],
     "display_name_cn": "吸血鬼伯爵",
     "display_name_en": "Vampire Counts",
     "enemy_qb_prefix": "wh_main_vmp_vampire_counts_qb",

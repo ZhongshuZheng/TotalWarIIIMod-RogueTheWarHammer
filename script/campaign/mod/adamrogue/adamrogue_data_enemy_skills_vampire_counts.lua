@@ -3532,6 +3532,430 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             }
         },
     },
+    wh3_dlc23_neu_ulrika = {
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_unique_01",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_warhorse",
+            category_key = "character",
+            indent = 0,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_3",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_3",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_missile_resist",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_missile_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_spell_resist",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_spell_resist",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_0",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 13 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_1",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_1",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_2",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_3",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_vmp_ulrika_unique_1_3",
+            skill_key = "wh3_dlc29_skill_vmp_ulrika_unique_1_3",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_4",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_1_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_vmp_ulrika_unique_1_4",
+            skill_key = "wh3_dlc29_skill_vmp_ulrika_unique_1_4",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_unique_2",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_ability_lesser_hunger_dummy",
+            skill_key = "wh3_dlc23_ability_lesser_hunger_dummy",
+            category_key = "character",
+            indent = 1,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_battle_0",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_0",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_1",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_1",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 1, 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_2",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_2",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 1, 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_3",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_3",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 1, 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_4",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_1_4",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0, 1, 1 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_2",
+            skill_key = "wh_main_skill_all_all_self_foe-seeker",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_1",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_1",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_2",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_2",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_3",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_3",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_4",
+            skill_key = "wh3_dlc23_skill_ksl_ulrika_battle_3_4",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_ksl_ulrika_battle_4",
+            skill_key = "wh_main_skill_all_all_self_deadly_onslaught",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+                "wh_dlc05_skill_node_wef_glade_lord_fem_self_ranged_06",
+                "wh_dlc05_skill_node_wef_glade_lord_self_ranged_06",
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_0",
+            skill_key = "wh_dlc05_skill_magic_shadow_mystifying_miasma",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_1_1",
+            skill_key = "wh_dlc05_skill_magic_shadow_smoke_and_mirrors",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_1_2",
+            skill_key = "wh_dlc05_skill_magic_shadow_enfeebling_foe",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_1_3",
+            skill_key = "wh_dlc05_skill_magic_shadow_the_withering",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_1_4",
+            skill_key = "wh_dlc05_skill_magic_shadow_penumbral_pendulum",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_2",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_3_1",
+            skill_key = "wh_dlc05_skill_magic_shadow_pit_of_shades",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_3_2",
+            skill_key = "wh_dlc05_skill_magic_shadow_okkams_mindrazor",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_3_3",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_3_4",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc23_skill_node_ksl_ulrika_shadow_magic_4",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+    },
     wh3_dlc29_vmp_dieter_helsnicht = {
         {
             node_key = "wh3_dlc29_skill_node_nag_dieter_undead_manticore",
@@ -5470,6 +5894,692 @@ data.CHARACTER_SKILL_PLANS_BY_SUBTYPE = {
             max_level = 3,
             is_mount_skill = false,
             unlock_ranks_by_level = { 4, 8, 12 },
+            locked_node_keys = {
+            }
+        },
+    },
+    wh3_dlc29_vmp_neferata = {
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_unique_03",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_neferata_barded_nightmare",
+            category_key = "character",
+            indent = 0,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_unique_04",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_neferata_hellsteed",
+            category_key = "character",
+            indent = 0,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_unique_05",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_neferata_zombie_dragon",
+            category_key = "character",
+            indent = 0,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 17 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_unique_06",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_neferata_coven_throne",
+            category_key = "character",
+            indent = 0,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 19 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_unique_07",
+            skill_key = "wh3_dlc29_skill_vmp_lord_unique_neferata_dread_abyssal",
+            category_key = "character",
+            indent = 0,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = true,
+            unlock_ranks_by_level = { 21 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_misc_00",
+            skill_key = "wh3_dlc29_skill_vmp_neferata_misc_0",
+            category_key = "character",
+            indent = 0,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_misc_01",
+            skill_key = "wh3_dlc29_skill_vmp_neferata_unique_manipulations",
+            category_key = "character",
+            indent = 0,
+            tier = 8,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_misc_06",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_lahmian_unique_deathly_vigour",
+            category_key = "character",
+            indent = 0,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 5 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_misc_02",
+            skill_key = "wh3_dlc29_skill_vmp_unique_top_queen_bee",
+            category_key = "character",
+            indent = 0,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_misc_03",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_dark_majesty",
+            category_key = "character",
+            indent = 0,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_misc_04",
+            skill_key = "wh_main_skill_vmp_lord_battle_dark_pact",
+            category_key = "character",
+            indent = 0,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_misc_05",
+            skill_key = "wh_main_skill_vmp_all_unique_grave_ward",
+            category_key = "character",
+            indent = 0,
+            tier = 13,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 7 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_main_skill_node_all_army_of_renown_legendary_lord",
+            skill_key = "wh3_main_skill_all_army_of_renown_legendary_lord",
+            category_key = "character",
+            indent = 0,
+            tier = 28,
+            max_level = 3,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 9, 19, 29 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_neferata_unique_08",
+            skill_key = "wh3_dlc29_skill_vmp_neferata_unique_1",
+            category_key = "character",
+            indent = 1,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 11 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_neferata_unique_09",
+            skill_key = "wh3_dlc29_skill_nag_neferata_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_unique_09",
+            skill_key = "wh3_dlc29_skill_vmp_neferata_unique_7",
+            category_key = "character",
+            indent = 1,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 14 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_neferata_unique_10",
+            skill_key = "wh3_dlc29_skill_vmp_neferata_unique_2",
+            category_key = "character",
+            indent = 1,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_neferata_unique_11",
+            skill_key = "wh3_dlc29_skill_nag_neferata_unique_10",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_unique_11",
+            skill_key = "wh3_dlc29_skill_vmp_neferata_unique_10",
+            category_key = "character",
+            indent = 1,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_neferata_unique_12",
+            skill_key = "wh3_dlc29_skill_vmp_neferata_unique_0",
+            category_key = "character",
+            indent = 1,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 12 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_nag_neferata_unique_13",
+            skill_key = "wh3_dlc29_skill_vmp_neferata_unique_6",
+            category_key = "character",
+            indent = 1,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_01",
+            skill_key = "wh_main_skill_vmp_lord_self_the_hunger",
+            category_key = "character",
+            indent = 2,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_02",
+            skill_key = "wh2_dlc11_skill_all_lord_self_devastating_charge",
+            category_key = "character",
+            indent = 2,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_03",
+            skill_key = "wh_main_skill_vmp_lord_self_dark_knight",
+            category_key = "character",
+            indent = 2,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_04",
+            skill_key = "wh_main_skill_vmp_lord_self_beguile",
+            category_key = "character",
+            indent = 2,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_05",
+            skill_key = "wh2_dlc11_skill_all_lord_self_deadly_blade",
+            category_key = "character",
+            indent = 2,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_06",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_lahmian_vampire_lightning_reflexes",
+            category_key = "character",
+            indent = 2,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_07",
+            skill_key = "wh2_dlc11_skill_vmp_lord_self_master_strike",
+            category_key = "character",
+            indent = 2,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_08",
+            skill_key = "wh_main_skill_vmp_lord_self_curse_of_the_revenant",
+            category_key = "character",
+            indent = 2,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_09",
+            skill_key = "wh2_dlc11_skill_all_lord_self_blade_master",
+            category_key = "character",
+            indent = 2,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_10",
+            skill_key = "wh2_dlc11_skill_all_lord_self_fleet-footed",
+            category_key = "character",
+            indent = 2,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_personal_11",
+            skill_key = "wh3_dlc29_skill_vmp_bloodline_lahmian_vampire_transfix",
+            category_key = "character",
+            indent = 2,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_01",
+            skill_key = "wh_main_skill_vmp_magic_vampires_01_invocation_of_nehek",
+            category_key = "character",
+            indent = 3,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_02",
+            skill_key = "wh_main_skill_vmp_magic_vampires_03_the_curse_of_undeath",
+            category_key = "character",
+            indent = 3,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_03",
+            skill_key = "wh_main_skill_all_magic_death_01_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_04",
+            skill_key = "wh2_main_skill_magic_shadow_the_withering_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_05",
+            skill_key = "wh2_main_skill_vmp_magic_vampires_05_raise_dead_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_06",
+            skill_key = "wh_main_skill_all_magic_all_06_evasion",
+            category_key = "character",
+            indent = 3,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_07",
+            skill_key = "wh2_main_skill_magic_shadow_pit_of_shades_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_08",
+            skill_key = "wh2_main_skill_vmp_magic_vampires_10_wind_of_death_lord",
+            category_key = "character",
+            indent = 3,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_09",
+            skill_key = "wh_main_skill_all_magic_all_07_earthing",
+            category_key = "character",
+            indent = 3,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_10",
+            skill_key = "wh_main_skill_all_magic_all_08_power_drain",
+            category_key = "character",
+            indent = 3,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_11",
+            skill_key = "wh_main_skill_all_magic_all_11_arcane_conduit",
+            category_key = "character",
+            indent = 3,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_magic_dummy",
+            skill_key = "wh3_dlc29_skill_vmp_magic_neferata_dummy_invocation_of_nehek_spirit_leech",
+            category_key = "character",
+            indent = 3,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_01",
+            skill_key = "wh_main_skill_vmp_lord_battle_aura_of_supremacy",
+            category_key = "battle",
+            indent = 4,
+            tier = 0,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_02",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_the_unliving_host",
+            category_key = "battle",
+            indent = 4,
+            tier = 1,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_03",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_call_of_the_night",
+            category_key = "battle",
+            indent = 4,
+            tier = 2,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_04",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+            category_key = "battle",
+            indent = 4,
+            tier = 3,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_05",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_creatures_of_the_night",
+            category_key = "battle",
+            indent = 4,
+            tier = 4,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_06",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_waking_dead",
+            category_key = "battle",
+            indent = 4,
+            tier = 5,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_07",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_carriages_of_death",
+            category_key = "battle",
+            indent = 4,
+            tier = 6,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_08",
+            skill_key = "wh_main_skill_vmp_lord_battle_magical_animus",
+            category_key = "battle",
+            indent = 4,
+            tier = 7,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_09",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_legions_of_dead",
+            category_key = "battle",
+            indent = 4,
+            tier = 8,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_10",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_dread_knights",
+            category_key = "battle",
+            indent = 4,
+            tier = 9,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_11",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_deadly_power",
+            category_key = "battle",
+            indent = 4,
+            tier = 10,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_12",
+            skill_key = "wh2_dlc11_skill_vmp_bloodline_all_battle_flying_horrors",
+            category_key = "battle",
+            indent = 4,
+            tier = 11,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
+            locked_node_keys = {
+            }
+        },
+        {
+            node_key = "wh3_dlc29_skill_node_vmp_neferata_army_13",
+            skill_key = "wh_main_skill_vmp_lord_battle_undeath_resurgent",
+            category_key = "battle",
+            indent = 4,
+            tier = 12,
+            max_level = 1,
+            is_mount_skill = false,
+            unlock_ranks_by_level = { 0 },
             locked_node_keys = {
             }
         },

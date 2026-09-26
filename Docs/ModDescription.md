@@ -274,3 +274,5 @@ A: Balancing so many factions is extremely difficult to get right. I'd recommend
 
 [*]Q: Hit a bug while playing?
 A: Check the "Known Issues" list above first — there might already be a workaround. If not, drop a comment and let me know!
+
+[/list]
